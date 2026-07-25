@@ -3,6 +3,7 @@
 - 状态:已在线上(待补审)
 - 每单元 4 篇泛读(精读不在本件内)。全部原创改写，无版权原文入库。
 - difficulty=1(泛读)；同单元精读为 difficulty=0，排在泛读之前。
+- 2026-07-25 已过 past_perfect 门(独立过去完成时 0 处;宾从 backshift 放行)。
 - 审的点:①有无超纲语法/词汇 ②题目答案唯一且原文可证 ③选项无歧义 ④中文话题/释义准确 ⑤内容价值观无问题
 
 ---
@@ -401,9 +402,9 @@ One night, I woke up and heard a strange sound outside. 'What could it be?' I th
 
 ### The lost dog
 
-- 话题:走失的小狗(情态·推测) · 词数:129
+- 话题:走失的小狗(情态·推测) · 词数:128
 
-On my way home, I found a small brown dog sitting alone near the park gate. 'You must be far from home,' I said softly. The dog had a collar, so it might belong to someone close by. 'Your owner could be looking for you right now,' I thought. I could not leave it there, so I took it home. My mother said, 'It can't be a wild dog; it is too clean and friendly.' The next day, we put up a poster near the park. Soon a girl called us. 'That must be my dog!' she cried. When she came, the dog ran to her at once, and its tail wagged with joy. It was clear that they belonged together. A little care had brought them home.
+On my way home, I found a small brown dog sitting alone near the park gate. 'You must be far from home,' I said softly. The dog had a collar, so it might belong to someone close by. 'Your owner could be looking for you right now,' I thought. I could not leave it there, so I took it home. My mother said, 'It can't be a wild dog; it is too clean and friendly.' The next day, we put up a poster near the park. Soon a girl called us. 'That must be my dog!' she cried. When she came, the dog ran to her at once, and its tail wagged with joy. It was clear that they belonged together. A little care brought them home.
 
 1. Why did the writer think the dog had an owner?
    - A. It was very big.

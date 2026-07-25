@@ -3,6 +3,7 @@
 - 状态:未入库(修复后随重跑入库·请先审)
 - 每单元 4 篇泛读(精读不在本件内)。全部原创改写，无版权原文入库。
 - difficulty=1(泛读)；同单元精读为 difficulty=0，排在泛读之前。
+- 2026-07-25 已过 past_perfect 门(独立过去完成时 0 处;宾从 backshift 放行)。
 - 审的点:①有无超纲语法/词汇 ②题目答案唯一且原文可证 ③选项无歧义 ④中文话题/释义准确 ⑤内容价值观无问题
 
 ---
@@ -123,9 +124,9 @@ Last Sunday, it rained all day, so we stayed at home. At first, I felt a little 
 
 ### Is anyone there?
 
-- 话题:有人在吗?(不定代词) · 词数:106
+- 话题:有人在吗?(不定代词) · 词数:105
 
-One evening, I was alone at home. Everyone in my family had gone out. Suddenly, I heard something in the kitchen. 'Is anyone there?' I called, but nobody answered. My heart beat fast. I did not see anything strange, but the sound came again. I took a torch and looked around carefully. There was nothing behind the door and nothing under the table. Then I saw something small and grey. It was only our cat, playing with a bottle! I laughed at myself. Everything was fine after all. Sometimes we are afraid of nothing, and there is always someone or something simple behind a strange sound.
+One evening, I was alone at home. Everyone in my family was out. Suddenly, I heard something in the kitchen. 'Is anyone there?' I called, but nobody answered. My heart beat fast. I did not see anything strange, but the sound came again. I took a torch and looked around carefully. There was nothing behind the door and nothing under the table. Then I saw something small and grey. It was only our cat, playing with a bottle! I laughed at myself. Everything was fine after all. Sometimes we are afraid of nothing, and there is always someone or something simple behind a strange sound.
 
 1. What was really making the sound?
    - A. A stranger.
@@ -150,9 +151,9 @@ One evening, I was alone at home. Everyone in my family had gone out. Suddenly, 
 
 ### Something in my bag
 
-- 话题:书包里的东西(不定代词) · 词数:108
+- 话题:书包里的东西(不定代词) · 词数:107
 
-This morning, something in my school bag felt heavy. I opened it, but at first I could not find anything strange. Everything looked the same: my books, my pens and my lunch. Then I felt something hard at the bottom. It was a small box. Nobody had told me about it. I opened the box carefully. Inside, there was a beautiful watch and a little note. The note said, 'Happy birthday from someone who loves you.' It was from my mother! I had forgotten my own birthday, but she had not. Everyone in my family knew the secret except me. It was the sweetest surprise anyone could give.
+This morning, something in my school bag felt heavy. I opened it, but at first I could not find anything strange. Everything looked the same: my books, my pens and my lunch. Then I felt something hard at the bottom. It was a small box. Nobody told me about it. I opened the box carefully. Inside, there was a beautiful watch and a little note. The note said, 'Happy birthday from someone who loves you.' It was from my mother! I forgot my own birthday, but my mother did not. Everyone in my family knew the secret except me. It was the sweetest surprise anyone could give.
 
 1. What did the writer find at the bottom of the bag?
    - A. A book.

@@ -3,6 +3,7 @@
 - 状态:已在线上(待补审)
 - 每单元 4 篇泛读(精读不在本件内)。全部原创改写，无版权原文入库。
 - difficulty=1(泛读)；同单元精读为 difficulty=0，排在泛读之前。
+- 2026-07-25 已过 past_perfect 门(独立过去完成时 0 处;宾从 backshift 放行)。
 - 审的点:①有无超纲语法/词汇 ②题目答案唯一且原文可证 ③选项无歧义 ④中文话题/释义准确 ⑤内容价值观无问题
 
 ---
@@ -38,9 +39,9 @@ Have you ever kept a pet? I have had a little cat called Mimi for three years. S
 
 ### My first time on a train
 
-- 话题:第一次坐火车(现在完成时·经历) · 词数:128
+- 话题:第一次坐火车(现在完成时·经历) · 词数:127
 
-I have travelled by bus and by car many times, but until last week I had never taken a long train ride. My family and I have just come back from a trip to the mountains, and I have so much to tell. I have never felt so excited as when the train began to move. Outside the window, green fields and small towns rushed by. I have seen many pictures of the countryside, but they have never looked so alive. During the ride, I have made a new friend, a boy of my own age. We have shared sweets and jokes for hours. The trip has ended, but the happy feeling has stayed with me. I have already asked my parents to plan another train trip soon.
+I have travelled by bus and by car many times, but I have never taken a long train ride until now. My family and I have just come back from a trip to the mountains, and I have so much to tell. I have never felt so excited as when the train began to move. Outside the window, green fields and small towns rushed by. I have seen many pictures of the countryside, but they have never looked so alive. During the ride, I have made a new friend, a boy of my own age. We have shared sweets and jokes for hours. The trip has ended, but the happy feeling has stayed with me. I have already asked my parents to plan another train trip soon.
 
 1. Where has the writer's family just come back from?
    - A. The sea.
@@ -204,9 +205,9 @@ At the start of this term, our class was just a group of strangers. We did not t
 
 ### The river has come back to life
 
-- 话题:小河重获新生(现在完成时·结果) · 词数:133
+- 话题:小河重获新生(现在完成时·结果) · 词数:132
 
-The small river behind our school has come back to life, and everyone is happy. A few years ago, it was full of rubbish, and no fish lived in it. The water had turned dark, and it had a bad smell. Then our school started a clean-up club, and many students have joined it. We have picked up plastic bottles and old bags from the water. We have planted young trees along the bank. Slowly, the river has become clean again. This spring, small fish have returned, and birds have come to drink and sing. Even the air near the river has grown fresh. Our teacher has told us that nature can heal itself, if only people give it a chance. We have learnt that small hands can make a big change.
+The small river behind our school has come back to life, and everyone is happy. A few years ago, it was full of rubbish, and no fish lived in it. The water turned dark, and it had a bad smell. Then our school started a clean-up club, and many students have joined it. We have picked up plastic bottles and old bags from the water. We have planted young trees along the bank. Slowly, the river has become clean again. This spring, small fish have returned, and birds have come to drink and sing. Even the air near the river has grown fresh. Our teacher has told us that nature can heal itself, if only people give it a chance. We have learnt that small hands can make a big change.
 
 1. What was the river full of a few years ago?
    - A. Rubbish. [答案]
@@ -625,9 +626,9 @@ This morning, our house was busier than a market. At seven o'clock, everyone was
 
 ### The day the lights went out
 
-- 话题:停电那天(过去进行时) · 词数:131
+- 话题:停电那天(过去进行时) · 词数:128
 
-One evening last winter, our whole street lost its power. We were having dinner when the lights suddenly went out. At first, my little brother was afraid, but my father lit some candles, and the room grew warm and golden. We could not watch television or use our phones, so we did something we had not done for a long time. My mother was telling old stories from her childhood, and we were all listening quietly. My brother was drawing shadows on the wall with his hands. Outside, the stars were shining more brightly than ever. For two hours, while the power was off, our family talked and laughed together. When the lights came back, we almost felt sorry. That dark evening gave us something bright: time together, without any screens.
+One evening last winter, our whole street lost its power. We were having dinner when the lights suddenly went out. At first, my little brother was afraid, but my father lit some candles, and the room grew warm and golden. We could not watch television or use our phones, so we did something we did not often do. My mother was telling old stories from her childhood, and we were all listening quietly. My brother was drawing shadows on the wall with his hands. Outside, the stars were shining more brightly than ever. For two hours, while the power was off, our family talked and laughed together. When the lights came back, we almost felt sorry. That dark evening gave us something bright: time together, without any screens.
 
 1. What were the family doing when the lights went out?
    - A. Having dinner. [答案]

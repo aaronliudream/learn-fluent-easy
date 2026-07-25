@@ -1,14 +1,14 @@
 -- 外研社四册阅读·补审批次修正(线上一次性同步)
--- 生成 2026-07-25。★整值覆盖★ 覆盖所有与原始 load 有差异的行,幂等,重复跑安全。
--- ★本文件取代以下四个待跑文件,不要再单独跑它们★
+-- 生成 2026-07-25。整值覆盖,幂等,重复跑安全。
+-- ★本文件取代以下四个待跑文件,不要再单独跑★
 --   wy-reading-comparative-fix.sql / wy-reading-morethan-fix.sql
 --   wy8a-u2-coverage-fix.sql / wy8b-u1-dedup-fix.sql
--- (wy7b-grammar-comparative-fix.sql 改的是另一张表 junior_grammar_questions,仍需单独跑)
+-- (wy7b-grammar-comparative-fix.sql 改的是 junior_grammar_questions 另一张表,仍需单独跑)
 --
--- 本批含:比较级/最高级/as…as 超前、more than 真比较、过去完成时、宾语从句 12 处、
---         非限制性定语从句 2 处、解析引文不逐字、wy8A U2 考点补齐改造、U4 使役补齐、
---         wy8B U1 去 8-gram 模板雷同、difficulty 分层。
--- 只 UPDATE 不删不插,保住 id(避免用户进度成孤儿)。
+-- 含:比较级/最高级/as…as 超前、more than 真比较、过去完成时、宾语从句 12 处、
+--     非限制性定语从句 2 处、解析引文不逐字、wy8A U2 考点补齐、U4 使役补齐、
+--     wy8B U1 去 8-gram 模板雷同、difficulty 分层。
+-- 只 UPDATE 不删不插,保住 id。
 BEGIN;
 
 -- wy7A Starter My new school [difficulty]
@@ -58,7 +58,7 @@ WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U2' AND title='Our mu
 -- wy7A U3 Grandpa’s silent love [difficulty]
 UPDATE public.junior_reading SET
   difficulty = 0
-WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U3' AND title='Grandpa's silent love';
+WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U3' AND title='Grandpa''s silent love';
 
 -- wy7A U3 My grandpa [body+questions+word_count]
 UPDATE public.junior_reading SET
@@ -88,13 +88,13 @@ UPDATE public.junior_reading SET
   body = 'At Spring Festival, food is very important. Every family cooks many special dishes. In the north of China, people love dumplings. The whole family makes them together. They put the dumplings into hot water, and soon they are ready to eat. In the south, people eat sweet rice cakes and fish. Every dish has a lucky meaning. Fish means ''more every year'', and dumplings look like old gold money. Sweet food means a sweet life. Grandma always cooks a big meal for the new year. The kitchen is warm and full of good smells. When we eat together, we feel happy and thankful. Festival food is not just tasty; it carries our best wishes.'
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U4' AND title='Festival food';
 
--- wy7A U5 My little seed [body+difficulty]  (同单元同名,靠 difficulty 消歧)
+-- wy7A U5 My little seed [body+difficulty]  (同单元同名,靠原 word_count+difficulty 消歧)
 UPDATE public.junior_reading SET
   body = 'Today I put a small seed into the ground. It looks weak now, but it will become something great one day. First, it will need water and sunlight. In a few days, a tiny green leaf is going to appear. The leaf will drink the sunlight and make food for the plant. Slowly, the stem will grow tall and strong. Next spring, my little seed is going to be a young tree. Birds will come and build their nests in it. In summer, it will give us cool shade. Children will play under it on hot days. In autumn, its leaves will turn gold and fall softly to the ground. People will rest under it and tell old stories. The tree will also help the air. It is going to take in bad gas and give out fresh oxygen. Small animals will find food and a home in its branches. Years later, I will be an old man, but my tree will still be here. It will drop new seeds, and more trees are going to grow. One small seed will change a whole hill. Plants are quiet, but they are truly powerful.',
   difficulty = 0
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U5' AND title='My little seed' AND word_count=193 AND difficulty=1;
 
--- wy7A U5 My little seed [body+word_count]  (同单元同名,靠 difficulty 消歧)
+-- wy7A U5 My little seed [body+word_count]  (同单元同名,靠原 word_count+difficulty 消歧)
 UPDATE public.junior_reading SET
   body = 'This spring, I have a little seed, and I want it to grow. First, I put some soft soil in a small pot. Then I make a little hole and put the seed inside. I cover it gently with soil and give it a little water. Every day, I put the pot near the window, so it can get the warm sun. I water it every morning and wait with hope. At first, nothing happens, and I feel worried. But one morning, a tiny green leaf comes out of the soil! I am so happy. Now I know the answer: plants need sun, water, soil and care. Watching a seed grow teaches me to be patient.',
   word_count = 116
@@ -105,7 +105,7 @@ UPDATE public.junior_reading SET
   body = 'I am doing a project about ants this week. At first, ants look boring to me. But now I am changing my mind. I am sitting by the garden with my notebook. A line of ants is moving across the path. They are carrying tiny pieces of food. The food is very big, but they are not giving up. Look! One ant is falling into a small hole. Two other ants are helping it. They are working together like good friends. Now it is starting to rain. The ants are running back to their home under the old tree. They are not pushing each other. They are moving in a neat line. Near the wall, some ants are building a new road with tiny stones. One big ant is cleaning its legs in the sun. They are never fighting, and they are never resting. I am reading a book about ants tonight. Ants are talking to each other with smells — that is what the book tells us. Some ants are even growing their own food! I am learning so much. Ants are small, but they are amazing. I am really glad about this project.',
   word_count = 194,
   difficulty = 0
-WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U6' AND title='The ants' secret';
+WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U6' AND title='The ants'' secret';
 
 -- wy7A U6 The busy ants [body+word_count]
 UPDATE public.junior_reading SET
@@ -178,13 +178,13 @@ UPDATE public.junior_reading SET
   body = 'Every winter, my grandma made hot noodles for the whole family. As soon as I opened the door, the kitchen smelled wonderful, and I felt warm at once. The noodles looked simple — just noodles, an egg and some green onions in a big bowl. But they tasted rich and warm. Grandma always said, "Good food does not need to be expensive." While we ate, the room grew warm and everyone became happy. My little brother''s face turned red from the hot soup, and we all laughed. Grandma watched us eat and her smile looked so kind. Sometimes she put a little sugar in my bowl, because I liked sweet things. On cold nights, one warm bowl could make my whole body feel happy. Now Grandma is old and cannot cook much, but that taste stays in my heart. When life feels hard, I think of her noodles. They were more than food; they were her love in a bowl. A meal made by someone who loves you always tastes sweet.',
   questions = '[{"q": "What was in Grandma''s bowl of noodles?", "answer": "A", "options": ["Noodles, an egg and some green onions.", "Rice, beef and tofu.", "Bread and milk.", "Fish and potatoes."], "explanation": "原文\"just noodles, an egg and some green onions\"。"}, {"q": "Why did the little brother''s face turn red?", "answer": "B", "options": ["He was angry.", "From the hot soup.", "He ran too fast.", "He felt shy."], "explanation": "原文\"turned red from the hot soup\"。"}, {"q": "What is the main idea of the passage?", "answer": "C", "options": ["Noodles are cheap.", "Grandma is a famous cook.", "Simple food made with love is precious.", "Winter is the best season."], "explanation": "结尾点题:充满爱的简单食物最珍贵。"}, {"q": "Why does that taste stay in the writer''s heart?", "answer": "D", "options": ["Because the noodles were expensive.", "Because the writer is always hungry.", "Because Grandma taught cooking classes.", "Because the noodles carry Grandma''s love."], "explanation": "\"they were her love in a bowl\",靠推断。"}, {"q": "\"The kitchen smelled wonderful\" — here \"smelled\" is a ____.", "answer": "A", "options": ["linking verb followed by an adjective", "past tense of \"smile\"", "kind of food", "noun"], "explanation": "smell 作系动词后接形容词,是感官系动词。"}]'::jsonb,
   difficulty = 0
-WHERE publisher='junior_fltrp' AND volume='wy7B' AND unit='U3' AND title='Grandma's noodles';
+WHERE publisher='junior_fltrp' AND volume='wy7B' AND unit='U3' AND title='Grandma''s noodles';
 
 -- wy7B U3 Grandma’s kitchen [body+questions]
 UPDATE public.junior_reading SET
   body = 'I love my grandma''s kitchen very much. In the morning, it smells wonderful. The fresh bread smells sweet, and the hot soup smells rich. Everything looks warm and golden in the soft light. When I taste grandma''s noodles, they taste rich and fresh. The tea tastes sweet, and the cakes taste soft. Even the air feels gentle and kind. When grandma sings an old song, her voice sounds happy and calm. In her kitchen, I never feel sad or tired. Everything there feels like home. A good kitchen is not just about food; it makes a family feel close and warm.',
   questions = '[{"q": "How do grandma''s noodles taste?", "answer": "C", "options": ["Bad.", "Cold.", "Rich and fresh.", "Salty."], "explanation": "''they taste rich and fresh''。"}, {"q": "How does grandma''s voice sound when she sings?", "answer": "B", "options": ["Loud and hard.", "Happy and calm.", "Sad and tired.", "Weak and low."], "explanation": "''her voice sounds happy and calm''。"}, {"q": "What is the passage mainly about?", "answer": "A", "options": ["Why the writer loves grandma''s warm kitchen.", "How to make noodles.", "Why restaurants are dear.", "Where grandma lives."], "explanation": "全文讲奶奶厨房的温暖(系动词)。"}]'::jsonb
-WHERE publisher='junior_fltrp' AND volume='wy7B' AND unit='U3' AND title='Grandma's kitchen';
+WHERE publisher='junior_fltrp' AND volume='wy7B' AND unit='U3' AND title='Grandma''s kitchen';
 
 -- wy7B U3 The music sounds nice [body+word_count]
 UPDATE public.junior_reading SET
@@ -300,7 +300,7 @@ WHERE publisher='junior_fltrp' AND volume='wy8A' AND unit='U3' AND title='Learni
 -- wy8A U4 Great-grandmother’s diary [difficulty]
 UPDATE public.junior_reading SET
   difficulty = 0
-WHERE publisher='junior_fltrp' AND volume='wy8A' AND unit='U4' AND title='Great-grandmother's diary';
+WHERE publisher='junior_fltrp' AND volume='wy8A' AND unit='U4' AND title='Great-grandmother''s diary';
 
 -- wy8A U4 What my mother wants me to do [questions]
 UPDATE public.junior_reading SET
@@ -415,7 +415,6 @@ WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U6' AND title='The pa
 DO $$
 DECLARE n int;
 BEGIN
-  -- ① 超前结构必须归零(wy7A/wy7B U1-U4 未教比较级;三册未教宾从)
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume IN ('wy7A','wy7B','wy8A')
     AND body ~ '\y(learnt|learned|know|knew|told us|tells us|say|says) that\y';
@@ -423,25 +422,21 @@ BEGIN
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume IN ('wy7A','wy7B','wy8A') AND body ~ ', (where|which|whom) ';
   IF n<>0 THEN RAISE EXCEPTION '非限制性定语从句仍有 % 篇', n; END IF;
-  -- ② 精读 difficulty=0 排最前
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume LIKE 'wy%' AND difficulty=0;
-  IF n<>25 THEN RAISE EXCEPTION '精读(diff0)=% 期望25(7+6+6+6)', n; END IF;
-  -- ③ wy8A U2 独有考点(been to/gone to、How long)必须在库
+  IF n<>25 THEN RAISE EXCEPTION '精读(diff0)=% 期望25', n; END IF;
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume='wy8A' AND unit='U2' AND body LIKE '%has gone to%' AND body LIKE '%has been to%';
   IF n<>1 THEN RAISE EXCEPTION 'wy8A U2 been to/gone to 对比未落库'; END IF;
-  -- ④ wy8A U4 使役省 to 承载
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume='wy8A' AND unit='U4' AND (body ~ '\y(makes|made|make) (us|him|her|them|me) [a-z]+\y'
                                       OR body ~ '\y(lets|let) (us|him|her|them|me) [a-z]+\y');
   IF n<4 THEN RAISE EXCEPTION 'wy8A U4 使役承载不足(% 篇)', n; END IF;
-  -- ⑤ 总篇数与题型结构不变
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp' AND volume LIKE 'wy%';
   IF n<>125 THEN RAISE EXCEPTION '总篇数=% 期望125', n; END IF;
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp' AND volume LIKE 'wy%'
     AND NOT ((difficulty=0 AND jsonb_array_length(questions)=5) OR (difficulty=1 AND jsonb_array_length(questions)=3));
-  IF n<>0 THEN RAISE EXCEPTION '题数不符(精读5/泛读3)的篇=%', n; END IF;
+  IF n<>0 THEN RAISE EXCEPTION '题数不符的篇=%', n; END IF;
   RAISE NOTICE 'OK: 四册阅读补审批次修正已全部落库';
 END $$;
 

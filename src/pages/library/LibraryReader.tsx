@@ -45,6 +45,8 @@ import {
 import { listBookmarks, addBookmark, removeBookmark, type LibraryBookmark } from "@/lib/library/bookmarks";
 import BookmarkPanel from "@/components/library/BookmarkPanel";
 import { countWords, computeSections, sectionOfPara } from "@/lib/library/sections";
+import { buildPages, isPictureBookChapter } from "@/lib/library/pictureBook";
+import ReadingPictureBook from "@/components/library/ReadingPictureBook";
 
 type Mode = "en" | "both" | "cn";
 const MODES: { key: Mode; label: string }[] = [
@@ -222,7 +224,10 @@ export default function LibraryReader() {
     setIllus([]);
     (async () => {
       const [ss, ill, terms] = await Promise.all([
-        getChapterSentences(book.id, chapterIdx),
+        // 绘本白名单章多取 page_index/image_url 两列;普通章取数一字不变(见 lib/library/pictureBook.ts)
+        getChapterSentences(book.id, chapterIdx, {
+          withPageCols: isPictureBookChapter(book.book_key, chapterIdx),
+        }),
         getChapterIllustrations(book.id, chapterIdx),
         getChapterChunkTerms(book.id, chapterIdx),
       ]);
@@ -553,12 +558,30 @@ export default function LibraryReader() {
     [sentences, playSentence, bump, slow, speed],
   );
 
+  // 绘本模式(白名单章):新组件 + 白名单,与原渲染共存;非白名单章一切照旧。
+  const pictureBook = !!book && isPictureBookChapter(book.book_key, chapterIdx);
+
   // 顶部"朗读本章":断点在本章则从断点起,否则从章首。
+  // 绘本章恒从第 1 页起(规格:朗读本章 = 从第 1 页顺序播放,每页播完自动翻页)。
   const playFromResume = useCallback(() => {
+    if (pictureBook) {
+      playChapterFrom(0);
+      return;
+    }
     const last = stateRef.current.last_seq;
     const idx = last > 0 ? sentences.findIndex((s) => s.seq === last) : -1;
     playChapterFrom(idx < 0 ? 0 : idx);
-  }, [sentences, playChapterFrom]);
+  }, [sentences, playChapterFrom, pictureBook]);
+
+  // 绘本页:句子按 page_index(无则按段落)成页 + 配图;仅绘本章用得到。
+  const pages = useMemo(
+    () => (pictureBook && book ? buildPages(sentences, illus, `${book.book_key}#${chapterIdx}`) : []),
+    [pictureBook, book, chapterIdx, sentences, illus],
+  );
+  const registerSentenceRef = useCallback((i: number, el: HTMLElement | null) => {
+    liRefs.current[i] = el;
+  }, []);
+  const handlePageEnter = useCallback((i: number) => bump(i), [bump]);
 
   // ---------- 章间导航 ----------
   const pos = useMemo(() => chapters.findIndex((c) => c.idx === chapterIdx), [chapters, chapterIdx]);
@@ -892,7 +915,30 @@ export default function LibraryReader() {
         </p>
       ) : (
         <>
-          {/* 段落流排版:同段句子连排成一段文字(像一本书);插图按 position 穿插;喇叭移到段落级。 */}
+          {/* 绘本模式(白名单章):正文整块换成新组件,其余(工具条/章导航/章末合集/进度心跳)照旧。
+              非白名单章走下面的原段落流渲染,一行未改。 */}
+          {pictureBook ? (
+            <ReadingPictureBook
+              pages={pages}
+              mode={mode}
+              current={current}
+              playingAll={playingAll}
+              onPlayPage={playChapterFrom}
+              onStop={stopAll}
+              onPageEnter={handlePageEnter}
+              registerRef={registerSentenceRef}
+              bookId={book.id}
+              favTerms={favTerms}
+              chunkTerms={chunkTerms}
+              cultureNotes={cultureNotes}
+              wordSenses={wordSenses}
+              reveal={reveal}
+              onFavoriteChange={handleFavChange}
+              onLongPressStart={startLongPress}
+              onLongPressCancel={cancelLongPress}
+            />
+          ) : (
+          /* 段落流排版:同段句子连排成一段文字(像一本书);插图按 position 穿插;喇叭移到段落级。 */
           <div
             onTouchStart={startLongPress}
             onTouchEnd={cancelLongPress}
@@ -1043,6 +1089,7 @@ export default function LibraryReader() {
             })}
             {tailFigs.map(renderFigure)}
           </div>
+          )}
 
           {/* 章末合集(③):本章文化笔记,默认折叠 */}
           <ChapterNotesCollection notes={chapterNotes} />

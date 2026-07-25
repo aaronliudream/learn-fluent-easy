@@ -51,6 +51,10 @@ export type LibrarySentence = {
   text_en: string;
   text_cn: string | null;
   audio_url: string | null;
+  /** 绘本模式(白名单章)专用两列;普通章不取、恒 undefined。见 lib/library/pictureBook.ts。
+   *  page_index=绘本页号(1-based,同页多句共用);image_url=该页配图(桶内路径或绝对 URL)。 */
+  page_index?: number | null;
+  image_url?: string | null;
 };
 
 const LIST_COLS =
@@ -100,17 +104,30 @@ const SENTENCE_COLS = "id,book_id,chapter_idx,para_idx,seq,text_en,text_cn,audio
 // Supabase/PostgREST 单次返回硬顶 1000 行(本项目实测)。长书必须按章加载,
 // 否则一次拉全书会被静默截断到前 1000 句(后面的章直接丢失)。
 
-/** 某一章的句子(按 seq 升序)。按章加载:单章恒 <1000 句,一次请求拿得全。 */
+/**
+ * 某一章的句子(按 seq 升序)。按章加载:单章恒 <1000 句,一次请求拿得全。
+ *
+ * opts.withPageCols=true 时**多取**绘本两列(page_index/image_url)—— 仅绘本白名单章传,
+ * 普通章的取数一字不变。两列尚未建时(SQL 未跑)PostgREST 报 42703 → 自动退回基础列,
+ * 绘本页按段落回退分页,不报错、不白屏(§2「page_index 为空按原有 chunk 排序回退」)。
+ */
 export async function getChapterSentences(
   bookId: string,
   chapterIdx: number,
+  opts?: { withPageCols?: boolean },
 ): Promise<LibrarySentence[]> {
-  const { data } = await db
-    .from("library_sentences")
-    .select(SENTENCE_COLS)
-    .eq("book_id", bookId)
-    .eq("chapter_idx", chapterIdx)
-    .order("seq", { ascending: true });
+  const run = async (cols: string) =>
+    await db
+      .from("library_sentences")
+      .select(cols)
+      .eq("book_id", bookId)
+      .eq("chapter_idx", chapterIdx)
+      .order("seq", { ascending: true });
+  if (opts?.withPageCols) {
+    const { data, error } = await run(`${SENTENCE_COLS},page_index,image_url`);
+    if (!error) return (data ?? []) as LibrarySentence[];
+  }
+  const { data } = await run(SENTENCE_COLS);
   return (data ?? []) as LibrarySentence[];
 }
 

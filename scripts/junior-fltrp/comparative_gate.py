@@ -52,6 +52,9 @@ IDIOMS = [
     r"\bas\s+much\s+as\s+possible\b",
     r"\bno\s+longer\b",
     r"\bwhat's\s+more\b",
+    # `Collecting stamps is more than fun` / `They were more than food` = "不只是",
+    # 不是比较结构。但 `worth/matters/costs more than X` 是真比较,不在此列。
+    r"\b(?:is|are|was|were|be|been|being)\s+more\s+than\b",
 ]
 IDIOM_RE = re.compile('|'.join(IDIOMS), re.I)
 
@@ -66,6 +69,9 @@ NOT_SUPERLATIVE = {
 # 1) 显式比较:X-er than / more X than / better|worse|less than
 COMP_THAN = re.compile(
     r"\b(?:\w{3,}(?:ier|er)|more\s+\w+|less\s+\w+|better|worse|farther|further)\s+than\b", re.I)
+# ★漏网补丁(2026-07-25)★ `worth more than gold` / `costs more than a book`:
+# more 后面直接跟 than(不夹形容词),上面的 `more\s+\w+\s+than` 匹配不到。
+COMP_MORE_THAN = re.compile(r"\b(?:more|less|fewer)\s+than\b", re.I)
 # 2) 裸比较级(无 than,仍是比较级形态)
 COMP_BARE = re.compile(
     r"\b(?:better|worse|longer|shorter|bigger|smaller|older|younger|higher|lower|"
@@ -145,6 +151,11 @@ def scan_text(text, volume, unit):
 
     seen = set()
     for m in _spans(text, COMP_THAN):
+        emit(m, 'comparative', 'comparative')
+        seen.add((m.start(), m.end()))
+    for m in _spans(text, COMP_MORE_THAN):
+        if any(s <= m.start() and m.end() <= e for s, e in seen):
+            continue
         emit(m, 'comparative', 'comparative')
         seen.add((m.start(), m.end()))
     for m in _spans(text, COMP_BARE):

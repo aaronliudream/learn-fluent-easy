@@ -110,7 +110,7 @@ const Auth = () => {
     e.preventDefault();
     const n = nickname.trim();
     if (n.length < 2 || n.length > 24) { toast.error(t("昵称需 2–24 个字符")); return; }
-    if (!/^\d{4,6}$/.test(pin)) { toast.error(t("PIN 必须是 4–6 位数字")); return; }
+    if (pin.length < 4) { toast.error(t("密码至少 4 位")); return; }
     if (nickAvailable === false) { toast.error(t("昵称已被占用，换一个吧")); return; }
     if (!ageBand) { toast.error(t("请选择你的年龄段")); return; }
     if (ageBand === "child" && !parentConsent) {
@@ -161,7 +161,7 @@ const Auth = () => {
   const handleNickSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     const n = nickname.trim();
-    if (!n || !pin) { toast.error(t("请输入昵称和 PIN")); return; }
+    if (!n || !pin) { toast.error(t("请输入昵称和密码")); return; }
     setLoading(true);
     const { data: emailLookup } = await supabase.rpc("guest_email_for_username", { _name: n });
     if (!emailLookup) {
@@ -178,7 +178,7 @@ const Auth = () => {
       toast.error(
         isSupabaseAuthRateLimited(error)
           ? supabaseAuthToastMessage(error, t, t("登录失败"))
-          : t("PIN 不正确"),
+          : t("密码不正确"),
       );
       return;
     }
@@ -435,10 +435,10 @@ const Auth = () => {
                     )}
                   </div>
                   <div>
-                    <Label htmlFor="pin"><T>设个 4 位数字 PIN（用于以后登录）</T></Label>
-                    <Input id="pin" inputMode="numeric" pattern="\d*" maxLength={6} required value={pin}
-                      onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))}
-                      placeholder={t("例如 1234")} autoComplete="new-password" />
+                    <Label htmlFor="pin"><T>设个密码（至少 4 位，用于以后登录）</T></Label>
+                    <Input id="pin" minLength={4} maxLength={64} required value={pin}
+                      onChange={(e) => setPin(e.target.value)}
+                      placeholder={t("字母、数字、符号皆可")} autoComplete="new-password" />
                   </div>
                   <div>
                     <Label><T>你的年龄段</T></Label>
@@ -499,9 +499,9 @@ const Auth = () => {
                     <Input id="nick2" value={nickname} onChange={(e) => setNickname(e.target.value)} autoComplete="username" required />
                   </div>
                   <div>
-                    <Label htmlFor="pin2"><T>PIN</T></Label>
-                    <Input id="pin2" inputMode="numeric" pattern="\d*" maxLength={6} value={pin} required
-                      onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))} autoComplete="current-password" />
+                    <Label htmlFor="pin2"><T>密码</T></Label>
+                    <Input id="pin2" maxLength={64} value={pin} required
+                      onChange={(e) => setPin(e.target.value)} autoComplete="current-password" />
                   </div>
                   <Button type="submit" className="w-full" disabled={loading}>
                     {loading ? <Loader2 className="size-4 animate-spin" /> : <T>登录</T>}

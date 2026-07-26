@@ -44,7 +44,7 @@ import argparse
 from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from past_perfect_gate import split_stmts, parse_values  # noqa: E402
+from past_perfect_gate import split_stmts, parse_values, split_tuples  # noqa: E402
 
 # 这些串是题型/体裁的固定骨架,不算雷同(说明文都会有 "what is the passage mainly about")
 BOILERPLATE = [
@@ -65,12 +65,15 @@ def ngrams(toks, n):
     return {tuple(toks[i:i + n]): i for i in range(len(toks) - n + 1)}
 
 
+def _sqlaa():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'SQLAA')
+
+
 def load_passages():
     """从四册 reading SQL 抽 (册, 单元, 精/泛, 标题, 正文)"""
     out = []
-    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'SQLAA')
     # recursive:load 跑完会被归档进 SQLAA/done/,非递归 glob 会静默载入 0 篇
-    for path in sorted(glob.glob(os.path.join(root, '**', 'wy*-reading-load.sql'), recursive=True)):
+    for path in sorted(glob.glob(os.path.join(_sqlaa(), '**', 'wy*-reading-load.sql'), recursive=True)):
         txt = open(path, encoding='utf-8').read()
         for s in split_stmts(txt):
             if 'INSERT INTO public.junior_reading' not in s:
@@ -89,6 +92,49 @@ def load_passages():
     return out
 
 
+def load_listening():
+    """从四册 listening SQL 抽 (册, 单元, 听力, 标题, transcript)。
+
+    ★为什么必须单独写★
+    听力灌库是**一条 INSERT 带 36 个值元组**,阅读那套"一条 INSERT 一个元组"的
+    解析(`parse_values(tail[:-1])`)在这里会把 36 个元组当成一个,列数对不上后
+    `continue` 掉 —— 静默产出 0 篇,然后报"0 处雷同"。这正是最能骗人的假绿灯。
+    故走 split_tuples 逐元组解。
+    """
+    out = []
+    for path in sorted(glob.glob(os.path.join(_sqlaa(), '**', 'wy*-listening-load.sql'), recursive=True)):
+        txt = open(path, encoding='utf-8').read()
+        for s in split_stmts(txt):
+            m = re.search(r'INSERT INTO public\.junior_listening_exercises\s*\(([^)]*?)\)\s*VALUES\s*',
+                          s, re.S)
+            if not m:
+                continue
+            cols = [c.strip() for c in m.group(1).split(',')]
+            for tup in split_tuples(s[m.end():]):
+                vals = parse_values(tup)
+                if len(cols) != len(vals):
+                    continue
+                d = dict(zip(cols, vals))
+                body = d.get('transcript') or ''
+                if not body or body == 'NULL':
+                    continue
+                out.append({
+                    'vol': d.get('volume', '?'), 'unit': d.get('unit', '?'),
+                    'kind': '听力', 'title': d.get('title', ''), 'body': body,
+                })
+    return out
+
+
+def pair_kind(a, b):
+    """篇对的方向标签:阅读×阅读 / 听力×听力 / 听力×阅读。"""
+    la, lb = a['kind'] == '听力', b['kind'] == '听力'
+    if la and lb:
+        return '听力×听力'
+    if la or lb:
+        return '听力×阅读'
+    return '阅读×阅读'
+
+
 def load_sources(srcdir):
     out = []
     for path in sorted(glob.glob(os.path.join(srcdir, '**', '*.txt'), recursive=True)):
@@ -101,13 +147,23 @@ def main():
     ap.add_argument('--n', type=int, default=8, help='连续词窗口(默认 8)')
     ap.add_argument('--min-hits', type=int, default=1, help='一对篇目至少多少处重合才报')
     ap.add_argument('--source', default=None, help='源文本目录(可选)')
+    ap.add_argument('--no-listening', action='store_true',
+                    help='只比阅读(回归用:结果应与加听力前完全一致)')
     args = ap.parse_args()
 
-    ps = load_passages()
-    print('载入篇目 %d 篇(%s)' % (len(ps), ', '.join(sorted({p['vol'] for p in ps}))))
+    reads = load_passages()
+    lisns = [] if args.no_listening else load_listening()
+    ps = reads + lisns
+    print('载入 阅读 %d 篇 + 听力 %d 篇 = %d(%s)' %
+          (len(reads), len(lisns), len(ps), ', '.join(sorted({p['vol'] for p in ps}))))
     if not ps:
         print('!! 一篇都没载入,结果不可信')
         return 2
+    # 覆盖率自证:任一侧为 0 就明说,别让"0 处雷同"看起来像扫过了(踩过两次)
+    if not reads:
+        print('!! 阅读侧 0 篇 —— 阅读方向未实际比对')
+    if not lisns and not args.no_listening:
+        print('!! 听力侧 0 篇 —— 听力方向未实际比对(load 是否被归档到别处?)')
 
     grams = []
     for p in ps:
@@ -131,11 +187,22 @@ def main():
                 pairs[(i, j)].append(phrase)
 
     flagged = {k: v for k, v in pairs.items() if len(v) >= args.min_hits}
+    # 三个方向分别报数:只报总数会掩盖"听力方向其实一对都没比到"
+    by_dir = defaultdict(int)
+    for (i, j) in flagged:
+        by_dir[pair_kind(ps[i], ps[j])] += 1
+    cmp_dir = defaultdict(int)
+    for i in range(len(ps)):
+        for j in range(i + 1, len(ps)):
+            cmp_dir[pair_kind(ps[i], ps[j])] += 1
     print('【篇目互比】%d 对篇目存在 %d-gram 重合(阈值 ≥%d 处)' %
           (len(flagged), args.n, args.min_hits))
+    for d in ('阅读×阅读', '听力×听力', '听力×阅读'):
+        print('    %s:比对 %d 对,命中 %d 对' % (d, cmp_dir.get(d, 0), by_dir.get(d, 0)))
     for (i, j), phrases in sorted(flagged.items(), key=lambda x: -len(x[1])):
         a, b = ps[i], ps[j]
-        print('  %s %s %s《%s》  ×  %s %s %s《%s》  —— %d 处' % (
+        print('  [%s] %s %s %s《%s》  ×  %s %s %s《%s》  —— %d 处' % (
+            pair_kind(a, b),
             a['vol'], a['unit'], a['kind'], a['title'],
             b['vol'], b['unit'], b['kind'], b['title'], len(phrases)))
         for ph in sorted(phrases)[:6]:

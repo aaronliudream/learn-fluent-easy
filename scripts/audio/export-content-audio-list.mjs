@@ -22,6 +22,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { pickers } from './pickers.mjs';
+import { strayUnderContentParents } from './coverage.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '../..');
@@ -83,100 +85,6 @@ function speedsFor(tierName, grade) {
   die(2, `✗ 档位 "${tierName}" 既没有 speeds 也没有 byGrade`);
 }
 
-// ---------------- pickers（每个都对应一处真实播放点，见映射表 playedBy）----------------
-const pickers = {
-  courseVocab(json, ctx) {
-    const out = [];
-    for (const [semId, sem] of Object.entries(course(json).semesters ?? {})) {
-      for (const u of sem.units ?? []) {
-        for (const [i, v] of (u.vocabulary ?? []).entries()) {
-          if (v?.en) out.push({ text: v.en, record_id: `${u.id}#vocab[${i}]`, field: 'vocabulary.en' });
-        }
-      }
-      void semId;
-    }
-    void ctx;
-    return out;
-  },
-  courseChunks(json) {
-    const out = [];
-    for (const sem of Object.values(course(json).semesters ?? {})) {
-      for (const u of sem.units ?? []) {
-        for (const [i, v] of (u.vocabulary ?? []).entries()) {
-          for (const [ci, c] of (v.chunks ?? []).entries()) {
-            if (c?.en) out.push({ text: c.en, record_id: `${u.id}#vocab[${i}].chunks[${ci}]`, field: 'chunks.en' });
-          }
-        }
-      }
-    }
-    return out;
-  },
-  /** 与 StagePlay 的 SentenceStage 一致：每单元只取前 4 组 q/a。 */
-  courseDialoguePairs(json) {
-    const out = [];
-    for (const sem of Object.values(course(json).semesters ?? {})) {
-      for (const u of sem.units ?? []) {
-        let pairs = 0;
-        for (const d of u.dialogues ?? []) {
-          const lines = d.lines ?? [];
-          for (let i = 0; i < lines.length && pairs < 4; i += 2) {
-            if (lines[i]?.text) out.push({ text: lines[i].text, record_id: `${u.id}#dialogue.q${i}`, field: 'dialogues.lines.text' });
-            if (lines[i + 1]?.text) out.push({ text: lines[i + 1].text, record_id: `${u.id}#dialogue.a${i + 1}`, field: 'dialogues.lines.text' });
-            pairs++;
-          }
-        }
-      }
-    }
-    return out;
-  },
-  courseListening(json) {
-    const out = [];
-    for (const sem of Object.values(course(json).semesters ?? {})) {
-      for (const u of sem.units ?? []) {
-        for (const [i, lq] of (u.listeningQuestions ?? []).entries()) {
-          if (lq?.audio) out.push({ text: lq.audio, record_id: `${u.id}#listening[${i}]`, field: 'listeningQuestions.audio' });
-          const ans = lq?.opts?.[lq.answer];
-          if (ans) out.push({ text: ans, record_id: `${u.id}#listening[${i}].answer`, field: 'listeningQuestions.opts[answer]' });
-        }
-      }
-    }
-    return out;
-  },
-  sentenceLesson(json) {
-    const out = [];
-    for (const mod of json.subModules ?? []) {
-      for (const s of mod.sentences ?? []) {
-        if (s.question?.en) out.push({ text: s.question.en, record_id: `${json.lessonId}#${mod.id}.${s.id}`, field: 'question.en' });
-        if (s.answer?.en) out.push({ text: s.answer.en, record_id: `${json.lessonId}#${mod.id}.${s.id}`, field: 'answer.en' });
-      }
-    }
-    return out;
-  },
-  fcSeed(json) {
-    const out = [];
-    for (const q of Array.isArray(json) ? json : []) {
-      if (q.audio) out.push({ text: q.audio, record_id: q.id, field: 'audio' });
-      if (q.display) out.push({ text: q.display, record_id: q.id, field: 'display' });
-      if (q.type === 'picture_match_word' && Array.isArray(q.options) && q.options[q.answer]) {
-        out.push({ text: q.options[q.answer], record_id: q.id, field: 'options[answer]' });
-      }
-    }
-    return out;
-  },
-  /** phonics 是 .ts 模块，按结构抓 word / options（stage_1 无录音时也走 TTS）。 */
-  phonicsTs(_json, ctx) {
-    const src = fs.readFileSync(ctx.absPath, 'utf8');
-    const out = [];
-    for (const m of src.matchAll(/\{\s*word:\s*"([^"]+)"/g)) out.push({ text: m[1], record_id: `${path.basename(ctx.absPath)}#word`, field: 'phonics.word' });
-    for (const m of src.matchAll(/options:\s*\[([^\]]+)\]/g)) {
-      for (const w of m[1].split(',').map((s) => s.trim().replace(/^"|"$/g, '')).filter(Boolean)) {
-        out.push({ text: w, record_id: `${path.basename(ctx.absPath)}#challenge`, field: 'stage_3_challenge.options' });
-      }
-    }
-    return out;
-  },
-};
-const course = (json) => json[Object.keys(json)[0]]; // grade3.json → { grade3: {...} }
 
 // ---------------- 文件匹配 ----------------
 const globToRe = (g) => new RegExp('^' + g.split('*').map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('[^/]*') + '$');
@@ -199,6 +107,21 @@ const roots = cfg.dataRoots;
 if (!Array.isArray(roots) || !roots.length) {
   die(2, `✗ ${SECTION}.json 缺 dataRoots：覆盖率检查需要显式声明要递归扫描的数据根目录`);
 }
+// 反向哨兵：dataRoots 自己是个单点——新建一个**不在 dataRoots 内**的顶层内容目录，
+// 扫描器不会扫、也不知道它存在，又回到静默放行。所以再枚举一层父目录，
+// 任何既不在 dataRoots、也不在 outOfScope 里的游离条目 → 报错退出。
+const stray = strayUnderContentParents(cfg, REPO);
+if (stray.length) {
+  die(2,
+`✗ 反向哨兵未通过：${stray.length} 个内容条目既不在 dataRoots 内，也没有 outOfScope 声明。
+
+${stray.map((f) => '   ' + f).join('\n')}
+
+要么把它纳入 dataRoots（属于本 section 的内容），
+要么在 outOfScope 里显式声明并写清 why（属于别的 section / 不是内容 / 暂不接入）。
+不声明就挡住管线：新建内容目录却没人告诉音频管线，是"缺口从此不可见"的典型起点。`);
+}
+
 const declared = [...(cfg.sources ?? []), ...(cfg.audioFree ?? []), ...(cfg.artifacts ?? [])]
   .map((s) => s.files).filter(Boolean).map(globToRe);
 const allFiles = [...new Set(roots.flatMap((r) => (fs.existsSync(path.join(REPO, r)) ? listFiles(path.join(REPO, r)) : [])))];
@@ -227,9 +150,18 @@ let sourcesRun = 0;
 for (const s of cfg.sources ?? []) {
   if (ONLY_SOURCE && s.id !== ONLY_SOURCE) continue;
   if (String(s.files).startsWith('table:')) {
-    // 表源：<table>?<postgrest query>，字段由 s.fields 指定。primary 无表源，未经真实数据验证。
-    console.warn(`⚠ 表源 ${s.id} 走 PostgREST 路径，primary 无此类源，尚未经真实数据验证`);
-    continue;
+    // 表源路径尚未用真实数据验证过 → **硬失败**，绝不 warn-and-skip。
+    // 理由：跳过 = 那批内容根本没被读过，而 precheck 会报"零缺口"、退出码 0、CI 绿灯，
+    // 人看到绿的就不再怀疑 —— 与假 200、CRLF 静默失效同一类。
+    die(2,
+`✗ 内容源 ${s.id} 是表源（${s.files}），但表源代码路径尚未用真实数据验证过，已封印。
+
+解除封印前请先：
+  1. 用该表的真实数据跑通一次抽取（字段名、筛选条件、grade 来源都要对）
+  2. 与对应 section 的可达档位矩阵核对档位
+  3. 在本文件里移除这道封印，并补一条针对表源的单测
+
+在此之前宁可整轮失败，也不要静默跳过 —— 跳过会让 precheck 谎报零缺口。`);
   }
   const re = globToRe(s.files);
   const files = allFiles.filter((f) => re.test(f));

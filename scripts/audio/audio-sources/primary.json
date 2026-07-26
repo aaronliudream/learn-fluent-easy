@@ -7,6 +7,23 @@
   "dataRoots": ["src/data/primaryHub"],
   "dataRootsNote": "覆盖率检查会**递归**扫这些根目录，任何未被 sources/audioFree/artifacts 分类的文件都会让管线报错退出。必须显式声明根目录：若只从已配置的 glob 反推目录，新增一个全新子目录会整个被跳过、静默放行。",
 
+  "contentParents": ["src/data"],
+  "outOfScope": [
+    { "paths": ["src/data/juniorHub"], "why": "junior section 的内容，待该 section 产出可达档位矩阵后单独接入" },
+    { "paths": ["src/data/gaokao", "src/data/gaokaoHub"], "why": "senior/高考 section 的内容，同上" },
+    { "paths": ["src/data/exams"], "why": "真题卷数据，尚未确认是否有朗读入口，接入前需先核音频调用点" },
+    {
+      "paths": [
+        "src/data/aiLessonsG2.json", "src/data/badges.ts", "src/data/g2LessonStages.ts",
+        "src/data/sightWords.ts", "src/data/sparkMoods.ts", "src/data/sparkPhrases.ts"
+      ],
+      "why": "src/data 顶层散文件：G2/徽章/Spark 文案，均不属于 primaryHub 内容树；其中 sightWords/g2LessonStages 若将来接入小学发音需重新评估"
+    }
+  ],
+  "outOfScopeNote": "反向哨兵：管线会枚举 contentParents 下的实际条目，任何既不在 dataRoots、也不在 outOfScope 里的**游离目录/文件**都会让管线报错退出。作用是让'新建了一个内容目录但没人告诉音频管线'从静默变成可见失败——dataRoots 本身是单点，这条是它的哨兵。",
+
+  "oclockNote": "关于 o'clock：预热侧会跳过这个词条（speech.ts 里 isOClockVocabToken && isWebSpeechSupported），原因是**播放侧把这个孤立词条路由给了浏览器 Web Speech**——历史上云 TTS 读错这个撇号，先后试过把文本硬改成 'o clock'（7214e778）、挂静态 mp3（a9b7013c / 61b01f6c）、换 OpenAI shimmer（0bd05a50），最后定为 Web Speech 优先 + 云端兜底（b4e9ed0d）。所以：**不是**因为有捆绑 mp3（public/audio/hub/oclock.mp3 确实存在但仓库内零引用，是废弃方案的遗留）。管线仍会为它生成云端对象，因为 Web Speech 不可用/失败时 hubSpeak 会回落到云端。",
+
   "tiers": {
     "fixed": {
       "speeds": [0.85],

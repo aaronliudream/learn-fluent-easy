@@ -76,8 +76,6 @@ export function MistakeReviewGate() {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
-  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
-  const actionRef = useRevealScroll<HTMLDivElement>(revealed);
   const userIdRef = useRef<string | null>(null);
   const busyRef = useRef(false); // 防重入(load 事件 + SIGNED_IN 同时触发)
 
@@ -124,6 +122,10 @@ export function MistakeReviewGate() {
   const correctLetter = cur ? frozenCorrect(cur) : "";
   const revealed = picked != null;
   const hasNext = idx + 1 < items.length;
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)。
+  // ⚠️ 必须放在 `revealed` 声明**之后** —— 之前放在 useState 组后面,读到的是 TDZ 里的 `revealed`,
+  // 每次渲染直接抛 ReferenceError;本组件挂在 App 全局,于是全站白屏(#242 事故)。
+  const actionRef = useRevealScroll<HTMLDivElement>(revealed);
 
   const close = useCallback(() => {
     if (userIdRef.current) localStorage.setItem(dailyKey(userIdRef.current), "1");

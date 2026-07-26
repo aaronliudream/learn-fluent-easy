@@ -1,0 +1,107 @@
+{
+  "section": "primary",
+  "voiceId": "el:lily",
+  "matrixDoc": "docs/audio/B4_1_speed_matrix.md",
+  "note": "档位来源于已批准的 B4.1 可达语速档矩阵。改这个文件等于改'新内容要生成哪几档音频'，必须与矩阵同步。",
+
+  "dataRoots": ["src/data/primaryHub"],
+  "dataRootsNote": "覆盖率检查会**递归**扫这些根目录，任何未被 sources/audioFree/artifacts 分类的文件都会让管线报错退出。必须显式声明根目录：若只从已配置的 glob 反推目录，新增一个全新子目录会整个被跳过、静默放行。",
+
+  "tiers": {
+    "fixed": {
+      "speeds": [0.85],
+      "code": "HUB_FIXED_SPEAK_SPEED (src/lib/primaryHub/hubSpeakSpeed.ts)",
+      "modules": "单词卡 / 句型对话关 / 6 个词汇游戏 / 语块按钮 / 情景关 / 自然拼读三个 stage"
+    },
+    "perGrade": {
+      "byGrade": { "3": 0.75, "4": 0.85, "5": 0.9, "6": 0.95 },
+      "code": "spellingStageConfig.GRADE_CONFIG[gN].speechRate / listenWordStageConfig.LISTEN_WORD_CONFIG[gN].speechRate",
+      "modules": "拼写关 / 听音辨词关（两者同档）"
+    },
+    "switchable": {
+      "speeds": [0.7, 0.85, 1.0],
+      "code": "HUB_SPEAK_SPEED_LEVELS (hubSpeakSpeed.ts) —— 用户可切，三档全可达",
+      "modules": "听力测试关 / 句型课"
+    },
+    "kidSpeed": {
+      "byGrade": { "3": 0.85, "4": 1.0, "5": 1.0, "6": 1.0 },
+      "code": "getKidSpeed(grade) (src/lib/speak.ts) —— grade 被 resolvePrimaryGrade 钳在 [3,6]，故 0.7 分支不可达",
+      "modules": "英语闯关全部关卡"
+    }
+  },
+
+  "sources": [
+    {
+      "id": "course-vocab",
+      "files": "src/data/primaryHub/grade*.json",
+      "gradeFrom": "filename",
+      "picker": "courseVocab",
+      "tiers": ["fixed", "perGrade"],
+      "playedBy": "StagePlay:250 单词卡 / 6 个游戏 @fixed；SpellingStage:240、ListenWordStage:97 @perGrade"
+    },
+    {
+      "id": "course-chunks",
+      "files": "src/data/primaryHub/grade*.json",
+      "gradeFrom": "filename",
+      "picker": "courseChunks",
+      "tiers": ["fixed"],
+      "playedBy": "VocabQuizGame:204 语块按钮；情景关整句与语块原文逐字相同，共用同一对象"
+    },
+    {
+      "id": "course-dialogues",
+      "files": "src/data/primaryHub/grade*.json",
+      "gradeFrom": "filename",
+      "picker": "courseDialoguePairs",
+      "tiers": ["fixed"],
+      "playedBy": "StagePlay:792/807 句型对话关（每单元只取前 4 组 q/a，与组件一致）"
+    },
+    {
+      "id": "course-listening",
+      "files": "src/data/primaryHub/grade*.json",
+      "gradeFrom": "filename",
+      "picker": "courseListening",
+      "tiers": ["switchable"],
+      "playedBy": "StagePlay:610 题目 / :621 答错正音（含 opts[answer]）"
+    },
+    {
+      "id": "sentence-lessons",
+      "files": "src/data/primaryHub/sentence/*.json",
+      "picker": "sentenceLesson",
+      "tiers": ["switchable"],
+      "playedBy": "SentenceLessonStage:63 AudioBtn"
+    },
+    {
+      "id": "final-challenge-seeds",
+      "files": "src/data/primaryHub/finalChallenge/*_seed.json",
+      "gradeFrom": "filename",
+      "picker": "fcSeed",
+      "tiers": ["kidSpeed"],
+      "playedBy": "闯关各关卡 speakKid(text,{grade})；含 audio / display / picture_match_word 的 options[answer]"
+    },
+    {
+      "id": "phonics",
+      "files": "src/data/primaryHub/phonics/*.ts",
+      "picker": "phonicsTs",
+      "tiers": ["fixed"],
+      "playedBy": "PrimaryHubPhonics:204 找一找 / :302 闯关 / phonicsAudio:28 听一听（无录音时走 TTS）"
+    }
+  ],
+
+  "audioFree": [
+    {
+      "files": "src/data/primaryHub/readWrite/*.json",
+      "why": "读写关无音频：ReadWriteTrainingStage 全文件 grep speak|Audio|audio 零命中（Phase A 审计核实）"
+    },
+    {
+      "files": "src/data/primaryHub/legacy_g4v2_u1.json",
+      "why": "遗留数据，src 内零引用（grep legacy_g4v2_u1 无命中）"
+    }
+  ],
+
+  "artifacts": [
+    {
+      "files": "src/data/primaryHub/listenWordAudio.json",
+      "why": "预生成 URL 映射表，是产物不是内容源（由 scripts/pregenerate-primary-listenword.mjs 写出）"
+    }
+  ]
+}

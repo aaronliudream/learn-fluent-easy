@@ -113,6 +113,92 @@ export const pickers = {
     }
     return out;
   },
+
+  /**
+   * 初中 ListenMcStage 的**题目**（:630 hubSpeak(q.audio, listen)）。
+   * 与 courseListening 不同：初中题目与正音是**两个不同档位**（0.8 / 0.7），
+   * 合成一个 source 会给每条文本各多生成一档没人播的对象，所以拆开。
+   */
+  juniorCourseListeningAudio(json) {
+    const out = [];
+    for (const sem of Object.values(course(json).semesters ?? {})) {
+      for (const u of sem.units ?? []) {
+        for (const [i, lq] of (u.listeningQuestions ?? []).entries()) {
+          if (lq?.audio) out.push({ text: lq.audio, record_id: `${u.id}#listening[${i}]`, field: 'listeningQuestions.audio' });
+        }
+      }
+    }
+    return out;
+  },
+
+  /** 初中 ListenMcStage 的**正确项正音**（:589 hubSpeak(q.opts[q.answer], slow)）。 */
+  juniorCourseListeningAnswer(json) {
+    const out = [];
+    for (const sem of Object.values(course(json).semesters ?? {})) {
+      for (const u of sem.units ?? []) {
+        for (const [i, lq] of (u.listeningQuestions ?? []).entries()) {
+          const ans = lq?.opts?.[lq.answer];
+          if (ans) out.push({ text: ans, record_id: `${u.id}#listening[${i}].answer`, field: 'listeningQuestions.opts[answer]' });
+        }
+      }
+    }
+    return out;
+  },
+
+  /**
+   * SentenceStage 的 4 个句型**写死在页面组件里**（JuniorHubStagePlay.tsx 的 SENTENCE_PATTERNS），
+   * 不在 src/data 下 —— 靠 junior.json 的 extraFiles 把这个 tsx 纳入扫描。
+   * 播放点：:787 q、:802 a，都是 normal(0.85)。
+   * （grade9.json 里的 `dialogues` 字段**不是**这一关的来源，全站零消费，见 junior.json 注释。）
+   */
+  juniorSentencePatternsTsx(_json, ctx) {
+    const src = fs.readFileSync(ctx.absPath, 'utf8');
+    const block = /const SENTENCE_PATTERNS = \[([\s\S]*?)\n\];/.exec(src);
+    if (!block) {
+      throw new Error(`✗ ${ctx.rel} 里找不到 SENTENCE_PATTERNS 常量——句型关的文本来源变了，先核播放点再改 picker`);
+    }
+    const out = [];
+    for (const key of ['q', 'a']) {
+      for (const m of block[1].matchAll(new RegExp(`\\n\\s{4}${key}: "([^"]+)"`, 'g'))) {
+        out.push({ text: m[1], record_id: `SENTENCE_PATTERNS#${key}`, field: `SENTENCE_PATTERNS.${key}` });
+      }
+    }
+    if (!out.length) throw new Error(`✗ ${ctx.rel} 的 SENTENCE_PATTERNS 抽到 0 条文本`);
+    return out;
+  },
+
+  // ---- 表源 picker（入参是 DB 行数组，不是 JSON 文件）----
+
+  /** junior_vocab.word —— 初中 hub 里唯一被朗读的词字段（词卡/听音辨词/默写关都是它）。 */
+  juniorVocabWord(rows) {
+    return rows
+      .filter((r) => r.word)
+      .map((r) => ({ text: r.word, record_id: `junior_vocab:${r.id ?? r.word}`, field: 'word', grade: r.grade }));
+  },
+
+  /**
+   * junior_vocab 的 phrase_en / example_en —— 在 VocabStage 里被合成 chunks 显示，
+   * **每条都带 🔊**（JuniorHubStagePlay:422/427 `speakWord(c.en)`），所以是真会被朗读的文本。
+   * （第一版矩阵曾误判成"纯展示"，靠通读 speakWord 封装才发现。）
+   */
+  juniorVocabChunk(rows) {
+    const out = [];
+    for (const r of rows) {
+      if (r.example_en) out.push({ text: r.example_en, record_id: `junior_vocab:${r.id}#example`, field: 'example_en', grade: r.grade });
+      else if (r.phrase_en) out.push({ text: r.phrase_en, record_id: `junior_vocab:${r.id}#phrase`, field: 'phrase_en', grade: r.grade });
+    }
+    return out;
+  },
+
+  /**
+   * junior_listening_exercises.transcript —— 仅当该行**没有**预生成 audio_url 时才会被
+   * JuniorListeningPlay 用 speak() 现场朗读（用户默认音色）。有 audio_url 的直接播 CDN 文件。
+   */
+  juniorListeningTranscript(rows) {
+    return rows
+      .filter((r) => r.transcript && !r.audio_url)
+      .map((r) => ({ text: r.transcript, record_id: `junior_listening:${r.id}`, field: 'transcript', grade: r.grade }));
+  },
 };
 
 // ---------------------------------------------------------------------------

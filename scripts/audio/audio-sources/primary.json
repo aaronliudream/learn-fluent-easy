@@ -15,8 +15,9 @@
       "paths": [
         "src/data/juniorHub"
       ],
-      "why": "junior section 的内容，待该 section 产出可达档位矩阵后单独接入",
-      "status": "confirmed"
+      "why": "junior section 的内容，已由 junior.json 接管（它的 dataRoots 就是这个目录）。这里的声明不再是'待接入'，而是**转交**：ownedBy 会被校验，junior.json 若不真的覆盖这个路径，primary 巡检直接失败",
+      "status": "confirmed",
+      "ownedBy": "junior"
     },
     {
       "paths": [

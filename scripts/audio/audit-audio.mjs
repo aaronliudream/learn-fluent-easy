@@ -98,7 +98,7 @@ async function main() {
   // ---------------- 抽取 + 金丝雀 ----------------
   let items;
   try {
-    items = [...extractItems(cfg, { allFiles }).values()];
+    items = [...(await extractItems(cfg, { allFiles })).values()];
   } catch (e) {
     if (e instanceof ConfigError) { report.verdict = 'invalid:config'; return bail(2, e.message); }
     throw e;

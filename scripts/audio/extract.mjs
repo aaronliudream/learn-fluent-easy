@@ -10,6 +10,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { pickers } from './pickers.mjs';
 import { strayUnderContentParents } from './coverage.mjs';
+import { loadDbEnv, fetchTableRows, TableSourceError } from './table-source.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const REPO = path.resolve(HERE, '../..');
@@ -20,8 +21,17 @@ export const CDN_BASE = (process.env.AUDIO_CDN_BASE || 'https://audio.bigmoonedu
 const STORAGE_BASE = (process.env.AUDIO_STORAGE_BASE || 'https://degqpiiddkxcuzwombwp.supabase.co').replace(/\/$/, '');
 
 const normText = (s) => String(s).trim().replace(/[\u2018\u2019\u201B\u2032]/g, "'");
-export const cacheKeyOf = (voice, text, speed) =>
-  `elevenlabs|${voice}|${Math.min(1.2, Math.max(0.6, Number(speed) || 0.95))}||${text}`;
+/**
+ * provider 必须**按 voice 派生**，与 supabase/functions/tts/index.ts:310-315 一致：
+ *   voiceId 以 "el:" 开头 → elevenlabs，否则 → openai。
+ * 曾经这里把 provider 写死成 'elevenlabs'——对小学（恒 el:lily）碰巧无害，
+ * 但初中有一部分走 `speak()` 的用户默认音色（nova），写死就会算出**根本不存在的 key**，
+ * 从而虚报一批缺口。
+ */
+export const cacheKeyOf = (voice, text, speed) => {
+  const provider = String(voice).startsWith('el:') ? 'elevenlabs' : 'openai';
+  return `${provider}|${voice}|${Math.min(1.2, Math.max(0.6, Number(speed) || 0.95))}||${text}`;
+};
 const hashOf = (k) => crypto.createHash('sha256').update(k, 'utf8').digest('hex');
 export const cdnUrlOf = (k) => { const h = hashOf(k); return `${CDN_BASE}/${h.slice(0, 2)}/${h}.mp3`; };
 export const storageUrlOf = (k) => { const h = hashOf(k); return `${STORAGE_BASE}/storage/v1/object/public/tts-audio/${h.slice(0, 2)}/${h}.mp3`; };
@@ -80,6 +90,37 @@ export function listFilesUnder(relDir) {
   return out;
 }
 
+/**
+ * 转交校验：outOfScope 里写了 `ownedBy: "<section>"` 的路径，必须真的落在那个 section 的
+ * dataRoots / extraFiles 里。
+ *
+ * 为什么单独加这一道：把一个目录从 A 的排除表移到 B 之后，最容易出的错不是"漏声明"，
+ * 而是"两边都以为对方管着"——A 说 ownedBy B，B 的 dataRoots 里压根没有它。
+ * 那样两边巡检都绿，那批内容却谁都不扫。这里让它变成硬失败。
+ */
+export function checkHandoffs(cfg) {
+  const norm = (p) => String(p).replace(/\\/g, '/').replace(/\/+$/, '');
+  for (const o of cfg.outOfScope ?? []) {
+    if (!o.ownedBy) continue;
+    let target;
+    try {
+      target = JSON.parse(fs.readFileSync(configPath(o.ownedBy), 'utf8'));
+    } catch {
+      throw new ConfigError(`✗ outOfScope 声明 ownedBy: "${o.ownedBy}"，但读不到 ${o.ownedBy}.json —— 这批内容实际上没人接管`);
+    }
+    const covered = [...(target.dataRoots ?? []), ...(target.extraFiles ?? []).map((e) => e.path ?? e)].map(norm);
+    const orphan = (o.paths ?? []).map(norm).filter((p) => !covered.some((c) => p === c || c.startsWith(`${p}/`) || p.startsWith(`${c}/`)));
+    if (orphan.length) {
+      throw new ConfigError(
+`✗ 转交校验未通过：以下路径声明 ownedBy: "${o.ownedBy}"，但 ${o.ownedBy}.json 的 dataRoots/extraFiles 并不覆盖它们：
+
+${orphan.map((p) => '   ' + p).join('\n')}
+
+两边都以为对方管着 = 这批内容谁都不扫，而两边巡检都是绿的。`);
+    }
+  }
+}
+
 /** 反向哨兵 + 覆盖率检查。返回本 section 数据根下的全部文件。 */
 export function checkCoverage(cfg) {
   const stray = strayUnderContentParents(cfg, REPO);
@@ -92,9 +133,22 @@ ${stray.map((f) => '   ' + f).join('\n')}
 要么纳入 dataRoots，要么在 outOfScope 里显式声明（含 status 与 why）。
 新建内容目录却没人告诉音频管线，是"缺口从此不可见"的典型起点。`);
   }
+  checkHandoffs(cfg);
   const declared = [...(cfg.sources ?? []), ...(cfg.audioFree ?? []), ...(cfg.artifacts ?? [])]
     .map((s) => s.files).filter(Boolean).map(globToRe);
-  const allFiles = [...new Set(cfg.dataRoots.flatMap((r) => listFilesUnder(r)))];
+  // extraFiles：**不在 dataRoots 里、但确实被朗读**的单个文件（例如把文本写死在页面组件里的
+  // SENTENCE_PATTERNS）。必须逐个存在，否则文件一改名就静默少一批文本。
+  const extra = (cfg.extraFiles ?? []).map((e) => e.path ?? e);
+  const missing = extra.filter((f) => !fs.existsSync(path.join(REPO, f)));
+  if (missing.length) {
+    throw new ConfigError(
+`✗ extraFiles 里有 ${missing.length} 个文件不存在：
+
+${missing.map((f) => '   ' + f).join('\n')}
+
+这些是"文本写死在代码里"的内容源。文件改名/挪走却没同步这里 = 那批文本从此不在盘点内。`);
+  }
+  const allFiles = [...new Set([...cfg.dataRoots.flatMap((r) => listFilesUnder(r)), ...extra])];
   const unclassified = allFiles.filter((f) => !declared.some((re) => re.test(f)));
   if (unclassified.length) {
     throw new ConfigError(
@@ -131,21 +185,49 @@ const gradeOf = (rel, how) => {
  * 按映射表抽出全部「可达 (文本 × 档位)」对象。
  * @returns {Map<string, {cache_key,text,voice_id,speed,cdn_url,storage_url,source_ref,record_id,field}>}
  */
-export function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false } = {}) {
+export async function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false } = {}) {
   const files = allFiles ?? checkCoverage(cfg);
-  const rows = new Map();
+  const rows_ = new Map();
   for (const s of cfg.sources ?? []) {
     if (onlySource && s.id !== onlySource) continue;
     if (String(s.files).startsWith('table:')) {
-      throw new ConfigError(
-`✗ 内容源 ${s.id} 是表源（${s.files}），但表源代码路径尚未用真实数据验证过，已封印。
+      // 表源已解封（依据见 table-source.mjs 末尾三条）。取数走 fetchTableRows：
+      // 分页触顶硬失败 + 抽取数必须与 count=exact 相等，绝不静默截断。
+      const pick = pickers[s.picker];
+      if (!pick) throw new ConfigError(`✗ 内容源 ${s.id} 的 picker "${s.picker}" 未实现（可用：${Object.keys(pickers).join(', ')}）`);
+      if (!s.filters || !/^in\.\(/.test(String(s.filters.grade ?? ''))) {
+        throw new ConfigError(
+`✗ 表源 ${s.id} 必须显式声明 grade 过滤（形如 "grade": "in.(7,8,9)"）。
 
-解除封印前请先：
-  1. 用该表的真实数据跑通一次抽取（字段名、筛选条件、grade 来源都要对）
-  2. 与对应 section 的可达档位矩阵核对档位
-  3. 移除这道封印，并补一条针对表源的单测
-
-在此之前宁可整轮失败，也不要静默跳过 —— 跳过会让 precheck 谎报零缺口。`);
+junior_* 系列是**初中与高中混表**：初中 publisher 是 junior / junior_fltrp，
+pep / fltrp / sufe 是高中的。只按 publisher 过滤会把高中行算进来。`);
+      }
+      let rows;
+      try {
+        const db = loadDbEnv(REPO);
+        rows = await fetchTableRows(db, { table: String(s.files).slice('table:'.length), ...s });
+      } catch (e) {
+        if (e instanceof TableSourceError) throw new ConfigError(e.message);
+        throw e;
+      }
+      for (const item of pick(rows, { source: s })) {
+        const text = normText(item.text);
+        if (!text) continue;
+        for (const tier of s.tiers) {
+          const voice = cfg.tiers?.[tier]?.voiceId ?? cfg.voiceId;
+          for (const sp of speedsFor(cfg, tier, item.grade ?? null)) {
+            const k = cacheKeyOf(voice, text, sp);
+            if (rows_.has(k)) continue;
+            rows_.set(k, {
+              cache_key: k, text, voice_id: voice, speed: sp,
+              cdn_url: cdnUrlOf(k), storage_url: storageUrlOf(k),
+              source_ref: `table:${String(s.files).slice('table:'.length)}`,
+              record_id: item.record_id, field: `${item.field}@${tier}`,
+            });
+          }
+        }
+      }
+      continue;
     }
     const re = globToRe(s.files);
     const matched = files.filter((f) => re.test(f));
@@ -164,11 +246,13 @@ export function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources
         const text = normText(item.text);
         if (!text) continue;
         for (const tier of s.tiers) {
+          // 音色按档位取：junior 的"用户设置音色"档是 nova，其余仍是 section 的 el:lily。
+          const voice = cfg.tiers?.[tier]?.voiceId ?? cfg.voiceId;
           for (const sp of speedsFor(cfg, tier, grade)) {
-            const k = cacheKeyOf(cfg.voiceId, text, sp);
-            if (rows.has(k)) continue;
-            rows.set(k, {
-              cache_key: k, text, voice_id: cfg.voiceId, speed: sp,
+            const k = cacheKeyOf(voice, text, sp);
+            if (rows_.has(k)) continue;
+            rows_.set(k, {
+              cache_key: k, text, voice_id: voice, speed: sp,
               cdn_url: cdnUrlOf(k), storage_url: storageUrlOf(k),
               source_ref: rel, record_id: item.record_id, field: `${item.field}@${tier}`,
             });
@@ -177,7 +261,7 @@ export function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources
       }
     }
   }
-  return rows;
+  return rows_;
 }
 
 /** 并发 HEAD 探测；判定「存在」= 200 且 ≥ minBytes（默认 2KB，用来揪出空音频）。 */

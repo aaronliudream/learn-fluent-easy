@@ -1,0 +1,219 @@
+{
+  "section": "junior",
+  "voiceId": "el:lily",
+  "matrixDoc": "docs/audio/JUNIOR_1_speed_matrix.md",
+  "note": "档位来源于 JUNIOR_1 可达语速档矩阵（逐个播放点抓实参）。改这个文件等于改'新内容要生成哪几档音频'，必须与矩阵同步。初中与小学最大的不同：① 主要文本在 DB 不在 JSON（table: 源）；② 存在第二个音色空间（用户设置音色，默认 nova），不是全站恒 el:lily。",
+  "dataRoots": [
+    "src/data/juniorHub"
+  ],
+  "extraFiles": [
+    {
+      "path": "src/pages/juniorHub/JuniorHubStagePlay.tsx",
+      "why": "句型对话关的 4 组句型写死在组件常量 SENTENCE_PATTERNS 里（不是 JSON、也不是 DB），:787/:802 会朗读。不纳入就是 7 条文本永远不在盘点内。"
+    }
+  ],
+  "contentParents": [
+    "src/data"
+  ],
+  "outOfScope": [
+    {
+      "paths": [
+        "src/data/primaryHub"
+      ],
+      "why": "小学 section 的内容，已由 primary.json 全量覆盖（3436/3436）",
+      "status": "confirmed"
+    },
+    {
+      "paths": [
+        "src/data/gaokao",
+        "src/data/gaokaoHub"
+      ],
+      "why": "senior/高考 section 的内容，尚未产出可达档位矩阵，本轮明确不动（清库会波及高考）",
+      "status": "confirmed"
+    },
+    {
+      "paths": [
+        "src/data/exams"
+      ],
+      "why": "真题卷数据，尚未确认是否有朗读入口，接入前需先核音频调用点（与 primary.json 同一条，保持同步）",
+      "status": "unverified"
+    },
+    {
+      "paths": [
+        "src/data/aiLessonsG2.json",
+        "src/data/badges.ts",
+        "src/data/sparkMoods.ts",
+        "src/data/sparkPhrases.ts",
+        "src/data/sightWords.ts",
+        "src/data/g2LessonStages.ts"
+      ],
+      "why": "src/data 顶层散文件，均属小学侧/通用文案，不经 junior 的任何播放入口（junior 只读 src/data/juniorHub 与 DB）",
+      "status": "confirmed"
+    }
+  ],
+  "outOfScopeNote": "反向哨兵：管线会枚举 contentParents 下的实际条目，任何既不在 dataRoots、也不在 outOfScope 里的游离目录/文件都会让管线报错退出。",
+  "tiers": {
+    "hubNormal": {
+      "speeds": [
+        0.85
+      ],
+      "code": "JUNIOR_SPEAK_SPEED.normal (src/lib/juniorHub/speakSpeeds.ts)",
+      "modules": "核心词汇关词/语块点读（StagePlay:244/:423/:428）、句型关（:787/:802）、默写关答对正音（:898）"
+    },
+    "hubListen": {
+      "speeds": [
+        0.8
+      ],
+      "code": "JUNIOR_SPEAK_SPEED.listen",
+      "modules": "听力关题目（:630）、听音辨词的目标词（ListenWordStage 把词当 q.audio 喂给 ListenMcStage）、单元通关听力题（:1099）"
+    },
+    "hubSlow": {
+      "speeds": [
+        0.7
+      ],
+      "code": "JUNIOR_SPEAK_SPEED.slow",
+      "modules": "听力关正确项正音（:589，听音辨词下即为词本身）、默写关答错正音（:916）与词表点读（:935）"
+    },
+    "fcKid": {
+      "speeds": [
+        1.0
+      ],
+      "code": "getKidSpeed(grade) (src/lib/speak.ts)，junior grade∈{7,8,9} 全落 1.0",
+      "modules": "闯关四关 speakKid(text,{grade})；其中听音选词 / 情景应答两关是 250ms 自动播（冷 key 在这里就是真静音）"
+    },
+    "userDefault": {
+      "speeds": [
+        0.85
+      ],
+      "voiceId": "nova",
+      "code": "DEFAULT_SETTINGS (src/lib/voice.ts) = nova@0.85，speak() 走用户设置",
+      "modules": "词汇板块 JuniorVocab 的 5 个游戏（:447/:624/:694/:863/:1089/:1109/:1291/:1439）、听力专区无预生成 MP3 时朗读整段 transcript（JuniorListeningPlay:106）",
+      "coverageNote": "用户可切 6 音色 × 5 语速 = 30 种组合，全预生成等于 30 倍对象。只生成默认档；其余 29 种接受冷合成——这些调用点绝大多数在点击栈内，冷合成是 1–3s 延迟而不是静音。⚠️ 例外：DictationSession（JuniorVocab:1291）是 mount 自动播，首词若在 userActivation 窗口外且 key 是冷的，会走 speak.ts:607-611 的纯预热分支 = 无声。"
+    }
+  },
+  "sources": [
+    {
+      "id": "junior-vocab-word-db",
+      "files": "table:junior_vocab",
+      "select": "id,word,phrase_en,example_en,grade,publisher,volume,unit",
+      "filters": {
+        "grade": "in.(7,8,9)"
+      },
+      "orderBy": "id",
+      "picker": "juniorVocabWord",
+      "tiers": [
+        "hubNormal",
+        "hubListen",
+        "hubSlow",
+        "userDefault"
+      ],
+      "playedBy": "StagePlay 核心词汇关 @hubNormal；听音辨词 @hubListen（词当题目）+ @hubSlow（正确项正音）；默写关 @hubNormal/@hubSlow；JuniorVocab 五游戏 @userDefault",
+      "scopeNote": "只卡 grade，不卡 publisher：实测 grade in (7,8,9) 共 3772 行，与 publisher in (junior,junior_fltrp) 的 3772 行**完全相等**（2026-07-25 实测），即初中年级段内没有其他出版社取值。publisher 仅用于盘点报告分组。⚠️ 反过来不成立：按 publisher 取会取到高中行（pep/fltrp/sufe 是高中的），所以 grade 过滤是硬要求（extract.mjs 会强制检查）。"
+    },
+    {
+      "id": "junior-vocab-chunk-db",
+      "files": "table:junior_vocab",
+      "select": "id,phrase_en,example_en,grade,publisher",
+      "filters": {
+        "grade": "in.(7,8,9)"
+      },
+      "orderBy": "id",
+      "picker": "juniorVocabChunk",
+      "tiers": [
+        "hubNormal"
+      ],
+      "playedBy": "核心词汇关翻卡里的语块按钮 StagePlay:423/:428 speakWord(c.en)",
+      "scopeNote": "与 useUnitVocab 的 chunks 取法一致：**例句优先，无例句才用短语**（不是两个都取）。"
+    },
+    {
+      "id": "junior-listening-transcript-db",
+      "files": "table:junior_listening_exercises",
+      "select": "id,transcript,audio_url,grade,publisher,volume,unit",
+      "filters": {
+        "grade": "in.(7,8,9)"
+      },
+      "orderBy": "id",
+      "picker": "juniorListeningTranscript",
+      "tiers": [
+        "userDefault"
+      ],
+      "playedBy": "JuniorListeningPlay:106 —— 仅当该行没有预生成 audio_url 时才现场 speak(transcript)",
+      "scopeNote": "有 audio_url 的行走 speakFromUrl 播固定 MP3，不经运行时 cache key，因此 picker 里过滤掉（633 行取回、160 行进盘点，2026-07-25 实测）。"
+    },
+    {
+      "id": "junior-course-vocab-json",
+      "files": "src/data/juniorHub/*grade*.json",
+      "gradeFrom": "filename",
+      "picker": "courseVocab",
+      "tiers": [
+        "hubNormal",
+        "hubListen",
+        "hubSlow"
+      ],
+      "playedBy": "同 junior-vocab-word-db 的三个 hub 档；这批是 useUnitVocab 的**回退**路径（某 unit 在 junior_vocab 查不到行时用 JSON unit.vocabulary）",
+      "scopeNote": "DB 与 JSON 是 unit 级二选一（useUnitVocab:46 valid.length>0 ? DB : JSON），但哪些 unit 走回退随 DB 内容变化。这里取**并集**：宁可多算几条重复文本，也不接受'某 unit 回退了但没人给它生成音频'。JuniorVocab（userDefault 档）只读 DB，故 JSON 回退不含该档。",
+      "publisherNote": "fltrp-grade*.json 目前 vocabulary/dialogues/listeningQuestions 全为 0 条（纯骨架），外研社的词全在 DB。glob 仍然包含它们：将来往骨架里填内容会被自动纳入，而不是静默漏掉。"
+    },
+    {
+      "id": "junior-course-chunks-json",
+      "files": "src/data/juniorHub/*grade*.json",
+      "gradeFrom": "filename",
+      "picker": "courseChunks",
+      "tiers": [
+        "hubNormal"
+      ],
+      "playedBy": "核心词汇关语块按钮（回退路径下的 chunks）"
+    },
+    {
+      "id": "junior-listening-audio-json",
+      "files": "src/data/juniorHub/*grade*.json",
+      "gradeFrom": "filename",
+      "picker": "juniorCourseListeningAudio",
+      "tiers": [
+        "hubListen"
+      ],
+      "playedBy": "内联 ListenMcStage 题目 :630；单元通关听力题 :1099（无 junior_listening_items 时的回退题源）"
+    },
+    {
+      "id": "junior-listening-answer-json",
+      "files": "src/data/juniorHub/*grade*.json",
+      "gradeFrom": "filename",
+      "picker": "juniorCourseListeningAnswer",
+      "tiers": [
+        "hubSlow"
+      ],
+      "playedBy": "内联 ListenMcStage 正确项正音 :589",
+      "scopeNote": "与题目拆成两个 source 的原因：初中这两处是**不同档位**（0.8 / 0.7）。合成一个会给每条文本各多生成一档没人播的对象。"
+    },
+    {
+      "id": "junior-final-challenge-seeds",
+      "files": "src/data/juniorHub/finalChallenge/*_seed.json",
+      "gradeFrom": "filename",
+      "picker": "fcSeed",
+      "tiers": [
+        "fcKid"
+      ],
+      "playedBy": "闯关关卡 speakKid(text,{grade})：ListenChooseWord/DialogueResponse/FillInChoose 的 q.audio、SentenceOrdering 的 q.display",
+      "scopeNote": "junior 题库目前只有七年级 v1/v2（questionBank.ts 只 import 这两个 seed），八/九年级 FC 尚无题库——这是内容缺口不是音频缺口。"
+    },
+    {
+      "id": "junior-sentence-patterns",
+      "files": "src/pages/juniorHub/JuniorHubStagePlay.tsx",
+      "picker": "juniorSentencePatternsTsx",
+      "tiers": [
+        "hubNormal"
+      ],
+      "playedBy": "SentenceStage :787 q / :802 a（4 组句型，第 4 组无 a，共 7 条）",
+      "scopeNote": "靠 extraFiles 纳入（文本写死在组件里，不在 src/data 下）。picker 抽不到就抛错，防止组件重构后静默归零。"
+    }
+  ],
+  "audioFree": [
+    {
+      "files": "src/data/juniorHub/_backup/*.json",
+      "why": "七上旧版课程数据备份，src 内零引用（grep grade7_volume1_old 无命中）",
+      "assertUnreferenced": true
+    }
+  ],
+  "artifacts": [],
+  "deadFieldsNote": "grade9.json 里 14 个 unit 带 dialogues 字段，但**全站零消费**：句型关读的是组件常量 SENTENCE_PATTERNS，`unit.dialogues` 在 src 内没有任何读取点（与小学不同，小学的 courseDialoguePairs 是真播放源）。因此不给它建 source；若将来句型关改成读 unit.dialogues，必须回来加一条。"
+}

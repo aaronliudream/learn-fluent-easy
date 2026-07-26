@@ -42,7 +42,7 @@ let rows;
 try {
   cfg = loadConfig(SECTION);
   allFiles = checkCoverage(cfg);
-  rows = extractItems(cfg, { allFiles, onlySource: ONLY_SOURCE });
+  rows = await extractItems(cfg, { allFiles, onlySource: ONLY_SOURCE });
 } catch (e) {
   if (e instanceof ConfigError) { console.error(e.message); process.exit(2); }
   throw e;

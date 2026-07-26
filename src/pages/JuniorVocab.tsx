@@ -24,7 +24,7 @@ import { useJuniorVocabMastery, MASTER_STREAK } from "@/hooks/useJuniorVocabMast
 import { canonSpelling } from "@/lib/spellingVariants";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
-import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
+import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher, type JuniorPublisher } from "@/lib/juniorHub/publisher";
 
 export type Vocab = {
   id: string;
@@ -175,12 +175,12 @@ export default function JuniorVocab() {
     return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade }, { replace: true })} onPractice={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} />;
   }
 
-  return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} gradeNum={rawGrade <= 3 ? rawGrade + 6 : rawGrade} onPick={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
+  return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} gradeNum={rawGrade <= 3 ? rawGrade + 6 : rawGrade} pub={pub} onPick={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
 }
 
 /* -------------------- HUB -------------------- */
 type WordMasteryRow = {word_id: string;mastery_level: number | null;due_at: string | null;interval_days: number | null;};
-function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }: {words: Vocab[];groups: Vocab[][];grade: number;gradeNum: number;onPick: (m: Exclude<Mode, null>) => void;onPickGroup: (i: number) => void;}) {
+function JuniorVocabHub({ words, groups, grade, gradeNum, pub, onPick, onPickGroup }: {words: Vocab[];groups: Vocab[][];grade: number;gradeNum: number;pub: JuniorPublisher;onPick: (m: Exclude<Mode, null>) => void;onPickGroup: (i: number) => void;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const levelName = gradeLabel(grade, zh);

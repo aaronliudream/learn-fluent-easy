@@ -247,4 +247,31 @@ export const PICKER_ANCHORS = {
     { file: 'src/pages/primaryHub/PrimaryHubPhonics.tsx', anchor: 'hubSpeak(q.options[idx], HUB_FIXED_SPEAK_SPEED, grade)', why: '闯关朗读 stage_3 的 options' },
     { file: 'src/lib/primaryHub/phonicsAudio.ts', anchor: 'hubSpeak(fallbackText, HUB_FIXED_SPEAK_SPEED, grade)', why: 'stage_1 无录音时回退 TTS 朗读 word' },
   ],
+
+  // ---- junior ----
+  juniorCourseListeningAudio: [
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(q.audio, JUNIOR_SPEAK_SPEED.listen, grade)', why: '内联听力关题目 @0.8' },
+  ],
+  juniorCourseListeningAnswer: [
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(q.opts[q.answer], JUNIOR_SPEAK_SPEED.slow, grade)', why: '正确项正音 @0.7 —— 与题目**不同档**，所以两个 picker 分开' },
+  ],
+  juniorSentencePatternsTsx: [
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'const SENTENCE_PATTERNS = [', why: '句型关的文本写死在这个常量里（不是 JSON 的 dialogues）' },
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(s.q, JUNIOR_SPEAK_SPEED.normal, grade)', why: '句型 q @0.85' },
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(s.a, JUNIOR_SPEAK_SPEED.normal, grade)', why: '句型 a @0.85' },
+  ],
+  juniorVocabWord: [
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'const speakWord = (word: string) => hubSpeak(word, JUNIOR_SPEAK_SPEED.normal, grade)', why: '核心词汇关词点读 @0.85' },
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(v.en, JUNIOR_SPEAK_SPEED.slow, grade)', why: '默写关词表点读 @0.7' },
+    { file: 'src/lib/juniorHub/useUnitVocab.ts', anchor: '.select("id,word,phonetic,meaning_cn,phrase_en,example_en,example_cn")', why: '词从 junior_vocab 读，字段取法以此为准' },
+    { file: 'src/pages/JuniorVocab.tsx', anchor: 'speak(cur.word)', why: '词汇板块用**用户设置音色**读同一批词（userDefault 档的由来）' },
+  ],
+  juniorVocabChunk: [
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'speakWord(c.en)', why: '语块按钮 @0.85 —— 语块**会被朗读**，不是纯展示' },
+    { file: 'src/lib/juniorHub/useUnitVocab.ts', anchor: 'chunks: example ? [example] : phrase ? [{ en: phrase, cn: "" }] : undefined', why: '例句优先、无例句才用短语 —— picker 抄的就是这一行' },
+  ],
+  juniorListeningTranscript: [
+    { file: 'src/pages/JuniorListeningPlay.tsx', anchor: 'speak(e.transcript)', why: '无预生成 MP3 时现场读整段' },
+    { file: 'src/pages/JuniorListeningPlay.tsx', anchor: 'speakFromUrl', why: '有 audio_url 就播固定文件、不经运行时 key —— picker 过滤掉那些行的依据' },
+  ],
 };

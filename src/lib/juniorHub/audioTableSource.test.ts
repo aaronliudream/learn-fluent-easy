@@ -169,6 +169,32 @@ describe('映射表档位 === 代码常量（矩阵与 junior.json 不许各说�
   });
 });
 
+describe('绊线：junior_listening_items 一旦变可达，映射表必须跟上', () => {
+  /**
+   * 现状（2026-07-26 实测）：`junior_listening_items` **没有** audio_url 这一列，
+   * 而 juniorFinalQuiz.ts 的 select 带了它 → PostgREST 400 → data=null → `data ?? []`
+   * 吞掉错误 → 单元通关听力题永远回退内联 JSON。那 384 条 audio_text 因此播不到，
+   * 所以 junior.json 没给它建 source。
+   *
+   * 这条测试盯的是"修好那天"：select 一旦不再带 audio_url，384 条就变成可达的 0.8 档文本，
+   * 必须同时给 junior.json 加表源，否则单元通关听力题会全程冷合成、而且没人会发现。
+   */
+  it('select 仍带不存在的 audio_url（=仍不可达）；若已改，则 junior.json 必须有该表源', () => {
+    const src = fs.readFileSync(path.resolve(__dirname, '../juniorFinalQuiz.ts'), 'utf8');
+    const sel = /from\("junior_listening_items"\)\s*\n?\s*\.select\("([^"]+)"\)/.exec(src);
+    expect(sel, '取数写法变了，先重新核可达性再改这条测试').not.toBeNull();
+    const stillBroken = sel![1].includes('audio_url');
+    const cfg = readJunior();
+    const declared = (cfg.sources as { files: string }[]).some((s) => s.files === 'table:junior_listening_items');
+    if (stillBroken) {
+      expect(declared, 'select 仍会 400 → 该表不可达 → 不该建 source').toBe(false);
+      expect((cfg.unreachableSources ?? []).map((u: { ref: string }) => u.ref)).toContain('table:junior_listening_items');
+    } else {
+      expect(declared, 'select 已修好 → 384 条 audio_text 变可达 → junior.json 必须加 table:junior_listening_items（tier=hubListen）').toBe(true);
+    }
+  });
+});
+
 function readJunior() {
   const p = path.resolve(__dirname, '../../../scripts/audio/audio-sources/junior.json');
   return JSON.parse(fs.readFileSync(p, 'utf8'));

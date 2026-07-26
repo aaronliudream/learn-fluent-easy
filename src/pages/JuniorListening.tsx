@@ -8,7 +8,7 @@ import { MasteryBadge, type MasteryStatus } from "@/components/mastery/MasteryBa
 import { MasteryRing } from "@/components/mastery/MasteryRing";
 import { cn } from "@/lib/utils";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
-import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
+import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher, type JuniorPublisher } from "@/lib/juniorHub/publisher";
 
 /** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
 function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
@@ -286,10 +286,10 @@ export default function JuniorListening() {
 
             {!isCollapsed &&
             <div className="mt-3 space-y-4">
-                <SubGroup title="⏰ 待复习" items={byStatus.due} aggMap={aggMap} defaultOpen tone="orange" />
-                <SubGroup title="🌿 继续突破" items={byStatus.learned} aggMap={aggMap} defaultOpen tone="blue" />
-                <SubGroup title="🌱 未开始" items={byStatus.untouched} aggMap={aggMap} defaultOpen={byStatus.due.length === 0 && byStatus.learned.length === 0} tone="muted" />
-                <SubGroup title="🌳 已掌握" items={byStatus.mastered} aggMap={aggMap} defaultOpen={false} tone="emerald" />
+                <SubGroup title="⏰ 待复习" items={byStatus.due} aggMap={aggMap} pub={pub} defaultOpen tone="orange" />
+                <SubGroup title="🌿 继续突破" items={byStatus.learned} aggMap={aggMap} pub={pub} defaultOpen tone="blue" />
+                <SubGroup title="🌱 未开始" items={byStatus.untouched} aggMap={aggMap} pub={pub} defaultOpen={byStatus.due.length === 0 && byStatus.learned.length === 0} tone="muted" />
+                <SubGroup title="🌳 已掌握" items={byStatus.mastered} aggMap={aggMap} pub={pub} defaultOpen={false} tone="emerald" />
               </div>
             }
           </section>);
@@ -313,9 +313,9 @@ function StatPill({ emoji, label, n, cls, onClick, active, pulse }: {emoji: stri
 
 }
 
-function SubGroup({ title, items, aggMap, defaultOpen, tone
+function SubGroup({ title, items, aggMap, pub, defaultOpen, tone
 
-}: {title: string;items: E[];aggMap: Map<string, AttemptAgg>;defaultOpen?: boolean;tone: "orange" | "blue" | "muted" | "emerald";}) {
+}: {title: string;items: E[];aggMap: Map<string, AttemptAgg>;pub: JuniorPublisher;defaultOpen?: boolean;tone: "orange" | "blue" | "muted" | "emerald";}) {
   const [open, setOpen] = useState(!!defaultOpen);
   if (!items.length) return null;
   const toneCls = {
@@ -332,14 +332,14 @@ function SubGroup({ title, items, aggMap, defaultOpen, tone
       </button>
       {open &&
       <div className="mt-2 grid gap-2">
-          {items.map((e) => <ExerciseCard key={e.id} e={e} agg={aggMap.get(e.id)} />)}
+          {items.map((e) => <ExerciseCard key={e.id} e={e} agg={aggMap.get(e.id)} pub={pub} />)}
         </div>
       }
     </div>);
 
 }
 
-function ExerciseCard({ e, agg }: {e: E;agg: AttemptAgg | undefined;}) {
+function ExerciseCard({ e, agg, pub }: {e: E;agg: AttemptAgg | undefined;pub: JuniorPublisher;}) {
   const status = statusOf(agg);
   const pct = pctOf(agg);
   const wrong = agg ? agg.total - agg.correct : 0;

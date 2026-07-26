@@ -9,6 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
+    "check:undef": "node scripts/guard-undefined-identifiers.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "pep:extract": "python scripts/extract_gaokao_pep.py",

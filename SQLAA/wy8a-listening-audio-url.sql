@@ -128,3 +128,19 @@ BEGIN
 END $$;
 
 COMMIT;
+
+-- ============================================================
+-- 跑完必看:Supabase 编辑器【不显示 RAISE NOTICE】,成功路径靠下面这条查询给证据。
+-- 期望 6 行(U1-U6),每行 filled=6、missing=0;合计 36。
+-- 与事务分开,跑完自动出结果,不用另外贴。
+-- ============================================================
+SELECT unit,
+       count(*) FILTER (WHERE audio_url IS NOT NULL) AS filled,
+       count(*) FILTER (WHERE audio_url IS NULL)     AS missing,
+       count(*)                                      AS total
+  FROM public.junior_listening_exercises
+ WHERE publisher = 'junior_fltrp' AND grade = 8 AND volume = 'wy8A'
+ GROUP BY unit
+ ORDER BY unit;
+
+-- END OF FILE wy8a-listening-audio-url.sql

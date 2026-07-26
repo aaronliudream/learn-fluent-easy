@@ -127,6 +127,20 @@ def main():
         fails.append('UPDATE %d 条,但 GET DIAGNOSTICS 行数断言只有 %d 处 —— '
                      '空匹配会静默成功' % (n_update, n_diag))
 
+    # 9) ★写库 SQL 必须留可见的校验查询★(2026-07-25)
+    #    Supabase SQL 编辑器**不显示 RAISE NOTICE**,DO 块里的成功提示 Aaron 根本看不到,
+    #    跑完只有一句 "Success. No rows returned" —— 和"跑成功却一行没生效"长得一模一样。
+    #    现场:我重写音频回填 SQL 时,把生成器原本带的校验 SELECT 连同文件尾一起截掉了
+    #    (转换脚本取表头写了 [:4]),id/url 36 条一字不差,丢的正是唯一的可见证据。
+    #    要求:有写操作的文件,必须含至少一条 DO 块之外、能返回行的 SELECT。
+    if re.search(r'\b(?:UPDATE|INSERT|DELETE)\b', code_nc, re.I):
+        outside = re.sub(r'\$\$.*?\$\$', '', code_nc, flags=re.S)     # 剥掉 DO 块
+        vis = [m for m in re.finditer(r'\bSELECT\b', outside, re.I)
+               if not re.match(r'\bSELECT\b.{0,400}?\bINTO\b', outside[m.start():], re.S | re.I)]
+        if not vis:
+            fails.append('无可见校验查询 —— Supabase 编辑器不显示 RAISE NOTICE,'
+                         '跑完看不到证据。请在 COMMIT 后附一条返回行的 SELECT')
+
     print('校验 %s' % args.path)
     print('  语句 %d,UPDATE %d' % (len(stmts), n_up))
     if fails:

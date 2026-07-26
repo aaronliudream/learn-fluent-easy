@@ -88,15 +88,28 @@ const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const supabase = createClient(SUPABASE_URL, SERVICE_KEY, { auth: { persistSession: false } });
 const BUCKET = "tts-audio";
 
-function publicUrlFor(path: string): string {
-  // Constructed manually so we can return it before/after upload without an extra round-trip.
+// Optional Cloudflare (or other) CDN that reverse-proxies the Storage bucket.
+// When set, this is what we hand BACK TO CLIENTS so they fetch MP3s via the
+// CDN (fast in mainland China). Internally we still HEAD-probe the raw
+// Supabase Storage URL — that path is the source of truth and we don't want
+// CDN cache state to confuse cache-hit detection.
+const AUDIO_CDN_BASE = (Deno.env.get("AUDIO_CDN_BASE") || "").replace(/\/$/, "");
+
+function storageUrlFor(path: string): string {
   return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${path}`;
 }
 
+function publicUrlFor(path: string): string {
+  // What clients see. CDN-first if configured, raw Storage otherwise.
+  if (AUDIO_CDN_BASE) return `${AUDIO_CDN_BASE}/${path}`;
+  return storageUrlFor(path);
+}
+
 async function existsInStorage(path: string): Promise<boolean> {
-  // HEAD on the public URL is cheaper than the SDK list call.
+  // HEAD on the raw Storage URL (not the CDN) so we don't get fooled by
+  // stale CDN 404 caching. Cheaper than the SDK list call.
   try {
-    const r = await fetch(publicUrlFor(path), { method: "HEAD" });
+    const r = await fetch(storageUrlFor(path), { method: "HEAD" });
     return r.ok;
   } catch { return false; }
 }
@@ -387,26 +400,22 @@ serve(async (req) => {
       }
     }
 
-    // Persist for everyone — fire-and-forget so we don't add latency to this
-    // request. The first user pays the synthesis cost; everyone after them
-    // gets a CDN hit (<200ms).
-    queueMicrotask(() => uploadToStorage(path, bytes!).catch(() => {}));
+    // Persist for everyone BEFORE responding, so the client can immediately
+    // fetch the MP3 from the CDN (Cloudflare). This adds ~100-300ms to the
+    // first-ever request for a phrase, but every subsequent play (for any
+    // user, anywhere) skips the Edge Function entirely and is served from
+    // the CDN — critical for mainland-China latency.
+    await uploadToStorage(path, bytes!);
 
-    // Cold path: return raw audio/mpeg bytes when the client supports it.
-    // This skips base64 encoding (~33% smaller payload) and the JSON parse,
-    // and lets the browser start decoding the MP3 immediately. Saves
-    // ~200-500ms vs. the legacy base64-in-JSON envelope.
+    // Cold path: return CDN URL as JSON. We no longer return the raw MP3
+    // bytes through the Edge Function — that bypassed the CDN and was the
+    // reason China users saw slow first plays.
     if (format === "url") {
-      return new Response(bytes, {
-        status: 200,
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "audio/mpeg",
-          "Content-Length": String(bytes.byteLength),
-          "Cache-Control": "public, max-age=31536000, immutable",
-          "x-audio-url": cdnUrl,
-          "x-cache": "MISS",
-        },
+      return json({
+        audioUrl: cdnUrl,
+        cached: false,
+        provider: usedProvider,
+        mimeType: "audio/mpeg",
       });
     }
     const b64 = base64Encode(bytes);

@@ -1,5 +1,8 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.(?:mp3|mp4|m4a|wav|ogg|opus|png|jpg|jpeg|gif|svg|webp|avif|ico|css|js|mjs|cjs|map|json|webmanifest|txt|xml|md|pdf|html|woff|woff2|ttf|otf|eot|zip)$).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

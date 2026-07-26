@@ -3,9 +3,15 @@ import { unlockAudioSync } from "@/lib/speak";
 
 let current: HTMLAudioElement | null = null;
 
-/** Play bundled MP3 under public/; falls back to kid CDN voice (not browser TTS). */
+/**
+ * Play a bundled MP3 under `public/`; falls back to kid CDN voice (not browser TTS).
+ *
+ * `url` is null when the unit declares no recorded asset for the word — then we go
+ * straight to TTS inside the same user-gesture stack (no wasted request, no decode
+ * failure). See `PhonicsListenItem.audio`.
+ */
 export function playPhonicsAudio(
-  url: string,
+  url: string | null,
   fallbackText: string,
   grade: number,
 ): void {
@@ -17,10 +23,16 @@ export function playPhonicsAudio(
     current.pause();
     current = null;
   }
+  if (!url) {
+    hubSpeak(fallbackText, 0.85, grade);
+    return;
+  }
   const audio = new Audio(url);
   current = audio;
-  audio.play().catch(() => {
+  audio.play().catch((err) => {
     current = null;
+    // 有声明却播不出 = 资源真的坏了/丢了,必须留痕,否则线上只会表现为"音色不对".
+    console.warn(`[phonics] bundled audio failed (${url}), falling back to TTS:`, err);
     hubSpeak(fallbackText, 0.85, grade);
   });
 }

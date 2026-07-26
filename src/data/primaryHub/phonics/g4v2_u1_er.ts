@@ -10,13 +10,18 @@ export const G4V2_U1_PHONICS = {
   rule_explanation:
     "字母组合 er 在单词末尾发轻声 /ə(r)/，像「额」一样短促",
   audioBase: "/audio/primary/phonics/g4v2_u1",
+  // 不带 `audio` 字段 = 用共享儿童音 TTS 朗读。
+  // 这 6 个词原先写着 water.mp3 / tiger.mp3 …，但那些文件从未存在过
+  // （git 历史里 public/audio/primary/phonics/g4v2_u1/ 只提交过 README.md），
+  // 请求被 SPA rewrite 兜成 200 + index.html，每次点读都要先解码失败再回退 TTS。
+  // 将来真录了人声，把文件放进 audioBase 目录并补回 `audio: "water.mp3"` 即可。
   stage_1_listen: [
-    { word: "water", zh: "水", emoji: "💧", audio: "water.mp3" },
-    { word: "tiger", zh: "老虎", emoji: "🐯", audio: "tiger.mp3" },
-    { word: "sister", zh: "姐妹", emoji: "👧", audio: "sister.mp3" },
-    { word: "dinner", zh: "晚饭", emoji: "🍽️", audio: "dinner.mp3" },
-    { word: "computer", zh: "电脑", emoji: "💻", audio: "computer.mp3" },
-    { word: "ruler", zh: "尺子", emoji: "📏", audio: "ruler.mp3" },
+    { word: "water", zh: "水", emoji: "💧" },
+    { word: "tiger", zh: "老虎", emoji: "🐯" },
+    { word: "sister", zh: "姐妹", emoji: "👧" },
+    { word: "dinner", zh: "晚饭", emoji: "🍽️" },
+    { word: "computer", zh: "电脑", emoji: "💻" },
+    { word: "ruler", zh: "尺子", emoji: "📏" },
   ],
   stage_2_find: [
     { word: "teacher", matchesRule: true },

@@ -8,8 +8,17 @@ export type PhonicsListenItem = {
   word: string;
   zh: string;
   emoji: string;
-  /** Filename relative to {@link PhonicsConfig.audioBase}. */
-  audio: string;
+  /**
+   * Filename of a REAL recorded MP3, relative to {@link PhonicsConfig.audioBase}.
+   * Optional and opt-in: set it only when the file actually exists under `public/`.
+   * Omit it (the default) and the word is spoken by the shared kid-voice TTS.
+   *
+   * WHY optional: a filename pointing at a missing file used to be indistinguishable
+   * from a real one at runtime — the SPA rewrite answered 200 + index.html, so
+   * `new Audio()` silently failed to decode before falling back. Declaring audio
+   * only when the asset is committed keeps that failure mode impossible.
+   */
+  audio?: string;
 };
 
 /** Stage 2 — pick words that contain the unit's phonics pattern. */

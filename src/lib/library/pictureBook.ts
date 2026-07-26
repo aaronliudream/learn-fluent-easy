@@ -28,6 +28,18 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   // ⚠️ 画风分界:ch1-ch7 为水彩,ch8 起改为卡通彩色(2026-07-26 拍板,旧章不回头修)。
   "aesop-easy-readers#8",
   "aesop-easy-readers#9",
+  // ch10-ch19:2026-07-26 一次性接入(30 页 / 30 张图)。同为单段章,
+  // 分页见 SQLAA/20260726_aesop_ch10_ch19_pages.sql。
+  "aesop-easy-readers#10",
+  "aesop-easy-readers#11",
+  "aesop-easy-readers#12",
+  "aesop-easy-readers#13",
+  "aesop-easy-readers#14",
+  "aesop-easy-readers#15",
+  "aesop-easy-readers#16",
+  "aesop-easy-readers#17",
+  "aesop-easy-readers#18",
+  "aesop-easy-readers#19",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

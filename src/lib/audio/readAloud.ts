@@ -31,8 +31,16 @@ export const isReadAloudPlaying = (): boolean => isWebAudioPlaying();
 /** 播预生成音频文件(sentence.audio_url)。播完 resolve(true)。 */
 export const readAloudUrl = (url: string): Promise<boolean> => playAudioUrl(url);
 
-/** 播实时合成的一句。解析不出 URL(edge 挂了/离线)则 resolve(false),调用方继续下一句。 */
+/**
+ * 播实时合成的一句。解析不出 URL(edge 挂了/离线)则 resolve(false),调用方继续下一句。
+ *
+ * 【第一行必须是同步 resume】本函数在 onClick 里被直接调用,函数体会**同步**执行到第一个
+ * await 为止 —— 这一行因此仍在用户手势栈内。若把 resume 留给下面 playAudioUrl 里那次
+ * (在 await 之后),iOS 会认为不在手势中而拒绝解锁:用户开章后先点词(没按过播放)时,
+ * AudioContext 一直 suspended,点词一声不响。
+ */
 export const readAloudText = async (text: string, opts?: ReadAloudOpts): Promise<boolean> => {
+  unlockWebAudio();
   const url = await resolveTtsUrl(text, opts);
   if (!url) return false;
   return playAudioUrl(url);

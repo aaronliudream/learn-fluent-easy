@@ -143,6 +143,17 @@ fetch → decodeAudioData → BufferSource → GainNode → destination),该路�
 (`pwWarm` → `prefetchTTS(t)`)用的是默认音色、无 accent 的缓存键;一旦传 `READ_ACCENT`/`speed`,
 键就对不上,点词全退回 1-3s 冷合成。点词(默认音色)与整句朗读(accent US)音色不同是既有设定,不是笔误。
 
+**点词与连播的冲突裁决(Aaron 2026-07-25 拍板:停连播)**:两者共用同一个播放器,后来的必然掐掉
+先来的 —— "词音完整播完"与"朗读继续下一句"物理上二选一。故 `tapSpeak` 先 `stopAll()` 再播词音:
+点词 → 朗读停(播放按钮回未播放态)→ 词音完整 → 用户自己决定要不要接着播。
+不选"停后自动续播"是因为停在哪句/接哪句/中途再点词的状态恢复容易埋雷,先要最简单的那个。
+(旧 `<audio>` 版另一种坏法:新 `speak()` 覆盖掉共享元素的 `onended`,老 promise 永不 resolve →
+朗读循环挂死在 await 且 `playingAll` 仍为 true。两版都不对,只是坏的方向相反。)
+
+**iOS 手势解锁的位置**:`readAloudText` 的**第一行**必须同步 `unlockWebAudio()`。它在 onClick 里被
+直接调用,函数体同步执行到第一个 await 为止,这一行因此仍在手势栈内;若把 resume 留给 `playAudioUrl`
+里那次(在 `await resolveTtsUrl` 之后),iOS 判定不在手势中而拒绝解锁 —— 表现为"开章后先点词,一声不响"。
+
 **变速**:朗读慢速档走的是 **TTS 服务端合成**(`speed=0.7` 传给 tts edge function),
 前端从不碰 `playbackRate`(全库零命中)。所以不存在「慢速变低沉怪音」的问题 —— 无需插停顿方案。
 

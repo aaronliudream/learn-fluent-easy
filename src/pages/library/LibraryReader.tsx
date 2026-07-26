@@ -506,11 +506,6 @@ export default function LibraryReader() {
   }, [loading, chapterLoading, sentences, playingAll, bump]);
 
   // 点词/例句发音也走 Web Audio —— 否则整句朗读躲开了灵动岛,点一个词又把它招回来。
-  // 【必须不带 opts】:TappableLine 的视口预热(pwWarm → prefetchTTS(t))用的是默认音色、
-  // 无 accent 的缓存键;这里一旦传 READ_ACCENT/speed,键就对不上,点词全退回 1-3s 冷合成。
-  // 与整句朗读(accent US)音色不同是**既有设定**,不是笔误。
-  const tapSpeak = useCallback((t: string) => readAloudText(t), []);
-
   // 播一句:audio_url 有且非慢速则用预生成;否则实时合成(慢速强制实时以尊重语速)。
   // 慢速 = speed 0.7 交给 TTS 服务端合成,前端不动 playbackRate —— 变速不变调。
   const playSentence = useCallback(
@@ -529,6 +524,23 @@ export default function LibraryReader() {
     setPreparing(false);
     setCurrent(-1);
   }, []);
+
+  // 点词/例句发音也走 Web Audio —— 否则整句朗读躲开了灵动岛,点一个词又把它招回来。
+  //
+  // 【先停连播】点词与连播共用同一个播放器,后来的必然掐掉先来的:不停连播的话,120ms 后
+  // 下一句就会把刚起头的词音掐掉(词音若还没进解码缓存则一声都不响),朗读还自顾自往下跑。
+  // 小孩点词就是没听清那个词,此时朗读继续纯属干扰。停掉,听完,由他自己决定要不要接着播。
+  //
+  // 【必须不带 opts】TappableLine 的视口预热(pwWarm → prefetchTTS(t))用的是默认音色、
+  // 无 accent 的缓存键;这里一旦传 READ_ACCENT/speed,键就对不上,点词全退回 1-3s 冷合成。
+  // 与整句朗读(accent US)音色不同是**既有设定**,不是笔误。
+  const tapSpeak = useCallback(
+    (t: string) => {
+      stopAll();
+      return readAloudText(t);
+    },
+    [stopAll],
+  );
 
   // 连续朗读:从章内 startIdx 起顺序播到 stopIdx(不含);默认播到本章末。
   // 段左喇叭传该段末句+1 → 只读该段、读完停(方便"这段没听懂重听")。

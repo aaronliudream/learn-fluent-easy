@@ -19,6 +19,7 @@ import {
 } from "@/lib/library/data";
 import { fetchProgressMap, type LibraryReadingState } from "@/lib/library/progress";
 import { getLibrarySegment, type LibrarySegmentInfo } from "@/lib/library/segment";
+import { REVIEW_BATCH_SIZE } from "@/lib/library/favorites";
 import { trackVocabEntryView, trackVocabEntryClick } from "@/lib/library/vocabFunnel";
 
 const BANDS: { key: LibraryAgeBand | "all"; label: string }[] = [
@@ -59,18 +60,26 @@ export default function LibraryHome() {
   // 入口曝光埋点等它算完再报 —— 报的是"看到时是哪类用户 + 多少词待复习",半成品数据没有分析价值。
   const [seg, setSeg] = useState<LibrarySegmentInfo | null>(null);
 
-  // 卡片两套排版,按收藏数切换:
-  //  · 空态(收藏 0)  → 整卡居中:42px 图标独占一行 → 标题 → 副标题;带微光扫过(收藏数为 0 即触发,不记状态)
-  //  · 满态(收藏 ≥1) → 左对齐横向行:38px 图标 → 标题 + 最近收藏三词 → 右侧大号「N 词」;无动效
-  // seg 未加载(null)时按满态骨架渲染,不闪空态引导句(否则老用户每次进来先看见"还没有收藏的词")。
+  // 卡片三态,各有唯一职责:教会 → 召回 → 陪伴。任何时候只说一句最有用的话。
+  //  ① 收藏 0        → 居中 + 微光:「读书时点单词，收藏存进词库」(教会)
+  //  ② ≥1 且今日有待复习 → 左对齐 + 红点:「今天有 N 个词该复习了」(召回 —— 行动号召优先级高于陈列)
+  //  ③ ≥1 且今日无待复习 → 左对齐、安静:「最近收藏 …」+ 右侧「N 词」(陪伴)
+  // ③ 才是"没什么要做"时的状态,那时陈列最近收的词正好,不占用任何行动位。
+  // seg 未加载(null)时按 ③ 的骨架渲染,不闪空态引导句(否则老用户每次进来先看见"还没有收藏的词")。
   const emptyState = seg?.favTotal === 0;
+  const due = seg?.dueToday ?? 0;
+  // 红点沿用旧口径:min(今日待复习, 一批) —— 红点是"这一轮要做的量",不是总量。
+  const badge = seg && !emptyState ? Math.min(due, REVIEW_BATCH_SIZE) : 0;
+  const hasDue = badge > 0;
   const subtitle = !seg
     ? "读书点词 → 收藏 → 复习测试"
     : emptyState
       ? "还没有收藏的词"
-      : seg.recentTerms.length > 0
-        ? `最近收藏 ${seg.recentTerms.join(" · ")}`
-        : "读书点词 → 收藏 → 复习测试";
+      : hasDue
+        ? `今天有 ${due} 个词该复习了`
+        : seg.recentTerms.length > 0
+          ? `最近收藏 ${seg.recentTerms.join(" · ")}`
+          : "读书点词 → 收藏 → 复习测试";
 
   useEffect(() => {
     let alive = true;
@@ -183,10 +192,20 @@ export default function LibraryHome() {
             </span>
           </span>
         ) : (
-          // 满态:左对齐横向行,右侧大号计数
+          // ②③ 共用左对齐横向行:差别只在红点出不出、副标题说什么。右侧计数恒为收藏总数。
           <span className="flex items-center gap-3">
-            <span className="grid size-[38px] shrink-0 place-items-center rounded-lg bg-sky-50 text-sky-600 dark:bg-sky-950 dark:text-sky-300">
-              <BookMarked className="size-5" />
+            <span className="relative shrink-0">
+              <span className="grid size-[38px] place-items-center rounded-lg bg-sky-50 text-sky-600 dark:bg-sky-950 dark:text-sky-300">
+                <BookMarked className="size-5" />
+              </span>
+              {hasDue && (
+                <span
+                  className="absolute -right-1.5 -top-1.5 grid min-w-[18px] place-items-center rounded-full bg-rose-500 px-1 text-[11px] font-medium leading-[18px] text-white shadow-sm"
+                  aria-label={`${due} 个词待复习`}
+                >
+                  {badge}
+                </span>
+              )}
             </span>
             <span className="min-w-0 flex-1 leading-tight">
               <span className="block text-[16px] font-medium tracking-[0.04em] text-slate-800 dark:text-slate-100">

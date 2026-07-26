@@ -5,6 +5,7 @@
  * 每题作答回调 onAnswer(id,isCorrect) 由各关落库(american_user_mastery)。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { Check, X, Volume2, ChevronRight, ChevronLeft } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
@@ -72,6 +73,8 @@ export function QuizRunner({
   const item = items[idx];
   const rec = records[idx];
   const answered = rec !== undefined;
+  // 选完答案后把底部导航滚进视口(手机上它常在选项下方屏外)
+  const navRef = useRevealScroll<HTMLDivElement>(answered);
   const reviewing = idx < maxIdx;          // 回看模式:只读,不计分、不改掌握
   const picked = rec?.picked ?? null;      // choice 当前(或历史)所选
   const showAnswer = reviewing || revealed; // reveal 题是否展示答案
@@ -263,7 +266,7 @@ export function QuizRunner({
       )}
 
       {/* 底部导航:上一题(回看)/下一题。首题禁用上一题;当前题未作答时禁用下一题(reveal 靠自评推进) */}
-      <div className="mt-5 flex items-center gap-3">
+      <div ref={navRef} className="mt-5 flex items-center gap-3">
         <button type="button" onClick={prev} disabled={idx === 0}
           className={`inline-flex items-center justify-center gap-1 rounded-full border px-5 py-3 text-sm font-semibold transition ${
             idx === 0 ? "cursor-not-allowed border-slate-100 text-slate-300" : "border-slate-200 text-slate-500 hover:border-slate-300"

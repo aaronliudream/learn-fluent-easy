@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { bumpMistakeCorrect, bjToday } from "@/lib/mistakeStreak";
@@ -122,6 +123,10 @@ export function MistakeReviewGate() {
   const correctLetter = cur ? frozenCorrect(cur) : "";
   const revealed = picked != null;
   const hasNext = idx + 1 < items.length;
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)。
+  // ⚠️ 必须放在 `revealed` 声明**之后** —— 之前放在 useState 组后面,读到的是 TDZ 里的 `revealed`,
+  // 每次渲染直接抛 ReferenceError;本组件挂在 App 全局,于是全站白屏(#242 事故)。
+  const actionRef = useRevealScroll<HTMLDivElement>(revealed);
 
   const close = useCallback(() => {
     if (userIdRef.current) localStorage.setItem(dailyKey(userIdRef.current), "1");
@@ -220,7 +225,7 @@ export function MistakeReviewGate() {
             )}
             {/* 下一题 */}
             {revealed && (
-              <div className="mt-4">
+              <div ref={actionRef} className="mt-4">
                 {hasNext ? (
                   <Button className="w-full" onClick={next}>
                     {done ? <T>再做一道</T> : <T>下一题</T>}

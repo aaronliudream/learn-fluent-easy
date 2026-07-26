@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useRevealScroll } from "@/lib/useRevealScroll";
+import { useParams, useSearchParams } from "react-router-dom";
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import {
@@ -44,6 +46,10 @@ type Result = {
 
 export default function JuniorUnitGrammarTest() {
   const { grade, unitId } = useParams<{ grade: string; unitId: string }>();
+  // 从 Hub 单元关进入时带 ?returnTo=<单元关URL>;有则返回出口回那一关,而不是年级首页。
+  // (高中孪生 GaokaoUnitGrammarTest 一直是这么做的,初中这半边此前漏了。)
+  const [sp] = useSearchParams();
+  const returnTo = sanitizeReturnTo(sp.get("returnTo"));
   const unit = unitId ? findUnit(unitId) : null;
 
   const [points, setPoints] = useState<UnitPoint[]>([]);
@@ -52,6 +58,8 @@ export default function JuniorUnitGrammarTest() {
 
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(false);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(answered);
   const [answers, setAnswers] = useState<Record<number, boolean>>({}); // 每题(单次)对错
   const [result, setResult] = useState<Result | null>(null);
 
@@ -165,7 +173,7 @@ export default function JuniorUnitGrammarTest() {
     }
   };
 
-  const backTo = grade ? `/junior/hub/${grade}` : "/junior";
+  const backTo = returnTo || (grade ? `/junior/hub/${grade}` : "/junior");
 
   const answeredCount = useMemo(() => Object.keys(answers).length, [answers]);
   const correctSoFar = useMemo(
@@ -262,7 +270,7 @@ export default function JuniorUnitGrammarTest() {
             onAnswered={handleAnswered}
           />
           {answered && (
-            <div className="flex items-center justify-end pt-1">
+            <div ref={actionRef} className="flex items-center justify-end pt-1">
               <button
                 onClick={handleNext}
                 className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"

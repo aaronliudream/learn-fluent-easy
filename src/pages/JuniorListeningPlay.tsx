@@ -1,3 +1,4 @@
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import { T } from "@/i18n/T";import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams, useSearchParams } from "react-router-dom";
@@ -22,7 +23,7 @@ export default function JuniorListeningPlay() {
   const { id } = useParams<{id: string;}>();
   // 从单元Hub听力关进入时带 ?returnTo=<hub关URL>;有则返回出口回 Hub关(而非听力专区列表)。
   const [searchParams] = useSearchParams();
-  const returnTo = searchParams.get("returnTo");
+  const returnTo = sanitizeReturnTo(searchParams.get("returnTo"));   // 站内校验:防 ?returnTo=https://evil 被塞进 <Link to>
   const [e, setE] = useState<E | null>(null);
   // 当前听力所属出版社 → 所有 /junior 跳转带上,防外研社听力翻到人教(returnTo 来自 Hub 原样)。
   const pub: JuniorPublisher = e?.publisher === "junior_fltrp" ? "fltrp" : "pep";

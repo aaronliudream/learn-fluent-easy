@@ -5,6 +5,7 @@
  * onAnswer 多回一个 pickedIndex,供父组件写错题快照。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { Check, X, Volume2, ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speak, unlockAudioSync, prefetchTTSBatch } from "@/lib/speak";
@@ -78,6 +79,8 @@ export function LibraryQuizRunner({
   const item = items[idx];
   const rec = records[idx];
   const answered = rec !== undefined;
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const navRef = useRevealScroll<HTMLDivElement>(answered);
   const reviewing = idx < maxIdx;
   const picked = rec?.picked ?? null;
   const showAnswer = reviewing || revealed;
@@ -269,7 +272,7 @@ export function LibraryQuizRunner({
         </section>
       )}
 
-      <div className="mt-5 flex items-center gap-3">
+      <div ref={navRef} className="mt-5 flex items-center gap-3">
         <button type="button" onClick={prev} disabled={idx === 0}
           className={`inline-flex items-center justify-center gap-1 rounded-full border px-5 py-3 text-sm font-semibold transition ${
             idx === 0 ? "cursor-not-allowed border-slate-100 text-slate-300" : "border-slate-200 text-slate-500 hover:border-slate-300"

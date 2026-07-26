@@ -53,3 +53,11 @@ scripts/Phase2A_词汇增富.md
 # 图书馆插图原图/处理图(存 Supabase 桶,不进 git)
 scripts/library/illustrations-in/
 scripts/library/illustrations-out/
+
+# 音频巡检的结果快照：只走 CI artifact，不入库
+# 理由：提交进版本库的快照从合并那刻起就开始过期，半年后有人打开会当成当前状态。
+# 当前状态请看最近一次 audio-audit workflow 的 artifact，或本地跑 npm run audio:audit。
+data/audio-audit/audit_*.json
+data/audio-audit/precheck_*_list.csv
+data/audio-audit/pipeline_*.csv
+data/audio-audit/pipeline_progress.json

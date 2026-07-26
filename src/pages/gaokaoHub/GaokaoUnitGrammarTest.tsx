@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { useParams, useSearchParams } from "react-router-dom";
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import {
@@ -48,7 +50,7 @@ type Result = {
 export default function GaokaoUnitGrammarTest() {
   const { grade, unitId } = useParams<{ grade: string; unitId: string }>();
   const [sp] = useSearchParams();
-  const returnTo = sp.get("returnTo");
+  const returnTo = sanitizeReturnTo(sp.get("returnTo"));   // 站内校验:防 ?returnTo=https://evil 被塞进 <Link to>
   const pub = readPublisherParam(sp); // 高中:默认 pep,?publisher= 可覆盖
   const unit = unitId ? findUnit(unitId) : null;
 
@@ -58,6 +60,8 @@ export default function GaokaoUnitGrammarTest() {
 
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(false);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(answered);
   const [answers, setAnswers] = useState<Record<number, boolean>>({});
   const [result, setResult] = useState<Result | null>(null);
 
@@ -257,7 +261,7 @@ export default function GaokaoUnitGrammarTest() {
             onAnswered={handleAnswered}
           />
           {answered && (
-            <div className="flex items-center justify-end pt-1">
+            <div ref={actionRef} className="flex items-center justify-end pt-1">
               <button
                 onClick={handleNext}
                 className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"

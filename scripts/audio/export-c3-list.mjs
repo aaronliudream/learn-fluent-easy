@@ -12,6 +12,7 @@
  * 输出按 cache_key 去重（同一文本+语速在多个调用点复用同一个音频对象，只需生成一次）。
  */
 import { readFileSync, writeFileSync } from 'node:fs';
+import { parseCsv, escapeCell as esc } from './csv.mjs';
 
 const args = process.argv.slice(2);
 const arg = (f, d) => { const i = args.indexOf(f); return i >= 0 ? args[i + 1] : d; };
@@ -21,25 +22,6 @@ const STATUS = arg('--status', 'data/audio-audit/primary_audio_status.csv');
 const OUT = arg('--out', 'data/audio-audit/b3_backfill_list.csv');
 const EXCLUDES = argAll('--exclude');
 
-const parseCsv = (text) => {
-  // 必须容忍 CRLF：git 检出会把 LF 转成 CRLF，按 '\n' 切行会让**最后一列**（含表头名）
-  // 尾部带上 \r，于是 r.verdict 这类字段恒为 undefined —— 静默失效，已实际踩过一次。
-  const lines = text.replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.length);
-  const cols = lines[0].split(',');
-  return lines.slice(1).map((line) => {
-    const out = []; let cur = ''; let q = false;
-    for (let i = 0; i < line.length; i++) {
-      const c = line[i];
-      if (q) { if (c === '"') { if (line[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
-      else if (c === '"') q = true;
-      else if (c === ',') { out.push(cur); cur = ''; }
-      else cur += c;
-    }
-    out.push(cur);
-    return Object.fromEntries(cols.map((c, i) => [c, out[i]]));
-  });
-};
-const esc = (v) => { const s = String(v ?? ''); return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
 
 const rows = parseCsv(readFileSync(STATUS, 'utf8'));
 const excluded = new Set();

@@ -1,0 +1,66 @@
+/**
+ * `?returnTo=` 的统一消费口 —— 从 Hub 关卡进入子页时,子页的返回出口应回到那一关,
+ * 而不是回年级首页。
+ *
+ * ★为什么要有这个文件★
+ * 参数在传、按钮没读,是这套跨页返回最容易出的洞:孪生页改造时只改了一半
+ * (GaokaoUnitGrammarTest 读了 returnTo,JuniorUnitGrammarTest 没读,于是从单元关
+ * 进语法综合测试、做完点「返回单元」落在 /junior/hub/7 年级首页)。把消费收进一个
+ * 函数,加册/加孪生页时照抄一行即可,不会再漏半边。
+ *
+ * ★同时堵开放跳转★
+ * returnTo 来自 URL,是用户可控输入。原先各页写的都是裸 `returnTo || fallback`,
+ * 没有任何校验 —— `?returnTo=https://evil.example` 会被原样塞进 <Link to>。
+ * 这里只放行「站内绝对路径」:必须以单个 `/` 开头,且不得以 `//` 或 `/\` 开头
+ * (那两种会被浏览器当成协议相对 URL 跳到外站)。
+ */
+
+/** 判断一个 returnTo 是否是安全的站内路径。 */
+export function isSafeReturnTo(raw: string | null | undefined): raw is string {
+  if (!raw) return false;
+  let v = raw;
+  // 调用方多数已经过 useSearchParams(自动 decode);对仍是 encode 态的再解一次。
+  if (v.includes("%2F") || v.includes("%2f")) {
+    try {
+      v = decodeURIComponent(v);
+    } catch {
+      return false;
+    }
+  }
+  v = v.trim();
+  if (!v.startsWith("/")) return false;          // 相对路径、http(s):、javascript: 一律拒
+  if (v.startsWith("//") || v.startsWith("/\\")) return false;  // 协议相对 URL → 外站
+  if (/[\x00-\x1f]/.test(v)) return false;   // 控制字符
+  return true;
+}
+
+/**
+ * 读取用:合法则返回规范化后的站内路径,不合法(或没有)返回 null。
+ *
+ * 推荐在 `searchParams.get("returnTo")` 处就地净化一次:
+ *     const returnTo = sanitizeReturnTo(sp.get("returnTo"));
+ * 这样下游原有的 `returnTo || fallback` 与「有 returnTo 就显示『返回单元』」的
+ * 文案判断都不用改,却同时拿到了站内校验 —— 改动面最小,也最不容易漏掉某个出口。
+ */
+export function sanitizeReturnTo(raw: string | null | undefined): string | null {
+  if (!isSafeReturnTo(raw)) return null;
+  return safeReturnTo(raw, "") || null;
+}
+
+/**
+ * 取安全的返回地址:returnTo 合法就用它,否则用 fallback。
+ * @param raw      URL 上的 returnTo(通常来自 searchParams.get("returnTo"))
+ * @param fallback 没有/不合法时的兜底站内路径
+ */
+export function safeReturnTo(raw: string | null | undefined, fallback: string): string {
+  if (!isSafeReturnTo(raw)) return fallback;
+  let v = raw;
+  if (v.includes("%2F") || v.includes("%2f")) {
+    try {
+      v = decodeURIComponent(v);
+    } catch {
+      return fallback;
+    }
+  }
+  return v.trim();
+}

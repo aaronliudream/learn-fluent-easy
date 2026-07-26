@@ -1,3 +1,4 @@
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import { T } from "@/i18n/T";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
@@ -30,7 +31,7 @@ export default function JuniorClozePlay() {
   const nav = useNavigate();
   // 从单元闯关完形关进入时带 ?returnTo=<hub关URL>;有则返回出口回 Hub 关。
   const [searchParams] = useSearchParams();
-  const returnTo = searchParams.get("returnTo");
+  const returnTo = sanitizeReturnTo(searchParams.get("returnTo"));   // 站内校验:防 ?returnTo=https://evil 被塞进 <Link to>
   const [c, setC] = useState<C | null>(null);
   const [, setMastery] = useState<Record<string, MasteryRow>>({});
   const [picks, setPicks] = useState<Record<number, string>>({});

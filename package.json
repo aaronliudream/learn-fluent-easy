@@ -16,7 +16,8 @@
     "pep:build": "python scripts/build_gaokao_pep_content.py",
     "pep:refresh": "python scripts/extract_gaokao_pep.py && python scripts/build_gaokao_pep_content.py",
     "audio:precheck": "node scripts/audio/export-content-audio-list.mjs --section primary --precheck",
-    "audio:backfill": "node scripts/audio/export-content-audio-list.mjs --section primary --out data/audio-audit/pipeline_list.csv && node scripts/audio/backfill-missing-audio.ts --list data/audio-audit/pipeline_list.csv --out data/audio-audit/pipeline_result.csv --progress data/audio-audit/pipeline_progress.json"
+    "audio:backfill": "node scripts/audio/export-content-audio-list.mjs --section primary --out data/audio-audit/pipeline_list.csv && node scripts/audio/backfill-missing-audio.ts --list data/audio-audit/pipeline_list.csv --out data/audio-audit/pipeline_result.csv --progress data/audio-audit/pipeline_progress.json",
+    "audio:audit": "node scripts/audio/audit-audio.mjs --section primary"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",

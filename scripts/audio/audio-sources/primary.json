@@ -3,57 +3,105 @@
   "voiceId": "el:lily",
   "matrixDoc": "docs/audio/B4_1_speed_matrix.md",
   "note": "档位来源于已批准的 B4.1 可达语速档矩阵。改这个文件等于改'新内容要生成哪几档音频'，必须与矩阵同步。",
-
-  "dataRoots": ["src/data/primaryHub"],
+  "dataRoots": [
+    "src/data/primaryHub"
+  ],
   "dataRootsNote": "覆盖率检查会**递归**扫这些根目录，任何未被 sources/audioFree/artifacts 分类的文件都会让管线报错退出。必须显式声明根目录：若只从已配置的 glob 反推目录，新增一个全新子目录会整个被跳过、静默放行。",
-
-  "contentParents": ["src/data"],
+  "contentParents": [
+    "src/data"
+  ],
   "outOfScope": [
-    { "paths": ["src/data/juniorHub"], "why": "junior section 的内容，待该 section 产出可达档位矩阵后单独接入" },
-    { "paths": ["src/data/gaokao", "src/data/gaokaoHub"], "why": "senior/高考 section 的内容，同上" },
-    { "paths": ["src/data/exams"], "why": "真题卷数据，尚未确认是否有朗读入口，接入前需先核音频调用点" },
     {
       "paths": [
-        "src/data/aiLessonsG2.json", "src/data/badges.ts", "src/data/g2LessonStages.ts",
-        "src/data/sightWords.ts", "src/data/sparkMoods.ts", "src/data/sparkPhrases.ts"
+        "src/data/juniorHub"
       ],
-      "why": "src/data 顶层散文件：G2/徽章/Spark 文案，均不属于 primaryHub 内容树；其中 sightWords/g2LessonStages 若将来接入小学发音需重新评估"
+      "why": "junior section 的内容，待该 section 产出可达档位矩阵后单独接入",
+      "status": "confirmed"
+    },
+    {
+      "paths": [
+        "src/data/gaokao",
+        "src/data/gaokaoHub"
+      ],
+      "why": "senior/高考 section 的内容，同上",
+      "status": "confirmed"
+    },
+    {
+      "paths": [
+        "src/data/exams"
+      ],
+      "why": "真题卷数据，尚未确认是否有朗读入口，接入前需先核音频调用点",
+      "status": "unverified"
+    },
+    {
+      "paths": [
+        "src/data/aiLessonsG2.json",
+        "src/data/badges.ts",
+        "src/data/sparkMoods.ts",
+        "src/data/sparkPhrases.ts"
+      ],
+      "why": "src/data 顶层散文件：G2 课程数据 / 徽章 / Spark 文案，均不属于 primaryHub 内容树，且不经 primary 的播放入口",
+      "status": "confirmed"
+    },
+    {
+      "paths": [
+        "src/data/sightWords.ts",
+        "src/data/g2LessonStages.ts"
+      ],
+      "status": "unverified",
+      "why": "与小学发音相邻（sight words / G2 关卡），尚未逐个核过它们的消费组件有无播放调用；若将来接入小学发音需改成 sources 并声明档位"
     }
   ],
   "outOfScopeNote": "反向哨兵：管线会枚举 contentParents 下的实际条目，任何既不在 dataRoots、也不在 outOfScope 里的**游离目录/文件**都会让管线报错退出。作用是让'新建了一个内容目录但没人告诉音频管线'从静默变成可见失败——dataRoots 本身是单点，这条是它的哨兵。",
-
   "oclockNote": "关于 o'clock：预热侧会跳过这个词条（speech.ts 里 isOClockVocabToken && isWebSpeechSupported），原因是**播放侧把这个孤立词条路由给了浏览器 Web Speech**——历史上云 TTS 读错这个撇号，先后试过把文本硬改成 'o clock'（7214e778）、挂静态 mp3（a9b7013c / 61b01f6c）、换 OpenAI shimmer（0bd05a50），最后定为 Web Speech 优先 + 云端兜底（b4e9ed0d）。所以：**不是**因为有捆绑 mp3（public/audio/hub/oclock.mp3 确实存在但仓库内零引用，是废弃方案的遗留）。管线仍会为它生成云端对象，因为 Web Speech 不可用/失败时 hubSpeak 会回落到云端。",
-
   "tiers": {
     "fixed": {
-      "speeds": [0.85],
+      "speeds": [
+        0.85
+      ],
       "code": "HUB_FIXED_SPEAK_SPEED (src/lib/primaryHub/hubSpeakSpeed.ts)",
       "modules": "单词卡 / 句型对话关 / 6 个词汇游戏 / 语块按钮 / 情景关 / 自然拼读三个 stage"
     },
     "perGrade": {
-      "byGrade": { "3": 0.75, "4": 0.85, "5": 0.9, "6": 0.95 },
+      "byGrade": {
+        "3": 0.75,
+        "4": 0.85,
+        "5": 0.9,
+        "6": 0.95
+      },
       "code": "spellingStageConfig.GRADE_CONFIG[gN].speechRate / listenWordStageConfig.LISTEN_WORD_CONFIG[gN].speechRate",
       "modules": "拼写关 / 听音辨词关（两者同档）"
     },
     "switchable": {
-      "speeds": [0.7, 0.85, 1.0],
+      "speeds": [
+        0.7,
+        0.85,
+        1.0
+      ],
       "code": "HUB_SPEAK_SPEED_LEVELS (hubSpeakSpeed.ts) —— 用户可切，三档全可达",
       "modules": "听力测试关 / 句型课"
     },
     "kidSpeed": {
-      "byGrade": { "3": 0.85, "4": 1.0, "5": 1.0, "6": 1.0 },
+      "byGrade": {
+        "3": 0.85,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0
+      },
       "code": "getKidSpeed(grade) (src/lib/speak.ts) —— grade 被 resolvePrimaryGrade 钳在 [3,6]，故 0.7 分支不可达",
       "modules": "英语闯关全部关卡"
     }
   },
-
   "sources": [
     {
       "id": "course-vocab",
       "files": "src/data/primaryHub/grade*.json",
       "gradeFrom": "filename",
       "picker": "courseVocab",
-      "tiers": ["fixed", "perGrade"],
+      "tiers": [
+        "fixed",
+        "perGrade"
+      ],
       "playedBy": "StagePlay:250 单词卡 / 6 个游戏 @fixed；SpellingStage:240、ListenWordStage:97 @perGrade"
     },
     {
@@ -61,7 +109,9 @@
       "files": "src/data/primaryHub/grade*.json",
       "gradeFrom": "filename",
       "picker": "courseChunks",
-      "tiers": ["fixed"],
+      "tiers": [
+        "fixed"
+      ],
       "playedBy": "VocabQuizGame:204 语块按钮；情景关整句与语块原文逐字相同，共用同一对象"
     },
     {
@@ -69,7 +119,9 @@
       "files": "src/data/primaryHub/grade*.json",
       "gradeFrom": "filename",
       "picker": "courseDialoguePairs",
-      "tiers": ["fixed"],
+      "tiers": [
+        "fixed"
+      ],
       "playedBy": "StagePlay:792/807 句型对话关（每单元只取前 4 组 q/a，与组件一致）"
     },
     {
@@ -77,14 +129,18 @@
       "files": "src/data/primaryHub/grade*.json",
       "gradeFrom": "filename",
       "picker": "courseListening",
-      "tiers": ["switchable"],
+      "tiers": [
+        "switchable"
+      ],
       "playedBy": "StagePlay:610 题目 / :621 答错正音（含 opts[answer]）"
     },
     {
       "id": "sentence-lessons",
       "files": "src/data/primaryHub/sentence/*.json",
       "picker": "sentenceLesson",
-      "tiers": ["switchable"],
+      "tiers": [
+        "switchable"
+      ],
       "playedBy": "SentenceLessonStage:63 AudioBtn"
     },
     {
@@ -92,29 +148,35 @@
       "files": "src/data/primaryHub/finalChallenge/*_seed.json",
       "gradeFrom": "filename",
       "picker": "fcSeed",
-      "tiers": ["kidSpeed"],
+      "tiers": [
+        "kidSpeed"
+      ],
       "playedBy": "闯关各关卡 speakKid(text,{grade})；含 audio / display / picture_match_word 的 options[answer]"
     },
     {
       "id": "phonics",
       "files": "src/data/primaryHub/phonics/*.ts",
       "picker": "phonicsTs",
-      "tiers": ["fixed"],
+      "tiers": [
+        "fixed"
+      ],
       "playedBy": "PrimaryHubPhonics:204 找一找 / :302 闯关 / phonicsAudio:28 听一听（无录音时走 TTS）"
     }
   ],
-
   "audioFree": [
     {
       "files": "src/data/primaryHub/readWrite/*.json",
-      "why": "读写关无音频：ReadWriteTrainingStage 全文件 grep speak|Audio|audio 零命中（Phase A 审计核实）"
+      "why": "读写关无音频：ReadWriteTrainingStage 全文件 grep speak|Audio|audio 零命中（Phase A 审计核实）",
+      "consumers": [
+        "src/components/primaryHub/ReadWriteTrainingStage.tsx"
+      ]
     },
     {
       "files": "src/data/primaryHub/legacy_g4v2_u1.json",
-      "why": "遗留数据，src 内零引用（grep legacy_g4v2_u1 无命中）"
+      "why": "遗留数据，src 内零引用（grep legacy_g4v2_u1 无命中）",
+      "assertUnreferenced": true
     }
   ],
-
   "artifacts": [
     {
       "files": "src/data/primaryHub/listenWordAudio.json",

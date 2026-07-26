@@ -20,6 +20,8 @@
  */
 import { readFileSync, writeFileSync, existsSync, renameSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+// CSV 解析统一走 csv.mjs（CRLF 安全，且有单测盯着）——不要在这里再写一份
+import { parseCsv } from './csv.mjs';
 
 // ---------------- CLI ----------------
 const argv = process.argv.slice(2);
@@ -57,27 +59,6 @@ type Row = {
   cache_key: string; text: string; voice_id: string; speed: string;
   cdn_url: string; storage_url: string; [k: string]: string;
 };
-function parseCsv(text: string): Row[] {
-  // 必须容忍 CRLF：git 检出会把 LF 转成 CRLF，按 '\n' 切行会让**最后一列**（含表头名）
-  // 尾部带上 \r，于是最后一列的字段恒为 undefined —— 静默失效，已实际踩过一次。
-  const lines = text.replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.length > 0);
-  const cols = lines[0].split(',');
-  return lines.slice(1).map((line) => {
-    const out: string[] = [];
-    let cur = '';
-    let q = false;
-    for (let i = 0; i < line.length; i++) {
-      const c = line[i];
-      if (q) {
-        if (c === '"') { if (line[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c;
-      } else if (c === '"') q = true;
-      else if (c === ',') { out.push(cur); cur = ''; }
-      else cur += c;
-    }
-    out.push(cur);
-    return Object.fromEntries(cols.map((c, i) => [c, out[i] ?? ''])) as Row;
-  });
-}
 const esc = (v: unknown): string => {
   const s = String(v ?? '');
   return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;

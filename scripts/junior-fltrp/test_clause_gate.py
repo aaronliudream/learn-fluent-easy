@@ -34,6 +34,13 @@ CASES = [
     ('so far', 'We have done so much so far.', 'wy8A', 'U1', None),
     ('报告动词后 that = 宾从', 'He said that the film was good.', 'wy8B', 'U5', None),
     ('think that = 宾从', 'I think that the answer is right.', 'wy8B', 'U5', None),
+    # ★wy9A 写作 U2 踩到的误报★:so = 并列连词「所以」+ that = 指示限定词,不是结果从句。
+    # 同时保留正向对照(下一条),确保收窄没有把真结果从句一并放过。
+    ('并列 so + 指示 that(非结果从句)',
+     'I am saving for a football, so I will not touch that half until I have enough.',
+     'wy7A', 'U1', None),
+    ('真结果从句 so…that(正向对照,U3 前应报)',
+     'The book was so interesting that I read it twice.', 'wy9A', 'U2', 'violation'),
 ]
 
 def main():

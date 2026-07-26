@@ -59,7 +59,14 @@ UNLOCK = {
 # ── ① 目的状语从句 so that + 结果状语从句 so/such … that ──────────
 PURPOSE = re.compile(r"\bso\s+that\b", re.I)
 # so + 形容词/副词 + that;such + (a/an) + … + that。中间不跨句末标点。
-RESULT = re.compile(r"\b(?:so|such)\b(?:(?![.!?])[^\n]){1,40}?\bthat\b", re.I)
+# ★误报修正(wy9A 写作 U2)★:`…, so I will not touch that half…` 里的 so 是并列连词
+# 「所以」,后面的 that 是指示限定词,不构成结果状语从句。真结果从句的 so 后面接的是
+# 形容词/副词/many/much/few/little,绝不会直接跟主语代词或限定词,故加负向先行断言。
+# 收窄的只是 so 的用法,不动 such,也不影响 `so that` 目的从句(that 不在排除表里)。
+RESULT = re.compile(
+    r"\b(?:so\b(?!\s+(?:i|we|you|he|she|they|it|there|the|this|these|those|"
+    r"my|our|his|her|their|its|now|today|then|everyone|everybody|nobody|people|one)\b)|such\b)"
+    r"(?:(?![.!?])[^\n]){1,40}?\bthat\b", re.I)
 
 # ── ② who/whom 定语从句 ───────────────────────────────────────────
 # 先行词(限定词+名词 / 专有名词 / everyone 一类)+ who,且 who 不在句首(疑问)。

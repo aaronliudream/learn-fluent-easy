@@ -22,7 +22,9 @@ const OUT = arg('--out', 'data/audio-audit/b3_backfill_list.csv');
 const EXCLUDES = argAll('--exclude');
 
 const parseCsv = (text) => {
-  const lines = text.replace(/^﻿/, '').split('\n').filter((l) => l.length);
+  // 必须容忍 CRLF：git 检出会把 LF 转成 CRLF，按 '\n' 切行会让**最后一列**（含表头名）
+  // 尾部带上 \r，于是 r.verdict 这类字段恒为 undefined —— 静默失效，已实际踩过一次。
+  const lines = text.replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.length);
   const cols = lines[0].split(',');
   return lines.slice(1).map((line) => {
     const out = []; let cur = ''; let q = false;

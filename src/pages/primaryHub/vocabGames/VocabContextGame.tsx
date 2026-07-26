@@ -10,7 +10,8 @@ import {
   type ContextItem,
 } from "@/lib/primaryHub/vocabGames/context";
 import type { GameWord } from "@/lib/primaryHub/vocabGames/types";
-import { hubSpeak, prefetchHubVocabulary } from "@/lib/primaryHub/speech";
+import { hubSpeak, prefetchHubFixed } from "@/lib/primaryHub/speech";
+import { HUB_FIXED_SPEAK_SPEED } from "@/lib/primaryHub/hubSpeakSpeed";
 import { unlockAudioSync, stopSpeaking } from "@/lib/speak";
 import GameResult from "./GameResult";
 import { Intro } from "./VocabMatchGame";
@@ -39,7 +40,7 @@ function buildQuestions(picks: GameWord[], pool: GameWord[]): Q[] {
     options.sort(
       (a, b) => ((a.length * 31 + seed) % 7) - ((b.length * 31 + seed) % 7) || a.localeCompare(b),
     );
-    const full = item.cloze.replace("____", item.answer);
+    const full = item.full; // 语块原文,不从挖空回填(见 ContextItem.full 注释)
     out.push({ item, full, options });
   });
   return out;
@@ -68,8 +69,10 @@ export default function VocabContextGame() {
 
   const begin = () => {
     unlockAudioSync();
-    prefetchHubVocabulary(
-      questions.map((x) => x.item.answer),
+    // 本关播的是整句 q.full，不是答案单词；原来预热 item.answer 等于预热了
+    // 一批本关永远不播的 key（审计 C2-3）。
+    prefetchHubFixed(
+      questions.map((x) => x.full),
       grade,
     );
     setStarted(true);
@@ -81,7 +84,7 @@ export default function VocabContextGame() {
     setPicked(opt);
     recordResult(q.item.wordId, isCorrect);
     if (isCorrect) setCorrectCount((c) => c + 1);
-    hubSpeak(q.full, 0.85, grade); // 读出完整正确短语
+    hubSpeak(q.full, HUB_FIXED_SPEAK_SPEED, grade); // 读出完整正确短语
   };
 
   const next = () => {
@@ -199,7 +202,7 @@ export default function VocabContextGame() {
         <div className="mx-auto mt-6 max-w-md text-center">
           <button
             type="button"
-            onClick={() => hubSpeak(q.full, 0.85, grade)}
+            onClick={() => hubSpeak(q.full, HUB_FIXED_SPEAK_SPEED, grade)}
             className="rounded-full bg-white px-4 py-1.5 text-sm font-bold text-[#7C5CFF] shadow-sm"
           >
             🔊 {q.full}

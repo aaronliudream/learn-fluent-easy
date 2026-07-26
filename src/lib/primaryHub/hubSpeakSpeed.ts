@@ -4,6 +4,18 @@ export const HUB_SPEAK_SPEED_KEY = "primary_hub_speak_speed";
 /** Legacy localStorage key; migrated once then removed. */
 export const LEGACY_G4V2_U1_SPEAK_SPEED_KEY = "primary_hub_g4v2_u1_tts_speed";
 
+/**
+ * 「固定档」模块的唯一语速来源：单词卡、句型对话关、6 个词汇游戏、语块按钮、
+ * 情景关、自然拼读三个 stage —— 这些模块不给用户调速，恒用此速度。
+ *
+ * ⚠️ 预热与播放**必须都从这里取**。任何一侧写字面量（哪怕写的就是 0.85）都会让两侧
+ * 有机会再次分叉：音频审计里的 C2-1 / C2-2 就是"播放写死 0.85、预热漏传 speed 落到
+ * getKidSpeed(grade) → 四~六年级变 1.0"，结果整个模块的预热全部灌到没人播的 key 上。
+ * 反过来在预热处补写 0.85 也不对——那只是把"漏传"换成"传了但可能传错"，
+ * 将来改档位时照样漏一处。共用同一个符号，两侧就不可能分叉。
+ */
+export const HUB_FIXED_SPEAK_SPEED = 0.85;
+
 export const HUB_SPEAK_SPEED_LEVELS = [
   { value: 0.7, label: "慢速" },
   { value: 0.85, label: "正常" },

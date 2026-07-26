@@ -13,7 +13,7 @@ export default function GameResult({
   emoji?: string;
   lines: string[];
   stars?: number; // 0..3,可选
-  onAgain: () => void;
+  onAgain?: () => void; // 省略 → 不渲染"再来一轮"(图书馆复习:今日已清零时不该再给入口)
   onHome: () => void;
   againLabel?: string; // 复用方可改按钮文案(默认小学游戏中心用语)
   homeLabel?: string;
@@ -35,13 +35,15 @@ export default function GameResult({
           ))}
         </div>
         <div className="mt-5 flex flex-col gap-2">
-          <button
-            type="button"
-            onClick={onAgain}
-            className="w-full rounded-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627] py-3 font-bold text-white"
-          >
-            {againLabel}
-          </button>
+          {onAgain && (
+            <button
+              type="button"
+              onClick={onAgain}
+              className="w-full rounded-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627] py-3 font-bold text-white"
+            >
+              {againLabel}
+            </button>
+          )}
           <button
             type="button"
             onClick={onHome}

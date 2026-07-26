@@ -33,6 +33,12 @@ export type LibraryFavorite = {
 /** 跨天掌握阈值:连对 N 个不同的北京日 → 已掌握。 */
 export const VOCAB_MASTER_STREAK = 3;
 
+/**
+ * 一轮复习的词数上限(分批)。改这一个常量即可调整一轮长度。
+ * 为什么要分批:不分批时"今日待复习"全量进一轮 —— 200 个词的账号点开就是 200 题一堵墙。
+ */
+export const REVIEW_BATCH_SIZE = 20;
+
 /** 北京时间(UTC+8)今天 YYYY-MM-DD。同天重复做对不计,保证"跨天"语义。 */
 export function bjToday(): string {
   return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai" });
@@ -62,6 +68,31 @@ export function vocabStatusOf(f: LibraryFavorite): VocabStatus {
   if (vocabIsMastered(f)) return "mastered";
   if (vocabIsLearning(f)) return "learning";
   return "due";
+}
+
+/**
+ * 分批取词前的优先级排序(确定性,不随机):
+ *  ① correct_streak 降序 —— 接近掌握的先测,快速清队列、给正反馈;
+ *  ② last_recalled_at 升序(null 排最前)—— 久未复习的优先;
+ *  ③ created_at 升序 —— 兜底,保证同分时批次稳定、不会每次刷新换一批。
+ * 只排序不截断(截断在调用方按 REVIEW_BATCH_SIZE 切);题序仍由 buildReviewQuestions 内部 shuffle 决定。
+ */
+export function sortForReview(favs: LibraryFavorite[]): LibraryFavorite[] {
+  return favs.slice().sort((a, b) => {
+    const byStreak = (b.correct_streak ?? 0) - (a.correct_streak ?? 0);
+    if (byStreak !== 0) return byStreak;
+    const ra = a.last_recalled_at;
+    const rb = b.last_recalled_at;
+    if (ra !== rb) {
+      if (!ra) return -1; // 从没复习过的排前面
+      if (!rb) return 1;
+      return ra < rb ? -1 : 1;
+    }
+    const ca = a.created_at ?? "";
+    const cb = b.created_at ?? "";
+    if (ca === cb) return 0;
+    return ca < cb ? -1 : 1;
+  });
 }
 
 /**

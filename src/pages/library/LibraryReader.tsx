@@ -9,7 +9,17 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X, Bookmark, Loader2 } from "lucide-react";
-import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS, isSpeaking } from "@/lib/speak";
+import { stopSpeaking, prefetchTTS, isSpeaking } from "@/lib/speak";
+// 朗读走纯 Web Audio(不碰 <audio>)→ iOS 不再注册 Now Playing,灵动岛/锁屏不弹卡片。
+// 页面上其它发音(点词查义)仍走 speak() 的 <audio> 路径,未改。
+import {
+  readAloudText,
+  readAloudUrl,
+  stopReadAloud,
+  unlockReadAloud,
+  warmReadAloudText,
+  warmReadAloudUrl,
+} from "@/lib/audio/readAloud";
 import { T } from "@/i18n/T";
 import { TappableLine } from "@/components/TappableLine";
 import ChapterNotesCollection from "@/components/library/ChapterNotesCollection";
@@ -217,6 +227,7 @@ export default function LibraryReader() {
     if (!book || chapterIdx < 0) return;
     let alive = true;
     playSeq.current++; // 打断上一章可能在播的朗读
+    stopReadAloud();
     stopSpeaking();
     setPlayingAll(false);
     setCurrent(-1);
@@ -305,6 +316,7 @@ export default function LibraryReader() {
   useEffect(
     () => () => {
       playSeq.current++;
+      stopReadAloud(); // 退出页面不留残音
       stopSpeaking();
       void flushCloudPush();
     },
@@ -493,21 +505,46 @@ export default function LibraryReader() {
     };
   }, [loading, chapterLoading, sentences, playingAll, bump]);
 
-  // 播一句:audio_url 有且非慢速则用预生成;否则实时 speak(慢速强制实时以尊重语速)
+  // 点词/例句发音也走 Web Audio —— 否则整句朗读躲开了灵动岛,点一个词又把它招回来。
+  // 播一句:audio_url 有且非慢速则用预生成;否则实时合成(慢速强制实时以尊重语速)。
+  // 慢速 = speed 0.7 交给 TTS 服务端合成,前端不动 playbackRate —— 变速不变调。
   const playSentence = useCallback(
-    (s: LibrarySentence): Promise<void> => {
-      if (s.audio_url && !slow) return speakFromUrl(s.audio_url);
-      return speak(s.text_en, { accent: READ_ACCENT, speed });
+    (s: LibrarySentence): Promise<boolean> => {
+      if (s.audio_url && !slow) return readAloudUrl(s.audio_url);
+      return readAloudText(s.text_en, { accent: READ_ACCENT, speed });
     },
     [slow, speed],
   );
 
   const stopAll = useCallback(() => {
     playSeq.current++;
-    stopSpeaking();
+    stopReadAloud();
+    stopSpeaking(); // 顺带掐掉点词发音(<audio> 那条路)
     setPlayingAll(false);
     setPreparing(false);
     setCurrent(-1);
+  }, []);
+
+  // 点词/例句发音也走 Web Audio —— 否则整句朗读躲开了灵动岛,点一个词又把它招回来。
+  //
+  // 【先停连播】点词与连播共用同一个播放器,后来的必然掐掉先来的:不停连播的话,120ms 后
+  // 下一句就会把刚起头的词音掐掉(词音若还没进解码缓存则一声都不响),朗读还自顾自往下跑。
+  // 小孩点词就是没听清那个词,此时朗读继续纯属干扰。停掉,听完,由他自己决定要不要接着播。
+  //
+  // 【必须不带 opts】TappableLine 的视口预热(pwWarm → prefetchTTS(t))用的是默认音色、
+  // 无 accent 的缓存键;这里一旦传 READ_ACCENT/speed,键就对不上,点词全退回 1-3s 冷合成。
+  // 与整句朗读(accent US)音色不同是**既有设定**,不是笔误。
+  // 与 stopAll 的唯一差别:**不清 current**(保留高亮)。听完词回到正文,眼睛要能立刻找回读到哪。
+  // 高亮不会误导 —— 顶部播放走 playFromResume 读 last_seq,而播放循环每句都 bump(i) 同步写
+  // last_seq,所以再按播放就是从高亮那句续;段落喇叭/绘本页内播放本就按段/按页起算,同样一致。
+  // (不复用 stopAll 加参数:它直接当 onClick 传给了停止按钮,React 会把事件对象塞进第一个参数。)
+  const tapSpeak = useCallback((t: string) => {
+    playSeq.current++;
+    stopReadAloud();
+    stopSpeaking();
+    setPlayingAll(false);
+    setPreparing(false);
+    return readAloudText(t);
   }, []);
 
   // 连续朗读:从章内 startIdx 起顺序播到 stopIdx(不含);默认播到本章末。
@@ -516,7 +553,7 @@ export default function LibraryReader() {
     (startIdx: number, stopIdx: number = sentences.length) => {
       if (startIdx < 0 || startIdx >= sentences.length) return;
       const end = Math.min(stopIdx, sentences.length);
-      unlockAudioSync();
+      unlockReadAloud(); // 手势内 resume AudioContext(旧版是在 <audio> 上播静音 WAV,那一下就会招来灵动岛)
       const my = ++playSeq.current;
       setPlayingAll(true);
       const run = async () => {
@@ -524,7 +561,7 @@ export default function LibraryReader() {
         const first = sentences[startIdx];
         if (first && !(first.audio_url && !slow)) {
           setPreparing(true);
-          prefetchTTS(first.text_en, { accent: READ_ACCENT, speed });
+          warmReadAloudText(first.text_en, { accent: READ_ACCENT, speed });
           const poll = setInterval(() => {
             if (my !== playSeq.current || isSpeaking()) {
               setPreparing(false);
@@ -540,10 +577,12 @@ export default function LibraryReader() {
           if (my !== playSeq.current) return;
           setCurrent(i);
           bump(i);
-          // 预取下一句(仅实时合成的、且不越过本次终点)
+          // 预取下一句(不越过本次终点)。Web Audio 播放前要先"下载 + 解码",
+          // 故这里做深度预热(warm*),而不是只解析 URL —— 否则句间会多出解码停顿。
           const nxt = sentences[i + 1];
-          if (nxt && i + 1 < end && !(nxt.audio_url && !slow)) {
-            prefetchTTS(nxt.text_en, { accent: READ_ACCENT, speed });
+          if (nxt && i + 1 < end) {
+            if (nxt.audio_url && !slow) warmReadAloudUrl(nxt.audio_url);
+            else warmReadAloudText(nxt.text_en, { accent: READ_ACCENT, speed });
           }
           await playSentence(sentences[i]);
           if (my !== playSeq.current) return;
@@ -936,6 +975,7 @@ export default function LibraryReader() {
               onFavoriteChange={handleFavChange}
               onLongPressStart={startLongPress}
               onLongPressCancel={cancelLongPress}
+              speakFn={tapSpeak}
             />
           ) : (
           /* 段落流排版:同段句子连排成一段文字(像一本书);插图按 position 穿插;喇叭移到段落级。 */
@@ -1058,6 +1098,7 @@ export default function LibraryReader() {
                               cultureNotes={cultureNotes}
                               wordSenses={wordSenses}
                               onFavoriteChange={handleFavChange}
+                              speakFn={tapSpeak}
                             />
                             {mode === "en" && revealedCn.has(i) && s.text_cn && (
                               <span className="text-slate-400">（{s.text_cn}）</span>

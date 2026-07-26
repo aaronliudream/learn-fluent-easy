@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Loader2, Volume2, Sparkles, Bookmark, Check, Lightbulb, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -29,6 +29,18 @@ const DEFAULT_TRIGGER_CLASS =
  *  · 悬停(桌面)/ reveal(移动端长按)→ 淡灰底,提示"这词可点"
  * 三者可叠加(收藏的语块 = 底色 + 虚线),互不打架。
  */
+/**
+ * 发音函数的注入口。默认 speak()(走 <audio>),图书馆阅读器注入 Web Audio 版
+ * —— 那边整页要躲开 iOS 的 Now Playing(<audio> 一出声灵动岛必弹,无法关闭)。
+ *
+ * 为什么用 context 而不是把 prop 一路传下去:喇叭按钮藏在
+ * TappableLine → ExplainPopover → LessonBody → SenseRow → PlayableEnCn 五层里,
+ * 逐层钻洞要改 5 个组件签名,而本组件是初中/高考/美语全线共用的,diff 越小越安全。
+ * 对外仍是 TappableLine 的一个可选 prop(见下方 speakFn),不传则默认值原样生效。
+ */
+export type SpeakFn = (text: string) => void | Promise<unknown>;
+const SpeakFnContext = createContext<SpeakFn>(speak);
+
 function libraryTriggerClass(isChunk: boolean, isFav: boolean, reveal: boolean): string {
   const c = ["cursor-pointer rounded-[3px] transition-colors focus:outline-none"];
   if (isFav) c.push("bg-amber-100"); // 收藏高亮
@@ -282,6 +294,7 @@ function ExplainPopover({
   const [fav, setFav] = useState(false);
   const [favBusy, setFavBusy] = useState(false);
   const [revealed, setRevealed] = useState(false); // 微提取:是否已揭晓释义
+  const speakPhrase = useContext(SpeakFnContext);
 
   const favKind: LibraryFavoriteKind = phrase.includes(" ") ? "chunk" : "word";
   const microRetrieval = !!isFavorited; // 只对收藏词做「先回忆后揭晓」
@@ -452,7 +465,7 @@ function ExplainPopover({
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  speak(phrase);
+                  void speakPhrase(phrase);
                 }}
                 className="grid size-8 place-items-center rounded-full bg-secondary text-foreground/70 transition hover:bg-primary/15 hover:text-primary"
                 aria-label="play"
@@ -522,13 +535,14 @@ function SectionHeader({ emoji, label }: { emoji: string; label: string }) {
 
 /** Renders an English line with a 🔊 button + Chinese translation underneath. */
 function PlayableEnCn({ en, cn }: EnCnPair) {
+  const speakEn = useContext(SpeakFnContext);
   return (
     <div className="flex items-start gap-2 rounded-lg border border-border bg-secondary/40 p-2">
       <button
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          speak(en);
+          void speakEn(en);
         }}
         className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-primary/10 text-primary transition hover:bg-primary/20"
         aria-label="play"
@@ -831,6 +845,7 @@ export function TappableLine({
   cultureNotes,
   wordSenses,
   onFavoriteChange,
+  speakFn,
 }: {
   sentence: string;
   /** 传入 → 图书馆精读模式:轻卡收藏按钮 + 语块虚线 + 收藏高亮 + 悬停揭示 + 微提取。
@@ -847,6 +862,11 @@ export function TappableLine({
   /** 本书古今异义覆盖(归一化 → 覆盖)。命中的词用书中义(不走边缘、卡片显两义)。仅图书馆传。 */
   wordSenses?: Map<string, LibraryWordSense>;
   onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
+  /** 覆盖词卡/例句喇叭的发音实现。仅图书馆阅读器传(注入 Web Audio 版以躲开 iOS 灵动岛);
+   *  不传 → 用默认 speak(),初中/高考/美语等所有调用点行为零变化。
+   *  注意:注入的实现必须与 speak(phrase) 用同一音色(默认音色、无 accent),
+   *  否则 pwWarm 预热的缓存键对不上,点词会退回 1-3s 冷合成。 */
+  speakFn?: SpeakFn;
 }) {
   const tokens = useMemo(() => tokenize(sentence, chunkPhrases ?? KNOWN_PHRASES), [sentence, chunkPhrases]);
   const contextText = useMemo(() => stripTags(sentence), [sentence]);
@@ -869,7 +889,7 @@ export function TappableLine({
     };
   }, [libraryMode, tokens]);
 
-  return (
+  const body = (
     <span ref={rootRef}>
       {tokens.map((tok, i) => {
         // 图书馆模式:把弯撇号包进 .tight-apos 收掉 SF Pro 的字形假空格;美语课原样。
@@ -897,4 +917,7 @@ export function TappableLine({
       })}
     </span>
   );
+
+  // 没传 speakFn 就一个 Provider 都不套 → 其它模块的渲染树逐节点不变(不只是行为不变)。
+  return speakFn ? <SpeakFnContext.Provider value={speakFn}>{body}</SpeakFnContext.Provider> : body;
 }

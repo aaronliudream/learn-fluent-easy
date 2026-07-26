@@ -39,6 +39,24 @@
     ],
     "explanation": "'Some collections are not about the things at all.' 与 '\"A thing is not valuable because of its price\"' 呼应,指收藏承载的是记忆。"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "collection",
+    "cn": "收藏品"
+   },
+   {
+    "word": "silk",
+    "cn": "丝绸"
+   },
+   {
+    "word": "thread",
+    "cn": "线"
+   },
+   {
+    "word": "wedding",
+    "cn": "婚礼"
+   }
   ]
  },
  {
@@ -80,6 +98,16 @@
      "It came back to life on the students' T-shirts."
     ],
     "explanation": "'On sports day, forty students wore the same bird.' 与 'Now it runs across a playground every spring.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "pattern",
+    "cn": "图案,花样"
+   },
+   {
+    "word": "hometown",
+    "cn": "家乡"
    }
   ]
  },
@@ -123,6 +151,20 @@
     ],
     "explanation": "'The next week the plan changed, and the road turned a little so that the tree could stay.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "neighbour",
+    "cn": "邻居"
+   },
+   {
+    "word": "sign",
+    "cn": "牌子,标牌"
+   },
+   {
+    "word": "shade",
+    "cn": "树荫,阴凉处"
+   }
   ]
  },
  {
@@ -164,6 +206,20 @@
      "Because it makes visitors move more quietly."
     ],
     "explanation": "'It is not a scientific answer. But it makes people walk more softly.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "silk",
+    "cn": "丝绸"
+   },
+   {
+    "word": "visitor",
+    "cn": "参观者(visit + -or)"
+   },
+   {
+    "word": "scientific",
+    "cn": "科学的"
    }
   ]
  }

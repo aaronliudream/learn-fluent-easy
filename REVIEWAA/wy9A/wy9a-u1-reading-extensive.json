@@ -39,6 +39,20 @@
     ],
     "explanation": "'a club does not grow when you talk about it. It grows when people see it.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "drama",
+    "cn": "戏剧;戏剧社"
+   },
+   {
+    "word": "helpless",
+    "cn": "无助的(help + -less)"
+   },
+   {
+    "word": "shy",
+    "cn": "害羞的"
+   }
   ]
  },
  {
@@ -80,6 +94,20 @@
      "He was sorry he had visited."
     ],
     "explanation": "'I stopped asking him to change. Now, when I visit, I make the tea and he turns on the radio.' 说明他理解了爷爷。"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "speaker",
+    "cn": "音箱,扬声器"
+   },
+   {
+    "word": "station",
+    "cn": "电台(此处不是「车站」)"
+   },
+   {
+    "word": "shelf",
+    "cn": "架子,搁板"
    }
   ]
  },
@@ -123,6 +151,20 @@
     ],
     "explanation": "'If a book is too hard, put it back.' 与 'If you enjoy the first ten pages, you will finish the book.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "shelf",
+    "cn": "书架"
+   },
+   {
+    "word": "argue",
+    "cn": "争辩,争论"
+   },
+   {
+    "word": "secret",
+    "cn": "秘诀(此处不是「秘密」)"
+   }
   ]
  },
  {
@@ -164,6 +206,20 @@
      "The teacher asked for new posters."
     ],
     "explanation": "'Since the wall was finished, three other classes have asked to paint the corner near the gate.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "poster",
+    "cn": "海报"
+   },
+   {
+    "word": "brush",
+    "cn": "刷子;画笔"
+   },
+   {
+    "word": "ugly",
+    "cn": "难看的,丑的"
    }
   ]
  }

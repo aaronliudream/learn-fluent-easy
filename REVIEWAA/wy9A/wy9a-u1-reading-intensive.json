@@ -65,5 +65,27 @@
  ],
  "unit": "U1",
  "difficulty": 0,
- "word_count": 148
+ "word_count": 148,
+ "vocab_notes": [
+  {
+   "word": "paper cutting",
+   "cn": "剪纸(中国传统手工艺)"
+  },
+  {
+   "word": "patient",
+   "cn": "有耐心的"
+  },
+  {
+   "word": "old-fashioned",
+   "cn": "老式的,过时的"
+  },
+  {
+   "word": "keep on",
+   "cn": "坚持下去"
+  },
+  {
+   "word": "disappear",
+   "cn": "消失"
+  }
+ ]
 }

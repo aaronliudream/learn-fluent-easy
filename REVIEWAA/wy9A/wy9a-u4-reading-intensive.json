@@ -65,5 +65,23 @@
  ],
  "unit": "U4",
  "difficulty": 0,
- "word_count": 179
+ "word_count": 179,
+ "vocab_notes": [
+  {
+   "word": "great-grandfather",
+   "cn": "曾祖父"
+  },
+  {
+   "word": "tin box",
+   "cn": "铁盒"
+  },
+  {
+   "word": "froze",
+   "cn": "结冰(freeze 的过去式)"
+  },
+  {
+   "word": "cross",
+   "cn": "横渡,穿过"
+  }
+ ]
 }

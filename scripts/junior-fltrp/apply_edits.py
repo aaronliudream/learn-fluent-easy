@@ -30,7 +30,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from past_perfect_gate import split_stmts, parse_values  # noqa: E402
+from past_perfect_gate import split_stmts, parse_values, split_tuples  # noqa: E402
 
 
 def esc(s):
@@ -38,28 +38,39 @@ def esc(s):
     return s.replace("'", "''")
 
 
-def structure_ok(path, table):
-    """校验:每条 INSERT 的列数与值数相等(截断必然导致不等)。"""
+def structure_ok(path, table=None):
+    """校验:每个 VALUES 元组的列数与值数相等(截断必然导致不等)。
+
+    ★2026-07-25 修:听力那种「单条 INSERT 带 36 个值元组」此前根本没被校到★
+    旧实现两处失效:
+      ① 用 `('INSERT INTO public.' + table) not in s` 匹配,而 table 默认 'junior_reading'
+         —— 调用方不显式传听力表名时,听力 INSERT 被整条跳过,校验是 no-op;
+      ② 就算匹配上,`parse_values(tail[:-1])` 把 `(t1), (t2), …` 当成**一个**元组解,
+         列数必然对不上,反过来变成假报警。
+    现在:走 split_tuples 逐元组解;table=None 表示**所有表都校**(默认值改成 None,
+    宁可多校也不要静默跳过 —— 静默跳过正是这次踩的坑)。
+    """
     txt = open(path, encoding='utf-8').read()
     total = bad = 0
     for s in split_stmts(txt):
-        if ('INSERT INTO public.' + table) not in s:
-            continue
-        m = re.search(r'\(([^)]*)\) VALUES \(', s)
+        m = re.search(r'INSERT INTO public\.(\w+)\s*\(([^)]*?)\)\s*VALUES\s*', s, re.S)
         if not m:
             continue
-        cols = [c.strip() for c in m.group(1).split(',')]
-        tail = s[m.end():].strip()
-        if not tail.endswith(')'):
+        if table and m.group(1) != table.replace('public.', ''):
+            continue
+        cols = [c.strip() for c in m.group(2).split(',')]
+        tups = split_tuples(s[m.end():])
+        if not tups:                      # 有 VALUES 却切不出元组 = 结构已坏
             bad += 1
             continue
-        total += 1
-        if len(cols) != len(parse_values(tail[:-1])):
-            bad += 1
+        for tup in tups:
+            total += 1
+            if len(cols) != len(parse_values(tup)):
+                bad += 1
     return total, bad
 
 
-def apply_pairs(path, pairs, table='junior_reading', verbose=True):
+def apply_pairs(path, pairs, table=None, verbose=True):
     """把 (old, new) 逐条替换进 path。
 
     old  —— 按【原文形态】给(不用自己转义);函数会同时尝试原形与转义形。
@@ -68,6 +79,11 @@ def apply_pairs(path, pairs, table='junior_reading', verbose=True):
     替换后校验文件结构;若被破坏,抛异常并保持文件不变。
     """
     orig = open(path, encoding='utf-8').read()
+    # ★替换前先记基线元组数★(2026-07-25 自测挖出来的第二层洞)
+    # 只校"每个元组列数=值数"不够:未转义撇号会把相邻元组**粘成一个**,
+    # 而粘连出的那个元组凑巧也可能解出正确的值数 → bad=0 假绿灯,
+    # 真正的信号是 total 从 3 掉到 1。文本替换在任何情况下都不该改变元组总数。
+    base_total, base_bad = structure_ok(path, table)
     t = orig
     done, fails = 0, []
     for old, new in pairs:
@@ -85,12 +101,16 @@ def apply_pairs(path, pairs, table='junior_reading', verbose=True):
 
     open(path, 'w', encoding='utf-8', newline='\n').write(t)
     total, bad = structure_ok(path, table)
-    if bad:
+    if bad > base_bad or total != base_total:
         open(path, 'w', encoding='utf-8', newline='\n').write(orig)   # 回滚
-        raise RuntimeError('替换破坏了文件结构(%d 条列数不匹配),已回滚。'
-                           '多半是新串里的撇号未转义。' % bad)
+        raise RuntimeError(
+            '替换破坏了文件结构,已回滚(文件保持原样)。'
+            '元组数 %d→%d(应不变),列数不匹配 %d→%d(应不增)。'
+            '多半是新串里的撇号未转义,把相邻元组粘成了一个。'
+            % (base_total, total, base_bad, bad))
     if verbose:
-        print('替换 %d/%d,结构校验 %d 条 INSERT 全部完好' % (done, len(pairs), total))
+        print('替换 %d/%d,结构校验 %d 个 VALUES 元组全部完好(元组数未变)'
+              % (done, len(pairs), total))
         for r, o in fails:
             print('  !! %s: %s' % (r, o))
     return done, fails

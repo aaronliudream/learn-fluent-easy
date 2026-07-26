@@ -3,6 +3,7 @@
  * 记 american_word_mastery(game=listen;与关2/4 共享词掌握)。
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { Volume2, Check, X, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
@@ -27,6 +28,8 @@ export function AmericanListenWordStage({ bundle, onDone }: { bundle: LessonBund
 
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLButtonElement>(!!picked);
   const [correct, setCorrect] = useState(0);
   const [done, setDone] = useState(false);
 
@@ -113,7 +116,7 @@ export function AmericanListenWordStage({ bundle, onDone }: { bundle: LessonBund
       </div>
 
       {picked && (
-        <button type="button" onClick={next}
+        <button ref={actionRef} type="button" onClick={next}
           className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">
           {idx + 1 >= rounds.length ? <T>完成本关</T> : <><T>下一题</T> <ChevronRight className="size-4" /></>}
         </button>

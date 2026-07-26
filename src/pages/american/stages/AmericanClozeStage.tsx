@@ -5,6 +5,7 @@
  * 每空逐题作答,展示该空自带 context(既有空=对话原文;扩容空=单句),记 am_question(答对2次=掌握)。
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { Check, X, ChevronRight, ChevronLeft, Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
@@ -89,6 +90,8 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
   const context = q?.payload.context ?? "";
   const rec = records[idx];
   const answered = rec !== undefined;
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const navRef = useRevealScroll<HTMLDivElement>(answered);
   const reviewing = idx < maxIdx;                                // 回看模式:只读、不计分、不改掌握
   const picked = rec ?? null;
 
@@ -192,7 +195,7 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
         </div>
       )}
       {/* 底部导航:上一空(回看)/下一空。首空禁用上一空;当前空未作答时禁用下一空 */}
-      <div className="mt-5 flex items-center gap-3">
+      <div ref={navRef} className="mt-5 flex items-center gap-3">
         <button type="button" onClick={prev} disabled={idx === 0}
           className={`inline-flex items-center justify-center gap-1 rounded-full border px-5 py-3 text-sm font-semibold transition ${
             idx === 0 ? "cursor-not-allowed border-slate-100 text-slate-300" : "border-slate-200 text-slate-500 hover:border-slate-300"

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { Volume2, ChevronRight, HelpCircle } from "lucide-react";
 import { speak } from "@/lib/speak";
 import type { Stage1Card } from "@/data/g2LessonStages";
@@ -17,6 +18,8 @@ const BG = [
 export default function Stage1WatchListen({ cards, onComplete }: { cards: Stage1Card[]; onComplete: () => void }) {
   const [i, setI] = useState(0);
   const [phase, setPhase] = useState<"listen" | "quiz" | "revealed">("listen");
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLButtonElement>(phase === "revealed");
   const card = cards[i];
 
   useEffect(() => {
@@ -78,6 +81,7 @@ export default function Stage1WatchListen({ cards, onComplete }: { cards: Stage1
         )}
         {phase === "revealed" && (
           <button
+            ref={actionRef}
             onClick={next}
             className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile"
           >

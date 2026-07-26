@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { bumpMistakeCorrect, bjToday } from "@/lib/mistakeStreak";
@@ -75,6 +76,8 @@ export function MistakeReviewGate() {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(revealed);
   const userIdRef = useRef<string | null>(null);
   const busyRef = useRef(false); // 防重入(load 事件 + SIGNED_IN 同时触发)
 
@@ -219,7 +222,7 @@ export function MistakeReviewGate() {
             )}
             {/* 下一题 */}
             {revealed && (
-              <div className="mt-4">
+              <div ref={actionRef} className="mt-4">
                 {hasNext ? (
                   <Button className="w-full" onClick={next}>
                     {done ? <T>再做一道</T> : <T>下一题</T>}

@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { getWordsForGrade } from "@/lib/primaryHub/vocabGames/words";
@@ -48,6 +49,8 @@ export default function VocabQuizGame() {
   const [started, setStarted] = useState(false);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(!!picked);
   const [correctCount, setCorrectCount] = useState(0);
   const [done, setDone] = useState(false);
 
@@ -185,7 +188,7 @@ export default function VocabQuizGame() {
 
       {/* 揭晓后：地道搭配 chunks + 下一题 */}
       {picked && (
-        <div className="mx-auto mt-6 max-w-md">
+        <div ref={actionRef} className="mx-auto mt-6 max-w-md">
           <button
             type="button"
             onClick={() => hubSpeak(q.word.en, HUB_FIXED_SPEAK_SPEED, grade)}

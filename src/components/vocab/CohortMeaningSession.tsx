@@ -9,6 +9,7 @@
  * cohort 词上推进。
  */
 import { useEffect, useMemo, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { ArrowLeft, Check, X, RotateCw, Sparkles, Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speak } from "@/lib/speak";
@@ -88,6 +89,8 @@ export default function CohortMeaningSession({
   const questions = useMemo(() => buildQuestions(pool), [pool]);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(picked !== null);
   const [correctCount, setCorrectCount] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
   const [done, setDone] = useState(false);
@@ -241,7 +244,7 @@ export default function CohortMeaningSession({
         </div>
 
         {picked !== null && (
-          <div className="mt-5 flex justify-end">
+          <div ref={actionRef} className="mt-5 flex justify-end">
             <Button onClick={next} className="bg-fuchsia-500 hover:bg-fuchsia-600">
               {idx + 1 >= total ? <T>完成</T> : <T>下一题</T>}
             </Button>

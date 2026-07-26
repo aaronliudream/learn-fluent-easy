@@ -12,6 +12,7 @@ import { getAlexVoice } from "@/lib/alexVoice";
 import { bumpMistakeCorrect, bjToday, bjDateTime, type StreakResult } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
+import RedoPassageModal, { isPassageRedoable } from "@/components/mistakes/RedoPassageModal";
 
 type Mistake = {
   id: string;
@@ -84,6 +85,12 @@ function isRedoable(m: Mistake): boolean {
 // 重做 = 看参考答案后自评「我会了」1 次即移出(豁免跨3天连对)。
 function isOpen(m: Mistake): boolean {
   return m.snapshot?.question_type === "open";
+}
+
+// 整篇型(阅读/完形):题在 snapshot.questions[] 里,顶层没有 options → isRedoable 恒 false,
+// 此前整篇卡永远没有重做按钮。这类走 RedoPassageModal 逐题重做、全对才算一次巩固。
+function isPassage(m: Mistake): boolean {
+  return isPassageRedoable(m.snapshot);
 }
 
 const MistakesPage = () => {
@@ -353,7 +360,7 @@ const MistakesPage = () => {
                 onPlay={() => playPhrase(m)}
                 onStar={() => toggleStar(m)}
                 onAskTutor={() => setTutorFor(m)}
-                onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
+                onRedo={(isRedoable(m) || isOpen(m) || isPassage(m)) ? () => setRedoFor(m) : undefined} />
 
               )}
                   </ul>
@@ -369,7 +376,7 @@ const MistakesPage = () => {
               onPlay={() => playPhrase(m)}
               onStar={() => toggleStar(m)}
               onAskTutor={() => setTutorFor(m)}
-              onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
+              onRedo={(isRedoable(m) || isOpen(m) || isPassage(m)) ? () => setRedoFor(m) : undefined} />
 
             )}
                 </ul>
@@ -399,10 +406,19 @@ const MistakesPage = () => {
       {/* 「AI 出 5 题」入口按钮已下线(大陆出题慢、体验差,且已有跨3天连对复习机制);
           SimilarQuestionsModal + generate-similar-questions edge 保留不删,以后加回按钮即可恢复。 */}
       {aiFor && <SimilarQuestionsModal mistake={aiFor} onClose={() => setAiFor(null)} />}
+      {/* 三型分流:开放题(自评)→ 整篇型(逐题重做)→ 单题 MCQ。
+          整篇型必须排在单题之前判:整篇卡顶层没有 options,落到单题弹窗会渲染出空选项列表。 */}
       {redoFor && (isOpen(redoFor) ?
       <RedoOpenModal
         mistake={redoFor}
         onOpenResolved={() => { void handleOpenResolve(redoFor); stopSpeaking(); setRedoFor(null); }}
+        onClose={() => { stopSpeaking(); setRedoFor(null); }} /> :
+      isPassage(redoFor) ?
+      <RedoPassageModal
+        title={redoFor.snapshot?.title || redoFor.source_label || ""}
+        body={String(redoFor.snapshot?.body || "")}
+        snapshot={redoFor.snapshot}
+        onAllCorrect={() => handleRedoCorrect(redoFor)}
         onClose={() => { stopSpeaking(); setRedoFor(null); }} /> :
       <RedoQuestionModal
         mistake={redoFor}

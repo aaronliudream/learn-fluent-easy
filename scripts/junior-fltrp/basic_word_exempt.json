@@ -2,7 +2,7 @@
  "note": "基础词豁免表。入表条件 a=前四册词表已收录 / c=前四册正文语料已使用(含语法题干,Aaron 2026-07-26 裁定算暴露) / b=课本语法页原文作证。仅凭常识不入表。检查器读表豁免但须单列「豁免命中 N 处」。",
  "approved_by": "Aaron",
  "approved_on": "2026-07-26",
- "count": 88,
+ "count": 90,
  "entries": [
   {
    "word": "take part in",
@@ -591,6 +591,18 @@
    "by": "c",
    "form": "building",
    "evidence": "wy7A U6《The ants' secret》: Near the wall, some ants are building a new road with tiny stones."
+  },
+  {
+   "word": "recommend",
+   "unit9": "U4",
+   "by": "b",
+   "evidence": "课本 p16 U1 Presenting ideas 任务页原文:「Recommend a role model for your class.」「write your recommendation」「I would like to recommend… as a role model for our class.」「My role model is…」——词表把 recommend 列在 U4,属「首次列出≠首次接触」"
+  },
+  {
+   "word": "role model",
+   "unit9": "—",
+   "by": "b",
+   "evidence": "课本 p16 U1 Presenting ideas 任务页原文:「Recommend a role model for your class.」「write your recommendation」「I would like to recommend… as a role model for our class.」「My role model is…」——词表把 recommend 列在 U4,属「首次列出≠首次接触」"
   }
  ]
 }

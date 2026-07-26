@@ -4,8 +4,941 @@
     "semesters": {
       "wy_grade9_volume1": {
         "name": "上册",
-        "available": true,
-        "units": []
+        "available": false,
+        "units": [
+          {
+            "id": "wy9v1_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "wy9A",
+            "title": "Unit 1 Teenagers today",
+            "cn": "青春与榜样",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy9a-u1-adverbial-conditional-reason"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "A role model for our class",
+              "prompt": "Your class is choosing a role model. Write a short passage to recommend one person. Use if to say what may happen, and because / since to give your reason.",
+              "promptCn": "班级要选一位榜样。写一段话推荐一个人,说清楚你为什么选他/她。用 if 说明可能发生的情况,用 because / since 给出理由。",
+              "opener": "I would like to recommend a role model for our class.",
+              "sampleWords": [
+                "role model",
+                "recommend",
+                "patient",
+                "brave",
+                "set a good example"
+              ],
+              "cards": [
+                {
+                  "key": "name",
+                  "labelCn": "榜样的名字",
+                  "hint": "如 my grandma / Li Ming"
+                },
+                {
+                  "key": "doing",
+                  "labelCn": "他/她常做的一件事(动词开头)",
+                  "hint": "如 cleans the small park near our building"
+                },
+                {
+                  "key": "quality",
+                  "labelCn": "一个品质形容词",
+                  "hint": "如 patient / brave / kind"
+                },
+                {
+                  "key": "learn",
+                  "labelCn": "你想学到的一点(动词开头)",
+                  "hint": "如 keep trying after a hard day"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I would like to recommend {name} as a role model for our class.",
+                  "{name} {doing}.",
+                  "I choose {name} because this is not easy to do.",
+                  "{name} is very {quality}, and never gives up.",
+                  "If I keep trying, I will {learn}.",
+                  "I believe we can all learn a lot from {name}."
+                ],
+                "l2": [
+                  "I would like to recommend {name} as a role model for our class.",
+                  "{name} {doing}, and no one ever asks {name} to do it.",
+                  "I choose {name} because this takes both time and heart.",
+                  "Since {name} is so {quality}, our class can learn a lot from this.",
+                  "If I keep working like {name}, I will {learn}.",
+                  "I hope you like my role model. {name} sets a good example for us."
+                ],
+                "l3": [
+                  "The person I would like to recommend as a role model for our class is {name}.",
+                  "{name} {doing} — not for one day or one week, but for years.",
+                  "I choose {name} because a role model does not have to be famous. Someone close to us can teach us more, since we can watch what this person really does.",
+                  "Being {quality} sounds easy. Doing the same small thing again and again, when nobody is watching, is the hard part.",
+                  "If each of us learns one thing from {name}, we will {learn} together, and our class will be a better place.",
+                  "I believe we can all learn a lot from my role model. {name} sets a good example for us."
+                ]
+              },
+              "connectors": [
+                "if",
+                "because",
+                "since"
+              ],
+              "minWords": 50
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy9v1_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "wy9A",
+            "title": "Unit 2 On the money",
+            "cn": "零花钱与理财",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy9a-u2-adverbial-time-place"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "My pocket money plan",
+              "prompt": "Write a short passage about your plan for using your pocket money. Use when, before, after and until for time, and where / wherever for place.",
+              "promptCn": "写一段话,说说你打算怎样使用零花钱。用 when、before、after、until 引导时间从句,用 where / wherever 引导地点从句。写成连贯的短文,不要写成清单。",
+              "opener": "I have a simple plan for my pocket money.",
+              "sampleWords": [
+                "pocket money",
+                "save",
+                "spend",
+                "enough",
+                "coin"
+              ],
+              "cards": [
+                {
+                  "key": "money",
+                  "labelCn": "你每周的零花钱(数字)",
+                  "hint": "如 twenty"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "你放钱的地方",
+                  "hint": "如 a glass jar / the bank"
+                },
+                {
+                  "key": "thing",
+                  "labelCn": "你想为自己买的东西",
+                  "hint": "如 a new football"
+                },
+                {
+                  "key": "use",
+                  "labelCn": "你想为别人花的一笔钱",
+                  "hint": "如 a gift for my mother"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I get {money} yuan every week, and I have a simple plan for it.",
+                  "When I get my pocket money, I put half of it in {place}.",
+                  "I am saving for {thing}.",
+                  "I will not touch that money until I have enough.",
+                  "Before I buy anything else, I ask myself one question: do I really need it?",
+                  "After I buy {thing}, I will start saving again."
+                ],
+                "l2": [
+                  "I get {money} yuan every week, and I have a simple plan for it.",
+                  "When the money comes, I put half of it in {place} before I spend anything.",
+                  "I am saving for {thing}, and I will not touch that half until I have enough.",
+                  "The rest is for small things, and for {use}.",
+                  "Wherever I shop, I write down what I pay.",
+                  "After a month I read the list again, and I always learn something."
+                ],
+                "l3": [
+                  "I get {money} yuan a week. It is not much, so I want to use it well.",
+                  "When the money comes, the first thing I do is put half of it in {place}. I do this before I spend anything, because money is easy to spend and hard to save.",
+                  "That half is for {thing}. I will not touch it until I have enough, even if I really want something else that week.",
+                  "The other half is for small things and for {use} — saving is not only for myself.",
+                  "Wherever I shop, I write down what I pay, and I keep the paper in my pocket until I get home.",
+                  "After a month I read the list again. I always find something I did not really need, and next month I do better."
+                ]
+              },
+              "connectors": [
+                "when",
+                "before",
+                "after",
+                "until",
+                "wherever"
+              ],
+              "minWords": 60
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy9v1_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "wy9A",
+            "title": "Unit 3 Past passing by",
+            "cn": "历史与传承",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy9a-u3-adverbial-purpose-result"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "A creative way to pass on history",
+              "prompt": "Write a passage about a creative way to help people pass on history. It can be a fashion show, a use of technology, a creative product, or a new idea of your own. Use so that for purpose, and so... that / such... that for result.",
+              "promptCn": "写一段话,介绍一个帮助人们传承历史的创意做法 —— 可以是时装秀、科技手段、创意产品,也可以是你自己想出来的新点子。用 so that 表示目的,用 so… that / such… that 表示结果。",
+              "opener": "History does not die in one day.",
+              "sampleWords": [
+                "history",
+                "pass on",
+                "creative",
+                "product",
+                "share"
+              ],
+              "cards": [
+                {
+                  "key": "old",
+                  "labelCn": "一件正在被淡忘的老东西或老手艺",
+                  "hint": "如 an old paper cutting skill"
+                },
+                {
+                  "key": "idea",
+                  "labelCn": "你的创意做法(动词开头)",
+                  "hint": "如 make short videos about it"
+                },
+                {
+                  "key": "audience",
+                  "labelCn": "你想让谁看到",
+                  "hint": "如 students in other schools"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "做这件事的地方",
+                  "hint": "如 our school hall"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "History does not die in one day. It goes when no one passes it on.",
+                  "In my hometown there is {old}. Fewer young people know about it now.",
+                  "I have a creative way. We can {idea} so that {audience} can see it.",
+                  "We can do this in {place}.",
+                  "It is such a simple idea that anyone can join.",
+                  "In my opinion, this is how we keep history alive."
+                ],
+                "l2": [
+                  "History does not die in one day. It goes quietly, when no one passes it on.",
+                  "In my hometown there is {old}. Ten years ago every family knew it, and now few young people do.",
+                  "So I have a creative way: we can {idea} so that {audience} can see it without leaving their own school.",
+                  "We can start in {place}, because we do not need much room for it.",
+                  "The old workers are so glad to teach that they will come for free.",
+                  "It is such a simple idea that anyone can join. In my opinion, this is how history stays alive."
+                ],
+                "l3": [
+                  "History does not die in one day. It goes quietly, when no one passes it on.",
+                  "In my hometown there is {old}. Ten years ago every family knew it. Now it is so quiet that most of my classmates have never seen it.",
+                  "So I want to try something new: we can {idea} so that {audience} can see it without leaving their own school.",
+                  "We can start in {place}. We do not need much room, and we do not need much money — we only need one person with the old skill, and a little time.",
+                  "The old workers I met are so glad to teach that they will come for free. They ask for one thing only: that we really watch.",
+                  "It is such a small idea that people may laugh at it. But in my opinion, if one person learns it this year, history is one year longer."
+                ]
+              },
+              "connectors": [
+                "so that",
+                "so... that",
+                "such... that"
+              ],
+              "minWords": 60
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy9v1_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "wy9A",
+            "title": "Unit 4 Heroes",
+            "cn": "平凡英雄",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy9a-u4-attributive-who"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "A hero close to me",
+              "prompt": "Write an introduction to the life of a person you think is a hero. The person can be someone near you. Say what he or she does, what he or she did one day, and what makes this person a hero. Use who and whom to join your sentences.",
+              "promptCn": "为一位你心中的英雄写一篇生平介绍 —— 这个人可以就是你身边的人。写清楚他/她平时做什么、某一天做了什么、以及为什么算英雄。用 who / whom 引导定语从句把句子连起来。",
+              "opener": "I want to write about a person I will never forget.",
+              "sampleWords": [
+                "hero",
+                "brave",
+                "thank",
+                "for free",
+                "look after"
+              ],
+              "cards": [
+                {
+                  "key": "name",
+                  "labelCn": "这个人的名字",
+                  "hint": "如 Mr Wang / my aunt"
+                },
+                {
+                  "key": "work",
+                  "labelCn": "他/她做的工作(动词开头)",
+                  "hint": "如 drives the last bus every night"
+                },
+                {
+                  "key": "deed",
+                  "labelCn": "他/她做过的一件事(动词开头)",
+                  "hint": "如 waited an hour for a lost child"
+                },
+                {
+                  "key": "point",
+                  "labelCn": "最打动你的一点(动词开头)",
+                  "hint": "如 keeps a promise to people far away"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I want to write about {name}, a person I will never forget.",
+                  "{name} is a worker who {work}.",
+                  "{name} has done this for many years.",
+                  "One winter night {name} {deed}.",
+                  "Nobody asked for it, and nobody paid for it.",
+                  "{name} is the person whom I want to thank.",
+                  "To me, a hero is someone who {point}."
+                ],
+                "l2": [
+                  "I want to write about {name}, a person whom our street knows well.",
+                  "{name} is a worker who {work}, and who has done it for years.",
+                  "One winter night {name} {deed}. Nobody asked for it, and nobody paid for it.",
+                  "The people who saw that night still talk about it.",
+                  "Books tell us about heroes who change a country.",
+                  "But to me, a hero is not someone far away. A hero is someone who {point}."
+                ],
+                "l3": [
+                  "The person I want to write about is {name}, whom our street has known for years.",
+                  "{name} is one of the workers who {work}. It is a small job, and most people who pass by never look twice.",
+                  "But one winter night {name} {deed}. Nobody asked for it. Nobody paid for it. It was late, it was cold, and it was easy to go home instead.",
+                  "The neighbours who saw that night still talk about it. I was one of them, and I have never forgotten it.",
+                  "Books tell us about heroes who change a country. I believe there is another kind: someone who {point}, day after day, in a place too small for the news.",
+                  "That is the person whom I want to thank today."
+                ]
+              },
+              "connectors": [
+                "who",
+                "whom",
+                "and"
+              ],
+              "minWords": 55
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy9v1_u5",
+            "num": 5,
+            "unitKey": "U5",
+            "book": "wy9A",
+            "title": "Unit 5 A fine balance",
+            "cn": "人与自然",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy9a-u5-attributive-that-which"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "A nature protection plan",
+              "prompt": "Choose one problem you can see around you: water pollution, noise pollution, too much rubbish, or few trees and plants. Make a nature protection plan, and write it as a short passage. Use that and which to join sentences, and try leaving out the joining word when it is the object.",
+              "promptCn": "从你身边看得见的问题里选一个:水污染、噪音污染、垃圾太多,或者树木植物太少。为它做一份自然保护计划,写成连贯的短文(不要写成清单)。用 that / which 引导定语从句;引导词作宾语时试着把它省略。",
+              "opener": "There is a place near my home that I want to protect.",
+              "sampleWords": [
+                "protect",
+                "pollution",
+                "rubbish",
+                "plant",
+                "nearby"
+              ],
+              "cards": [
+                {
+                  "key": "place",
+                  "labelCn": "你想保护的地方",
+                  "hint": "如 a small pond"
+                },
+                {
+                  "key": "problem",
+                  "labelCn": "那里的一个问题",
+                  "hint": "如 people leave plastic bags there"
+                },
+                {
+                  "key": "action",
+                  "labelCn": "你打算做的第一件事(动词开头)",
+                  "hint": "如 clean it on the first Sunday of each month"
+                },
+                {
+                  "key": "team",
+                  "labelCn": "和你一起做的人",
+                  "hint": "如 five classmates and my father"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "There is {place} near my home that I want to protect.",
+                  "It is a place I go to when I want to be quiet.",
+                  "But there is a problem now: {problem}.",
+                  "This is a serious problem.",
+                  "There are a lot of things we can do.",
+                  "First, {team} and I will {action}.",
+                  "Second, we will pick up the things which people leave behind.",
+                  "Finally, we will tell our class about it. There is no time to waste."
+                ],
+                "l2": [
+                  "There is {place} near my home. It is the place I go to when I want to be quiet.",
+                  "But something has changed: {problem}. The birds that came every spring are fewer now.",
+                  "This is a serious problem, and there are a lot of things we can do.",
+                  "First, {team} and I will {action}.",
+                  "Second, we will pick up the things which people leave behind, and count them.",
+                  "Finally, we will write down the names of the birds we see.",
+                  "Nature does not need much from us. It only needs the space that belongs to it, and there is no time to waste."
+                ],
+                "l3": [
+                  "There is {place} near my home. It is the place I go to when I want to be quiet, and it is the first place I would show a friend from far away.",
+                  "But something has changed: {problem}. The birds that came every spring are fewer now, and the water which used to be clear is not clear any more.",
+                  "This is a serious problem. It is also a problem we made ourselves, so it is a problem we can solve.",
+                  "Here is the plan I want to make. It costs nothing but time.",
+                  "First, {team} and I will {action}. Second, we will pick up the things which people leave behind, and we will count them, because a number is harder to forget than a feeling. Finally, we will write down the names of the birds we see.",
+                  "If the list gets longer next year, we will know the plan is working. Nature does not ask much of us: it only asks for the space that has always belonged to it. There is no time to waste."
+                ]
+              },
+              "connectors": [
+                "that",
+                "which",
+                "and"
+              ],
+              "minWords": 70
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy9v1_u6",
+            "num": 6,
+            "unitKey": "U6",
+            "book": "wy9A",
+            "title": "Unit 6 Live green",
+            "cn": "绿色生活",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy9a-u6-word-formation"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "The box at the back of the room",
+              "prompt": "Here is the beginning of a story. Our class put a big box at the back of the room. On it were four words: 'Do not throw it away.' In two weeks the box was full - a broken chair, an old schoolbag, three bottles and a lot of old paper. Then someone asked, 'What should we do with all this?' Write an ending to the story. Say what happened in the end, and what message you want to tell. Use word formation in your ending: the prefixes un-, re- and up-, and the endings -ful, -less and -ly.",
+              "promptCn": "下面是一个故事的开头:我们班在教室后面放了一个大箱子,上面写着四个词「Do not throw it away」。两周后箱子满了 —— 一把坏椅子、一个旧书包、三个瓶子和一沓旧纸。这时有人问:「这些东西该怎么办?」请给这个故事写一个结尾:写清楚最后发生了什么,以及你想告诉大家什么道理。结尾里要用到构词法:前缀 un- / re- / up-,后缀 -ful / -less / -ly。",
+              "opener": "Nobody answered at first.",
+              "sampleWords": [
+                "useless",
+                "useful",
+                "reuse",
+                "upcycle",
+                "carefully"
+              ],
+              "cards": [
+                {
+                  "key": "object",
+                  "labelCn": "箱子里的一件东西",
+                  "hint": "如 the broken chair"
+                },
+                {
+                  "key": "newUse",
+                  "labelCn": "它的新用途",
+                  "hint": "如 a shelf for our class books"
+                },
+                {
+                  "key": "feeling",
+                  "labelCn": "同学们的感受(形容词)",
+                  "hint": "如 surprised / proud"
+                },
+                {
+                  "key": "message",
+                  "labelCn": "你想告诉大家的一句话",
+                  "hint": "如 nothing is really useless"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Nobody answered at first.",
+                  "Then we took out {object}.",
+                  "It looked useless, but it was not.",
+                  "We worked on it carefully and turned it into {newUse}.",
+                  "Everyone was {feeling}.",
+                  "We did not buy anything, and we did not throw anything away.",
+                  "This is what our box tells us: {message}.",
+                  "Now every class in our school wants a box like ours."
+                ],
+                "l2": [
+                  "Nobody answered at first. The box was full, and the room was quiet.",
+                  "Then we took out {object}. It looked useless, and someone said we should throw it away.",
+                  "But we worked on it carefully, and in two afternoons it became {newUse}. Something unwanted was useful again.",
+                  "Everyone was {feeling}. We did not buy anything, and we did not throw anything away.",
+                  "This is what our box tells us: {message}.",
+                  "Now every class in our school wants a box like ours."
+                ],
+                "l3": [
+                  "Nobody answered at first. The box was full, the room was quiet, and the easy answer was sitting on everyone's face: throw it away.",
+                  "Then someone pulled out {object}. It looked useless. Two people laughed. But a third said, 'Wait. What if we do not throw it away, but reuse it?'",
+                  "We worked on it carefully for two afternoons. We took it to pieces, cleaned every part and put it back together. When we finished, it was {newUse}. Something unwanted had a second life, and this time the change was harmless to the world outside our window.",
+                  "Everyone was {feeling}. Nobody spent a yuan. Nobody carried a bag to the bin. To upcycle is not a big word for scientists; it is what our class did in a corner of a classroom.",
+                  "This is what our box tells us: {message}.",
+                  "The four words are still on it, but they mean something different to us now. They are not a rule any more. They are a question we ask ourselves every day."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "so"
+              ],
+              "minWords": 60
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          }
+        ]
       },
       "wy_grade9_volume2": {
         "name": "下册",

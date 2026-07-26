@@ -20,6 +20,8 @@ import { ToastAction } from "@/components/ui/toast";
 import { saveRedirectPath } from "@/lib/authRedirect";
 import { getLibrarySegment, peekLibrarySegment, invalidateLibrarySegment } from "@/lib/library/segment";
 import { trackVocabFavoriteAdd } from "@/lib/library/vocabFunnel";
+import { canShowLinkNudge, markLinkNudgeShown, markVocabPageOpened } from "@/lib/library/vocabNudge";
+import { flushCloudPush } from "@/lib/library/progress";
 
 /**
  * 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。
@@ -390,13 +392,40 @@ function ExplainPopover({
         setFav(true);
         onFavoriteChange?.(phrase, favKind, true);
         invalidateLibrarySegment(); // 收藏数/分段变了 → 下次重算(否则第一个词收完还判成 A)
+        const isFirst = (before?.favTotal ?? 0) === 0;
         trackVocabFavoriteAdd({
           info: before,
           term: phrase,
           kind: favKind,
-          isFirst: (before?.favTotal ?? 0) === 0,
+          isFirst,
           bookKey: favorite.bookKey,
           chapterIdx: favorite.chapterIdx,
+        });
+        // 收藏后即时提示。带「去看看」链接的只给两类人:
+        //   · 第一个收藏词(A/B 类)—— 这是他第一次看见"词库"这个东西,值得指路;
+        //   · C 类(有词但没复习痕迹)—— 收了词却从没用过,受 vocabNudge 三条封顶约束。
+        // 其余(D 类熟练用户)只给 2 秒轻提示,不打扰。
+        const wantLink = isFirst || (before?.segment === "c" && canShowLinkNudge());
+        if (wantLink) markLinkNudgeShown();
+        toast({
+          title: `${phrase} 已存入词库，读完可以复习`,
+          duration: wantLink ? 5000 : 2000,
+          ...(wantLink
+            ? {
+                action: (
+                  <ToastAction
+                    altText="去看看"
+                    onClick={() => {
+                      markVocabPageOpened(); // 点过 → 永久不再弹带链接提示
+                      void flushCloudPush(); // 跳转前把阅读位置落盘(防 1500ms 防抖丢断点),返回时回原处
+                      navigate("/library/vocab");
+                    }}
+                  >
+                    去看看
+                  </ToastAction>
+                ),
+              }
+            : {}),
         });
       }
     } catch (err) {

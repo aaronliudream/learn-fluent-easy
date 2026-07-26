@@ -5,7 +5,7 @@
  * 数据只写三处(DECISIONS.md D14):mastery_progress / library_vocab_favorites / user_mistakes。此页仅读 + 删收藏。
  */
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowLeft, Volume2, Trash2, BookMarked, Sparkles } from "lucide-react";
 import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -116,6 +116,7 @@ export default function LibraryVocab() {
   const [bookFilter, setBookFilter] = useState<string>("all");
   const [dateFilter, setDateFilter] = useState<DateFilter>("all");
   const { lang } = useI18n();
+  const location = useLocation(); // 章末小结卡「现在测一遍」经 router state 传本章那批词
   const [reviewMode, setReviewMode] = useState<ReviewMode>(() => initialReviewMode(lang));
   const en = reviewMode === "en";
 
@@ -152,14 +153,32 @@ export default function LibraryVocab() {
 
   // ---- 统计(纯前端)。虚词(the/of/because…)不可复习,从复习集/计数里剔除(它们是待清理脏数据,列表仍显示以便移除)。----
   const reviewable = useMemo(() => favs.filter((f) => !isFunctionWord(f.term, f.pos)), [favs]);
-  const dueFavs = useMemo(() => reviewable.filter(vocabIsDueToday), [reviewable]);
+  const allDueFavs = useMemo(() => reviewable.filter(vocabIsDueToday), [reviewable]);
+
+  // 章末小结卡「现在测一遍」:阅读器用 router state 带来"本章这批词",只测这批。
+  // 走 state 不走 URL —— 词表可能十几个,不该塞进地址栏。刷新丢失 → 自动退回普通复习,不报错。
+  const batchTerms = useMemo(() => {
+    const raw = (location.state as { reviewTerms?: { term: string; kind: LibraryFavoriteKind }[] } | null)?.reviewTerms;
+    if (!Array.isArray(raw) || raw.length === 0) return null;
+    return new Set(raw.map((x) => `${x.kind}:${x.term}`));
+  }, [location.state]);
+  const dueFavs = useMemo(
+    () => (batchTerms ? allDueFavs.filter((f) => batchTerms.has(`${f.kind}:${f.term}`)) : allDueFavs),
+    [allDueFavs, batchTerms],
+  );
+  // 带着"本章这批词"进来 → 直接开测,不让用户再点一次「开始复习」。
+  // 那批词全都不 due(比如刚在阅读器里收藏完又立刻做过)→ 不空转,退回普通页面。
+  useEffect(() => {
+    if (!loading && batchTerms && dueFavs.length > 0) setReviewing(true);
+  }, [loading, batchTerms, dueFavs.length]);
+
   const stat = useMemo(() => ({
-    due: dueFavs.length,
+    due: allDueFavs.length, // 圆环/筛选显示的是今日待复习**总量**,不受章末小结卡那批筛选影响
     learning: reviewable.filter(vocabIsLearning).length,
     mastered: reviewable.filter(vocabIsMastered).length,
     masteredWord: reviewable.filter((f) => f.kind === "word" && vocabIsMastered(f)).length,
     masteredChunk: reviewable.filter((f) => f.kind === "chunk" && vocabIsMastered(f)).length,
-  }), [reviewable, dueFavs]);
+  }), [reviewable, allDueFavs]);
 
   const bookOptions = useMemo(() => {
     const ids = [...new Set(favs.map((f) => f.book_id).filter(Boolean) as string[])];

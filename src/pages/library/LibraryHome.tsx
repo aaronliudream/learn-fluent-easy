@@ -19,6 +19,7 @@ import {
 } from "@/lib/library/data";
 import { fetchProgressMap, type LibraryReadingState } from "@/lib/library/progress";
 import { getLibrarySegment, type LibrarySegmentInfo } from "@/lib/library/segment";
+import { REVIEW_BATCH_SIZE } from "@/lib/library/favorites";
 import { trackVocabEntryView, trackVocabEntryClick } from "@/lib/library/vocabFunnel";
 
 const BANDS: { key: LibraryAgeBand | "all"; label: string }[] = [
@@ -58,7 +59,25 @@ export default function LibraryHome() {
   // 分段信息(null=未加载,先按默认句显示,确认收藏为 0 才切引导句,避免闪现)。
   // 入口曝光埋点等它算完再报 —— 报的是"看到时是哪类用户 + 多少词待复习",半成品数据没有分析价值。
   const [seg, setSeg] = useState<LibrarySegmentInfo | null>(null);
-  const favCount = seg?.favTotal ?? null;
+
+  // 卡片三态(口径 = Aaron 2026-07-25 裁决 §四):
+  //  · 空状态(收藏 0)          → 引导句 + 无红点
+  //  · 今日待复习 M ≥ 一批       → 红点 = 一批的量,副文案「今天先测 20 个 · 共 M 个待复习」
+  //  · 0 < M < 一批             → 红点 = M,副文案「今天有 M 个词要复习」
+  //  · M = 0 但有收藏           → 无红点,副文案「今天没有要复习的」
+  // seg 未加载(null)时按"有词但没数出来"渲染,不闪引导句。
+  const emptyState = seg?.favTotal === 0;
+  const due = seg?.dueToday ?? 0;
+  const badge = seg && !emptyState ? Math.min(due, REVIEW_BATCH_SIZE) : 0;
+  const subtitle = !seg
+    ? "读书点词 → 收藏 → 复习测试"
+    : emptyState
+      ? "还没有收藏的词"
+      : due === 0
+        ? `共 ${seg.favTotal} 个词 · 今天没有要复习的`
+        : due >= REVIEW_BATCH_SIZE
+          ? `今天先测 ${REVIEW_BATCH_SIZE} 个 · 共 ${due} 个待复习`
+          : `今天有 ${due} 个词要复习`;
 
   useEffect(() => {
     let alive = true;
@@ -134,28 +153,38 @@ export default function LibraryHome() {
         </p>
       </div>
 
-      {/* 我的词库入口:整幅醒目卡,居中显眼(原来藏在标题右侧,用户看不到) */}
+      {/* 我的词库入口:功能卡片(白底细边框),不是满宽饱和渐变 ——
+          渐变大色块长得像广告位,用户会自动跳过。红点代表"这一轮要做的量"(封顶 = 一批),
+          总量放副文案:红点是行动号召,总量是信息,不该用大数字制造压力。 */}
       <Link
         to="/library/vocab"
         onClick={() => {
           if (seg) trackVocabEntryClick(seg); // 不 await、不挡跳转;分段没算出来就不报,不猜
         }}
-        className="group mt-5 flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 px-5 py-4 text-white shadow-md transition hover:shadow-lg hover:brightness-105 active:scale-[0.99]"
+        className="group mt-5 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition hover:border-sky-300 hover:shadow-md active:scale-[0.995] dark:border-slate-700 dark:bg-slate-900"
       >
-        <span className="flex items-center gap-3">
-          <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/20">
-            <BookMarked className="size-6" />
+        <span className="relative shrink-0">
+          <span className="grid size-[38px] place-items-center rounded-lg bg-sky-50 text-sky-600 dark:bg-sky-950 dark:text-sky-300">
+            <BookMarked className="size-5" />
           </span>
-          <span className="leading-tight">
-            <span className="block text-lg font-bold"><T>我的词库</T></span>
-            {favCount === 0 ? (
-              <span className="block text-[12px] text-sky-100"><T>还没有收藏的词 · 读书时点一下生词就能加进来</T></span>
-            ) : (
-              <span className="block whitespace-nowrap text-[12px] text-sky-100"><T>读书点词 → 收藏 → 复习测试</T></span>
-            )}
+          {badge > 0 && (
+            <span
+              className="absolute -right-1.5 -top-1.5 grid min-w-[18px] place-items-center rounded-full bg-rose-500 px-1 text-[11px] font-bold leading-[18px] text-white shadow-sm"
+              aria-label={`${badge} 个词待复习`}
+            >
+              {badge}
+            </span>
+          )}
+        </span>
+        <span className="min-w-0 flex-1 leading-tight">
+          <span className="block text-[15px] font-bold text-slate-800 dark:text-slate-100">
+            <T>{emptyState ? "读书时点单词，自动存进词库" : "我的词库"}</T>
+          </span>
+          <span className="mt-0.5 block truncate text-[12px] text-slate-500 dark:text-slate-400">
+            <T>{subtitle}</T>
           </span>
         </span>
-        <ArrowRight className="size-5 shrink-0 transition group-hover:translate-x-0.5" />
+        <ArrowRight className="size-4 shrink-0 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-sky-500" />
       </Link>
 
       {/* 年龄段筛选 */}

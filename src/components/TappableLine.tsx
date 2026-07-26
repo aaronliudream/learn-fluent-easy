@@ -14,9 +14,18 @@ import {
 } from "@/lib/library/favorites";
 import { isFunctionWord } from "@/lib/library/wordClass";
 import { senseNormalize, type LibraryCultureNote, type LibraryWordSense } from "@/lib/library/data";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
+import { saveRedirectPath } from "@/lib/authRedirect";
+import { getLibrarySegment, peekLibrarySegment, invalidateLibrarySegment } from "@/lib/library/segment";
+import { trackVocabFavoriteAdd } from "@/lib/library/vocabFunnel";
 
-/** 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。 */
-export type FavoriteCtx = { bookId: string; srcZh: string };
+/**
+ * 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。
+ * bookKey / chapterIdx 只给埋点用(收藏发生在哪本书哪一章),不参与收藏本身的写入。
+ */
+export type FavoriteCtx = { bookId: string; srcZh: string; bookKey?: string; chapterIdx?: number };
 
 // 默认点读样式(美语课等):默认隐形虚线,悬停显下划线。图书馆精读走 libraryTriggerClass。
 const DEFAULT_TRIGGER_CLASS =
@@ -282,6 +291,8 @@ function ExplainPopover({
   const [fav, setFav] = useState(false);
   const [favBusy, setFavBusy] = useState(false);
   const [revealed, setRevealed] = useState(false); // 微提取:是否已揭晓释义
+  const navigate = useNavigate();
+  const { toast } = useToast();
 
   const favKind: LibraryFavoriteKind = phrase.includes(" ") ? "chunk" : "word";
   const microRetrieval = !!isFavorited; // 只对收藏词做「先回忆后揭晓」
@@ -362,6 +373,9 @@ function ExplainPopover({
         const ipaM = posRaw.match(/\/[^/]+\//); // 卡头 "pos  /ipa/" → 拆回 pos 与 ipa
         const ipa = ipaM ? ipaM[0] : "";
         const pos = posRaw.replace(ipa, "").trim();
+        // 收藏**前**的分段快照:isFirst 只有在写入前才数得准。缓存命中就不打请求,
+        // 一次会话最多为此多查一次(之后 getLibrarySegment 走内存缓存)。
+        const before = peekLibrarySegment() ?? (await getLibrarySegment().catch(() => null));
         await addLibraryFavorite({
           term: phrase,
           kind: favKind,
@@ -375,9 +389,34 @@ function ExplainPopover({
         });
         setFav(true);
         onFavoriteChange?.(phrase, favKind, true);
+        invalidateLibrarySegment(); // 收藏数/分段变了 → 下次重算(否则第一个词收完还判成 A)
+        trackVocabFavoriteAdd({
+          info: before,
+          term: phrase,
+          kind: favKind,
+          isFirst: (before?.favTotal ?? 0) === 0,
+          bookKey: favorite.bookKey,
+          chapterIdx: favorite.chapterIdx,
+        });
       }
     } catch (err) {
-      console.warn("[library favorite] toggle failed", err);
+      // 未登录:原先只 console.warn → 用户点了收藏毫无反应(既有缺陷)。改为明确提示 + 去登录。
+      // 只在这里识别 not_signed_in,addLibraryFavorite 的 throw 逻辑一行未改。
+      if ((err as Error)?.message === "not_signed_in") {
+        saveRedirectPath(); // 记住当前阅读位置(含 ?ch=),登录后 App 自动跳回原处
+        toast({
+          // title 类型是 string & ReactNode(radix ToastProps 的 HTML title 属性交集)→ 只能给纯字符串,
+          // 站内其它 toast 也都是纯中文串,不套 <T>。
+          title: "登录后可以收藏单词",
+          action: (
+            <ToastAction altText="去登录" onClick={() => navigate("/auth")}>
+              去登录
+            </ToastAction>
+          ),
+        });
+      } else {
+        console.warn("[library favorite] toggle failed", err);
+      }
     } finally {
       setFavBusy(false);
     }

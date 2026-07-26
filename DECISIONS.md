@@ -51,3 +51,26 @@ hint: "Perhaps you meant the table 'public.library_chunks'"
 **修法(根因,非补丁)**:`LibraryReader.tsx` 改成用段落在本章数组里的**下标+1**作章内段号来比对 position(段落已按 chapter_idx 拉取),`topFigs = position===0`、`tailFigs = position>本章段数`。作图时**一律按「章内第几段」写 position**,直觉、跨章一致、零偏移量心算。
 
 **作图口径**:一本书的 position 全用章内段号;`0` 专留章首图;退休老图挪负数。
+
+---
+
+## 图书馆复习「每日复习词数」中途退出会少算(已知缺口,挂账)
+**日期**:2026-07-25
+
+`LibraryReview` 改成**逐题写库**之后(分批 20 + 中途保存),按词写的三处
+—— 掌握度 `mastery_progress` / 跨天连对 `library_vocab_favorites` / 错题本 `user_mistakes`
+—— 答完一题立刻落库,中途退出不再作废。
+
+但**整轮聚合计数**仍留在 `onComplete`:
+- `bumpReviewStreak()` —— 连续学习天数 🔥
+- `bumpReviewDaily(n)` —— 每天复习词数(成长图橙柱)
+
+**后果**:用户做了 12 题就退出,那 12 个词的掌握度/连对/错题都已入库,但**橙柱一格不涨**。
+用户视角 = 「我明明做了却没涨」。
+
+**为什么先不改**:Aaron 定的口径 —— 整轮聚合就该整轮结束才写,避免逐题 upsert 把
+`library_vocab_review_daily` 打成高频写。且橙柱是回顾性图表,不是行动号召,优先级低于入口改造。
+
+**挂账**:等「图书馆词库入口可发现性改造」第 3 步(入口卡片 + 四分段)上线后一并处理。
+可选修法:退出复习时(组件卸载 / onExit)按本次已落库的词数补一次 `bumpReviewDaily`,
+需要在 `LibraryReview` 里记「已写库但未计入日历」的计数,避免与 `onComplete` 重复累加。

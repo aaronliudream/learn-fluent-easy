@@ -928,6 +928,8 @@ export default function LibraryReader() {
               onPageEnter={handlePageEnter}
               registerRef={registerSentenceRef}
               bookId={book.id}
+              bookKey={book.book_key}
+              chapterIdx={chapterIdx}
               favTerms={favTerms}
               chunkTerms={chunkTerms}
               cultureNotes={cultureNotes}
@@ -1051,7 +1053,7 @@ export default function LibraryReader() {
                             {head}
                             <TappableLine
                               sentence={body}
-                              favorite={{ bookId: book.id, srcZh: s.text_cn ?? "" }}
+                              favorite={{ bookId: book.id, srcZh: s.text_cn ?? "", bookKey: book.book_key, chapterIdx }}
                               favoritedTerms={favTerms}
                               reveal={reveal}
                               chunkPhrases={chunkTerms}

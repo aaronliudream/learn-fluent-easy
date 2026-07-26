@@ -18,7 +18,8 @@ import {
   type LibraryBookListItem,
 } from "@/lib/library/data";
 import { fetchProgressMap, type LibraryReadingState } from "@/lib/library/progress";
-import { listFavoritedTerms } from "@/lib/library/favorites";
+import { getLibrarySegment, type LibrarySegmentInfo } from "@/lib/library/segment";
+import { trackVocabEntryView, trackVocabEntryClick } from "@/lib/library/vocabFunnel";
 
 const BANDS: { key: LibraryAgeBand | "all"; label: string }[] = [
   { key: "all", label: "全部" },
@@ -54,14 +55,22 @@ export default function LibraryHome() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false); // 书目加载失败(弱网/抖动)→ 显重试,不再卡死在加载态
   const [reloadKey, setReloadKey] = useState(0); // 重试:bump 触发 load effect 重跑
-  // 收藏词数(null=未加载,先按默认句显示,确认为 0 才切引导句,避免闪现)
-  const [favCount, setFavCount] = useState<number | null>(null);
+  // 分段信息(null=未加载,先按默认句显示,确认收藏为 0 才切引导句,避免闪现)。
+  // 入口曝光埋点等它算完再报 —— 报的是"看到时是哪类用户 + 多少词待复习",半成品数据没有分析价值。
+  const [seg, setSeg] = useState<LibrarySegmentInfo | null>(null);
+  const favCount = seg?.favTotal ?? null;
 
   useEffect(() => {
     let alive = true;
     (async () => {
-      const terms = await listFavoritedTerms();
-      if (alive) setFavCount(terms.size);
+      try {
+        const info = await getLibrarySegment();
+        if (!alive) return;
+        setSeg(info);
+        trackVocabEntryView(info); // 每次会话只报一次(模块内自带去重)
+      } catch {
+        /* 分段/埋点失败绝不影响书架:副文案退回默认句 */
+      }
     })();
     return () => {
       alive = false;
@@ -128,6 +137,9 @@ export default function LibraryHome() {
       {/* 我的词库入口:整幅醒目卡,居中显眼(原来藏在标题右侧,用户看不到) */}
       <Link
         to="/library/vocab"
+        onClick={() => {
+          if (seg) trackVocabEntryClick(seg); // 不 await、不挡跳转;分段没算出来就不报,不猜
+        }}
         className="group mt-5 flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 px-5 py-4 text-white shadow-md transition hover:shadow-lg hover:brightness-105 active:scale-[0.99]"
       >
         <span className="flex items-center gap-3">

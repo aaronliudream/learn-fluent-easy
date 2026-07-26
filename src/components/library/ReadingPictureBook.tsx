@@ -37,6 +37,9 @@ export type ReadingPictureBookProps = {
   registerRef: (i: number, el: HTMLElement | null) => void;
   // ---- 点词/收藏透传(与原阅读器同一套,能力不缩水)----
   bookId: string;
+  /** 只给收藏埋点用(记收藏发生在哪本书哪一章),不参与渲染。 */
+  bookKey: string;
+  chapterIdx: number;
   favTerms: Set<string>;
   chunkTerms: string[];
   cultureNotes: Map<string, LibraryCultureNote>;
@@ -62,6 +65,8 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
     onPageEnter,
     registerRef,
     bookId,
+    bookKey,
+    chapterIdx,
     favTerms,
     chunkTerms,
     cultureNotes,
@@ -213,7 +218,7 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
                 >
                   <TappableLine
                     sentence={s.text_en}
-                    favorite={{ bookId, srcZh: s.text_cn ?? "" }}
+                    favorite={{ bookId, srcZh: s.text_cn ?? "", bookKey, chapterIdx }}
                     favoritedTerms={favTerms}
                     reveal={reveal}
                     chunkPhrases={chunkTerms}

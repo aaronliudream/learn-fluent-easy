@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { sanitizeReturnTo } from "@/lib/returnTo";
 import BackLink from "@/components/BackLink";
@@ -58,6 +59,8 @@ export default function JuniorKpPractice() {
 
   const [idx, setIdx] = useState(0); // 指向 pool(已洗牌)
   const [answered, setAnswered] = useState(false);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(answered);
   const [streak, setStreak] = useState(0);
   const [wrongFlash, setWrongFlash] = useState(false);
   const [celebrate, setCelebrate] = useState(false);
@@ -229,7 +232,7 @@ export default function JuniorKpPractice() {
             onAnswered={handleAnswered}
           />
           {answered && (
-            <div className="flex items-center justify-end pt-1">
+            <div ref={actionRef} className="flex items-center justify-end pt-1">
               <button
                 onClick={handleNext}
                 className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"

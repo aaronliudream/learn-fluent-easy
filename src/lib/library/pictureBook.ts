@@ -23,6 +23,7 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   // 硬切(见 SQLAA/20260725_aesop_ch5_pages.sql),不改 para_idx —— buildPages 有
   // page_index 就按它,段落结构留给段落流渲染,两件事互不牵扯。
   "aesop-easy-readers#5",
+  "aesop-easy-readers#6",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

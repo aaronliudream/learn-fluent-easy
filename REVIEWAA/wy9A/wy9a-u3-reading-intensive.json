@@ -1,0 +1,69 @@
+{
+ "title": "A brush and a broken bowl",
+ "body": "Last summer our class visited a small museum in our town. An archaeologist there, Mr Zhou, was cleaning broken pieces of an old pot at a long table. He gave each of us a soft brush. \"Work slowly so that you do not lose the smallest piece,\" he said. The pieces looked so plain that some of us were disappointed. We wanted gold. Mr Zhou smiled. \"A whole pot shows you the shape. A broken pot brings out the story.\" It was such a hot afternoon that we drank all our water before three o'clock. Nobody left. By five we put together half of a bowl. Mr Zhou keeps a photo of that bowl on his wall. He shows it to visitors so that they can see how slow work looks. He takes more pride in it than in anything else in the room. Now, when I hear the word \"history\", I think of a table, a brush and a small grey piece in my hand.",
+ "questions": [
+  {
+   "q": "What was Mr Zhou doing when the class arrived?",
+   "type": "choice",
+   "answer": "C",
+   "options": [
+    "He was giving a speech to visitors.",
+    "He was taking photos of a gold mask.",
+    "He was cleaning broken pieces of an old pot.",
+    "He was building a long table."
+   ],
+   "explanation": "'An archaeologist there, Mr Zhou, was cleaning broken pieces of an old pot at a long table.'"
+  },
+  {
+   "q": "Why did Mr Zhou ask the students to work slowly?",
+   "type": "choice",
+   "answer": "A",
+   "options": [
+    "So that they would not lose the smallest piece.",
+    "So that they could finish before three o'clock.",
+    "Because the museum would close early.",
+    "Because the brushes were too soft."
+   ],
+   "explanation": "'Work slowly so that you do not lose the smallest piece.'"
+  },
+  {
+   "q": "How did some students feel at first?",
+   "type": "choice",
+   "answer": "D",
+   "options": [
+    "Afraid.",
+    "Angry.",
+    "Proud.",
+    "Disappointed."
+   ],
+   "explanation": "'The pieces looked so plain that some of us were disappointed. We wanted gold.'"
+  },
+  {
+   "q": "Why does Mr Zhou keep the photo of the bowl on his wall?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "Because the bowl is worth a lot of money.",
+    "Because it shows visitors what slow work looks like.",
+    "Because his class took the photo for him.",
+    "Because the museum asked him to put it there."
+   ],
+   "explanation": "'He shows it to visitors so that they can see how slow work looks.'"
+  },
+  {
+   "q": "What does \"brings out\" mean in \"A broken pot brings out the story\"?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "carries away",
+    "makes something clear",
+    "puts something back",
+    "cleans the surface"
+   ],
+   "explanation": "与前句 'A whole pot shows you the shape' 对照,brings out 指让故事显现出来。"
+  }
+ ],
+ "unit": "U3",
+ "difficulty": 0,
+ "word_count": 166
+}

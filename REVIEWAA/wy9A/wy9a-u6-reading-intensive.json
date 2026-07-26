@@ -1,0 +1,69 @@
+{
+ "title": "The fourth word",
+ "body": "Look around your classroom. The pen in your hand, the cover of your notebook, the frame of the window — many of them are made of the same material. Three words explain why plastic spread so quickly: light, cheap and long-lasting. A plastic box is useful in a kitchen and harmless in a school bag. The trouble is the fourth word: it stays. A paper bag breaks down in a season. A plastic one may stay in the ground far longer than the person who dropped it. So is plastic good or bad? The question is not helpful. A material is neither. The answer lies in what we choose to do with it. We can reuse the bottle we bought this morning. We can upcycle an old box into a pen holder. We can carry a cloth bag and waste less. Plastic waste is a problem people made, and problems people made can be made smaller. Using it wisely, or unwisely, is the part that belongs to us.",
+ "questions": [
+  {
+   "q": "Why did plastic spread so quickly?",
+   "type": "choice",
+   "answer": "C",
+   "options": [
+    "Because it is easy to break down.",
+    "Because it is made from wood.",
+    "Because it is light, cheap and long-lasting.",
+    "Because it was first used in classrooms."
+   ],
+   "explanation": "'Three words explain why plastic spread so quickly: light, cheap and long-lasting.'"
+  },
+  {
+   "q": "What is \"the fourth word\" in the title?",
+   "type": "choice",
+   "answer": "A",
+   "options": [
+    "That plastic stays for a very long time.",
+    "That plastic is cheap to make.",
+    "That plastic is useful in a kitchen.",
+    "That plastic can be carried in a bag."
+   ],
+   "explanation": "'The trouble is the fourth word: it stays.'"
+  },
+  {
+   "q": "How does the writer answer the question \"good or bad\"?",
+   "type": "choice",
+   "answer": "D",
+   "options": [
+    "Plastic is mostly good.",
+    "Plastic is mostly bad.",
+    "Only paper bags are good.",
+    "A material is neither; our choices decide."
+   ],
+   "explanation": "'A material is neither. The answer lies in what we choose to do with it.'"
+  },
+  {
+   "q": "Which of these does the writer suggest doing?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "Burning old plastic boxes.",
+    "Turning an old box into a pen holder.",
+    "Buying a new bottle every morning.",
+    "Hiding plastic waste in the ground."
+   ],
+   "explanation": "'We can upcycle an old box into a pen holder.'"
+  },
+  {
+   "q": "What does \"unwisely\" mean in the last sentence?",
+   "type": "choice",
+   "answer": "C",
+   "options": [
+    "in a cheap way",
+    "in a quick way",
+    "in a foolish way",
+    "in a quiet way"
+   ],
+   "explanation": "前缀 un- 表否定,加在 wisely 前构成反义,故意为「不明智地」。"
+  }
+ ],
+ "unit": "U6",
+ "difficulty": 0,
+ "word_count": 168
+}

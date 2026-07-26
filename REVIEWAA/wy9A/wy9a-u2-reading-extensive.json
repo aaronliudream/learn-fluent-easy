@@ -1,0 +1,170 @@
+[
+ {
+  "title": "The Saturday market",
+  "body": "Every spring our school holds a small market on the playground. Students bring old books, toys and clothes. Before the market opens, each seller writes a price on a paper card. Last year I sold twelve books. My first price was ten yuan for each one. Nobody stopped. While I was watching the next table, I saw something useful: the girl beside me put three books together for fifteen yuan. As soon as I changed my cards, buyers came. I did not count the money until the market closed. I had eighty-six yuan. It was not a big number, but I learnt something better. A price is not about my wish. It is about the buyer. Since that Saturday, I have kept the paper cards in my desk. When I plan anything now, I start with the buyer.",
+  "questions": [
+   {
+    "q": "Why did nobody stop at the writer's table at first?",
+    "type": "choice",
+    "answer": "B",
+    "options": [
+     "Because the books were too old.",
+     "Because the price of each book was too high.",
+     "Because the table was in a bad place.",
+     "Because the market opened too late."
+    ],
+    "explanation": "'My first price was ten yuan for each one. Nobody stopped.' 与后文改价后买家就来了,说明是价格问题。"
+   },
+   {
+    "q": "What did the writer learn from the girl beside him?",
+    "type": "choice",
+    "answer": "C",
+    "options": [
+     "To sell books at a higher price.",
+     "To bring more books next time.",
+     "To sell three books together for one price.",
+     "To count the money before the market closed."
+    ],
+    "explanation": "'the girl beside me put three books together for fifteen yuan. As soon as I changed my cards, buyers came.'"
+   },
+   {
+    "q": "What does the writer think about a price now?",
+    "type": "choice",
+    "answer": "A",
+    "options": [
+     "It should depend on the buyer.",
+     "It should be as high as possible.",
+     "It should be written on a paper card.",
+     "It should never be changed."
+    ],
+    "explanation": "'A price is not about my wish. It is about the buyer.'"
+   }
+  ]
+ },
+ {
+  "title": "A gift for my sister",
+  "body": "My sister's birthday is in July. Last year I wanted to buy her a real drawing book, but it cost 65 yuan and I had nothing in my pocket. In March I started to walk to school. The bus is two yuan each way, so I saved four yuan a day. After I got home, I put the coins in a paper envelope under my books. While I was saving, the price went up to 72 yuan. That was bad news. I did not tell anyone. I just kept walking. By the end of June the envelope was heavy. When the shop assistant counted my coins, she smiled and asked if I was buying a gift. My sister still uses that drawing book. She does not know about the envelope, and I will not tell her. Some gifts are better when the story stays quiet.",
+  "questions": [
+   {
+    "q": "How did the writer save money?",
+    "type": "choice",
+    "answer": "D",
+    "options": [
+     "By selling his old books.",
+     "By asking his parents for more pocket money.",
+     "By working in a shop after school.",
+     "By walking to school instead of taking the bus."
+    ],
+    "explanation": "'In March I started to walk to school. The bus is two yuan each way, so I saved four yuan a day.'"
+   },
+   {
+    "q": "What happened while the writer was saving?",
+    "type": "choice",
+    "answer": "A",
+    "options": [
+     "The drawing book became more expensive.",
+     "His sister found the envelope.",
+     "He lost some of his coins.",
+     "The shop closed for a month."
+    ],
+    "explanation": "'While I was saving, the price went up to 72 yuan.'"
+   },
+   {
+    "q": "Why will the writer not tell his sister about the envelope?",
+    "type": "choice",
+    "answer": "C",
+    "options": [
+     "Because he is afraid of his parents.",
+     "Because he wants her to pay him back.",
+     "Because he thinks a quiet story makes a better gift.",
+     "Because he has forgotten the price."
+    ],
+    "explanation": "'Some gifts are better when the story stays quiet.'"
+   }
+  ]
+ },
+ {
+  "title": "The classroom bank",
+  "body": "Our class has a small bank. It is only a wooden box on the back shelf, but it works. Here is the idea. When you forget a pen or a ruler, you borrow one from the box. Before you take it, you write your name and the date on the list. After you return it, you cross your name out. Wang Lei looks after the box. He does not open it until the first lesson begins, and he closes it as soon as the last bell rings. At first some students laughed. They thought a real bank should hold money. But since we started the box in September, nobody in our class has bought a new ruler in a hurry. Wherever you sit, the box is only ten steps away. That is the whole point.",
+  "questions": [
+   {
+    "q": "What is the \"classroom bank\"?",
+    "type": "choice",
+    "answer": "B",
+    "options": [
+     "A place where students keep their pocket money.",
+     "A wooden box for borrowing pens and rulers.",
+     "A shop near the school gate.",
+     "A list of students' names on the wall."
+    ],
+    "explanation": "'Our class has a small bank. It is only a wooden box on the back shelf' 与 'you borrow one from the box'。"
+   },
+   {
+    "q": "When does Wang Lei close the box?",
+    "type": "choice",
+    "answer": "D",
+    "options": [
+     "Before the first lesson begins.",
+     "While the students are writing.",
+     "After the students laugh.",
+     "As soon as the last bell rings."
+    ],
+    "explanation": "'he closes it as soon as the last bell rings.'"
+   },
+   {
+    "q": "What has changed since September?",
+    "type": "choice",
+    "answer": "A",
+    "options": [
+     "Students no longer buy new rulers in a hurry.",
+     "The box has been moved to the front shelf.",
+     "Wang Lei has stopped looking after the box.",
+     "The class has bought a real bank box."
+    ],
+    "explanation": "'since we started the box in September, nobody in our class has bought a new ruler in a hurry.'"
+   }
+  ]
+ },
+ {
+  "title": "Grandma's little book",
+  "body": "My grandma has kept a small account book for thirty years. It is grey and soft at the corners. Every evening, after she washes the bowls, she sits down and writes two lines: one line for money in, one line for money out. When I was little, I thought it was boring. Last winter my mother wanted to change the old washing machine. She and my father talked about the price for a week. Then grandma opened her book. While they were still talking, she showed them a page from last March. The same machine was 300 yuan cheaper before the New Year. They waited. In January they bought it at the lower price. Now I understand. Grandma's little book is not really about money. It is about time.",
+  "questions": [
+   {
+    "q": "What does grandma write in her book every evening?",
+    "type": "choice",
+    "answer": "C",
+    "options": [
+     "The names of her family.",
+     "The weather of the day.",
+     "The money coming in and going out.",
+     "The price of the old washing machine."
+    ],
+    "explanation": "'she sits down and writes two lines: one line for money in, one line for money out.'"
+   },
+   {
+    "q": "How did grandma help her family?",
+    "type": "choice",
+    "answer": "A",
+    "options": [
+     "She showed them the price of the machine last March.",
+     "She lent them 300 yuan.",
+     "She bought the machine herself.",
+     "She asked the shop for a lower price."
+    ],
+    "explanation": "'she showed them a page from last March. The same machine was 300 yuan cheaper before the New Year.'"
+   },
+   {
+    "q": "What does the writer mean by \"It is about time\"?",
+    "type": "choice",
+    "answer": "B",
+    "options": [
+     "Grandma is getting old.",
+     "The book shows the best time to buy.",
+     "The book takes a lot of time to write.",
+     "The family is always late."
+    ],
+    "explanation": "全文用「等到一月以更低价格买下」说明这本账本记的是时间带来的价格变化。"
+   }
+  ]
+ }
+]

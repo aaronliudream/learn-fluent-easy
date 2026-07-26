@@ -1,0 +1,69 @@
+{
+ "title": "Four words in a notebook",
+ "body": "For years my great-grandfather was only a name on the back of a photo. He was gone many years before my birth, and nobody at home talked about him much. Last spring my grandmother opened an old tin box. Inside there were letters, a pair of glasses and a small notebook. \"He was a doctor who walked from village to village,\" she said. \"In winter the river froze, and he was the only person who would cross it at night.\" I asked what he was like. \"He was a quiet man whom the children were never afraid of.\" In the notebook I found lists of names and dates. Beside one name he wrote four words: \"She is walking again.\" My grandmother is the only person who still remembers his voice. The old people who live along that river still know his name. Now I keep the notebook on my desk. I do not know most of the people whom he helped. But when I am tired of a hard question, I read those four words, and I keep going.",
+ "questions": [
+  {
+   "q": "Why did the writer know little about his great-grandfather?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "Because the family lost all his letters.",
+    "Because he was gone many years before the writer was born and nobody talked about him.",
+    "Because he lived in another country.",
+    "Because his photo was thrown away."
+   ],
+   "explanation": "'He was gone many years before my birth, and nobody at home talked about him much.'"
+  },
+  {
+   "q": "What did the grandmother find in the old tin box?",
+   "type": "choice",
+   "answer": "D",
+   "options": [
+    "A pair of shoes and a map.",
+    "A photo and a river stone.",
+    "Some money and a school report.",
+    "Letters, a pair of glasses and a small notebook."
+   ],
+   "explanation": "'Inside there were letters, a pair of glasses and a small notebook.'"
+  },
+  {
+   "q": "What kind of person was the great-grandfather?",
+   "type": "choice",
+   "answer": "A",
+   "options": [
+    "A quiet doctor who helped people in far villages.",
+    "A soldier who fought in many places.",
+    "A teacher who wrote long letters.",
+    "A worker who built a bridge over the river."
+   ],
+   "explanation": "'He was a doctor who walked from village to village' 与 'He was a quiet man whom the children were never afraid of.'"
+  },
+  {
+   "q": "What do the four words \"She is walking again\" tell us?",
+   "type": "choice",
+   "answer": "C",
+   "options": [
+    "The great-grandfather liked walking at night.",
+    "A patient left the village on foot.",
+    "Someone he treated got better.",
+    "The notebook was written by a child."
+   ],
+   "explanation": "四个词写在一个病人名字旁边,说明这位病人在他医治后重新站了起来。"
+  },
+  {
+   "q": "Why does the writer keep the notebook on his desk?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "Because it is worth a lot of money.",
+    "Because those four words give him courage when work is hard.",
+    "Because his grandmother asked him to keep it.",
+    "Because he wants to write in it himself."
+   ],
+   "explanation": "'when I am tired of a hard question, I read those four words, and I keep going.'"
+  }
+ ],
+ "unit": "U4",
+ "difficulty": 0,
+ "word_count": 179
+}

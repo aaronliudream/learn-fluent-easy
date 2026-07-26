@@ -1,0 +1,69 @@
+{
+ "title": "The park that closed for a year",
+ "body": "The small park near our flat closed for one whole year. Workers were mending the old wall, and the gate stayed locked. Last month it opened again. My father and I went in on the first morning. The pond which was green and dirty before is clear now. The small fish that we saw last week are back near the stones. The grass that grows along the path is taller than my knee. The bird book we bought last spring is suddenly useful. In one hour we found four kinds of birds. My father says two of them never came here before. Nobody planted the flowers that stand near the north gate. The wind brought the seeds. Our city did not do anything special. It only stopped for a year. Now the gate is open again. People walk in, and the birds move a little farther away. That is fair. But my father keeps the bird book in his bag, and we go early, when the park is still quiet.",
+ "questions": [
+  {
+   "q": "Why was the park closed for a year?",
+   "type": "choice",
+   "answer": "C",
+   "options": [
+    "Because too many birds lived there.",
+    "Because the pond was too dirty to clean.",
+    "Because workers were mending the old wall.",
+    "Because the city had no money for it."
+   ],
+   "explanation": "'Workers were mending the old wall, and the gate stayed locked.'"
+  },
+  {
+   "q": "What changed in the pond during that year?",
+   "type": "choice",
+   "answer": "A",
+   "options": [
+    "It became clear, and small fish appeared.",
+    "It dried up completely.",
+    "It was filled with stones.",
+    "It turned green and dirty."
+   ],
+   "explanation": "'The pond which was green and dirty before is clear now. The small fish that we saw last week are back near the stones.'"
+  },
+  {
+   "q": "Why is the bird book suddenly useful?",
+   "type": "choice",
+   "answer": "D",
+   "options": [
+    "Because the writer is studying birds at school.",
+    "Because his father wrote part of it.",
+    "Because the park sells the same book now.",
+    "Because there are many more birds in the park."
+   ],
+   "explanation": "'The bird book we bought last spring is suddenly useful. In one hour we found four kinds of birds.'"
+  },
+  {
+   "q": "What does \"Our city did not do anything special. It only stopped for a year\" mean?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "The city forgot to look after the park.",
+    "Nature came back mainly because people stayed away.",
+    "The workers did a very good job on the pond.",
+    "The city planted the flowers near the north gate."
+   ],
+   "explanation": "'Nobody planted the flowers that stand near the north gate. The wind brought the seeds.' 说明恢复靠的是人退出,不是人的作为。"
+  },
+  {
+   "q": "Why do the writer and his father go to the park early?",
+   "type": "choice",
+   "answer": "A",
+   "options": [
+    "Because the park is quiet then and the birds stay close.",
+    "Because the gate closes at noon.",
+    "Because they want to meet the workers.",
+    "Because the grass is shorter in the morning."
+   ],
+   "explanation": "'People walk in, and the birds move a little farther away.' 与 'we go early, when the park is still quiet.'"
+  }
+ ],
+ "unit": "U5",
+ "difficulty": 0,
+ "word_count": 170
+}

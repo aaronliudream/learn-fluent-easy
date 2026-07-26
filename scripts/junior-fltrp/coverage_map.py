@@ -217,6 +217,117 @@ P = {
 ], [
     ('陈述语序(非疑问倒装)', r"\b(?:what|why|how|where|when|who|if|whether)\s+(?:I|you|he|she|it|we|they|the\s+\w+)\s+(?:am|is|are|was|were|do|does|did|can|will|had|have|has|\w+ed|\w+s)\b"),
 ]),
+
+# ══ wy9A 九上(2026-07-26 加)════════════════════════════════════════
+# 语法点取自课本 Scope and sequence + 附录 Guide to the language use(p129-137):
+#   U1 条件 if + 原因 because/since      U2 时间六类 + 地点 where/wherever
+#   U3 目的 so that + 结果 so/such…that  U4 who/whom 定从
+#   U5 that/which 定从 + 引导词省略      U6 构词法(派生/转化/合成)
+# ★与 clause_gate 的分工★:clause_gate 管「不该早出现」(超前),本表管「该出现却没有」(承载)。
+#   U1/U2 的四类状从在前四册已大量在用,故 clause_gate 不拦它们;但九上是系统化讲解,
+#   本表仍要求篇目**实质承载**,两者不冲突。
+('wy9A', 'U1'): ('条件状语从句 if + 原因状语从句 because/since', [
+    ('if 条件从句', r"\bif\s+(?:I|you|he|she|it|we|they|the|this|that|\w+)\s+(?:am|is|are|do|does|don't|doesn't|\w+s|\w+)\b"),
+    ('because 原因从句', r"\bbecause\s+(?:I|you|he|she|it|we|they|the|this|that|\w+)\b"),
+], [
+    # ★三条首版写窄,U1 精读实测漏检(内容有、门看不见)→ 放宽★
+    #   主将从现:逗号后主句可能先出现主语短语再到 will/情态(your hands will…),不能要求紧邻
+    #   if+祈使:祈使动词表要含 be/keep/try 等,不能只列位移动词
+    #   since 既然:句首 Since…, 即「既然」;时间义 since 从句一般在后半句且主句用完成时
+    ('主将从现(从句现在时→主句将来/情态)',
+     r"\bif\s+[^.!?]{3,60}?,\s*[^.!?]{0,30}?\b(?:will|won't|can|may|must|should)\b"
+     r"|\b(?:will|won't|can|may|must|should)\s+[^.!?]{3,60}?\bif\s+\w+\s+(?:is|are|do|does|\w+s|\w+)\b"),
+    # 祈使动词表两次写窄(第一版无 be,第二版无 show)。教训:枚举式动词表天生会漏。
+    # 改成「逗号后首词是动词原形」的形态判据 —— 收常见祈使动词 + 排除主语类词开头。
+    ('if + 祈使句',
+     r"\bif\s+[^.!?]{3,60}?,\s*(?!(?:I|you|he|she|it|we|they|the|a|an|this|that|these|those|"
+     r"my|your|his|her|our|their|there|nobody|no\s+one|some|many|most|it's)\b)"
+     r"(?:please\s+)?(?:do\s+not\s+|don't\s+)?[a-z]{2,}\b"),
+    ('since 表既然', r"(?:^|[.!?\"]\s+)since\s+[^.!?]{3,60}?,"),
+]),
+('wy9A', 'U2'): ('时间状语从句(六类)+ 地点状语从句', [
+    ('when/before/after/as soon as 时间从句',
+     r"\b(?:when|before|after|as\s+soon\s+as)\s+(?:I|you|he|she|it|we|they|the|this|that|\w+)\s+\w+"),
+    # 首版用 (?<!\w\s) 想排除「先行词 + where」的定从,结果把任何前面有词的 where 都挡了
+    # (`it sits where he can see it` 里的 `sits ` 就命中了那个否定环视)。
+    # 改成只排除**表地点的先行词**(place/room/school…),与 clause_gate 的 PLACE_HEAD 同口径。
+    ('where/wherever 地点从句(无先行词)',
+     r"(?<!\bplace\s)(?<!\broom\s)(?<!\bschool\s)(?<!\bcity\s)(?<!\btown\s)(?<!\bpark\s)"
+     r"(?<!\bshop\s)(?<!\bhouse\s)(?<!\bhome\s)(?<!\bgarden\s)(?<!\bcorner\s)"
+     r"\b(?:where|wherever|anywhere)\s+(?:I|you|he|she|it|we|they)\s+\w+"),
+], [
+    ('while + 进行时', r"\bwhile\s+(?:I|you|he|she|it|we|they|the\s+\w+)\s+(?:am|is|are|was|were)\s+\w+ing\b"),
+    ('until / not…until', r"\b(?:not\s+[^.!?]{0,30}?\buntil|until)\s+\w+"),
+    # 窗口首版 30/40 太短:`since we started the box in September, nobody in our class has bought`
+    # 从 since 到 has 隔了 52 字符,被漏检。放宽到 60/80(仍不跨句末标点)。
+    ('since + 主句完成时',
+     r"\b(?:has|have)\s+\w+(?:ed|en|n|t)?\s+[^.!?]{0,60}?\bsince\b"
+     r"|\bsince\s+[^.!?]{0,80}?\b(?:has|have)\s+\w+"),
+]),
+('wy9A', 'U3'): ('目的状语从句 so that + 结果状语从句 so/such…that', [
+    ('so that 目的', r"\bso\s+that\s+\w+"),
+], [
+    ('so + 形容词/副词 + that', r"\bso\s+\w+\s+that\s+\w+"),
+    ('such + a/an + 形容词 + 名词 + that', r"\bsuch\s+(?:a|an)\s+\w+\s+\w+\s+that\s+\w+"),
+    ('目的从句带情态(can/could/may/would)', r"\bso\s+that\s+(?:\w+\s+){1,3}?(?:can|could|may|might|will|would)\b"),
+]),
+('wy9A', 'U4'): ('who / whom 引导的定语从句', [
+    ('先行词 + who', r"\b(?:the|a|an|my|your|his|her|our|their|every|some|any)\s+\w+\s+who\b"
+                     r"|\b(?:everyone|anyone|someone|people|those|all)\s+who\b"),
+], [
+    ('whom 作宾语', r"\bwhom\b"),
+    # 两条首版都写窄:限定词与先行词之间只许一个词(挡掉 `the only person`)、
+    # who 与谓语之间不许有副词(挡掉 `who still remembers`)。U4 精读实测双双漏检。
+    # 放宽:限定词后允许 0-2 个修饰词,who 后允许 0-2 个副词。
+    ('从句谓语与先行词数一致(复数)',
+     r"\b(?:people|students|doctors|workers|children|neighbours|those|\w+s)\s+who\s+"
+     r"(?:\w+ly\s+|still\s+|always\s+|never\s+|often\s+){0,2}(?:are|were|have|do|live|know|\w+(?<!s))\b"),
+    ('从句谓语与先行词数一致(单数)',
+     r"\b(?:the|a|an|my|your|his|her|our|their)\s+(?:\w+\s+){0,2}?\w+?(?<!s)\s+who\s+"
+     r"(?:\w+ly\s+|still\s+|always\s+|never\s+|often\s+){0,2}(?:is|was|has|does|\w+s)\b"),
+]),
+('wy9A', 'U5'): ('that / which 定语从句 + 引导词省略', [
+    ('that / which 引导定从',
+     r"\b(?:the|a|an|my|your|his|her|our|their|this|these|those)\s+\w+\s+(?:that|which)\s+\w+"),
+], [
+    ('which 只指物', r"\b(?:the|a|an|this|these|those)\s+\w+\s+which\s+\w+"),
+    # 同一处窄法在本单元出现两次:限定词与中心名词之间不许有修饰词
+    # (`The small fish that we saw` / `The bird book we bought` 都被漏检)。统一放宽 0-2 词。
+    ('引导词作宾语(可省形态:名词 + that/which + 主语)',
+     r"\b(?:the|a|an|my|your|his|her|our|their|this|these|those)\s+(?:\w+\s+){0,2}\w+\s+"
+     r"(?:that|which)\s+(?:I|you|he|she|it|we|they|people|cars|scientists)\b"),
+    # 首版要求限定词与中心名词之间只隔一个词,`The bird book we bought` 这种
+    # 两词名词短语被漏检(U5 精读实测)。放宽到 0-2 个修饰词。
+    # ★中间词不许是关系词★ 放宽到 0-2 个修饰词后,`The small fish that we saw` 里的 that
+    # 被当成修饰词吃掉,一个**有引导词**的定从被误判成「省略式」(Aaron 2026-07-26 抓到)。
+    # 省略式的定义就是没有引导词,故中间任一词是 that/which/who/whom 时必须排除。
+    # ★两次栽在同一处:先是「中间词吃掉 that」误判,再是「动词枚举只收过去式」漏检
+    #   (The cloth bag we use / The answer we got / a plan nobody follows 全漏)。
+    #   改判据不改枚举:名词短语 + 紧跟的从句主语 + 任意谓语词,且中间不得出现关系词。
+    #   主语位收代词与 nobody/somebody/everybody(`a plan nobody follows` 正是这型)。
+    ('省略引导词的定从(名词 + 主语 + 谓语)',
+     r"\b(?:the|a|an|my|your|his|her|our|their|this|these|those)\s+"
+     r"(?:(?!(?:that|which|who|whom)\s)\w+\s+){1,3}"
+     r"(?:I|you|he|she|we|they|nobody|somebody|everybody)\s+(?:\w+ly\s+)?[a-z]{2,}\b"),
+]),
+('wy9A', 'U6'): ('构词法(派生·转化·合成)', [
+    ('派生后缀 -ful/-less/-ly/-al/-ity/-ation',
+     r"\b\w{3,}(?:ful|less|ally|ical|ity|ation|ment)\b|\b(?:loudly|wisely|deeply|smoothly|slowly|quickly)\b"),
+], [
+    ('否定/使动前缀 un-/dis-/en-/re-/up-',
+     r"\b(?:un\w{3,}|dis\w{3,}|en(?:able|joy|courage)\w*|re(?:use|cycle|build|write|turn)\w*|upcycle\w*)\b"),
+    ('-ed 修饰人 / -ing 修饰物 的对照',
+     r"\b(?:interested|surprised|amazed|worried|excited)\b|\b(?:interesting|surprising|amazing|exciting)\b"),
+    # 合成词有两种形态:带连字符(long-lasting)与**闭合式**(greenhouse / moneybox / toothbrush)。
+    # 首版只认连字符,闭合式全漏(U6 泛读实测:greenhouse 在文中却报 0)。
+    # 闭合式没有结构线索,只能列举 —— 这是本表唯一一处必须用枚举的地方,词源取自九上及前四册词表。
+    ('转化(同形不同词性)与合成词',
+     r"\ba\s+(?:long\s+)?talk\b|\bwater\s+the\b"
+     r"|\b\w+-\w+(?:ing|ed|ic|al)?\b"
+     r"|\b(?:greenhouse|moneybox|toothbrush|farmland|businessman|scarecrow|matchbox|dreamland|"
+     r"footstep|northwest|upcycle|overfish|multimedia|playground|classroom|homework|notebook|"
+     r"sunlight|birthday|weekend|something|everything|nothing|anything)\w*\b"),
+]),
 }
 
 FIVE_ADV = ['always', 'usually', 'often', 'sometimes', 'never']

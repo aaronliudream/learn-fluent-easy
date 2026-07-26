@@ -1,0 +1,602 @@
+{
+ "note": "两条豁免条件均不命中的九上真新词。写作时按单元序使用,不得提前。",
+ "count": 149,
+ "words": [
+  {
+   "word": "lady",
+   "unit9": "U1"
+  },
+  {
+   "word": "gentleman",
+   "unit9": "U1"
+  },
+  {
+   "word": "high school",
+   "unit9": "U1"
+  },
+  {
+   "word": "puppet",
+   "unit9": "U1"
+  },
+  {
+   "word": "performer",
+   "unit9": "U1"
+  },
+  {
+   "word": "teenager",
+   "unit9": "U1"
+  },
+  {
+   "word": "old-fashioned",
+   "unit9": "U1"
+  },
+  {
+   "word": "performance",
+   "unit9": "U1"
+  },
+  {
+   "word": "unless",
+   "unit9": "U1"
+  },
+  {
+   "word": "be flooded with",
+   "unit9": "U1"
+  },
+  {
+   "word": "hold on",
+   "unit9": "U1"
+  },
+  {
+   "word": "blood",
+   "unit9": "U1"
+  },
+  {
+   "word": "interested",
+   "unit9": "U1"
+  },
+  {
+   "word": "viewer",
+   "unit9": "U1"
+  },
+  {
+   "word": "teenage",
+   "unit9": "U1"
+  },
+  {
+   "word": "folk arts",
+   "unit9": "U1"
+  },
+  {
+   "word": "programme",
+   "unit9": "U1"
+  },
+  {
+   "word": "volunteer",
+   "unit9": "U1"
+  },
+  {
+   "word": "fence",
+   "unit9": "U1"
+  },
+  {
+   "word": "kill",
+   "unit9": "U1"
+  },
+  {
+   "word": "scarecrow",
+   "unit9": "U1"
+  },
+  {
+   "word": "educator",
+   "unit9": "U1"
+  },
+  {
+   "word": "nation",
+   "unit9": "U1"
+  },
+  {
+   "word": "shoulder the responsibility",
+   "unit9": "U1"
+  },
+  {
+   "word": "youth",
+   "unit9": "U1"
+  },
+  {
+   "word": "wealthy",
+   "unit9": "U1"
+  },
+  {
+   "word": "independent",
+   "unit9": "U1"
+  },
+  {
+   "word": "excerpt",
+   "unit9": "U1"
+  },
+  {
+   "word": "tin",
+   "unit9": "U2"
+  },
+  {
+   "word": "spare",
+   "unit9": "U2"
+  },
+  {
+   "word": "moneybox",
+   "unit9": "U2"
+  },
+  {
+   "word": "size",
+   "unit9": "U2"
+  },
+  {
+   "word": "make sense",
+   "unit9": "U2"
+  },
+  {
+   "word": "dreamland",
+   "unit9": "U2"
+  },
+  {
+   "word": "manage",
+   "unit9": "U2"
+  },
+  {
+   "word": "deal",
+   "unit9": "U2"
+  },
+  {
+   "word": "deal with",
+   "unit9": "U2"
+  },
+  {
+   "word": "laptop",
+   "unit9": "U2"
+  },
+  {
+   "word": "budget",
+   "unit9": "U2"
+  },
+  {
+   "word": "pleasure",
+   "unit9": "U2"
+  },
+  {
+   "word": "account",
+   "unit9": "U2"
+  },
+  {
+   "word": "savings",
+   "unit9": "U2"
+  },
+  {
+   "word": "make ends meet",
+   "unit9": "U2"
+  },
+  {
+   "word": "date",
+   "unit9": "U2"
+  },
+  {
+   "word": "on sale",
+   "unit9": "U2"
+  },
+  {
+   "word": "dollar",
+   "unit9": "U2"
+  },
+  {
+   "word": "cent",
+   "unit9": "U2"
+  },
+  {
+   "word": "penny",
+   "unit9": "U2"
+  },
+  {
+   "word": "couple",
+   "unit9": "U2"
+  },
+  {
+   "word": "Christmas Eve",
+   "unit9": "U2"
+  },
+  {
+   "word": "certainly",
+   "unit9": "U2"
+  },
+  {
+   "word": "chain",
+   "unit9": "U2"
+  },
+  {
+   "word": "comb",
+   "unit9": "U2"
+  },
+  {
+   "word": "guest",
+   "unit9": "U3"
+  },
+  {
+   "word": "remains",
+   "unit9": "U3"
+  },
+  {
+   "word": "northwest",
+   "unit9": "U3"
+  },
+  {
+   "word": "archaeologist",
+   "unit9": "U3"
+  },
+  {
+   "word": "giant",
+   "unit9": "U3"
+  },
+  {
+   "word": "the fruit of",
+   "unit9": "U3"
+  },
+  {
+   "word": "period",
+   "unit9": "U3"
+  },
+  {
+   "word": "bring out",
+   "unit9": "U3"
+  },
+  {
+   "word": "cartoon",
+   "unit9": "U3"
+  },
+  {
+   "word": "silk",
+   "unit9": "U3"
+  },
+  {
+   "word": "matchbox",
+   "unit9": "U3"
+  },
+  {
+   "word": "weight",
+   "unit9": "U3"
+  },
+  {
+   "word": "ton",
+   "unit9": "U3"
+  },
+  {
+   "word": "coast",
+   "unit9": "U3"
+  },
+  {
+   "word": "pretty",
+   "unit9": "U3"
+  },
+  {
+   "word": "creativity",
+   "unit9": "U3"
+  },
+  {
+   "word": "come to life",
+   "unit9": "U3"
+  },
+  {
+   "word": "technology",
+   "unit9": "U3"
+  },
+  {
+   "word": "multimedia",
+   "unit9": "U3"
+  },
+  {
+   "word": "collection",
+   "unit9": "U3"
+  },
+  {
+   "word": "fever",
+   "unit9": "U3"
+  },
+  {
+   "word": "take pride in",
+   "unit9": "U3"
+  },
+  {
+   "word": "bat",
+   "unit9": "U3"
+  },
+  {
+   "word": "fridge",
+   "unit9": "U3"
+  },
+  {
+   "word": "fridge magnet",
+   "unit9": "U3"
+  },
+  {
+   "word": "great-aunt",
+   "unit9": "U4"
+  },
+  {
+   "word": "fighter",
+   "unit9": "U4"
+  },
+  {
+   "word": "footstep",
+   "unit9": "U4"
+  },
+  {
+   "word": "name... after",
+   "unit9": "U4"
+  },
+  {
+   "word": "leave... behind",
+   "unit9": "U4"
+  },
+  {
+   "word": "pity",
+   "unit9": "U4"
+  },
+  {
+   "word": "war",
+   "unit9": "U4"
+  },
+  {
+   "word": "shock",
+   "unit9": "U4"
+  },
+  {
+   "word": "survivor",
+   "unit9": "U4"
+  },
+  {
+   "word": "temperature",
+   "unit9": "U4"
+  },
+  {
+   "word": "front line",
+   "unit9": "U4"
+  },
+  {
+   "word": "presenter",
+   "unit9": "U4"
+  },
+  {
+   "word": "recommend",
+   "unit9": "U4"
+  },
+  {
+   "word": "co-pilot",
+   "unit9": "U4"
+  },
+  {
+   "word": "engine",
+   "unit9": "U4"
+  },
+  {
+   "word": "dreamer",
+   "unit9": "U4"
+  },
+  {
+   "word": "experiment",
+   "unit9": "U4"
+  },
+  {
+   "word": "scientific research",
+   "unit9": "U4"
+  },
+  {
+   "word": "pass away",
+   "unit9": "U4"
+  },
+  {
+   "word": "socialist",
+   "unit9": "U4"
+  },
+  {
+   "word": "tourist",
+   "unit9": "U5"
+  },
+  {
+   "word": "once again",
+   "unit9": "U5"
+  },
+  {
+   "word": "admire",
+   "unit9": "U5"
+  },
+  {
+   "word": "rapid",
+   "unit9": "U5"
+  },
+  {
+   "word": "society",
+   "unit9": "U5"
+  },
+  {
+   "word": "cancel",
+   "unit9": "U5"
+  },
+  {
+   "word": "start over",
+   "unit9": "U5"
+  },
+  {
+   "word": "get along with",
+   "unit9": "U5"
+  },
+  {
+   "word": "permit",
+   "unit9": "U5"
+  },
+  {
+   "word": "affect",
+   "unit9": "U5"
+  },
+  {
+   "word": "organisation",
+   "unit9": "U5"
+  },
+  {
+   "word": "harm",
+   "unit9": "U5"
+  },
+  {
+   "word": "punish",
+   "unit9": "U5"
+  },
+  {
+   "word": "global warming",
+   "unit9": "U5"
+  },
+  {
+   "word": "overfish",
+   "unit9": "U5"
+  },
+  {
+   "word": "greenhouse gases",
+   "unit9": "U5"
+  },
+  {
+   "word": "logging",
+   "unit9": "U5"
+  },
+  {
+   "word": "solar panel",
+   "unit9": "U5"
+  },
+  {
+   "word": "microphone",
+   "unit9": "U5"
+  },
+  {
+   "word": "alarm",
+   "unit9": "U5"
+  },
+  {
+   "word": "guard",
+   "unit9": "U5"
+  },
+  {
+   "word": "foreigner",
+   "unit9": "U5"
+  },
+  {
+   "word": "logo",
+   "unit9": "U5"
+  },
+  {
+   "word": "endangered",
+   "unit9": "U5"
+  },
+  {
+   "word": "vulnerable",
+   "unit9": "U5"
+  },
+  {
+   "word": "protection",
+   "unit9": "U5"
+  },
+  {
+   "word": "farmland",
+   "unit9": "U5"
+  },
+  {
+   "word": "long-lasting",
+   "unit9": "U6"
+  },
+  {
+   "word": "environmental",
+   "unit9": "U6"
+  },
+  {
+   "word": "toothbrush",
+   "unit9": "U6"
+  },
+  {
+   "word": "former",
+   "unit9": "U6"
+  },
+  {
+   "word": "wing",
+   "unit9": "U6"
+  },
+  {
+   "word": "stuck",
+   "unit9": "U6"
+  },
+  {
+   "word": "mistake... for...",
+   "unit9": "U6"
+  },
+  {
+   "word": "average",
+   "unit9": "U6"
+  },
+  {
+   "word": "on average",
+   "unit9": "U6"
+  },
+  {
+   "word": "gram",
+   "unit9": "U6"
+  },
+  {
+   "word": "break down",
+   "unit9": "U6"
+  },
+  {
+   "word": "wisely",
+   "unit9": "U6"
+  },
+  {
+   "word": "highlight",
+   "unit9": "U6"
+  },
+  {
+   "word": "pollute",
+   "unit9": "U6"
+  },
+  {
+   "word": "electronic",
+   "unit9": "U6"
+  },
+  {
+   "word": "emission",
+   "unit9": "U6"
+  },
+  {
+   "word": "upcycle",
+   "unit9": "U6"
+  },
+  {
+   "word": "fox",
+   "unit9": "U6"
+  },
+  {
+   "word": "reporter",
+   "unit9": "U6"
+  },
+  {
+   "word": "depth",
+   "unit9": "U6"
+  },
+  {
+   "word": "businessman",
+   "unit9": "U6"
+  },
+  {
+   "word": "industrial",
+   "unit9": "U6"
+  },
+  {
+   "word": "business",
+   "unit9": "U6"
+  },
+  {
+   "word": "imagination",
+   "unit9": "U6"
+  }
+ ]
+}

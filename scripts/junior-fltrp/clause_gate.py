@@ -256,6 +256,14 @@ def main():
         agg[(h['volume'], h['unit'], h['label'])] = agg.get((h['volume'], h['unit'], h['label']), 0) + 1
     for k in sorted(agg):
         print('    %s %s %-22s %d 处' % (k[0], k[1], k[2], agg[k]))
+    # ★末行判决:永远打印,且带醒目词根。★
+    # 起因:把本脚本的输出接进 grep 时,`$?` 取的是 grep 的退出码而不是本脚本的,
+    # 曾据此误报「四册回归 exit=0」,而当时实际有 2 处真超前被漏掉。
+    # 有了这一行,无论用什么 grep 过滤,判决都会跟着命中的行一起出现。
+    print('')
+    print('GATE_VERDICT: %s(真超前 %d 处 · legacy %d 处 · 放行 %d 处)'
+          % ('FAIL' if buckets['violation'] else 'PASS',
+             len(buckets['violation']), len(buckets['legacy']), len(buckets['allowed'])))
     return 1 if buckets['violation'] else 0
 
 

@@ -8,6 +8,9 @@
 --   ② U2 泛读《The classroom bank》Q1 选项 A
 --      旧:A place where students keep their pocket money. ← where 定从(先行词+where)是 U5 才解禁
 --      新:A safe box for students' pocket money.
+--   ③ U1 泛读《My grandpa's radio》Q3 选项 D
+--      旧:He was sorry he had visited.   ← 过去完成时在本仓库挂 grade9 U12,九上 U1 远未解禁
+--      新:He stopped visiting grandpa.   ← 被正文 "Now, when I visit" 直接证伪,是更强的干扰项
 --
 -- 新干扰项均经四门复扫(clause / past_perfect / comparative / 词表超前)为 0,
 -- 且都与正文事实相反(仍是「合理但错」的干扰项):
@@ -27,6 +30,8 @@ DECLARE
   NEW1 CONSTANT text := 'The paintings were washed off by the rain.';
   OLD2 CONSTANT text := 'A place where students keep their pocket money.';
   NEW2 CONSTANT text := 'A safe box for students'' pocket money.';
+  OLD3 CONSTANT text := 'He was sorry he had visited.';
+  NEW3 CONSTANT text := 'He stopped visiting grandpa.';
 BEGIN
   -- ── ① U1《The wall behind the school》questions[2].options[1] ────────────
   SELECT questions->2->'options'->>1 INTO cur
@@ -66,11 +71,31 @@ BEGIN
   GET DIAGNOSTICS n = ROW_COUNT;
   IF n <> 1 THEN RAISE EXCEPTION '② 期望更新 1 行,实际 % 行', n; END IF;
 
+  -- ── ③ U1《My grandpa's radio》questions[2].options[3] ───────────────────
+  SELECT questions->2->'options'->>3 INTO cur
+    FROM public.junior_reading
+   WHERE publisher='junior_fltrp' AND volume='wy9A' AND unit='U1'
+     AND title='My grandpa''s radio';
+  IF cur IS NULL THEN
+    RAISE EXCEPTION '③ 定位失败:找不到该篇或该路径(questions[2].options[3])';
+  END IF;
+  IF cur <> OLD3 AND cur <> NEW3 THEN
+    RAISE EXCEPTION '③ 路径当前值既非旧值也非新值,题序可能已变,实际=%', cur;
+  END IF;
+
+  UPDATE public.junior_reading
+     SET questions = jsonb_set(questions, '{2,options,3}', to_jsonb(NEW3), false)
+   WHERE publisher='junior_fltrp' AND volume='wy9A' AND unit='U1'
+     AND title='My grandpa''s radio';
+  GET DIAGNOSTICS n = ROW_COUNT;
+  IF n <> 1 THEN RAISE EXCEPTION '③ 期望更新 1 行,实际 % 行', n; END IF;
+
   -- ── 收口断言 ────────────────────────────────────────────────────────────
-  -- a) 两条旧文本在全册任何题面里都不得再出现
+  -- a) 三条旧文本在全册任何题面里都不得再出现
   SELECT count(*) INTO n FROM public.junior_reading
    WHERE publisher='junior_fltrp' AND volume='wy9A'
-     AND (questions::text LIKE '%' || OLD1 || '%' OR questions::text LIKE '%' || OLD2 || '%');
+     AND (questions::text LIKE '%' || OLD1 || '%' OR questions::text LIKE '%' || OLD2 || '%'
+          OR questions::text LIKE '%' || OLD3 || '%');
   IF n <> 0 THEN RAISE EXCEPTION '旧干扰项仍残留 % 篇', n; END IF;
 
   -- b) 答案字母未被动过(U1 那题仍 C、U2 那题仍 B)
@@ -83,6 +108,11 @@ BEGIN
    WHERE publisher='junior_fltrp' AND volume='wy9A' AND unit='U2'
      AND title='The classroom bank' AND questions->0->>'answer' = 'B';
   IF n <> 1 THEN RAISE EXCEPTION '② 答案不再是 B,已被误改'; END IF;
+
+  SELECT count(*) INTO n FROM public.junior_reading
+   WHERE publisher='junior_fltrp' AND volume='wy9A' AND unit='U1'
+     AND title='My grandpa''s radio' AND questions->2->>'answer' = 'A';
+  IF n <> 1 THEN RAISE EXCEPTION '③ 答案不再是 A,已被误改'; END IF;
 
   -- c) 选项数没变(各 4 个),整册篇数没变(30)
   SELECT count(*) INTO n FROM public.junior_reading
@@ -99,16 +129,18 @@ END $$;
 COMMIT;
 
 -- ============================================================
--- 跑完必看:期望 2 行,new_option 两列显示新文本,answer 仍为 C / B
+-- 跑完必看:期望 3 行,new_option 显示新文本,answer 仍为 C / B / A,q_count 全 3
 -- ============================================================
 SELECT unit,
        title,
-       CASE WHEN unit='U1' THEN questions->2->'options'->>1
-            ELSE questions->0->'options'->>0 END AS new_option,
-       CASE WHEN unit='U1' THEN questions->2->>'answer'
-            ELSE questions->0->>'answer' END AS answer,
+       CASE title WHEN 'The wall behind the school' THEN questions->2->'options'->>1
+                  WHEN 'The classroom bank'         THEN questions->0->'options'->>0
+                  ELSE questions->2->'options'->>3 END AS new_option,
+       CASE title WHEN 'The wall behind the school' THEN questions->2->>'answer'
+                  WHEN 'The classroom bank'         THEN questions->0->>'answer'
+                  ELSE questions->2->>'answer' END AS answer,
        jsonb_array_length(questions) AS q_count
   FROM public.junior_reading
  WHERE publisher='junior_fltrp' AND volume='wy9A'
-   AND title IN ('The wall behind the school', 'The classroom bank')
- ORDER BY unit;
+   AND title IN ('The wall behind the school', 'The classroom bank', 'My grandpa''s radio')
+ ORDER BY title;

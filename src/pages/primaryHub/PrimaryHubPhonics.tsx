@@ -109,8 +109,9 @@ function ListenStage({
   const words = config.stage_1_listen;
   const [heard, setHeard] = useState<Set<string>>(() => new Set());
 
-  const play = (word: string, file: string) => {
-    const url = phonicsAudioUrl(config.audioBase, file);
+  const play = (word: string, file?: string) => {
+    // 没声明录音文件 → 直接走 TTS（不去请求一个不存在的 mp3）。
+    const url = file ? phonicsAudioUrl(config.audioBase, file) : null;
     playPhonicsAudio(url, word, grade);
     setHeard((prev) => new Set(prev).add(word));
   };

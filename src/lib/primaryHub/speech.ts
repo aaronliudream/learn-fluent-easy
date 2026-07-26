@@ -7,6 +7,7 @@
  */
 import { prefetchTTSBatchKid, speakKid, stopSpeaking } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
+import { HUB_FIXED_SPEAK_SPEED } from "@/lib/primaryHub/hubSpeakSpeed";
 
 /** Curly/smart apostrophes → ASCII U+0027 (display + TTS stay one word). */
 const CURLY_APOSTROPHE_RE = /[\u2018\u2019\u201B\u2032]/g;
@@ -38,7 +39,7 @@ function hubSpeakCloud(text: string, rate: number, grade?: number) {
 }
 
 /** Hub TTS — Web Speech only for vocab `o'clock`; everything else uses cloud TTS. */
-export function hubSpeak(text: string, rate = 0.85, grade?: number) {
+export function hubSpeak(text: string, rate = HUB_FIXED_SPEAK_SPEED, grade?: number) {
   if (typeof window === "undefined") return;
   const spoken = toHubTtsText(text);
   // 去重已下沉到 speak.ts 的 inflightCold(同词并发只合成一次;冷窗口内的点击不再被丢弃,
@@ -65,12 +66,35 @@ export function hubSpeakAtSpeed(text: string, speed: number, grade?: number) {
 }
 
 /** Prefetch cloud audio for all words except `o'clock` when Web Speech handles it. */
-export function prefetchHubVocabulary(words: string[], grade: number, speed = 0.85) {
+export function prefetchHubVocabulary(
+  words: string[],
+  grade: number,
+  speed = HUB_FIXED_SPEAK_SPEED,
+) {
   const kidTexts: string[] = [];
   for (const w of words) {
     if (isOClockVocabToken(w) && isWebSpeechSupported()) continue;
     kidTexts.push(toHubTtsText(w));
   }
   if (kidTexts.length) prefetchTTSBatchKid(kidTexts, { grade, speed });
+}
+
+/**
+ * 固定档模块的预热入口：句子/短语类文本（句型对话、拼读词、情景关整句…）。
+ *
+ * 与 `hubSpeak` 的默认 rate 同源（`HUB_FIXED_SPEAK_SPEED`），所以预热出来的 key
+ * 与播放时算出的 key 必然一致。**不要**改回 `prefetchTTSBatchKid(texts, { grade })`：
+ * 那样 speed 会落到 `getKidSpeed(grade)`，四~六年级变成 1.0，预热全部作废（C2-1 / C2-2）。
+ */
+export function prefetchHubFixed(texts: string[], grade: number) {
+  const kidTexts: string[] = [];
+  for (const t of texts) {
+    if (!t) continue;
+    if (isOClockVocabToken(t) && isWebSpeechSupported()) continue;
+    kidTexts.push(toHubTtsText(t));
+  }
+  if (kidTexts.length) {
+    prefetchTTSBatchKid(kidTexts, { grade, speed: HUB_FIXED_SPEAK_SPEED });
+  }
 }
 

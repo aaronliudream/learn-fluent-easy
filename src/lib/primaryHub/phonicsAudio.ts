@@ -1,5 +1,6 @@
 import { hubSpeak } from "@/lib/primaryHub/speech";
 import { unlockAudioSync } from "@/lib/speak";
+import { HUB_FIXED_SPEAK_SPEED } from "@/lib/primaryHub/hubSpeakSpeed";
 
 let current: HTMLAudioElement | null = null;
 
@@ -24,7 +25,7 @@ export function playPhonicsAudio(
     current = null;
   }
   if (!url) {
-    hubSpeak(fallbackText, 0.85, grade);
+    hubSpeak(fallbackText, HUB_FIXED_SPEAK_SPEED, grade);
     return;
   }
   const audio = new Audio(url);
@@ -33,7 +34,7 @@ export function playPhonicsAudio(
     current = null;
     // 有声明却播不出 = 资源真的坏了/丢了,必须留痕,否则线上只会表现为"音色不对".
     console.warn(`[phonics] bundled audio failed (${url}), falling back to TTS:`, err);
-    hubSpeak(fallbackText, 0.85, grade);
+    hubSpeak(fallbackText, HUB_FIXED_SPEAK_SPEED, grade);
   });
 }
 

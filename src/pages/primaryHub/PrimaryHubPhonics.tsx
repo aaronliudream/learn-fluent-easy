@@ -7,9 +7,10 @@ import {
   type PhonicsUnitProgress,
 } from "@/lib/primaryHub/phonicsStorage";
 import { phonicsAudioUrl, playPhonicsAudio, stopPhonicsAudio } from "@/lib/primaryHub/phonicsAudio";
-import { hubSpeak } from "@/lib/primaryHub/speech";
+import { hubSpeak, prefetchHubFixed } from "@/lib/primaryHub/speech";
+import { HUB_FIXED_SPEAK_SPEED } from "@/lib/primaryHub/hubSpeakSpeed";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
-import { prefetchTTSBatchKid } from "@/lib/speak";
+
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 
@@ -186,9 +187,11 @@ function FindStage({
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    prefetchTTSBatchKid(
+    // 与下面 toggle 播放用的 HUB_FIXED_SPEAK_SPEED 同源；原来传 { grade } 会落到
+    // getKidSpeed(grade)=1.0（四年级），播放是 0.85 → 预热 100% 作废（审计 C2-2）。
+    prefetchHubFixed(
       items.map((item) => item.word),
-      { grade },
+      grade,
     );
   }, [grade, items]);
 
@@ -198,7 +201,7 @@ function FindStage({
   );
 
   const toggle = (word: string) => {
-    hubSpeak(word, 0.85, grade);
+    hubSpeak(word, HUB_FIXED_SPEAK_SPEED, grade);
     if (checked) return;
     setSelected((prev) => {
       const next = new Set(prev);
@@ -296,7 +299,7 @@ function ChallengeStage({
   const isLast = qIdx >= questions.length - 1;
 
   const handlePick = (idx: number) => {
-    hubSpeak(q.options[idx], 0.85, grade);
+    hubSpeak(q.options[idx], HUB_FIXED_SPEAK_SPEED, grade);
     if (answered && picked === q.correct) return;
     setPicked(idx);
     if (idx !== q.correct) {

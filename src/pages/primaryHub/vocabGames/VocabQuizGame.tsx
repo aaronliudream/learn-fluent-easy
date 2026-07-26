@@ -5,6 +5,7 @@ import { getWordsForGrade } from "@/lib/primaryHub/vocabGames/words";
 import { selectWords, recordResult } from "@/lib/primaryHub/vocabGames/srs";
 import type { GameWord } from "@/lib/primaryHub/vocabGames/types";
 import { hubSpeak, prefetchHubVocabulary } from "@/lib/primaryHub/speech";
+import { HUB_FIXED_SPEAK_SPEED } from "@/lib/primaryHub/hubSpeakSpeed";
 import { unlockAudioSync, stopSpeaking } from "@/lib/speak";
 import GameResult from "./GameResult";
 import { Intro } from "./VocabMatchGame";
@@ -61,7 +62,14 @@ export default function VocabQuizGame() {
 
   const begin = () => {
     unlockAudioSync();
-    prefetchHubVocabulary(questions.map((x) => x.word.en), grade);
+    // 揭晓后语块按钮也会朗读（:196），必须一起预热，否则点语块是冷合成（审计 C2-3）。
+    prefetchHubVocabulary(
+      [
+        ...questions.map((x) => x.word.en),
+        ...questions.flatMap((x) => (x.word.chunks ?? []).map((c) => c.en)),
+      ],
+      grade,
+    );
     setStarted(true);
   };
 
@@ -71,7 +79,7 @@ export default function VocabQuizGame() {
     setPicked(opt);
     recordResult(q.word.id, isCorrect);
     if (isCorrect) setCorrectCount((c) => c + 1);
-    hubSpeak(q.word.en, 0.85, grade); // 揭晓即读出正确单词
+    hubSpeak(q.word.en, HUB_FIXED_SPEAK_SPEED, grade); // 揭晓即读出正确单词
   };
 
   const next = () => {
@@ -180,7 +188,7 @@ export default function VocabQuizGame() {
         <div className="mx-auto mt-6 max-w-md">
           <button
             type="button"
-            onClick={() => hubSpeak(q.word.en, 0.85, grade)}
+            onClick={() => hubSpeak(q.word.en, HUB_FIXED_SPEAK_SPEED, grade)}
             className="mx-auto mb-3 block rounded-full bg-white px-4 py-1.5 text-sm font-bold text-[#FF6B35] shadow-sm"
           >
             🔊 {q.word.en} {q.word.phonetic ?? ""}
@@ -193,7 +201,7 @@ export default function VocabQuizGame() {
                   <button
                     key={c.en}
                     type="button"
-                    onClick={() => hubSpeak(c.en, 0.85, grade)}
+                    onClick={() => hubSpeak(c.en, HUB_FIXED_SPEAK_SPEED, grade)}
                     className="flex w-full items-center justify-between rounded-xl bg-[#FFF7EE] px-3 py-2 text-left active:scale-[0.98]"
                   >
                     <span className="font-bold text-[#2b2b2b]">{c.en}</span>

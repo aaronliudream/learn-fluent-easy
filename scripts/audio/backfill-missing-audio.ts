@@ -58,7 +58,9 @@ type Row = {
   cdn_url: string; storage_url: string; [k: string]: string;
 };
 function parseCsv(text: string): Row[] {
-  const lines = text.replace(/^﻿/, '').split('\n').filter((l) => l.length > 0);
+  // 必须容忍 CRLF：git 检出会把 LF 转成 CRLF，按 '\n' 切行会让**最后一列**（含表头名）
+  // 尾部带上 \r，于是最后一列的字段恒为 undefined —— 静默失效，已实际踩过一次。
+  const lines = text.replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.length > 0);
   const cols = lines[0].split(',');
   return lines.slice(1).map((line) => {
     const out: string[] = [];

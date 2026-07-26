@@ -19,6 +19,16 @@ export type ContextItem = {
   answer: string;
   cloze: string;
   cn: string;
+  /**
+   * 语块原文（未挖空），朗读与"揭晓完整短语"都用它。
+   *
+   * 为什么不从 cloze 回填：makeCloze 的匹配是**大小写不敏感**的（必须如此，否则
+   * headword "yum" 找不到语块 "Yum!"，那 6 道题会整体消失——实测池子 835→829）。
+   * 但 `cloze.replace("____", answer)` 回填的是 headword 自己的小写词形，
+   * 于句首会把 "Yum!" 变成 "yum!"：显示不符课本，且**多出一个只差大小写的 TTS 缓存对象**
+   * （内容寻址 key 大小写敏感）。带上原文即根除，将来新内容也不会再产生这类重复。
+   */
+  full: string;
 };
 
 function escapeRegExp(s: string): string {
@@ -108,7 +118,7 @@ export function buildContextItems(words: GameWord[]): ContextItem[] {
     for (const c of w.chunks ?? []) {
       const cloze = makeCloze(c.en, w.en);
       if (!cloze || !isStrongCloze(cloze)) continue;
-      items.push({ wordId: w.id, answer: w.en, cloze, cn: c.cn });
+      items.push({ wordId: w.id, answer: w.en, cloze, cn: c.cn, full: c.en });
     }
   }
   return items;

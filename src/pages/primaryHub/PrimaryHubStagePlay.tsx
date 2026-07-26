@@ -4,7 +4,7 @@ import { findUnit } from "@/lib/primaryHub/courseData";
 import listenWordAudio from "@/data/primaryHub/listenWordAudio.json";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, readUnitState, savePersist } from "@/lib/primaryHub/storage";
-import { hubSpeak, hubSpeakAtSpeed, isOClockVocabToken, prefetchHubVocabulary, toHubTtsText } from "@/lib/primaryHub/speech";
+import { hubSpeak, hubSpeakAtSpeed, isOClockVocabToken, prefetchHubFixed, prefetchHubVocabulary, toHubTtsText } from "@/lib/primaryHub/speech";
 import { OClockVocabLabel } from "@/lib/primaryHub/OClockVocabLabel";
 import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
 import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
@@ -20,6 +20,7 @@ import SpellingStage from "@/components/primaryHub/SpellingStage";
 import ListenWordStage from "@/components/primaryHub/ListenWordStage";
 import type { GradeKey } from "@/lib/primaryHub/spellingStageConfig";
 import { getListenWordConfig } from "@/lib/primaryHub/listenWordStageConfig";
+import { HUB_FIXED_SPEAK_SPEED } from "@/lib/primaryHub/hubSpeakSpeed";
 import { useHubSpeakSpeed } from "@/hooks/useHubSpeakSpeed";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
@@ -247,7 +248,7 @@ function VocabStage({
       if (prev.has(globalIdx)) return prev;
       return new Set(prev).add(globalIdx);
     });
-    hubSpeak(word, 0.85, grade);
+    hubSpeak(word, HUB_FIXED_SPEAK_SPEED, grade);
   };
 
   const toggleCard = (localIdx: number) => {
@@ -274,7 +275,7 @@ function VocabStage({
     prefetchHubVocabulary(
       vocabulary.map((v) => v.en),
       grade,
-      0.85,
+      HUB_FIXED_SPEAK_SPEED,
     );
   }, [grade, vocabulary]);
 
@@ -762,7 +763,10 @@ function SentenceStage({
 
   useEffect(() => {
     const texts = patterns.flatMap((s) => [s.q, s.a].filter(Boolean));
-    if (texts.length) prefetchTTSBatchKid(texts, { grade });
+    // 必须走 prefetchHubFixed：它与下面播放用的 HUB_FIXED_SPEAK_SPEED 同源。
+    // 原来写 prefetchTTSBatchKid(texts, { grade }) 时 speed 落到 getKidSpeed(grade)，
+    // 四~六年级预热成 1.0，而播放是 0.85 → 整关预热全部作废（审计 C2-1）。
+    if (texts.length) prefetchHubFixed(texts, grade);
   }, [grade, patterns]);
 
   if (patterns.length === 0) {
@@ -786,7 +790,7 @@ function SentenceStage({
             <button
               type="button"
               className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-              onClick={() => hubSpeak(s.q, 0.85, grade)}
+              onClick={() => hubSpeak(s.q, HUB_FIXED_SPEAK_SPEED, grade)}
             >
               🔊
             </button>
@@ -801,7 +805,7 @@ function SentenceStage({
                     <button
                       type="button"
                       className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-                      onClick={() => hubSpeak(s.a, 0.85, grade)}
+                      onClick={() => hubSpeak(s.a, HUB_FIXED_SPEAK_SPEED, grade)}
                     >
                       🔊
                     </button>

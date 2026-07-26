@@ -48,8 +48,12 @@ def main():
         fails.append('单引号不平衡(整文件计数为奇数)——很可能有未转义的撇号')
 
     # 2) 语句切分 + UPDATE 条数
+    #    ★按"出现次数"数,不按"含该串的语句数"★(2026-07-25)
+    #    UPDATE 包进 DO $$…$$ 块后,整块是一条语句,原写法把 36 条数成 1 条。
     stmts = split_stmts(t)
-    n_up = sum(1 for s in stmts if ('UPDATE ' + args.table) in s)
+    code_nc = '\n'.join(re.sub(r'--.*$', '', l) for l in t.split('\n'))
+    tbl = args.table.split('.')[-1]
+    n_up = len(re.findall(r'\bUPDATE\s+(?:public\.)?' + re.escape(tbl) + r'\b', code_nc, re.I))
     if args.expect_updates is not None and n_up != args.expect_updates:
         fails.append('UPDATE 条数 %d,期望 %d' % (n_up, args.expect_updates))
 
@@ -96,9 +100,11 @@ def main():
     #    2026-07-25 连续三版翻车:用 word_count 给同名两篇消歧,而 word_count 正是
     #    这条 UPDATE 要改的列 —— 跑过一次后 DB 值已变,WHERE 再也匹配不到,静默无效。
     #    规则:WHERE 里出现的列名,不允许同时出现在 SET 里。
-    for s in stmts:
-        if 'UPDATE ' not in s:
-            continue
+    #    ★逐条 UPDATE 取 UPDATE…; 的跨度★:整块 DO 里几十条 UPDATE 若按"整条语句"取,
+    #    前一句的 WHERE 会一路吃到后一句的 SET,必然假报重叠。
+    #    ★`WHERE col IS NULL` 不算消歧★:那是"只写一次"的幂等护栏(写完就不再命中,
+    #    正是想要的);翻车的 word_count 是 `WHERE col = 值` 形态的消歧字段。只拦后者。
+    for s in re.findall(r'\bUPDATE\s+.*?;', code_nc, re.S | re.I):
         mset = re.search(r'\bSET\b(.*?)\bWHERE\b', s, re.S | re.I)
         mwhere = re.search(r'\bWHERE\b(.*)$', s, re.S | re.I)
         if not (mset and mwhere):
@@ -120,6 +126,20 @@ def main():
     if n_update and n_diag < n_update:
         fails.append('UPDATE %d 条,但 GET DIAGNOSTICS 行数断言只有 %d 处 —— '
                      '空匹配会静默成功' % (n_update, n_diag))
+
+    # 9) ★写库 SQL 必须留可见的校验查询★(2026-07-25)
+    #    Supabase SQL 编辑器**不显示 RAISE NOTICE**,DO 块里的成功提示 Aaron 根本看不到,
+    #    跑完只有一句 "Success. No rows returned" —— 和"跑成功却一行没生效"长得一模一样。
+    #    现场:我重写音频回填 SQL 时,把生成器原本带的校验 SELECT 连同文件尾一起截掉了
+    #    (转换脚本取表头写了 [:4]),id/url 36 条一字不差,丢的正是唯一的可见证据。
+    #    要求:有写操作的文件,必须含至少一条 DO 块之外、能返回行的 SELECT。
+    if re.search(r'\b(?:UPDATE|INSERT|DELETE)\b', code_nc, re.I):
+        outside = re.sub(r'\$\$.*?\$\$', '', code_nc, flags=re.S)     # 剥掉 DO 块
+        vis = [m for m in re.finditer(r'\bSELECT\b', outside, re.I)
+               if not re.match(r'\bSELECT\b.{0,400}?\bINTO\b', outside[m.start():], re.S | re.I)]
+        if not vis:
+            fails.append('无可见校验查询 —— Supabase 编辑器不显示 RAISE NOTICE,'
+                         '跑完看不到证据。请在 COMMIT 后附一条返回行的 SELECT')
 
     print('校验 %s' % args.path)
     print('  语句 %d,UPDATE %d' % (len(stmts), n_up))

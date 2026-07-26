@@ -25,6 +25,18 @@ CASES = [
     ('wy7A 整册未教比较级', 'The ants are bigger than their food.', 'wy7A', 'U6', 'violation'),
     ('wy8A 整册已解禁', 'The river is cleaner than before.', 'wy8A', 'U1', 'allowed'),
     ('最高级在 U2', 'It was the sweetest surprise.', 'wy7B', 'U2', 'violation'),
+    # ★be more than 的两面(2026-07-25 补)★
+    # 现场:wy7A U2 听力题干把正文的说法加引号引用,系动词不再紧邻 more,
+    # 白名单漏判 → 报成 wy7A 超前。放宽夹缝后必须仍拦住 worth/costs 那类真比较。
+    ('be more than·紧邻', 'Collecting stamps is more than fun.', 'wy7A', 'U2', None),
+    ('be more than·夹引号', "Why is Lucy's hobby ''more than fun''?", 'wy7A', 'U2', None),
+    ('be more than·夹冠词', 'Her hobby is really more than a game.', 'wy7A', 'U2', None),
+    ('worth more than 是真比较', 'This old book is worth more than gold.',
+     'wy7A', 'U2', 'violation'),
+    ('costs more than 是真比较', 'It costs more than a book.', 'wy7A', 'U2', 'violation'),
+    ('matters more than 是真比较', 'Health matters more than money.',
+     'wy7A', 'U2', 'violation'),
+    ('there be more than 是数量', 'There were more than twenty people.', 'wy7A', 'U2', None),
     # 习语白名单
     ('do your best', 'Just do your best every day.', 'wy7B', 'U1', None),
     ('at least', 'It took at least two hours.', 'wy7B', 'U1', None),

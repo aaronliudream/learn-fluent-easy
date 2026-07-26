@@ -54,7 +54,14 @@ IDIOMS = [
     r"\bwhat's\s+more\b",
     # `Collecting stamps is more than fun` / `They were more than food` = "不只是",
     # 不是比较结构。但 `worth/matters/costs more than X` 是真比较,不在此列。
-    r"\b(?:is|are|was|were|be|been|being)\s+more\s+than\b",
+    # ★2026-07-25★ 系动词与 more 之间允许夹引号/名词短语:题干把正文的说法加引号
+    # 引用时写成 `Why is Lucy's hobby ''more than fun''?`,系动词不再紧邻 more,
+    # 原正则漏判 → 报成 wy7A 超前。放宽到最多隔 4 个词/引号。
+    # 夹缝里不许出现真比较的谓词头(worth/cost/matter/weigh/pay/take/last),
+    # 否则 `is worth more than gold` 会被当成"不只是"放行 —— 那是真比较,必须拦。
+    r"\b(?:is|are|was|were|be|been|being)\b"
+    r"(?:(?!\b(?:worth|costs?|matters?|weighs?|pays?|takes?|lasts?)\b)[\w\s'’\"]){0,40}?"
+    r"\bmore\s+than\b",
 ]
 IDIOM_RE = re.compile('|'.join(IDIOMS), re.I)
 
@@ -173,7 +180,8 @@ def scan_text(text, volume, unit):
 def main():
     argv = sys.argv[1:]
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'SQLAA')
-    files = sorted(glob.glob(os.path.join(root, 'wy*-*-load.sql')))
+    # recursive:load 跑完会被归档进 SQLAA/done/,非递归 glob 会静默扫 0 篇
+    files = sorted(glob.glob(os.path.join(root, '**', 'wy*-*-load.sql'), recursive=True))
     if argv:
         files = [f for f in files if any(a.lower() in os.path.basename(f).lower() for a in argv)]
 

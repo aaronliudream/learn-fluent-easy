@@ -34,6 +34,9 @@ type Mistake = {
 
 type ModuleKey = "all" | "due" | "starred" | "topics" | "ai_talk_target" | "ai_talk";
 
+/** 「🔥 刚做错」置顶区的时间窗:last_wrong_at 落在最近 24 小时内的进这一区。 */
+const RECENT_WINDOW_MS = 24 * 60 * 60 * 1000;
+
 const MODULE_META: Record<string, {label: string;emoji: string;color: string;}> = {
   ai_talk_target: { label: "Alex 教你的", emoji: "✨", color: "from-amber-400 to-orange-500" },
   ai_talk: { label: "对话错题", emoji: "💬", color: "from-sky-400 to-blue-500" },
@@ -172,6 +175,28 @@ const MistakesPage = () => {
     return [...list].sort((a, b) => bucket(a) - bucket(b));
   }, [items, tab, search]);
 
+  // 刚做错的题沉在列表深处、学生找不到 → 拆两区:
+  //   ① 置顶「🔥 刚做错」= last_wrong_at 在 24 小时内,**按 last_wrong_at 降序**(最新在最上);
+  //   ② 其余照旧(查询按 next_review_at 升序 + 上面那层未攻克浮顶)。
+  // 两区互斥:进了①的不再出现在②,同一条绝不重复渲染。
+  // 只做展示层切分,不改查询/判分/SRS 排程,tab 与搜索过滤后的结果才进来。
+  const [recentItems, restItems] = useMemo(() => {
+    const cutoff = Date.now() - RECENT_WINDOW_MS;
+    // last_wrong_at 缺失或不可解析 → 一律不算「刚做错」,落到②(宁可漏不可错置顶)
+    const ts = (m: Mistake) => {
+      const t = m.last_wrong_at ? new Date(m.last_wrong_at).getTime() : NaN;
+      return Number.isFinite(t) ? t : null;
+    };
+    const isRecent = (m: Mistake) => {
+      const t = ts(m);
+      return t !== null && t >= cutoff;
+    };
+    const recent = filtered.
+    filter(isRecent).
+    sort((a, b) => (ts(b) as number) - (ts(a) as number));
+    return [recent, filtered.filter((m) => !isRecent(m))] as const;
+  }, [filtered]);
+
   const toggleStar = async (m: Mistake) => {
     const next = !m.is_starred;
     setItems((prev) => prev.map((x) => x.id === m.id ? { ...x, is_starred: next } : x));
@@ -308,19 +333,48 @@ const MistakesPage = () => {
         filtered.length === 0 ?
         <EmptyState tab={tab} /> :
 
-        <ul className="space-y-3">
-              {filtered.map((m) =>
-          <MistakeCard
-            key={m.id}
-            m={m}
-            playing={playingId === m.id}
-            onPlay={() => playPhrase(m)}
-            onStar={() => toggleStar(m)}
-            onAskTutor={() => setTutorFor(m)}
-            onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
+        <>
+              {recentItems.length > 0 &&
+          <section className="mb-6">
+                  <h2 className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 px-1 text-sm font-bold text-foreground/80">
+                    <span aria-hidden="true">🔥</span>
+                    <T>刚做错</T>
+                    <span className="rounded-full bg-rose-500/10 px-2 py-0.5 text-xs font-semibold text-rose-500">
+                      {recentItems.length}
+                    </span>
+                    <span className="text-xs font-normal text-foreground/50"><T>最近 24 小时</T></span>
+                  </h2>
+                  <ul className="space-y-3">
+                    {recentItems.map((m) =>
+              <MistakeCard
+                key={m.id}
+                m={m}
+                playing={playingId === m.id}
+                onPlay={() => playPhrase(m)}
+                onStar={() => toggleStar(m)}
+                onAskTutor={() => setTutorFor(m)}
+                onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
 
-          )}
-            </ul>
+              )}
+                  </ul>
+                </section>
+        }
+              {restItems.length > 0 &&
+          <ul className="space-y-3">
+                  {restItems.map((m) =>
+            <MistakeCard
+              key={m.id}
+              m={m}
+              playing={playingId === m.id}
+              onPlay={() => playPhrase(m)}
+              onStar={() => toggleStar(m)}
+              onAskTutor={() => setTutorFor(m)}
+              onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
+
+            )}
+                </ul>
+        }
+            </>
         }
         </>
       }

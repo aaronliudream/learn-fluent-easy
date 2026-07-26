@@ -1,0 +1,284 @@
+[
+ {
+  "unit": "U2",
+  "kind": "dialogue",
+  "difficulty": 1,
+  "title": "Saving for a bike",
+  "topic": "攒钱买车(when/after/until 时间 · wherever 地点)",
+  "transcript": "A: How much have you saved, Ben?\nB: Two hundred yuan. I started when school began in September.\nA: The bike costs six hundred. That is a long way to go.\nB: I know. I put twenty yuan in the box every Sunday after I get my pocket money.\nA: Do you ever take money out?\nB: Not until the box is full. That is my rule.\nA: Wherever you go, you walk. Now I know why!",
+  "translation_cn": "A:你攒了多少了,本?B:两百块。我是九月开学的时候开始的。A:那辆车要六百,还差得远呢。B:我知道。每周日拿到零花钱之后,我就往盒子里放二十块。A:你会往外拿吗?B:不到盒子装满就不拿,这是我的规矩。A:你不管去哪儿都走路,现在我知道为什么了!",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "When did Ben start saving?",
+    "options": [
+     "After he saw the bike.",
+     "After his birthday.",
+     "When the summer holiday began.",
+     "When school began in September."
+    ],
+    "answer": "D",
+    "explanation": "'I started when school began in September.'"
+   },
+   {
+    "type": "choice",
+    "q": "What is Ben's rule about the money?",
+    "options": [
+     "He does not take any out until the box is full.",
+     "He keeps the money at school.",
+     "He takes some out every month.",
+     "He puts in fifty yuan a week."
+    ],
+    "answer": "A",
+    "explanation": "'Not until the box is full. That is my rule.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "save",
+    "cn": "攒钱,储蓄"
+   },
+   {
+    "word": "rule",
+    "cn": "规矩,规则"
+   }
+  ]
+ },
+ {
+  "unit": "U2",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "The wallet under the seat",
+  "topic": "捡到钱包(before/as soon as/when 时间)",
+  "transcript": "A: Look, there is a wallet under the seat.\nB: Is there a name inside?\nA: Yes, and a bus card too. We should take it to the office before we go home.\nB: The office closes at five.\nA: Then let us go now. As soon as we hand it in, we can tell the driver as well.\nB: Good. When my brother lost his wallet last year, someone did the same for him.\nA: Then we are only passing it on.",
+  "translation_cn": "A:看,座位底下有个钱包。B:里面有名字吗?A:有,还有一张公交卡。我们该在回家之前把它送到办公室。B:办公室五点关门。A:那现在就去。我们一交上去,就顺便告诉司机。B:好。去年我哥丢钱包的时候,也有人这样帮过他。A:那我们只是把这份好意传下去。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What will they do before they go home?",
+    "options": [
+     "Take the wallet to the office.",
+     "Look for the owner at school.",
+     "Give the wallet to a teacher.",
+     "Put the wallet back."
+    ],
+    "answer": "A",
+    "explanation": "'We should take it to the office before we go home.'"
+   },
+   {
+    "type": "choice",
+    "q": "What happened to B's brother last year?",
+    "options": [
+     "He worked in the office.",
+     "He found a wallet on a bus.",
+     "He lost his wallet and someone handed it in.",
+     "He lost his bus card at school."
+    ],
+    "answer": "C",
+    "explanation": "'When my brother lost his wallet last year, someone did the same for him.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "wallet",
+    "cn": "钱包"
+   },
+   {
+    "word": "hand in",
+    "cn": "上交"
+   }
+  ]
+ },
+ {
+  "unit": "U2",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "Ninety yuan for six",
+  "topic": "同学聚餐分账(until/after/before 时间)",
+  "transcript": "A: That was a good lunch. How much is it in total?\nB: Ninety yuan for six people.\nA: So fifteen each. Does anyone have change?\nB: Wait until I count the coins. I have ten yuan in small coins.\nA: I will pay first, and you can send me the money after you get home.\nB: Fine. But before we leave, let us check the bill again.\nA: You are right. Last time we paid for one extra drink.",
+  "translation_cn": "A:这顿午饭真不错。一共多少钱?B:六个人九十块。A:那每人十五。谁有零钱?B:等我数数硬币。我有十块的零钱。A:我先付,你们到家之后把钱转给我。B:行。不过我们走之前,再核一遍账单。A:你说得对,上次我们多付了一杯饮料的钱。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "How much should each person pay?",
+    "options": [
+     "Ten yuan.",
+     "Fifteen yuan.",
+     "Ninety yuan.",
+     "Six yuan."
+    ],
+    "answer": "B",
+    "explanation": "'Ninety yuan for six people.' → 'So fifteen each.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why does B want to check the bill again?",
+    "options": [
+     "Because A wants to pay alone.",
+     "Because nobody has change.",
+     "Because the lunch was too dear.",
+     "Because last time they paid for one extra drink."
+    ],
+    "answer": "D",
+    "explanation": "'Last time we paid for one extra drink.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "in total",
+    "cn": "总共"
+   },
+   {
+    "word": "change",
+    "cn": "零钱"
+   },
+   {
+    "word": "bill",
+    "cn": "账单"
+   }
+  ]
+ },
+ {
+  "unit": "U2",
+  "kind": "passage",
+  "difficulty": 2,
+  "title": "My first ten yuan",
+  "topic": "独白·第一次挣钱(before/while/when/after/until/wherever)",
+  "transcript": "Last summer I earned my first money. Our neighbour asked me to walk her dog every evening while she was in hospital. I got ten yuan a day. Before that summer, all my money came from my parents. The work was not easy. The dog pulled hard, and when it rained I still had to go out. But after two weeks I held three hundred yuan in my hand, and I felt taller. I did not spend it at once. I put it in a red envelope and kept it until my mother's birthday. Wherever I keep my money now, I always remember that first envelope.",
+  "translation_cn": "去年夏天我挣到了第一笔钱。邻居住院期间,请我每天傍晚去遛她的狗,一天十块。在那个夏天之前,我所有的钱都来自父母。这活儿不轻松:狗使劲拽,下雨天我也得出门。但两周之后,我手里攥着三百块,感觉自己长高了。我没有马上花掉,而是装进一个红包,一直存到我妈生日。现在不管我把钱放在哪儿,总会想起那第一个红包。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What did the writer do to earn the money?",
+    "options": [
+     "Cleaned the street.",
+     "Sold old books.",
+     "Walked a neighbour's dog.",
+     "Worked in a shop."
+    ],
+    "answer": "C",
+    "explanation": "'Our neighbour asked me to walk her dog every evening while she was in hospital.'"
+   },
+   {
+    "type": "choice",
+    "q": "What did the writer do with the three hundred yuan?",
+    "options": [
+     "Gave it to the neighbour.",
+     "Kept it until the mother's birthday.",
+     "Put it in a bank.",
+     "Spent it at once."
+    ],
+    "answer": "B",
+    "explanation": "'I put it in a red envelope and kept it until my mother's birthday.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "earn",
+    "cn": "挣(钱)"
+   },
+   {
+    "word": "envelope",
+    "cn": "信封,红包"
+   }
+  ]
+ },
+ {
+  "unit": "U2",
+  "kind": "passage",
+  "difficulty": 3,
+  "title": "The first price",
+  "topic": "独白·比价(before/when/after/until 时间)",
+  "transcript": "My father taught me a small trick. Before you buy anything, he said, look at the price of the same thing in two other shops. It sounds slow, but it is not. Last month I wanted a pair of running shoes. The first shop asked three hundred yuan. When I checked online, the same shoes were two hundred and sixty. After I waited five more days, the price fell again, and I bought them for two hundred and thirty. I did not become rich. But I learnt something better: the first price is not always the real price. Now I never pay until I have looked twice.",
+  "translation_cn": "爸爸教了我一个小窍门:买任何东西之前,先看看同样的东西在另外两家店卖多少。听起来慢,其实不慢。上个月我想买双跑鞋。第一家店要三百块。我上网一查,同款只要二百六。又等了五天之后,价格又降了,我二百三买下了。我没有因此变富,但我学到了更值钱的东西:第一个价格不一定是真正的价格。现在我不看两遍绝不付钱。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "How much did the writer finally pay for the shoes?",
+    "options": [
+     "Two hundred yuan.",
+     "Three hundred yuan.",
+     "Two hundred and sixty yuan.",
+     "Two hundred and thirty yuan."
+    ],
+    "answer": "D",
+    "explanation": "'the price fell again, and I bought them for two hundred and thirty.'"
+   },
+   {
+    "type": "choice",
+    "q": "What did the writer learn?",
+    "options": [
+     "The first price is not always the real price.",
+     "Running shoes are too dear.",
+     "Waiting is a waste of time.",
+     "Online shops are always cheaper."
+    ],
+    "answer": "A",
+    "explanation": "'the first price is not always the real price.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "trick",
+    "cn": "窍门,诀窍"
+   },
+   {
+    "word": "price",
+    "cn": "价格"
+   },
+   {
+    "word": "fall",
+    "cn": "下降"
+   }
+  ]
+ },
+ {
+  "unit": "U2",
+  "kind": "notice",
+  "difficulty": 1,
+  "title": "The class charity sale",
+  "topic": "通知·班级义卖(before/as soon as/when/after · wherever 地点)",
+  "transcript": "Good morning. Here is a notice about our class charity sale. Bring your old books and toys to Room 204 before Wednesday, and please clean them first. On Friday afternoon we will set up our tables in the playground, near the big tree. Wherever you put your table, keep the path clear. The sale starts as soon as the last class finishes. When you sell something, write the price and your name in the small notebook. After the sale, all the money will go to a village school in Yunnan. Thank you for your help.",
+  "translation_cn": "早上好。这是关于我们班义卖的通知。请在周三之前把旧书和旧玩具送到204室,并先擦干净。周五下午我们在操场大树旁摆桌子。不管你把桌子摆在哪儿,都要把过道留出来。最后一节课一下课,义卖就开始。你卖出东西的时候,把价格和名字写在小本子上。义卖结束之后,所有的钱都会送到云南的一所乡村学校。谢谢大家。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "When should students bring their old books and toys?",
+    "options": [
+     "After the sale.",
+     "As soon as the sale starts.",
+     "Before Wednesday.",
+     "On Friday morning."
+    ],
+    "answer": "C",
+    "explanation": "'Bring your old books and toys to Room 204 before Wednesday.'"
+   },
+   {
+    "type": "choice",
+    "q": "Where will the money go?",
+    "options": [
+     "To the school library.",
+     "To a village school in Yunnan.",
+     "Back to the students.",
+     "To the class party."
+    ],
+    "answer": "B",
+    "explanation": "'After the sale, all the money will go to a village school in Yunnan.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "charity sale",
+    "cn": "义卖"
+   },
+   {
+    "word": "set up",
+    "cn": "支起,摆好"
+   },
+   {
+    "word": "path",
+    "cn": "过道,小路"
+   }
+  ]
+ }
+]

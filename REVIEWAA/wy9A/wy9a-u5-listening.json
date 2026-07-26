@@ -1,0 +1,98 @@
+[
+ {
+  "unit": "U5", "kind": "dialogue", "difficulty": 1,
+  "title": "The nest above the door",
+  "topic": "店门上的燕巢(that 定从 · 省略引导词 · so that)",
+  "transcript": "A: Look up. There is a nest above the shop door.\nB: Those are swallows. They come back every April.\nA: The shop owner did not take it down?\nB: No. He put a small board under it, so that nothing falls on people.\nA: That is the kind of thing I like about this street.\nB: My grandmother says a house that has swallows is a lucky house.\nA: Then this shop will have a good year.",
+  "translation_cn": "A:抬头看,店门上面有个窝。B:那是燕子,它们每年四月都回来。A:店主没把它拆掉?B:没有。他在下面钉了块小木板,免得东西掉到人身上。A:这就是我喜欢这条街的地方。B:我奶奶说,有燕子的房子是有福的房子。A:那这家店今年会不错。",
+  "questions": [
+   {"type": "choice", "q": "What did the shop owner do about the nest?",
+    "options": ["He took it down.", "He put a small board under it.", "He moved it to the roof.", "He called the police."],
+    "answer": "B", "explanation": "'He put a small board under it, so that nothing falls on people.'"},
+   {"type": "choice", "q": "What does B's grandmother say?",
+    "options": ["Swallows bring rain.", "Swallows should be fed.", "A house that has swallows is a lucky house.", "Nests are dangerous."],
+    "answer": "C", "explanation": "'a house that has swallows is a lucky house.'"}
+  ],
+  "key_vocab": [{"word": "nest", "cn": "(鸟)巢"}, {"word": "swallow", "cn": "燕子"}, {"word": "board", "cn": "木板"}]
+ },
+ {
+  "unit": "U5", "kind": "dialogue", "difficulty": 2,
+  "title": "The frogs came back",
+  "topic": "青蛙回来了(省略引导词 · which 作主语 · that 定从)",
+  "transcript": "A: Did you hear the frogs last night?\nB: Yes! The pond we cleaned in March is full of them now.\nA: Two years ago there was not a sound.\nB: The water which ran into the pond was grey then. Now it is clear.\nA: So the frogs are the test.\nB: My science teacher says the animals that leave first are the ones we should count.\nA: Then let us count them on Saturday.",
+  "translation_cn": "A:你昨晚听见青蛙了吗?B:听见了!我们三月清理的那个池塘现在满是青蛙。A:两年前那里一点声音都没有。B:那时流进池塘的水是灰的,现在清了。A:所以青蛙就是那个检验标准。B:我们科学老师说,最先离开的动物才是我们该去数的。A:那周六我们去数吧。",
+  "questions": [
+   {"type": "choice", "q": "What is in the pond now?",
+    "options": ["Grey water.", "Nothing at all.", "Many fish.", "A lot of frogs."],
+    "answer": "D", "explanation": "'The pond we cleaned in March is full of them now.'"},
+   {"type": "choice", "q": "What does the science teacher say?",
+    "options": ["The animals that leave first are the ones we should count.", "Frogs are hard to find.", "Ponds should be cleaned in March.", "Grey water is safe."],
+    "answer": "A", "explanation": "'the animals that leave first are the ones we should count.'"}
+  ],
+  "key_vocab": [{"word": "frog", "cn": "青蛙"}, {"word": "pond", "cn": "池塘"}]
+ },
+ {
+  "unit": "U5", "kind": "dialogue", "difficulty": 2,
+  "title": "The bird club's first morning",
+  "topic": "观鸟社第一次活动(省略引导词 · which/that 定从)",
+  "transcript": "A: Six o'clock is early for a club.\nB: Birds do not wait. The book I borrowed says the first hour is the best.\nA: What do we write down?\nB: The name, the number and the place. The forms which the teacher printed are in my bag.\nA: And if we do not know a name?\nB: Draw it. A picture that shows the beak and the tail is enough.\nA: Then I will need a better pencil.",
+  "translation_cn": "A:社团六点也太早了。B:鸟可不等人。我借的那本书上说,头一个小时最好。A:我们要记什么?B:名字、数量和地点。老师印的表格在我包里。A:要是我们不认识它的名字呢?B:画下来。一张能看出喙和尾巴的图就够了。A:那我得换支好点的铅笔。",
+  "questions": [
+   {"type": "choice", "q": "Why does the club start at six?",
+    "options": ["The park closes early.", "The teacher is free then.", "The book says the first hour is the best.", "It is cooler then."],
+    "answer": "C", "explanation": "'The book I borrowed says the first hour is the best.'"},
+   {"type": "choice", "q": "What should they do if they do not know a bird's name?",
+    "options": ["Ask another club.", "Draw it.", "Leave the line empty.", "Take the bird home."],
+    "answer": "B", "explanation": "'Draw it. A picture that shows the beak and the tail is enough.'"}
+  ],
+  "key_vocab": [{"word": "beak", "cn": "鸟喙"}, {"word": "form", "cn": "表格"}]
+ },
+ {
+  "unit": "U5", "kind": "passage", "difficulty": 3,
+  "title": "The lights in the grass",
+  "topic": "独白·萤火虫回来了(which 定从 · 省略引导词)",
+  "transcript": "When my mother was a girl, she could see fireflies from her window every summer. By the time I was born, they were gone. The river which runs behind our village was green with waste, and the fields were bright with lamps all night. Three years ago a group of villagers began a small plan. They turned off the lamps along the water from June to August, and they left one strip of grass uncut. Last summer my mother called me to the window. Below us, low over the grass, were the small lights she waited thirty years for.",
+  "translation_cn": "我妈小时候,每年夏天都能从窗口看见萤火虫。到我出生的时候,它们已经没了。村后那条河被污水染绿,田里整夜亮着灯。三年前,一群村民开始了一个小计划:六月到八月关掉水边的灯,并留下一条不割的草带。去年夏天,我妈把我叫到窗前。就在我们下面、贴着草面,是她等了三十年的那些小小的光。",
+  "questions": [
+   {"type": "choice", "q": "Why did the fireflies disappear?",
+    "options": ["The village grew too small.", "People caught them all.", "The summers became cold.", "The river was full of waste and the lamps were on all night."],
+    "answer": "D", "explanation": "'The river which runs behind our village was green with waste, and the fields were bright with lamps all night.'"},
+   {"type": "choice", "q": "What did the villagers do?",
+    "options": ["Turned off the lamps in summer and left one strip of grass uncut.", "Built a new river bank.", "Planted trees along the road.", "Moved the fields."],
+    "answer": "A", "explanation": "'They turned off the lamps along the water from June to August, and they left one strip of grass uncut.'"}
+  ],
+  "key_vocab": [{"word": "firefly", "cn": "萤火虫"}, {"word": "waste", "cn": "废水,废物"}, {"word": "strip", "cn": "(狭长的)一条"}]
+ },
+ {
+  "unit": "U5", "kind": "passage", "difficulty": 2,
+  "title": "The bird in the box",
+  "topic": "独白·受伤的鸟(who/that/which 定从并置)",
+  "transcript": "Last October I found a bird on the road behind our school. It could not fly. A woman who walks her dog there told me not to touch it with bare hands, so I used my coat. We took it to a small centre that looks after wild animals. The man at the desk asked three questions: where I found it, what time it was, and whether there were cats nearby. He wrote everything down. Six weeks later he sent us a photo. The bird which I carried in my coat was standing on a branch, and the message under the photo said one word: released.",
+  "translation_cn": "去年十月,我在学校后面的路上发现一只鸟,它飞不起来。一位在那儿遛狗的女士让我别用手直接碰它,于是我用外套裹住了它。我们把它送到一个照顾野生动物的小站。柜台的人问了三个问题:在哪儿发现的、几点、附近有没有猫。他把每一条都记了下来。六周后他发来一张照片:我用外套抱过的那只鸟正站在树枝上,照片下面只有一个词——已放归。",
+  "questions": [
+   {"type": "choice", "q": "What did the woman tell the writer to do?",
+    "options": ["Take the bird home.", "Leave the bird alone.", "Not to touch it with bare hands.", "Call the school office."],
+    "answer": "C", "explanation": "'A woman who walks her dog there told me not to touch it with bare hands.'"},
+   {"type": "choice", "q": "What did the message under the photo say?",
+    "options": ["Released.", "Sorry.", "Still ill.", "Thank you."],
+    "answer": "A", "explanation": "'the message under the photo said one word: released.'"}
+  ],
+  "key_vocab": [{"word": "bare", "cn": "赤裸的,不戴手套的"}, {"word": "wild", "cn": "野生的"}, {"word": "release", "cn": "放归,释放"}]
+ },
+ {
+  "unit": "U5", "kind": "notice", "difficulty": 1,
+  "title": "Nature Watch Week",
+  "topic": "通知·自然观察周(which/that 定从 · 省略引导词)",
+  "transcript": "Good morning. Next week is Nature Watch Week. Every class will take one small place in the school and watch it for five days: a corner of the garden, the pond by the gate, or the wall which faces the playground. Write down what you see, not what you expect. The forms you need are on the shelf outside Room 108. Do not move nests, and do not feed any animal. On Friday afternoon each class will show the list they made. The class that finds the most kinds of living things will keep the green flag for a term. Thank you.",
+  "translation_cn": "早上好。下周是自然观察周。每个班在校园里选一小块地方,连续观察五天:花园的一角、校门旁的池塘,或者朝着操场的那面墙。记下你看到的,而不是你以为会看到的。你们需要的表格在108室外面的架子上。不要移动鸟巢,不要投喂任何动物。周五下午每个班展示自己做的清单。发现物种最多的班级将保管绿旗一个学期。谢谢。",
+  "questions": [
+   {"type": "choice", "q": "What should students write down?",
+    "options": ["Only the names of birds.", "What they see, not what they expect.", "The weather of each day.", "The number of students."],
+    "answer": "B", "explanation": "'Write down what you see, not what you expect.'"},
+   {"type": "choice", "q": "What will the winning class get?",
+    "options": ["A new garden.", "A free trip.", "Ten forms.", "The green flag for a term."],
+    "answer": "D", "explanation": "'The class that finds the most kinds of living things will keep the green flag for a term.'"}
+  ],
+  "key_vocab": [{"word": "face", "cn": "朝向"}, {"word": "living things", "cn": "生物"}, {"word": "flag", "cn": "旗"}]
+ }
+]

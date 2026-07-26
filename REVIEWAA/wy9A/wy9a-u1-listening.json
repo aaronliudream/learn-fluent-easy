@@ -1,0 +1,284 @@
+[
+ {
+  "unit": "U1",
+  "kind": "dialogue",
+  "difficulty": 1,
+  "title": "The morning run",
+  "topic": "晨跑(if 条件 · because/since 原因)",
+  "transcript": "A: You look tired, Lin. Did you run this morning?\nB: Yes. I get up at six every day because I want to be fit for the school sports day.\nA: Six! I could never do that.\nB: You can, if you start with ten minutes.\nA: But it is so cold now.\nB: Since we both live near the park, come with me tomorrow. It is easier with a friend.\nA: All right. If you knock on my door, I will get up.",
+  "translation_cn": "A:你看起来好累,林。你今早跑步了?B:嗯。我每天六点起床,因为我想在校运会上有个好状态。A:六点!我可做不到。B:你可以的,只要从十分钟开始。A:可现在这么冷。B:既然我们都住在公园附近,明天跟我一起吧,有伴儿更容易坚持。A:好。如果你来敲我的门,我就起。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Why does Lin get up at six every day?",
+    "options": [
+     "To be fit for the school sports day.",
+     "To walk the dog.",
+     "To watch the sunrise.",
+     "To finish the homework."
+    ],
+    "answer": "A",
+    "explanation": "'I get up at six every day because I want to be fit for the school sports day.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does Lin suggest doing tomorrow?",
+    "options": [
+     "Running for a whole hour.",
+     "Buying a pair of new shoes.",
+     "Running together, starting with ten minutes.",
+     "Running only at weekends."
+    ],
+    "answer": "C",
+    "explanation": "'You can, if you start with ten minutes.' + 'come with me tomorrow'。"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "fit",
+    "cn": "健康的,状态好的"
+   },
+   {
+    "word": "knock",
+    "cn": "敲(门)"
+   }
+  ]
+ },
+ {
+  "unit": "U1",
+  "kind": "dialogue",
+  "difficulty": 1,
+  "title": "A gift for Ms Wu",
+  "topic": "教师节礼物(if 条件 · because/since 原因)",
+  "transcript": "A: Teachers' Day is on Friday. What shall we get for Ms Wu?\nB: If we all put in five yuan, we can buy some flowers.\nA: Flowers die in a week, though.\nB: A card, then. Since everyone can write a line, it will mean more.\nA: I like that. And it costs almost nothing.\nB: Let us start today, because we need time for thirty lines.",
+  "translation_cn": "A:教师节在周五,我们送吴老师什么?B:如果我们每人出五块钱,就能买些花。A:可花一周就谢了。B:那做张卡片吧。既然每个人都能写一句,那更有意义。A:我喜欢这个主意,而且几乎不花钱。B:那今天就开始,因为三十句话需要时间。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What do they decide to give Ms Wu?",
+    "options": [
+     "A box of fruit.",
+     "A new book.",
+     "Some flowers.",
+     "A card with a line from everyone."
+    ],
+    "answer": "D",
+    "explanation": "'A card, then. Since everyone can write a line, it will mean more.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why do they want to start today?",
+    "options": [
+     "Because Ms Wu is leaving.",
+     "Because they need time for thirty lines.",
+     "Because Friday is a holiday.",
+     "Because the shop closes early."
+    ],
+    "answer": "B",
+    "explanation": "'Let us start today, because we need time for thirty lines.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "put in",
+    "cn": "凑(钱),出(份子)"
+   },
+   {
+    "word": "line",
+    "cn": "一句话,一行字"
+   }
+  ]
+ },
+ {
+  "unit": "U1",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "Three hours a day",
+  "topic": "手机使用时间(if 条件 · because/since 原因)",
+  "transcript": "A: My mum says I use my phone too much.\nB: How many hours a day?\nA: About three. But two of them are English videos!\nB: Since some of it is study, tell her that. She may agree.\nA: And if I leave the phone in the drawer during my homework, she will trust me more.\nB: That helps. My parents trust me because I never take my phone to bed.\nA: Then I will try your way first.",
+  "translation_cn": "A:我妈说我手机用得太多。B:一天几个小时?A:大概三小时。但其中两小时是英语视频!B:既然有一部分是学习,就跟她说清楚,她可能会同意。A:而且如果我写作业时把手机放进抽屉,她会更信任我。B:那有用。我爸妈信任我,是因为我从不把手机带上床。A:那我先试试你的办法。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "How does the boy use two of the three hours?",
+    "options": [
+     "He plays games.",
+     "He watches English videos.",
+     "He calls his friends.",
+     "He reads the news."
+    ],
+    "answer": "B",
+    "explanation": "'About three. But two of them are English videos!'"
+   },
+   {
+    "type": "choice",
+    "q": "Why do B's parents trust B?",
+    "options": [
+     "Because B pays for the phone.",
+     "Because B has no phone.",
+     "Because B studies late.",
+     "Because B never takes the phone to bed."
+    ],
+    "answer": "D",
+    "explanation": "'My parents trust me because I never take my phone to bed.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "drawer",
+    "cn": "抽屉"
+   },
+   {
+    "word": "trust",
+    "cn": "信任"
+   }
+  ]
+ },
+ {
+  "unit": "U1",
+  "kind": "passage",
+  "difficulty": 2,
+  "title": "Why I keep a diary",
+  "topic": "独白·写日记(if 条件 · because/since 原因)",
+  "transcript": "I started my diary two years ago because my grandpa gave me a small blue book. At first I wrote only three lines a day. Some days nothing happened, so I drew a picture instead. Now I write half a page. If I miss a day, I do not worry. Since the book is only for me, there is no wrong way to fill it. Last month I read the first page again and laughed at my old worries. That is the best part of a diary: it shows you how far you have come.",
+  "translation_cn": "两年前我开始写日记,因为爷爷给了我一个蓝色小本子。起初我一天只写三行。有些日子什么都没发生,我就画张画代替。现在我写半页。如果哪天漏了,我也不着急。既然这个本子只写给我自己,就没有什么错的写法。上个月我又读了第一页,笑话自己当年的那些烦恼。这就是日记最好的地方:它让你看见自己走了多远。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Why did the writer start keeping a diary?",
+    "options": [
+     "It was a school task.",
+     "A teacher asked the class to do it.",
+     "A grandpa gave a small blue book.",
+     "A friend kept one too."
+    ],
+    "answer": "C",
+    "explanation": "'I started my diary two years ago because my grandpa gave me a small blue book.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does the writer think is the best part of keeping a diary?",
+    "options": [
+     "It shows how far you have come.",
+     "It can be shown to friends.",
+     "It fills the free time.",
+     "It helps with English."
+    ],
+    "answer": "A",
+    "explanation": "'it shows you how far you have come.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "diary",
+    "cn": "日记(本)"
+   },
+   {
+    "word": "worry",
+    "cn": "烦恼,担心的事"
+   }
+  ]
+ },
+ {
+  "unit": "U1",
+  "kind": "passage",
+  "difficulty": 3,
+  "title": "Four lines on the stage",
+  "topic": "独白·第一次上台(if 条件 · because/since 原因)",
+  "transcript": "My hands were cold and my heart was loud. It was my first time on the school stage, and I had only four lines to say. Because I was afraid, I looked at the floor for the first two lines. Then I saw my desk mate in the front row. She was smiling and counting with her fingers, and my voice came back. I finished all four lines. Nobody clapped for long, but my teacher told me something. I still remember it: 'You did not run away.' Since that day I have put my hand up more often in class. If you are afraid of something small, try it once. The second time is always easier.",
+  "translation_cn": "我手是凉的,心跳很响。那是我第一次上校园舞台,只有四句台词。因为害怕,前两句我一直看着地板。然后我看见同桌坐在第一排,她在笑,还用手指帮我数着,我的声音就回来了。我把四句都说完了。没人鼓多久掌,但老师跟我说了一句话,我到现在还记得:「你没有逃走。」从那天起,我在课上举手更多了。如果你怕一件小事,就试一次。第二次总会容易些。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What did the writer do during the first two lines?",
+    "options": [
+     "Looked at the floor.",
+     "Looked at the teacher.",
+     "Walked off the stage.",
+     "Spoke very fast."
+    ],
+    "answer": "A",
+    "explanation": "'Because I was afraid, I looked at the floor for the first two lines.'"
+   },
+   {
+    "type": "choice",
+    "q": "What advice does the writer give at the end?",
+    "options": [
+     "Learn the lines by heart.",
+     "Never go on a stage.",
+     "Ask a friend to speak for you.",
+     "Try the small thing once."
+    ],
+    "answer": "D",
+    "explanation": "'If you are afraid of something small, try it once.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "stage",
+    "cn": "舞台"
+   },
+   {
+    "word": "desk mate",
+    "cn": "同桌"
+   },
+   {
+    "word": "clap",
+    "cn": "鼓掌"
+   },
+   {
+    "word": "row",
+    "cn": "(一)排"
+   }
+  ]
+ },
+ {
+  "unit": "U1",
+  "kind": "notice",
+  "difficulty": 1,
+  "title": "The autumn talent show",
+  "topic": "通知·才艺秀报名(if 条件 · because/since 原因)",
+  "transcript": "Good afternoon, everyone. This is a notice about the autumn talent show. If you want to take part, put your name on the list outside the music room before Thursday. You may sing, dance, play an instrument or tell a story. Since the hall is small, each act must be under three minutes. Please bring your own instrument, because the school has only one piano. The show starts at four on Friday. Come early if you want a seat in the front.",
+  "translation_cn": "同学们下午好。这是一则关于秋季才艺秀的通知。如果你想参加,请在周四之前把名字写在音乐教室外的名单上。你可以唱歌、跳舞、演奏乐器或讲故事。既然礼堂不大,每个节目必须在三分钟以内。请自带乐器,因为学校只有一架钢琴。演出周五四点开始。如果你想坐前排,就早点来。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Where should students put their names?",
+    "options": [
+     "On the hall door.",
+     "On the classroom door.",
+     "On the list outside the music room.",
+     "In the school office."
+    ],
+    "answer": "C",
+    "explanation": "'put your name on the list outside the music room before Thursday.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why must each act be under three minutes?",
+    "options": [
+     "Because the show starts late.",
+     "Because the hall is small.",
+     "Because there are only ten acts.",
+     "Because the piano is old."
+    ],
+    "answer": "B",
+    "explanation": "'Since the hall is small, each act must be under three minutes.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "talent show",
+    "cn": "才艺秀"
+   },
+   {
+    "word": "instrument",
+    "cn": "乐器"
+   },
+   {
+    "word": "act",
+    "cn": "节目"
+   }
+  ]
+ }
+]

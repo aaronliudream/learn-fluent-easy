@@ -187,10 +187,20 @@ def split_tuples(tail):
 
     ★必须支持多行 INSERT★ 听力灌库是一条 INSERT 带 36 个值元组;只吃单元组的解析器
     会静默产出 0 行,然后报"0 误伤"——那是最能骗人的假绿灯。
+
+    ★`--` 注释必须整行跳过★(2026-07-26 修,wy9A 听力踩到)
+    元组之间常写一行 `-- U5 dialogue《The bird club's first morning》85 词` 作分隔。
+    注释里的撇号会被当成字符串起始,引号状态从此错位,后面的括号深度全乱——
+    实测把 36 个元组切成了 50 个,而且**不报错**,只是少解出 10 篇。
+    split_stmts 早就跳注释了,这里当时漏了同一处理。
     """
     out, depth, inq, start, i, n = [], 0, False, None, 0, len(tail)
     while i < n:
         c = tail[i]
+        if not inq and c == '-' and i + 1 < n and tail[i + 1] == '-':
+            j = tail.find('\n', i)
+            i = n if j < 0 else j + 1
+            continue
         if inq:
             if c == "'":
                 if i + 1 < n and tail[i + 1] == "'":

@@ -147,6 +147,9 @@ fetch → decodeAudioData → BufferSource → GainNode → destination),该路�
 先来的 —— "词音完整播完"与"朗读继续下一句"物理上二选一。故 `tapSpeak` 先 `stopAll()` 再播词音:
 点词 → 朗读停(播放按钮回未播放态)→ 词音完整 → 用户自己决定要不要接着播。
 不选"停后自动续播"是因为停在哪句/接哪句/中途再点词的状态恢复容易埋雷,先要最简单的那个。
+**但保留高亮**(`tapSpeak` 不清 `current`,这是它与 `stopAll` 的唯一差别):听完词回正文,眼睛要能找回读到哪。
+高亮不误导 —— 播放循环每句 `bump(i)` 同步写 `last_seq`,顶部播放走 `playFromResume` 读的就是它,
+即从高亮那句续;段落喇叭/绘本页内播放本就按段/按页起算。(绘本顶部"朗读本章"恒从第 1 页是绘本规格,本就无视高亮。)
 (旧 `<audio>` 版另一种坏法:新 `speak()` 覆盖掉共享元素的 `onended`,老 promise 永不 resolve →
 朗读循环挂死在 await 且 `playingAll` 仍为 true。两版都不对,只是坏的方向相反。)
 

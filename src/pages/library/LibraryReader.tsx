@@ -534,13 +534,18 @@ export default function LibraryReader() {
   // 【必须不带 opts】TappableLine 的视口预热(pwWarm → prefetchTTS(t))用的是默认音色、
   // 无 accent 的缓存键;这里一旦传 READ_ACCENT/speed,键就对不上,点词全退回 1-3s 冷合成。
   // 与整句朗读(accent US)音色不同是**既有设定**,不是笔误。
-  const tapSpeak = useCallback(
-    (t: string) => {
-      stopAll();
-      return readAloudText(t);
-    },
-    [stopAll],
-  );
+  // 与 stopAll 的唯一差别:**不清 current**(保留高亮)。听完词回到正文,眼睛要能立刻找回读到哪。
+  // 高亮不会误导 —— 顶部播放走 playFromResume 读 last_seq,而播放循环每句都 bump(i) 同步写
+  // last_seq,所以再按播放就是从高亮那句续;段落喇叭/绘本页内播放本就按段/按页起算,同样一致。
+  // (不复用 stopAll 加参数:它直接当 onClick 传给了停止按钮,React 会把事件对象塞进第一个参数。)
+  const tapSpeak = useCallback((t: string) => {
+    playSeq.current++;
+    stopReadAloud();
+    stopSpeaking();
+    setPlayingAll(false);
+    setPreparing(false);
+    return readAloudText(t);
+  }, []);
 
   // 连续朗读:从章内 startIdx 起顺序播到 stopIdx(不含);默认播到本章末。
   // 段左喇叭传该段末句+1 → 只读该段、读完停(方便"这段没听懂重听")。

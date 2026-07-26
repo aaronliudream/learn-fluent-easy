@@ -34,26 +34,25 @@ function nextReviewOnWrong(): string {
 }
 
 /**
- * 「残卡」兜底(按字段判,与 module 无关)。
+ * 「残卡」兜底(按**本页渲染路径**判,与 module 无关)。
  *
- * 模块排除只挡得住**已知**会产出残卡的 module;而残卡的真正成因是这一行**揭晓时无内容可给**:
- * 本页点「看答案」后只渲染 correct_answer + explanation(朗读按钮另取 snapshot 三个字段)。
- * 任何模块的写入器只要漏写这些列,就会产出同样的残卡,而我们不会知道。
- * 故:取数后按字段再滤一道,并 warn 出 module + source_key 前缀,让未知的写入缺陷可被发现。
+ * 模块排除只挡得住**已知**会产出残卡的 module;而残卡的真正成因是这一行**揭晓时无答案可给**。
+ * 任何模块的写入器只要漏写相应的列,就会产出同样的残卡,而我们不会知道。
+ * 故:取数后再滤一道,并 warn 出 module + source_key 前缀,让未知的写入缺陷可被发现。
  *
- * ⚠️ 判据是「三类内容全空」而非「correct_answer 为空」—— ai_talk / ai_talk_target 这类卡
- * 正确答案本来就放在 snapshot(alex_used_sentence 等)里,只看 correct_answer 会把好卡误杀。
+ * ⚠️ 判据必须与**这一页实际渲染什么**一致,不是「库里有没有内容」:
+ *   揭晓分支只渲染 `correct_answer` 和 `explanation` 两个字段(见下方 JSX)。
+ *   `snapshot.alex_used_sentence / example_en / source_sentence` **只喂朗读按钮**(playable),
+ *   不参与答案展示 —— 只有这几个字段有值的行,点开仍然什么答案都看不到,照样是残卡,必须丢弃。
+ *   → 所以判据只看 correct_answer / explanation 两项。
+ *   ⚠️ 日后若给揭晓分支新增任何答案来源,必须同步改这里,否则会把能正常显示的卡误杀。
  */
 function dropAnswerlessRows(rows: Mistake[]): Mistake[] {
   const kept: Mistake[] = [];
   for (const r of rows) {
-    const fromSnapshot =
-      r.snapshot?.alex_used_sentence || r.snapshot?.example_en || r.snapshot?.source_sentence;
-    const hasContent =
-      (r.correct_answer ?? "").trim() !== "" ||
-      (r.explanation ?? "").trim() !== "" ||
-      String(fromSnapshot ?? "").trim() !== "";
-    if (hasContent) kept.push(r);
+    const hasRenderableAnswer =
+      (r.correct_answer ?? "").trim() !== "" || (r.explanation ?? "").trim() !== "";
+    if (hasRenderableAnswer) kept.push(r);
     else console.warn(`[review-today] 残卡已跳过 module=${r.module} source_key=${r.source_key.slice(0, 40)}`);
   }
   return kept;

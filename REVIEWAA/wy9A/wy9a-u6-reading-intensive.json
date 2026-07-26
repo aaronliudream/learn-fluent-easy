@@ -65,5 +65,23 @@
  ],
  "unit": "U6",
  "difficulty": 0,
- "word_count": 168
+ "word_count": 168,
+ "vocab_notes": [
+  {
+   "word": "long-lasting",
+   "cn": "耐用的,持久的(long + lasting 合成)"
+  },
+  {
+   "word": "harmless",
+   "cn": "无害的(harm + -less)"
+  },
+  {
+   "word": "upcycle",
+   "cn": "升级改造(up- + cycle)"
+  },
+  {
+   "word": "wisely",
+   "cn": "明智地(wise + -ly)"
+  }
+ ]
 }

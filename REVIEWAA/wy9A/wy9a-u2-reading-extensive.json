@@ -39,6 +39,20 @@
     ],
     "explanation": "'A price is not about my wish. It is about the buyer.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "seller",
+    "cn": "卖家(sell + -er)"
+   },
+   {
+    "word": "buyer",
+    "cn": "买家(buy + -er)"
+   },
+   {
+    "word": "paper card",
+    "cn": "纸卡片(此处指标价牌)"
+   }
   ]
  },
  {
@@ -80,6 +94,20 @@
      "Because he has forgotten the price."
     ],
     "explanation": "'Some gifts are better when the story stays quiet.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "envelope",
+    "cn": "信封"
+   },
+   {
+    "word": "shop assistant",
+    "cn": "店员"
+   },
+   {
+    "word": "coin",
+    "cn": "硬币"
    }
   ]
  },
@@ -123,6 +151,20 @@
     ],
     "explanation": "'since we started the box in September, nobody in our class has bought a new ruler in a hurry.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "wooden",
+    "cn": "木制的(wood + -en)"
+   },
+   {
+    "word": "borrow",
+    "cn": "借入(与 lend「借出」相对)"
+   },
+   {
+    "word": "wherever",
+    "cn": "无论在哪里"
+   }
   ]
  },
  {
@@ -164,6 +206,20 @@
      "The family is always late."
     ],
     "explanation": "全文用「等到一月以更低价格买下」说明这本账本记的是时间带来的价格变化。"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "account",
+    "cn": "账目;账户"
+   },
+   {
+    "word": "washing machine",
+    "cn": "洗衣机"
+   },
+   {
+    "word": "lower",
+    "cn": "更低的(low 的比较级)"
    }
   ]
  }

@@ -65,5 +65,23 @@
  ],
  "unit": "U5",
  "difficulty": 0,
- "word_count": 170
+ "word_count": 170,
+ "vocab_notes": [
+  {
+   "word": "mend",
+   "cn": "修补,修理"
+  },
+  {
+   "word": "pond",
+   "cn": "池塘"
+  },
+  {
+   "word": "knee",
+   "cn": "膝盖"
+  },
+  {
+   "word": "seed",
+   "cn": "种子"
+  }
+ ]
 }

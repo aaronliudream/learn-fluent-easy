@@ -65,5 +65,27 @@
  ],
  "unit": "U2",
  "difficulty": 0,
- "word_count": 160
+ "word_count": 160,
+ "vocab_notes": [
+  {
+   "word": "pocket money",
+   "cn": "零花钱"
+  },
+  {
+   "word": "jar",
+   "cn": "罐子"
+  },
+  {
+   "word": "silly",
+   "cn": "傻的,愚蠢的"
+  },
+  {
+   "word": "date",
+   "cn": "日期"
+  },
+  {
+   "word": "touch",
+   "cn": "动用(此处指从罐里取钱)"
+  }
+ ]
 }

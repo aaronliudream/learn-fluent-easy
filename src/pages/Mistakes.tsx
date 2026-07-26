@@ -13,6 +13,7 @@ import { bumpMistakeCorrect, bjToday, bjDateTime, type StreakResult } from "@/li
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
 import RedoPassageModal, { isPassageRedoable } from "@/components/mistakes/RedoPassageModal";
+import { MISTAKE_PASSAGE_MODULES, hiddenModulesExcept, pgInList } from "@/lib/mistakeHiddenModules";
 
 type Mistake = {
   id: string;
@@ -122,7 +123,9 @@ const MistakesPage = () => {
         // 隐藏 edge 写的薄记录裸模块(听力/完形/词汇/语法/写作/拼读):这些经 edge 只写薄行,
         // 已被 hub_listening / senior_cloze / senior_grammar 等完整快照取代;精确排除、绝不误伤
         // senior_grammar / gaokao_grammar 等正牌模块。小学 primary_ 在下方 JS 过滤。
-        not("module", "in", "(listening,cloze,vocab,grammar,writing,phonics)").
+        // 放开整篇型(MISTAKE_PASSAGE_MODULES):本页有 RedoPassageModal 能把 snapshot.questions[]
+        // 逐题渲染并整篇重做,是全站唯一能正确显示整篇型的地方,故显式从默认排除集里放开。
+        not("module", "in", pgInList(hiddenModulesExcept(MISTAKE_PASSAGE_MODULES))).
         order("next_review_at", { ascending: true }).
         limit(500);
         if (cancelled) return;

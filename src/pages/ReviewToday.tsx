@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
 import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
+import { MISTAKE_HIDDEN_DEFAULT, pgInList } from "@/lib/mistakeHiddenModules";
 import { toast } from "sonner";
 
 type Mistake = {
@@ -32,6 +33,32 @@ function nextReviewOnWrong(): string {
   return new Date(Date.now() + 1 * 86_400_000).toISOString();
 }
 
+/**
+ * 「残卡」兜底(按字段判,与 module 无关)。
+ *
+ * 模块排除只挡得住**已知**会产出残卡的 module;而残卡的真正成因是这一行**揭晓时无内容可给**:
+ * 本页点「看答案」后只渲染 correct_answer + explanation(朗读按钮另取 snapshot 三个字段)。
+ * 任何模块的写入器只要漏写这些列,就会产出同样的残卡,而我们不会知道。
+ * 故:取数后按字段再滤一道,并 warn 出 module + source_key 前缀,让未知的写入缺陷可被发现。
+ *
+ * ⚠️ 判据是「三类内容全空」而非「correct_answer 为空」—— ai_talk / ai_talk_target 这类卡
+ * 正确答案本来就放在 snapshot(alex_used_sentence 等)里,只看 correct_answer 会把好卡误杀。
+ */
+function dropAnswerlessRows(rows: Mistake[]): Mistake[] {
+  const kept: Mistake[] = [];
+  for (const r of rows) {
+    const fromSnapshot =
+      r.snapshot?.alex_used_sentence || r.snapshot?.example_en || r.snapshot?.source_sentence;
+    const hasContent =
+      (r.correct_answer ?? "").trim() !== "" ||
+      (r.explanation ?? "").trim() !== "" ||
+      String(fromSnapshot ?? "").trim() !== "";
+    if (hasContent) kept.push(r);
+    else console.warn(`[review-today] 残卡已跳过 module=${r.module} source_key=${r.source_key.slice(0, 40)}`);
+  }
+  return kept;
+}
+
 export default function ReviewToday() {
   const nav = useNavigate();
   const [loading, setLoading] = useState(true);
@@ -52,12 +79,16 @@ export default function ReviewToday() {
       from("user_mistakes").
       select("*").
       eq("is_resolved", false).
+      // 默认排除集(fail-safe):本页是单题自评卡,没有任何放开的理由 → 直接用默认并集。
+      // 尤其是整篇型(junior_cloze):question=篇名、correct_answer=NULL
+      // (JuniorClozePlay 那条 upsert 没写这两列)→ 学生点开只能看到一个没有答案的篇名。
+      not("module", "in", pgInList(MISTAKE_HIDDEN_DEFAULT)).
       lte("next_review_at", nowIso).
       order("next_review_at", { ascending: true }).
       limit(50);
       if (cancelled) return;
       if (error) toast.error(error.message);
-      setQueue(data as Mistake[] || []);
+      setQueue(dropAnswerlessRows((data as Mistake[]) || []));
       setLoading(false);
     })();
     return () => {cancelled = true;stopSpeaking();};

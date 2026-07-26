@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { bumpMistakeCorrect, bjToday } from "@/lib/mistakeStreak";
+import { MISTAKE_HIDDEN_DEFAULT, pgInList } from "@/lib/mistakeHiddenModules";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 import { Loader2, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
@@ -58,7 +59,7 @@ async function fetchDueRedoable(): Promise<Mistake[]> {
     .from("user_mistakes")
     .select("id,module,source_key,question,correct_answer,explanation,snapshot,next_review_at")
     .eq("is_resolved", false)
-    .not("module", "in", "(listening,cloze,vocab,grammar,writing,phonics)")
+    .not("module", "in", pgInList(MISTAKE_HIDDEN_DEFAULT))
     .lte("next_review_at", new Date(now).toISOString())
     .order("next_review_at", { ascending: true })
     .limit(60);

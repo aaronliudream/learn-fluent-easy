@@ -1,0 +1,197 @@
+[
+ {
+  "no": 1,
+  "d": 1,
+  "stem": "____ you want to join the volunteer group, come to Room 302 after school.",
+  "opts": [
+   "If",
+   "Because",
+   "Though",
+   "So"
+  ],
+  "ans": "A",
+  "expl": "if 引导条件状语从句,后接祈使句,表示「如果……,就……吧」。because/though/so 都不能引出条件并接祈使句。"
+ },
+ {
+  "no": 2,
+  "d": 1,
+  "stem": "The video was flooded with messages ____ the young performer amazed everyone.",
+  "opts": [
+   "if",
+   "because",
+   "unless",
+   "or"
+  ],
+  "ans": "B",
+  "expl": "because 引导原因状语从句,说明「消息大量涌来」的原因。if 表条件、unless 表否定条件、or 表选择,均不合此处因果关系。"
+ },
+ {
+  "no": 3,
+  "d": 1,
+  "stem": "I feel interested in puppets ____ my grandpa is a performer.",
+  "opts": [
+   "if",
+   "or",
+   "because",
+   "but"
+  ],
+  "ans": "C",
+  "expl": "because 引导原因状语从句,交代「我对木偶感兴趣」的理由。but 表转折、or 表选择、if 表条件,都不表示原因。"
+ },
+ {
+  "no": 4,
+  "d": 1,
+  "stem": "You will be late for the performance ____ you do not hurry.",
+  "opts": [
+   "because",
+   "since",
+   "so",
+   "if"
+  ],
+  "ans": "D",
+  "expl": "if 引导条件状语从句:从句提出假设条件,主句用一般将来时表示结果。because/since 表原因,so 是并列连词,均不合。"
+ },
+ {
+  "no": 5,
+  "d": 1,
+  "stem": "—Why do you like this programme?  —____ it tells the story of a young hero.",
+  "opts": [
+   "Because",
+   "If",
+   "So",
+   "And"
+  ],
+  "ans": "A",
+  "expl": "对 why 提问的回答用 because 说明原因。if 表条件、so 表结果、and 表并列,都不能回答 why。"
+ },
+ {
+  "no": 6,
+  "d": 1,
+  "stem": "Call the teacher ____ you feel ill at school.",
+  "opts": [
+   "because",
+   "if",
+   "so",
+   "but"
+  ],
+  "ans": "B",
+  "expl": "if 引导条件状语从句,可放在主句之后;主句为祈使句,表示「如果……就……」。"
+ },
+ {
+  "no": 7,
+  "d": 1,
+  "stem": "This old-fashioned art is coming back ____ many teenagers post videos about it.",
+  "opts": [
+   "if",
+   "unless",
+   "because",
+   "or"
+  ],
+  "ans": "C",
+  "expl": "because 引导原因状语从句,说明这门艺术回归的原因。unless 表「除非」、if 表条件,均与因果不符。"
+ },
+ {
+  "no": 8,
+  "d": 2,
+  "stem": "If you ____ hard this term, you will pass the exam easily.",
+  "opts": [
+   "will work",
+   "worked",
+   "are working",
+   "work"
+  ],
+  "ans": "D",
+  "expl": "if 引导的条件状语从句用一般现在时表示将来,主句用一般将来时,即「主将从现」。从句不能用 will。"
+ },
+ {
+  "no": 9,
+  "d": 2,
+  "stem": "If it ____ tomorrow, we will not go to the park.",
+  "opts": [
+   "rains",
+   "rain",
+   "will rain",
+   "rained"
+  ],
+  "ans": "A",
+  "expl": "「主将从现」:从句用一般现在时,主语 it 为第三人称单数,谓语用 rains;主句用 will not go。"
+ },
+ {
+  "no": 10,
+  "d": 2,
+  "stem": "—Everyone has arrived.  —Good. ____ we are all here, let us start the show.",
+  "opts": [
+   "If",
+   "Since",
+   "Unless",
+   "Or"
+  ],
+  "ans": "B",
+  "expl": "前句已说明「大家都到了」是既成事实,故用 since 表示「既然」引出已知理由。if 表尚未确定的假设,与已知事实矛盾。"
+ },
+ {
+  "no": 11,
+  "d": 2,
+  "stem": "If you want to know what to see, ____ the guide first.",
+  "opts": [
+   "reading",
+   "to read",
+   "read",
+   "reads"
+  ],
+  "ans": "C",
+  "expl": "if 从句 + 祈使句结构中,主句为祈使句,动词用原形 read。"
+ },
+ {
+  "no": 12,
+  "d": 2,
+  "stem": "She may join our group if she ____ free on Saturday.",
+  "opts": [
+   "will be",
+   "was",
+   "being",
+   "is"
+  ],
+  "ans": "D",
+  "expl": "if 引导的条件状语从句用一般现在时,主语 she 后用 is;主句用情态动词 may 表示可能的结果。"
+ },
+ {
+  "no": 13,
+  "d": 3,
+  "stem": "This art was not popular at first. ____ Zhan Haojing gave puppet shows at schools, more young people got to know it.",
+  "opts": [
+   "Because",
+   "If",
+   "Unless",
+   "Or"
+  ],
+  "ans": "A",
+  "expl": "两句构成因果关系:后一句是前一句情况改变的原因,故用 because 引导原因状语从句。"
+ },
+ {
+  "no": 14,
+  "d": 3,
+  "stem": "Some of these local arts may soon disappear ____ we do not take action now.",
+  "opts": [
+   "because",
+   "if",
+   "since",
+   "so"
+  ],
+  "ans": "B",
+  "expl": "「现在不采取行动」是尚未发生的假设条件,用 if 引导条件状语从句;because/since 表已成立的原因,与「may soon disappear」的假设语气不符。"
+ },
+ {
+  "no": 15,
+  "d": 3,
+  "stem": "I felt less close to the art ____ people thought puppets were old-fashioned. But now everything is different.",
+  "opts": [
+   "if",
+   "unless",
+   "because",
+   "or"
+  ],
+  "ans": "C",
+  "expl": "because 引导原因状语从句,说明「我曾与这门艺术疏远」的原因。后句 But now… 与之呼应,证实是已发生的原因而非假设。"
+ }
+]

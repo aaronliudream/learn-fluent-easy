@@ -1,0 +1,197 @@
+[
+ {
+  "no": 1,
+  "d": 1,
+  "stem": "We went to the museum early ____ we could see the new collection.",
+  "opts": [
+   "because",
+   "until",
+   "so that",
+   "as soon as"
+  ],
+  "ans": "C",
+  "expl": "so that 引导目的状语从句,表示「为了能……」;从句常与 could/can/would 等表示可能性的词连用。"
+ },
+ {
+  "no": 2,
+  "d": 1,
+  "stem": "The old silk was ____ beautiful that everyone stopped to look at it.",
+  "opts": [
+   "such",
+   "very",
+   "too",
+   "so"
+  ],
+  "ans": "D",
+  "expl": "so 修饰形容词 beautiful,与 that 从句构成「如此……以至于……」的结果状语从句。such 只能修饰名词。"
+ },
+ {
+  "no": 3,
+  "d": 1,
+  "stem": "It was ____ a valuable find that the news went around the world.",
+  "opts": [
+   "such",
+   "so",
+   "very",
+   "quite"
+  ],
+  "ans": "A",
+  "expl": "such 后接「a + 形容词 + 名词」构成结果状语从句;so 只能直接修饰形容词或副词,不能带冠词与名词。"
+ },
+ {
+  "no": 4,
+  "d": 1,
+  "stem": "The archaeologist spoke slowly ____ we could all understand him.",
+  "opts": [
+   "until",
+   "so that",
+   "before",
+   "where"
+  ],
+  "ans": "B",
+  "expl": "so that 引导目的状语从句,说明「说得慢」的目的是让大家都能听懂。"
+ },
+ {
+  "no": 5,
+  "d": 1,
+  "stem": "They worked ____ carefully that nothing was broken.",
+  "opts": [
+   "such",
+   "very",
+   "too",
+   "so"
+  ],
+  "ans": "D",
+  "expl": "so 修饰副词 carefully,与 that 从句构成结果状语从句。such 不能修饰副词。"
+ },
+ {
+  "no": 6,
+  "d": 1,
+  "stem": "Take a photo of the design ____ we can study it at home.",
+  "opts": [
+   "because",
+   "until",
+   "so that",
+   "though"
+  ],
+  "ans": "C",
+  "expl": "so that 引导目的状语从句,表示拍照的目的;从句用 can 表示能够。"
+ },
+ {
+  "no": 7,
+  "d": 1,
+  "stem": "He is ____ a careful worker that we all take pride in him.",
+  "opts": [
+   "so",
+   "such",
+   "very",
+   "too"
+  ],
+  "ans": "B",
+  "expl": "such 后接「a + 形容词 + 名词」;so 不能直接修饰名词短语。"
+ },
+ {
+  "no": 8,
+  "d": 2,
+  "stem": "The museum keeps the room cool ____ the silk may last longer.",
+  "opts": [
+   "so that",
+   "so",
+   "such",
+   "because"
+  ],
+  "ans": "A",
+  "expl": "so that 引导目的状语从句,从句用情态动词 may 表示希望达成的结果。若用 because 则变成解释原因,与「保持房间凉爽是手段」的语义不符。"
+ },
+ {
+  "no": 9,
+  "d": 2,
+  "stem": "It was such ____ interesting cartoon that we watched it twice.",
+  "opts": [
+   "a very",
+   "the",
+   "an",
+   "so"
+  ],
+  "ans": "C",
+  "expl": "such 后接单数可数名词时须加冠词;interesting 以元音音素开头,故用 an。"
+ },
+ {
+  "no": 10,
+  "d": 2,
+  "stem": "The design was so ____ that it soon became a hit.",
+  "opts": [
+   "a pretty",
+   "pretty",
+   "such pretty",
+   "pretty a"
+  ],
+  "ans": "B",
+  "expl": "so 直接修饰形容词,后面不加冠词;「so + 形容词 + that 从句」构成结果状语从句。"
+ },
+ {
+  "no": 11,
+  "d": 2,
+  "stem": "We saved every piece ____ the museum could bring them out again.",
+  "opts": [
+   "because",
+   "until",
+   "such that",
+   "so that"
+  ],
+  "ans": "D",
+  "expl": "so that 引导目的状语从句,说明保存每一块碎片的目的;从句用 could 与主句过去时呼应。"
+ },
+ {
+  "no": 12,
+  "d": 2,
+  "stem": "—Why did they build the wall here?  —____ the wind could not break the young trees.",
+  "opts": [
+   "So that",
+   "So",
+   "Such",
+   "Because"
+  ],
+  "ans": "A",
+  "expl": "问句问的是建墙的目的,故用 so that 引导目的状语从句,并用 could not 表示要避免的结果。"
+ },
+ {
+  "no": 13,
+  "d": 3,
+  "stem": "Which sentence expresses PURPOSE, not result?",
+  "opts": [
+   "The find was so important that it made the news.",
+   "They dug slowly so that nothing would break.",
+   "It was such a big find that everyone came.",
+   "The room was so dark that we turned on more lights."
+  ],
+  "ans": "B",
+  "expl": "so that 引导目的状语从句,表示做某事「为了」达成什么;而 so/such … that 引导结果状语从句,表示程度导致的结果。B 项说明「慢慢挖」的目的,其余三项都是「如此……以至于……」的结果。"
+ },
+ {
+  "no": 14,
+  "d": 3,
+  "stem": "It was ____ that the whole team took pride in the work.",
+  "opts": [
+   "so a great success",
+   "such great a success",
+   "so great success",
+   "such a great success"
+  ],
+  "ans": "D",
+  "expl": "such 后接「a + 形容词 + 名词」的语序;so 只能修饰形容词或副词本身,不能带冠词与名词,故其余三项语序或搭配均不成立。"
+ },
+ {
+  "no": 15,
+  "d": 3,
+  "stem": "Choose the pair that fits: \"We turned on more lights ____ the visitors ____ see the small designs on the silk.\"",
+  "opts": [
+   "so; could",
+   "such; can",
+   "so that; could",
+   "so that; can"
+  ],
+  "ans": "C",
+  "expl": "空一需要引导目的状语从句的 so that;空二的情态动词要与主句谓语 turned on 的过去时呼应,故用 could 而非 can。"
+ }
+]

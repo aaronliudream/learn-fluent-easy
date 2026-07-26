@@ -1,0 +1,197 @@
+[
+ {
+  "no": 1,
+  "d": 1,
+  "stem": "The film ____ tells of an adventure is very interesting.",
+  "opts": [
+   "that",
+   "who",
+   "what",
+   "where"
+  ],
+  "ans": "A",
+  "expl": "that 引导定语从句,可以修饰物;此处 that 在从句中作主语,修饰先行词 the film。"
+ },
+ {
+  "no": 2,
+  "d": 1,
+  "stem": "This is the photo ____ we liked best.",
+  "opts": [
+   "who",
+   "which",
+   "what",
+   "whose"
+  ],
+  "ans": "B",
+  "expl": "which 引导定语从句修饰物,在从句中作 liked 的宾语。who 只指人,what 不能引导定语从句。"
+ },
+ {
+  "no": 3,
+  "d": 1,
+  "stem": "The animals ____ live in the forest need our protection.",
+  "opts": [
+   "who",
+   "what",
+   "where",
+   "that"
+  ],
+  "ans": "D",
+  "expl": "that 引导定语从句,可修饰人也可修饰物,此处修饰 the animals 并在从句中作主语。"
+ },
+ {
+  "no": 4,
+  "d": 1,
+  "stem": "The writer ____ I like best is Mark Twain.",
+  "opts": [
+   "which",
+   "what",
+   "that",
+   "where"
+  ],
+  "ans": "C",
+  "expl": "that 既可修饰人也可修饰物;此处修饰指人的先行词 the writer,并在从句中作 like 的宾语。which 不能指人。"
+ },
+ {
+  "no": 5,
+  "d": 1,
+  "stem": "A group of photos ____ show our city won the prize.",
+  "opts": [
+   "who",
+   "which",
+   "what",
+   "whose"
+  ],
+  "ans": "B",
+  "expl": "which 引导定语从句修饰物 photos,并在从句中作主语。"
+ },
+ {
+  "no": 6,
+  "d": 1,
+  "stem": "The organisation ____ protects endangered animals started ten years ago.",
+  "opts": [
+   "that",
+   "who",
+   "what",
+   "where"
+  ],
+  "ans": "A",
+  "expl": "that 引导定语从句修饰 the organisation 并在从句中作主语。"
+ },
+ {
+  "no": 7,
+  "d": 1,
+  "stem": "Please read the notice ____ is on the wall.",
+  "opts": [
+   "who",
+   "what",
+   "that",
+   "whose"
+  ],
+  "ans": "C",
+  "expl": "that 引导定语从句修饰物 the notice,在从句中作主语,故不能省略。"
+ },
+ {
+  "no": 8,
+  "d": 2,
+  "stem": "The rubbish ____ people drop in the park harms wild animals.",
+  "opts": [
+   "who",
+   "what",
+   "where",
+   "that"
+  ],
+  "ans": "D",
+  "expl": "that 引导定语从句修饰 the rubbish,在从句中作 drop 的宾语。"
+ },
+ {
+  "no": 9,
+  "d": 2,
+  "stem": "The tourist we met yesterday ____ from Australia.",
+  "opts": [
+   "is",
+   "are",
+   "be",
+   "being"
+  ],
+  "ans": "A",
+  "expl": "we met yesterday 是省略了引导词的定语从句,修饰 the tourist;句子的主语仍是单数 the tourist,故主句谓语用 is。"
+ },
+ {
+  "no": 10,
+  "d": 2,
+  "stem": "The gas ____ cars give out affects the air.",
+  "opts": [
+   "who",
+   "what",
+   "which",
+   "where"
+  ],
+  "ans": "C",
+  "expl": "which 引导定语从句修饰物 the gas,在从句中作 give out 的宾语。"
+ },
+ {
+  "no": 11,
+  "d": 2,
+  "stem": "The solar panel ____ they put on the roof works well.",
+  "opts": [
+   "who",
+   "that",
+   "what",
+   "whose"
+  ],
+  "ans": "B",
+  "expl": "that 引导定语从句修饰 the solar panel,在从句中作 put 的宾语。"
+ },
+ {
+  "no": 12,
+  "d": 2,
+  "stem": "In the sentence \"The alarm we heard last night was very loud\", the words \"we heard last night\" ____.",
+  "opts": [
+   "ask a question about the alarm",
+   "act as the main clause of the sentence",
+   "tell us who bought the alarm",
+   "tell us which alarm is being talked about"
+  ],
+  "ans": "D",
+  "expl": "we heard last night 是省略了引导词的定语从句,用来说明是哪一个 alarm;主句是 The alarm … was very loud。"
+ },
+ {
+  "no": 13,
+  "d": 3,
+  "stem": "In which sentence can the word THAT be LEFT OUT?",
+  "opts": [
+   "The alarm that rings at seven wakes me up.",
+   "The guard that stands at the gate is friendly.",
+   "The photo that we took by the river is lovely.",
+   "The rubbish that lies on the ground harms animals."
+  ],
+  "ans": "C",
+  "expl": "引导词在从句中作宾语时可以省略,作主语时不能省略。C 项的 that 是 took 的宾语,可省;A、B、D 三项的 that 都是从句主语,省略后从句就没有主语了。"
+ },
+ {
+  "no": 14,
+  "d": 3,
+  "stem": "Choose the sentence that has a relative clause with NO relative word.",
+  "opts": [
+   "The tourist we met at the station came from far away.",
+   "The tourist who met us was very kind.",
+   "We do not know who met the tourist.",
+   "Which tourist met you at the station?"
+  ],
+  "ans": "A",
+  "expl": "A 项中 we met at the station 修饰 the tourist,是省略了引导词的定语从句。B 项引导词 who 仍在;C 项是宾语从句;D 项是疑问句。"
+ },
+ {
+  "no": 15,
+  "d": 3,
+  "stem": "Choose the CORRECT sentence.",
+  "opts": [
+   "The man which helped us is a guard.",
+   "The plan who we made is working.",
+   "The river which we cleaned it is clean now.",
+   "The plan that we made last year is working now."
+  ],
+  "ans": "D",
+  "expl": "which 只能指物、不能指人,故 A 错;who 只能指人、不能指物,故 B 错;C 项的引导词 which 已在从句中作宾语,后面不应再出现 it;D 项 that 修饰物且在从句中作 made 的宾语,正确。"
+ }
+]

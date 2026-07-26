@@ -1,0 +1,197 @@
+[
+ {
+  "no": 1,
+  "d": 1,
+  "stem": "I will call you ____ I get to the bank.",
+  "opts": [
+   "before",
+   "when",
+   "until",
+   "since"
+  ],
+  "ans": "B",
+  "expl": "when 引导时间状语从句,表示「到达银行的时候」这一时间点;主句用一般将来时,从句用一般现在时。before/until/since 与此处时间关系不符。"
+ },
+ {
+  "no": 2,
+  "d": 1,
+  "stem": "____ the shop opened, many people went in.",
+  "opts": [
+   "When",
+   "Until",
+   "Since",
+   "Unless"
+  ],
+  "ans": "A",
+  "expl": "when 引导时间状语从句,表示「商店开门时」这一时间点。since 表「自从」,主句需用完成时;until 表「直到」,均与后句 went in 不搭。"
+ },
+ {
+  "no": 3,
+  "d": 1,
+  "stem": "Please put the moneybox back ____ you found it.",
+  "opts": [
+   "when",
+   "until",
+   "before",
+   "where"
+  ],
+  "ans": "D",
+  "expl": "where 引导地点状语从句,表示「放回你找到它的地方」。where 前没有先行词,整个从句作状语。"
+ },
+ {
+  "no": 4,
+  "d": 1,
+  "stem": "We waited ____ the price went down.",
+  "opts": [
+   "before",
+   "where",
+   "until",
+   "since"
+  ],
+  "ans": "C",
+  "expl": "until 引导时间状语从句,表示动作一直持续到某一时刻,即「一直等到价格下降」。"
+ },
+ {
+  "no": 5,
+  "d": 1,
+  "stem": "____ I finish my homework, I will help you count the coins.",
+  "opts": [
+   "After",
+   "Until",
+   "Where",
+   "Unless"
+  ],
+  "ans": "A",
+  "expl": "after 引导时间状语从句,表示主句动作发生在从句动作之后;从句用一般现在时表示将来。"
+ },
+ {
+  "no": 6,
+  "d": 1,
+  "stem": "He put his savings in the bank ____ he was ten.",
+  "opts": [
+   "until",
+   "when",
+   "where",
+   "after"
+  ],
+  "ans": "B",
+  "expl": "when 引导时间状语从句,表示「他十岁的时候」这一时间点。"
+ },
+ {
+  "no": 7,
+  "d": 1,
+  "stem": "You can buy it ____ you like — online or in a real shop.",
+  "opts": [
+   "when",
+   "until",
+   "wherever",
+   "before"
+  ],
+  "ans": "C",
+  "expl": "wherever 引导地点状语从句,表示「无论在哪里」。破折号后的两种地点正说明是地点而非时间。"
+ },
+ {
+  "no": 8,
+  "d": 2,
+  "stem": "While we ____ for the bus, let us check the price on the website.",
+  "opts": [
+   "wait",
+   "waited",
+   "will wait",
+   "are waiting"
+  ],
+  "ans": "D",
+  "expl": "while 引导的时间状语从句表示一个持续进行的动作,从句谓语常用进行时,故用 are waiting。"
+ },
+ {
+  "no": 9,
+  "d": 2,
+  "stem": "I have known Bill ____ he was born.",
+  "opts": [
+   "when",
+   "since",
+   "until",
+   "after"
+  ],
+  "ans": "B",
+  "expl": "since 引导时间状语从句表示「自从」,主句常用现在完成时(have known)与之呼应。"
+ },
+ {
+  "no": 10,
+  "d": 2,
+  "stem": "We did not leave the shop ____ we counted every penny.",
+  "opts": [
+   "while",
+   "when",
+   "until",
+   "before"
+  ],
+  "ans": "C",
+  "expl": "not … until 表示「直到……才」,until 引导时间状语从句,说明动作持续到从句所指的时刻。"
+ },
+ {
+  "no": 11,
+  "d": 2,
+  "stem": "As soon as the sale ____, we will go and buy the T-shirt.",
+  "opts": [
+   "begins",
+   "began",
+   "will begin",
+   "beginning"
+  ],
+  "ans": "A",
+  "expl": "as soon as 引导时间状语从句,表示「一……就……」;从句用一般现在时表示将来,主句用一般将来时。"
+ },
+ {
+  "no": 12,
+  "d": 2,
+  "stem": "Before you ____ the money, please write down the date.",
+  "opts": [
+   "will spend",
+   "spent",
+   "spending",
+   "spend"
+  ],
+  "ans": "D",
+  "expl": "before 引导时间状语从句,从句用一般现在时表示将来的动作,不能用 will;主句为祈使句。"
+ },
+ {
+  "no": 13,
+  "d": 3,
+  "stem": "Choose the word that fits BOTH blanks: \"____ everyone has arrived, let us begin.\"  /  \"I have kept my savings ____ I was ten.\"",
+  "opts": [
+   "when",
+   "because",
+   "since",
+   "until"
+  ],
+  "ans": "C",
+  "expl": "since 有两种用法:引导原因状语从句表示「既然」(第一句,说明已知理由);引导时间状语从句表示「自从」(第二句,主句用现在完成时 have kept)。判断依据是主句时态与语境。"
+ },
+ {
+  "no": 14,
+  "d": 3,
+  "stem": "I always check the price ____ I pay, so I never spend more than my budget.",
+  "opts": [
+   "before",
+   "after",
+   "until",
+   "since"
+  ],
+  "ans": "A",
+  "expl": "先看价格、后付钱,故用 before 引导时间状语从句表示主句动作在其之前发生。若用 after 则先后颠倒,与「从不超支」的结果矛盾。"
+ },
+ {
+  "no": 15,
+  "d": 3,
+  "stem": "My grandpa says a penny is worth saving ____ you live — in a big city or a small town.",
+  "opts": [
+   "when",
+   "wherever",
+   "until",
+   "since"
+  ],
+  "ans": "B",
+  "expl": "wherever 引导地点状语从句,表示「无论住在哪里」;破折号后列举的两个地点证实此处问的是地点而非时间。"
+ }
+]

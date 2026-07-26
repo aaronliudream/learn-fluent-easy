@@ -124,6 +124,13 @@ export default {
             height: "0",
           },
         },
+        // 图书馆词库入口卡 · 空态微光:高光块自左向右扫过一次(位移用 % of 自身宽度,不触发重排)
+        vocabSheen: {
+          "0%": { transform: "translateX(0) skewX(-12deg)", opacity: "0" },
+          "35%": { opacity: "1" },
+          "65%": { opacity: "1" },
+          "100%": { transform: "translateX(600%) skewX(-12deg)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

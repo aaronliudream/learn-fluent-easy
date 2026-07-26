@@ -1,0 +1,47 @@
+name: audio-precheck
+
+# 上线前置闸：PR 改到内容数据时，检查这批新内容的音频是否已生成。
+#
+# 为什么必须是 PR 闸而不是周巡检：周巡检的检出延迟最长 7 天，而这 7 天里新内容
+# 在自动播路径上就是**静音**（speak.ts 非手势分支遇冷 key 只预热不出声）。
+# 文档里的"合入前跑两步"会被跳过——尤其同时跑多条内容产线时。
+#
+# 不需要任何 secret：只对公开 CDN（audio.bigmooneducation.com）发 HEAD。
+# 修复动作在作者本地跑（那里有 anon key），失败信息里给出可复制的命令。
+#
+# 退出码：0 = 无缺口/未触及内容；1 = 有缺口（要作者本地 backfill 后重推）；
+#         2 = 配置/覆盖率错误（新内容文件没在映射表分类）；3 = 金丝雀失败，本轮作废。
+
+on:
+  pull_request:
+    paths:
+      - 'src/data/**'
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # 需要 base 分支来算 diff（只检查本 PR 改动到的内容文件）
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # 只用 Node 内置模块（fs/path/crypto/fetch），不装依赖
+      - name: 只检查本 PR 改动到的内容文件
+        run: |
+          node scripts/audio/precheck-changed.mjs \
+            --section primary \
+            --base "origin/${{ github.base_ref }}"
+
+      - name: 上传缺口清单（便于本地直接喂给 backfill）
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audio-precheck-gap-list
+          path: data/audio-audit/precheck_primary_list.csv
+          if-no-files-found: ignore

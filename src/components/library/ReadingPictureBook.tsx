@@ -15,7 +15,7 @@
  */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
-import { TappableLine, type SpeakFn } from "@/components/TappableLine";
+import { TappableLine } from "@/components/TappableLine";
 import { illustrationUrl, type LibraryCultureNote, type LibraryWordSense } from "@/lib/library/data";
 import type { PictureBookPage } from "@/lib/library/pictureBook";
 import type { LibraryFavoriteKind } from "@/lib/library/favorites";
@@ -46,8 +46,6 @@ export type ReadingPictureBookProps = {
   /** 移动端长按揭示可点词(与原阅读器一致,可不传)。 */
   onLongPressStart?: () => void;
   onLongPressCancel?: () => void;
-  /** 点词发音实现,透传给 TappableLine。阅读器注入 Web Audio 版以躲开 iOS 灵动岛;不传则用默认 speak()。 */
-  speakFn?: SpeakFn;
 };
 
 const SWIPE_MIN_X = 50; // 判定为翻页的最小水平位移
@@ -72,7 +70,6 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
     onFavoriteChange,
     onLongPressStart,
     onLongPressCancel,
-    speakFn,
   } = props;
 
   const [page, setPage] = useState(0);
@@ -223,7 +220,6 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
                     cultureNotes={cultureNotes}
                     wordSenses={wordSenses}
                     onFavoriteChange={onFavoriteChange}
-                    speakFn={speakFn}
                   />{" "}
                 </span>
               ))}

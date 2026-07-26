@@ -2,8 +2,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { readPrimaryGradeFromStorage } from "@/lib/primaryGrade";
 import { loadSettings } from "@/lib/voice";
 import { cleanForTTS } from "@/lib/ttsClean";
-import { getAudioContext } from "@/lib/audio/audioContext";
-import { isWebAudioPlaying } from "@/lib/audio/webAudioPlayer";
 
 let lastSpoken = "";
 let speakToken = 0;
@@ -34,10 +32,10 @@ const ensureLoudnessRouting = (audio: HTMLAudioElement) => {
     return;
   }
   try {
-    // 共享单例(见 lib/audio/audioContext.ts):朗读层的 Web Audio 播放器用的是
-    // 同一个 context,不能在这里再 new 一个 —— iOS 上多 context 会互相抢解锁状态。
-    if (!audioCtx) audioCtx = getAudioContext();
-    if (!audioCtx) return;
+    const Ctx: typeof AudioContext | undefined =
+      window.AudioContext || (window as any).webkitAudioContext;
+    if (!Ctx) return;
+    if (!audioCtx) audioCtx = new Ctx();
     if (audioCtx.state === "suspended") audioCtx.resume().catch(() => {});
     if (mediaSource) {
       try { mediaSource.disconnect(); } catch {}
@@ -301,14 +299,11 @@ export const stopSpeaking = () => {
  * 直接读 currentAudio 的实时状态：播放中 = 有元素且未暂停未结束。
  * 自纠正——自然结束(.ended)、出错(.paused)、stopCurrent(置 null) 都会立刻转 false，
  * 即使没有显式 stop 广播也不会"卡住一直计时"。
- * 注：覆盖 HTMLAudioElement 播放（美语/新概念 TTS 走此路）+ 朗读层的 Web Audio 播放
- * （图书馆阅读器为消灭 iOS 灵动岛已改走 AudioContext，不再有 <audio> 可读）；
- * SpeechSynthesis 回退不计。
+ * 注：仅覆盖 HTMLAudioElement 播放（美语/新概念 TTS 走此路）；SpeechSynthesis 回退不计。
  */
 export const isSpeaking = (): boolean => {
   const a = currentAudio;
-  if (a && !a.paused && !a.ended) return true;
-  return isWebAudioPlaying();
+  return !!a && !a.paused && !a.ended;
 };
 
 const getSharedAudio = () => {
@@ -691,47 +686,6 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
 /** 某文本在该 voice/speed/accent 下是否正处于冷合成中(现基于去重表 inflightCold)。 */
 export const isSynthInFlight = (text: string, voiceId: string, speed: number, accent?: string): boolean =>
   inflightCold.has(`${voiceId}|${speed}|${accent || ''}|${(text || '').trim()}`);
-
-/**
- * 只把文本解析成可播的音频 URL,**绝不碰任何 <audio>**。
- *
- * 给朗读层(Web Audio 播放器)用:iOS 上一旦有 <audio> 出声就会注册 Now Playing,
- * 所以朗读不能走 speak()。URL 的解析逻辑(内存缓存 → localStorage → CDN 预测 →
- * edge 合成 + 冷合成去重)与 speak() 完全共用,不另起一套,免得两条路径缓存键漂移。
- *
- * 缓存键与失效判定逐字节对齐 speak(),命中 speak() 预热过的音频。
- */
-export const resolveTtsUrl = async (
-  text: string,
-  opts?: { accent?: "UK" | "US" | "BOTH"; voiceId?: string; speed?: number },
-): Promise<string | null> => {
-  const trimmed = (text || "").trim();
-  if (!trimmed) return null;
-  const settings = loadSettings();
-  const voiceId = opts?.voiceId || settings.voiceId;
-  const speed = opts?.speed ?? settings.speed;
-  const accent = opts?.accent;
-  const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
-
-  // 历史坏键(o'clock 那批)直接判失效并清掉,和 speak() 的 useCachedUrl 同规则。
-  const usable = (url: string): boolean =>
-    !isLegacyBadTtsKey(cacheKey) && isValidOClockCacheEntry(cacheKey, url);
-
-  const cached = audioCache.get(cacheKey);
-  if (cached) {
-    if (usable(cached)) return cached;
-    audioCache.delete(cacheKey);
-  }
-  const persisted = loadPersist().get(cacheKey);
-  if (persisted) {
-    if (usable(persisted)) {
-      audioCache.set(cacheKey, persisted);
-      return persisted;
-    }
-    loadPersist().delete(cacheKey);
-  }
-  return coldFetchShared(cacheKey, trimmed, voiceId, speed, accent);
-};
 
 // Speak a list of sentences one-by-one with a small pause between them.
 // This sounds far more natural than concatenating an entire paragraph and

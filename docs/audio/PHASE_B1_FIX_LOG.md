@@ -117,59 +117,51 @@ edge `:380` 的 OpenAI 兜底（`fallbackVoice = "shimmer"`），cache key 里�
 
 ---
 
----
+## B1.1 生产域验收（合并后实测，2026-07-26）✅ 已完成
 
-## B1.1 生产域验收（合并后实测，2026-07-26）✅
-
-合并 commit  → Vercel 生产部署 state=success 后立即实测
-（ase=https://www.bigmoonenglish.com
-SPA 路由 173 条 / 静态资源抽样 122 个 / 缺失探针 4 条 → 共 306 次 HEAD
-  60/306
-  120/306
-  180/306
-  240/306
-  300/306
-
-================ 生产域验收 ================
-SPA 路由      : PASS 173 / FAIL 0（共 173）
-静态资源      : PASS 122 / FAIL 0（共 122）
-缺失探针(应404): PASS 4 / FAIL 0（共 4）
-content-type 家族异常: 0
-CSV: data/audio-audit/b1_production_verify.csv
-
-✅ 全绿，结果表 ）：
+合并 commit `a5ca3b68` → Vercel 生产部署 state=success 后立即实测。
+脚本 `scripts/audio/verify-production-routing.mjs`，结果表 `data/audio-audit/b1_production_verify.csv`。
 
 | 项 | 合并前 | 合并后 |
 |---|---|---|
-| SPA 路由（173 条真实完整路由，参数用真实值） | 173/173 200 text/html | **173/173 200 text/html** |
+| SPA 路由（173 条真实完整路由，参数填真实值） | 173/173 → 200 text/html | **173/173 → 200 text/html** |
 | 静态资源（public/ 分层抽样 + 线上 index.html 解析出的真实 /assets/*） | 113/113 正常 | **113/113 正常** |
 | 缺失资源探针（含 water.mp3） | **4/4 是 200 text/html（假 200）** | **4/4 是 404** ✅ |
 | content-type 家族异常 | 0 | 0 |
 
-验收口径有两处是实测校正过的，不校正会误判：
-1. 生产是 **apex → www 的 307 规范跳转**，必须直连 ；打 apex 全是 307。
-2. 静态资源**不能用本地 dist/assets/***（build hash 与线上不同，会全部测成不存在）；
-   改为 public/（路径稳定）+ 运行时从线上 index.html 解析真实构建产物； 静态文件单独放行。
+（合并后又独立复跑了一次，抽样换成 122 个静态资源，同样 173/173 + 122/122 + 4/4 全绿。）
 
-另外修正了一个更要命的口径错误：SPA 路由必须**还原  嵌套**。
-直接拿  原值加 / 会造出 71 条根本不存在的假 URL（、 之流，
-靠 SPA 兜底照样 200，测了等于没测），同时把 90 条真实嵌套路由整片漏掉（ 这些）。
-按 path= 计 173 条、扁平去重后只剩 154 条的差额（19 条 / 10 组），全部是
-//////这类在小学/初中/高考三个 hub 下重名的**子路由**。还原嵌套后：**173 条 path= → 173 条唯一完整 URL，零折叠**。
+### 验收口径有三处是被实测打脸后校正的，不校正就会误判
 
-参数路由的点号风险已实查：能读到的自由取值空间（library_books.book_key 5 个、american_lessons.id 276 个）
-**零个含点号**，因此不会撞上后缀白名单。规则的失效条件很窄——参数值必须以  + 白名单里那 31 个后缀之一结尾
-（ 会 404，而  不受影响）。
-⚠️ gaokao/junior 的 grammar slug 表 anon 读不到（RLS），这部分取值空间**未能枚举**，属残留未知。
+1. **必须直连 www**：生产是 apex → www 的 **307 规范跳转**，打 `bigmoonenglish.com` 会全部收到 307。
+2. **静态资源不能用本地 `dist/assets/*`**：build hash 与线上不同，本地那批文件名在线上根本不存在，
+   测出来会"全军覆没"。改为 `public/`（路径稳定）+ 运行时从线上 index.html 解析真实构建产物；
+   `.html` 静态文件单独放行（它们本来就该是 text/html）。
+3. **SPA 路由必须还原 `<Route>` 嵌套**——这条最要命。直接拿 `path=` 原值前面加 `/`，
+   会造出 71 条根本不存在的假 URL（`/course`、`/semester/x1` 之流，靠 SPA 兜底照样 200，测了等于没测），
+   同时把 90 条真实嵌套路由整片漏掉（`/primary/hub/4/semester/…/stage/1/phonics` 这些）。
+
+### 173 vs 154 的差额说明
+
+按 `path=` 计 173 条，旧扁平法去重后只剩 154 条，差 **19 条（10 组）**，全部是子路由重名：
+`mistakes` ×4、`course` ×3、`semester/:semId` ×3、`semester/:semId/unit/:unitId` ×3、
+`…/stage/:stageIdx` ×3、`profile` ×3、`aitest` ×3、`aihistory` ×3、`final-challenge` ×2、
+`final-challenge/level/:levelId` ×2 —— 它们分别挂在小学 / 初中 / 高考三个 hub 下。
+**还原嵌套后：173 条 `path=` → 173 条唯一完整 URL，零折叠。**
+
+### 参数路由的点号风险（实查）
+
+规则的失效条件很窄：参数值必须以 `.` + 白名单里那 31 个后缀之一结尾才会被打成 404
+（`/library/book.json` 会 404；`/library/tom.sawyer` 不受影响，因为 `sawyer` 不在白名单里）。
+能读到的自由取值空间实查结果：`library_books.book_key` 5 个、`american_lessons.id` 276 个，
+**含点号 0 个、命中白名单 0 个**。
+⚠️ 残留未知：gaokao / junior 的 grammar slug 表 anon key 读不到（RLS），这部分取值空间未能枚举。
+
+---
 
 ## 待 Aaron
 
 1. **跑 SQL**：`https://github.com/aaronliudream/learn-fluent-easy/blob/main/SQLAA/2026-07-25-删除损坏TTS对象-funny.sql`
-   （合并到 main 后此链接生效；当前分支上的同名文件内容一致）
-   跑完请对文件里那条 CF URL 做一次 Cloudflare Purge。
-2. **B1.1 验收二选一**：
-   - 给一个 `VERCEL_AUTOMATION_BYPASS_SECRET`，CC 自己在预览域跑两条 HEAD；或
-   - Aaron 自己在预览域跑这两条（登录状态下浏览器直接开也行）：
-     - `/audio/primary/phonics/g4v2_u1/water.mp3` → 期望 **404**（改前是 200 text/html）
-     - `/junior` → 期望 **200 text/html**（SPA 路由不能被误伤）
-   两条都过才算 B1.1 完成；任一不过我立刻回滚 vercel.json。
+   跑完请对文件里那条 CF URL 做一次 Cloudflare Purge，然后通知 CC 走 funny 修复三步
+   （HEAD 确认已非 1920B → 预热一次 → CDN 复验 200 且 ≥2KB → 下载解析帧数对照 ruler 的 85 帧 / 2.040 秒）。
+2. （可选）`SQLAA/2026-07-26-删除B2探针对象.sql`：清掉 B2 冷路径验证留下的一次性探针对象。

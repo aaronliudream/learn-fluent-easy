@@ -1,0 +1,1496 @@
+﻿key,text,status,cdn_status,bytes,needs_purge,reason,attempts,provider
+elevenlabs|el:lily|0.85||a long ruler,a long ruler,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||my ruler,my ruler,created,200,19584,no,,1,openai
+elevenlabs|el:lily|0.85||use a ruler,use a ruler,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a new pencil,a new pencil,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||my pencil,my pencil,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a red pencil,a red pencil,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||a small eraser,a small eraser,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||my eraser,my eraser,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a new eraser,a new eraser,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a red crayon,a red crayon,created,200,62976,no,,1,openai
+elevenlabs|el:lily|0.85||my crayon,my crayon,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a box of crayons,a box of crayons,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||my bag,my bag,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a new bag,a new bag,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a school bag,a school bag,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a blue pen,a blue pen,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||my pen,my pen,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a new pen,a new pen,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a new pencil box,a new pencil box,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||my pencil box,my pencil box,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||open the pencil box,open the pencil box,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||a new book,a new book,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||my book,my book,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||read a book,read a book,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a red apple,a red apple,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||red and yellow,red and yellow,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||show me red,show me red,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||green grass,green grass,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a green leaf,a green leaf,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||red and green,red and green,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a yellow banana,a yellow banana,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||yellow and blue,yellow and blue,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||the yellow sun,the yellow sun,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||the blue sky,the blue sky,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||blue and white,blue and white,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a black cat,a black cat,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||black and white,black and white,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||black shoes,black shoes,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a brown bear,a brown bear,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||brown hair,brown hair,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a brown dog,a brown dog,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||white milk,white milk,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a white cloud,a white cloud,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a sweet orange,a sweet orange,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||eat an orange,eat an orange,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||my face,my face,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||wash my face,wash my face,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.85||a happy face,a happy face,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||my ears,my ears,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||two ears,two ears,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||big ears,big ears,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||my eyes,my eyes,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||two eyes,two eyes,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||big eyes,big eyes,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||my nose,my nose,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a big nose,a big nose,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.85||touch my nose,touch my nose,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||my mouth,my mouth,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a big mouth,a big mouth,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||open your mouth,open your mouth,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||my arms,my arms,created,200,57216,no,,1,openai
+elevenlabs|el:lily|0.85||two arms,two arms,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||a long arm,a long arm,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||my hands,my hands,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||wash your hands,wash your hands,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||two hands,two hands,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||my head,my head,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a big head,a big head,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||touch your head,touch your head,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.7||Hello! I'm Chen Jie.,Hello! I'm Chen Jie.,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||Let's make a puppet!,Let's make a puppet!,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||Great!,Great!,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a little duck,a little duck,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a yellow duck,a yellow duck,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||two ducks,two ducks,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a fat pig,a fat pig,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a pink pig,a pink pig,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a little pig,a little pig,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||my cat,my cat,created,200,21504,no,,1,openai
+elevenlabs|el:lily|0.85||a little cat,a little cat,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a big bear,a big bear,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a teddy bear,a teddy bear,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a big dog,a big dog,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||my dog,my dog,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a little dog,a little dog,created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.85||a big elephant,a big elephant,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a grey elephant,a grey elephant,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||two elephants,two elephants,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||a little monkey,a little monkey,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a funny monkey,a funny monkey,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||two monkeys,two monkeys,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a little bird,a little bird,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a bird sings,a bird sings,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.85||two birds,two birds,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||What's this?,What's this?,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||It's a duck.,It's a duck.,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||What's that?,What's that?,created,200,33408,no,,1,openai
+elevenlabs|el:lily|0.7||It's a panda. I like it!,It's a panda. I like it!,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.85||some bread,some bread,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||eat bread,eat bread,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||a piece of bread,a piece of bread,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||some juice,some juice,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||orange juice,orange juice,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a glass of juice,a glass of juice,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||an egg,an egg,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||eat an egg,eat an egg,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||two eggs,two eggs,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||some milk,some milk,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||drink milk,drink milk,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a glass of milk,a glass of milk,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||some water,some water,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||drink water,drink water,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a glass of water,a glass of water,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a big cake,a big cake,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||a birthday cake,a birthday cake,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||eat cake,eat cake,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||eat fish,eat fish,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||some fish,some fish,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a little fish,a little fish,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||some rice,some rice,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||eat rice,eat rice,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a bowl of rice,a bowl of rice,created,200,35328,no,,1,openai
+"elevenlabs|el:lily|0.7||I'd like some juice, please.","I'd like some juice, please.",created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||Here you are.,Here you are.,created,200,36864,no,,1,openai
+"elevenlabs|el:lily|0.7||Can I have some bread, please?","Can I have some bread, please?",created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.85||one apple,one apple,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||one book,one book,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||this one,this one,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||two cats,two cats,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||two and three,two and three,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||three pens,three pens,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||three dogs,three dogs,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||four ducks,four ducks,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||four books,four books,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||four and five,four and five,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||five plates,five plates,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.85||five fingers,five fingers,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||six eggs,six eggs,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||six cakes,six cakes,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||six and seven,six and seven,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||seven days,seven days,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||seven birds,seven birds,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||eight pencils,eight pencils,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||eight fish,eight fish,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||seven and eight,seven and eight,created,200,36480,no,,1,openai
+"elevenlabs|el:lily|0.7||This one, please.","This one, please.",created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||How many plates?,How many plates?,created,200,36096,no,,1,openai
+elevenlabs|el:lily|0.7||Five.,Five.,created,200,28800,no,,1,openai
+elevenlabs|el:lily|0.85||from the UK,from the UK,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||in the UK,in the UK,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||from Canada,from Canada,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||go to Canada,go to Canada,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||from the USA,from the USA,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||in the USA,in the USA,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||from China,from China,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||love China,love China,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||in China,in China,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||she is happy,she is happy,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||she can sing,she can sing,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a good student,a good student,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||a new student,a new student,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||I am a student,I am a student,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a good pupil,a good pupil,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a new pupil,a new pupil,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||he is tall,he is tall,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||he can run,he can run,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||Welcome!,Welcome!,created,200,28800,no,,1,openai
+elevenlabs|el:lily|0.7||Welcome back to school!,Welcome back to school!,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||Where are you from?,Where are you from?,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||I'm from China.,I'm from China.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.85||my father,my father,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a tall father,a tall father,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||my father's car,my father's car,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||my dad,my dad,created,200,31872,no,,1,openai
+"elevenlabs|el:lily|0.85||hi, dad","hi, dad",created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||a tall man,a tall man,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a kind man,a kind man,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||that man,that man,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||a young woman,a young woman,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a kind woman,a kind woman,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||that woman,that woman,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||my mother,my mother,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a kind mother,a kind mother,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||my mother's bag,my mother's bag,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||my sister,my sister,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||a little sister,a little sister,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||my brother,my brother,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a big brother,a big brother,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||my grandmother,my grandmother,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a kind grandmother,a kind grandmother,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.7||Who's that man?,Who's that man?,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||He's my father.,He's my father.,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||Who's that woman?,Who's that woman?,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||She's my mother.,She's my mother.,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a thin cat,a thin cat,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||thin and tall,thin and tall,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a fat cat,a fat cat,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||so tall,so tall,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a tall boy,a tall boy,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a short pencil,a short pencil,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||short hair,short hair,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||long hair,long hair,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||a small dog,a small dog,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a small box,a small box,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||a big box,a big box,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||so big,so big,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a tall giraffe,a tall giraffe,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||look at the giraffe,look at the giraffe,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.7||Look at the giraffe.,Look at the giraffe.,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||It's so tall!,It's so tall!,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||Look at the monkey.,Look at the monkey.,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.7||It's so funny!,It's so funny!,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.85||on the desk,on the desk,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||on the chair,on the chair,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||in the desk,in the desk,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||in the box,in the box,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||under the chair,under the chair,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||under the desk,under the desk,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a small chair,a small chair,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||sit on the chair,sit on the chair,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||a new desk,a new desk,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a red cap,a red cap,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a new cap,a new cap,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a big ball,a big ball,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||play with a ball,play with a ball,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||my car,my car,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a red car,a red car,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a toy car,a toy car,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||Where is my pencil box?,Where is my pencil box?,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||It's on the desk.,It's on the desk.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||Where is my map?,Where is my map?,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||It's in the desk.,It's in the desk.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.85||a sweet pear,a sweet pear,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||eat a pear,eat a pear,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||eat an apple,eat an apple,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||eat a banana,eat a banana,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a big watermelon,a big watermelon,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||eat watermelon,eat watermelon,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a red strawberry,a red strawberry,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||a sweet strawberry,a sweet strawberry,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||a green grape,a green grape,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||eat grapes,eat grapes,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||buy some fruit,buy some fruit,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||buy an apple,buy an apple,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||eleven kites,eleven kites,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||number eleven,number eleven,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||twelve books,twelve books,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||number twelve,number twelve,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||thirteen pens,thirteen pens,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||number thirteen,number thirteen,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||fourteen dogs,fourteen dogs,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||number fourteen,number fourteen,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||fifteen apples,fifteen apples,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||number fifteen,number fifteen,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||sixteen crayons,sixteen crayons,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||number sixteen,number sixteen,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||seventeen cars,seventeen cars,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||number seventeen,number seventeen,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.85||eighteen balls,eighteen balls,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||number eighteen,number eighteen,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.7||How many kites do you see?,How many kites do you see?,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||I see 12.,I see 12.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||How many crayons do you have?,How many crayons do you have?,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||I have 16.,I have 16.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.85||a big classroom,a big classroom,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||in the classroom,in the classroom,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a new classroom,a new classroom,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||clean the window,clean the window,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||near the window,near the window,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a big blackboard,a big blackboard,created,200,62976,no,,1,openai
+elevenlabs|el:lily|0.85||clean the blackboard,clean the blackboard,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||on the blackboard,on the blackboard,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||turn on the light,turn on the light,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||turn off the light,turn off the light,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a bright light,a bright light,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||a nice picture,a nice picture,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||open the door,open the door,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||close the door,close the door,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a red door,a red door,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||a new computer,a new computer,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||use the computer,use the computer,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||on the computer,on the computer,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||turn on the fan,turn on the fan,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a big fan,a big fan,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||on the fan,on the fan,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||on the wall,on the wall,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a white wall,a white wall,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||a tall wall,a tall wall,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||clean the floor,clean the floor,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||on the floor,on the floor,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a clean floor,a clean floor,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||really big,really big,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||really nice,really nice,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||near the door,near the door,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||near my home,near my home,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||watch TV,watch TV,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a new TV,a new TV,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||on TV,on TV,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||clean the room,clean the room,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||clean the desk,clean the desk,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||help me,help me,created,200,19584,no,,1,openai
+elevenlabs|el:lily|0.85||help you,help you,created,200,17664,no,,1,openai
+elevenlabs|el:lily|0.85||ask for help,ask for help,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||The door is orange. The desks are green.,The door is orange. The desks are green.,created,200,78720,no,,1,openai
+elevenlabs|el:lily|0.85||a new schoolbag,a new schoolbag,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||in my schoolbag,in my schoolbag,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a heavy schoolbag,a heavy schoolbag,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a maths book,a maths book,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||open the maths book,open the maths book,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||a Chinese book,a Chinese book,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||my Chinese book,my Chinese book,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||read a storybook,read a storybook,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||three storybooks,three storybooks,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||a new notebook,a new notebook,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||write in the notebook,write in the notebook,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||sweet candy,sweet candy,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||eat candy,eat candy,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a new toy,a new toy,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||play with a toy,play with a toy,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||two toys,two toys,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||my key,my key,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||find the key,find the key,created,200,32640,no,,1,openai
+"elevenlabs|el:lily|0.85||Wow, it's big!","Wow, it's big!",created,200,40320,no,,1,openai
+"elevenlabs|el:lily|0.85||Wow, so nice!","Wow, so nice!",created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||lost my key,lost my key,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||lost my schoolbag,lost my schoolbag,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a cute toy,a cute toy,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||so cute,so cute,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.85||a cute panda,a cute panda,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.7||I have a new schoolbag.,I have a new schoolbag.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||What's in your schoolbag?,What's in your schoolbag?,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.85||What's in your schoolbag?,What's in your schoolbag?,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.7||Wow! It's a panda!,Wow! It's a panda!,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||Excuse me. I lost my schoolbag.,Excuse me. I lost my schoolbag.,created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.7||What colour is it?,What colour is it?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||It's blue and white.,It's blue and white.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||What's in it?,What's in it?,created,200,33408,no,,1,openai
+elevenlabs|el:lily|0.7||Oh no! My bag is heavy!,Oh no! My bag is heavy!,created,200,77184,no,,1,openai
+elevenlabs|el:lily|0.85||tall and strong,tall and strong,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||a strong boy,a strong boy,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||very strong,very strong,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||a friendly girl,a friendly girl,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||quiet and friendly,quiet and friendly,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||very friendly,very friendly,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a quiet boy,a quiet boy,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||be quiet,be quiet,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||black hair,black hair,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||a blue shoe,a blue shoe,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||new shoes,new shoes,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||my shoes,my shoes,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||wear glasses,wear glasses,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||blue glasses,blue glasses,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||his glasses,his glasses,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||his name,his name,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||his shoes,his shoes,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||His name is Zhang Peng.,His name is Zhang Peng.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||She has long hair.,She has long hair.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||His glasses are blue.,His glasses are blue.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.85||in the bedroom,in the bedroom,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||my bedroom,my bedroom,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a small bedroom,a small bedroom,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||in the study,in the study,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||go to the study,go to the study,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||in the kitchen,in the kitchen,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||a clean kitchen,a clean kitchen,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||go to the kitchen,go to the kitchen,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||in the bathroom,in the bathroom,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||go to the bathroom,go to the bathroom,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||on the bed,on the bed,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||under the bed,under the bed,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a big bed,a big bed,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||a new phone,a new phone,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||on the phone,on the phone,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||answer the phone,answer the phone,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||on the table,on the table,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a big table,a big table,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||near the table,near the table,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||on the sofa,on the sofa,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a soft sofa,a soft sofa,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||sit on the sofa,sit on the sofa,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||in the fridge,in the fridge,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||on the fridge,on the fridge,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||open the fridge,open the fridge,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||It's in the kitchen.,It's in the kitchen.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||The keys are on the fridge.,The keys are on the fridge.,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||Is she in the living room?,Is she in the living room?,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.85||some beef,some beef,created,200,57984,no,,1,openai
+elevenlabs|el:lily|0.85||beef and noodles,beef and noodles,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||eat beef,eat beef,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||some chicken,some chicken,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||chicken and vegetables,chicken and vegetables,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a bowl of noodles,a bowl of noodles,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||eat noodles,eat noodles,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||beef noodles,beef noodles,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||some soup,some soup,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a bowl of soup,a bowl of soup,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||chicken soup,chicken soup,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||fresh vegetables,fresh vegetables,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||eat vegetables,eat vegetables,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||green vegetables,green vegetables,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||a big bowl,a big bowl,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||a knife and fork,a knife and fork,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||use a fork,use a fork,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||pass me the fork,pass me the fork,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.85||cut with a knife,cut with a knife,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a small spoon,a small spoon,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||eat with a spoon,eat with a spoon,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||pass me the spoon,pass me the spoon,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||I'd like some beef and noodles.,I'd like some beef and noodles.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||Would you like some soup?,Would you like some soup?,created,200,36864,no,,1,openai
+"elevenlabs|el:lily|0.7||Pass me the knife and fork, please.","Pass me the knife and fork, please.",created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.85||my uncle,my uncle,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a kind uncle,a kind uncle,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||my baby brother,my baby brother,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a cute baby brother,a cute baby brother,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a good doctor,a good doctor,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||be a doctor,be a doctor,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a good cook,a good cook,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||be a cook,be a cook,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a bus driver,a bus driver,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a taxi driver,a taxi driver,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||be a driver,be a driver,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||be a farmer,be a farmer,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a kind nurse,a kind nurse,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||be a nurse,be a nurse,created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.7||My family has six people.,My family has six people.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||Is this your uncle?,Is this your uncle?,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||She's a nurse.,She's a nurse.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.85||the first floor of the building,the first floor of the building,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||on the second floor,on the second floor,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||go up to the second floor,go up to the second floor,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||go to the teachers' office,go to the teachers' office,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||the school library,the school library,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||books in the library,books in the library,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||on the playground,on the playground,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||play on the playground,play on the playground,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||the computer room,the computer room,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||go to the computer room,go to the computer room,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||the music room,the music room,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||sing in the music room,sing in the music room,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||do my homework,do my homework,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||in our class,in our class,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a big class,a big class,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||forty students,forty students,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||forty-five students,forty-five students,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||on the way,on the way,created,200,55296,no,,1,openai
+"elevenlabs|el:lily|0.85||this way, please","this way, please",created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||Hi. Is this the teachers' office?,Hi. Is this the teachers' office?,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||It's so big! How many students are there in your class?,It's so big! How many students are there in your class?,created,200,81120,no,,1,openai
+elevenlabs|el:lily|0.85||have breakfast,have breakfast,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||time for breakfast,time for breakfast,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||have lunch,have lunch,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||time for lunch,time for lunch,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||have dinner,have dinner,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a big dinner,a big dinner,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||have a music class,have a music class,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||time for music class,time for music class,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||have a PE class,have a PE class,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||time for PE class,time for PE class,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||go home now,go home now,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||time to go home,time to go home,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||time to go to bed,time to go to bed,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||right now,right now,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||School is over.,School is over.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||The class is over.,The class is over.,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a little kid,a little kid,created,200,23424,no,,1,openai
+"elevenlabs|el:lily|0.85||come on, kids","come on, kids",created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||thirty minutes,thirty minutes,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||six thirty,six thirty,created,200,59136,no,,1,openai
+"elevenlabs|el:lily|0.85||hurry up, please","hurry up, please",created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||Just a minute!,Just a minute!,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||wait just a minute,wait just a minute,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.7||It's 7 o'clock. It's time to get up.,It's 7 o'clock. It's time to get up.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||Hurry up! It's time for breakfast.,Hurry up! It's time for breakfast.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||It's cold today.,It's cold today.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||cold water,cold water,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a cool day,a cool day,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||cool and windy,cool and windy,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||warm weather,warm weather,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||sunny and warm,sunny and warm,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a hot day,a hot day,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||hot soup,hot soup,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a sunny day,a sunny day,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||It's sunny.,It's sunny.,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||a windy day,a windy day,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||It's windy.,It's windy.,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a cloudy day,a cloudy day,created,200,57984,no,,1,openai
+elevenlabs|el:lily|0.85||It's cloudy.,It's cloudy.,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a snowy day,a snowy day,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||cold and snowy,cold and snowy,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a rainy day,a rainy day,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||rainy and cool,rainy and cool,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||go outside,go outside,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||play outside,play outside,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||good weather,good weather,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||the weather report,the weather report,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||in New York,in New York,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||twenty degrees,twenty degrees,created,200,40320,no,,1,openai
+"elevenlabs|el:lily|0.85||No, you can't. It's cold outside. Be careful!","No, you can't. It's cold outside. Be careful!",created,200,61920,no,,1,openai
+"elevenlabs|el:lily|0.85||Hi, Chen Jie! What's the weather like in Beijing?","Hi, Chen Jie! What's the weather like in Beijing?",created,200,69120,no,,1,openai
+elevenlabs|el:lily|0.85||It's rainy and cool. It's 26 degrees.,It's rainy and cool. It's 26 degrees.,created,200,78720,no,,1,openai
+elevenlabs|el:lily|1||It's rainy and cool. It's 26 degrees.,It's rainy and cool. It's 26 degrees.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.85||a red tomato,a red tomato,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||some tomatoes,some tomatoes,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||a big potato,a big potato,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||some potatoes,some potatoes,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||an orange carrot,an orange carrot,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||some carrots,some carrots,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a white horse,a white horse,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||ride a horse,ride a horse,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a big cow,a big cow,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||some cows,some cows,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||a white sheep,a white sheep,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||ten sheep,ten sheep,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a hen and eggs,a hen and eggs,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.85||some hens,some hens,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||these tomatoes,these tomatoes,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||Yum!,Yum!,created,200,25344,no,,1,openai
+"elevenlabs|el:lily|0.85||yum, so good","yum, so good",created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||a lot of animals,a lot of animals,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||farm animals,farm animals,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||those horses,those horses,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||on the farm,on the farm,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a big farm,a big farm,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a little goat,a little goat,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||some goats,some goats,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||eat the carrots,eat the carrots,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||eat lunch,eat lunch,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||Wow! You have a lot of animals! What are those?,Wow! You have a lot of animals! What are those?,created,200,65760,no,,1,openai
+elevenlabs|el:lily|0.7||Look at these! Are these carrots?,Look at these! Are these carrots?,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||What are these?,What are these?,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||They're tomatoes.,They're tomatoes.,created,200,51840,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, they are.","Yes, they are.",created,200,63744,no,,1,openai
+"elevenlabs|el:lily|0.85||Yes, they are.","Yes, they are.",created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.7||What are those?,What are those?,created,200,29952,no,,1,openai
+"elevenlabs|el:lily|0.7||No, they aren't. They're ducks.","No, they aren't. They're ducks.",created,200,126336,no,,1,openai
+elevenlabs|el:lily|0.7||How many horses do you have?,How many horses do you have?,created,200,83712,no,,1,openai
+elevenlabs|el:lily|0.7||Seventeen.,Seventeen.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.85||new clothes,new clothes,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||pack the clothes,pack the clothes,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.85||blue pants,blue pants,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a red hat,a red hat,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||put on a hat,put on a hat,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a pretty dress,a pretty dress,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||a long dress,a long dress,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||a warm coat,a warm coat,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||put on a coat,put on a coat,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a red sweater,a red sweater,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a warm sweater,a warm sweater,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a pair of socks,a pair of socks,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||white socks,white socks,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||black shorts,black shorts,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||a pair of shorts,a pair of shorts,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||a blue jacket,a blue jacket,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||put on a jacket,put on a jacket,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||a white shirt,a white shirt,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a clean shirt,a clean shirt,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||Is this yours?,Is this yours?,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||Are these yours?,Are these yours?,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||Whose pants are those?,Whose pants are those?,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||pack the bag,pack the bag,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||pack your clothes,pack your clothes,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||wait for me,wait for me,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||Wait a minute!,Wait a minute!,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.7||Whose pants are those? They're Mike's.,Whose pants are those? They're Mike's.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.7||I want to wear my blue pants.,I want to wear my blue pants.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.85||I want to wear my blue pants.,I want to wear my blue pants.,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||a pair of gloves,a pair of gloves,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||warm gloves,warm gloves,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||a long scarf,a long scarf,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||a warm scarf,a warm scarf,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a big umbrella,a big umbrella,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||open the umbrella,open the umbrella,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||cool sunglasses,cool sunglasses,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||pretty and cheap,pretty and cheap,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||an expensive coat,an expensive coat,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||It's cheap.,It's cheap.,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||nice and cheap,nice and cheap,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a nice hat,a nice hat,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||nice and pretty,nice and pretty,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||try on the dress,try on the dress,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||What size?,What size?,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||the right size,the right size,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||Of course!,Of course!,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||of course you can,of course you can,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||just right,just right,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||It's just my size.,It's just my size.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||How much is it?,How much is it?,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||How much are they?,How much are they?,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||eighty yuan,eighty yuan,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||eighty-five yuan,eighty-five yuan,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||ten dollars,ten dollars,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||How many dollars?,How many dollars?,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||on sale,on sale,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a big sale,a big sale,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||more clothes,more clothes,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||one more,one more,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||help us,help us,created,200,19584,no,,1,openai
+elevenlabs|el:lily|0.85||with us,with us,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||Today all sunglasses and gloves are five yuan! They are very cheap.,Today all sunglasses and gloves are five yuan! They are very cheap.,created,200,120480,no,,1,openai
+elevenlabs|el:lily|0.85||Today all sunglasses and gloves are five yuan! They are very cheap.,Today all sunglasses and gloves are five yuan! They are very cheap.,created,200,97920,no,,1,openai
+elevenlabs|el:lily|1||Today all sunglasses and gloves are five yuan! They are very cheap.,Today all sunglasses and gloves are five yuan! They are very cheap.,created,200,84960,no,,1,openai
+elevenlabs|el:lily|0.85||a young teacher,a young teacher,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||young and strong,young and strong,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a funny story,a funny story,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||so funny,so funny,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a strict teacher,a strict teacher,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||strict but kind,strict but kind,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||a polite boy,a polite boy,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||polite to others,polite to others,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||very hard-working,very hard-working,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a helpful boy,a helpful boy,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||helpful at home,helpful at home,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.7||Who's your art teacher?,Who's your art teacher?,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||Mr Jones.,Mr Jones.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||What's he like?,What's he like?,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||He's tall and strong.,He's tall and strong.,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.85||on Monday,on Monday,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||next Monday,next Monday,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||on Tuesday,on Tuesday,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||every Tuesday,every Tuesday,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||on Wednesday,on Wednesday,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||last Wednesday,last Wednesday,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.85||on Saturday,on Saturday,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||every Saturday,every Saturday,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||on Sunday,on Sunday,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||this Sunday,this Sunday,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a happy weekend,a happy weekend,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.7||What do you have on Mondays?,What do you have on Mondays?,created,200,50688,no,,1,openai
+"elevenlabs|el:lily|0.7||I have Chinese, English and music.","I have Chinese, English and music.",created,200,85248,no,,1,openai
+elevenlabs|el:lily|0.7||Do you often play ping-pong on Thursdays?,Do you often play ping-pong on Thursdays?,created,200,73920,no,,1,openai
+"elevenlabs|el:lily|0.7||No, I don't.","No, I don't.",created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.85||a ham sandwich,a ham sandwich,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||make a sandwich,make a sandwich,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a big hamburger,a big hamburger,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||eat a hamburger,eat a hamburger,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||some ice cream,some ice cream,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a cup of ice cream,a cup of ice cream,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||green tea,green tea,created,200,21504,no,,1,openai
+elevenlabs|el:lily|0.85||fresh fruit,fresh fruit,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||fresh and healthy,fresh and healthy,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||delicious food,delicious food,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||so delicious,so delicious,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||What would you like to eat?,What would you like to eat?,created,200,30720,no,,1,openai
+"elevenlabs|el:lily|0.85||I'd like a sandwich, please.","I'd like a sandwich, please.",created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||What would you like to drink?,What would you like to drink?,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||I'd like some water.,I'd like some water.,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.7||What would you like to eat?,What would you like to eat?,created,200,61056,no,,1,openai
+"elevenlabs|el:lily|0.7||I'd like a sandwich, please.","I'd like a sandwich, please.",created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||What would you like to drink?,What would you like to drink?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||I'd like some water.,I'd like some water.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.85||sing a song,sing a song,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||sing well,sing well,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a pop song,a pop song,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a new song,a new song,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||sing English songs at the party,sing English songs at the party,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||like to sing English songs,like to sing English songs,created,200,76032,no,,1,openai
+elevenlabs|el:lily|0.85||do kung fu every day,do kung fu every day,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||can do kung fu,can do kung fu,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||dance to music,dance to music,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||I can sing English songs.,I can sing English songs.,created,200,52224,no,,1,openai
+"elevenlabs|el:lily|0.85||Can you do any kung fu, John?","Can you do any kung fu, John?",created,200,66816,no,,1,openai
+"elevenlabs|el:lily|0.85||Yes, I can.","Yes, I can.",created,200,38400,no,,1,openai
+"elevenlabs|el:lily|0.7||What can you do for the party, children?","What can you do for the party, children?",created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.7||I can sing English songs.,I can sing English songs.,created,200,65664,no,,1,openai
+"elevenlabs|el:lily|0.7||Can you do any kung fu, John?","Can you do any kung fu, John?",created,200,64512,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, I can.","Yes, I can.",created,200,88320,no,,1,openai
+elevenlabs|el:lily|0.85||a green plant,a green plant,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a glass bottle,a glass bottle,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||an empty bottle,an empty bottle,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a big water bottle,a big water bottle,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||my water bottle,my water bottle,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||in the front,in the front,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||in front of the house,in front of the house,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||stand in front of me,stand in front of me,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||There is a big bed.,There is a big bed.,created,200,34560,no,,1,openai
+"elevenlabs|el:lily|0.85||There is a nice photo, too.","There is a nice photo, too.",created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||This is my bedroom.,This is my bedroom.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||Wow! You look cool!,Wow! You look cool!,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||There is a big bed.,There is a big bed.,created,200,49536,no,,1,openai
+"elevenlabs|el:lily|0.7||There is a nice photo, too.","There is a nice photo, too.",created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||This is my bedroom.,This is my bedroom.,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||Wow! You look cool!,Wow! You look cool!,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.85||a big forest,a big forest,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||a long river,a long river,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||by the river,by the river,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||a small lake,a small lake,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||swim in the lake,swim in the lake,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a high mountain,a high mountain,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||under the tree,under the tree,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||an old bridge,an old bridge,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||cross the bridge,cross the bridge,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a tall building,a tall building,created,200,62976,no,,1,openai
+elevenlabs|el:lily|0.85||an old building,an old building,created,200,42240,no,,1,openai
+"elevenlabs|el:lily|0.7||Is there a river in the forest, Miss White?","Is there a river in the forest, Miss White?",created,200,75360,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, there is.","Yes, there is.",created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.7||Are there any lakes on the mountain?,Are there any lakes on the mountain?,created,200,67968,no,,1,openai
+"elevenlabs|el:lily|0.7||No, there aren't.","No, there aren't.",created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.85||eat breakfast at home,eat breakfast at home,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||eat breakfast early,eat breakfast early,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||morning exercise,morning exercise,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||do exercise,do exercise,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||get some exercise,get some exercise,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||do morning exercises at school,do morning exercises at school,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||do morning exercises every day,do morning exercises every day,created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.85||eat dinner together,eat dinner together,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||eat dinner at six,eat dinner at six,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||clean my room first,clean my room first,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||go for a walk after dinner,go for a walk after dinner,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||When is the party?,When is the party?,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.85||It's in April.,It's in April.,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||When is Dragon Boat Festival?,When is Dragon Boat Festival?,created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.85||It's usually in June.,It's usually in June.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.7||When is the party?,When is the party?,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||It's in April.,It's in April.,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||When is Dragon Boat Festival?,When is Dragon Boat Festival?,created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.7||It's usually in June.,It's usually in June.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.85||in spring,in spring,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||warm spring,warm spring,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||early spring,early spring,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||in summer,in summer,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||hot summer,hot summer,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||summer holiday,summer holiday,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||in autumn,in autumn,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||cool autumn,cool autumn,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||late autumn,late autumn,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||my favourite season,my favourite season,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.85||four seasons,four seasons,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||the rainy season,the rainy season,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||a family picnic,a family picnic,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a nice picnic,a nice picnic,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||go on a picnic in spring,go on a picnic in spring,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||go on a picnic with friends,go on a picnic with friends,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||pick apples,pick apples,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||pick flowers,pick flowers,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||pick fruit,pick fruit,created,200,37632,no,,1,openai
+"elevenlabs|el:lily|0.85||Which season do you like best, Mike?","Which season do you like best, Mike?",created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.85||Winter.,Winter.,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||Do you like summer?,Do you like summer?,created,200,42240,no,,1,openai
+"elevenlabs|el:lily|0.85||No, I don't. I like spring.","No, I don't. I like spring.",created,200,64896,no,,1,openai
+"elevenlabs|el:lily|0.7||Which season do you like best, Mike?","Which season do you like best, Mike?",created,200,78336,no,,1,openai
+elevenlabs|el:lily|0.7||Winter.,Winter.,created,200,24576,no,,1,openai
+elevenlabs|el:lily|0.7||Do you like summer?,Do you like summer?,created,200,38016,no,,1,openai
+"elevenlabs|el:lily|0.7||No, I don't. I like spring.","No, I don't. I like spring.",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.85||in January,in January,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||cold January,cold January,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||in February,in February,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||in March,in March,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||in April,in April,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||warm April,warm April,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.85||in June,in June,created,200,18816,no,,1,openai
+elevenlabs|el:lily|0.85||in July,in July,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||hot July,hot July,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||When is the school trip?,When is the school trip?,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||It's in May.,It's in May.,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||When is the sports meet?,When is the sports meet?,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||When is the school trip?,When is the school trip?,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||It's in May.,It's in May.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||When is the sports meet?,When is the sports meet?,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.85||the first day,the first day,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||come first,come first,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||the second day,the second day,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||the second floor,the second floor,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||the third week,the third week,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||the third time,the third time,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||the fourth lesson,the fourth lesson,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||the fourth of July,the fourth of July,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||the fifth day,the fifth day,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||the fifth floor,the fifth floor,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||the twelfth month,the twelfth month,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||the twelfth of June,the twelfth of June,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||the twentieth day,the twentieth day,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||the twentieth of May,the twentieth of May,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||the twenty-first of April,the twenty-first of April,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||the twenty-first lesson,the twenty-first lesson,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||Yes. Can I try these on?,Yes. Can I try these on?,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||How much are these shoes?,How much are these shoes?,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||They're ninety-nine yuan.,They're ninety-nine yuan.,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.7||Yes. Can I try these on?,Yes. Can I try these on?,created,200,69120,no,,1,openai
+elevenlabs|el:lily|0.7||How much are these shoes?,How much are these shoes?,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||They're ninety-nine yuan.,They're ninety-nine yuan.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.85||This book is yours,This book is yours,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||The pen is hers,The pen is hers,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.85||It's hers,It's hers,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||The dog is theirs,The dog is theirs,created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.85||It's theirs,It's theirs,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||The classroom is ours,The classroom is ours,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||It's ours,It's ours,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||climbing the tree,climbing the tree,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||climbing the mountain,climbing the mountain,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||eating an apple,eating an apple,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||The dog is yours.,The dog is yours.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||No! It's his.,No! It's his.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||Is the dog eating?,Is the dog eating?,created,200,51840,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, he is.","Yes, he is.",created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||doing morning exercises on the playground,doing morning exercises on the playground,created,200,61920,no,,1,openai
+elevenlabs|el:lily|0.85||eating lunch at school,eating lunch at school,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||eating lunch now,eating lunch now,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||reading a book quietly,reading a book quietly,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||reading a book in the library,reading a book in the library,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||listening to music at home,listening to music at home,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||listening to music after class,listening to music after class,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||keep quiet,keep quiet,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||keep clean,keep clean,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||keep warm,keep warm,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||keep to the right on the stairs,keep to the right on the stairs,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||please keep to the right,please keep to the right,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||always keep your desk clean,always keep your desk clean,created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.7||Look at the pandas.,Look at the pandas.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||They're so cute!,They're so cute!,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||What's the little monkey doing?,What's the little monkey doing?,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||It's playing with its mother!,It's playing with its mother!,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.85||science class,science class,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||a science book,a science book,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||like science,like science,created,200,22272,no,,1,openai
+elevenlabs|el:lily|0.85||go to the museum,go to the museum,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||visit a museum,visit a museum,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||go to the post office,go to the post office,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||near the post office,near the post office,created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.85||buy books at the bookstore,buy books at the bookstore,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||go to the cinema,go to the cinema,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a big cinema,a big cinema,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||go to the hospital,go to the hospital,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||a children's hospital,a children's hospital,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||work in a hospital,work in a hospital,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||at the crossing,at the crossing,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||turn left at the crossing,turn left at the crossing,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||turn left,turn left,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||turn right,turn right,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.7||Where is the museum shop?,Where is the museum shop?,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||It's near the door.,It's near the door.,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.7||How can I get to the science museum?,How can I get to the science museum?,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||Turn left at the bookstore.,Turn left at the bookstore.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.85||go to school on foot,go to school on foot,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||come home on foot,come home on foot,created,200,69504,no,,1,openai
+elevenlabs|el:lily|0.85||by bus,by bus,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||by train,by train,created,200,57216,no,,1,openai
+elevenlabs|el:lily|0.85||take the bus,take the bus,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||a school bus,a school bus,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||by plane,by plane,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||take a plane,take a plane,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||by taxi,by taxi,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||take a taxi,take a taxi,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||by ship,by ship,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a big ship,a big ship,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||by subway,by subway,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||take the subway,take the subway,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||take a train,take a train,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||a fast train,a fast train,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.7||How do you come to school?,How do you come to school?,created,200,47232,no,,1,openai
+"elevenlabs|el:lily|0.7||Usually, I come on foot.","Usually, I come on foot.",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||Don't go at the red light!,Don't go at the red light!,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||I must pay attention to the traffic lights!,I must pay attention to the traffic lights!,created,200,78240,no,,1,openai
+elevenlabs|el:lily|0.85||visit my grandparents,visit my grandparents,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a good film,a good film,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.85||watch a film,watch a film,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||see a film tonight,see a film tonight,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||go to see a film,go to see a film,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||a school trip,a school trip,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||a trip to Beijing,a trip to Beijing,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||take a trip this weekend,take a trip this weekend,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||take a trip to the sea,take a trip to the sea,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||go to the supermarket,go to the supermarket,created,200,68352,no,,1,openai
+elevenlabs|el:lily|0.85||a big supermarket,a big supermarket,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||in the evening,in the evening,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||this evening,this evening,created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.85||a nice evening,a nice evening,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||study tonight,study tonight,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||What are you going to do tomorrow?,What are you going to do tomorrow?,created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.85||I'm going to have an art lesson.,I'm going to have an art lesson.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||When are you going?,When are you going?,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||At 3 o'clock.,At 3 o'clock.,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||What are you going to do tomorrow?,What are you going to do tomorrow?,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.7||I'm going to have an art lesson.,I'm going to have an art lesson.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||When are you going?,When are you going?,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||At 3 o'clock.,At 3 o'clock.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.85||he studies English,he studies English,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||she studies hard,she studies hard,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||do a puzzle,do a puzzle,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||a word puzzle,a word puzzle,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||like hiking,like hiking,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||my pen pal,my pen pal,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||write to a pen pal,write to a pen pal,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||my favourite hobby,my favourite hobby,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||a fun hobby,a fun hobby,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||jasmine tea,jasmine tea,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a jasmine flower,a jasmine flower,created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.85||live in Canberra,live in Canberra,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.7||What are your hobbies?,What are your hobbies?,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||I like singing and doing kung fu.,I like singing and doing kung fu.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||Does he live in Sydney?,Does he live in Sydney?,created,200,44928,no,,1,openai
+"elevenlabs|el:lily|0.7||No, he doesn't.","No, he doesn't.",created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||work in a factory,work in a factory,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a car factory,a car factory,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a factory worker,a factory worker,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||a hard worker,a hard worker,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a busy postman,a busy postman,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||the postman comes,the postman comes,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||a busy businessman,a busy businessman,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||my father is a businessman,my father is a businessman,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||a brave police officer,a brave police officer,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||ask a police officer,ask a police officer,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||an old fisherman,an old fisherman,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||the fisherman works at sea,the fisherman works at sea,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||a famous scientist,a famous scientist,created,200,67584,no,,1,openai
+elevenlabs|el:lily|0.85||a plane pilot,a plane pilot,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.85||want to be a pilot,want to be a pilot,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||What does he do?,What does he do?,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||He's a businessman.,He's a businessman.,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||Where does he work?,Where does he work?,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||He works at sea.,He works at sea.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.7||What does he do?,What does he do?,created,200,36096,no,,1,openai
+elevenlabs|el:lily|0.7||He's a businessman.,He's a businessman.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|1||He's a businessman.,He's a businessman.,created,200,21888,no,,1,openai
+elevenlabs|el:lily|0.7||Where does he work?,Where does he work?,created,200,49536,no,,1,openai
+elevenlabs|el:lily|1||Where does he work?,Where does he work?,created,200,26496,no,,1,openai
+elevenlabs|el:lily|0.7||He works at sea.,He works at sea.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|1||He works at sea.,He works at sea.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.85||feel angry,feel angry,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||an angry face,an angry face,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||afraid of dogs,afraid of dogs,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||feel afraid,feel afraid,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||feel sad,feel sad,created,200,22272,no,,1,openai
+elevenlabs|el:lily|0.85||a sad story,a sad story,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||feel worried,feel worried,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||worried about the test,worried about the test,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||feel happy,feel happy,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a happy day,a happy day,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||very happy,very happy,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||go to see a doctor,go to see a doctor,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||see a doctor today,see a doctor today,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||wear a coat,wear a coat,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||wear warm clothes,wear warm clothes,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||more water,more water,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||drink more water,drink more water,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||one more time,one more time,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.85||How do you feel?,How do you feel?,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||I'm happy.,I'm happy.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||What's wrong?,What's wrong?,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.85||I have a cold.,I have a cold.,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.7||How do you feel?,How do you feel?,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||I'm happy.,I'm happy.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|1||I'm happy.,I'm happy.,created,200,21120,no,,1,openai
+elevenlabs|el:lily|0.7||What's wrong?,What's wrong?,created,200,47232,no,,1,openai
+elevenlabs|el:lily|1||What's wrong?,What's wrong?,created,200,21888,no,,1,openai
+elevenlabs|el:lily|0.7||I have a cold.,I have a cold.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|1||I have a cold.,I have a cold.,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||younger than me,younger than me,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||older than you,older than you,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||my older brother,my older brother,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||two years older,two years older,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||taller than me,taller than me,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||much taller,much taller,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||the tallest in class,the tallest in class,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||shorter than him,shorter than him,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||a bit shorter,a bit shorter,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||shorter hair,shorter hair,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||longer than that one,longer than that one,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||a longer tail,a longer tail,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||much longer,much longer,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||thinner than before,thinner than before,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||a bit thinner,a bit thinner,created,200,21504,no,,1,openai
+elevenlabs|el:lily|0.85||thinner and taller,thinner and taller,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||heavier than me,heavier than me,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||five kilos heavier,five kilos heavier,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||much heavier,much heavier,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||bigger than yours,bigger than yours,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||a bigger size,a bigger size,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||much bigger,much bigger,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||How tall are you?,How tall are you?,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||I'm 1.65 metres.,I'm 1.65 metres.,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||What size are your shoes?,What size are your shoes?,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||Size 7.,Size 7.,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||How tall are you?,How tall are you?,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||I'm 1.65 metres.,I'm 1.65 metres.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|1||I'm 1.65 metres.,I'm 1.65 metres.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||What size are your shoes?,What size are your shoes?,created,200,47232,no,,1,openai
+elevenlabs|el:lily|1||What size are your shoes?,What size are your shoes?,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||Size 7.,Size 7.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|1||Size 7.,Size 7.,created,200,31488,no,,1,openai
+elevenlabs|el:lily|0.85||cleaned my room,cleaned my room,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||cleaned the window,cleaned the window,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||cleaned the floor,cleaned the floor,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||stayed at home,stayed at home,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||stayed in bed,stayed in bed,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||stayed with grandma,stayed with grandma,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||washed my clothes,washed my clothes,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||washed the dishes,washed the dishes,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||washed the car,washed the car,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||watched TV,watched TV,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||watched a film,watched a film,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||watched a game,watched a game,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||had a fever,had a fever,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||had a headache,had a headache,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||had a good time,had a good time,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.85||had a bad cold,had a bad cold,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||slept all day,slept all day,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||slept late,slept late,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||slept well,slept well,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.85||read a story,read a story,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||read every day,read every day,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||What did you do last weekend?,What did you do last weekend?,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||I cleaned my room.,I cleaned my room.,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||Did you see a film?,Did you see a film?,created,200,41088,no,,1,openai
+"elevenlabs|el:lily|0.85||Yes, I did.","Yes, I did.",created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.7||What did you do last weekend?,What did you do last weekend?,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||I cleaned my room.,I cleaned my room.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|1||I cleaned my room.,I cleaned my room.,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||Did you see a film?,Did you see a film?,created,200,36864,no,,1,openai
+elevenlabs|el:lily|1||Did you see a film?,Did you see a film?,created,200,36096,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, I did.","Yes, I did.",created,200,48384,no,,1,openai
+"elevenlabs|el:lily|1||Yes, I did.","Yes, I did.",created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||went to the park,went to the park,created,200,29184,no,,1,openai
+elevenlabs|el:lily|0.85||went home,went home,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||went shopping,went shopping,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||set up a camp,set up a camp,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a camp by the lake,a camp by the lake,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||went camping last summer,went camping last summer,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||went camping in the mountains,went camping in the mountains,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||a big fish,a big fish,created,200,35328,no,,1,openai
+elevenlabs|el:lily|0.85||fish in the river,fish in the river,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.85||went fishing with dad,went fishing with dad,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.85||went fishing by the lake,went fishing by the lake,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||rode a bike,rode a bike,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||rode to school,rode to school,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.85||hurt my foot,hurt my foot,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||hurt my arm,hurt my arm,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||it hurt a lot,it hurt a lot,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||ate too much,ate too much,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||ate fresh fish,ate fresh fish,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||ate breakfast,ate breakfast,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||Where did you go?,Where did you go?,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||We went to Sanya.,We went to Sanya.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||How did you go there?,How did you go there?,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||We went there by plane.,We went there by plane.,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.7||Where did you go?,Where did you go?,created,200,62208,no,,1,openai
+elevenlabs|el:lily|1||Where did you go?,Where did you go?,created,200,29568,no,,1,openai
+elevenlabs|el:lily|0.7||We went to Sanya.,We went to Sanya.,created,200,79104,no,,1,openai
+elevenlabs|el:lily|1||We went to Sanya.,We went to Sanya.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.7||How did you go there?,How did you go there?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||We went there by plane.,We went there by plane.,created,200,43776,no,,1,openai
+elevenlabs|el:lily|1||We went there by plane.,We went there by plane.,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.85||in the dining hall,in the dining hall,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a big dining hall,a big dining hall,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||eat in the dining hall,eat in the dining hall,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||sit on the grass,sit on the grass,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||cut the grass,cut the grass,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||in the gym,in the gym,created,200,22272,no,,1,openai
+elevenlabs|el:lily|0.85||go to the gym,go to the gym,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.85||a new gym,a new gym,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||a long time ago,a long time ago,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||two years ago,two years ago,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||a moment ago,a moment ago,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||like cycling,like cycling,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||good at cycling,good at cycling,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.85||cycling every weekend,cycling every weekend,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||go cycling on Sundays,go cycling on Sundays,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||go cycling in the park,go cycling in the park,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||learn to ice-skate,learn to ice-skate,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.85||ice-skate in winter,ice-skate in winter,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||ice-skate on the lake,ice-skate on the lake,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||play badminton,play badminton,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||a badminton game,a badminton game,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||good at badminton,good at badminton,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||There was no library in my old school.,There was no library in my old school.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|1||There was no library in my old school.,There was no library in my old school.,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.7||There is one now.,There is one now.,created,200,36864,no,,1,openai
+elevenlabs|el:lily|1||There is one now.,There is one now.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||I was short.,I was short.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|1||I was short.,I was short.,created,200,46464,no,,1,openai
+elevenlabs|el:lily|0.7||Now I'm tall.,Now I'm tall.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|1||Now I'm tall.,Now I'm tall.,created,200,31488,no,,1,openai
+elevenlabs|el:lily|0.7||I have a new pencil box.,I have a new pencil box.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||I have a new pen.,I have a new pen.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||I have a new bag.,I have a new bag.,created,200,42624,no,,1,openai
+"elevenlabs|el:lily|0.7||Hello, hello! What's in your bag?","Hello, hello! What's in your bag?",created,200,86400,no,,1,openai
+"elevenlabs|el:lily|0.7||A pen, a ruler and a crayon!","A pen, a ruler and a crayon!",created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||This is my face.,This is my face.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||This is my eye.,This is my eye.,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||Look at my face.,Look at my face.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||Touch your nose.,Touch your nose.,created,200,28800,no,,1,openai
+"elevenlabs|el:lily|0.7||Touch your face, touch your eye,","Touch your face, touch your eye,",created,200,54144,no,,1,openai
+"elevenlabs|el:lily|0.7||Touch your nose, and say goodbye!","Touch your nose, and say goodbye!",created,200,64512,no,,1,openai
+elevenlabs|el:lily|0.7||It's a bear.,It's a bear.,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.7||It's a pig.,It's a pig.,created,200,26880,no,,1,openai
+"elevenlabs|el:lily|0.7||What's this? A cat, a cat!","What's this? A cat, a cat!",created,200,72576,no,,1,openai
+"elevenlabs|el:lily|0.7||What's that? A dog, a dog!","What's that? A dog, a dog!",created,200,66816,no,,1,openai
+"elevenlabs|el:lily|0.7||I'd like some milk, please.","I'd like some milk, please.",created,200,56448,no,,1,openai
+"elevenlabs|el:lily|0.7||Can I have some cake, please?","Can I have some cake, please?",created,200,52992,no,,1,openai
+"elevenlabs|el:lily|0.7||Can I have some rice, please?","Can I have some rice, please?",created,200,54144,no,,1,openai
+"elevenlabs|el:lily|0.7||Bread and rice, fish and cake,","Bread and rice, fish and cake,",created,200,77184,no,,1,openai
+"elevenlabs|el:lily|0.7||I'd like some, please. Here you are!","I'd like some, please. Here you are!",created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||How many?,How many?,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||I see six plates.,I see six plates.,created,200,50688,no,,1,openai
+"elevenlabs|el:lily|0.7||One, two, three, candles for me!","One, two, three, candles for me!",created,200,81792,no,,1,openai
+"elevenlabs|el:lily|0.7||Four, five, six, happy birthday!","Four, five, six, happy birthday!",created,200,94464,no,,1,openai
+elevenlabs|el:lily|0.7||Thank you!,Thank you!,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.85||Thank you!,Thank you!,created,200,19584,no,,1,openai
+elevenlabs|el:lily|0.7||She's a student.,She's a student.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||She's a student.,She's a student.,created,200,27264,no,,1,openai
+"elevenlabs|el:lily|0.7||Welcome back, welcome back! Where are you from?","Welcome back, welcome back! Where are you from?",created,200,78240,no,,1,openai
+"elevenlabs|el:lily|0.7||From China, from Canada, welcome, welcome all!","From China, from Canada, welcome, welcome all!",created,200,76320,no,,1,openai
+"elevenlabs|el:lily|0.85||Welcome back, welcome back! Where are you from?","Welcome back, welcome back! Where are you from?",created,200,65760,no,,1,openai
+"elevenlabs|el:lily|0.85||From China, from Canada, welcome, welcome all!","From China, from Canada, welcome, welcome all!",created,200,63360,no,,1,openai
+elevenlabs|el:lily|0.7||Who's that man? Who's that woman?,Who's that man? Who's that woman?,created,200,64512,no,,1,openai
+"elevenlabs|el:lily|0.7||He's my father, she's my mother!","He's my father, she's my mother!",created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.85||Who's that man? Who's that woman?,Who's that man? Who's that woman?,created,200,43008,no,,1,openai
+"elevenlabs|el:lily|0.85||He's my father, she's my mother!","He's my father, she's my mother!",created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.7||Look at the animals.,Look at the animals.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.85||Look at the animals.,Look at the animals.,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.7||It's so fat!,It's so fat!,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.85||It's so fat!,It's so fat!,created,200,46848,no,,1,openai
+"elevenlabs|el:lily|0.7||Thin and fat, long and short,","Thin and fat, long and short,",created,200,83712,no,,1,openai
+"elevenlabs|el:lily|0.7||Big and small, look at them all!","Big and small, look at them all!",created,200,77184,no,,1,openai
+"elevenlabs|el:lily|0.85||Thin and fat, long and short,","Thin and fat, long and short,",created,200,64896,no,,1,openai
+"elevenlabs|el:lily|0.85||Big and small, look at them all!","Big and small, look at them all!",created,200,57216,no,,1,openai
+elevenlabs|el:lily|0.7||Where is my car?,Where is my car?,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||Where is my car?,Where is my car?,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||Where is my cap?,Where is my cap?,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||Where is my cap?,Where is my cap?,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.7||The ball is under the chair.,The ball is under the chair.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.85||The ball is under the chair.,The ball is under the chair.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||Where is my ball?,Where is my ball?,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.85||Where is my ball?,Where is my ball?,created,200,32640,no,,1,openai
+"elevenlabs|el:lily|0.7||On the desk, in the desk,","On the desk, in the desk,",created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||Under the chair — where is my car?,Under the chair — where is my car?,created,200,62208,no,,1,openai
+"elevenlabs|el:lily|0.85||On the desk, in the desk,","On the desk, in the desk,",created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.85||Under the chair — where is my car?,Under the chair — where is my car?,created,200,60288,no,,1,openai
+elevenlabs|el:lily|0.85||I like bananas.,I like bananas.,created,200,36480,no,,1,openai
+"elevenlabs|el:lily|0.85||Apples, pears, do you like?","Apples, pears, do you like?",created,200,50688,no,,1,openai
+"elevenlabs|el:lily|0.85||Grapes and oranges, yes, I like!","Grapes and oranges, yes, I like!",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||I see twelve.,I see twelve.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||I see twelve.,I see twelve.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||I see thirteen kites.,I see thirteen kites.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.85||I see thirteen kites.,I see thirteen kites.,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.7||How many do you see?,How many do you see?,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.85||How many do you see?,How many do you see?,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||I have sixteen.,I have sixteen.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||I have sixteen.,I have sixteen.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.7||I have eighteen crayons.,I have eighteen crayons.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.85||I have eighteen crayons.,I have eighteen crayons.,created,200,49920,no,,1,openai
+"elevenlabs|el:lily|0.7||Eleven, twelve, thirteen, fourteen,","Eleven, twelve, thirteen, fourteen,",created,200,106752,no,,1,openai
+"elevenlabs|el:lily|0.7||Fifteen, sixteen, count some more!","Fifteen, sixteen, count some more!",created,200,66816,no,,1,openai
+"elevenlabs|el:lily|0.85||Eleven, twelve, thirteen, fourteen,","Eleven, twelve, thirteen, fourteen,",created,200,82560,no,,1,openai
+"elevenlabs|el:lily|0.85||Fifteen, sixteen, count some more!","Fifteen, sixteen, count some more!",created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||Really? What's in your schoolbag?,Really? What's in your schoolbag?,created,200,64512,no,,1,openai
+"elevenlabs|el:lily|0.7||An English book, a maths book and three storybooks.","An English book, a maths book and three storybooks.",created,200,90720,no,,1,openai
+"elevenlabs|el:lily|0.7||An English book, two toys and a key.","An English book, two toys and a key.",created,200,81792,no,,1,openai
+elevenlabs|el:lily|0.7||Here it is!,Here it is!,created,200,33408,no,,1,openai
+elevenlabs|el:lily|0.7||What do you have in your schoolbag?,What do you have in your schoolbag?,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||I have a friend.,I have a friend.,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||A boy or girl?,A boy or girl?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||A boy. He's tall and strong.,A boy. He's tall and strong.,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.7||Who is he?,Who is he?,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||Is he friendly?,Is he friendly?,created,200,56448,no,,1,openai
+"elevenlabs|el:lily|0.7||My friend is quiet, but she's friendly.","My friend is quiet, but she's friendly.",created,200,87168,no,,1,openai
+elevenlabs|el:lily|0.7||He has glasses and his shoes are blue.,He has glasses and his shoes are blue.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||What's his name?,What's his name?,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||Where's the cat?,Where's the cat?,created,200,55296,no,,1,openai
+"elevenlabs|el:lily|0.7||No, she isn't.","No, she isn't.",created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||Where's the dog?,Where's the dog?,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||It's in the bedroom.,It's in the bedroom.,created,200,78336,no,,1,openai
+elevenlabs|el:lily|0.7||Is he in the study?,Is he in the study?,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||Where's Mum?,Where's Mum?,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||She's in the bathroom.,She's in the bathroom.,created,200,77184,no,,1,openai
+elevenlabs|el:lily|0.7||Where are the keys?,Where are the keys?,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.7||They're on the fridge.,They're on the fridge.,created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.7||Are they on the table?,Are they on the table?,created,200,52992,no,,1,openai
+"elevenlabs|el:lily|0.7||No, they aren't.","No, they aren't.",created,200,72576,no,,1,openai
+elevenlabs|el:lily|0.7||Where's the phone?,Where's the phone?,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||It's on the sofa.,It's on the sofa.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||Is the cat under the bed?,Is the cat under the bed?,created,200,63744,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, it is.","Yes, it is.",created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.7||Dinner's ready. Help yourself.,Dinner's ready. Help yourself.,created,200,64512,no,,1,openai
+elevenlabs|el:lily|0.7||Thank you. I'd like some beef and noodles.,Thank you. I'd like some beef and noodles.,created,200,66240,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, please.","Yes, please.",created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||What would you like?,What would you like?,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||I'd like some chicken and vegetables.,I'd like some chicken and vegetables.,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.7||Would you like some chicken?,Would you like some chicken?,created,200,41472,no,,1,openai
+"elevenlabs|el:lily|0.7||No, thanks.","No, thanks.",created,200,32640,no,,1,openai
+"elevenlabs|el:lily|0.7||Pass me the bowl, please.","Pass me the bowl, please.",created,200,59904,no,,1,openai
+"elevenlabs|el:lily|0.7||Pass me the chopsticks, please.","Pass me the chopsticks, please.",created,200,64512,no,,1,openai
+"elevenlabs|el:lily|0.7||Pass me a spoon, please.","Pass me a spoon, please.",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||How many people are there in your family?,How many people are there in your family?,created,200,74400,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, it is. He's a football player.","Yes, it is. He's a football player.",created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||Who are they?,Who are they?,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||They're my parents.,They're my parents.,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||Is this your cousin?,Is this your cousin?,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||This is my baby brother.,This is my baby brother.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||He's one year old.,He's one year old.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||What's your aunt's job?,What's your aunt's job?,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||What's your father's job?,What's your father's job?,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||He's a doctor.,He's a doctor.,created,200,33408,no,,1,openai
+elevenlabs|el:lily|0.7||What's your mother's job?,What's your mother's job?,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||She's a cook.,She's a cook.,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||What's your uncle's job?,What's your uncle's job?,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||He's a driver.,He's a driver.,created,200,26880,no,,1,openai
+elevenlabs|el:lily|0.7||What's your cousin's job?,What's your cousin's job?,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||He's a farmer.,He's a farmer.,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||No.,No.,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||Try some! They're good.,Try some! They're good.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||Thanks. Yum.,Thanks. Yum.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||Are they horses?,Are they horses?,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||I like tomatoes. I like potatoes.,I like tomatoes. I like potatoes.,created,200,91776,no,,1,openai
+elevenlabs|el:lily|0.7||Carrots I will try.,Carrots I will try.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||But onions make me cry.,But onions make me cry.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||She's very kind.,She's very kind.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||Who's your art teacher? What's he like?,Who's your art teacher? What's he like?,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||Is your maths teacher strict?,Is your maths teacher strict?,created,200,64512,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, he is. But he's very kind.","Yes, he is. But he's very kind.",created,200,77184,no,,1,openai
+elevenlabs|el:lily|0.7||Is she funny?,Is she funny?,created,200,29952,no,,1,openai
+"elevenlabs|el:lily|0.7||No, she isn't. She's quiet.","No, she isn't. She's quiet.",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||Our English teacher is hard-working.,Our English teacher is hard-working.,created,200,64512,no,,1,openai
+elevenlabs|el:lily|0.7||Is he strict?,Is he strict?,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||Young or old? Tall or short?,Young or old? Tall or short?,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.7||Strict or kind? Tell me more!,Strict or kind? Tell me more!,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||What do you have on Fridays?,What do you have on Fridays?,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||I have art on Thursdays.,I have art on Thursdays.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||Do you have PE on Mondays?,Do you have PE on Mondays?,created,200,92928,no,,1,openai
+elevenlabs|el:lily|0.7||I read books on the weekend.,I read books on the weekend.,created,200,80640,no,,1,openai
+"elevenlabs|el:lily|0.7||Monday, Tuesday, what do you do?","Monday, Tuesday, what do you do?",created,200,69120,no,,1,openai
+"elevenlabs|el:lily|0.7||Wednesday, Thursday, school is fun too!","Wednesday, Thursday, school is fun too!",created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||The salad is fresh.,The salad is fresh.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.85||The salad is fresh.,The salad is fresh.,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||Would you like some ice cream?,Would you like some ice cream?,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.85||Would you like some ice cream?,Would you like some ice cream?,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||I'd like some tea.,I'd like some tea.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.85||I'd like some tea.,I'd like some tea.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.7||The hamburger is delicious.,The hamburger is delicious.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.85||The hamburger is delicious.,The hamburger is delicious.,created,200,48768,no,,1,openai
+"elevenlabs|el:lily|0.7||Sandwich, salad, what would you like?","Sandwich, salad, what would you like?",created,200,71424,no,,1,openai
+"elevenlabs|el:lily|0.7||Ice cream, tea, on a sunny day!","Ice cream, tea, on a sunny day!",created,200,64512,no,,1,openai
+"elevenlabs|el:lily|0.85||Sandwich, salad, what would you like?","Sandwich, salad, what would you like?",created,200,59136,no,,1,openai
+"elevenlabs|el:lily|0.85||Ice cream, tea, on a sunny day!","Ice cream, tea, on a sunny day!",created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.7||What can you do for the party?,What can you do for the party?,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||What can you do for the party?,What can you do for the party?,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.7||Can you do any kung fu?,Can you do any kung fu?,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.85||Can you do any kung fu?,Can you do any kung fu?,created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.7||I can dance.,I can dance.,created,200,36096,no,,1,openai
+elevenlabs|el:lily|0.85||I can dance.,I can dance.,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.7||What can you do?,What can you do?,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.85||What can you do?,What can you do?,created,200,27264,no,,1,openai
+elevenlabs|el:lily|0.7||I can draw.,I can draw.,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||I can draw.,I can draw.,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.7||I can sing songs.,I can sing songs.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.85||I can sing songs.,I can sing songs.,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.7||Can you sing? Can you dance?,Can you sing? Can you dance?,created,200,69120,no,,1,openai
+"elevenlabs|el:lily|0.7||Yes, we can! Let's have fun!","Yes, we can! Let's have fun!",created,200,78336,no,,1,openai
+elevenlabs|el:lily|0.85||Can you sing? Can you dance?,Can you sing? Can you dance?,created,200,48000,no,,1,openai
+"elevenlabs|el:lily|0.85||Yes, we can! Let's have fun!","Yes, we can! Let's have fun!",created,200,59136,no,,1,openai
+elevenlabs|el:lily|0.7||What's in your bedroom?,What's in your bedroom?,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||What's in your bedroom?,What's in your bedroom?,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.7||There is a clock on the wall.,There is a clock on the wall.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.85||There is a clock on the wall.,There is a clock on the wall.,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.7||Is there a bike in your room?,Is there a bike in your room?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||Is there a bike in your room?,Is there a bike in your room?,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.7||Is there a clock?,Is there a clock?,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||Is there a clock?,Is there a clock?,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.7||The bike is in front of the bed.,The bike is in front of the bed.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.85||The bike is in front of the bed.,The bike is in front of the bed.,created,200,54144,no,,1,openai
+"elevenlabs|el:lily|0.7||There is a bed, there is a chair,","There is a bed, there is a chair,",created,200,62208,no,,1,openai
+"elevenlabs|el:lily|0.7||A clock, a plant, a bike right there!","A clock, a plant, a bike right there!",created,200,98688,no,,1,openai
+"elevenlabs|el:lily|0.85||There is a bed, there is a chair,","There is a bed, there is a chair,",created,200,46080,no,,1,openai
+"elevenlabs|el:lily|0.85||A clock, a plant, a bike right there!","A clock, a plant, a bike right there!",created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.7||Is there a bridge in the park?,Is there a bridge in the park?,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||There is a high mountain in the park.,There is a high mountain in the park.,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.7||Is there a river in the forest?,Is there a river in the forest?,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||Are there any trees on the hill?,Are there any trees on the hill?,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.7||Are there any tall buildings in the park?,Are there any tall buildings in the park?,created,200,72480,no,,1,openai
+"elevenlabs|el:lily|0.7||River and lake, hill and tree,","River and lake, hill and tree,",created,200,73728,no,,1,openai
+"elevenlabs|el:lily|0.7||In the nature park, come with me!","In the nature park, come with me!",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||I do morning exercises at seven.,I do morning exercises at seven.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.85||I do morning exercises at seven.,I do morning exercises at seven.,created,200,73344,no,,1,openai
+elevenlabs|el:lily|0.7||I eat breakfast at six in the morning.,I eat breakfast at six in the morning.,created,200,87168,no,,1,openai
+elevenlabs|el:lily|0.85||I eat breakfast at six in the morning.,I eat breakfast at six in the morning.,created,200,48768,no,,1,openai
+"elevenlabs|el:lily|0.7||April, June, when is the day?","April, June, when is the day?",created,200,72576,no,,1,openai
+"elevenlabs|el:lily|0.7||Eat, play and walk, come out to play!","Eat, play and walk, come out to play!",created,200,74880,no,,1,openai
+"elevenlabs|el:lily|0.85||April, June, when is the day?","April, June, when is the day?",created,200,51456,no,,1,openai
+"elevenlabs|el:lily|0.85||Eat, play and walk, come out to play!","Eat, play and walk, come out to play!",created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.7||Which season do you like best?,Which season do you like best?,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.85||Which season do you like best?,Which season do you like best?,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.7||I like spring best.,I like spring best.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.85||I like spring best.,I like spring best.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.7||Do you like autumn?,Do you like autumn?,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.85||Do you like autumn?,Do you like autumn?,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.7||We go on a picnic in spring.,We go on a picnic in spring.,created,200,82560,no,,1,openai
+elevenlabs|el:lily|0.85||We go on a picnic in spring.,We go on a picnic in spring.,created,200,59136,no,,1,openai
+"elevenlabs|el:lily|0.7||Spring, summer, which do you like?","Spring, summer, which do you like?",created,200,78336,no,,1,openai
+"elevenlabs|el:lily|0.7||Autumn, winter, I like them all!","Autumn, winter, I like them all!",created,200,56448,no,,1,openai
+"elevenlabs|el:lily|0.85||Spring, summer, which do you like?","Spring, summer, which do you like?",created,200,71424,no,,1,openai
+"elevenlabs|el:lily|0.85||Autumn, winter, I like them all!","Autumn, winter, I like them all!",created,200,55296,no,,1,openai
+"elevenlabs|el:lily|0.7||January, February, March and more,","January, February, March and more,",created,200,110208,no,,1,openai
+"elevenlabs|el:lily|0.7||April, May, June, the calendar's full!","April, May, June, the calendar's full!",created,200,91776,no,,1,openai
+"elevenlabs|el:lily|0.85||January, February, March and more,","January, February, March and more,",created,200,76800,no,,1,openai
+"elevenlabs|el:lily|0.85||April, May, June, the calendar's full!","April, May, June, the calendar's full!",created,200,67584,no,,1,openai
+elevenlabs|el:lily|0.7||Can I try these on?,Can I try these on?,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.85||Can I try these on?,Can I try these on?,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.7||The shoes are on the first floor.,The shoes are on the first floor.,created,200,76032,no,,1,openai
+elevenlabs|el:lily|0.85||The shoes are on the first floor.,The shoes are on the first floor.,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.7||The coats are on the twelfth floor.,The coats are on the twelfth floor.,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||The coats are on the twelfth floor.,The coats are on the twelfth floor.,created,200,40320,no,,1,openai
+"elevenlabs|el:lily|0.7||First, second, third, let's go and shop!","First, second, third, let's go and shop!",created,200,112512,no,,1,openai
+"elevenlabs|el:lily|0.7||Fourth, fifth floor, the shoes are on top!","Fourth, fifth floor, the shoes are on top!",created,200,71040,no,,1,openai
+"elevenlabs|el:lily|0.85||First, second, third, let's go and shop!","First, second, third, let's go and shop!",created,200,90240,no,,1,openai
+"elevenlabs|el:lily|0.85||Fourth, fifth floor, the shoes are on top!","Fourth, fifth floor, the shoes are on top!",created,200,58080,no,,1,openai
+elevenlabs|el:lily|0.7||Whose dog is it?,Whose dog is it?,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||The book is mine.,The book is mine.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||The cat is climbing.,The cat is climbing.,created,200,49536,no,,1,openai
+"elevenlabs|el:lily|0.7||Whose, whose, whose is it?","Whose, whose, whose is it?",created,200,74880,no,,1,openai
+"elevenlabs|el:lily|0.7||Mine, yours, his — you guess it!","Mine, yours, his — you guess it!",created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||What's the girl doing?,What's the girl doing?,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||She's eating lunch.,She's eating lunch.,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||What's Sarah doing?,What's Sarah doing?,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||She's reading a book.,She's reading a book.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||She is reading a book.,She is reading a book.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||Please keep your desk clean.,Please keep your desk clean.,created,200,51840,no,,1,openai
+"elevenlabs|el:lily|0.7||Keep quiet, keep your desk clean,","Keep quiet, keep your desk clean,",created,200,56448,no,,1,openai
+"elevenlabs|el:lily|0.7||Read a book, learning is fun!","Read a book, learning is fun!",created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||Where is the post office?,Where is the post office?,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||The cinema is near the hospital.,The cinema is near the hospital.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||Where is the museum?,Where is the museum?,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||How can I get to the hospital?,How can I get to the hospital?,created,200,49536,no,,1,openai
+"elevenlabs|el:lily|0.7||Turn left, turn right, where do we go?","Turn left, turn right, where do we go?",created,200,117120,no,,1,openai
+"elevenlabs|el:lily|0.7||To the museum, let's say hello!","To the museum, let's say hello!",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||I come to school by bus.,I come to school by bus.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.85||I come to school by bus.,I come to school by bus.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|1||I come to school by bus.,I come to school by bus.,created,200,46464,no,,1,openai
+"elevenlabs|el:lily|0.7||Red light, red light, stop, stop, stop!","Red light, red light, stop, stop, stop!",created,200,104832,no,,1,openai
+"elevenlabs|el:lily|0.7||Green light, green light, go, go, go!","Green light, green light, go, go, go!",created,200,92928,no,,1,openai
+"elevenlabs|el:lily|0.85||Red light, red light, stop, stop, stop!","Red light, red light, stop, stop, stop!",created,200,81792,no,,1,openai
+"elevenlabs|el:lily|0.85||Green light, green light, go, go, go!","Green light, green light, go, go, go!",created,200,79872,no,,1,openai
+"elevenlabs|el:lily|1||Red light, red light, stop, stop, stop!","Red light, red light, stop, stop, stop!",created,200,65664,no,,1,openai
+"elevenlabs|el:lily|1||Green light, green light, go, go, go!","Green light, green light, go, go, go!",created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.7||I'm going to see a film.,I'm going to see a film.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.85||I'm going to see a film.,I'm going to see a film.,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.7||I'm going to the supermarket tonight.,I'm going to the supermarket tonight.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.85||I'm going to the supermarket tonight.,I'm going to the supermarket tonight.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|1||I'm going to the supermarket tonight.,I'm going to the supermarket tonight.,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.7||What are you going to do? When are you going?,What are you going to do? When are you going?,created,200,77760,no,,1,openai
+elevenlabs|el:lily|0.85||What are you going to do? When are you going?,What are you going to do? When are you going?,created,200,64800,no,,1,openai
+elevenlabs|el:lily|1||What are you going to do? When are you going?,What are you going to do? When are you going?,created,200,53760,no,,1,openai
+"elevenlabs|el:lily|0.7||Tomorrow, tonight, what are you going to do?","Tomorrow, tonight, what are you going to do?",created,200,76320,no,,1,openai
+"elevenlabs|el:lily|0.7||See a film, take a trip — fun things to do!","See a film, take a trip — fun things to do!",created,200,74400,no,,1,openai
+"elevenlabs|el:lily|0.85||Tomorrow, tonight, what are you going to do?","Tomorrow, tonight, what are you going to do?",created,200,63360,no,,1,openai
+"elevenlabs|el:lily|0.85||See a film, take a trip — fun things to do!","See a film, take a trip — fun things to do!",created,200,61440,no,,1,openai
+"elevenlabs|el:lily|1||Tomorrow, tonight, what are you going to do?","Tomorrow, tonight, what are you going to do?",created,200,53760,no,,1,openai
+"elevenlabs|el:lily|1||See a film, take a trip — fun things to do!","See a film, take a trip — fun things to do!",created,200,52320,no,,1,openai
+elevenlabs|el:lily|0.7||I like hiking.,I like hiking.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.85||I like hiking.,I like hiking.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|1||I like hiking.,I like hiking.,created,200,26496,no,,1,openai
+elevenlabs|el:lily|0.7||He lives in Canberra.,He lives in Canberra.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||He lives in Canberra.,He lives in Canberra.,created,200,44160,no,,1,openai
+elevenlabs|el:lily|1||He lives in Canberra.,He lives in Canberra.,created,200,29568,no,,1,openai
+elevenlabs|el:lily|0.7||What are your hobbies? Do you like hiking?,What are your hobbies? Do you like hiking?,created,200,73440,no,,1,openai
+"elevenlabs|el:lily|0.7||My pen pal likes singing, hiking too!","My pen pal likes singing, hiking too!",created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.85||What are your hobbies? Do you like hiking?,What are your hobbies? Do you like hiking?,created,200,59520,no,,1,openai
+"elevenlabs|el:lily|0.85||My pen pal likes singing, hiking too!","My pen pal likes singing, hiking too!",created,200,72192,no,,1,openai
+elevenlabs|el:lily|1||What are your hobbies? Do you like hiking?,What are your hobbies? Do you like hiking?,created,200,51360,no,,1,openai
+"elevenlabs|el:lily|1||My pen pal likes singing, hiking too!","My pen pal likes singing, hiking too!",created,200,58368,no,,1,openai
+elevenlabs|el:lily|0.7||He's a scientist.,He's a scientist.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.85||He's a scientist.,He's a scientist.,created,200,23424,no,,1,openai
+elevenlabs|el:lily|1||He's a scientist.,He's a scientist.,created,200,31488,no,,1,openai
+elevenlabs|el:lily|0.7||He works in a factory.,He works in a factory.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||He works in a factory.,He works in a factory.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|1||He works in a factory.,He works in a factory.,created,200,30720,no,,1,openai
+"elevenlabs|el:lily|0.7||Worker, postman, what does he do?","Worker, postman, what does he do?",created,200,79104,no,,1,openai
+"elevenlabs|el:lily|0.7||Scientist, pilot, working for you!","Scientist, pilot, working for you!",created,200,98688,no,,1,openai
+"elevenlabs|el:lily|0.85||Worker, postman, what does he do?","Worker, postman, what does he do?",created,200,57984,no,,1,openai
+"elevenlabs|el:lily|0.85||Scientist, pilot, working for you!","Scientist, pilot, working for you!",created,200,61056,no,,1,openai
+"elevenlabs|el:lily|1||Worker, postman, what does he do?","Worker, postman, what does he do?",created,200,47232,no,,1,openai
+"elevenlabs|el:lily|1||Scientist, pilot, working for you!","Scientist, pilot, working for you!",created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.7||I'm sad.,I'm sad.,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||I'm sad.,I'm sad.,created,200,59136,no,,1,openai
+elevenlabs|el:lily|1||I'm sad.,I'm sad.,created,200,17664,no,,1,openai
+elevenlabs|el:lily|0.7||You should see a doctor.,You should see a doctor.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.85||You should see a doctor.,You should see a doctor.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|1||You should see a doctor.,You should see a doctor.,created,200,33024,no,,1,openai
+"elevenlabs|el:lily|0.7||Happy, happy, how do you feel?","Happy, happy, how do you feel?",created,200,70272,no,,1,openai
+"elevenlabs|el:lily|0.7||Sad or angry? Tell me, please!","Sad or angry? Tell me, please!",created,200,78336,no,,1,openai
+"elevenlabs|el:lily|0.85||Happy, happy, how do you feel?","Happy, happy, how do you feel?",created,200,57216,no,,1,openai
+"elevenlabs|el:lily|0.85||Sad or angry? Tell me, please!","Sad or angry? Tell me, please!",created,200,56064,no,,1,openai
+"elevenlabs|el:lily|1||Happy, happy, how do you feel?","Happy, happy, how do you feel?",created,200,48000,no,,1,openai
+"elevenlabs|el:lily|1||Sad or angry? Tell me, please!","Sad or angry? Tell me, please!",created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||You're taller than me.,You're taller than me.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.85||You're taller than me.,You're taller than me.,created,200,49920,no,,1,openai
+elevenlabs|el:lily|1||You're taller than me.,You're taller than me.,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||I'm thinner than you.,I'm thinner than you.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.85||I'm thinner than you.,I'm thinner than you.,created,200,36480,no,,1,openai
+elevenlabs|el:lily|1||I'm thinner than you.,I'm thinner than you.,created,200,28032,no,,1,openai
+elevenlabs|el:lily|0.7||You're heavier than me.,You're heavier than me.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.85||You're heavier than me.,You're heavier than me.,created,200,29184,no,,1,openai
+elevenlabs|el:lily|1||You're heavier than me.,You're heavier than me.,created,200,32256,no,,1,openai
+"elevenlabs|el:lily|0.7||Taller, shorter, who is who?","Taller, shorter, who is who?",created,200,81792,no,,1,openai
+"elevenlabs|el:lily|0.7||Heavier, thinner, me and you!","Heavier, thinner, me and you!",created,200,110208,no,,1,openai
+"elevenlabs|el:lily|0.85||Taller, shorter, who is who?","Taller, shorter, who is who?",created,200,61056,no,,1,openai
+"elevenlabs|el:lily|0.85||Heavier, thinner, me and you!","Heavier, thinner, me and you!",created,200,57216,no,,1,openai
+"elevenlabs|el:lily|1||Taller, shorter, who is who?","Taller, shorter, who is who?",created,200,52224,no,,1,openai
+"elevenlabs|el:lily|1||Heavier, thinner, me and you!","Heavier, thinner, me and you!",created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.7||I watched TV last weekend.,I watched TV last weekend.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.85||I watched TV last weekend.,I watched TV last weekend.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|1||I watched TV last weekend.,I watched TV last weekend.,created,200,64128,no,,1,openai
+elevenlabs|el:lily|0.7||Did you watch TV?,Did you watch TV?,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.85||Did you watch TV?,Did you watch TV?,created,200,42240,no,,1,openai
+elevenlabs|el:lily|1||Did you watch TV?,Did you watch TV?,created,200,32256,no,,1,openai
+elevenlabs|el:lily|0.7||I had a cold last weekend.,I had a cold last weekend.,created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.85||I had a cold last weekend.,I had a cold last weekend.,created,200,57216,no,,1,openai
+elevenlabs|el:lily|1||I had a cold last weekend.,I had a cold last weekend.,created,200,52992,no,,1,openai
+"elevenlabs|el:lily|0.7||Cleaned and washed, watched and read,","Cleaned and washed, watched and read,",created,200,77184,no,,1,openai
+"elevenlabs|el:lily|0.7||Last weekend, that's what I did!","Last weekend, that's what I did!",created,200,63744,no,,1,openai
+"elevenlabs|el:lily|0.85||Cleaned and washed, watched and read,","Cleaned and washed, watched and read,",created,200,59136,no,,1,openai
+"elevenlabs|el:lily|0.85||Last weekend, that's what I did!","Last weekend, that's what I did!",created,200,57216,no,,1,openai
+"elevenlabs|el:lily|1||Cleaned and washed, watched and read,","Cleaned and washed, watched and read,",created,200,62592,no,,1,openai
+"elevenlabs|el:lily|1||Last weekend, that's what I did!","Last weekend, that's what I did!",created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||I rode a horse.,I rode a horse.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.85||I rode a horse.,I rode a horse.,created,200,32640,no,,1,openai
+elevenlabs|el:lily|1||I rode a horse.,I rode a horse.,created,200,33024,no,,1,openai
+elevenlabs|el:lily|0.7||Where did you go? How did you go there?,Where did you go? How did you go there?,created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.85||Where did you go? How did you go there?,Where did you go? How did you go there?,created,200,55296,no,,1,openai
+elevenlabs|el:lily|1||Where did you go? How did you go there?,Where did you go? How did you go there?,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||We went camping.,We went camping.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.85||We went camping.,We went camping.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|1||We went camping.,We went camping.,created,200,18432,no,,1,openai
+elevenlabs|el:lily|0.7||Where did you go? We went camping!,Where did you go? We went camping!,created,200,72576,no,,1,openai
+"elevenlabs|el:lily|0.7||We rode, we ate, we had a great day!","We rode, we ate, we had a great day!",created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.85||Where did you go? We went camping!,Where did you go? We went camping!,created,200,49920,no,,1,openai
+"elevenlabs|el:lily|0.85||We rode, we ate, we had a great day!","We rode, we ate, we had a great day!",created,200,73344,no,,1,openai
+elevenlabs|el:lily|1||Where did you go? We went camping!,Where did you go? We went camping!,created,200,41088,no,,1,openai
+"elevenlabs|el:lily|1||We rode, we ate, we had a great day!","We rode, we ate, we had a great day!",created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||There was no gym in my old school.,There was no gym in my old school.,created,200,82560,no,,1,openai
+elevenlabs|el:lily|1||There was no gym in my old school.,There was no gym in my old school.,created,200,59520,no,,1,openai
+elevenlabs|el:lily|0.7||There was no library in my old school. There is one now.,There was no library in my old school. There is one now.,created,200,99840,no,,1,openai
+elevenlabs|el:lily|1||There was no library in my old school. There is one now.,There was no library in my old school. There is one now.,created,200,70080,no,,1,openai
+elevenlabs|el:lily|0.7||I can go cycling.,I can go cycling.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|1||I can go cycling.,I can go cycling.,created,200,35328,no,,1,openai
+"elevenlabs|el:lily|0.7||Then I was small, then I was slow,","Then I was small, then I was slow,",created,200,78336,no,,1,openai
+"elevenlabs|el:lily|0.7||Now I'm tall, now watch me go!","Now I'm tall, now watch me go!",created,200,79104,no,,1,openai
+"elevenlabs|el:lily|1||Then I was small, then I was slow,","Then I was small, then I was slow,",created,200,72192,no,,1,openai
+"elevenlabs|el:lily|1||Now I'm tall, now watch me go!","Now I'm tall, now watch me go!",created,200,45696,no,,1,openai
+elevenlabs|el:lily|1||TV,TV,created,200,19968,no,,1,openai
+elevenlabs|el:lily|1||pencil,pencil,created,200,19200,no,,1,openai
+elevenlabs|el:lily|1||chopsticks,chopsticks,created,200,35328,no,,1,openai
+elevenlabs|el:lily|1||play the pipa,play the pipa,created,200,29568,no,,1,openai
+elevenlabs|el:lily|1||mountain,mountain,created,200,16128,no,,1,openai
+elevenlabs|el:lily|1||sandwich,sandwich,created,200,27264,no,,1,openai
+elevenlabs|el:lily|1||clock,clock,created,200,16128,no,,1,openai
+elevenlabs|el:lily|1||do kung fu,do kung fu,created,200,27264,no,,1,openai
+elevenlabs|el:lily|1||ice cream,ice cream,created,200,38400,no,,1,openai
+elevenlabs|el:lily|1||bridge,bridge,created,200,24960,no,,1,openai
+elevenlabs|el:lily|1||exercise,exercise,created,200,21120,no,,1,openai
+elevenlabs|el:lily|1||autumn,autumn,created,200,17664,no,,1,openai
+elevenlabs|el:lily|1||eat dinner,eat dinner,created,200,21120,no,,1,openai
+elevenlabs|el:lily|1||summer,summer,created,200,15360,no,,1,openai
+elevenlabs|el:lily|1||spring,spring,created,200,19200,no,,1,openai
+elevenlabs|el:lily|1||eat breakfast,eat breakfast,created,200,33792,no,,1,openai
+elevenlabs|el:lily|1||cinema,cinema,created,200,22656,no,,1,openai
+elevenlabs|el:lily|1||bookstore,bookstore,created,200,16128,no,,1,openai
+elevenlabs|el:lily|1||school,school,created,200,35328,no,,1,openai
+elevenlabs|el:lily|1||by bus,by bus,created,200,24192,no,,1,openai
+elevenlabs|el:lily|1||by bike,by bike,created,200,23424,no,,1,openai
+elevenlabs|el:lily|1||by plane,by plane,created,200,17664,no,,1,openai
+elevenlabs|el:lily|1||singer,singer,created,200,19968,no,,1,openai
+elevenlabs|el:lily|1||sad,sad,created,200,21888,no,,1,openai
+elevenlabs|el:lily|1||making kites,making kites,created,200,28032,no,,1,openai
+elevenlabs|el:lily|1||Listen! They are singing in the music room.,Listen! They are singing in the music room.,created,200,52320,no,,1,openai
+elevenlabs|el:lily|1||The girls are having breakfast now.,The girls are having breakfast now.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|1||I go to school from Monday to Friday.,I go to school from Monday to Friday.,created,200,58368,no,,1,openai
+elevenlabs|el:lily|1||My mother is an English teacher.,My mother is an English teacher.,created,200,33792,no,,1,openai
+elevenlabs|el:lily|1||There are twelve months in a year.,There are twelve months in a year.,created,200,36864,no,,1,openai
+elevenlabs|el:lily|1||There are five photos on the table.,There are five photos on the table.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|1||She is going to visit her grandparents.,She is going to visit her grandparents.,created,200,46464,no,,1,openai
+elevenlabs|el:lily|1||What is your hobby?,What is your hobby?,created,200,27264,no,,1,openai
+elevenlabs|el:lily|1||I am going to the bookstore.,I am going to the bookstore.,created,200,36864,no,,1,openai
+elevenlabs|el:lily|1||I went fishing yesterday.,I went fishing yesterday.,created,200,33792,no,,1,openai
+elevenlabs|el:lily|1||My dad bought a new bike for me yesterday.,My dad bought a new bike for me yesterday.,created,200,53280,no,,1,openai
+elevenlabs|el:lily|1||John had a cold last Sunday.,John had a cold last Sunday.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|1||I stayed at home and watched TV last Saturday.,I stayed at home and watched TV last Saturday.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|1||How was your holiday last month?,How was your holiday last month?,created,200,46464,no,,1,openai
+elevenlabs|el:lily|1||My pencil is longer than yours.,My pencil is longer than yours.,created,200,36096,no,,1,openai
+elevenlabs|el:lily|1||Tom is taller than John.,Tom is taller than John.,created,200,33792,no,,1,openai
+elevenlabs|el:lily|1||My schoolbag is heavier than Sarah's.,My schoolbag is heavier than Sarah's.,created,200,59520,no,,1,openai
+elevenlabs|el:lily|1||My brother is much younger than you.,My brother is much younger than you.,created,200,45696,no,,1,openai
+elevenlabs|el:lily|1||Don't talk here. The students are sleeping.,Don't talk here. The students are sleeping.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|1||Mike did his homework after school yesterday.,Mike did his homework after school yesterday.,created,200,58080,no,,1,openai
+elevenlabs|el:lily|1||I went swimming last weekend.,I went swimming last weekend.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|1||She watched TV yesterday.,She watched TV yesterday.,created,200,43392,no,,1,openai
+elevenlabs|el:lily|1||Tom is taller than Jim.,Tom is taller than Jim.,created,200,49920,no,,1,openai
+elevenlabs|el:lily|1||My bag is heavier than yours.,My bag is heavier than yours.,created,200,49920,no,,1,openai
+elevenlabs|el:lily|1||I bought a gift for my mother.,I bought a gift for my mother.,created,200,29568,no,,1,openai
+elevenlabs|el:lily|1||We went to the park by bus.,We went to the park by bus.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|1||The elephant is bigger than the cat.,The elephant is bigger than the cat.,created,200,49920,no,,1,openai
+elevenlabs|el:lily|1||I visited my grandparents last weekend.,I visited my grandparents last weekend.,created,200,56064,no,,1,openai
+elevenlabs|el:lily|1||He had a cold last Sunday.,He had a cold last Sunday.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|1||I took many pictures.,I took many pictures.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|1||Sarah is younger than me.,Sarah is younger than me.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||school,school,created,200,31872,no,,1,openai

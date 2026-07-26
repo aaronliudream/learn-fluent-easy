@@ -129,7 +129,19 @@ fetch → decodeAudioData → BufferSource → GainNode → destination),该路�
 `unlockAudioSync()`(在 `<audio>` 上播静音 WAV 消费手势)换成 `unlockReadAloud()`(手势内 `AudioContext.resume()`)
 —— 旧那一下静音播放本身就足以招来灵动岛。
 
-**边界**:只改朗读。全站其它发音(点词查义、单词卡、闯关题,~36 个文件)仍走 `speak()` 的 `<audio>` 路径,行为一行未改。
+**边界**:限图书馆阅读器**整页**(第二步已把页内点词一并迁移,见下)。阅读器之外的全站发音
+(初中/高考/美语的点词、单词卡、闯关题,~36 个文件)仍走 `speak()` 的 `<audio>` 路径,行为一行未改。
+
+**第二步 · 页内点词查义(Aaron 2026-07-25 追加)**:只迁朗读的话,点一个词又把灵动岛招回来。
+`TappableLine` 加可选 prop `speakFn`(不传 → 默认 `speak()`,其它模块零改动),内部用
+`SpeakFnContext` 下发给深层的喇叭按钮 —— 因为按钮埋在
+`TappableLine → ExplainPopover → LessonBody → SenseRow → PlayableEnCn` 五层里,
+逐层钻 prop 要改 5 个组件签名,而这组件是全线共用的。**不传 `speakFn` 时连 Provider 都不套**,
+其它模块的渲染树逐节点不变。阅读器与绘本模式(`ReadingPictureBook` 透传)两处注入点都已接。
+
+⚠️ 注入的必须是**不带 opts** 的 `readAloudText(t)`。`TappableLine` 的视口预热
+(`pwWarm` → `prefetchTTS(t)`)用的是默认音色、无 accent 的缓存键;一旦传 `READ_ACCENT`/`speed`,
+键就对不上,点词全退回 1-3s 冷合成。点词(默认音色)与整句朗读(accent US)音色不同是既有设定,不是笔误。
 
 **变速**:朗读慢速档走的是 **TTS 服务端合成**(`speed=0.7` 传给 tts edge function),
 前端从不碰 `playbackRate`(全库零命中)。所以不存在「慢速变低沉怪音」的问题 —— 无需插停顿方案。

@@ -505,6 +505,12 @@ export default function LibraryReader() {
     };
   }, [loading, chapterLoading, sentences, playingAll, bump]);
 
+  // 点词/例句发音也走 Web Audio —— 否则整句朗读躲开了灵动岛,点一个词又把它招回来。
+  // 【必须不带 opts】:TappableLine 的视口预热(pwWarm → prefetchTTS(t))用的是默认音色、
+  // 无 accent 的缓存键;这里一旦传 READ_ACCENT/speed,键就对不上,点词全退回 1-3s 冷合成。
+  // 与整句朗读(accent US)音色不同是**既有设定**,不是笔误。
+  const tapSpeak = useCallback((t: string) => readAloudText(t), []);
+
   // 播一句:audio_url 有且非慢速则用预生成;否则实时合成(慢速强制实时以尊重语速)。
   // 慢速 = speed 0.7 交给 TTS 服务端合成,前端不动 playbackRate —— 变速不变调。
   const playSentence = useCallback(
@@ -952,6 +958,7 @@ export default function LibraryReader() {
               onFavoriteChange={handleFavChange}
               onLongPressStart={startLongPress}
               onLongPressCancel={cancelLongPress}
+              speakFn={tapSpeak}
             />
           ) : (
           /* 段落流排版:同段句子连排成一段文字(像一本书);插图按 position 穿插;喇叭移到段落级。 */
@@ -1074,6 +1081,7 @@ export default function LibraryReader() {
                               cultureNotes={cultureNotes}
                               wordSenses={wordSenses}
                               onFavoriteChange={handleFavChange}
+                              speakFn={tapSpeak}
                             />
                             {mode === "en" && revealedCn.has(i) && s.text_cn && (
                               <span className="text-slate-400">（{s.text_cn}）</span>

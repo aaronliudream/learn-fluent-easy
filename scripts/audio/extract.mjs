@@ -131,7 +131,7 @@ const gradeOf = (rel, how) => {
  * 按映射表抽出全部「可达 (文本 × 档位)」对象。
  * @returns {Map<string, {cache_key,text,voice_id,speed,cdn_url,storage_url,source_ref,record_id,field}>}
  */
-export function extractItems(cfg, { allFiles, onlySource = '' } = {}) {
+export function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false } = {}) {
   const files = allFiles ?? checkCoverage(cfg);
   const rows = new Map();
   for (const s of cfg.sources ?? []) {
@@ -149,7 +149,11 @@ export function extractItems(cfg, { allFiles, onlySource = '' } = {}) {
     }
     const re = globToRe(s.files);
     const matched = files.filter((f) => re.test(f));
-    if (!matched.length) throw new ConfigError(`✗ 内容源 ${s.id} 的 files 模式没有匹配到任何文件：${s.files}`);
+    // 全量模式下"某内容源匹配不到文件"= 映射表写错了，必须炸；
+    // 「只扫改动文件」模式下大部分源本来就匹配不到，属正常（由 allowEmptySources 打开）。
+    if (!matched.length && !allowEmptySources) {
+      throw new ConfigError(`✗ 内容源 ${s.id} 的 files 模式没有匹配到任何文件：${s.files}`);
+    }
     const pick = pickers[s.picker];
     if (!pick) throw new ConfigError(`✗ 内容源 ${s.id} 的 picker "${s.picker}" 未实现（可用：${Object.keys(pickers).join(', ')}）`);
     for (const rel of matched) {

@@ -84,12 +84,17 @@ primary 的档位取自已批准的 `docs/audio/B4_1_speed_matrix.md`：
 | 已接入 section | **primary**（junior / senior / american 会拒绝执行并提示） |
 | 覆盖率检查 | `src/data/primaryHub` 下 **74 个文件全部已分类** |
 | 可达 (文本 × 档位) 唯一对象 | **3436** |
-| 现存 | 3435 |
-| 缺口 | **1** —— `funny` @1.0（`fc_g5v1_lcw_02`）|
+| 现存 | **3436** |
+| 缺口 | **0**（funny 已于 2026-07-26 修复） |
 
-那 1 个缺口不是新发现的漏网之鱼，正是音频审计里那个 **1920 字节 / 0.12 秒的损坏对象**：
-管线按"HTTP 200 且 ≥2KB 才算存在"判定，于是在完全不知情的前提下把它独立挖了出来。
-处理方式见 `SQLAA/2026-07-25-删除损坏TTS对象-funny.sql`（删对象 + CF purge，之后管线会自动补上）。
+留档：这份清单当初唯一的缺口不是漏网之鱼，正是音频审计里那个 **1920 字节 / 0.12 秒的损坏对象**——
+管线按"HTTP 200 且 ≥2KB 才算存在"判定，在完全不知情的前提下把它独立挖了出来。
+处理全过程见 `SQLAA/2026-07-25-删除损坏TTS对象-funny.md`
+（Storage API 删对象 → CF purge → 预热 → **帧级复验**；修复后 55 帧 / 1.32 秒，对照损坏时 5 帧 / 0.120 秒）。
+
+> 这里的数字是**写文档那一刻**的实测值。当前状态请跑 `npm run audio:audit`，
+> 或看最近一次 `audio-audit` workflow 的 artifact —— 结果快照**不入库**（见 `.gitignore`），
+> 就是为了避免仓库里躺着一份看起来权威、实际早已过期的数字。
 
 ## 巡检（定期跑，防"再长回来"）
 
@@ -146,8 +151,27 @@ npm run audio:audit          # = node scripts/audio/audit-audio.mjs --section pr
 因此走 GitHub Actions 可行，已加 `.github/workflows/audio-audit.yml`：`workflow_dispatch` + **每周一** 02:00 UTC。
 按周跑约 25 分钟/月（私有仓库分钟数计费，故不设每日）。缺口结果以 artifact 上传。
 
-⚠️ 一个诚实的提醒：**funny 修好之前这个任务会红，而且红是对的**（确实有 1 个对象缺失）。
-funny 处理完后它应立刻变绿（3438/3438）；若仍红，说明有新缺口，别把它当成"已知的老红"忽略过去。
+funny 那个损坏对象已于 2026-07-26 处理完毕，本地巡检实测 **3436/3436、缺失 0、前置三条全过**，
+所以这个定时任务的**首次运行就是绿的**。它以后一旦变红，就是真有新缺口、或兜底/检查器坏了——
+**不存在"已知的老红"**，不要脱敏。
+
+### 上线前置闸（PR 级，检出延迟 0）
+
+周巡检的检出延迟最长 7 天，而这 7 天里新内容在自动播路径上就是静音。所以另有一道 PR 闸：
+`.github/workflows/audio-precheck.yml`，`pull_request` 且 `paths: src/data/**` 时触发，
+只检查**本 PR 改动到的内容文件**（`scripts/audio/precheck-changed.mjs`）。
+
+| 场景 | 行为 | 实测耗时 |
+|---|---|---|
+| PR 未触及 `src/data/**` | workflow 不触发；脚本自身也会短路退 0 | 0.0s |
+| 改到内容文件、音频已齐 | 通过（退 0） | 1.3s（21 个对象） |
+| 改到内容文件、有新文本 | **失败（退 1）**，列出缺口 + 给可复制的修复命令，并把清单以 artifact 上传 | 0.5s（6 个缺口） |
+| 新内容文件没在映射表分类 | 退 2（覆盖率检查挡住） | — |
+| 金丝雀失败 | 退 3，本轮作废 | — |
+
+修复动作在**作者本地**跑（那里有 anon key，CI 没有凭据也不该有）：`npm run audio:backfill`，
+或只补本 PR 那批：`node scripts/audio/backfill-missing-audio.ts --list data/audio-audit/precheck_primary_list.csv`。
+跑完重推，闸自动变绿。
 
 ### 巡检看不见的盲区（记账，不用处理）
 

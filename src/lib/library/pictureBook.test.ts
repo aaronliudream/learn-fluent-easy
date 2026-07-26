@@ -32,12 +32,12 @@ const illus = (rows: Partial<LibraryIllustration>[]): LibraryIllustration[] =>
   }));
 
 describe("白名单", () => {
-  it("只放行伊索第 1-8 章", () => {
-    for (const ch of [1, 2, 3, 4, 5, 6, 7, 8]) {
+  it("只放行伊索第 1-9 章", () => {
+    for (const ch of [1, 2, 3, 4, 5, 6, 7, 8, 9]) {
       expect(isPictureBookChapter("aesop-easy-readers", ch)).toBe(true);
     }
-    // 未配页图的章不得放行(ch9 起仍走原段落流渲染)
-    expect(isPictureBookChapter("aesop-easy-readers", 9)).toBe(false);
+    // 未配页图的章不得放行(ch10 起仍走原段落流渲染)
+    expect(isPictureBookChapter("aesop-easy-readers", 10)).toBe(false);
     expect(isPictureBookChapter("wizard-of-oz", 1)).toBe(false);
   });
 });

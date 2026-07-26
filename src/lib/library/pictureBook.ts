@@ -27,6 +27,7 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   "aesop-easy-readers#7",
   // ⚠️ 画风分界:ch1-ch7 为水彩,ch8 起改为卡通彩色(2026-07-26 拍板,旧章不回头修)。
   "aesop-easy-readers#8",
+  "aesop-easy-readers#9",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

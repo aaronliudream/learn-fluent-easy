@@ -1,0 +1,197 @@
+[
+ {
+  "no": 1,
+  "d": 1,
+  "stem": "The person ____ helped us find the way was very gentle.",
+  "opts": [
+   "which",
+   "what",
+   "whose",
+   "who"
+  ],
+  "ans": "D",
+  "expl": "who 引导定语从句,先行词 the person 指人,who 在从句中作主语。which 只能指物,what 不能引导定语从句。"
+ },
+ {
+  "no": 2,
+  "d": 1,
+  "stem": "Do you know the fighter ____ saved the little girl?",
+  "opts": [
+   "which",
+   "what",
+   "who",
+   "where"
+  ],
+  "ans": "C",
+  "expl": "先行词 the fighter 指人,故用 who 引导定语从句并在从句中作主语。"
+ },
+ {
+  "no": 3,
+  "d": 1,
+  "stem": "He is the presenter ____ we saw on TV last night.",
+  "opts": [
+   "which",
+   "whom",
+   "what",
+   "where"
+  ],
+  "ans": "B",
+  "expl": "先行词 the presenter 指人,关系词在从句中作 saw 的宾语,故用 who 的宾格形式 whom。"
+ },
+ {
+  "no": 4,
+  "d": 1,
+  "stem": "The survivor ____ told the story is my great-aunt.",
+  "opts": [
+   "who",
+   "which",
+   "whose",
+   "what"
+  ],
+  "ans": "A",
+  "expl": "先行词 the survivor 指人,who 在从句中作主语,引导定语从句修饰 survivor。"
+ },
+ {
+  "no": 5,
+  "d": 1,
+  "stem": "We thanked the doctors ____ worked on the front line.",
+  "opts": [
+   "which",
+   "what",
+   "who",
+   "where"
+  ],
+  "ans": "C",
+  "expl": "先行词 the doctors 指人,用 who 引导定语从句;which 只用于指物。"
+ },
+ {
+  "no": 6,
+  "d": 1,
+  "stem": "I still remember the teacher ____ made me love science.",
+  "opts": [
+   "which",
+   "what",
+   "where",
+   "who"
+  ],
+  "ans": "D",
+  "expl": "先行词 the teacher 指人,故用 who;从句 made me love science 说明是哪一位老师。"
+ },
+ {
+  "no": 7,
+  "d": 1,
+  "stem": "The dreamer ____ fed countless people is remembered by us all.",
+  "opts": [
+   "who",
+   "which",
+   "what",
+   "whose"
+  ],
+  "ans": "A",
+  "expl": "先行词 the dreamer 指人,who 在从句中作主语。"
+ },
+ {
+  "no": 8,
+  "d": 2,
+  "stem": "The boy who ____ standing by the engine is my cousin.",
+  "opts": [
+   "are",
+   "is",
+   "were",
+   "be"
+  ],
+  "ans": "B",
+  "expl": "定语从句的谓语要与先行词的数一致:先行词 the boy 是单数,故用 is。"
+ },
+ {
+  "no": 9,
+  "d": 2,
+  "stem": "The people who ____ on the front line are true heroes.",
+  "opts": [
+   "is",
+   "was",
+   "has",
+   "work"
+  ],
+  "ans": "D",
+  "expl": "先行词 the people 是复数概念,定语从句谓语用复数形式 work。"
+ },
+ {
+  "no": 10,
+  "d": 2,
+  "stem": "The person whom we ____ yesterday is a co-pilot.",
+  "opts": [
+   "met",
+   "meet",
+   "meets",
+   "meeting"
+  ],
+  "ans": "A",
+  "expl": "定语从句由时间状语 yesterday 决定用一般过去时 met;whom 在从句中作 met 的宾语。"
+ },
+ {
+  "no": 11,
+  "d": 2,
+  "stem": "My great-aunt is the person ____ I want to thank most.",
+  "opts": [
+   "which",
+   "what",
+   "whom",
+   "where"
+  ],
+  "ans": "C",
+  "expl": "先行词 the person 指人,关系词在从句中作 thank 的宾语,故用 whom。"
+ },
+ {
+  "no": 12,
+  "d": 2,
+  "stem": "Anyone ____ wants to help with the experiment can join us.",
+  "opts": [
+   "which",
+   "who",
+   "what",
+   "where"
+  ],
+  "ans": "B",
+  "expl": "不定代词 anyone 指人,用 who 引导定语从句;从句谓语 wants 与 anyone 的单数一致。"
+ },
+ {
+  "no": 13,
+  "d": 3,
+  "stem": "Which sentence has an ATTRIBUTIVE CLAUSE (定语从句)?",
+  "opts": [
+   "The girl who won the race is my sister.",
+   "I know who won the race.",
+   "Who won the race yesterday?",
+   "Please tell me who won the race."
+  ],
+  "ans": "A",
+  "expl": "定语从句的 who 前面有先行词,用来修饰该名词;A 项中 who won the race 修饰 the girl。B、D 两项的 who 引导宾语从句,作 know / tell 的宾语,前面没有先行词;C 项是疑问句。"
+ },
+ {
+  "no": 14,
+  "d": 3,
+  "stem": "She is one of the few people who ____ the whole story.",
+  "opts": [
+   "knows",
+   "is knowing",
+   "to know",
+   "know"
+  ],
+  "ans": "D",
+  "expl": "定语从句修饰的先行词是 people(复数),故谓语用 know;不要被前面的 one of 误导为单数。"
+ },
+ {
+  "no": 15,
+  "d": 3,
+  "stem": "Choose the CORRECT sentence.",
+  "opts": [
+   "This is the engine who works well.",
+   "This is the pilot who flies the plane.",
+   "This is the pilot which flies the plane.",
+   "This is the engine whom works well."
+  ],
+  "ans": "B",
+  "expl": "who 只能指人,which 只能指物。B 项先行词 the pilot 指人、用 who 且在从句中作主语,搭配正确;A、D 两项先行词 the engine 指物却用了 who / whom,C 项先行词指人却用了 which。"
+ }
+]

@@ -1,0 +1,197 @@
+[
+ {
+  "no": 1,
+  "d": 1,
+  "stem": "The old map was ____, so we could not find the way.",
+  "opts": [
+   "useful",
+   "useless",
+   "using",
+   "used"
+  ],
+  "ans": "B",
+  "expl": "形容词后缀 -less 表示「没有……的」,useless 意为「无用的」,与「找不到路」的结果一致;-ful 表示「有……的」,语义相反。"
+ },
+ {
+  "no": 2,
+  "d": 1,
+  "stem": "Reading this book is very ____; I have learnt a lot from it.",
+  "opts": [
+   "helpless",
+   "helplessly",
+   "helpful",
+   "helpfully"
+  ],
+  "ans": "C",
+  "expl": "-ful 加在名词 help 后构成形容词 helpful「有帮助的」,在句中作表语;-less 表否定,-ly 构成副词,均不合。"
+ },
+ {
+  "no": 3,
+  "d": 1,
+  "stem": "The new machine will ____ us to save more energy.",
+  "opts": [
+   "enable",
+   "unable",
+   "ability",
+   "disable"
+  ],
+  "ans": "A",
+  "expl": "前缀 en- 加在形容词 able 前构成动词 enable「使能够」,后接「sb. to do」;unable 是形容词,ability 是名词,disable 意为「使丧失能力」,语义相反。"
+ },
+ {
+  "no": 4,
+  "d": 1,
+  "stem": "He spoke ____ so that everyone at the back could hear him.",
+  "opts": [
+   "loud",
+   "louder",
+   "loudest",
+   "loudly"
+  ],
+  "ans": "D",
+  "expl": "后缀 -ly 加在形容词 loud 后构成副词 loudly,修饰动词 spoke。"
+ },
+ {
+  "no": 5,
+  "d": 1,
+  "stem": "I am not ____ in this old film at all.",
+  "opts": [
+   "interesting",
+   "interestingly",
+   "interested",
+   "uninteresting"
+  ],
+  "ans": "C",
+  "expl": "-ed 形式的形容词说明人的感受,主语是 I,故用 interested;-ing 形式说明事物本身令人产生某种感受。"
+ },
+ {
+  "no": 6,
+  "d": 1,
+  "stem": "\"Please water the plants twice a week.\" In this sentence, the word \"water\" is used as a ____.",
+  "opts": [
+   "noun",
+   "verb",
+   "adjective",
+   "adverb"
+  ],
+  "ans": "B",
+  "expl": "转化法:名词 water 在此句中直接用作动词,意为「浇水」,前面有祈使句标志 Please,后面带宾语 the plants。"
+ },
+ {
+  "no": 7,
+  "d": 1,
+  "stem": "Do not throw the old glass bottles away — we can ____ them into lamps.",
+  "opts": [
+   "use",
+   "used",
+   "using",
+   "upcycle"
+  ],
+  "ans": "D",
+  "expl": "前缀 up- 加在 cycle 前构成动词 upcycle,意为「升级改造」,即把旧物改造成更好的新物。"
+ },
+ {
+  "no": 8,
+  "d": 2,
+  "stem": "Without a map we felt ____ in the big city.",
+  "opts": [
+   "helpless",
+   "helpful",
+   "helpfully",
+   "helping"
+  ],
+  "ans": "A",
+  "expl": "-less 表示「没有……的」,helpless 意为「无助的」,说明主语 we 的状态;helpful 意为「有帮助的」,语义相反。"
+ },
+ {
+  "no": 9,
+  "d": 2,
+  "stem": "This kind of plastic is ____; it stays in the soil for hundreds of years.",
+  "opts": [
+   "long",
+   "long-lasting",
+   "longer",
+   "longest"
+  ],
+  "ans": "B",
+  "expl": "合成法:形容词 long 与 lasting 合成 long-lasting「耐用的、持久的」,与后半句「留存数百年」呼应。"
+ },
+ {
+  "no": 10,
+  "d": 2,
+  "stem": "She has the ____ to solve the problem by herself.",
+  "opts": [
+   "able",
+   "unable",
+   "enable",
+   "ability"
+  ],
+  "ans": "D",
+  "expl": "冠词 the 后面需要名词,故用 able 的名词形式 ability「能力」。"
+ },
+ {
+  "no": 11,
+  "d": 2,
+  "stem": "The film was ____, so we left before the end.",
+  "opts": [
+   "interested",
+   "interestingly",
+   "uninteresting",
+   "uninterested"
+  ],
+  "ans": "C",
+  "expl": "前缀 un- 表否定,uninteresting 意为「无趣的」,-ing 形式说明事物本身的性质,主语是 The film。"
+ },
+ {
+  "no": 12,
+  "d": 2,
+  "stem": "The factory must think about the ____ cost of its work.",
+  "opts": [
+   "environmental",
+   "environment",
+   "environmentally",
+   "environments"
+  ],
+  "ans": "A",
+  "expl": "后缀 -al 加在名词 environment 后构成形容词 environmental「环境的」,修饰名词 cost。"
+ },
+ {
+  "no": 13,
+  "d": 3,
+  "stem": "In which sentence is the word TALK used as a NOUN?",
+  "opts": [
+   "Let us talk about it after class.",
+   "They talk too loudly in the library.",
+   "I want to talk to the guard.",
+   "We had a long talk about upcycling."
+  ],
+  "ans": "D",
+  "expl": "转化法中同一个词可作不同词性,判断依据是它在句中的位置。D 项 talk 前有冠词 a 和形容词 long,作 had 的宾语,是名词;其余三项的 talk 都跟在 to 或主语之后作动词。"
+ },
+ {
+  "no": 14,
+  "d": 3,
+  "stem": "Choose the pair that fits: \"The teacher was very ____, so the lesson became ____.\"",
+  "opts": [
+   "helpless; interested",
+   "helpful; interesting",
+   "helpfully; interestingly",
+   "helpful; interested"
+  ],
+  "ans": "B",
+  "expl": "空一修饰人、表示「给予帮助的」,用 -ful 形式 helpful;空二的主语是 the lesson(事物),说明事物本身的性质,用 -ing 形式 interesting。D 项的 interested 只能说明人的感受。"
+ },
+ {
+  "no": 15,
+  "d": 3,
+  "stem": "The word UPCYCLE means to change old things into something ____.",
+  "opts": [
+   "better and new",
+   "smaller and cheap",
+   "old and broken",
+   "dirty and unsafe"
+  ],
+  "ans": "A",
+  "expl": "前缀 up- 有「向上、提升」之意,upcycle 指把旧物改造成更好、更有价值的新东西,与单纯的 recycle(回收再处理)不同。"
+ }
+]

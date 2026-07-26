@@ -69,6 +69,36 @@ export function saveLocalState(bookId: string, state: LibraryReadingState): void
   }
 }
 
+/**
+ * 该用户"有没有读过书"(分段判定 A vs B 用)。本地 ∪ 云端,任一有痕迹即为 true。
+ * 本地:扫 library.progress.v1.* 前缀(游客 + 尚未回流的设备);云端:存在性一行,limit 1。
+ */
+export async function hasAnyReadingRecord(): Promise<boolean> {
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k || !k.startsWith(LS_PREFIX)) continue;
+      const st = parseState(JSON.parse(localStorage.getItem(k) || "null"));
+      if (st && (st.furthest_seq >= 0 || st.seconds > 0)) return true;
+    }
+  } catch {
+    /* 隐私模式 / 解析失败 → 继续看云端 */
+  }
+  try {
+    const { data: userData } = await supabase.auth.getUser();
+    const uid = userData?.user?.id;
+    if (!uid) return false;
+    const { data } = await db
+      .from("library_reading_progress")
+      .select("book_id")
+      .eq("user_id", uid)
+      .limit(1);
+    return (data?.length ?? 0) > 0;
+  } catch {
+    return false;
+  }
+}
+
 // ---------- 云端 ----------
 export async function pullCloudState(userId: string, bookId: string): Promise<LibraryReadingState | null> {
   const { data, error } = await db

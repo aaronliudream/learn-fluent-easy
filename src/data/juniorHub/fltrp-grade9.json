@@ -4,7 +4,7 @@
     "semesters": {
       "wy_grade9_volume1": {
         "name": "上册",
-        "available": false,
+        "available": true,
         "units": [
           {
             "id": "wy9v1_u1",
@@ -14,7 +14,7 @@
             "title": "Unit 1 Teenagers today",
             "cn": "青春与榜样",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -168,7 +168,7 @@
             "title": "Unit 2 On the money",
             "cn": "零花钱与理财",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -324,7 +324,7 @@
             "title": "Unit 3 Past passing by",
             "cn": "历史与传承",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -478,7 +478,7 @@
             "title": "Unit 4 Heroes",
             "cn": "平凡英雄",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -633,7 +633,7 @@
             "title": "Unit 5 A fine balance",
             "cn": "人与自然",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -790,7 +790,7 @@
             "title": "Unit 6 Live green",
             "cn": "绿色生活",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -942,7 +942,7 @@
       },
       "wy_grade9_volume2": {
         "name": "下册",
-        "available": true,
+        "available": false,
         "units": []
       }
     }

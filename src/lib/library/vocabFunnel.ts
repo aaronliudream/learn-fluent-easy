@@ -45,6 +45,15 @@ export function trackVocabEntryClick(info: LibrarySegmentInfo): void {
   void trackFunnel("library_vocab_entry_click", info.segment, baseProps(info));
 }
 
+/** B 类(有阅读记录但零收藏)阅读页一次性轻提示的曝光。展示本身终身只有一次,故不再另做去重。 */
+export function trackVocabBHintView(info: LibrarySegmentInfo, bookKey: string, chapterIdx: number): void {
+  void trackFunnel("library_vocab_b_hint_view", info.segment, {
+    ...baseProps(info),
+    book_key: bookKey,
+    chapter_idx: chapterIdx,
+  });
+}
+
 /** 收藏成功。isFirst = 是否为该用户的第一个收藏词。 */
 export function trackVocabFavoriteAdd(args: {
   info: LibrarySegmentInfo | null;

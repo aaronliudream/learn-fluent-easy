@@ -7,13 +7,16 @@
  * 与 P0 ReadingPlay.tsx 无关,一行不碰。
  */
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X, Bookmark, Loader2 } from "lucide-react";
 import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS, isSpeaking } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import { TappableLine } from "@/components/TappableLine";
 import ChapterNotesCollection from "@/components/library/ChapterNotesCollection";
 import { listFavoritedTerms, type LibraryFavoriteKind } from "@/lib/library/favorites";
+import { getLibrarySegment, type LibrarySegmentInfo } from "@/lib/library/segment";
+import { trackVocabBHintView } from "@/lib/library/vocabFunnel";
+import { bHintShown, markBHintShown } from "@/lib/library/vocabNudge";
 import {
   getBookByKey,
   chapterOutline,
@@ -96,6 +99,7 @@ function renderFigure(im: LibraryIllustration) {
 
 export default function LibraryReader() {
   const { bookKey = "" } = useParams();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [book, setBook] = useState<LibraryBook | null>(null);
@@ -117,6 +121,10 @@ export default function LibraryReader() {
   const [seconds, setSeconds] = useState(0);
 
   const [favTerms, setFavTerms] = useState<Set<string>>(new Set()); // 收藏词小写集合(高亮 + 微提取)
+  // 本章本次收藏的词(章末小结卡);切章清空 —— 口径是"这一章你收藏了几个",不是全书累计。
+  const [chapterFavs, setChapterFavs] = useState<{ term: string; kind: LibraryFavoriteKind }[]>([]);
+  const [seg, setSeg] = useState<LibrarySegmentInfo | null>(null); // 用户分段(B 类阅读页提示用)
+  const [pageStart, setPageStart] = useState(-1); // 绘本模式:当前页首句下标(判"是否最后一页")
   const [reveal, setReveal] = useState(false); // 移动端长按 → 揭示可点词
   const [showOnboard, setShowOnboard] = useState(false); // 首次引导提示
   const [revealedCn, setRevealedCn] = useState<Set<number>>(new Set()); // 点句子 → 就地显该句中文(章内数组下标)
@@ -329,13 +337,21 @@ export default function LibraryReader() {
   }, []);
 
   // 收藏变化 → 即时更新高亮/微提取集合(收藏加入、取消移除)。
-  const handleFavChange = useCallback((term: string, _kind: LibraryFavoriteKind, favorited: boolean) => {
+  // 顺带记「本章本次收藏」(章末小结卡用):只记这一章这一次读的,不是全书累计;切章清空。
+  const handleFavChange = useCallback((term: string, kind: LibraryFavoriteKind, favorited: boolean) => {
     setFavTerms((prev) => {
       const next = new Set(prev);
       if (favorited) next.add(term.toLowerCase());
       else next.delete(term.toLowerCase());
       return next;
     });
+    setChapterFavs((prev) => {
+      const has = prev.some((x) => x.term === term && x.kind === kind);
+      if (favorited) return has ? prev : [...prev, { term, kind }];
+      return prev.filter((x) => !(x.term === term && x.kind === kind));
+    });
+    // 收藏了任意一个词 → B 类的"你可以点单词"提示永久不必再出(他已经学会了)。
+    if (favorited) markBHintShown();
   }, []);
 
   // 移动端长按 → 揭示所有可点词(淡底);滚动 / 2.5s 后自动关闭。
@@ -581,7 +597,51 @@ export default function LibraryReader() {
   const registerSentenceRef = useCallback((i: number, el: HTMLElement | null) => {
     liRefs.current[i] = el;
   }, []);
-  const handlePageEnter = useCallback((i: number) => bump(i), [bump]);
+  const handlePageEnter = useCallback(
+    (i: number) => {
+      setPageStart(i); // 记当前页首句 → 章末小结卡只在最后一页出现
+      bump(i);
+    },
+    [bump],
+  );
+
+  // 换章 → 清空「本章本次收藏」和页锚(小结卡的口径是本章,不能跨章累加)。
+  useEffect(() => {
+    setChapterFavs([]);
+    setPageStart(-1);
+  }, [chapterIdx]);
+
+  // 用户分段(B 类阅读页提示用)。内存缓存,一次会话最多算一次;失败静默(不提示总比报错好)。
+  useEffect(() => {
+    let alive = true;
+    getLibrarySegment()
+      .then((info) => {
+        if (alive) setSeg(info);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // B 类(有阅读记录、零收藏)读到第二章还没点过任何词 → 正文下方来一次轻提示,终身只此一次。
+  // 不弹窗、不遮罩、不做高亮动画 —— 他是在读书,不是在看引导。
+  // 用独立 state 记"本次已决定展示":markBHintShown() 一写,bHintShown() 立刻为真,
+  // 若直接拿它当渲染条件,提示会在出现的同一帧消失。
+  const [bHintOn, setBHintOn] = useState(false);
+  useEffect(() => {
+    if (bHintOn || !seg || !book) return;
+    if (seg.segment !== "b" || chapterIdx < 2 || chapterFavs.length > 0 || bHintShown()) return;
+    setBHintOn(true);
+    markBHintShown();
+    trackVocabBHintView(seg, book.book_key, chapterIdx);
+  }, [bHintOn, seg, book, chapterIdx, chapterFavs.length]);
+  const showBHint = bHintOn && chapterFavs.length === 0; // 期间收藏了词 → 立刻收起
+
+  // 章末小结卡:本章收藏 > 0 才出现(收藏 0 时整卡不出,不显示「你收藏了 0 个词」)。
+  // 绘本模式额外要求"翻到最后一页"——段落流模式下卡片本身就在正文最下方,滚到了就是读到了。
+  const onLastPage = !pictureBook || (pages.length > 0 && pageStart === pages[pages.length - 1].startIdx);
+  const showChapterSummary = chapterFavs.length > 0 && onLastPage;
 
   // ---------- 章间导航 ----------
   const pos = useMemo(() => chapters.findIndex((c) => c.idx === chapterIdx), [chapters, chapterIdx]);
@@ -1091,6 +1151,45 @@ export default function LibraryReader() {
             })}
             {tailFigs.map(renderFigure)}
           </div>
+          )}
+
+          {/* B 类一次性轻提示:正文区下方的普通区块(绘本模式下天然落在文字卡之下,不压图) */}
+          {showBHint && (
+            <div className="mt-4 rounded-lg border border-sky-100 bg-sky-50/70 px-3.5 py-2.5 text-[13px] text-sky-800 dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-200">
+              <T>不认识的单词可以直接点，会自动存进词库</T>
+            </div>
+          )}
+
+          {/* 章末小结卡:本章收藏 > 0 才出现;在章节导航之上,不挡下一章按钮 */}
+          {showChapterSummary && (
+            <div className="mt-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900">
+              <div className="text-[15px] font-bold text-slate-800 dark:text-slate-100">
+                <T>{`这一章你收藏了 ${chapterFavs.length} 个词`}</T>
+              </div>
+              <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                {chapterFavs.slice(0, 3).map((f) => (
+                  <span
+                    key={`${f.kind}:${f.term}`}
+                    className="rounded-md bg-slate-100 px-2 py-0.5 text-[12px] text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+                  >
+                    {f.term}
+                  </span>
+                ))}
+                {chapterFavs.length > 3 && (
+                  <span className="text-[12px] text-slate-400">+{chapterFavs.length - 3}</span>
+                )}
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  void flushCloudPush(); // 跳走前把阅读位置落盘,回来还在原处
+                  navigate("/library/vocab", { state: { reviewTerms: chapterFavs } });
+                }}
+                className="mt-3 w-full rounded-full bg-sky-500 py-2 text-sm font-bold text-white transition active:scale-95"
+              >
+                <T>现在测一遍</T>
+              </button>
+            </div>
           )}
 
           {/* 章末合集(③):本章文化笔记,默认折叠 */}

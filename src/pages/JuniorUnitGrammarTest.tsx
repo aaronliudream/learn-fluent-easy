@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import {
@@ -44,6 +45,10 @@ type Result = {
 
 export default function JuniorUnitGrammarTest() {
   const { grade, unitId } = useParams<{ grade: string; unitId: string }>();
+  // 从 Hub 单元关进入时带 ?returnTo=<单元关URL>;有则返回出口回那一关,而不是年级首页。
+  // (高中孪生 GaokaoUnitGrammarTest 一直是这么做的,初中这半边此前漏了。)
+  const [sp] = useSearchParams();
+  const returnTo = sanitizeReturnTo(sp.get("returnTo"));
   const unit = unitId ? findUnit(unitId) : null;
 
   const [points, setPoints] = useState<UnitPoint[]>([]);
@@ -165,7 +170,7 @@ export default function JuniorUnitGrammarTest() {
     }
   };
 
-  const backTo = grade ? `/junior/hub/${grade}` : "/junior";
+  const backTo = returnTo || (grade ? `/junior/hub/${grade}` : "/junior");
 
   const answeredCount = useMemo(() => Object.keys(answers).length, [answers]);
   const correctSoFar = useMemo(

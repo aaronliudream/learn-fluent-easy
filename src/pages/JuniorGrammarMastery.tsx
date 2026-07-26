@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { useParams, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
@@ -91,7 +92,7 @@ export default function JuniorGrammarMastery() {
   const { id } = useParams<{ id: string }>();
   // 从 Hub 单元关进入时带 ?returnTo=<单元关URL>(高中=/gaokao/hub/...);有则所有返回出口回 Hub 关,全程不掉初中。
   const [sp] = useSearchParams();
-  const returnTo = sp.get("returnTo");
+  const returnTo = sanitizeReturnTo(sp.get("returnTo"));   // 站内校验:防 ?returnTo=https://evil 被塞进 <Link to>
   const [pt, setPt] = useState<Pt | null>(null);
   const [pool, setPool] = useState<GrammarQuestion[]>([]);
   const [loading, setLoading] = useState(true);

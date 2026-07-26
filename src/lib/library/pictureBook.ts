@@ -40,6 +40,10 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   "aesop-easy-readers#17",
   "aesop-easy-readers#18",
   "aesop-easy-readers#19",
+  // ch20-ch22:2026-07-26。分页见 SQLAA/20260726_aesop_ch20_ch22_pages.sql。
+  "aesop-easy-readers#20",
+  "aesop-easy-readers#21",
+  "aesop-easy-readers#22",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

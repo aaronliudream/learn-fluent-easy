@@ -1,0 +1,280 @@
+[
+ {
+  "unit": "U3",
+  "kind": "dialogue",
+  "difficulty": 1,
+  "title": "The paper lantern",
+  "topic": "手工灯笼(so that 目的 · so…that 结果)",
+  "transcript": "A: Grandma is making lanterns again for the spring festival.\nB: Does she still make them by hand?\nA: Yes. She says the shop ones are so bright that you cannot see the paper.\nB: Can she teach us?\nA: She wants to. She keeps her old tools in a wooden box so that nothing gets lost.\nB: Then let us ask her on Sunday. I want to learn before the old way goes.\nA: Good. Bring a friend, so that more people know it.",
+  "translation_cn": "A:奶奶又在做春节的灯笼了。B:她还是手工做吗?A:是啊。她说店里买的太亮了,亮得都看不见纸。B:她能教我们吗?A:她愿意教。她把老工具都放在一个木盒里,免得弄丢。B:那我们周日去问她。我想在这门老手艺消失之前学会。A:好。再带个朋友来,让更多人知道它。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Why does Grandma keep her old tools in a wooden box?",
+    "options": [
+     "So that nothing gets lost.",
+     "So that they look nice.",
+     "Because the box is new.",
+     "Because she sells them."
+    ],
+    "answer": "A",
+    "explanation": "'She keeps her old tools in a wooden box so that nothing gets lost.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does A ask B to do?",
+    "options": [
+     "Make a box at home.",
+     "Buy a lantern in a shop.",
+     "Come alone on Sunday.",
+     "Bring a friend along."
+    ],
+    "answer": "D",
+    "explanation": "'Bring a friend, so that more people know it.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "lantern",
+    "cn": "灯笼"
+   },
+   {
+    "word": "by hand",
+    "cn": "手工地"
+   },
+   {
+    "word": "tool",
+    "cn": "工具"
+   }
+  ]
+ },
+ {
+  "unit": "U3",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "The name of our street",
+  "topic": "老街名的来历(such…that 结果 · so that 目的)",
+  "transcript": "A: Do you know why our street is called Well Street?\nB: No. Is there a well?\nA: There was one, a hundred years ago. It was such an important well that people came from three villages.\nB: And now?\nA: It was covered long ago. But the old name stayed, so that we still remember it.\nB: I will ask my grandfather. He may have a photo.\nA: Please do. If we collect enough photos, we can make a small wall show at school.",
+  "translation_cn": "A:你知道我们这条街为什么叫井街吗?B:不知道。这儿有井吗?A:一百年前有过一口。那口井太重要了,三个村子的人都来打水。B:现在呢?A:很早以前就填上了。但老名字留了下来,好让我们还记得它。B:我去问问我爷爷,他可能有照片。A:一定要问。如果我们收集到足够的照片,就能在学校办一个小型墙展。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Why did people come from three villages?",
+    "options": [
+     "Because the photos were free.",
+     "Because the street was wide.",
+     "Because the well was such an important one.",
+     "Because there was a school."
+    ],
+    "answer": "C",
+    "explanation": "'It was such an important well that people came from three villages.'"
+   },
+   {
+    "type": "choice",
+    "q": "What do they plan to do with the photos?",
+    "options": [
+     "Keep them at home.",
+     "Make a small wall show at school.",
+     "Sell them to a shop.",
+     "Send them to a newspaper."
+    ],
+    "answer": "B",
+    "explanation": "'If we collect enough photos, we can make a small wall show at school.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "well",
+    "cn": "井"
+   },
+   {
+    "word": "cover",
+    "cn": "盖上,填上"
+   },
+   {
+    "word": "collect",
+    "cn": "收集"
+   }
+  ]
+ },
+ {
+  "unit": "U3",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "Story day in dialect",
+  "topic": "方言故事日(so that 目的 · so…that 结果)",
+  "transcript": "A: Our class is holding a story day next week. Every story must be told in our home dialect.\nB: My dialect is not very good.\nA: Mine is not either. But my mother says she will teach me one short story so that I can try.\nB: That is a good idea. My grandfather knows many old sayings.\nA: Ask him to write three down. They are so short that you can learn them in one evening.\nB: All right. I will call him tonight.",
+  "translation_cn": "A:我们班下周办故事日,每个故事都必须用家乡话讲。B:我方言说得不太好。A:我也不好。不过我妈说她会教我一个小故事,让我能试试。B:这主意不错。我爷爷会很多老话。A:让他写三条下来。那些话很短,短到你一晚上就能学会。B:好,我今晚就给他打电话。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Who will teach A a short story?",
+    "options": [
+     "The class teacher.",
+     "B's grandfather.",
+     "A's grandfather.",
+     "A's mother."
+    ],
+    "answer": "D",
+    "explanation": "'my mother says she will teach me one short story so that I can try.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why does A think the old sayings are easy to learn?",
+    "options": [
+     "Because they are so short.",
+     "Because they are in English.",
+     "Because they are written down.",
+     "Because the grandfather explains them."
+    ],
+    "answer": "A",
+    "explanation": "'They are so short that you can learn them in one evening.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "dialect",
+    "cn": "方言"
+   },
+   {
+    "word": "saying",
+    "cn": "俗语,老话"
+   }
+  ]
+ },
+ {
+  "unit": "U3",
+  "kind": "passage",
+  "difficulty": 2,
+  "title": "The old roll book",
+  "topic": "独白·1958年的点名册(so that 目的 · so…that 结果)",
+  "transcript": "Last term our school opened a small room for its own history. On the first table there is a roll book from 1958. The paper is brown and soft, and the names are written with a brush. Our teacher keeps it under glass so that it stays safe. One name is my grandfather's. He was twelve then, and he walked a long way to school every day. When I stood in front of that book, the past felt so close that I forgot the bell. Now I go there every Friday to read one more page.",
+  "translation_cn": "上学期我们学校开了一间小小的校史室。第一张桌上放着一本1958年的点名册。纸是褐色的、软软的,名字是用毛笔写的。老师把它放在玻璃下面,好让它保存完好。其中一个名字是我爷爷的。他那时十二岁,每天走很远的路来上学。当我站在那本册子前面,过去近得让我连铃声都忘了。现在我每周五都去,再读一页。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What is on the first table in the small room?",
+    "options": [
+     "A glass bell.",
+     "A roll book from 1958.",
+     "A brush from 1958.",
+     "A photo of the writer's grandfather."
+    ],
+    "answer": "B",
+    "explanation": "'On the first table there is a roll book from 1958.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why does the teacher keep the book under glass?",
+    "options": [
+     "Because the room is small.",
+     "Because the names are new.",
+     "So that it stays safe.",
+     "So that more people buy it."
+    ],
+    "answer": "C",
+    "explanation": "'Our teacher keeps it under glass so that it stays safe.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "roll book",
+    "cn": "点名册"
+   },
+   {
+    "word": "brush",
+    "cn": "毛笔"
+   }
+  ]
+ },
+ {
+  "unit": "U3",
+  "kind": "passage",
+  "difficulty": 3,
+  "title": "The song my grandmother sings",
+  "topic": "独白·奶奶的老调子(so that 目的 · so…that 结果)",
+  "transcript": "My grandmother sings while she cooks. The songs are old, and some of them have no name. Last year I asked her to sing one twice so that I could write the words down. She laughed and said that no one ever asks. I filled six pages that winter. The words are simple: rain, rice, a boat, a road home. But the tune is so old that my grandmother learnt it from her own grandmother. Our music teacher heard one of them and put it in the school show, so that a hundred students sang it together. My grandmother sat in the third row and did not sing at all. She only listened, and her eyes were bright.",
+  "translation_cn": "我奶奶做饭的时候会唱歌。那些歌很老,有些连名字都没有。去年我请她把一首唱两遍,好让我把词记下来。她笑了,说从来没人问过。那个冬天我记满了六页。词很简单:雨、米、一条船、一条回家的路。可那调子太老了,老到我奶奶是从她自己的奶奶那里学来的。我们音乐老师听到其中一首,把它排进了校演出,于是一百个学生一起唱了它。我奶奶坐在第三排,一句也没唱。她只是听着,眼睛很亮。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Why did the writer ask grandmother to sing one song twice?",
+    "options": [
+     "So that the family could hear it.",
+     "Because the song was too fast.",
+     "So that the writer could write the words down.",
+     "Because the music teacher asked for it."
+    ],
+    "answer": "C",
+    "explanation": "'I asked her to sing one twice so that I could write the words down.'"
+   },
+   {
+    "type": "choice",
+    "q": "What did the grandmother do at the school show?",
+    "options": [
+     "She listened without singing.",
+     "She stayed at home.",
+     "She sang with the students.",
+     "She taught the music teacher."
+    ],
+    "answer": "A",
+    "explanation": "'My grandmother sat in the third row and did not sing at all. She only listened.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "tune",
+    "cn": "曲调"
+   },
+   {
+    "word": "fill",
+    "cn": "写满,填满"
+   }
+  ]
+ },
+ {
+  "unit": "U3",
+  "kind": "notice",
+  "difficulty": 1,
+  "title": "History Week",
+  "topic": "通知·历史周(so that 目的 · so…that 结果 · because 原因)",
+  "transcript": "Good morning. Next week is our History Week. On Monday, bring one old thing from your family: a photo, a coin, a letter or a tool. We will put them on the tables in Room 105 so that everyone can see them. Please write two lines about your thing, because a story is more interesting than an object. On Wednesday an old worker from the paper mill will come to talk to us. His stories are so good that last year nobody left early. On Friday we will choose ten things for the school history room. Thank you.",
+  "translation_cn": "早上好。下周是我们的历史周。周一,请从家里带一件老物件来:一张照片、一枚硬币、一封信或一件工具。我们会把它们摆在105室的桌上,好让每个人都能看到。请为你的物件写两句话,因为故事比物件本身更有意思。周三,造纸厂的一位老工人会来跟我们讲他的经历。他的故事太精彩了,去年没有一个人提前离场。周五我们会挑出十件放进校史室。谢谢大家。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What should students bring on Monday?",
+    "options": [
+     "Ten coins for the school.",
+     "A book about history.",
+     "A new photo of the class.",
+     "One old thing from the family."
+    ],
+    "answer": "D",
+    "explanation": "'On Monday, bring one old thing from your family.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why should students write two lines about their thing?",
+    "options": [
+     "Because there is no room for more.",
+     "Because a story is more interesting than an object.",
+     "Because the show is on Friday.",
+     "Because the teacher will read them out."
+    ],
+    "answer": "B",
+    "explanation": "'because a story is more interesting than an object.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "object",
+    "cn": "物件,东西"
+   },
+   {
+    "word": "paper mill",
+    "cn": "造纸厂"
+   }
+  ]
+ }
+]

@@ -1,0 +1,296 @@
+[
+ {
+  "unit": "U6",
+  "kind": "dialogue",
+  "difficulty": 1,
+  "title": "Bring your own cup",
+  "topic": "自带杯子(构词法 un-/-ful/-less/-ly · 省略引导词)",
+  "transcript": "A: The tea shop near the gate has a new rule.\nB: What is it?\nA: If you bring your own cup, you pay two yuan less.\nB: Useful. My old cup is not beautiful, but it is unbreakable.\nA: Mine is a jam jar. It works perfectly.\nB: So we save money and the shop uses fewer paper cups.\nA: That is the kind of rule I like: helpful to everybody and painless.",
+  "translation_cn": "A:校门口那家茶饮店有个新规定。B:什么规定?A:自带杯子,便宜两块。B:有用。我那个旧杯子不好看,但摔不烂。A:我用的是果酱瓶,好使得很。B:这样我们省了钱,店里也少用纸杯。A:这就是我喜欢的那种规定:对谁都有好处,还一点不费劲。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What happens if you bring your own cup?",
+    "options": [
+     "You pay two yuan less.",
+     "You wait a shorter time.",
+     "You get a paper cup too.",
+     "You get a free cup of tea."
+    ],
+    "answer": "A",
+    "explanation": "'If you bring your own cup, you pay two yuan less.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does A use as a cup?",
+    "options": [
+     "A paper cup.",
+     "A glass from school.",
+     "A jam jar.",
+     "A new bottle."
+    ],
+    "answer": "C",
+    "explanation": "'Mine is a jam jar. It works perfectly.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "unbreakable",
+    "cn": "摔不烂的(un- + break + -able)"
+   },
+   {
+    "word": "painless",
+    "cn": "不费劲的(pain + -less)"
+   },
+   {
+    "word": "jam jar",
+    "cn": "果酱瓶"
+   }
+  ]
+ },
+ {
+  "unit": "U6",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "The uniform swap",
+  "topic": "旧校服交换(构词法 re-/un-/-ful/-ly)",
+  "transcript": "A: My school uniform is too short now.\nB: Do not throw it away. There is a swap on Thursday.\nA: A swap?\nB: You bring the one you cannot wear and take one that fits. It is free.\nA: Is it clean?\nB: Everything is washed carefully before the day. Last term nobody was unhappy with it.\nA: Then I will bring two. Reusing is cheaper than buying, and my mother will be thankful.",
+  "translation_cn": "A:我的校服现在太短了。B:别扔。周四有一场交换。A:交换?B:你把穿不下的那件带来,换一件合身的,免费。A:干净吗?B:活动前都会仔细洗过。上学期没有一个人不满意。A:那我带两件。再利用比买新的便宜,我妈会很领情。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What do you do at the swap?",
+    "options": [
+     "Buy a cheap uniform.",
+     "Give a uniform away and get nothing.",
+     "Wash old uniforms for the school.",
+     "Bring one you cannot wear and take one that fits."
+    ],
+    "answer": "D",
+    "explanation": "'You bring the one you cannot wear and take one that fits. It is free.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why will A's mother be thankful?",
+    "options": [
+     "Because reusing is cheaper than buying.",
+     "Because the uniform is new.",
+     "Because A washed the clothes.",
+     "Because the swap is on Thursday."
+    ],
+    "answer": "A",
+    "explanation": "'Reusing is cheaper than buying, and my mother will be thankful.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "swap",
+    "cn": "交换(活动)"
+   },
+   {
+    "word": "reuse",
+    "cn": "再利用(re- + use)"
+   },
+   {
+    "word": "thankful",
+    "cn": "感激的(thank + -ful)"
+   }
+  ]
+ },
+ {
+  "unit": "U6",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "The walking bus",
+  "topic": "步行上学小队(构词法 -ly/-less/-ful · if 条件)",
+  "transcript": "A: Why are twelve of you walking together every morning?\nB: It is our walking bus. We meet at the corner at seven twenty.\nA: Does a teacher come?\nB: Two parents come. They take turns weekly.\nA: And if it rains?\nB: We still walk. Rain is harmless if you have a coat.\nA: Twelve fewer cars at the gate. That is a useful idea.\nB: And the road is quieter, so it is safer for everyone.",
+  "translation_cn": "A:你们十二个人怎么每天早上一起走?B:这是我们的「步行巴士」。我们七点二十在路口集合。A:有老师带队吗?B:两位家长,按周轮流。A:下雨怎么办?B:照走。只要有雨衣,雨没什么害处。A:校门口少了十二辆车,这主意真有用。B:路上也更安静,对谁都更安全。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Who comes with the students every morning?",
+    "options": [
+     "One teacher.",
+     "Two parents, taking turns weekly.",
+     "A bus driver.",
+     "Nobody."
+    ],
+    "answer": "B",
+    "explanation": "'Two parents come. They take turns weekly.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does B say about rain?",
+    "options": [
+     "They walk faster.",
+     "They take the bus instead.",
+     "They wait at the corner.",
+     "Rain is harmless if you have a coat."
+    ],
+    "answer": "D",
+    "explanation": "'We still walk. Rain is harmless if you have a coat.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "weekly",
+    "cn": "每周地(week + -ly)"
+   },
+   {
+    "word": "harmless",
+    "cn": "无害的(harm + -less)"
+   },
+   {
+    "word": "take turns",
+    "cn": "轮流"
+   }
+  ]
+ },
+ {
+  "unit": "U6",
+  "kind": "passage",
+  "difficulty": 3,
+  "title": "A week without plastic",
+  "topic": "独白·无塑一周(构词法 dis-/un-/re-/-ful/-ly)",
+  "transcript": "Our class tried something for seven days: no new plastic. It sounded easy and it was not. On Monday I discovered that my bread, my pen and even my socks came wrapped in it. By Wednesday I was unhappy and ready to stop. Then our teacher said one useful thing: do not try to be perfect, try to be careful. So I changed three habits only. I took a cloth bag to the shop, I refilled my water bottle, and I bought bread that was not wrapped. At the end of the week our bin was half empty. The lesson was not really about plastic. It was about how quickly a habit can be rebuilt.",
+  "translation_cn": "我们班试了七天:不用新塑料。听起来容易,其实不然。周一我发现,我的面包、我的笔、甚至我的袜子,都是用它包着的。到周三我已经很烦、准备放弃了。这时老师说了一句有用的话:别想着做到完美,试着做到用心。于是我只改了三个习惯:去店里带布袋、把水瓶接满、买没有包装的面包。到那周结束,我们的垃圾桶空了一半。这堂课其实不是关于塑料的,而是关于一个习惯可以多快被重新建立起来。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What did the writer discover on Monday?",
+    "options": [
+     "The class rule was too easy.",
+     "Plastic bags cost money.",
+     "Bread, a pen and even socks came wrapped in plastic.",
+     "The shop had no bread."
+    ],
+    "answer": "C",
+    "explanation": "'On Monday I discovered that my bread, my pen and even my socks came wrapped in it.'"
+   },
+   {
+    "type": "choice",
+    "q": "What did the teacher advise?",
+    "options": [
+     "Ask the shop to change.",
+     "Do not try to be perfect, try to be careful.",
+     "Stop the plan at once.",
+     "Use only paper bags."
+    ],
+    "answer": "B",
+    "explanation": "'do not try to be perfect, try to be careful.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "discover",
+    "cn": "发现(dis- + cover)"
+   },
+   {
+    "word": "refill",
+    "cn": "重新装满(re- + fill)"
+   },
+   {
+    "word": "rebuild",
+    "cn": "重新建立(re- + build)"
+   }
+  ]
+ },
+ {
+  "unit": "U6",
+  "kind": "passage",
+  "difficulty": 2,
+  "title": "The blue barrel",
+  "topic": "独白·接雨水的桶(构词法 -ful/-less/-ly · 省略引导词)",
+  "transcript": "Behind our classroom there is a blue barrel that catches rain from the roof. It was put there by last year's Year Nine, and it is the most useful thing they left us. One barrel holds two hundred litres. We use it for the plants along the wall and for washing the windows, so we never take clean drinking water for that. In a dry month the barrel is useless, of course, and we wait. But over a year it has saved more water than a whole class drinks. The best part is how simple it is: no power, no buttons, no repairs. It just waits for the sky, quietly.",
+  "translation_cn": "我们教室后面有一个蓝色的桶,接屋顶流下来的雨水。它是去年九年级留下的,也是他们留给我们最有用的东西。一桶能装两百升。我们用它浇墙边的花草、擦窗户,这样就不必用干净的饮用水做这些事。当然,干旱的月份里这桶毫无用处,我们就等着。但一年下来,它省下的水比一个班喝掉的还多。最妙的是它有多简单:不用电、没有按钮、不用修。它只是安静地等着天。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What do they use the rain water for?",
+    "options": [
+     "For the plants and for washing the windows.",
+     "For the school kitchen.",
+     "For the sports ground.",
+     "For drinking in summer."
+    ],
+    "answer": "A",
+    "explanation": "'We use it for the plants along the wall and for washing the windows.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does the writer think is the best part?",
+    "options": [
+     "It is blue.",
+     "It was free.",
+     "It holds two hundred litres.",
+     "How simple it is: no power, no buttons, no repairs."
+    ],
+    "answer": "D",
+    "explanation": "'The best part is how simple it is: no power, no buttons, no repairs.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "barrel",
+    "cn": "桶"
+   },
+   {
+    "word": "useless",
+    "cn": "没用的(use + -less)"
+   },
+   {
+    "word": "litre",
+    "cn": "升"
+   }
+  ]
+ },
+ {
+  "unit": "U6",
+  "kind": "notice",
+  "difficulty": 1,
+  "title": "Green Travel Month",
+  "topic": "通知·绿色出行月(构词法 un-/-less/-ly · so that 目的)",
+  "transcript": "Good afternoon. October is our Green Travel Month. If you live within two kilometres of school, please walk or ride. Ask your parents to park at the market and walk the last part with you, so that the gate stays clear and safer for everyone. One unnecessary car trip a day adds up to twenty in a month. Each class will keep a weekly count on the board outside Room 210. The class with the highest number of green trips will plant a tree in the school garden in November. Careless parking will be reported to the office. Remember: a short trip on foot is not a small thing. It is the easiest change any of us can make.",
+  "translation_cn": "下午好。十月是我们的绿色出行月。如果你住在离学校两公里以内,请步行或骑车。请家长把车停在市场那边,陪你走完最后一段,好让校门口保持畅通、对所有人都更安全。一天一趟没必要的车程,一个月就是二十趟。各班在210室外的板上做每周统计。绿色出行次数最多的班级将在十一月于校园里种下一棵树。乱停车会上报到校办。记住:一段短短的步行不是小事,它是我们每个人最容易做到的改变。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What are parents asked to do?",
+    "options": [
+     "Plant a tree in November.",
+     "Drive to the school gate.",
+     "Park at the market and walk the last part.",
+     "Wait outside Room 210."
+    ],
+    "answer": "C",
+    "explanation": "'Ask your parents to park at the market and walk the last part with you.'"
+   },
+   {
+    "type": "choice",
+    "q": "What will the winning class do in November?",
+    "options": [
+     "Have a free trip.",
+     "Plant a tree in the school garden.",
+     "Keep the board for a term.",
+     "Get a green flag."
+    ],
+    "answer": "B",
+    "explanation": "'The class with the highest number of green trips will plant a tree in the school garden in November.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "unnecessary",
+    "cn": "没必要的(un- + necessary)"
+   },
+   {
+    "word": "careless",
+    "cn": "粗心的,随意的(care + -less)"
+   },
+   {
+    "word": "add up to",
+    "cn": "加起来达到"
+   }
+  ]
+ }
+]

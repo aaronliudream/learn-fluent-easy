@@ -1,0 +1,284 @@
+[
+ {
+  "unit": "U4",
+  "kind": "dialogue",
+  "difficulty": 1,
+  "title": "The doctor by the door",
+  "topic": "退休医生义务量血压(who 作主语 · whom 作宾语)",
+  "transcript": "A: Who is the man who sits by the door every Saturday morning?\nB: That is Dr Zhou. He is a doctor who retired ten years ago.\nA: And he still works?\nB: Not for money. He checks blood pressure for anyone who comes.\nA: For free?\nB: For free. My grandmother is one of the people who go every week.\nA: He is the kind of person whom our street is lucky to have.",
+  "translation_cn": "A:每周六上午坐在门口的那位是谁?B:那是周医生。他是十年前退休的医生。A:他还在工作?B:不为钱。谁来他就给谁量血压。A:免费吗?B:免费。我奶奶就是每周都去的人之一。A:他就是那种我们这条街有幸拥有的人。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What does Dr Zhou do every Saturday morning?",
+    "options": [
+     "He checks blood pressure for free.",
+     "He works in a big hospital.",
+     "He sells medicine at the door.",
+     "He teaches a class for old people."
+    ],
+    "answer": "A",
+    "explanation": "'He checks blood pressure for anyone who comes.' + 'For free.'"
+   },
+   {
+    "type": "choice",
+    "q": "Who goes to see Dr Zhou every week?",
+    "options": [
+     "Nobody at all.",
+     "B's grandmother.",
+     "A's mother.",
+     "The street cleaner."
+    ],
+    "answer": "B",
+    "explanation": "'My grandmother is one of the people who go every week.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "retire",
+    "cn": "退休"
+   },
+   {
+    "word": "blood pressure",
+    "cn": "血压"
+   }
+  ]
+ },
+ {
+  "unit": "U4",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "The teacher who stayed",
+  "topic": "乡村教师(who 作主语 · whom 作宾语)",
+  "transcript": "A: Our English teacher told us about a teacher who went to a village school twenty years ago.\nB: Did he stay long?\nA: He is still there. He is the only teacher who teaches all six classes.\nB: All six? How does he do it?\nA: He teaches maths in the morning and English in the afternoon. The students who leave that school always go back to see him.\nB: I would like to write to him.\nA: Then write. He is a person whom few people know, but his students never forget him.",
+  "translation_cn": "A:我们英语老师讲了一位二十年前去乡村学校的老师。B:他待了很久吗?A:他还在那儿。他是唯一一个把六个年级都教下来的老师。B:六个年级?他怎么做到的?A:上午教数学,下午教英语。从那所学校毕业的学生总会回去看他。B:我想给他写封信。A:那就写。他是个很少有人知道的人,可他的学生永远不会忘记他。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "How many classes does the village teacher teach?",
+    "options": [
+     "None now.",
+     "Only English.",
+     "Two classes.",
+     "Six classes."
+    ],
+    "answer": "D",
+    "explanation": "'He is the only teacher who teaches all six classes.'"
+   },
+   {
+    "type": "choice",
+    "q": "What do the students do after they leave that school?",
+    "options": [
+     "They forget the village.",
+     "They write to the newspaper.",
+     "They go back to see him.",
+     "They send him money."
+    ],
+    "answer": "C",
+    "explanation": "'The students who leave that school always go back to see him.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "village",
+    "cn": "村子,乡村"
+   },
+   {
+    "word": "few",
+    "cn": "很少的"
+   }
+  ]
+ },
+ {
+  "unit": "U4",
+  "kind": "dialogue",
+  "difficulty": 2,
+  "title": "The man with the yellow box",
+  "topic": "送快递的人(who 作主语 · whom 作宾语)",
+  "transcript": "A: There is a man who delivers parcels in our street every day. He carries a yellow box.\nB: I know him. Last month he stopped to help an old woman who fell near the shop.\nA: Really?\nB: He waited for her family and lost an hour of work.\nA: Did anyone thank him?\nB: The woman's son did. He said he wanted to find the man who helped his mother.\nA: Some heroes are people whom we see every day and never notice.",
+  "translation_cn": "A:我们街上有个每天送包裹的人,他背一个黄色的箱子。B:我认识他。上个月他停下来扶了一位在店铺附近摔倒的老人。A:真的?B:他一直等到她家人来,少送了一个小时的活儿。A:有人谢他吗?B:老人的儿子谢了。他说想找到那个帮了他母亲的人。A:有些英雄就是我们天天见到、却从没留意过的人。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What did the delivery man do last month?",
+    "options": [
+     "He lost his yellow box.",
+     "He helped an old woman who fell.",
+     "He asked the shop for money.",
+     "He changed his job."
+    ],
+    "answer": "B",
+    "explanation": "'he stopped to help an old woman who fell near the shop.'"
+   },
+   {
+    "type": "choice",
+    "q": "What does A think at the end?",
+    "options": [
+     "Some heroes are people we never notice.",
+     "Heroes are always famous.",
+     "Heroes work in hospitals.",
+     "Heroes never lose time."
+    ],
+    "answer": "A",
+    "explanation": "'Some heroes are people whom we see every day and never notice.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "deliver",
+    "cn": "投递,送"
+   },
+   {
+    "word": "parcel",
+    "cn": "包裹"
+   },
+   {
+    "word": "notice",
+    "cn": "注意到"
+   }
+  ]
+ },
+ {
+  "unit": "U4",
+  "kind": "passage",
+  "difficulty": 2,
+  "title": "The woman who counts birds",
+  "topic": "独白·数鸟十九年(who 作主语)",
+  "transcript": "Every spring a woman who lives near the river gets up at four. She takes a notebook, a pen and a cup of hot tea, and she counts birds. She has done this for nineteen years. Nobody pays her. The scientists who study the river use her numbers, because no computer can sit by the water for nineteen years. Last April she wrote down one name for the first time in twenty years. People who meet her say she talks about the birds like old neighbours. She is not famous, and she does not want to be. She only says one thing: someone has to keep looking.",
+  "translation_cn": "每年春天,一位住在河边的女人四点起床。她带上笔记本、一支笔和一杯热茶,去数鸟。这件事她做了十九年,没有人付她钱。研究这条河的科学家们用她的数字,因为没有哪台电脑能在水边坐上十九年。去年四月,她写下了一个二十年来第一次出现的名字。见过她的人说,她谈起那些鸟就像谈起老邻居。她不出名,也不想出名。她只说一句话:总得有人一直看下去。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "How long has the woman counted birds?",
+    "options": [
+     "Since last April.",
+     "Four years.",
+     "Nineteen years.",
+     "Twenty-five years."
+    ],
+    "answer": "C",
+    "explanation": "'She has done this for nineteen years.'"
+   },
+   {
+    "type": "choice",
+    "q": "Why do the scientists use her numbers?",
+    "options": [
+     "Because she is famous.",
+     "Because she works for them.",
+     "Because her numbers are free.",
+     "Because no computer can sit by the water for nineteen years."
+    ],
+    "answer": "D",
+    "explanation": "'because no computer can sit by the water for nineteen years.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "count",
+    "cn": "数,清点"
+   },
+   {
+    "word": "scientist",
+    "cn": "科学家"
+   }
+  ]
+ },
+ {
+  "unit": "U4",
+  "kind": "passage",
+  "difficulty": 3,
+  "title": "The letter in the drawer",
+  "topic": "独白·抽屉里的信(who 作主语 · whom 作宾语)",
+  "transcript": "My father is a quiet man who never talks about his work. Last month I found a letter in his drawer. It was from a woman whom he pulled out of a car in 2011. He was driving home from the night shift when he saw the smoke. He broke the window and carried her to the grass. The letter has only four lines. It ends like this: 'My son is nine now. He knows the name of the man who came back for me.' My father never told us about it. When I asked him, he said that anyone in that place does the same.",
+  "translation_cn": "我爸是个从不谈自己工作的沉默的人。上个月我在他抽屉里发现一封信。写信的是2011年被他从车里拉出来的一位女士。那天他上完夜班开车回家,看见了烟。他砸开车窗,把她抱到草地上。信只有四行,结尾是这样写的:「我儿子现在九岁了。他知道那个回头来救我的人叫什么名字。」我爸从没跟我们说过。我问他的时候,他说换成谁在那儿都会这么做。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "Who wrote the letter?",
+    "options": [
+     "The writer's mother.",
+     "A boy of nine.",
+     "A friend of the father.",
+     "A woman whom the father pulled out of a car."
+    ],
+    "answer": "D",
+    "explanation": "'It was from a woman whom he pulled out of a car in 2011.'"
+   },
+   {
+    "type": "choice",
+    "q": "What did the father say when he was asked about it?",
+    "options": [
+     "He said anyone in that place does the same.",
+     "He said he wanted a reward.",
+     "He said he could not remember.",
+     "He said the letter was not for him."
+    ],
+    "answer": "A",
+    "explanation": "'he said that anyone in that place does the same.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "night shift",
+    "cn": "夜班"
+   },
+   {
+    "word": "smoke",
+    "cn": "烟"
+   },
+   {
+    "word": "quiet",
+    "cn": "沉默寡言的"
+   }
+  ]
+ },
+ {
+  "unit": "U4",
+  "kind": "notice",
+  "difficulty": 1,
+  "title": "Our own heroes",
+  "topic": "通知·校报征稿(who 作主语 · whom 作宾语)",
+  "transcript": "Good afternoon. Here is a notice from the school newspaper. This term we are looking for stories about people who help others near us. The person you write about does not have to be famous. It can be a worker who cleans your building, a cook who remembers what you cannot eat, or a neighbour whom you have known all your life. Write no more than two hundred words and put your story in the red box outside Room 302 before the tenth. Ten stories will be printed, and the writers who send them will get a copy for their families. Thank you.",
+  "translation_cn": "下午好。这是校报的一则通知。本学期我们征集身边助人者的故事。你写的人不必有名:可以是打扫你家楼的工人、可以是记得你不能吃什么的食堂师傅,也可以是你认识了一辈子的邻居。字数不超过两百词,在十号之前投进302室外面的红盒子。我们会刊登十篇,投稿被选中的作者会拿到一份给家人留存。谢谢。",
+  "questions": [
+   {
+    "type": "choice",
+    "q": "What kind of person should students write about?",
+    "options": [
+     "Someone who is famous in the city.",
+     "Someone who works at the newspaper.",
+     "Someone who helps others near us.",
+     "Someone who lives far away."
+    ],
+    "answer": "C",
+    "explanation": "'stories about people who help others near us' + 'does not have to be famous.'"
+   },
+   {
+    "type": "choice",
+    "q": "Where should students put their stories?",
+    "options": [
+     "In the newspaper office.",
+     "In the red box outside Room 302.",
+     "On the teacher's desk.",
+     "In the school library."
+    ],
+    "answer": "B",
+    "explanation": "'put your story in the red box outside Room 302 before the tenth.'"
+   }
+  ],
+  "key_vocab": [
+   {
+    "word": "cook",
+    "cn": "厨师,食堂师傅"
+   },
+   {
+    "word": "print",
+    "cn": "刊登,印刷"
+   },
+   {
+    "word": "copy",
+    "cn": "一份,一册"
+   }
+  ]
+ }
+]

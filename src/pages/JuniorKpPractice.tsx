@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, RotateCw, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -48,7 +49,7 @@ export default function JuniorKpPractice() {
   const nav = useNavigate();
   // 从 Hub 单元关进入时带 ?returnTo=<单元关URL>;有则返回出口回单元关(而非语法专区)。
   const [searchParams] = useSearchParams();
-  const returnTo = searchParams.get("returnTo");
+  const returnTo = sanitizeReturnTo(searchParams.get("returnTo"));   // 站内校验:防 ?returnTo=https://evil 被塞进 <Link to>
 
   const [kp, setKp] = useState<KpCatalogItem | null>(null);
   const [pool, setPool] = useState<GrammarQuestion[]>([]);

@@ -1,3 +1,4 @@
+import { sanitizeReturnTo } from "@/lib/returnTo";
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
@@ -26,7 +27,7 @@ export default function JuniorReadingPlay() {
   const nav = useNavigate();
   // 来源:从单元Hub阅读关进入时带 ?returnTo=<hub关URL>;有则所有返回出口回 Hub关(而非阅读专区列表)。
   const [searchParams] = useSearchParams();
-  const returnTo = searchParams.get("returnTo");
+  const returnTo = sanitizeReturnTo(searchParams.get("returnTo"));   // 站内校验:防 ?returnTo=https://evil 被塞进 <Link to>
   const [r, setR] = useState<R | null>(null);
   const [list, setList] = useState<ListItem[]>([]);
   const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});

@@ -117,6 +117,51 @@ edge `:380` 的 OpenAI 兜底（`fallbackVoice = "shimmer"`），cache key 里�
 
 ---
 
+---
+
+## B1.1 生产域验收（合并后实测，2026-07-26）✅
+
+合并 commit  → Vercel 生产部署 state=success 后立即实测
+（ase=https://www.bigmoonenglish.com
+SPA 路由 173 条 / 静态资源抽样 122 个 / 缺失探针 4 条 → 共 306 次 HEAD
+  60/306
+  120/306
+  180/306
+  240/306
+  300/306
+
+================ 生产域验收 ================
+SPA 路由      : PASS 173 / FAIL 0（共 173）
+静态资源      : PASS 122 / FAIL 0（共 122）
+缺失探针(应404): PASS 4 / FAIL 0（共 4）
+content-type 家族异常: 0
+CSV: data/audio-audit/b1_production_verify.csv
+
+✅ 全绿，结果表 ）：
+
+| 项 | 合并前 | 合并后 |
+|---|---|---|
+| SPA 路由（173 条真实完整路由，参数用真实值） | 173/173 200 text/html | **173/173 200 text/html** |
+| 静态资源（public/ 分层抽样 + 线上 index.html 解析出的真实 /assets/*） | 113/113 正常 | **113/113 正常** |
+| 缺失资源探针（含 water.mp3） | **4/4 是 200 text/html（假 200）** | **4/4 是 404** ✅ |
+| content-type 家族异常 | 0 | 0 |
+
+验收口径有两处是实测校正过的，不校正会误判：
+1. 生产是 **apex → www 的 307 规范跳转**，必须直连 ；打 apex 全是 307。
+2. 静态资源**不能用本地 dist/assets/***（build hash 与线上不同，会全部测成不存在）；
+   改为 public/（路径稳定）+ 运行时从线上 index.html 解析真实构建产物； 静态文件单独放行。
+
+另外修正了一个更要命的口径错误：SPA 路由必须**还原  嵌套**。
+直接拿  原值加 / 会造出 71 条根本不存在的假 URL（、 之流，
+靠 SPA 兜底照样 200，测了等于没测），同时把 90 条真实嵌套路由整片漏掉（ 这些）。
+按 path= 计 173 条、扁平去重后只剩 154 条的差额（19 条 / 10 组），全部是
+//////这类在小学/初中/高考三个 hub 下重名的**子路由**。还原嵌套后：**173 条 path= → 173 条唯一完整 URL，零折叠**。
+
+参数路由的点号风险已实查：能读到的自由取值空间（library_books.book_key 5 个、american_lessons.id 276 个）
+**零个含点号**，因此不会撞上后缀白名单。规则的失效条件很窄——参数值必须以  + 白名单里那 31 个后缀之一结尾
+（ 会 404，而  不受影响）。
+⚠️ gaokao/junior 的 grammar slug 表 anon 读不到（RLS），这部分取值空间**未能枚举**，属残留未知。
+
 ## 待 Aaron
 
 1. **跑 SQL**：`https://github.com/aaronliudream/learn-fluent-easy/blob/main/SQLAA/2026-07-25-删除损坏TTS对象-funny.sql`

@@ -1,0 +1,3529 @@
+{
+ "_meta": {
+  "purpose": "tts edge function URL 构造黄金测试 fixture",
+  "source": "src/data/primaryHub/listenWordAudio.json @ commit fec0dddc（Phase A 审计中逐条实测过的线上 URL，B1 新增的 study/hike 不在内）",
+  "verified": "Phase A: 439/439 条 URL 的 hash 与本地复刻公式一致；且全部 HTTP 200 audio/mpeg",
+  "speedByGrade": {
+   "3": 0.75,
+   "4": 0.85,
+   "5": 0.9,
+   "6": 0.95
+  },
+  "generatedFrom": "git show fec0dddc:src/data/primaryHub/listenWordAudio.json",
+  "count": 439
+ },
+ "cases": [
+  {
+   "grade": 3,
+   "text": "ruler",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3f/3f9a9c3f930e765467604ab7b25c452c8733b2db7f8f1849e48d7fbc4f73b87d.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "pencil",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8f/8f6a27c8f3c6f3522bca5848cfabc4182179b947e0d193b0bb6361170a6a67d4.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "eraser",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4f/4f3635d0f325bb5e0a205dfc739744d03506392e410315108831750fade0b2e8.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "crayon",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4a/4a8748fc9b81a55acaa5f59e719c18ed04c221d6c3cf1649e917e5e131f30a44.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "bag",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/21/2198b5a9c9fe91e87755df5ceb7d8488d893167d1d60f0802ee15eb69148568d.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "pen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/17/178d76a6d1dd03f1314dda274872bdf51daa4723244b91bbc41ef909a12021ee.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "pencil box",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3c/3c1824b2a1aecb56692bcf3fc487036b184d86a53d89f96447be15b0b9400373.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "book",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8a/8af9b96874ea68ed74cda3ef959915a69d663f10659ca24c4bb12053bef2ecbb.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "red",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c6/c6cca7dbca1c194faff1b58b80890df45530aa9100a7197d49e8a512d60cb87e.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "green",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/eb/ebbc04f2db023a19206ce8fcff28f6b8b3c76f96cf2c3ad1bbde4fd6810c16ff.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "yellow",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8b/8b44e9b815fcda9e3292280baa783c979dbb1090f5b3e7d63034f51a8961bbb2.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "blue",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/16/166bedc908f2523cdb9c95cf35687ff935227b772fb0e4bd7f09b335c8047763.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "black",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6d/6d68ffea86e78fdeb86295971b42e1b469a2f6df805faf551509f20fdc122d63.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "brown",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5a/5a6eb0fa4f0f09bacd9322d3551ffb2ee65726e5d44c2edc96ba713a862d92cc.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "white",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1d/1da9378d33b6222934971e46ebd44f75a318088d95c3a35db526af07fad0b91f.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "orange",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9c/9c401e862c13c0abfbffacbeda8481ebcf7bda5d31d1efaf22c78fecf9ed328c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "face",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b2/b21bdf79ae025788c50db034f02b5d553badd66af48cda2b0fad82bbc80f7dd2.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "ear",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/92/9215e108cdab88544536d128690af51bd5373f535df753dc571af824f6982190.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "eye",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8c/8c5150457308c80650156ccb78dfad8cd0b41874f5cab770fbf7e61ecbfa2d1b.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "nose",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/57/57a4fb7ca8fdea0c3f9d9ab72b5fac8c2a151925e6fc59eb4195277d38982b33.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "mouth",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/89/89fadc864168f0c7034a411720c06e6022e7b9e83c1997d0516d076bb5751f05.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "arm",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b9/b990ee41eafa3a448fb23315045e2b9c82ad3cb6ac7f24a881f3fcef1f5f96fa.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "hand",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5b/5b2be8d7de3925c6bcc68f23a0f558b3d3942acd557e6701859446e2f39d0737.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "head",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a5/a52b3ab9071807fa23235ae65fd6ddcc0bbc0f9e54255c88e8125353bd55137d.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "duck",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0b/0bbf14676878f0410de0555adae0c0f56d1c115b22bed6fd508f96767fe29c40.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "pig",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2c/2c73a7f86aca2fa3d50dcc80a9234fe6e351caa402b07a863e3aa9cf60194026.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "cat",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/63/63fd567144a57d3ce5c64b67c033717d008c48abd4033ca1df9142a5b28deddf.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "bear",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fc/fcec1218a33cfc6f2549e812516d59b6622372ae94700067a5bd4173e3967d18.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "dog",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5b/5b7c3fb10980fdc1371fc83f3fcc3c07728a208a7f204ed99efa1ff6e9607c20.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "elephant",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/dd/dde041da5698bc07668476ff67aad8a1139f2fcb4e2395b34ae03b091de64368.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "monkey",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4f/4f064fd29e64bca090c6291f5eb2e839607b43a0f7af924c8224961a9b3e0d8f.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "bird",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/eb/ebac693f984bbb12829d15e49cd1fde518814b9da4461be2686470aa43c38595.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "bread",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8c/8c463ba5ffb7ec3eba07756977436ab76ef115c9af3561cba1c4f5d164ee954a.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "juice",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6e/6efe7937ab84d77f437d32027e1bd90355abf16d7332841b8bed9f01405bff83.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "egg",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4e/4ea94b67895ff2b42a5081ada9361bf694b451004941dd1f3094785282c25c80.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "milk",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ad/ad1250852da75a9ec4f8623b215603657d246433f4170101ab3cd7729691e41c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "water",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/75/757ebeb7a3c3875e234e6028a0d4c74b4d0e10a08ea7241782a59af51193c31c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "cake",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8d/8d4085a3e2f14dbe8ec23a6f41ec966a3b82c56ad94e6ff100fef49a1ab0862b.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "fish",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/86/86ff683a88263c53a2c202ef64e649760d361cb6e34bdd559e5675f937f066a7.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "rice",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/81/815dc1b897ff9aa7493ef677de3bb4eb2e0080e780754a85f6600e6bbfae9747.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "one",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/85/85cc22d9adc6f02aeb4fba3acaf4a45a12cbab8461939fd84b70ac509fa53a17.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "two",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ab/ab204ef3eadd208a427eb8c65bd3c076f92cbe719253aa9a59e7064f3007654c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "three",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0a/0adf3c2673a1d1a595cf413ab1922cfe3de80b88e88ba543327f89cdbe5e4785.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "four",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/86/869fdfe3b7bb043e16af96a4eeae0c32d9871f97f2e6ee7eb33fea3b8be0ca49.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "five",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ba/ba00aca638f9b1d169bf284e37f961b9a18b40e988e6b8c7ad163b5a1ff4481c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "six",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/00/005951584919368f70d054c44dbbc930b2735e8a2f13de0a5f743dc6c2d2a8db.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "seven",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1d/1d63abbc847240b90d49c3dea892d524fdbbd923fa0965d9d7a6259b68a2dbeb.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "eight",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/07/07eeaf8227d48c3b6b8f32e452160e586ac3e15a8622ea4b3777ff39342ce939.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "UK",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/22/2224bd35fe932f12618ff5c65cbdced2331efe9a9f810cfea83ec93a9ddd1f86.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "Canada",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/25/252f852763b3ec8177b0256f747ccbda413846e5c8f874a9f4e0c0529be5e930.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "USA",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b5/b5fee06aac9bee2051d8abb9016868d97704a50cd5b6eabdad63e50341dba90f.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "China",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/85/85ee4c233c9dcf4c87ab67f1b58e3b46162c77afb12cc2587b7a55715a58e3e3.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "she",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/66/66fb24d88410dd3876b7665627d9a52a766d720f98e09295da96ff0c2c74a405.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "student",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/17/17bd832689a98164d4cdad51d64b5ecb8ed77e4f7977db1ce76c1789ecf09043.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "pupil",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ee/eee9f29f3c15194b3311249a53c41f99b3b27eb8c98be2cf4b9b763f8ad95860.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "he",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4e/4e005677b0df9c9e3623c9549739cba5f87c6a64ff2004ee6459d79fa7f68a8c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "father",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/89/89ba413cfd8ca0d6a23f5576cf269abfe3615b020c4d31b92851b2ab0acf406f.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "dad",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/55/553d5afc7bb50268bae51826963dec35c49014d00bbfd1a753737e3eb53b4c6a.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "man",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/11/1132b825ddc90005ef95300507ddf4f591436f0e2e88bbcfc469bd1f0f0ca417.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "woman",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/aa/aa1e5940c8ef62d35fbd41db1b9e0bbaf9e072ff38e595e4b06d2f53c628c61e.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "mother",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/57/57bea5f154a068f7bcff6f4d9509f9addd86ac4f4a9cd74c570e7cdace978a8c.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "sister",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/cf/cf42faafa66efb701d79e00b8eab33610c8d9d6a2ba0ec1b01787e2d1cf55652.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "brother",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3a/3a27aab2d3ee95e6641a897273278dbc66bfe3e4f456c9bcb57b15f06c895ad6.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "grandmother",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ad/ad245345265861d4ef213fce9e323de38716ed655b0d50b5878e59a39af39b41.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "thin",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/22/228c3b5daa0289feca3c5bc78adc942467a641ef91eecad629ffce05926dfd0f.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "fat",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0b/0b4a18228d4a221ac141398bdb35e8a467d409473a28e7d5ba3390714b3b39dc.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "tall",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6c/6cf2a03ee9ef6f63568cca13bad1265b94249199a3b744cd62b9ec3eaffa6645.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "short",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9d/9d1c2d2e4fd10efd0a06fe4059e1628548fdc1a1b9fe0e4c396205363c1726e0.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "long",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3e/3e6274a7b38ec7520f29a8cc22391fb73dd7eed5aca4ba5852b5fdf20a2da625.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "small",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/85/85e26aa7137549efa9e7a1679771aa95dff731b0a8afd82c04168b24a90fe133.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "big",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/37/37946dfbd9f1b3ac0d0dc6bb6dcf7f5cc841362b5b986564663121753749beee.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "giraffe",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/30/309a630583399b0f82743b58d8abd795a3adc17d1ea87dd992e6002716f41b0a.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "on",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/68/6887bdce8b3c0b358ac750b48fcae8816342dcd7ee2378094b1afdfe5e380ea0.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "in",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/31/31f992f4d72f05e64449c598f3f7658ba7d26a193bfb78f54cca3680bafe26d9.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "under",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/56/567636bbdf25a9c560803e70c78132bc0af381a62dc23ae4fe23f62c32d10c2a.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "chair",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/59/595601774224d8a8c64843a20e5d7c0756c9f3fda28d6f80d769d1a4a164ddad.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "desk",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/db/dbafc293c3527b0a6782e4cf26956a051752c53dc274b28de42724f61ce2a04b.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "cap",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5b/5b31505f7e9264811080f1d073c4790e565006496dd9071f7c5c7927601ad8fa.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "ball",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/83/83cca8683c51a03fc41f972e80225d1761f8f21cc359a3c0ada94a35366c15b8.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "car",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b4/b479fa7a6b7f2fe3501d15a864d46e70c67de9985a3e62ee791041994bfaab76.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "pear",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1d/1dac91e5799419f12ac5e08603d949d0c569bb37157b424f8366da76ec149c94.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "apple",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c0/c0760bd982de44c2f83e6a2f4d32572bd2c8d81c34b4744120114625a8abc7f9.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "banana",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f0/f00d20d5c067f4e8779314c5a141b8a66a8ecf24d806c035703fd5ff468feb60.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "watermelon",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/34/34c9e156c17e93ec3046e2991ba3427eb5a2690564d71a332dbd6cddfbc0e7da.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "strawberry",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/05/05bb02adbe820d7a8dc22ab15a17e9b27123441537423b329be8506717d82abc.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "grape",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/de/def988fc292c01a1ef3cbac81b3673503bbcc57f55c920d8a869d8c427b8a6cf.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "buy",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c0/c01919911c6d04057bf7a09d3b21e5b91239ae2ef2ca9127e8223781709d44bd.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "eleven",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a4/a40fb699d69e06751dbb6eedd0874dae3cdfe7db39a3b6eb828d450847c71a35.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "twelve",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/81/817f8104542ba6c49e82419bb6f5e85b9ae761cda81fe7a85eac0e3eed032768.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "thirteen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/47/47a1ea81efab3e969a86121fd1e20dfd58b63a6daf194a1f14023e49bd376547.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "fourteen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f2/f2d86e82125afe6b21ec06a86808e7380a93a28717cfeaf3d39aac1ea7ce1e17.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "fifteen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/26/26373c0c51a8465a4f2cd0ce1538cfd2f1d1fa8ba9879275de63d143954acba8.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "sixteen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/41/415da29b223d7a32b89f16e3309a1d143609336fe41f992d59da945eec3b00cb.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "seventeen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4c/4c9fd919dd6acadf0ca9fca06f84e30bc032249feca83ac95edb2e0ebcc0236b.mp3"
+  },
+  {
+   "grade": 3,
+   "text": "eighteen",
+   "voiceId": "el:lily",
+   "speed": 0.75,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d1/d1a9e4709d3bcec81f523de1d3f58be1a350562ba34a6195a811ad682eb342ed.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "classroom",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/03/039b9703f77ab174b872112b6bbb0fb2666f7129bd5029acffde9c65f6eb7dc4.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "window",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c8/c870129b8deac0281a82ae9b944bf673d41021a4dd851fed8a29bdc33f36385e.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "blackboard",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6b/6b71b5bb70d6fd6f7ed88f778613229caf599d71a16c4202b98156b34e089084.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "light",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c3/c316b063338a2aa41890dead9f460d5de13fe38b9e8a191c09f425bc2dc6da46.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "picture",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ad/addba7c68d02a3f3f497fc0710d4cfd6ef407718a65d153a8a52fe42a043a769.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "door",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b4/b43051180f5c5d9e00a973f616f4a0fd81a9830e5e393ba2effe26fbeaf26e88.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "teacher's desk",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ba/ba71b6cdc84789e2003be174589aa5ec8ac0111617c7be0fd3056488b9b1f41a.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "computer",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/39/3971228417c73869d4f9dcfe1b375a3d5e56fc197edef5e09761c5b9b93839ce.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "fan",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/04/043d092811dfecef2176dcb3ef33a4adb776acf2b6b63cb75ebbe75590327832.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "wall",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a2/a26451aace51e4ac2fa6d97cfa93448c39c4eb72c95216257bb52c28cd295b90.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "floor",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d5/d5dd0d38762f7e5f49ad65e52e2c321be48143c43c9ae74648352c47c0f48831.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "really",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/24/24f5d03b10e853554719a0e6620f0e4f30f711d77359ee29d8312d9607b6e1f3.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "near",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6e/6ee1ba023e496cb7affc9d0f29a9605411997651ca2f90b91afcbd099a3c47fb.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "TV",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ca/ca3686d8363fd5535d4785f04ee2d6f1b211571b91c7d8259f604db11dd5dd60.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "clean",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f0/f0b5c55154a2abe2fe2ffacc5653bb34a8727ad2066cc2e558084bcbad15db7c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "help",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a1/a10c097d405eca102042332273ca5f83ef4a9ba0ee33ba59cfaa046ee8204b60.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "schoolbag",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/19/19968a2512027cfa8591e3819e905750297b65f2c4dbc9ab38c060a0e147fe24.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "maths book",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/7a/7aabcc473773043de14f05caf4fe569a66cc5cae402797f22722f86f0d306fb9.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "English book",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/43/43c2db113b6eb59d015e309b1774c19cd79dc58392775a1a00deaeec6bfe246c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "Chinese book",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ff/ff13bed8ff0468be3ab309f0b9572ed656384a662d5b6a279bbef25412dd1f56.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "storybook",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4b/4b7619c294a3f9bc595775259b4d88734b26e2056dc8c4094ef54b975d3355cc.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "notebook",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/00/007f0d08b3fc95bd7f662a939b736528289a50002e39c27a8ad9390f43e0dbbd.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "candy",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a7/a702b2a67d0997fa7463b65cf69b874440c3b28a069637a87b07a549f00fed5b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "toy",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2f/2f9f7a52ffcc92296051d94781a0c07c5e0d62f882eed3bd5af99a101a1deb25.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "key",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/16/16aad619accfba7d79bded2dcf33a02da68fa87ba29f08358502275800f09ec8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "wow",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/65/65277c19e7763c80f486d88a244dab3b1497037fff60c2d262d3bf5d10bd9471.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "lost",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a2/a27e9ec04560e99b5a4d53197aba46e4c13a7aadae807bc55c68a1329a6c3761.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "so much",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/94/94a33cb29c3252c42d50641e6eb7ba9ad426c345dce9c7179e3612ef5ca7b366.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cute",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/86/8680d24f594b8fe1c46e218557da8196f2aadc5d76c95d87ef5bd427e8ab50b1.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "strong",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1f/1f28352d8b1d0c1c2dee6feac16f564a94ec67278f30a0119c317022a7ed48f5.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "friendly",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/58/5896e4cdbc7444185a961bda5a6302bc7874d4ea923bcafd1996ebeec589a002.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "quiet",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fc/fc0dc06543306466a3813fea17e71cd1927cd06676cc2cc97ab1faf3688f41a0.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "hair",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8d/8d272c91ccdfd08bb735b4eae0f79815da5a626ea1784f7f2cf1128b3991ac24.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "shoe",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/52/52edad79e9bf9a4dc9803607e9abf8b8b0cac124ebed5a3c4e6e6cf968876444.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "glasses",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/77/7753879e2a0a2a93387776a84f03a32b0a9acceac0d015ec86618309293b302b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "his",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/11/113956c94e0b6096b104ebe1837e3856f9d7f1542b7720401f452c678d0e0f63.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "her",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/13/138830b74e000ecfa4ffa934d4ad0842ee9766afd578f48a8965181a0849e8d0.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "bedroom",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/db/dbcd5f91a2b8ac011a290481641a8823b80d134c2bfaf3457798951a672087ae.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "living room",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/16/16db69a46b9d3f7ebe4b5762040a7150facce89823cfecf3dd2180526e829437.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "study",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2c/2c50448d3f85a4eb3e464563c412ecd6b5db69bb33998e605790d95e68f106be.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "kitchen",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a8/a8f8cc2beb06cbab19f2725cd09d452cb487feaa5a9a9e9c772eb263905cd8ce.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "bathroom",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4b/4bd46b17a08d57d504fbc708b547971ecb661e36f3db7174d3ac3de7bc414e5d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "bed",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ac/ac9f5ed39eaf4787a4c7286e9b7b21e0b5796354cd6a5ef3bd518e1b44b31aca.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "phone",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/62/62dcd808861c25c3c2483a0f43433f3a65d4239ce4fc2142ea55dc6db08e1e7d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "table",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4a/4a287cbf6c9a6ab3f6df79311bbfb1ea8b755e294dc383f7918da9406ed7dea6.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sofa",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c6/c6d349aa56e0f163d8b8d2a73f8a669d20fed74176a59a4263ebca44ed786915.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "fridge",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/59/59480f1263b93f5403e33109445b0300ee7a2a1888227e0bcf2953fdebeb9af2.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "beef",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6d/6d59e4237245a21e97c7f86a20505aa9a1ca2b7a12fe88445c35b3a92fd4809d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "chicken",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e4/e4dec3349ce93fcecf3e2d0e5b9c5cd0d05b79435dad58922edd73e725694fd8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "noodles",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3f/3f9ac89d6ebaa679468c27c9df12d2a80d2bbcf1b40eddcbd238aaaad98a0aa8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "soup",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/56/56f046a6e9b0ccf3bbf8707323704f415fe596c3316bf0f9fc86c6e33c7629e9.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "vegetable",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/53/530716f1fe5c6d821a6fdc5414db35864a4a508b758e1d5851cb42584517c0ad.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "chopsticks",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/88/88b0ee46b88bcb583a0fd86e84fe09855ff02ba4fb2dba4a04d66363f3660f1b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "bowl",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/57/5737e8416af3bcbaa1568eba01c1deb62bb7af28061bee19b3480e23cac3f316.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "fork",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4a/4a81eb1e31d38f842a57fd2162e22e9971e5c4d1907e1daaeb9401278719e452.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "knife",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a6/a607001ac866fe4beb49da62c7395a725dab05aa33e65cc3fb50eadd42bb4334.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "spoon",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9a/9ada0f8d23f06082e05293a5e11bc5441b690755d608530feec6da2cd20b84df.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "parents",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/83/83a470719f9a58bf9344ba001daf12027c998fd71a58d12c3f6672ed40baadf9.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cousin",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8e/8ec52fb40a53194ed56c4a8cdde77e1d027048d9e6f8726323a9d7ffb87178c1.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "uncle",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/60/6057ccfe17b38277cbd2db6930ec5b34334b05ac1cc9c8016802bd461262203b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "aunt",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a4/a4c5b8b0ee6d568ea166f91d8706fd29c930be6fc202c5678f19f594295e88b5.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "baby brother",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/31/319a76bd38019272d016cac61ee060f44291c1a8f76235c4a6a5f7acae2e7f0f.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "doctor",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/63/63ca14af4cbc6bd35384ffb55e80d74ceed49436ef9a6adb74743c2b72dbaefe.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cook",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e2/e2a0c17eed5d6763dc7a96b6d5b2bae3ddb98b6599da9eb226929267e3a6beb4.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "driver",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8a/8a084b886acc403f68042f6d99220b3ca13d8b5b2d7916c21325370fb0e4e599.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "farmer",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/7b/7be55b48854c68c07d65e846add0d76402e6dbca245dd71e1e2d0f72358c7603.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "nurse",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e7/e756e68d8189b3c80a9c6dcba6c946844c90f25f9be860572ec7a25e59b79ae2.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "first floor",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4a/4a5dfb8247500f31d544701993b25dbe36cf0f862c932f2d66e5507986b3711b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "second floor",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a9/a90a43cd7885cb904cf2e133e7c5c8a47e41a3209a02e1ad61dd062f79e6572b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "teachers' office",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/82/82a53d4d92a0b982ff9c9621d05c533113d0373bbee6eda08662f1db771877f8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "library",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/00/00e969f093a682c61b815695058ded3c371ac49a8fcf9316fff70d01f45a06ac.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "playground",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e9/e933b41686dfffad53a334c56178ef4f5190d4bbc8bf4c3a3dfa113e4b1bf38b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "computer room",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3d/3dcc81728989005756bdcebcf76d058b8a61f4bdb82f9783ac3a0316e02fe8c1.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "art room",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a2/a24fe69e4d1580c125c5a13a140a116c93c28c0b4cf5a0c4395feaea03e28c0c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "music room",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/21/2183190867b0425fbd429007918e9656a61fdfdae9a6081641a4cd5799e9aede.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "next to",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/91/91762bed7e838f2aa59c27a40d4261eb6a782e8eedebca1c9780de163a039ff2.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "homework",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d9/d934be17cec0d2e162bd371e9df4457eddec8a4b0f7e54bf46c04124c86beb83.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "class",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b4/b44d24db12998da059062e34619d17c9803d9a603fdd884da26071897fe9ffda.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "forty",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a1/a1b8ac7d9e78aa06230b6b0eeeba6679f71d6a6deaa85b051afc1b2f08f2b4c3.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "way",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ea/ea5aba9df320ddef3fd35bb0a34a902d8ea02cb6dff98e66c83daf2790ce240b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "water",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/88/889b022babe79b80e9ed7e43f4ab636bbd2c918637b4e35e5e6a3a8eced5f5af.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "tiger",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ca/ca899010836a2a17f5073b9f399007f078afe0a747407d703255b8e31d2c9bd4.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sister",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/7d/7d8c2cc4b35befdec159fbf1baf1ee0e0f2c7c455b0f8909c400e4aa66271274.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "dinner",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/65/659ed488f0293c8159e17732590c735492cc920a73632ae48fa6e5c1af024c0d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "ruler",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e5/e50cab122af74d725c4cd615aeef0231c96c458e670e6e5807e97c74a1401dc8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "breakfast",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/93/932db4cf499b806b32967233af07130b00220907d2d3d707891261120583d329.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "lunch",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/17/17cbfae5d4814a0459652a404079cbb1c8d663c3ada8936266b031e0f010b64d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "English class",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f1/f106ac2eb599046fc82db8fcc96a77526c7cc41eda5b2b6c93c8f186ff7f6a3f.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "music class",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/09/090bf6c2382cc7c29b64ad0de9dc31c15be76572d45c097c1b0493b523ce23d6.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "PE class",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/45/4527fef5deca2b8d1fd5d154eebd3c0c28b578be71c66c4a0dd1eb2926900e09.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "get up",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/38/3820734687667485e626ae0fdf64a6681d69e8ff9e324124686022737b3499fa.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "go to school",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/79/790e67879a23c8d71ffe70d53aa140461cc2af17abefec6c7333b07b923368cc.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "go home",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c0/c0bcb555899cc5b7e9a1b2481a3455e68ec3dfbb56843ef4d41647d0207437c7.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "go to bed",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f7/f7b66da41d57f46e676b2bf612a6855697fcc43740ce0e87ba592eb6ee3786d0.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "o'clock",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/29/29278b6274ec960ca73d7f9532bad75a09ef5e5c5d5d1882cb8c10e7155271b7.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "now",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/96/960b1f828482c0f7fce82301e80da2ee11efe28b14523621c45f24f66d676834.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "over",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/7f/7fa1834619b6bdc79555d01c4d94bbac43bcfdcec7241036a71b85143dde045b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "kid",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/bd/bdce77f3a37284f1c4c6305f0a576e8a0c4695a4db57db98d9734cfc26d59a36.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "thirty",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0d/0daa6e0703e2ae3645160364d742cfe7804927ce827beb333715f80526f17111.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "hurry up",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/56/56f23de45fb1f4aca74927b30ed9fe78030df37fbf57d6f660f92ad688ce4c26.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "come on",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/90/9091add20b47e40f7d36d4ccd04b5690a38b591d6db2bb47f85019cde588bfb7.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "just a minute",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/87/8705b085a93fcaabf7297cff35874227b430c61744b1bf7a64c6acd78fbcafcf.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cold",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fe/fe2a1cc3467fbd6acc0325ad3f6e998b37e0b07b37f5523d05b44fce0bafea9d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cool",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/13/137847f94ad1d9fc4768fbb586e551df9bd616b3330b342311256c36489a807f.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "warm",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5c/5cb40a5f3afdbef8d81bd284494a7a8a0c77252ba47b1b3f3131452aac110110.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "hot",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1f/1fb235a7785ed5c8b21181835f83e4068a942b38fd1d4150fc78cecee722a8b7.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sunny",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b5/b5a2148bb624d0048280df82e1cd7f1843a65bd8120ea8e47be5f63f6e26a99c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "windy",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/bc/bc9ac2bed4e37b0a827c106fe8b672380fdefdf2634d152fe541b3c4a5239bdc.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cloudy",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/aa/aa540e6f5e50bf769ee9515d5d312c7ad7fc31c0caa8444b28d3d3798e94fe83.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "snowy",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b9/b9032bed26c72afaca410a7fd617bdf8c98d6a4349cb6d315f4a9bf8bffe4bcc.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "rainy",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/26/2609755065be6897ec85e40178802d70e1a90f47eed4570895b61a4b5823ef49.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "outside",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/47/47e049d06fc1b184ed82d7c9df2da9c2b368ced70fda44a78f1051178879d509.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "be careful",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a2/a216a99920836be2d12f199bfe75a172a136f6f2af1f841e7502154ee6d48707.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "weather",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d5/d5fe22b47bfab67db2dec30777b0f3dfaafa27f93ac9261c031f57ed59348dd8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "New York",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e0/e01d5240c1e900f3d90d11e5c1a812e6bb864f457fad1e632ad8ddca63604b91.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "how about",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/69/69c2d7a8d348cc4c6c0b607d7de09c196685d226dff907f03a4dfd9b564e0c93.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "degree",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0f/0f0475e9f3dc758d58c6013ab4ae657393df6e0ddbfc2fcbaf76bd861833bb97.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "tomato",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1f/1f91a83e62a315dfa33451051e5c09fb6058a6e1157f6c5bfcfa6396881bbd0b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "potato",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/99/996203123cafb6eb86d07af6219718a86b1bf51114c1758c8abc18f5111d3361.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "green beans",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f9/f90625328a1e3352a0e3fb4b3d53136fcacc1a7041e4d00a4b7053cee5f533ca.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "carrot",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/51/514a32cf54835d79b2d74327f15e2ae7149ab33f8d924bcabdfa6a988677ebb8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "horse",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/82/82aa5c267e4b56a04cbe52d52496167381bff55d1d0b6abf59f987db67c87b00.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cow",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/19/19465dd1aab7054d875025a59a4525a2ba011bbae9bda0460096dd562df49d0f.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sheep",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/20/207fa60efa3f2d614539264db62d3bffbf13392154c8e8e203c531ef4983ed07.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "hen",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6a/6a2c0ed00fa83d7d2ec7392ba09c47e03edf3a61dacc0c15a3a51a41c11badcf.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "these",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/91/91ee4f6fbea1a32428961ecf62ee80e28afb703a059605c7e0ee99659525262f.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "yum",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f9/f9910cb7618938f7fd427bef263a97e94b5486dabe15de00dca2e6a050baaa59.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "animal",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3d/3db2a61fa446ac7587aa02953de29024129add75f56db1c40a116d15d734fbd3.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "those",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ad/ade0d573b5e8350773a55d9e6fa73bc8350f81d6ebfe872b4f274ecf1024ed73.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "garden",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ea/ea9a67a455e998a571b9151eec4adea77f8072955029cd359a5242d7255e89ca.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "farm",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/48/484cae87aac91616adc70335e2aad378d1fd511ac48192c8e666f4f3b0f69182.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "goat",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c6/c67abdd35571f35725ab39d8a12e816e8e913bfc2b58a37ec8f29f94f509d0f4.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "eat",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2f/2fc7d7d3ebd87762623fe85c5c3e33034f6089cf2faa53e3b6e6c881c910c4b8.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "clothes",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5c/5c2134f394e6cfe7a58d7377f04642acf358979ee3e55046d38a5ca178aa0fce.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "pants",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ee/ee3bbf985ecdc3e04c3ada37ebcf06cab41f724ca1490783b5bfb417eb4d1ded.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "hat",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/09/097371828c86ff909a39ac16f337dcec013ba3207836ebd1ce5c4d0e512d7c38.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "dress",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/59/598c6a31564c103b4a3493c63317384c06849855c5c983cd52216b79512fdf40.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "skirt",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ca/ca0e1a5471f7e98843810bc15019c082aecfbedd488f925c3490f3d4f83537bd.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "coat",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b3/b3340589a4af234955de6f37633e65bbfab5a5ab7082135a484bb3fa8f3de224.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sweater",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/33/33150331c5f5817237e83c90fb4c9785368cfffd20e488c52013ee770a82ceeb.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sock",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9b/9b8f83b3fe7ace585d3ff98ec9d03156efcdbce3c21c22a67327d1404f14ca4e.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "shorts",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0b/0bdf739cc50aa4285dd0ee513479e08ad2f7956d722d12d714d11b8c0ed618b2.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "jacket",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/7f/7f0775fd1ecb385d8ee8d26798283c82f8aa65cb356e8ce6bc8229a9d1e1b455.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "shirt",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/67/67bfe1d263dadbdf5bdd1b354d59e880fd0bbf52b7c3c32376ad905ea5a03918.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "yours",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5d/5d9d93d38439764f734983b0549bcf50b88a07cc53342a944d406928a19e6486.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "whose",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2b/2bfb3ad89ce464ec7b4560fb2d6fa3c46c69d6af8c30203bef198a7e0ab86411.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "mine",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3e/3e8aeb973a464ba503d3c5636c6dade52b078b820e18195c77d2bc28362e7034.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "pack",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9c/9cdd17c56854cffbfa1be323cb498ac61f2be3439e989608c762615fae50f37b.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "wait",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1e/1e48633987c03fcfebc3b7533ea96216ed8a89a2e36f1f773d1833f32d45d414.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "glove",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/67/6759213aea12f913eb1711b7fcb48474cde21d0512af4d671f9fe11484d31111.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "scarf",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f4/f4441b64fc1ed8bba8320b194966738591d68e23fbed47127790b930153eb5a9.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "umbrella",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/55/553f54eae462cbf77aec7e7e1c3981684d673a2cf75b4cd6a662d09d3135cd1c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sunglasses",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/da/da6ff00354ae8c3f0b95d69d851fb1e4f310c03ebc4139700a07e420f554d964.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "pretty",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/84/8440fe40a08af6f9dec6a127352f0799f15f434727ee54a7b0264442c151ee45.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "expensive",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a9/a977fb30c749f9582724d6e3fb6fdbc06d4fe7d2d1190a70a1310c095363a384.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "cheap",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d1/d1dc32897ba703f1f679f1e32be779accfe681e3f5c0da6fc6ca143bc5f64edd.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "nice",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6b/6b124e7d48c3b39911f27056d798f981f9b2dbb919b891c60b0cc0b0a504997c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "try on",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/15/152b9e10f25a4b8e88f97ad761a67adffae2a64a34f4b96325f8e8a7ca5ef65e.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "size",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/35/35522bba0ebab9a8b653e042dea6e5bb5c43e805e7de72361656e0732d5fca8d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "of course",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b5/b533b473bffef245f00d30dc0fd786ba829e6e8832f80ca39a0c54fc16f9a6b7.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "too",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c9/c9825ca854b3558a8e485fd9aca3bcccbb47a9206accb3e837db441db881868a.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "just",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2e/2e4e6e24e63306b8601df0a3096ad83168e2bc793173605d0eb83054202a2d3f.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "how much",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/70/70224d1553f9a0166f9574726050306aaa804f396d780acbee2877b55c5858a9.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "eighty",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/05/056cdae14c22a9936e97be22397f9439fa29053f62dda8fcf53ae474c3180ad9.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "dollar",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8e/8e1373773dcc92ec6e7c854d4ed418ca9eec62727f3a503633bacdab1e6b6c3c.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "sale",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f7/f701796cdc9b309be3b0d6329e49ec3db55d69d944ad7cfcf11ea4bf9b595d1d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "more",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/06/06afe8033fbb596c8440502c03e84e7cddc2a5bf903b48fd66cc1a92a307ea9d.mp3"
+  },
+  {
+   "grade": 4,
+   "text": "us",
+   "voiceId": "el:lily",
+   "speed": 0.85,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/98/98f63547020962a778b62b4813823f961bcdb7244ab884f9217a9f4166465dcc.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "old",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fa/fafa37c1fe7f614f590a527b713811cc0aaf0cfbb0d48aa33ae815d4f1d1dccf.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "young",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ff/ff75ffe98207856a2232018996c72486a33b37e6791fde9910852c9d39bf676e.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "funny",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/60/60c6ceac0dddb79596f7f2de547935754a33554908e69acc1d8b88f52e0a811d.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "kind",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ef/eff6dd7c04eefbd1930fe21c2752d70a57fed2de203c426ad9f71bfedf13fd1d.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "strict",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/14/1443bfccf3ce7631692d85ebd19252625b2397a097a11926a2f64cac8bc5b52b.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "polite",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/27/271f5e1d10de7b5a34edd9a3aa23f312fb8740d2d3b6f65d193bd4766dc797ff.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "hard-working",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/46/46e3ac3556455a8ec1e59ae9135166e1647120382880b7c8c8c033dae6c8674a.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "helpful",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/54/546c9bc7282abed24618ae029f70be33d305d8b3d3dff44e2852cf27610ca44e.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Monday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d2/d21a95feabdd9a16e7cbc657b76ffccdf02c7e9455358268055a2eeb40c36805.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Tuesday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b4/b4162626e1b6a369ea35841db4ae32b988be895a2c70ee94ca2639beaf99d0f8.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Wednesday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/77/77fc5091f12f8451a02a1191c9e07134a3c4cadd7181a3d2998103917a2384ec.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Thursday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/69/692d14a9b7265b0d23a3fa8009c80d1a47c51f7500b5ec40caa4bd8babb22c88.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Friday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c6/c6e0327ddf53d0d4d0ff686eefaaa0276d7d441304ce9b5d06969c1e2b5f0f4f.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Saturday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/db/db73ddc00498dd91e5bf3d38869d35b563c106115d1234b6e86fc61241894893.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "Sunday",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5a/5a39ce8f96a890d2d26b83e4ef48f2c13b2c12928acbdfd337e7a99ce3775d02.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "weekend",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e9/e953c6997b7a36e0d06545150bc5e80bb3ea72ac606bc14882ea9ab552ee30dd.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "sandwich",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8a/8abb85067966616757c05eea4d678dc6f99aa17541c7b00b7fdedddd30570f67.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "salad",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6d/6d84c9911910019b5beb70e75a56ac9ac49e13f8ff19a125d5322f59dbd01cb0.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "hamburger",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f7/f70b3f74ef106335b623beb516f12f653bcb4151eef8d0a169b2da7fada6f9e6.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "ice cream",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0d/0dc637c77714b2df4e85e8def8326d5972b37adcbbed176f6056e3271d99063a.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "tea",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/15/154625ac568b2a524fae36725732371c8a3a622289060b12c983986a9f7b97e3.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "fresh",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/49/4938498399ad42122515efc39635eeda28d0d5f69711b7d727e4ef51da637258.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "healthy",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4e/4e0bdb92c7ca03f6043f7ed3b775c254c5a86570ad87b037393681136905d2b6.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "delicious",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fe/fef3f705c36765ea337caed3375768e05b9187992daac43e86c24f05d63cbe2b.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "sing",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4f/4f25f9d991c273b862b7909484fc04b7d823fdc0d117d307da4148064e389a11.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "song",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6a/6a8b7c8b45500e9423cce7089ad598729f4e89b5b4f003f0ffd5b4e3f88bd133.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "sing English songs",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b9/b9969b71f8d8728017534b7912d1fb09fe723d67a7ac1f7690e6c07f9e303f97.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "play the pipa",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e4/e456a5b3fb0c5844a2683c304d461d7c52e628d57db32ffff4ca586d3710f207.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "kung fu",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/02/025fd37ccf1d49ecea121f99a5abf03f3baf118c340205b742c0a89fc515e8aa.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "do kung fu",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/41/414ea5b24ac91128746bfb7600c683ffd7e6da6b583cb5888f53e980211926e8.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "dance",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fb/fb40e66f0f6d6b231b9662cb0a91e15d9e8b03e458ac2706c8320a1e341bd82c.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "draw",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/05/058b0e2679b88fd27894fe015c4000785db456482bfe2bbcc9d8ac28a6bbb4d0.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "clock",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f8/f8246c18f387095fdbdd5684f7c51029071cf85f1c6dd02c3c7526eaae285d58.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "plant",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9f/9f7a714d46c1bd2480f1f4ef1630d99fa2a3c89fc32e106e032a3554dbe23a03.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "bottle",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2a/2ad3970b931536951806ffce5d199da419a9231abe4d3f20ee48acb6d33b9292.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "water bottle",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/02/023f80e7e9f3fca5089ef4a96738dad9f6a0f9359320ec974148b85758ccc9a9.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "bike",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3f/3f2c2f84cfcfb20fa44e6a14bf3056845c5f349f3780075a55cae58ce93c3813.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "photo",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ed/ede65cbe71a904cd1fe30cd8ba53ee34b067045ff9608880e4c8a643bcb6e761.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "front",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/90/90bc80d3b4507aa0fb8299f44fe209e8625ab661179517981bf6ec83f83520e1.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "in front of",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/33/331fc8d668060b3c3db19a5cebee4803d7383e808745ea52e4d03a5628e96a85.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "forest",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b3/b340a6a81027ac3f17bbf9ef5bb4a2a9cd15a8fd34959b2225df823270dc63c6.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "river",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b2/b2b7c498e7ac8088782ccb44d4755a396c2052594af8d6ab59abc7faa4d98424.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "lake",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a6/a67ce1df28af93eddf3bf8abf53e386fb460a7e9ca9b590c7d339126640c2271.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "mountain",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/31/31b16f9420fca74d16bf46d6332fb06fe4d8eca7da269bf683a0ea1383562725.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "hill",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8c/8c74d3bd5d6b0487f3dd8ef9dc2de53842fd41d85404c305d2f087c2487a5fb4.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "tree",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/38/38b19338a0f15e6df5c01480370817158cb550cb44a654c752508eaa222ea5af.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "bridge",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ad/ada5280a9646a507f3487a7c96d1c8e5488383b7e59f5ff0fd080d86c349053e.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "building",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/08/08542964d8d95fc4254ddda30eff56386ca1713c82d3b48374238467a9fc75eb.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "eat breakfast",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/27/27ec5021aff6e8f3875e6b7b532e6e2163594eb6db791919b400cdf22e54c942.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "have … class",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a5/a501dc1a7cd5cedf19e6b559b6aed5c113dffe279d6c1df82edc6224642542e8.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "play sports",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a5/a50090720305348f74ad796702ef7d22c8430800568fd4d385a1aa80f2e7b923.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "exercise",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/08/08ee31419dce17f093564ef5b3f57aef3ddd37552bf852e09ce0c91732275d8b.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "do morning exercises",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9d/9dda2aee2b28a776e2b0cf6aed1b0c467529a521705f0f5cd132b3c67ddbefdb.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "eat dinner",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/57/57fba15bd312e5ed17832b498aacabd5f484a48dc67e2991e45d14abaa3eb8ad.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "clean my room",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4e/4e4a654683cc07149df0d098f6a689e2e13fb4595408247285e602f7174cf510.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "go for a walk",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/dd/dd7f2a130fbb20a7e6d7bd45aab8330cea445b201a5897491c7f758bcb090efd.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "spring",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/92/929a503a743ae6cc5813151dae3b09ecb5a254aecd028edd1a293635a0834b18.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "summer",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/46/46d0546c6ba325d3293fdcdab4f770b07bbca47c3ff4432a2a71a2d94f6b7cae.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "autumn",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/77/77d0113be1ea3789ed1efad7025a3ed768015498c3153bfa2c9142b1937f4a28.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "winter",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/40/4014123c7e29f74c6b9e556c4184a44a321486baf8b345f01d128d989a2ab72b.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "season",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9c/9c06bc2fe8f276f9747be30f3d51d8ce906f2fff40dd2e59f35d4d4c9894d99e.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "picnic",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/83/8363af47c86e25062658f3ab167bf524dfb8b7198a8c39966a31c06a3fe3e3e9.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "go on a picnic",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/35/35afcdd17cfea377377cbbb91e8d2838858e3959ee0676884c78db319b5c5f8b.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "pick",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f9/f9516d1e94d2692d2f5895a94da7405000d35ed2d4a542042977c8415344fd15.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "January",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/57/572d9ddc4a3561d187e12958947092820cbb91955023e663c4fac24cd5fa4e42.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "February",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b6/b636b7094a545655436c77ff0cb2a9f7b4e358dc7267329ed3adc956771d362c.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "March",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d5/d52273c584bda95f4834a6f13e619c9a0cebb60bf7c30b2dade120632d0cbf94.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "April",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/db/dbc64fcf85ae6ff39e56b300254b9f2ec3928dd9efd289a92e4dea925fb3207d.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "May",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/03/03db34077c04f74e1750617617a1c15b44e1990ac6de1bdda5a6381571d4f2b4.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "June",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/44/44e40c1cb2841c36bddfd649b0a18089c66f471b1ccfa5534e1425731cacc041.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "July",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/38/382f00bb30ac08de98d89614a987426b7a1351c397fea669394fbadc06b8b74a.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "August",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5d/5da5e3ce00c42fdeef7b8d3503a391147f3e8399c46171a296cb3981770b8bbb.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "first",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/33/3379b67d69db9bd8a238ab77d8b04557dcb5f5a0e9e47cd1aa8049d057c1a021.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "second",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e2/e2192838f3f6077eb8dc03af9234cf63342e4cee1b9766fa21136dd44518132f.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "third",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c0/c07d1eaffcbf6c38c6238d19d28d0643165721e23ce04e282ec8f34835a078b5.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "fourth",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fc/fc8fa03beb24fadf52cbcd983b5cc1abb5d862892a78f1294355e11392776cd5.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "fifth",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/98/984131b3795d431a05d35435eb67a0e27023deb9f927207d75f3f486f5d48911.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "twelfth",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/35/359f66eafd141bfb0310908f458462e8f18cc9021cc52fc05d3f57704adf78da.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "twentieth",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c3/c3e3a86901d1bbecd13e43df337d58019f352041dae637e8aff7f9b6024c66ec.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "twenty-first",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a9/a92c159bd91e1c1f5b2a8bceb71f616ef22f51a26b65f1226136bf35007e296f.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "mine",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6d/6d58ce322566abba11f62e44c95a585af6e5e3da74a34c8de94600b3376ba0f4.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "yours",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fa/fa80a204444060ee2d4258a09bae9368519b0651559d2ae34ce7768069f1d25d.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "his",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2d/2d838bcff2e439dea15a8a7305c604ffc2d400153fb9429c097ba7f8d643e5c1.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "hers",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ed/edee3c3fc5591dcdaa3f00070a4d716ee6e42a37b75429d48c9eda21027d7a29.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "theirs",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/18/1823f56c762274369743e5a8da6939d795a98c678a2d4118279bf4e4971274a0.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "ours",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/72/720af5f962f0b83f5a23e03b9262f3ab261761ca296a515296025d91108291f2.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "climbing",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/26/2688910048a3310621baa82ab28d26779d0356450c9b183ac41ae6a859441640.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "eating",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/aa/aa2c2e856df8a59510ab85db7984a51ba08d49a81374d00629c946be753d1a50.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "doing morning exercises",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/22/222495568f73d25e7df2a74898d4b86125f9c2080b18fbcc5c98ff41aaaf9cf4.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "having … class",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/65/653db11e48c613117c5758ae4ec143bd5184f01193148d72eb851f195c5bf13f.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "eating lunch",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2b/2bbba3bd52f13c3987dc18e7dc7764089432ee8b4b38d5a7f3c8be1dec890ab5.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "reading a book",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/90/90c71f1b0b09e103233c226e1fd3f197ff9dcf096edaad2791f5392ac3a3f7c6.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "listening to music",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/06/0636eca40cc3fe613076f0adaaa33a36d97fde6d51920eef73afeee6862ffd8a.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "keep",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/86/86aa0a9020cb336a7b0413bcf034dac0151aac993e5b2e56b8cd101235967033.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "keep to the right",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/31/31117a6853ce0e45b1c0085131711ef784711f0c3e6edff80964601862ad4e5a.mp3"
+  },
+  {
+   "grade": 5,
+   "text": "keep your desk clean",
+   "voiceId": "el:lily",
+   "speed": 0.9,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e3/e36a1a2fdb75bbad2e765155a88382fe39a01e8947f5c4f6ccd6116faedc831a.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "science",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e3/e3160522f987fea24257dc62e0f6a23782572abaf947e86b92f07f827bbf4150.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "museum",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/48/48d671d99b7c441ed37bc9451d02aced190b89c2efdff019381d51ecf30d21e3.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "post office",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/de/de6ede27d01097d23c161717fbfe50f661f4730c35c15d83a4027ec63a66ab56.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "bookstore",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/bb/bb68d1d49a9d5da01f9f542d580f2ee9bb29ed438317ef416bf4d7da3305f6aa.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "cinema",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/53/53eebf9cc79ff83a0fa017f717e6f565020afa5cf0727647643969c010ea826f.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "hospital",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/fe/fec06b86a6c8ebe8b928bea561462f089b1ac749bde87bb6d0dc32fcceb46104.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "crossing",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/11/11e02e74d2bead062eedcd5c80289b575a089b22aaf354c440ed2d75df2983c4.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "turn",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/09/09079f935bdaa9600de6f37e1bba5703a64d2f27515424938185d8914cd8072c.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "on foot",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/80/80701b47a4dbb9b918b968e52e58779ea22e8d229e4011fc89c0268aaa60f1ae.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "by",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/db/dbf33b427599c1fa22f8ff4f4e39dd65653faffddbf1bca0e90dddf713ece7ed.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "bus",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d5/d54faa6c7b03493ef44178396b1ca6fa01b381827f556428e68a8dbafc3efaf2.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "plane",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/4d/4d5c525d86e4d877d8a210d6dfe6b7fa9e1e661c9b82185093129f76cbe5dd10.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "taxi",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/18/185293a7eef449591da5a39dedd5c71c032a14d41a8812483eb72d0070d768c5.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "ship",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a8/a8bfb50f3445a6ade61c1683a8f0bd95a07cef785b11f65bc58d674a81296373.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "subway",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/7a/7ab5bf21289295c1bbe767d2a431de41b8d60a531544836b2c9c43283c70abfe.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "train",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/79/7900a98aa3e4898d0b8421759deab081622de2e6cf0099374a4bba5576ea0b62.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "visit",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/79/793a43390d7f9722120b0f95e1893a01f6c688e2e6cdc3c0ecb19d05f5e5f9d7.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "film",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0f/0ff525bcd12a38ab3d31e244ec17ee8c79f0f59c306e03d764147806fa6c500b.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "see a film",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/58/582ef3cd66b11c0d9406645b0ce115e94c0e0e95990615e7d6d79086756ca4ec.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "trip",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3a/3a7260484448f1f700c52d483c47ee38201e04d92cd5b04ae6a9166da658572e.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "take a trip",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/01/01e596e0f55438c6b9274be81b24a4f84489c6a13bd97321203edf2786915dbd.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "supermarket",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6b/6be564483f0f858a727cfa3fc4ad5dcf72ae02aa1d59de150b5733e404aeee87.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "evening",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/e1/e1ff6dd30afe40bc84241075e3ccd1408e1a593e1e57dc0e5f5dd61324f5b388.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "tonight",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/db/dbbc9cb144964c6293b8bfcd35848bf98e20cee20e06236e677f5a1b5205fe67.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "studies",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3d/3dfd4b4a723a708504e3ac29c3569a9d9cc0cb141fa3c60a2e143e0e89d7f98a.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "puzzle",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f5/f503564bd6f5555d62ce04613cc113db6ccf9a6ee7ae9783b64e7e07c29ef93b.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "hiking",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/27/27ed49fb2ae3ee9ecab538ab19dca4aa8062a197a7f4454985fe6ed2554e5821.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "pen pal",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b2/b2b8883d1d2f64960d74666ff9761658c92f60eb9fd033a585e9e8133610c0d2.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "hobby",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/29/29ce20bc6b0a4e848cc1e600243e6e8e3c52f2466517014aae451a01f56ef3db.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "jasmine",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/40/406db7bf4f3cd5de16a70e2070287ea03ce826c6bf85e04c9f2bb17cfa5e7ec8.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "idea",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c0/c0bfab69a946dc2e377d67e0c38b64d15190c3c300977ba05e56cae1744eb790.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "Canberra",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/46/465ff20e1f947f09f81d5272ea2570d25add9c56593e76d553adc3d90fd9dbcc.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "factory",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ef/ef04e332e7116d410836c30a42adc526fd325d04642a22456d3b595093016269.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "worker",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c9/c934da9bf4e963e50cce8837417703ff423508de8a5423eba61719fc4469b7c6.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "postman",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/22/223d8c8160aebb6cae97ef6a9f7d680270aefe7d4d16d269c28b2d7046f4745c.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "businessman",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ea/eaf60bf83951479889aa11952acb9b0df62405b68c9ca318d563510852014612.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "police officer",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ac/acdce466aef17bfb5811308a981a4500fdbc8bc4bd62cd16879f80f312e03e80.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "fisherman",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f8/f827fe74fad9e2c64942d7c9fbe55c86bb3f25fd604fa6d29d87c2dd113cae34.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "scientist",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ea/ea27d5bf3215c799d3cc8f321c7cdba4ce3969d69d9d8747eb3a804f175281fb.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "pilot",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/38/38847c71cf3e0f3490b976310dfe6be75ed835376923b0fcb438a960128523df.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "angry",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/45/4531bd8b270439766216712b4aab4f3a92c336ed61532a9f1eaf8ccfe9a33fef.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "afraid",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a3/a33972b2f826eb9b95b15da6315ce61485e161f1da125b06b8c32241c6b0c210.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "sad",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/2a/2a47eac24f93f7d32a45aaca5d1269e8dcbec1fa8d2e42d6434626a5929caea1.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "worried",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/72/72fcf0889275195cc666cb6464dd197573a1e5374c29f3999a355a16be6f168d.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "happy",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/04/04ea5590dce2cc71aa13a7a55266a74ef26f04b3a1f314b32220731bd6b586a5.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "see a doctor",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d1/d16300ee643d98d0fbaebb4c7440f0a527397c247b5731acd746adb31ecc3ae4.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "wear",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8f/8fab4b72ce228a4a16243916cec5161ffe8d4ec2bea19ebec3900c5539a91a20.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "more",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/32/329b1f0c625b8db884073f12032bab458c9ef198ab7495ec93b8216a7c7e8a79.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "younger",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8a/8a457b65db47eb542e0a7c2f453efc5c2add4756173cc9acfac724ca1af9692c.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "older",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/23/23c7c6fee6d11ee7dffdb26af1e2d0d83a4923a54adc5a6fb39bc73a6921d2fc.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "taller",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/06/06c95c4b198e4c4c4beb44960a6c74fdf46037dc5e84de30c8d98209c171d971.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "shorter",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/b2/b2475b9b188431c1efcee0b25b588146aded4fceac3196076868af17fefd2b3c.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "longer",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/9b/9b1641d587a2a3ebd0ad0abde8ea098b20a9ca387b8846e37601752ec8a22863.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "thinner",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/99/996bf3b8f60cbacb9145ce2303956afa8c5641673dc9477302e87cd836742b11.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "heavier",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/55/5511f5922c223ed8c3e7a93d16e37104c19a78292f638b49b55427313ecf3d49.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "bigger",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/80/805348c955f4b58ba7aa0fcaafbf3f803be232bac548382ea63697401c127d62.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "cleaned",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3f/3f81bc933c84f920683ab7f48e31d40d11fe7cba59e979beca0e1a2e2dbdbd30.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "stayed",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/51/5116f7f079476ef0a729d0d60f6bbcce7ba458df72085e82cb33a81197d5abeb.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "washed",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ef/ef9cc25d512094b721608996f07da3c5acd35fdca35e2e96f4cb867a01450684.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "watched",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/18/18ab215dff6ea84220cd4ce822bcb6a82906a4462d838aa774563ec48bb674e3.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "had",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c3/c3872ab33e6d2e3d0caf3f6317d705517fbd49cbd3901af1832130d6f53fbddf.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "had a cold",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/3f/3fdcd41ffa8f79a81406ecca3d540b49527b27d057778659ecdb5ae38cc77ef1.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "slept",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/6a/6a01f8a173e1a598aac8dab168367debd7d53b34fba671f2e4f575c3ea5bba2b.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "read",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/8d/8d534da4eb9f2b296b924c7c01a951c0e44e814a229739cc05cea392719d3368.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "went",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0f/0fd825d9f4bba99ac1225c9d0c965f5a20a9cd55fc5fa6f87400f83443107518.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "camp",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1d/1d7d37cd6e4cd52d18de6a79767aa7b6a92431610cea56b9862659aed0b4f9ea.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "went camping",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/0f/0f88e1391f03a1af042d4c0deab42ca409bce31ad35ded15c0e9c45e2e3d4ff5.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "fish",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/38/3879494bec955c72db87bf3ab5a435a39ed2483223d200d0f8dc15454838af9f.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "went fishing",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/a9/a94b85f7f636a024c5f6efcdbf0a14bc745f0459ab6c34c74c7e33b19731a78f.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "rode",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/85/85e47f2867a515d4555d726ef0a8dd9f3b69aea606481b3fe11976430b6f6047.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "hurt",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/c5/c5a40afeddafa9f7dcca210c161c0d24a6661ce5570c14b25c0416f84e2db7a3.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "ate",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/55/55271c1733f6df1ca7dcdfee80c4d5de42af43694f387aa72ca393de2c20397b.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "dining hall",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/d0/d082556e2f6aceb43e2860a0e26f93281d77f96f75a46098cd7c1f1bbae455f3.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "grass",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/ca/caa276d4b55bd0cfbdd08db6aebce82e7261f8b6dd9342098b78477a67f7992e.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "gym",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/26/26b4fdf8cd80e6db1de357bb377fbec718622382431c82746e90bcab9ce4649b.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "ago",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/1c/1c8580d81d1402b8bf3308c7a1bcd07de1015f98e0c7289dde14d39b8eaeb1c9.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "cycling",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/71/715dae94855ff56d9bbb867933d34e1788b8fd1add5627dfd17f556f4c9e358e.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "go cycling",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/f1/f1f716dfbf7b12c2aee304862742ac774be4767ad729a63717586a30de3150f0.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "ice-skate",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/5f/5fda14dbc35c2e62ec17ba58e60cebefea69e4324ac80061af81373031509a70.mp3"
+  },
+  {
+   "grade": 6,
+   "text": "badminton",
+   "voiceId": "el:lily",
+   "speed": 0.95,
+   "accent": "",
+   "expectedUrl": "https://audio.bigmooneducation.com/01/011b30016b1401df668bb2ad5b0a2ed68edd65acb522301d9e2848dce42c18a9.mp3"
+  }
+ ]
+}

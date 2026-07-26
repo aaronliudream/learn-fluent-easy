@@ -39,6 +39,24 @@
     ],
     "explanation": "'We did it so that everyone could see what waste can become.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "greenhouse",
+    "cn": "温室(green + house 合成)"
+   },
+   {
+    "word": "upcycle",
+    "cn": "升级改造"
+   },
+   {
+    "word": "surprising",
+    "cn": "令人惊奇的(修饰事物)"
+   },
+   {
+    "word": "surprised",
+    "cn": "感到惊奇的(修饰人)"
+   }
   ]
  },
  {
@@ -80,6 +98,20 @@
      "They still burn fuel and produce emissions."
     ],
     "explanation": "'They still burn fuel, and their emissions do not disappear.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "emission",
+    "cn": "排放物,散发物"
+   },
+   {
+    "word": "fuel",
+    "cn": "燃料"
+   },
+   {
+    "word": "argue",
+    "cn": "争辩"
    }
   ]
  },
@@ -123,6 +155,24 @@
     ],
     "explanation": "'the pile of broken things gets smaller every month, and the pile of people who can mend them gets larger.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "mend",
+    "cn": "修理"
+   },
+   {
+    "word": "zip",
+    "cn": "拉链"
+   },
+   {
+    "word": "loose",
+    "cn": "松的,不牢固的"
+   },
+   {
+    "word": "pile",
+    "cn": "堆"
+   }
   ]
  },
  {
@@ -164,6 +214,20 @@
      "The school bought a new printer."
     ],
     "explanation": "'since May our class has printed far fewer new pages, and the box under the window has never been full again.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "worksheet",
+    "cn": "练习纸"
+   },
+   {
+    "word": "tray",
+    "cn": "托盘,盘子"
+   },
+   {
+    "word": "environmental",
+    "cn": "自然环境的(environment + -al)"
    }
   ]
  }

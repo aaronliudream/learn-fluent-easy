@@ -39,6 +39,20 @@
     ],
     "explanation": "'A habit which is easy to keep is worth more than a plan nobody follows.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "drawer",
+    "cn": "抽屉"
+   },
+   {
+    "word": "habit",
+    "cn": "习惯"
+   },
+   {
+    "word": "plastic",
+    "cn": "塑料(制)的"
+   }
   ]
  },
  {
@@ -80,6 +94,20 @@
      "Because fewer birds were found on the ground."
     ],
     "explanation": "'He found fewer birds on the ground than in other years. The school kept the new rule.'"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "endangered",
+    "cn": "濒危的,濒临灭绝的"
+   },
+   {
+    "word": "lose one's way",
+    "cn": "迷路"
+   },
+   {
+    "word": "field",
+    "cn": "场地(此处指运动场)"
    }
   ]
  },
@@ -123,6 +151,20 @@
     ],
     "explanation": "'Now students stop in front of it.' 与 'We know how much light our library uses.'"
    }
+  ],
+  "vocab_notes": [
+   {
+    "word": "solar panel",
+    "cn": "太阳能电池板"
+   },
+   {
+    "word": "physics",
+    "cn": "物理(学)"
+   },
+   {
+    "word": "screen",
+    "cn": "屏幕"
+   }
   ]
  },
  {
@@ -164,6 +206,20 @@
      "The first list is too short to keep."
     ],
     "explanation": "'She says the second list is getting shorter.' 与该问答呼应,指希望「不可再用」那一类最终归零。"
+   }
+  ],
+  "vocab_notes": [
+   {
+    "word": "recycling centre",
+    "cn": "回收站"
+   },
+   {
+    "word": "bag",
+    "cn": "袋子(此处指捡垃圾用的收集袋)"
+   },
+   {
+    "word": "nearby",
+    "cn": "附近的"
    }
   ]
  }

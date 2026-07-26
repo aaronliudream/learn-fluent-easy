@@ -65,5 +65,27 @@
  ],
  "unit": "U3",
  "difficulty": 0,
- "word_count": 166
+ "word_count": 166,
+ "vocab_notes": [
+  {
+   "word": "archaeologist",
+   "cn": "考古学家"
+  },
+  {
+   "word": "pot",
+   "cn": "罐,陶罐"
+  },
+  {
+   "word": "plain",
+   "cn": "朴素的,不起眼的"
+  },
+  {
+   "word": "disappointed",
+   "cn": "失望的"
+  },
+  {
+   "word": "bring out",
+   "cn": "使显现,让……显露出来"
+  }
+ ]
 }

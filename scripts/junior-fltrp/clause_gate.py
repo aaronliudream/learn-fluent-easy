@@ -144,14 +144,23 @@ def scan_text(text, volume, unit):
         })
 
     seen = []
+    result_spans = []          # so/such…that 结果结构的跨度,供下方定从判定排除
     for m in PURPOSE.finditer(text):
         emit(m, 'purpose_result', '目的状从 so that')
         seen.append((m.start(), m.end()))
+        result_spans.append((m.start(), m.end()))
     for m in RESULT.finditer(text):
+        result_spans.append((m.start(), m.end()))
         if any(s <= m.start() and m.end() <= e for s, e in seen):
             continue
         # so/such…that 里若 that 后紧跟报告动词的宾语从句形态,交给别的门,不在此拦
         emit(m, 'purpose_result', '结果状从 so/such…that')
+
+    def in_result(pos):
+        """★2026-07-26 补★ `He was so happy with the answer that he told…` —— 这里的 that
+        属于 so…that 结果状从,不是定语从句。REL_OBJ 的「名词 + that + 主语」形态与它撞车,
+        误把 `the answer that he` 判成定从(U3 泛读实测踩到)。故 that 落在结果结构跨度内时跳过。"""
+        return any(s <= pos < e for s, e in result_spans)
     for m in REL_WHO.finditer(text):
         emit(m, 'rel_who', 'who/whom 定从')
     for m in REL_WHICH.finditer(text):
@@ -159,8 +168,12 @@ def scan_text(text, volume, unit):
     for m in REL_WHERE.finditer(text):
         emit(m, 'rel_that', 'where 定从(先行词+where)')
     for m in REL_OBJ.finditer(text):
+        if in_result(m.start()):
+            continue
         emit(m, 'rel_that', 'that/which 定从(关系词作宾语)')
     for m in REL_THAT.finditer(text):
+        if in_result(m.start()):
+            continue
         head = text[max(0, m.start() - 60):m.start()]
         if REPORTING.search(head):          # 报告动词后的 that = 宾从,不是定从
             continue

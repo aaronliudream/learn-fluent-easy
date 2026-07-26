@@ -1,0 +1,596 @@
+{
+ "note": "基础词豁免表。入表条件 a=前四册词表已收录 / c=前四册正文语料已使用(含语法题干,Aaron 2026-07-26 裁定算暴露) / b=课本语法页原文作证。仅凭常识不入表。检查器读表豁免但须单列「豁免命中 N 处」。",
+ "approved_by": "Aaron",
+ "approved_on": "2026-07-26",
+ "count": 88,
+ "entries": [
+  {
+   "word": "take part in",
+   "unit9": "U1",
+   "by": "a",
+   "evidence": "前四册词表 wy7A Starter"
+  },
+  {
+   "word": "post",
+   "unit9": "U1",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U1"
+  },
+  {
+   "word": "lost",
+   "unit9": "U1",
+   "by": "a",
+   "evidence": "前四册词表 wy8A U6"
+  },
+  {
+   "word": "energy",
+   "unit9": "U1",
+   "by": "a",
+   "evidence": "前四册词表 wy8B U6"
+  },
+  {
+   "word": "key",
+   "unit9": "U2",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U5"
+  },
+  {
+   "word": "save",
+   "unit9": "U2",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U6, wy8A U4"
+  },
+  {
+   "word": "T-shirt",
+   "unit9": "U2",
+   "by": "a",
+   "evidence": "前四册词表 wy7A Starter"
+  },
+  {
+   "word": "flat",
+   "unit9": "U2",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U3"
+  },
+  {
+   "word": "lie",
+   "unit9": "U3",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U5"
+  },
+  {
+   "word": "form",
+   "unit9": "U3",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U1"
+  },
+  {
+   "word": "hit",
+   "unit9": "U3",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U2"
+  },
+  {
+   "word": "mirror",
+   "unit9": "U3",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U6"
+  },
+  {
+   "word": "realise",
+   "unit9": "U4",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U4"
+  },
+  {
+   "word": "post",
+   "unit9": "U4",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U1"
+  },
+  {
+   "word": "state",
+   "unit9": "U4",
+   "by": "a",
+   "evidence": "前四册词表 wy8B U5"
+  },
+  {
+   "word": "poor",
+   "unit9": "U4",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U1"
+  },
+  {
+   "word": "feed",
+   "unit9": "U4",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U6"
+  },
+  {
+   "word": "human",
+   "unit9": "U5",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U5"
+  },
+  {
+   "word": "drop",
+   "unit9": "U5",
+   "by": "a",
+   "evidence": "前四册词表 wy8B U1"
+  },
+  {
+   "word": "benefit",
+   "unit9": "U5",
+   "by": "a",
+   "evidence": "前四册词表 wy8B U1"
+  },
+  {
+   "word": "wonder",
+   "unit9": "U5",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U2"
+  },
+  {
+   "word": "throughout",
+   "unit9": "U5",
+   "by": "a",
+   "evidence": "前四册词表 wy8B U1"
+  },
+  {
+   "word": "consider",
+   "unit9": "U6",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U2"
+  },
+  {
+   "word": "material",
+   "unit9": "U6",
+   "by": "a",
+   "evidence": "前四册词表 wy8B U6"
+  },
+  {
+   "word": "shape",
+   "unit9": "U6",
+   "by": "a",
+   "evidence": "前四册词表 wy7A U4"
+  },
+  {
+   "word": "trouble",
+   "unit9": "U6",
+   "by": "a",
+   "evidence": "前四册词表 wy8A U3"
+  },
+  {
+   "word": "land",
+   "unit9": "U6",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U5"
+  },
+  {
+   "word": "suggest",
+   "unit9": "U6",
+   "by": "a",
+   "evidence": "前四册词表 wy7B U5"
+  },
+  {
+   "word": "finger",
+   "unit9": "U1",
+   "by": "c",
+   "form": "finger",
+   "evidence": "wy7B U4《How to plant a flower》: Next, make a small hole in the middle with your finger."
+  },
+  {
+   "word": "video",
+   "unit9": "U1",
+   "by": "c",
+   "form": "video",
+   "evidence": "wy8A U4《Learning online》: Every evening, my friends helped me understand the hard parts through video calls."
+  },
+  {
+   "word": "amaze",
+   "unit9": "U1",
+   "by": "c",
+   "form": "amazed",
+   "evidence": "wy8B U5《The secrets inside amber》: They were amazed, because it showed that some dinosaurs were covered with feathers, not sc"
+  },
+  {
+   "word": "surprising",
+   "unit9": "U1",
+   "by": "c",
+   "form": "surprising",
+   "evidence": "wy7B U4《Study, but play too》: At first he worried about losing study time, but something surprising happened."
+  },
+  {
+   "word": "attention",
+   "unit9": "U1",
+   "by": "c",
+   "form": "attention",
+   "evidence": "wy7A U1《Club sign-up》: Attention, please."
+  },
+  {
+   "word": "abroad",
+   "unit9": "U1",
+   "by": "c",
+   "form": "abroad",
+   "evidence": "wy8A U3《She wants ____ abroad, so she has decided __》: She wants ____ abroad, so she has decided ____ English hard."
+  },
+  {
+   "word": "group",
+   "unit9": "U1",
+   "by": "c",
+   "form": "group",
+   "evidence": "wy7A U1《My friends and I》: We are all different, and that is why we are such a happy group."
+  },
+  {
+   "word": "report",
+   "unit9": "U1",
+   "by": "c",
+   "form": "reports",
+   "evidence": "wy8B U1《These reports ____ by computer.》: These reports ____ by computer."
+  },
+  {
+   "word": "country",
+   "unit9": "U1",
+   "by": "c",
+   "form": "country",
+   "evidence": "wy8A U1《A hobby I have kept for years》: I have spent many quiet evenings sorting my stamps by colour and country."
+  },
+  {
+   "word": "own",
+   "unit9": "U2",
+   "by": "c",
+   "form": "own",
+   "evidence": "wy7A U2《My family and music》: In my family, everyone loves music in their own way."
+  },
+  {
+   "word": "better",
+   "unit9": "U2",
+   "by": "c",
+   "form": "better",
+   "evidence": "wy7B U5《My English is ____ than before.》: "
+  },
+  {
+   "word": "exactly",
+   "unit9": "U2",
+   "by": "c",
+   "form": "exactly",
+   "evidence": "wy7B U5《Spring is the best》: B: Exactly."
+  },
+  {
+   "word": "end",
+   "unit9": "U2",
+   "by": "c",
+   "form": "end",
+   "evidence": "wy7A Starter《Nice to meet you》: '\"}, {\"type\": \"choice\", \"q\": \"What do Ben and Lily find out at the end?"
+  },
+  {
+   "word": "bank",
+   "unit9": "U2",
+   "by": "c",
+   "form": "bank",
+   "evidence": "wy8A U2《The river has come back to life》: We have planted young trees along the bank."
+  },
+  {
+   "word": "expensive",
+   "unit9": "U2",
+   "by": "c",
+   "form": "expensive",
+   "evidence": "wy7B U3《My favourite food》: \", \"options\": [\"Look expensive."
+  },
+  {
+   "word": "price",
+   "unit9": "U2",
+   "by": "c",
+   "form": "prices",
+   "evidence": "wy8B U1《So much is done for you》: In many shops, prices are checked by computers, not by people."
+  },
+  {
+   "word": "sale",
+   "unit9": "U2",
+   "by": "c",
+   "form": "sale",
+   "evidence": "wy7B U1《Happiness Week》: \", \"A book sale."
+  },
+  {
+   "word": "website",
+   "unit9": "U2",
+   "by": "c",
+   "form": "website",
+   "evidence": "wy8A U4《Digital Wisdom Day》: In the morning, a teacher will show you how to check if a website is safe."
+  },
+  {
+   "word": "worth",
+   "unit9": "U2",
+   "by": "c",
+   "form": "worth",
+   "evidence": "wy7A U1《Making friends》: Making friends takes a little time, but it is worth it."
+  },
+  {
+   "word": "treasure",
+   "unit9": "U2",
+   "by": "c",
+   "form": "treasure",
+   "evidence": "wy7B U4《How to be a good friend》: A good friend is a treasure, so learn to be one."
+  },
+  {
+   "word": "such",
+   "unit9": "U3",
+   "by": "c",
+   "form": "such",
+   "evidence": "wy7A U1《My friends and I》: We are all different, and that is why we are such a happy group."
+  },
+  {
+   "word": "centre",
+   "unit9": "U3",
+   "by": "c",
+   "form": "centre",
+   "evidence": "wy8B U1《How rubbish is recycled》: At a recycling centre, the rubbish is first sorted into groups."
+  },
+  {
+   "word": "valuable",
+   "unit9": "U3",
+   "by": "c",
+   "form": "valuable",
+   "evidence": "wy8A U1《A hobby I have kept for years》: \", \"Why coins are valuable."
+  },
+  {
+   "word": "smoothly",
+   "unit9": "U3",
+   "by": "c",
+   "form": "smoothly",
+   "evidence": "wy8B U1《So much is done for you》: In a modern city, thousands of jobs are done quietly so that life runs smoothly."
+  },
+  {
+   "word": "luck",
+   "unit9": "U3",
+   "by": "c",
+   "form": "luck",
+   "evidence": "wy7A U4《A special birthday》: In the morning, my mum always cooks long noodles for good luck."
+  },
+  {
+   "word": "around",
+   "unit9": "U3",
+   "by": "c",
+   "form": "around",
+   "evidence": "wy7A U2《Music every day》: It is all around us, every single day."
+  },
+  {
+   "word": "mystery",
+   "unit9": "U3",
+   "by": "c",
+   "form": "mystery",
+   "evidence": "wy8B U4《The light in the old house》: Sometimes the answer to a mystery is much kinder than we fear."
+  },
+  {
+   "word": "besides",
+   "unit9": "U3",
+   "by": "c",
+   "form": "besides",
+   "evidence": "wy8A U1《The books I have read this year》: \"], \"explanation\": \"'I have finished ten books'。\"}, {\"q\": \"What has become better besides "
+  },
+  {
+   "word": "noisy",
+   "unit9": "U3",
+   "by": "c",
+   "form": "noisy",
+   "evidence": "wy7A U6《At the zoo》: \", \"They are noisy."
+  },
+  {
+   "word": "pride",
+   "unit9": "U3",
+   "by": "c",
+   "form": "pride",
+   "evidence": "wy8A U2《Our class has become a team》: Our teacher has watched us grow closer, and she has often smiled with pride."
+  },
+  {
+   "word": "design",
+   "unit9": "U3",
+   "by": "c",
+   "form": "design",
+   "evidence": "wy8A U3《The boy who loved to invent》: He kept changing his design and testing it again and again."
+  },
+  {
+   "word": "scarf",
+   "unit9": "U3",
+   "by": "c",
+   "form": "scarf",
+   "evidence": "wy8A U5《Saving money to buy a gift》: Last Sunday, I went to the shop to choose a warm scarf, because she often feels cold in wi"
+  },
+  {
+   "word": "person",
+   "unit9": "U4",
+   "by": "c",
+   "form": "person",
+   "evidence": "wy7B U5《My family》: My mother is shorter than my father, but she is the kindest person I know."
+  },
+  {
+   "word": "later",
+   "unit9": "U4",
+   "by": "c",
+   "form": "later",
+   "evidence": "wy7A U5《My little seed》: Years later, I will be an old man, but my tree will still be here."
+  },
+  {
+   "word": "could",
+   "unit9": "U4",
+   "by": "b+c",
+   "form": "could",
+   "evidence": "课本 Guide p132 Unit 3:Mulan dressed like a man so that she could join the army.(目的状从标志词) | wy7B U2《The school got talent show》: You could show something you painted."
+  },
+  {
+   "word": "gentle",
+   "unit9": "U4",
+   "by": "c",
+   "form": "gentle",
+   "evidence": "wy7A U6《My new pet》: But be gentle, she's still a baby."
+  },
+  {
+   "word": "battle",
+   "unit9": "U4",
+   "by": "c",
+   "form": "battle",
+   "evidence": "wy8A U5《Getting up early to exercise》: To start the day well is to win half the battle."
+  },
+  {
+   "word": "lose",
+   "unit9": "U4",
+   "by": "c",
+   "form": "lose",
+   "evidence": "wy7B U2《Try something new》: What if I lose?"
+  },
+  {
+   "word": "deeply",
+   "unit9": "U4",
+   "by": "c",
+   "form": "deeply",
+   "evidence": "wy8B U2《The library that was saved》: \", \"answer\": \"A\", \"options\": [\"cared deeply about their library\", \"wanted a new shopping c"
+  },
+  {
+   "word": "pick",
+   "unit9": "U4",
+   "by": "c",
+   "form": "pick",
+   "evidence": "wy7A U5《Our school garden》: In autumn, we will pick the vegetables and share them with our teachers."
+  },
+  {
+   "word": "countless",
+   "unit9": "U4",
+   "by": "c",
+   "form": "countless",
+   "evidence": "wy8B U5《The secrets inside amber》: It reminds us that our planet is very old, and that life has taken countless forms."
+  },
+  {
+   "word": "thing",
+   "unit9": "U4",
+   "by": "c",
+   "form": "thing",
+   "evidence": "wy7A U3《Dinner time》: It is a simple thing, but sitting together every evening keeps our family close."
+  },
+  {
+   "word": "type",
+   "unit9": "U4",
+   "by": "c",
+   "form": "type",
+   "evidence": "wy7A Starter《Nice to meet you》: [{\"type\": \"choice\", \"q\": \"What class is Lily in?"
+  },
+  {
+   "word": "soil",
+   "unit9": "U4",
+   "by": "c",
+   "form": "soil",
+   "evidence": "wy7A U3《Grandma's garden》: In spring, she plants small seeds in the soft soil."
+  },
+  {
+   "word": "mark",
+   "unit9": "U5",
+   "by": "c",
+   "form": "mark",
+   "evidence": "wy8A U2《I have grown taller》: My mother has measured me against the door, and the new mark is far above the old one."
+  },
+  {
+   "word": "rubbish",
+   "unit9": "U5",
+   "by": "c",
+   "form": "rubbish",
+   "evidence": "wy7A U5《Green is life》: But some people cut down trees and throw rubbish on the grass."
+  },
+  {
+   "word": "gas",
+   "unit9": "U5",
+   "by": "c",
+   "form": "gas",
+   "evidence": "wy7A U5《My little seed》: It is going to take in bad gas and give out fresh oxygen."
+  },
+  {
+   "word": "square",
+   "unit9": "U5",
+   "by": "c",
+   "form": "square",
+   "evidence": "wy7B U4《Make a paper boat》: Take this square paper first."
+  },
+  {
+   "word": "cheap",
+   "unit9": "U6",
+   "by": "c",
+   "form": "cheap",
+   "evidence": "wy7A U4《My favourite festival》: \", \"options\": [\"The food is cheap."
+  },
+  {
+   "word": "glove",
+   "unit9": "U6",
+   "by": "c",
+   "form": "gloves",
+   "evidence": "wy7A U3《Grandpa's silent love》: On cold days, he puts my sister's gloves and my coat by the door."
+  },
+  {
+   "word": "tie",
+   "unit9": "U6",
+   "by": "c",
+   "form": "tie",
+   "evidence": "wy8A U6《A busy morning》: My little sister was crying because she could not tie her shoes."
+  },
+  {
+   "word": "bin",
+   "unit9": "U6",
+   "by": "c",
+   "form": "bin",
+   "evidence": "wy7B U4《Keep our classroom clean》: When you finish a snack, throw the paper into the bin."
+  },
+  {
+   "word": "tiny",
+   "unit9": "U6",
+   "by": "c",
+   "form": "tiny",
+   "evidence": "wy7A U5《My little seed》: In a few days, a tiny green leaf is going to appear."
+  },
+  {
+   "word": "truck",
+   "unit9": "U6",
+   "by": "c",
+   "form": "truck",
+   "evidence": "wy8B U2《The bridge that was rebuilt》: \", \"A heavy truck."
+  },
+  {
+   "word": "reuse",
+   "unit9": "U6",
+   "by": "c",
+   "form": "reused",
+   "evidence": "wy8B U1《How rubbish is recycled》: In this way, many old things are reused instead of thrown away."
+  },
+  {
+   "word": "loudly",
+   "unit9": "U6",
+   "by": "c",
+   "form": "loudly",
+   "evidence": "wy7A U1《My first day》: "
+  },
+  {
+   "word": "village",
+   "unit9": "U6",
+   "by": "c",
+   "form": "village",
+   "evidence": "wy7B U5《The colours of my village》: My village is a small place among green hills, and it is the most beautiful place I know."
+  },
+  {
+   "word": "litter",
+   "unit9": "U6",
+   "by": "c",
+   "form": "litter",
+   "evidence": "wy8A U5《Why we have rules》: We put litter in the bin to keep our school clean."
+  },
+  {
+   "word": "peace",
+   "unit9": "U6",
+   "by": "c",
+   "form": "peace",
+   "evidence": "wy8A U5《Why we have rules》: We keep quiet in the library to let others read in peace."
+  },
+  {
+   "word": "building",
+   "unit9": "U6",
+   "by": "c",
+   "form": "building",
+   "evidence": "wy7A U6《The ants' secret》: Near the wall, some ants are building a new road with tiny stones."
+  }
+ ]
+}

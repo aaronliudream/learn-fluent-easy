@@ -1,0 +1,69 @@
+{
+ "title": "Three glass jars",
+ "body": "Chen Yu wanted a real basketball. It cost 180 yuan, and his pocket money was 20 yuan a week. At first he kept everything in one pocket. When Friday came, the money was always gone, and he never knew where it went. One evening his mum put three old glass jars on the table. \"Try these,\" she said. \"One jar for the ball, one for small things, one for gifts.\" While he was washing the jars, Chen Yu thought the plan was silly. He tried it anyway. He did not touch the ball jar until it was full. Some weeks he put in only five yuan. Once he took two yuan back, and he felt bad for days. After that he wrote the date on the jar before he spent anything. Since that autumn, Chen Yu has kept the three jars on his desk. He bought the basketball in March. Now it sits where he can see it every morning.",
+ "questions": [
+  {
+   "q": "What was Chen Yu's problem at first?",
+   "type": "choice",
+   "answer": "C",
+   "options": [
+    "His pocket money was cut by his parents.",
+    "He lost his basketball at school.",
+    "His money was gone by Friday and he did not know why.",
+    "His mum would not buy him three jars."
+   ],
+   "explanation": "'When Friday came, the money was always gone, and he never knew where it went.'"
+  },
+  {
+   "q": "What did Chen Yu think of the jars at the beginning?",
+   "type": "choice",
+   "answer": "A",
+   "options": [
+    "He thought the plan was silly.",
+    "He thought the jars were too small.",
+    "He was very excited about them.",
+    "He asked for three more jars."
+   ],
+   "explanation": "'While he was washing the jars, Chen Yu thought the plan was silly.'"
+  },
+  {
+   "q": "When did Chen Yu take money out of the ball jar?",
+   "type": "choice",
+   "answer": "D",
+   "options": [
+    "Every Sunday.",
+    "When the jar was full.",
+    "Never.",
+    "Once, and it made him feel bad."
+   ],
+   "explanation": "'Once he took two yuan back, and he felt bad for days.' 说明他只拿过一次,而且很不好受。"
+  },
+  {
+   "q": "What is the passage mainly about?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "How to choose a good basketball.",
+    "How a boy learnt to manage his pocket money.",
+    "Why glass jars are better than moneyboxes.",
+    "How a mother saved for her son."
+   ],
+   "explanation": "全文按「钱总是不见 → 用三个罐子 → 坚持到买下篮球」的顺序,讲一个男孩学会管理零花钱。"
+  },
+  {
+   "q": "What does the underlined word \"went\" mean in \"he never knew where it went\"?",
+   "type": "choice",
+   "answer": "B",
+   "options": [
+    "walked away",
+    "was spent",
+    "was saved",
+    "got lost in the street"
+   ],
+   "explanation": "'When Friday came, the money was always gone' —— 前句说钱到周五总是没了,故 went 指钱被花掉了。"
+  }
+ ],
+ "unit": "U2",
+ "difficulty": 0,
+ "word_count": 160
+}

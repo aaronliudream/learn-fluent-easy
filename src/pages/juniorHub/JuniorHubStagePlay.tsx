@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
 import { getUnitState, savePersist } from "@/lib/juniorHub/storage";
@@ -536,7 +537,7 @@ function ListenMcStage({
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
-  const nextRef = useRef<HTMLDivElement | null>(null);
+  const actionRef = useRevealScroll<HTMLDivElement>(answered);
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
@@ -548,14 +549,9 @@ function ListenMcStage({
     );
   }, [grade, questions]);
 
-  // 选完答案后,自动平滑滚动让"下一题"按钮露出(手机端按钮原在折叠下方,需手滑)。仅影响滚动,不碰答题/计分。
-  useEffect(() => {
-    if (!answered) return;
-    const t = setTimeout(() => {
-      nextRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-    }, 80);
-    return () => clearTimeout(t);
-  }, [answered]);
+  // 选完答案后把"下一题"按钮滚进视口 —— 见 useRevealScroll。
+  // 原实现滚的是按钮之后的零高度哨兵、且只等 80ms:反馈区渲染完会把按钮再顶下去,
+  // 于是手机上仍要手滑(真机在听音辨词撞到)。改成滚按钮本身 + 等一帧 + block:'nearest'。
 
   const handlePick = (optIdx: number) => {
     if (answered) return;
@@ -639,12 +635,12 @@ function ListenMcStage({
       <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} optsCn={q.optsCn} optsPhrase={q.optsPhrase} />
       {feedback}
       {answered && (
-        <PrimaryButton onClick={next} className="mt-3">
-          {isLast ? "本关完成 →" : "下一题 →"}
-        </PrimaryButton>
+        <div ref={actionRef}>
+          <PrimaryButton onClick={next} className="mt-3">
+            {isLast ? "本关完成 →" : "下一题 →"}
+          </PrimaryButton>
+        </div>
       )}
-      {/* 滚动锚点:选完答案后滚到此处让"下一题"按钮露出 */}
-      <div ref={nextRef} aria-hidden />
     </div>
   );
 }

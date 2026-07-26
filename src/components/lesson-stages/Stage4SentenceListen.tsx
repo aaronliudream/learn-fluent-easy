@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { ChevronRight, HelpCircle } from "lucide-react";
 import type { Stage4Sentence } from "@/data/g2LessonStages";
 import { stopSpeaking } from "@/lib/speak";
@@ -8,6 +9,8 @@ import KaraokeText from "@/components/KaraokeText";
 export default function Stage4SentenceListen({ sentences, onComplete }: { sentences: Stage4Sentence[]; onComplete: () => void }) {
   const [i, setI] = useState(0);
   const [phase, setPhase] = useState<"listen" | "quiz" | "revealed">("listen");
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLButtonElement>(phase === "revealed");
   const playKey = useRef(0);
   const s = sentences[i];
 
@@ -59,6 +62,7 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
       )}
       {phase === "revealed" && (
         <button
+          ref={actionRef}
           onClick={() => (i < sentences.length - 1 ? setI(i + 1) : onComplete())}
           className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile"
         >

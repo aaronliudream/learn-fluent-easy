@@ -1,4 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, Star, Sun, Trophy, X, Zap } from "lucide-react";
@@ -387,6 +388,8 @@ function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: {items:
   const [i, setI] = useState(0);
   const [val, setVal] = useState("");
   const [result, setResult] = useState<null | "ok" | "ng">(null);
+  // 提交后把"下一题"按钮滚进视口(手机上它常在输入区下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(result !== null);
   const [correct, setCorrect] = useState(0);
   const [grading, setGrading] = useState(false);
   const [aiFocus, setAiFocus] = useState<string>("");
@@ -464,7 +467,7 @@ function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: {items:
             <div className="text-xs ink-dim"><T>参考：</T><span className="font-mono">{it.en}</span></div>
           </div>
         }
-        <div className="flex justify-end gap-2">
+        <div ref={actionRef} className="flex justify-end gap-2">
           {result === null ?
           <button onClick={submit} disabled={grading} className="btn-primary">
               {grading ? "AI 批改中…" : "提交 (Enter)"}

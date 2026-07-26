@@ -1,5 +1,6 @@
 ﻿import { useCallback, useEffect, useMemo, useState } from "react";
 import { findUnit } from "@/lib/gaokaoHub/courseData";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { shuffleArray, useGaokaoHub } from "@/lib/gaokaoHub/context";
 import { getUnitState, savePersist } from "@/lib/gaokaoHub/storage";
 import { hubSpeak, prefetchHubVocabulary } from "@/lib/primaryHub/speech";
@@ -290,6 +291,8 @@ function ListenMcStage({
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
+  // 选完答案后把"下一题"按钮滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(answered);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
 
@@ -357,9 +360,11 @@ function ListenMcStage({
       <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} />
       {feedback}
       {answered && (
-        <PrimaryButton onClick={next} className="mt-3">
-          {isLast ? "本关完成 →" : "下一题 →"}
-        </PrimaryButton>
+        <div ref={actionRef}>
+          <PrimaryButton onClick={next} className="mt-3">
+            {isLast ? "本关完成 →" : "下一题 →"}
+          </PrimaryButton>
+        </div>
       )}
     </div>
   );
@@ -654,6 +659,8 @@ function FinalQuizStage({
 }) {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(false);
+  // 选完答案后把"下一题"按钮滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(answered);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
 
@@ -705,9 +712,11 @@ function FinalQuizStage({
       <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} />
       {feedback}
       {answered && (
-        <PrimaryButton onClick={next} className="mt-3">
-          {isLast ? "查看成绩 →" : "下一题 →"}
-        </PrimaryButton>
+        <div ref={actionRef}>
+          <PrimaryButton onClick={next} className="mt-3">
+            {isLast ? "查看成绩 →" : "下一题 →"}
+          </PrimaryButton>
+        </div>
       )}
     </div>
   );

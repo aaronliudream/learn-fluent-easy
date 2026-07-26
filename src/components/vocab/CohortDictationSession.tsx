@@ -14,6 +14,7 @@
  * 保证 step ② 的进度只在 cohort 词上推进。
  */
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRevealScroll } from "@/lib/useRevealScroll";
 import { ArrowLeft, Volume2, Check, X, RotateCw, Sparkles } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speak, prefetchTTS } from "@/lib/speak";
@@ -84,6 +85,8 @@ export default function CohortDictationSession({
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
+  // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)
+  const actionRef = useRevealScroll<HTMLDivElement>(revealed);
   const [lastResult, setLastResult] = useState<ResultState | null>(null);
   const [perfectCount, setPerfectCount] = useState(0);
   const [halfCount, setHalfCount] = useState(0);
@@ -307,7 +310,7 @@ export default function CohortDictationSession({
           )}
         </div>
 
-        <div className="mt-5 flex justify-center gap-2">
+        <div ref={actionRef} className="mt-5 flex justify-center gap-2">
           {!revealed ? (
             <Button onClick={submit} disabled={!input.trim()} className="bg-rose-500 hover:bg-rose-600">
               <T>提交</T>

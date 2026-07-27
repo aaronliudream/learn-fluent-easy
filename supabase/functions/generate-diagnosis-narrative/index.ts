@@ -8,7 +8,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
+const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
 
 function json(data: unknown, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -80,7 +80,7 @@ Deno.serve(async (req) => {
     const { stats } = (await req.json()) as { stats: any };
     if (!stats) return json({ error: "stats required" }, 400);
 
-    if (!stats.has_enough_data || !GOOGLE_AI_API_KEY) {
+    if (!stats.has_enough_data || !OPENAI_API_KEY) {
       return json(fallbackNarrative(stats));
     }
 
@@ -151,14 +151,14 @@ Deno.serve(async (req) => {
       },
     };
 
-    const aiRes = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
+    const aiRes = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${GOOGLE_AI_API_KEY}`,
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gemini-2.5-flash",
+        model: "gpt-4o-mini",
         messages: [
           {
             role: "system",

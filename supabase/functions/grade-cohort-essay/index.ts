@@ -94,11 +94,11 @@ strength 和 refinement 必须各包含一个具体的、可指认的细节(哪�
 
 async function callLLM(apiKey: string, prompt: string, retryHint?: string): Promise<unknown> {
   const messages = [{ role: "user", content: retryHint ? `${prompt}\n\n上一次输出不合格,原因:${retryHint}。请严格重新输出。` : prompt }];
-  const resp = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
+  const resp = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "gemini-2.5-flash",
+      model: "gpt-4o-mini",
       messages,
       response_format: { type: "json_object" },
     }),
@@ -198,7 +198,7 @@ Deno.serve(async (req) => {
     }));
 
     // 3. Call LLM with retry-once on schema/banned-phrase failure
-    const apiKey = Deno.env.get("GOOGLE_AI_API_KEY");
+    const apiKey = Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
       return new Response(JSON.stringify({ error: "ai_not_configured" }), {
         status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },

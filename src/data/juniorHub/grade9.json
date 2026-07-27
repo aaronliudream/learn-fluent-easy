@@ -160,16 +160,6 @@
                 "en": "attention",
                 "cn": "注意",
                 "emoji": "📘"
-              },
-              {
-                "en": "zzqxblorp",
-                "cn": "闸门CI验证词(下一提交移除)",
-                "chunks": [
-                  {
-                    "en": "a zzqxblorp thing",
-                    "cn": "闸门CI验证语块"
-                  }
-                ]
               }
             ],
             "dialogues": [

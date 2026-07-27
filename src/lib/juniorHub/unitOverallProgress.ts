@@ -25,6 +25,25 @@ export function browsedWordCount(vocabGroup: number | null | undefined, total: n
   return Math.min((vocabGroup + 1) * VOCAB_GROUP_SIZE, total);
 }
 
+/**
+ * 一行 junior_word_mastery 是否算「已掌握」——**全站唯一判定处**。
+ *
+ * 口径:答对 2 次 = 掌握(per 游戏)。有 consec 列的游戏(quiz/match/spell/bento/context)看 consec;
+ * 没有 consec 列的(listen 听音辨词 / cloze)看 *_correct。任一游戏达标即掌握。
+ *
+ * ★为什么抽出来★ 单元页(逐单元查)和册页(整册批量查)是两条不同的加载路径,
+ * 但必须给出同一个数字。判据写两遍迟早漂移 —— 那正是这个项目反复吃过的亏
+ * (同一件事两处实现,改了一处忘了另一处)。
+ */
+export function isWordMastered(r: Record<string, number | null | undefined>): boolean {
+  const maxConsec = Math.max(
+    r.quiz_consec ?? 0, r.match_consec ?? 0, r.spell_consec ?? 0, r.bento_consec ?? 0, r.context_consec ?? 0,
+  );
+  return maxConsec >= VOCAB_MASTER_STREAK
+    || (r.listen_correct ?? 0) >= VOCAB_MASTER_STREAK
+    || (r.cloze_correct ?? 0) >= VOCAB_MASTER_STREAK;
+}
+
 export async function loadUnitVocabProgress(wordIds: string[]): Promise<UnitOverall> {
   const total = wordIds.length;
   if (!total) return { done: 0, mastered: 0, total: 0 };
@@ -46,13 +65,7 @@ export async function loadUnitVocabProgress(wordIds: string[]): Promise<UnitOver
       // 掌握度(橙环)= 全站"答对2次=掌握"口径(per-游戏,与 useUnitVocab MASTERED_AT 一致):
       //  有 consec 列的游戏(quiz/match/spell/bento/context)→ consec≥2;
       //  无 consec 列的游戏(listen 听音辨词 / cloze)→ *_correct≥2。任一达标即"掌握"。
-      const maxConsec = Math.max(
-        r.quiz_consec ?? 0, r.match_consec ?? 0, r.spell_consec ?? 0, r.bento_consec ?? 0, r.context_consec ?? 0,
-      );
-      const ok = maxConsec >= VOCAB_MASTER_STREAK
-        || (r.listen_correct ?? 0) >= VOCAB_MASTER_STREAK
-        || (r.cloze_correct ?? 0) >= VOCAB_MASTER_STREAK;
-      if (ok) mastered++;
+      if (isWordMastered(r)) mastered++;
     }
   }
   return { done, mastered, total };

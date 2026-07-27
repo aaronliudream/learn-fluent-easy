@@ -4,6 +4,7 @@ import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
 import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { unitLabel } from "./JuniorHubUnit";
 import { getSemesterProgress, getUnitProgress } from "@/lib/juniorHub/progress";
+import { useSemesterMastery } from "@/hooks/useSemesterMastery";
 import { savePersist } from "@/lib/juniorHub/storage";
 import JuniorFinalChallengeEntryCard from "@/components/juniorHub/finalChallenge/JuniorFinalChallengeEntryCard";
 
@@ -18,6 +19,8 @@ export default function JuniorHubSemester() {
   const course = getGradeCourse(grade, pub);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/junior/hub/${grade}`;
+  // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。整册一次批量拉取。
+  const masteryMap = useSemesterMastery(sem?.units, grade, pub);
 
   if (!sem || !semId) {
     return <div className="p-6 text-center">课程未找到</div>;
@@ -95,12 +98,22 @@ export default function JuniorHubSemester() {
                 <span>{!unit.available ? "🔒" : isDone ? "✅" : isCurrent ? "▶️" : ""}</span>
               </div>
               {unit.available ? (
-                <div className="mt-2 flex items-center gap-2">
-                  <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#F4F0E6]">
-                    <div className="h-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627]" style={{ width: `${p.percent}%` }} />
+                <>
+                  <div className="mt-2 flex items-center gap-2">
+                    <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#F4F0E6]">
+                      <div className="h-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627]" style={{ width: `${p.percent}%` }} />
+                    </div>
+                    <span className="text-xs font-bold">{p.percent}%</span>
                   </div>
-                  <span className="text-xs font-bold">{p.percent}%</span>
-                </div>
+                  {/* 掌握度与完成度并列(与单元内页同口径同数据源)。整册批量拉取,不逐卡查询。
+                      没有掌握数据时整行不渲染 —— 不显示假的 0%,也不能影响上面「即将开放」的判断。 */}
+                  {masteryMap[unit.id] ? (
+                    <div className="mt-1 flex items-center gap-2 text-xs">
+                      <span className="text-[#888780]">掌握度·词汇+语法</span>
+                      <span className="font-bold text-amber-600">{masteryMap[unit.id].pct}%</span>
+                    </div>
+                  ) : null}
+                </>
               ) : (
                 <div className="mt-2 text-xs text-[#888780]">📅 即将开放</div>
               )}

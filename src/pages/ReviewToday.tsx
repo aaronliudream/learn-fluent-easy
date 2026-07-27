@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
 import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
+import { MISTAKE_HIDDEN_DEFAULT, pgInList } from "@/lib/mistakeHiddenModules";
 import { toast } from "sonner";
 
 type Mistake = {
@@ -32,6 +33,31 @@ function nextReviewOnWrong(): string {
   return new Date(Date.now() + 1 * 86_400_000).toISOString();
 }
 
+/**
+ * 「残卡」兜底(按**本页渲染路径**判,与 module 无关)。
+ *
+ * 模块排除只挡得住**已知**会产出残卡的 module;而残卡的真正成因是这一行**揭晓时无答案可给**。
+ * 任何模块的写入器只要漏写相应的列,就会产出同样的残卡,而我们不会知道。
+ * 故:取数后再滤一道,并 warn 出 module + source_key 前缀,让未知的写入缺陷可被发现。
+ *
+ * ⚠️ 判据必须与**这一页实际渲染什么**一致,不是「库里有没有内容」:
+ *   揭晓分支只渲染 `correct_answer` 和 `explanation` 两个字段(见下方 JSX)。
+ *   `snapshot.alex_used_sentence / example_en / source_sentence` **只喂朗读按钮**(playable),
+ *   不参与答案展示 —— 只有这几个字段有值的行,点开仍然什么答案都看不到,照样是残卡,必须丢弃。
+ *   → 所以判据只看 correct_answer / explanation 两项。
+ *   ⚠️ 日后若给揭晓分支新增任何答案来源,必须同步改这里,否则会把能正常显示的卡误杀。
+ */
+function dropAnswerlessRows(rows: Mistake[]): Mistake[] {
+  const kept: Mistake[] = [];
+  for (const r of rows) {
+    const hasRenderableAnswer =
+      (r.correct_answer ?? "").trim() !== "" || (r.explanation ?? "").trim() !== "";
+    if (hasRenderableAnswer) kept.push(r);
+    else console.warn(`[review-today] 残卡已跳过 module=${r.module} source_key=${r.source_key.slice(0, 40)}`);
+  }
+  return kept;
+}
+
 export default function ReviewToday() {
   const nav = useNavigate();
   const [loading, setLoading] = useState(true);
@@ -52,12 +78,16 @@ export default function ReviewToday() {
       from("user_mistakes").
       select("*").
       eq("is_resolved", false).
+      // 默认排除集(fail-safe):本页是单题自评卡,没有任何放开的理由 → 直接用默认并集。
+      // 尤其是整篇型(junior_cloze):question=篇名、correct_answer=NULL
+      // (JuniorClozePlay 那条 upsert 没写这两列)→ 学生点开只能看到一个没有答案的篇名。
+      not("module", "in", pgInList(MISTAKE_HIDDEN_DEFAULT)).
       lte("next_review_at", nowIso).
       order("next_review_at", { ascending: true }).
       limit(50);
       if (cancelled) return;
       if (error) toast.error(error.message);
-      setQueue(data as Mistake[] || []);
+      setQueue(dropAnswerlessRows((data as Mistake[]) || []));
       setLoading(false);
     })();
     return () => {cancelled = true;stopSpeaking();};

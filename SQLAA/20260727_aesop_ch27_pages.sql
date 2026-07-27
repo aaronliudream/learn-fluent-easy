@@ -1,0 +1,124 @@
+-- ============================================================================
+-- 图书馆「绘本模式」· 伊索寓言 ch27《驴与驴的影子》分页(3 页 / 3 张图)
+--
+-- ⚠️ 抗切分写法(ch8 起的默认约定):不用任何 do $$ 块、注释里不留分号、
+--    断言用 CASE + 强制类型转换。
+--
+-- 分页口径:本章只有 1 段,按 seq 升序 row_number() 硬切 2/2/1,para_idx 一个字不动。
+--    页1(句1-2)= 盛夏雇驴赶路 · 午后歇脚 赶路人躺进驴的影子里
+--    页2(句3-4)= 主人也要遮阴叫他挪开「我租出去的是驴不是驴的影子」· 赶路人说钱付了连驴带影都归他
+--    页3(句5)= 争着争着动了手 两人顾着吵 驴自己走掉了
+--
+-- ✅ 3 张图已传桶(2026-07-27,1200 宽 q82),公开地址实测全部 HTTP 200
+--    library-illustrations/aesop-easy-readers/ch27/p{1,2,3}.jpg
+--
+-- 画风:卡通彩色。
+--
+-- 画面验收要点:
+--   ① 年龄红线:原文第 5 句写两人动手打起来。画面**只画对吵不画击打** ——
+--      两人举臂怒吼、面对面但**中间留空、零接触**,脚边几缕尘土带出激烈感即可。
+--   ② 第 3 页重心是**驴在远处背影走远、两人浑然不觉**,以及原本那片影子的位置
+--      现在空了曝在日头下 —— 这个细节把「争到最后两头空」点得最狠。
+--   ③ 影子是本章关键道具:第 1 页清晰可见且有人躺在里面,第 2 页两人为它争,第 3 页没了。
+--   ④ 用衣袍区分角色:赶路人蓝袍褐发,主人棕袍灰须,三页一致。
+--
+-- 影响面:只碰 book_key='aesop-easy-readers' 且 chapter_idx=25 的 3 行。幂等:再跑无害。
+-- ⚠️ 跑完还需前端把 'aesop-easy-readers#25' 加进 PICTURE_BOOK_CHAPTERS。
+-- ============================================================================
+
+begin;
+
+-- 前置计数:本章应为 5 句、1 段、page_index 全空
+select count(*) as ch27_rows,
+       count(distinct s.para_idx) as ch27_paras,
+       count(s.page_index) as ch27_paged_before
+from public.library_sentences s
+join public.library_books b on b.id = s.book_id
+where b.book_key = 'aesop-easy-readers'
+  and s.chapter_idx = 27;
+
+-- 🔒 前置硬闸:句数必须恰好 3
+select case
+         when count(*) = 5
+           then 'OK 前置 ch27 恰好 5 句 硬编码切点 1-2/3-4/5 成立'
+         else ('前置硬闸失败 ch27 句数=' || count(*) ||
+               ' 期望 5 正文已变 硬编码切点不再成立 已回滚')::int::text
+       end as guard_before
+from public.library_sentences s
+join public.library_books b on b.id = s.book_id
+where b.book_key = 'aesop-easy-readers'
+  and s.chapter_idx = 27;
+
+with tgt as (
+  select s.id, row_number() over (order by s.seq) as rn
+  from public.library_sentences s
+  join public.library_books b on b.id = s.book_id
+  where b.book_key = 'aesop-easy-readers' and s.chapter_idx = 27
+)
+update public.library_sentences s
+   set page_index = case when t.rn <= 2 then 1 when t.rn <= 4 then 2 else 3 end,
+       image_url  = 'aesop-easy-readers/ch27/p'
+                 || (case when t.rn <= 2 then 1 when t.rn <= 4 then 2 else 3 end) || '.jpg'
+  from tgt t where s.id = t.id;
+
+-- 🔒 后置硬闸:3 行全配页、恰好 3 页 3 图、页分布必须是 1/1/1
+select case
+         when count(*) = 5
+          and count(distinct s.page_index) = 3
+          and count(distinct s.image_url) = 3
+          and (count(*) filter (where s.page_index = 1)) = 2
+          and (count(*) filter (where s.page_index = 2)) = 2
+          and (count(*) filter (where s.page_index = 3)) = 1
+           then 'OK 后置 5 行 3 页 3 图 分布 2/2/1'
+         else ('后置断言失败 行=' || count(*) ||
+               ' 页=' || count(distinct s.page_index) ||
+               ' 图=' || count(distinct s.image_url) ||
+               ' 分布=' || (count(*) filter (where s.page_index = 1)) ||
+               '/' || (count(*) filter (where s.page_index = 2)) ||
+               '/' || (count(*) filter (where s.page_index = 3)) ||
+               ' 期望 5 行 3 页 3 图 分布 2/2/1 已回滚')::int::text
+       end as guard_after
+from public.library_sentences s
+join public.library_books b on b.id = s.book_id
+where b.book_key = 'aesop-easy-readers'
+  and s.chapter_idx = 27
+  and s.page_index is not null;
+
+-- 后置明细:应为 3 行 —— (1,2句,p1.jpg) (2,2句,p2.jpg) (3,1句,p3.jpg)
+select s.page_index, count(*) as sentences, min(s.image_url) as image_url
+from public.library_sentences s
+join public.library_books b on b.id = s.book_id
+where b.book_key = 'aesop-easy-readers'
+  and s.chapter_idx = 27
+group by s.page_index
+order by s.page_index;
+
+-- para_idx 未被改动自检:期望仍是 1 段
+select count(distinct s.para_idx) as ch27_paras_after
+from public.library_sentences s
+join public.library_books b on b.id = s.book_id
+where b.book_key = 'aesop-easy-readers'
+  and s.chapter_idx = 27;
+
+-- ch28 起零影响自检:期望 0
+select count(*) as later_chapters_paged
+from public.library_sentences s
+join public.library_books b on b.id = s.book_id
+where b.book_key = 'aesop-easy-readers'
+  and s.chapter_idx > 27
+  and s.page_index is not null;
+
+-- ch1-ch26 未被本单影响自检:期望 26 章各 3 页 3 图
+select count(*) as chapters_1_to_26_ok
+from (
+  select s.chapter_idx
+  from public.library_sentences s
+  join public.library_books b on b.id = s.book_id
+  where b.book_key = 'aesop-easy-readers'
+    and s.chapter_idx between 1 and 26
+    and s.page_index is not null
+  group by s.chapter_idx
+  having count(distinct s.page_index) = 3 and count(distinct s.image_url) = 3
+) t;
+
+commit;

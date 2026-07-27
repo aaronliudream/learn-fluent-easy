@@ -82,3 +82,29 @@ export async function loadUnitOverall(opts: {
 }
 
 export const pctOf = (n: number, d: number) => (d > 0 ? Math.round((n / d) * 100) : 0);
+
+/**
+ * 单元级「掌握度」——给单元页顶部那排数字用,与旁边的「完成度」并列显示。
+ *
+ * ★为什么要并列两个数★
+ * 完成度只数「走完了几关」,而阅读/完形/听力这三关**做过 ≥1 篇就打 ✓,不看对错**
+ * (见 docs/notes/进度口径对照表.md)。于是会出现单元卡 8/8 · 100%、可关内实际
+ * 听音辨词 1/2 组、词义配对 0/2 组、语法 17/20 —— 学生以为学完了,其实没掌握。
+ * 圆环保持「走完进度」不动(它是学习路径的进度条),旁边补一个真掌握度。
+ *
+ * ★覆盖范围只有词汇 + 语法★
+ * 这两块的掌握度有单元归属(junior_word_mastery 按 word_id、junior_user_mastery 按题)。
+ * 听力/阅读题库没有 volume/unit 归属,算不进来 —— 所以 UI 上必须标明「词汇+语法」,
+ * 不能笼统写「掌握度」,否则又是一次「数字看着权威、其实只覆盖一半」。
+ *
+ * 两块都没数据时返回 null(调用方据此不渲染,而不是显示一个假的 0%)。
+ */
+export function combineUnitMastery(
+  vocab: { mastered: number; total: number } | null | undefined,
+  grammar: { mastered: number; total: number } | null | undefined,
+): { mastered: number; total: number; pct: number } | null {
+  const total = (vocab?.total ?? 0) + (grammar?.total ?? 0);
+  if (total <= 0) return null;
+  const mastered = (vocab?.mastered ?? 0) + (grammar?.mastered ?? 0);
+  return { mastered, total, pct: pctOf(mastered, total) };
+}

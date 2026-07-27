@@ -7,6 +7,7 @@ import { getUnitState } from "@/lib/gaokaoHub/storage";
 import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
+import { useUnitMastery } from "@/hooks/useUnitMastery";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import { withPublisher, type Publisher } from "@/lib/gaokaoHub/publisher";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
@@ -128,6 +129,8 @@ export default function GaokaoHubUnit() {
   const us = unitId ? getUnitState(state, unitId) : null;
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
   const base = `/gaokao/hub/${grade}`;
+  // ⚠️ 必须在 early-return 之前调用(hook 顺序)。unit 为 null 时内部短路。
+  const unitMastery = useUnitMastery(unit, grade + 9, publisher);
 
   if (!unit || !unitId || !semId) {
     return <div className="p-6 text-center">单元未找到</div>;
@@ -168,6 +171,13 @@ export default function GaokaoHubUnit() {
             <div className="text-lg font-bold">{p.percent}%</div>
             <div className="text-xs opacity-90">完成度</div>
           </div>
+          {/* 掌握度与完成度并列 —— 完成度只数「走完几关」,阅读/完形/听力做过 1 篇就打 ✓。 */}
+          {unitMastery && (
+            <div>
+              <div className="text-lg font-bold">{unitMastery.pct}%</div>
+              <div className="text-xs opacity-90">掌握度·词汇+语法</div>
+            </div>
+          )}
         </div>
       </div>
       <StageList unit={unit} grade={grade + 9} publisher={publisher} us={us} base={base} semId={semId} unitId={unitId} nav={nav} />

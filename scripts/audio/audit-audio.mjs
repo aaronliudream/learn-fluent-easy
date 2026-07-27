@@ -98,7 +98,7 @@ async function main() {
   // ---------------- 抽取 + 金丝雀 ----------------
   let items;
   try {
-    items = [...extractItems(cfg, { allFiles }).values()];
+    items = [...(await extractItems(cfg, { allFiles })).values()];
   } catch (e) {
     if (e instanceof ConfigError) { report.verdict = 'invalid:config'; return bail(2, e.message); }
     throw e;
@@ -158,6 +158,11 @@ async function main() {
   report.declarationsToReview = reviewDeclarations(cfg, {
     readFile: (rel) => fs.readFileSync(path.join(REPO, rel), 'utf8'),
     grepRepo,
+    // assertUnreferenced 遇到 glob 时用它展开成真实文件（否则会拿 "*.json" 去 grep，永远误报）
+    matchFiles: (glob) => {
+      const re = new RegExp('^' + glob.split('*').map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('[^/]*') + '$');
+      return allFiles.filter((f) => re.test(f));
+    },
   });
 
   // ---------------- 输出 ----------------

@@ -58,6 +58,32 @@ describe('CSV 解析对 CRLF 免疫', () => {
     const parsed = csv.parseCsv(csv.toCsv(['k', 'v', 's'], rows).replace(/\n/g, '\r\n'));
     expect(parsed[0]).toEqual({ k: 'a,b', v: '说"话"', s: '0.85' });
   });
+
+  /**
+   * 单元格里带换行（初中听力 transcript 就是整段原文，天然多行）。
+   * 旧实现先按换行切行、再处理引号 → 一条记录被切成好几条垃圾记录：
+   * **条数变多、cache_key 全是碎片**，而调用方只会觉得"解析成功"。
+   * junior 盘点第一版就是这么算出 9974 条缺口（导出侧其实只有 9502 条）。
+   */
+  it('单元格内含换行：条数不膨胀、字段逐字还原（LF 与 CRLF 两种写法）', () => {
+    const multi = 'A: Where are you going?\nB: To the library.';
+    for (const eol of ['\n', '\r\n']) {
+      const text = csv.toCsv(['cache_key', 'text'], [
+        { cache_key: 'k1', text: multi },
+        { cache_key: 'k2', text: 'plain' },
+      ]).replace(/\n/g, eol);
+      const rows = csv.parseCsv(text);
+      expect(rows, `eol=${JSON.stringify(eol)}`).toHaveLength(2);
+      expect(rows[0].cache_key).toBe('k1');
+      expect(rows[0].text).toBe(eol === '\n' ? multi : multi.replace(/\n/g, '\r\n'));
+      expect(rows[1]).toEqual({ cache_key: 'k2', text: 'plain' });
+    }
+  });
+
+  it('末尾换行不会多出一条空记录，中间空行也不会', () => {
+    expect(csv.parseCsv('a,b\n1,2\n')).toHaveLength(1);
+    expect(csv.parseCsv('a,b\r\n1,2\r\n')).toHaveLength(1);
+  });
 });
 
 describe('金丝雀能识破空转的检查器', () => {
@@ -147,6 +173,32 @@ describe('声明复核（防 audioFree / outOfScope 声明过期）', () => {
     });
     expect(items).toHaveLength(1);
     expect(items[0].detail).toContain('仍被这些文件引用');
+  });
+
+  /**
+   * glob 形式的 assertUnreferenced（junior 的 `_backup/*.json`）：
+   * 旧实现直接取 basename → 拿 "*.json" 去 grep → 命中一大片，**每轮都告警**。
+   * 一个永远在响的告警等于没有告警，所以这里钉住两件事：
+   * 展开后按真实文件名 grep；展开不了时必须明说"这轮没执行"，不许假装通过。
+   */
+  it('assertUnreferenced 用 glob：展开成真实文件名再 grep，不拿 "*.json" 去搜', () => {
+    const cfg = { audioFree: [{ files: 'x/_backup/*.json', why: 'w', assertUnreferenced: true }], outOfScope: [] };
+    const searched: string[] = [];
+    const items = auditCore.reviewDeclarations(cfg, {
+      readFile: () => '',
+      grepRepo: (needle: string) => { searched.push(needle); return []; },
+      matchFiles: () => ['x/_backup/old_a.json', 'x/_backup/old_b.json'],
+    });
+    expect(searched).toEqual(['old_a.json', 'old_b.json']);
+    expect(searched).not.toContain('*.json');
+    expect(items).toHaveLength(0);
+  });
+
+  it('assertUnreferenced 用 glob 但没给 matchFiles → 告警"这轮没执行"，不静默放行', () => {
+    const cfg = { audioFree: [{ files: 'x/_backup/*.json', why: 'w', assertUnreferenced: true }], outOfScope: [] };
+    const items = auditCore.reviewDeclarations(cfg, { readFile: () => '', grepRepo: () => [] });
+    expect(items).toHaveLength(1);
+    expect(items[0].detail).toContain('没真正执行');
   });
 
   it('outOfScope status=unverified → 每轮告警一次；confirmed 不告警', () => {

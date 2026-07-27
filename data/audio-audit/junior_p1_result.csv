@@ -1,0 +1,1295 @@
+﻿key,text,status,cdn_status,bytes,needs_purge,reason,attempts,provider
+"openai|nova|0.85||W: How do you feel about the upcoming high school entrance exam?
+M: A little nervous, but I've been preparing hard.","W: How do you feel about the upcoming high school entrance exam?
+M: A little nervous, but I've been preparing hard.",created,200,166560,no,,1,openai
+"openai|nova|0.85||W: Have you signed up for the beach cleanup?
+M: Yes, I'll go this Saturday with my classmates.","W: Have you signed up for the beach cleanup?
+M: Yes, I'll go this Saturday with my classmates.",created,200,131520,no,,1,openai
+"openai|nova|0.85||W: Mike, what do you usually do in your free time?
+M: I love watching movies. I watch at least two movies every week.
+W: Cool! What kind of movies do you like best?
+M: Action movies and science fiction. I'm crazy about superhero films.
+W: Have you seen the new Spider-Man movie?
+M: Yes, twice already! It's the best one I've seen this year.
+W: What about reading? Do you enjoy reading too?
+M: Honestly, not as much as movies. But I do read comic books sometimes.
+W: My hobby is different. I love painting. It's relaxing after a long day at school.
+M: Painting? Are you good at it?
+W: I'm getting better. I've been taking lessons for two years. I want to enter a competition next month.
+M: Good luck! I'd love to see your paintings sometime.","W: Mike, what do you usually do in your free time?
+M: I love watching movies. I watch at least two movies every week.
+W: Cool! What kind of movies do you like best?
+M: Action movies and science fiction. I'm crazy about superhero films.
+W: Have you seen the new Spider-Man movie?
+M: Yes, twice already! It's the best one I've seen this year.
+W: What about reading? Do you enjoy reading too?
+M: Honestly, not as much as movies. But I do read comic books sometimes.
+W: My hobby is different. I love painting. It's relaxing after a long day at school.
+M: Painting? Are you good at it?
+W: I'm getting better. I've been taking lessons for two years. I want to enter a competition next month.
+M: Good luck! I'd love to see your paintings sometime.",created,200,1038240,no,,1,openai
+"openai|nova|0.85||W: I'm going to help at the animal shelter this Saturday. Want to come?
+M: Sure! I'd love to help take care of the dogs.","W: I'm going to help at the animal shelter this Saturday. Want to come?
+M: Sure! I'd love to help take care of the dogs.",created,200,169920,no,,1,openai
+"openai|nova|0.85||W: We should plant more trees to fight climate change.
+M: Absolutely. Every tree counts.","W: We should plant more trees to fight climate change.
+M: Absolutely. Every tree counts.",created,200,122880,no,,1,openai
+"openai|nova|0.85||W: How do you handle exam stress?
+M: I take deep breaths and remind myself I've prepared well.","W: How do you handle exam stress?
+M: I take deep breaths and remind myself I've prepared well.",created,200,135360,no,,1,openai
+"openai|nova|0.85||M: Did you hear about the new bike-sharing program in our city?
+W: Yes, it's great. It encourages people to use less cars.","M: Did you hear about the new bike-sharing program in our city?
+W: Yes, it's great. It encourages people to use less cars.",created,200,158400,no,,1,openai
+"openai|nova|0.85||M: Why are you carrying a reusable bag?
+W: To reduce plastic waste. We should all do our part.","M: Why are you carrying a reusable bag?
+W: To reduce plastic waste. We should all do our part.",created,200,133920,no,,1,openai
+"openai|nova|0.85||M: What kind of books do you like?
+W: I prefer science fiction. They open up my imagination.","M: What kind of books do you like?
+W: I prefer science fiction. They open up my imagination.",created,200,127200,no,,1,openai
+"openai|nova|0.85||M: I'm so bored. There's nothing to do.
+W: Why don't we go to the new shopping mall? It opened last weekend.","M: I'm so bored. There's nothing to do.
+W: Why don't we go to the new shopping mall? It opened last weekend.",created,200,137280,no,,1,openai
+"openai|nova|0.85||M: How often do you visit your grandparents?
+W: Every other weekend. They live in the next city.","M: How often do you visit your grandparents?
+W: Every other weekend. They live in the next city.",created,200,130080,no,,1,openai
+"openai|nova|0.85||M: Why are you wearing that special vest?
+W: I'm a volunteer at the marathon today, helping with traffic control.","M: Why are you wearing that special vest?
+W: I'm a volunteer at the marathon today, helping with traffic control.",created,200,141600,no,,1,openai
+"openai|nova|0.85||M: Hi Lin! Have you made your New Year's resolutions for this year?
+W: Yes! I've made three big plans this year. First, I want to read 50 books.
+M: Wow, that's ambitious! Why so many?
+W: I want to improve my Chinese and English at the same time. Half in each language.
+M: That's smart. What's your second plan?
+W: I've decided to learn the violin. I've always wanted to play a musical instrument.
+M: Cool! What's the third one?
+W: I plan to volunteer at the local library every Saturday. It's a way to give back to my community.
+M: That's wonderful, Lin. How will you find time for everything?
+W: I'll wake up an hour earlier and use my time better. I hope to be more disciplined this year.
+M: I admire your goals. Maybe I should make some too.
+W: You should! Setting goals helps us grow.","M: Hi Lin! Have you made your New Year's resolutions for this year?
+W: Yes! I've made three big plans this year. First, I want to read 50 books.
+M: Wow, that's ambitious! Why so many?
+W: I want to improve my Chinese and English at the same time. Half in each language.
+M: That's smart. What's your second plan?
+W: I've decided to learn the violin. I've always wanted to play a musical instrument.
+M: Cool! What's the third one?
+W: I plan to volunteer at the local library every Saturday. It's a way to give back to my community.
+M: That's wonderful, Lin. How will you find time for everything?
+W: I'll wake up an hour earlier and use my time better. I hope to be more disciplined this year.
+M: I admire your goals. Maybe I should make some too.
+W: You should! Setting goals helps us grow.",created,200,1123680,no,,1,openai
+"openai|nova|0.85||M: How long have you been learning Spanish?
+W: For about two years now. I can have basic conversations.","M: How long have you been learning Spanish?
+W: For about two years now. I can have basic conversations.",created,200,144000,no,,1,openai
+"openai|nova|0.85||If we work hard and stay positive, our dreams will eventually come true.","If we work hard and stay positive, our dreams will eventually come true.",created,200,103200,no,,1,openai
+"openai|nova|0.85||M: I'm trying to eat healthier. Any tips?
+W: Eat more vegetables and drink less soda.","M: I'm trying to eat healthier. Any tips?
+W: Eat more vegetables and drink less soda.",created,200,115200,no,,1,openai
+"openai|nova|0.85||W: I've learned to swim this summer. What about you?
+M: I've learned to ride a bike! It took me weeks to balance.","W: I've learned to swim this summer. What about you?
+M: I've learned to ride a bike! It took me weeks to balance.",created,200,155520,no,,1,openai
+"openai|nova|0.85||Hi everyone! This is Lily speaking. Next Saturday is my fourteenth birthday, and I want to invite all my friends to my birthday party.
+
+The party will be held at my home. The address is one hundred and twenty-three Sunshine Road. You can take Bus eighteen to get there.
+
+The party starts at three thirty in the afternoon. Please come on time. We will end at eight in the evening.
+
+I have planned many fun activities. First, we will play games together for an hour. Then we will have a pizza dinner at five. After dinner, we will sing karaoke and watch movies.
+
+Please bring yourself and a smile. You don't need to bring any gifts. But if you want, please bring a small picture or note for my memory book. That would be the best gift!
+
+Please call me at six-eight-eight one-two-three before Wednesday to let me know if you can come. I really hope to see you all!","Hi everyone! This is Lily speaking. Next Saturday is my fourteenth birthday, and I want to invite all my friends to my birthday party.
+
+The party will be held at my home. The address is one hundred and twenty-three Sunshine Road. You can take Bus eighteen to get there.
+
+The party starts at three thirty in the afternoon. Please come on time. We will end at eight in the evening.
+
+I have planned many fun activities. First, we will play games together for an hour. Then we will have a pizza dinner at five. After dinner, we will sing karaoke and watch movies.
+
+Please bring yourself and a smile. You don't need to bring any gifts. But if you want, please bring a small picture or note for my memory book. That would be the best gift!
+
+Please call me at six-eight-eight one-two-three before Wednesday to let me know if you can come. I really hope to see you all!",created,200,1248000,no,,1,openai
+"openai|nova|0.85||W: What clubs are you joining this semester?
+M: The chess club and the photography club.","W: What clubs are you joining this semester?
+M: The chess club and the photography club.",created,200,122880,no,,1,openai
+"openai|nova|0.85||W: I can't decide between the red dress and the blue one.
+M: I think the blue one suits you better. It matches your eyes.","W: I can't decide between the red dress and the blue one.
+M: I think the blue one suits you better. It matches your eyes.",created,200,163680,no,,1,openai
+"openai|nova|0.85||W: How are your studies going for the entrance exam?
+M: I review every subject systematically and practice past papers.","W: How are your studies going for the entrance exam?
+M: I review every subject systematically and practice past papers.",created,200,166560,no,,1,openai
+"openai|nova|0.85||W: Where were you on Sunday morning?
+M: I helped my neighbors clean up the community garden.","W: Where were you on Sunday morning?
+M: I helped my neighbors clean up the community garden.",created,200,126720,no,,1,openai
+"openai|nova|0.85||Good evening, this is the news. A heartwarming story happened last Sunday in Willow Town.
+
+A ten-year-old boy named Tommy was playing near a small river behind his house. Suddenly, he slipped and fell into the cold water. The river was about two meters deep.
+
+Luckily, his pet dog, Max, was with him. Max is a four-year-old golden retriever. The dog jumped into the river and pulled Tommy back to the bank by his clothes.
+
+A neighbor named Mrs. Brown saw the whole thing. She called 120 immediately. The hospital sent help in just five minutes.
+
+Tommy was safe but a little cold. The doctor said he was fine and sent him home that evening. The dog Max became the hero of the town.
+
+Tommy's parents said they would buy Max his favorite food, beef, every day for one month as a thank-you gift.","Good evening, this is the news. A heartwarming story happened last Sunday in Willow Town.
+
+A ten-year-old boy named Tommy was playing near a small river behind his house. Suddenly, he slipped and fell into the cold water. The river was about two meters deep.
+
+Luckily, his pet dog, Max, was with him. Max is a four-year-old golden retriever. The dog jumped into the river and pulled Tommy back to the bank by his clothes.
+
+A neighbor named Mrs. Brown saw the whole thing. She called 120 immediately. The hospital sent help in just five minutes.
+
+Tommy was safe but a little cold. The doctor said he was fine and sent him home that evening. The dog Max became the hero of the town.
+
+Tommy's parents said they would buy Max his favorite food, beef, every day for one month as a thank-you gift.",created,200,1143360,no,,1,openai
+"openai|nova|0.85||W: Your English has improved a lot. What's your secret?
+M: I watch English movies with subtitles every day.","W: Your English has improved a lot. What's your secret?
+M: I watch English movies with subtitles every day.",created,200,150240,no,,1,openai
+"openai|nova|0.85||Good morning, students. Today, our school doctor is here to give you some tips for a healthy lifestyle.
+
+First, you should eat a balanced diet. Try to eat at least five different colors of fruit and vegetables every day. Don't eat too much fast food because it has too much salt and oil.
+
+Second, drink enough water. Doctors say teenagers should drink eight glasses of water every day. This helps your body work well.
+
+Third, exercise regularly. You should exercise at least three times a week. Each time should be at least thirty minutes. Running and swimming are great choices.
+
+Fourth, get enough sleep. Teenagers need nine hours of sleep every night. Don't look at your phone before bed.
+
+Finally, see a doctor twice a year for a regular check-up. Health is the most valuable thing in your life. Take care of yourself!","Good morning, students. Today, our school doctor is here to give you some tips for a healthy lifestyle.
+
+First, you should eat a balanced diet. Try to eat at least five different colors of fruit and vegetables every day. Don't eat too much fast food because it has too much salt and oil.
+
+Second, drink enough water. Doctors say teenagers should drink eight glasses of water every day. This helps your body work well.
+
+Third, exercise regularly. You should exercise at least three times a week. Each time should be at least thirty minutes. Running and swimming are great choices.
+
+Fourth, get enough sleep. Teenagers need nine hours of sleep every night. Don't look at your phone before bed.
+
+Finally, see a doctor twice a year for a regular check-up. Health is the most valuable thing in your life. Take care of yourself!",created,200,1181280,no,,1,openai
+"openai|nova|0.85||M: Lily, you look worried. What's wrong?
+W: I lost my wallet on the way home from school yesterday!
+M: Oh no! Did you have a lot of money in it?
+W: About 200 yuan, plus my school card and my house key.
+M: When did you notice it was missing?
+W: When I got home, I tried to open the door. Then I realized my key was gone.
+M: Where did you go yesterday?
+W: After school, I took the bus, then I went to the supermarket to buy snacks.
+M: Maybe you dropped it on the bus or in the supermarket?
+W: I called the bus company and they didn't find anything. The supermarket said the same.
+M: Don't give up. Let's go check again. Maybe someone turned it in.
+W: That's a good idea. Thank you for helping me, Mike.
+M: No problem. Did you tell your parents?
+W: Yes. My dad was so worried, but he said next time I should keep important things in different places.","M: Lily, you look worried. What's wrong?
+W: I lost my wallet on the way home from school yesterday!
+M: Oh no! Did you have a lot of money in it?
+W: About 200 yuan, plus my school card and my house key.
+M: When did you notice it was missing?
+W: When I got home, I tried to open the door. Then I realized my key was gone.
+M: Where did you go yesterday?
+W: After school, I took the bus, then I went to the supermarket to buy snacks.
+M: Maybe you dropped it on the bus or in the supermarket?
+W: I called the bus company and they didn't find anything. The supermarket said the same.
+M: Don't give up. Let's go check again. Maybe someone turned it in.
+W: That's a good idea. Thank you for helping me, Mike.
+M: No problem. Did you tell your parents?
+W: Yes. My dad was so worried, but he said next time I should keep important things in different places.",created,200,1193760,no,,1,openai
+"openai|nova|0.85||M: Have you done any volunteer work before?
+W: Yes, I enjoy reading to the elderly at the senior center every Sunday.","M: Have you done any volunteer work before?
+W: Yes, I enjoy reading to the elderly at the senior center every Sunday.",created,200,166080,no,,1,openai
+"openai|nova|0.85||W: Mike, what were you doing during the rainstorm last Friday?
+M: I was walking home from school. I didn't bring an umbrella!
+W: Oh no! Did you get totally wet?
+M: Yes, completely. While I was running for shelter, I slipped and fell into a puddle.
+W: That's terrible! Were you hurt?
+M: My knee was bleeding a little. But the worst part was — my phone fell out of my bag.
+W: Oh no, did it break?
+M: Luckily it landed on grass. The screen cracked but it still works. What about you?
+W: I was at the library when the storm started. I had to wait two hours for it to stop.
+M: Did you study while you were waiting?
+W: I tried, but the wind was so loud I couldn't concentrate. I just watched the rain.
+M: It was a memorable Friday for both of us!
+W: Yes, and now I always check the weather before leaving home.","W: Mike, what were you doing during the rainstorm last Friday?
+M: I was walking home from school. I didn't bring an umbrella!
+W: Oh no! Did you get totally wet?
+M: Yes, completely. While I was running for shelter, I slipped and fell into a puddle.
+W: That's terrible! Were you hurt?
+M: My knee was bleeding a little. But the worst part was — my phone fell out of my bag.
+W: Oh no, did it break?
+M: Luckily it landed on grass. The screen cracked but it still works. What about you?
+W: I was at the library when the storm started. I had to wait two hours for it to stop.
+M: Did you study while you were waiting?
+W: I tried, but the wind was so loud I couldn't concentrate. I just watched the rain.
+M: It was a memorable Friday for both of us!
+W: Yes, and now I always check the weather before leaving home.",created,200,1137120,no,,1,openai
+"openai|nova|0.85||W: David, have you decided on which high school you want to apply to?
+M: Yes, I'm aiming for Central High School. Their science program is excellent.
+W: That's a tough school. The cut-off score was 580 last year.
+M: I know. I've been preparing intensively for 6 months now.
+W: What subjects do you focus on the most?
+M: Math and physics, since they're my weak points but Central values them highly.
+W: Have you visited the school?
+M: Yes, twice. My older sister also went there, so I'm familiar with it.
+W: That's great. Good luck with your exams!
+M: Thanks. I'll need it.","W: David, have you decided on which high school you want to apply to?
+M: Yes, I'm aiming for Central High School. Their science program is excellent.
+W: That's a tough school. The cut-off score was 580 last year.
+M: I know. I've been preparing intensively for 6 months now.
+W: What subjects do you focus on the most?
+M: Math and physics, since they're my weak points but Central values them highly.
+W: Have you visited the school?
+M: Yes, twice. My older sister also went there, so I'm familiar with it.
+W: That's great. Good luck with your exams!
+M: Thanks. I'll need it.",created,200,819360,no,,1,openai
+"openai|nova|0.85||M: I love this book so much! It's the best mystery I've ever read.
+W: Can I borrow it after you finish?","M: I love this book so much! It's the best mystery I've ever read.
+W: Can I borrow it after you finish?",created,200,138720,no,,1,openai
+"openai|nova|0.85||W: Have you ever been to the Great Wall, Tom?
+M: Yes, I have. I went there twice with my parents last year.","W: Have you ever been to the Great Wall, Tom?
+M: Yes, I have. I went there twice with my parents last year.",created,200,132480,no,,1,openai
+"openai|nova|0.85||Jack Ma is one of the most successful businessmen in China. He was born in Hangzhou in 1964. As a child, he was fascinated by English and would ride his bike to the local hotel just to talk with foreign tourists. He failed his college entrance exam twice but never gave up. He became an English teacher before founding Alibaba in 1999. Today, his company has changed how people shop and pay in China. His story shows that success comes from passion, hard work, and not giving up.","Jack Ma is one of the most successful businessmen in China. He was born in Hangzhou in 1964. As a child, he was fascinated by English and would ride his bike to the local hotel just to talk with foreign tourists. He failed his college entrance exam twice but never gave up. He became an English teacher before founding Alibaba in 1999. Today, his company has changed how people shop and pay in China. His story shows that success comes from passion, hard work, and not giving up.",created,200,734880,no,,1,openai
+"openai|nova|0.85||M: I've decided to learn the piano this year.
+W: Great idea! How often will you practice?","M: I've decided to learn the piano this year.
+W: Great idea! How often will you practice?",created,200,121920,no,,1,openai
+"openai|nova|0.85||W: I lost my key on the way home. Can you help me find it?
+M: Sure! Where do you think you might have dropped it?","W: I lost my key on the way home. Can you help me find it?
+M: Sure! Where do you think you might have dropped it?",created,200,156000,no,,1,openai
+"openai|nova|0.85||W: Have you ever celebrated Mid-Autumn Festival abroad?
+M: Yes, last year I shared mooncakes with my host family in America.","W: Have you ever celebrated Mid-Autumn Festival abroad?
+M: Yes, last year I shared mooncakes with my host family in America.",created,200,178080,no,,1,openai
+"openai|nova|0.85||M: Have you ever tried Chinese calligraphy?
+W: Yes, I started learning it three years ago. It's very relaxing.","M: Have you ever tried Chinese calligraphy?
+W: Yes, I started learning it three years ago. It's very relaxing.",created,200,143040,no,,1,openai
+"openai|nova|0.85||W: Why are you so excited?
+M: Our team won the basketball championship!","W: Why are you so excited?
+M: Our team won the basketball championship!",created,200,94080,no,,1,openai
+"openai|nova|0.85||W: Have you decided which high school to apply to?
+M: I'm aiming for No. 1 High School. It's the best in our district.","W: Have you decided which high school to apply to?
+M: I'm aiming for No. 1 High School. It's the best in our district.",created,200,162720,no,,1,openai
+"openai|nova|0.85||W: I just adopted a cat from a shelter.
+M: That's wonderful! Adoption saves lives.","W: I just adopted a cat from a shelter.
+M: That's wonderful! Adoption saves lives.",created,200,100800,no,,1,openai
+"openai|nova|0.85||M: Are you participating in the sports day?
+W: Yes, I'm running the 400 meters.","M: Are you participating in the sports day?
+W: Yes, I'm running the 400 meters.",created,200,106560,no,,1,openai
+"openai|nova|0.85||Hello, everyone. Today I want to share my classmate Lin Mei's story. Lin Mei is only fourteen years old, but she has already done amazing things.
+
+When Lin Mei was seven years old, she started learning piano. Now she has been playing for seven years. Last month, she won first place in the city piano contest.
+
+Lin Mei is also a great writer. She has written more than thirty short stories. Her first book was published when she was twelve. So far, she has sold ten thousand copies of her book.
+
+Besides this, Lin Mei is a kind volunteer. She has been helping at the local library for two years. Every Saturday, she reads stories to younger children. About forty kids come to listen each week.
+
+Lin Mei is now learning Spanish, her third language after Chinese and English. She practices for an hour every day.
+
+Lin Mei always says: ""If you really want something, you can do it. Age doesn't matter."" She is truly inspiring!","Hello, everyone. Today I want to share my classmate Lin Mei's story. Lin Mei is only fourteen years old, but she has already done amazing things.
+
+When Lin Mei was seven years old, she started learning piano. Now she has been playing for seven years. Last month, she won first place in the city piano contest.
+
+Lin Mei is also a great writer. She has written more than thirty short stories. Her first book was published when she was twelve. So far, she has sold ten thousand copies of her book.
+
+Besides this, Lin Mei is a kind volunteer. She has been helping at the local library for two years. Every Saturday, she reads stories to younger children. About forty kids come to listen each week.
+
+Lin Mei is now learning Spanish, her third language after Chinese and English. She practices for an hour every day.
+
+Lin Mei always says: ""If you really want something, you can do it. Age doesn't matter."" She is truly inspiring!",created,200,1329600,no,,1,openai
+"openai|nova|0.85||M: I have a bad cold, Doctor.
+W: You should drink lots of water and stay in bed. Don't go to school today.","M: I have a bad cold, Doctor.
+W: You should drink lots of water and stay in bed. Don't go to school today.",created,200,139200,no,,1,openai
+"openai|nova|0.85||M: How often do you eat fruit, Lily?
+W: Every day. I have an apple after lunch and some berries with breakfast.","M: How often do you eat fruit, Lily?
+W: Every day. I have an apple after lunch and some berries with breakfast.",created,200,137280,no,,1,openai
+"openai|nova|0.85||W: Do you exercise regularly?
+M: Yes, I run for 30 minutes every morning before school.","W: Do you exercise regularly?
+M: Yes, I run for 30 minutes every morning before school.",created,200,132000,no,,1,openai
+"openai|nova|0.85||M: My grandma can't read Chinese very well anymore.
+W: I can come over and read to her on weekends.","M: My grandma can't read Chinese very well anymore.
+W: I can come over and read to her on weekends.",created,200,132480,no,,1,openai
+"openai|nova|0.85||Hi, I'm Lily, and I want to tell you about my best friend Anna.
+
+Anna and I are both fourteen years old, but we are very different in many ways.
+
+Anna is taller than me. She is one meter sixty-five tall, while I am only one meter sixty. She has long brown hair, but I have short black hair.
+
+In school, Anna is much better at math than me. She gets the highest scores in our class. I am better at English. I love reading English novels.
+
+Anna is more outgoing. She has many friends and likes parties. I am quieter and prefer reading at home.
+
+Our favorite sport is the same — we both love badminton. We play together every Wednesday afternoon.
+
+Anna is the funniest person I know. She always makes me laugh. We are best friends and we will be friends forever!","Hi, I'm Lily, and I want to tell you about my best friend Anna.
+
+Anna and I are both fourteen years old, but we are very different in many ways.
+
+Anna is taller than me. She is one meter sixty-five tall, while I am only one meter sixty. She has long brown hair, but I have short black hair.
+
+In school, Anna is much better at math than me. She gets the highest scores in our class. I am better at English. I love reading English novels.
+
+Anna is more outgoing. She has many friends and likes parties. I am quieter and prefer reading at home.
+
+Our favorite sport is the same — we both love badminton. We play together every Wednesday afternoon.
+
+Anna is the funniest person I know. She always makes me laugh. We are best friends and we will be friends forever!",created,200,1069440,no,,1,openai
+"openai|nova|0.85||M: Lin, your English is really impressive. How long have you been learning?
+W: Thanks! I've been studying English for nine years now. I started in Grade 1.
+M: That's a long time. Have you ever been to an English-speaking country?
+W: Yes, I've been to Singapore once with my parents. It was really helpful.
+M: What's the most important thing you've learned about English?
+W: Practice makes perfect. I read English news every day and watch English movies.
+M: Have you ever entered any English competitions?
+W: Yes! I've won three certificates so far. Last year I got first place in the city speaking contest.
+M: First place? Wow, that's amazing!
+W: Thank you. The competition was really tough. I had to prepare for two months.
+M: I'd love to improve my English. Do you have any tips?
+W: Yes! Don't be afraid to speak. Make mistakes, learn, and improve. I've made thousands of mistakes!
+M: That's good advice. Have you decided what to do next?
+W: I want to become an English teacher. I hope to help others love English the way I do.","M: Lin, your English is really impressive. How long have you been learning?
+W: Thanks! I've been studying English for nine years now. I started in Grade 1.
+M: That's a long time. Have you ever been to an English-speaking country?
+W: Yes, I've been to Singapore once with my parents. It was really helpful.
+M: What's the most important thing you've learned about English?
+W: Practice makes perfect. I read English news every day and watch English movies.
+M: Have you ever entered any English competitions?
+W: Yes! I've won three certificates so far. Last year I got first place in the city speaking contest.
+M: First place? Wow, that's amazing!
+W: Thank you. The competition was really tough. I had to prepare for two months.
+M: I'd love to improve my English. Do you have any tips?
+W: Yes! Don't be afraid to speak. Make mistakes, learn, and improve. I've made thousands of mistakes!
+M: That's good advice. Have you decided what to do next?
+W: I want to become an English teacher. I hope to help others love English the way I do.",created,200,1430400,no,,1,openai
+"openai|nova|0.85||W: I really enjoy Mrs. Chen's class. Her stories are amazing.
+M: I agree. She makes history come alive.","W: I really enjoy Mrs. Chen's class. Her stories are amazing.
+M: I agree. She makes history come alive.",created,200,139200,no,,1,openai
+"openai|nova|0.85||M: I heard you fell off your bike yesterday. Are you OK?
+W: Yes, I'm fine. I was riding too fast when I hit a stone.","M: I heard you fell off your bike yesterday. Are you OK?
+W: Yes, I'm fine. I was riding too fast when I hit a stone.",created,200,162720,no,,1,openai
+"openai|nova|0.85||W: I started playing guitar last month.
+M: That's cool! Can you play any songs yet?","W: I started playing guitar last month.
+M: That's cool! Can you play any songs yet?",created,200,110880,no,,1,openai
+"openai|nova|0.85||Last summer, my family took a memorable trip across China. We visited 5 cities in 15 days. We started in Beijing, where we walked on the Great Wall and saw the Forbidden City. Then we flew to Xi'an to see the Terracotta Warriors, an amazing army of statues over 2,000 years old. Next, we went to Shanghai and admired the modern skyline. Our fourth stop was Guilin, famous for its beautiful landscapes. Finally, we ended in Hangzhou, walking around the peaceful West Lake. Each city had its own charm, and I gained a deeper appreciation for China's rich history and diverse beauty.","Last summer, my family took a memorable trip across China. We visited 5 cities in 15 days. We started in Beijing, where we walked on the Great Wall and saw the Forbidden City. Then we flew to Xi'an to see the Terracotta Warriors, an amazing army of statues over 2,000 years old. Next, we went to Shanghai and admired the modern skyline. Our fourth stop was Guilin, famous for its beautiful landscapes. Finally, we ended in Hangzhou, walking around the peaceful West Lake. Each city had its own charm, and I gained a deeper appreciation for China's rich history and diverse beauty.",created,200,865440,no,,1,openai
+"openai|nova|0.85||M: Lin, you travel a lot. How many countries have you been to?
+W: I've been to seven countries so far. I started traveling when I was 8.
+M: Wow! Which one was your favorite?
+W: Japan, definitely. The food, the culture, and the people are all wonderful.
+M: Have you ever been to Europe?
+W: Yes, I've been to France and Italy. Paris was beautiful but very crowded.
+M: What's on your travel list now?
+W: I really want to visit Australia. I've never seen kangaroos in person before.
+M: Are you going there this year?
+W: I hope so. My parents have promised to take me there next summer if I get good grades.","M: Lin, you travel a lot. How many countries have you been to?
+W: I've been to seven countries so far. I started traveling when I was 8.
+M: Wow! Which one was your favorite?
+W: Japan, definitely. The food, the culture, and the people are all wonderful.
+M: Have you ever been to Europe?
+W: Yes, I've been to France and Italy. Paris was beautiful but very crowded.
+M: What's on your travel list now?
+W: I really want to visit Australia. I've never seen kangaroos in person before.
+M: Are you going there this year?
+W: I hope so. My parents have promised to take me there next summer if I get good grades.",created,200,838080,no,,1,openai
+"openai|nova|0.85||M: Our school will hold a charity sale next week.
+W: Great! I'll donate some old toys and books from home.","M: Our school will hold a charity sale next week.
+W: Great! I'll donate some old toys and books from home.",created,200,148320,no,,1,openai
+"openai|nova|0.85||Our school organized a successful volunteer week. Over 200 students participated. We collected 2,000 books for rural schools. We also raised 8,000 yuan for a cancer charity. The activity took place from October 12th to October 18th. Students reported feeling proud and meaningful through their service.
+
+【填空内容】
+_____ students participated. They collected _____ books. They raised _____ yuan for charity. The activity ended on _____.","Our school organized a successful volunteer week. Over 200 students participated. We collected 2,000 books for rural schools. We also raised 8,000 yuan for a cancer charity. The activity took place from October 12th to October 18th. Students reported feeling proud and meaningful through their service.
+
+【填空内容】
+_____ students participated. They collected _____ books. They raised _____ yuan for charity. The activity ended on _____.",created,200,707520,no,,1,openai
+"openai|nova|0.85||W: Is your brother taller than you, Mike?
+M: No, I'm taller. But he's heavier than me — he loves eating!","W: Is your brother taller than you, Mike?
+M: No, I'm taller. But he's heavier than me — he loves eating!",created,200,125760,no,,1,openai
+"openai|nova|0.85||Last summer, I volunteered at a children's hospital for two weeks. My job was to play with sick kids who couldn't go outside. At first, I was nervous because I didn't know what to expect. But the children quickly accepted me. We read books, did art and played simple games. One girl named Lily became my special friend. Despite being seriously ill, she always smiled and remained hopeful. From this experience, I learned that helping others actually helps yourself. I gained more than I gave. I'm planning to volunteer again next year.","Last summer, I volunteered at a children's hospital for two weeks. My job was to play with sick kids who couldn't go outside. At first, I was nervous because I didn't know what to expect. But the children quickly accepted me. We read books, did art and played simple games. One girl named Lily became my special friend. Despite being seriously ill, she always smiled and remained hopeful. From this experience, I learned that helping others actually helps yourself. I gained more than I gave. I'm planning to volunteer again next year.",created,200,777600,no,,1,openai
+"openai|nova|0.85||W: Are you joining the volunteer club this year?
+M: Yes, I want to help kids in the children's hospital.","W: Are you joining the volunteer club this year?
+M: Yes, I want to help kids in the children's hospital.",created,200,138720,no,,1,openai
+"openai|nova|0.85||Many students feel stressed about exams. This is normal, but too much stress can be harmful. It can affect your sleep, mood and even physical health. So how can you manage exam stress? First, plan your study schedule to avoid last-minute cramming. Second, get at least 8 hours of sleep each night. Third, eat balanced meals and exercise regularly. Fourth, take short breaks when studying. Most importantly, remember that exams don't define your worth. With good preparation and a positive attitude, you can do your best.","Many students feel stressed about exams. This is normal, but too much stress can be harmful. It can affect your sleep, mood and even physical health. So how can you manage exam stress? First, plan your study schedule to avoid last-minute cramming. Second, get at least 8 hours of sleep each night. Third, eat balanced meals and exercise regularly. Fourth, take short breaks when studying. Most importantly, remember that exams don't define your worth. With good preparation and a positive attitude, you can do your best.",created,200,744000,no,,1,openai
+"openai|nova|0.85||M: How was your weekend, Sara?
+W: Pretty good. I went to a music festival on Saturday and visited my grandma on Sunday.","M: How was your weekend, Sara?
+W: Pretty good. I went to a music festival on Saturday and visited my grandma on Sunday.",created,200,168960,no,,1,openai
+"openai|nova|0.85||W: Have you been to any foreign countries?
+M: Yes, I've been to Japan and Thailand. Both were amazing experiences.","W: Have you been to any foreign countries?
+M: Yes, I've been to Japan and Thailand. Both were amazing experiences.",created,200,161280,no,,1,openai
+"openai|nova|0.85||W: Tom, I heard you joined the volunteer club. What do you do?
+M: We do many things! Last weekend, we cleaned up the local park.
+W: That sounds great. Have you done any other activities?
+M: Yes. We've visited the elderly home twice this month. We sing songs and chat with the residents.
+W: Wonderful. How long have you been a volunteer?
+M: About six months. I started in March.
+W: What's your favorite activity so far?
+M: Teaching English to migrant workers' children. Their smiles make me really happy.
+W: Why did you decide to volunteer in the first place?
+M: My mom is a nurse. She always taught me to help others. I wanted to do my part too.
+W: How can I join? It sounds amazing.
+M: Come to our meeting next Saturday at 2 p.m. in the community center. You can sign up there.","W: Tom, I heard you joined the volunteer club. What do you do?
+M: We do many things! Last weekend, we cleaned up the local park.
+W: That sounds great. Have you done any other activities?
+M: Yes. We've visited the elderly home twice this month. We sing songs and chat with the residents.
+W: Wonderful. How long have you been a volunteer?
+M: About six months. I started in March.
+W: What's your favorite activity so far?
+M: Teaching English to migrant workers' children. Their smiles make me really happy.
+W: Why did you decide to volunteer in the first place?
+M: My mom is a nurse. She always taught me to help others. I wanted to do my part too.
+W: How can I join? It sounds amazing.
+M: Come to our meeting next Saturday at 2 p.m. in the community center. You can sign up there.",created,200,1107840,no,,1,openai
+openai|nova|0.85||Eating a balanced diet and exercising regularly are key to staying healthy.,Eating a balanced diet and exercising regularly are key to staying healthy.,created,200,108480,no,,1,openai
+"openai|nova|0.85||W: How was your trip to the Great Wall?
+M: Amazing! It was much longer than I imagined.","W: How was your trip to the Great Wall?
+M: Amazing! It was much longer than I imagined.",created,200,123360,no,,1,openai
+"openai|nova|0.85||M: Why are you so tired, Lily?
+W: I had to do the laundry, sweep the floor and wash the dishes today. My mom is sick.","M: Why are you so tired, Lily?
+W: I had to do the laundry, sweep the floor and wash the dishes today. My mom is sick.",created,200,161280,no,,1,openai
+"openai|nova|0.85||W: What were you doing when the earthquake happened?
+M: I was cooking in the kitchen. It was so scary!","W: What were you doing when the earthquake happened?
+M: I was cooking in the kitchen. It was so scary!",created,200,126720,no,,1,openai
+"openai|nova|0.85||W: Tom, did you finish the math homework?
+M: Not yet. It's really difficult. I'll ask Mr. Wang for help tomorrow.","W: Tom, did you finish the math homework?
+M: Not yet. It's really difficult. I'll ask Mr. Wang for help tomorrow.",created,200,156000,no,,1,openai
+"openai|nova|0.85||W: Have you seen the new Marvel movie yet?
+M: Yes! I watched it last weekend with my friends. It was awesome.","W: Have you seen the new Marvel movie yet?
+M: Yes! I watched it last weekend with my friends. It was awesome.",created,200,151200,no,,1,openai
+"openai|nova|0.85||Welcome to our science talk. Today I will tell you about technology in the year 2035.
+
+In 2035, robots will be everywhere. They will help us do housework. Cleaning robots, cooking robots, and even teaching robots will become common. Each home may have at least three robots.
+
+Cars will be self-driving. We won't need drivers anymore. The first self-driving car came out in twenty twenty-three, but by 2035, ninety percent of cars will drive by themselves.
+
+Schools will change a lot. Students will use VR glasses instead of textbooks. They can travel to ancient Rome or future Mars in their classrooms. This makes learning much more fun.
+
+Doctors will use smart watches to check your health every minute. If something is wrong, the watch will call the hospital for you.
+
+Of course, we still need humans to teach kindness, creativity, and love. Technology helps us, but humans are still the most important.","Welcome to our science talk. Today I will tell you about technology in the year 2035.
+
+In 2035, robots will be everywhere. They will help us do housework. Cleaning robots, cooking robots, and even teaching robots will become common. Each home may have at least three robots.
+
+Cars will be self-driving. We won't need drivers anymore. The first self-driving car came out in twenty twenty-three, but by 2035, ninety percent of cars will drive by themselves.
+
+Schools will change a lot. Students will use VR glasses instead of textbooks. They can travel to ancient Rome or future Mars in their classrooms. This makes learning much more fun.
+
+Doctors will use smart watches to check your health every minute. If something is wrong, the watch will call the hospital for you.
+
+Of course, we still need humans to teach kindness, creativity, and love. Technology helps us, but humans are still the most important.",created,200,1359840,no,,1,openai
+"openai|nova|0.85||M: Who is the funniest student in your class, Lily?
+W: Definitely Tom. He always makes everyone laugh.","M: Who is the funniest student in your class, Lily?
+W: Definitely Tom. He always makes everyone laugh.",created,200,136320,no,,1,openai
+"openai|nova|0.85||M: Do you spend a lot of time on social media?
+W: I try to limit it to one hour a day. Too much screen time isn't healthy.","M: Do you spend a lot of time on social media?
+W: I try to limit it to one hour a day. Too much screen time isn't healthy.",created,200,172320,no,,1,openai
+"openai|nova|0.85||M: I always argue with my parents lately.
+W: Don't worry. It's a normal part of growing up.","M: I always argue with my parents lately.
+W: Don't worry. It's a normal part of growing up.",created,200,120480,no,,1,openai
+"openai|nova|0.85||W: I had a fight with my best friend yesterday.
+M: You should apologize and talk it out.","W: I had a fight with my best friend yesterday.
+M: You should apologize and talk it out.",created,200,122880,no,,1,openai
+"openai|nova|0.85||M: How was the volunteer work at the nursing home?
+W: Very meaningful. The elderly people had so many stories to share.","M: How was the volunteer work at the nursing home?
+W: Very meaningful. The elderly people had so many stories to share.",created,200,171840,no,,1,openai
+"openai|nova|0.85||Although the entrance exam is challenging, we are confident that hard work will pay off.","Although the entrance exam is challenging, we are confident that hard work will pay off.",created,200,110400,no,,1,openai
+"openai|nova|0.85||M: What do you want to do in the future?
+W: I want to become a teacher and help students learn.","M: What do you want to do in the future?
+W: I want to become a teacher and help students learn.",created,200,120480,no,,1,openai
+"openai|nova|0.85||M: Are you sad about leaving middle school soon?
+W: A bit, but I'm also excited about the new chapter ahead.","M: Are you sad about leaving middle school soon?
+W: A bit, but I'm also excited about the new chapter ahead.",created,200,150240,no,,1,openai
+"openai|nova|0.85||Technology has made our lives easier, but we should not depend on it too much.","Technology has made our lives easier, but we should not depend on it too much.",created,200,113760,no,,1,openai
+"openai|nova|0.85||M: My best friend is moving to another city next month.
+W: I'm sorry to hear that. You can still keep in touch online.","M: My best friend is moving to another city next month.
+W: I'm sorry to hear that. You can still keep in touch online.",created,200,160320,no,,1,openai
+"openai|nova|0.85||The Internet has changed our lives in many ways. It allows us to learn anything, connect with people worldwide and shop without leaving home. Students can attend online classes and access educational videos. However, the Internet also brings risks. Cyber bullying, online scams and addiction to social media are growing problems. Spending too much time online can affect our health, sleep and real-life relationships. Therefore, we need to use the Internet wisely. Set time limits, verify information and remember that real friendships matter most.","The Internet has changed our lives in many ways. It allows us to learn anything, connect with people worldwide and shop without leaving home. Students can attend online classes and access educational videos. However, the Internet also brings risks. Cyber bullying, online scams and addiction to social media are growing problems. Spending too much time online can affect our health, sleep and real-life relationships. Therefore, we need to use the Internet wisely. Set time limits, verify information and remember that real friendships matter most.",created,200,793920,no,,1,openai
+openai|nova|0.85||Chinese traditional culture has been passed down for thousands of years.,Chinese traditional culture has been passed down for thousands of years.,created,200,99360,no,,1,openai
+"openai|nova|0.85||M: Have you ever won a prize, Lin?
+W: Yes! I won first place in the school singing contest last month.","M: Have you ever won a prize, Lin?
+W: Yes! I won first place in the school singing contest last month.",created,200,141600,no,,1,openai
+"openai|nova|0.85||W: Do you enjoy watching soap operas, Tom?
+M: Not really. I prefer watching news and sports.","W: Do you enjoy watching soap operas, Tom?
+M: Not really. I prefer watching news and sports.",created,200,124320,no,,1,openai
+"openai|nova|0.85||W: What do you want to be when you grow up, Mike?
+M: I want to be a doctor like my mother. I want to help people.","W: What do you want to be when you grow up, Mike?
+M: I want to be a doctor like my mother. I want to help people.",created,200,154560,no,,1,openai
+"openai|nova|0.85||Hello, everyone. I want to tell you about my summer travel plan. My family and I are going to Yunnan this July. The trip will last for ten days.
+
+We will fly to Kunming first. Kunming is the capital of Yunnan and is called the ""Spring City."" We will stay there for three days. We plan to visit Dianchi Lake and the Stone Forest.
+
+Then we will take a train to Dali. Dali is famous for its old town and Erhai Lake. We will stay there for three days too. The most exciting thing is that we will rent bikes to ride around the lake.
+
+After Dali, we will travel to Lijiang for the last four days. Lijiang has beautiful mountains and rivers. We hope to visit Yulong Snow Mountain and the old town. The temperature there is much cooler, so we need to bring warm clothes.
+
+I am looking forward to this wonderful trip!","Hello, everyone. I want to tell you about my summer travel plan. My family and I are going to Yunnan this July. The trip will last for ten days.
+
+We will fly to Kunming first. Kunming is the capital of Yunnan and is called the ""Spring City."" We will stay there for three days. We plan to visit Dianchi Lake and the Stone Forest.
+
+Then we will take a train to Dali. Dali is famous for its old town and Erhai Lake. We will stay there for three days too. The most exciting thing is that we will rent bikes to ride around the lake.
+
+After Dali, we will travel to Lijiang for the last four days. Lijiang has beautiful mountains and rivers. We hope to visit Yulong Snow Mountain and the old town. The temperature there is much cooler, so we need to bring warm clothes.
+
+I am looking forward to this wonderful trip!",created,200,1155840,no,,1,openai
+"openai|nova|0.85||W: Ben, you look stressed lately. Is everything OK?
+M: I've been worried about the entrance exam. I can't sleep well.
+W: That's tough. How long have you felt this way?
+M: For about two months now. I study late every night.
+W: You should talk to someone. Have you considered seeing the school counselor?
+M: I haven't, but maybe I should.
+W: Also, taking breaks and exercising can help reduce stress.
+M: I'll try to add some exercise to my daily routine.
+W: That's great. Remember, your health comes first.
+M: Thanks for the advice, Sara. I really appreciate it.","W: Ben, you look stressed lately. Is everything OK?
+M: I've been worried about the entrance exam. I can't sleep well.
+W: That's tough. How long have you felt this way?
+M: For about two months now. I study late every night.
+W: You should talk to someone. Have you considered seeing the school counselor?
+M: I haven't, but maybe I should.
+W: Also, taking breaks and exercising can help reduce stress.
+M: I'll try to add some exercise to my daily routine.
+W: That's great. Remember, your health comes first.
+M: Thanks for the advice, Sara. I really appreciate it.",created,200,768960,no,,1,openai
+openai|nova|0.85||True friends will always support you through both good times and bad.,True friends will always support you through both good times and bad.,created,200,95520,no,,1,openai
+"openai|nova|0.85||W: Hi Tom! How was your summer holiday?
+M: It was amazing! My family and I went to Yunnan for two weeks.
+W: Yunnan? That sounds wonderful. Where exactly did you go?
+M: We visited Kunming, Dali, and Lijiang. Lijiang was my favorite — the old town is so beautiful at night.
+W: How was the weather there?
+M: Much cooler than Shanghai. We needed jackets in the evening, even in August.
+W: Did you try any local food?
+M: Yes! We had crossing-the-bridge noodles in Kunming. The soup was really hot but delicious.
+W: I want to go there too. How long did it take to travel from city to city?
+M: About 3-4 hours by bus. Yunnan is bigger than I thought. You should plan at least 10 days for a trip.","W: Hi Tom! How was your summer holiday?
+M: It was amazing! My family and I went to Yunnan for two weeks.
+W: Yunnan? That sounds wonderful. Where exactly did you go?
+M: We visited Kunming, Dali, and Lijiang. Lijiang was my favorite — the old town is so beautiful at night.
+W: How was the weather there?
+M: Much cooler than Shanghai. We needed jackets in the evening, even in August.
+W: Did you try any local food?
+M: Yes! We had crossing-the-bridge noodles in Kunming. The soup was really hot but delicious.
+W: I want to go there too. How long did it take to travel from city to city?
+M: About 3-4 hours by bus. Yunnan is bigger than I thought. You should plan at least 10 days for a trip.",created,200,992160,no,,1,openai
+"openai|nova|0.85||Reading is one of the best habits you can develop. It exercises your brain, expands your vocabulary and improves your imagination. Studies show that students who read for fun perform better in all subjects, not just language arts. Reading also reduces stress and helps you sleep better. To start a reading habit, find books that interest you. It doesn't matter if it's fiction, biography or magazines. The key is to read regularly. Even 15 minutes a day can make a big difference. So pick up a book today and start exploring new worlds.","Reading is one of the best habits you can develop. It exercises your brain, expands your vocabulary and improves your imagination. Studies show that students who read for fun perform better in all subjects, not just language arts. Reading also reduces stress and helps you sleep better. To start a reading habit, find books that interest you. It doesn't matter if it's fiction, biography or magazines. The key is to read regularly. Even 15 minutes a day can make a big difference. So pick up a book today and start exploring new worlds.",created,200,777120,no,,1,openai
+"openai|nova|0.85||W: I'm going to an art exhibition this weekend. Want to come?
+M: Sure, I love modern art.","W: I'm going to an art exhibition this weekend. Want to come?
+M: Sure, I love modern art.",created,200,124800,no,,1,openai
+"openai|nova|0.85||W: Should I go to the party tonight, Mike?
+M: If you go, you'll have a great time. But if you stay home, you can finish your project.","W: Should I go to the party tonight, Mike?
+M: If you go, you'll have a great time. But if you stay home, you can finish your project.",created,200,164160,no,,1,openai
+"openai|nova|0.85||M: Lin, what are you going to do during the winter holiday?
+W: I'm going to visit my grandma in the countryside. We'll stay there for a week.","M: Lin, what are you going to do during the winter holiday?
+W: I'm going to visit my grandma in the countryside. We'll stay there for a week.",created,200,202560,no,,1,openai
+"openai|nova|0.85||W: Tom, what happened to your phone screen? It's cracked!
+M: I dropped it while I was running for the bus this morning.","W: Tom, what happened to your phone screen? It's cracked!
+M: I dropped it while I was running for the bus this morning.",created,200,154080,no,,1,openai
+"openai|nova|0.85||W: Tom, what are you doing this Saturday? Want to hang out?
+M: Sure! What did you have in mind?
+W: How about going to the new science museum? They have a special robot exhibit this month.
+M: Sounds fun! What time should we meet?
+W: Let's meet at 10 a.m. at the subway station. We can grab coffee on the way.
+M: Perfect. Should we invite Lin too?
+W: Good idea! She loves science. I'll send her a message.
+M: After the museum, would you like to have lunch together?
+W: Yes! There's a great Chinese restaurant nearby. They make amazing dumplings.
+M: I love dumplings! What time does the museum close?
+W: At 5 p.m. So we have plenty of time. Maybe we can also see a movie afterwards?
+M: That sounds like a perfect Saturday!","W: Tom, what are you doing this Saturday? Want to hang out?
+M: Sure! What did you have in mind?
+W: How about going to the new science museum? They have a special robot exhibit this month.
+M: Sounds fun! What time should we meet?
+W: Let's meet at 10 a.m. at the subway station. We can grab coffee on the way.
+M: Perfect. Should we invite Lin too?
+W: Good idea! She loves science. I'll send her a message.
+M: After the museum, would you like to have lunch together?
+W: Yes! There's a great Chinese restaurant nearby. They make amazing dumplings.
+M: I love dumplings! What time does the museum close?
+W: At 5 p.m. So we have plenty of time. Maybe we can also see a movie afterwards?
+M: That sounds like a perfect Saturday!",created,200,999360,no,,1,openai
+"openai|nova|0.85||M: How much did you pay for that backpack?
+W: It was 200 yuan, but I got 20% off.","M: How much did you pay for that backpack?
+W: It was 200 yuan, but I got 20% off.",created,200,125760,no,,1,openai
+"openai|nova|0.85||M: I'm going to buy a new phone this weekend.
+W: Why? Your phone looks fine to me.","M: I'm going to buy a new phone this weekend.
+W: Why? Your phone looks fine to me.",created,200,113760,no,,1,openai
+"openai|nova|0.85||M: Sophie, where did you go on Saturday morning?
+W: I joined a volunteer activity at the city library.
+M: That sounds interesting. What did you do?
+W: We organized a reading event for kids from 6 to 10 years old.
+M: How many kids came?
+W: About 25. We read stories and helped them with crafts.
+M: Was it tiring?
+W: A little, but very rewarding. The kids were so enthusiastic.
+M: How did you get involved?
+W: I signed up through the volunteer center website. They have many opportunities.
+M: I'd like to try too. Can you send me the link?","M: Sophie, where did you go on Saturday morning?
+W: I joined a volunteer activity at the city library.
+M: That sounds interesting. What did you do?
+W: We organized a reading event for kids from 6 to 10 years old.
+M: How many kids came?
+W: About 25. We read stories and helped them with crafts.
+M: Was it tiring?
+W: A little, but very rewarding. The kids were so enthusiastic.
+M: How did you get involved?
+W: I signed up through the volunteer center website. They have many opportunities.
+M: I'd like to try too. Can you send me the link?",created,200,766560,no,,1,openai
+"openai|nova|0.85||M: Lisa, I heard you spent last summer studying in Australia?
+W: Yes, I attended an English summer camp in Sydney for 4 weeks.
+M: How was it?
+W: Eye-opening. We had classes in the morning and explored the city in the afternoons.
+M: Did you make friends?
+W: Yes, students from 10 different countries! I still chat with my Japanese roommate online.
+M: What was the most challenging part?
+W: Adjusting to the food and the time difference. But I learned to cook some Australian dishes.
+M: Would you do it again?
+W: Absolutely! It made me more independent and broadened my view of the world.","M: Lisa, I heard you spent last summer studying in Australia?
+W: Yes, I attended an English summer camp in Sydney for 4 weeks.
+M: How was it?
+W: Eye-opening. We had classes in the morning and explored the city in the afternoons.
+M: Did you make friends?
+W: Yes, students from 10 different countries! I still chat with my Japanese roommate online.
+M: What was the most challenging part?
+W: Adjusting to the food and the time difference. But I learned to cook some Australian dishes.
+M: Would you do it again?
+W: Absolutely! It made me more independent and broadened my view of the world.",created,200,830880,no,,1,openai
+"openai|nova|0.85||Global plastic production has reached 400 million tons annually. Only 9% gets recycled. Ocean plastic kills over 1 million seabirds each year. China has implemented strict bans on single-use plastics in major cities since 2020. By 2025, the country aims to reduce plastic waste by 50%.
+
+【填空内容】
+Global plastic production reaches _____ million tons annually. Only _____ percent gets recycled. _____ million seabirds die each year. By 2025, China aims to reduce plastic by _____ percent.","Global plastic production has reached 400 million tons annually. Only 9% gets recycled. Ocean plastic kills over 1 million seabirds each year. China has implemented strict bans on single-use plastics in major cities since 2020. By 2025, the country aims to reduce plastic waste by 50%.
+
+【填空内容】
+Global plastic production reaches _____ million tons annually. Only _____ percent gets recycled. _____ million seabirds die each year. By 2025, China aims to reduce plastic by _____ percent.",created,200,791040,no,,1,openai
+"openai|nova|0.85||W: What are your plans for next year, Tom?
+M: I'm going to work harder on math and join the school basketball team.","W: What are your plans for next year, Tom?
+M: I'm going to work harder on math and join the school basketball team.",created,200,147840,no,,1,openai
+"openai|nova|0.85||W: Do you want to come over for dinner tonight? I'm making dumplings.
+M: Sounds great, but I have to study for tomorrow's test. Maybe next time?","W: Do you want to come over for dinner tonight? I'm making dumplings.
+M: Sounds great, but I have to study for tomorrow's test. Maybe next time?",created,200,191520,no,,1,openai
+"openai|nova|0.85||W: Jack, I heard our school is starting a recycling project. Are you joining?
+M: Yes! I'm actually one of the organizers.
+W: That's great. What does it involve?
+M: We collect plastic bottles, paper and cans across the campus weekly.
+W: How does the school benefit?
+M: We sell them and use the money to plant trees on campus.
+W: How many trees have you planted so far?
+M: Over 50 in the past year. We aim for 100 by next summer.
+W: Amazing! Can I help?
+M: Definitely! We meet every Friday afternoon at 4.","W: Jack, I heard our school is starting a recycling project. Are you joining?
+M: Yes! I'm actually one of the organizers.
+W: That's great. What does it involve?
+M: We collect plastic bottles, paper and cans across the campus weekly.
+W: How does the school benefit?
+M: We sell them and use the money to plant trees on campus.
+W: How many trees have you planted so far?
+M: Over 50 in the past year. We aim for 100 by next summer.
+W: Amazing! Can I help?
+M: Definitely! We meet every Friday afternoon at 4.",created,200,727200,no,,1,openai
+"openai|nova|0.85||W: How will people travel in 50 years, do you think?
+M: I think we'll have flying cars and travel to the moon for vacation.","W: How will people travel in 50 years, do you think?
+M: I think we'll have flying cars and travel to the moon for vacation.",created,200,139200,no,,1,openai
+"openai|nova|0.85||Online shopping has become extremely popular in recent years. People can buy almost anything with just a few clicks. The advantages are clear — it's convenient, prices are often lower and you can shop 24 hours a day. However, there are also disadvantages. You can't try clothes before buying. The product may look different in real life. Sometimes packages get lost or damaged. To shop safely online, read customer reviews carefully, compare prices on different websites, and only use trusted payment methods. Use online shopping wisely, and it can save you both time and money.","Online shopping has become extremely popular in recent years. People can buy almost anything with just a few clicks. The advantages are clear — it's convenient, prices are often lower and you can shop 24 hours a day. However, there are also disadvantages. You can't try clothes before buying. The product may look different in real life. Sometimes packages get lost or damaged. To shop safely online, read customer reviews carefully, compare prices on different websites, and only use trusted payment methods. Use online shopping wisely, and it can save you both time and money.",created,200,830400,no,,1,openai
+"openai|nova|0.85||M: My dream is to travel around the world someday.
+W: That sounds amazing! I hope to study abroad after graduation.","M: My dream is to travel around the world someday.
+W: That sounds amazing! I hope to study abroad after graduation.",created,200,152160,no,,1,openai
+"openai|nova|0.85||M: What's your favorite type of music?
+W: I love classical music. It helps me focus when studying.","M: What's your favorite type of music?
+W: I love classical music. It helps me focus when studying.",created,200,130080,no,,1,openai
+"openai|nova|0.85||M: I had a fight with my best friend. What should I do?
+W: You should apologize first. A real friendship is worth saving.","M: I had a fight with my best friend. What should I do?
+W: You should apologize first. A real friendship is worth saving.",created,200,167520,no,,1,openai
+"openai|nova|0.85||W: Did you finish the project on time?
+M: Yes, but I had to stay up late for two nights.","W: Did you finish the project on time?
+M: Yes, but I had to stay up late for two nights.",created,200,107520,no,,1,openai
+"openai|nova|0.85||M: How many books do you read in a month?
+W: Usually 3 to 4. Reading is my biggest hobby.","M: How many books do you read in a month?
+W: Usually 3 to 4. Reading is my biggest hobby.",created,200,131520,no,,1,openai
+"openai|nova|0.85||M: Are you celebrating Spring Festival traditionally this year?
+W: Yes, but with some modern twists. We use video calls to connect with relatives abroad.
+M: That's a nice mix. Do you still make dumplings together?
+W: Of course! That's the highlight of our family celebration.
+M: How many do you make?
+W: Hundreds! We make different fillings — pork, vegetables, even seafood.
+M: What about the New Year's Eve dinner?
+W: We go to my grandmother's house. She prepares 12 dishes for good luck.
+M: Why 12?
+W: Each dish represents a month of the new year, full of good wishes.","M: Are you celebrating Spring Festival traditionally this year?
+W: Yes, but with some modern twists. We use video calls to connect with relatives abroad.
+M: That's a nice mix. Do you still make dumplings together?
+W: Of course! That's the highlight of our family celebration.
+M: How many do you make?
+W: Hundreds! We make different fillings — pork, vegetables, even seafood.
+M: What about the New Year's Eve dinner?
+W: We go to my grandmother's house. She prepares 12 dishes for good luck.
+M: Why 12?
+W: Each dish represents a month of the new year, full of good wishes.",created,200,810240,no,,1,openai
+"openai|nova|0.85||M: How was your trip to Yunnan, Mom?
+W: Wonderful! The weather was perfect and the food was amazing.","M: How was your trip to Yunnan, Mom?
+W: Wonderful! The weather was perfect and the food was amazing.",created,200,134880,no,,1,openai
+"openai|nova|0.85||M: You look tired today. Did you sleep well?
+W: Not really. I was preparing for the speech contest until midnight.","M: You look tired today. Did you sleep well?
+W: Not really. I was preparing for the speech contest until midnight.",created,200,152160,no,,1,openai
+"openai|nova|0.85||M: Lily, what do you want to be in the future?
+W: I want to be a doctor. Specifically, a pediatrician.
+M: Why pediatrics?
+W: I love working with children. They're full of innocence and hope.
+M: That requires many years of study.
+W: Yes, about 8 years total — university plus residency.
+M: That's a long path. What inspired you?
+W: My younger brother had a serious illness when I was 10. The doctor saved his life.
+M: That's a powerful experience.
+W: Yes. From that moment, I knew I wanted to help children too.","M: Lily, what do you want to be in the future?
+W: I want to be a doctor. Specifically, a pediatrician.
+M: Why pediatrics?
+W: I love working with children. They're full of innocence and hope.
+M: That requires many years of study.
+W: Yes, about 8 years total — university plus residency.
+M: That's a long path. What inspired you?
+W: My younger brother had a serious illness when I was 10. The doctor saved his life.
+M: That's a powerful experience.
+W: Yes. From that moment, I knew I wanted to help children too.",created,200,698880,no,,1,openai
+"openai|nova|0.85||M: Do you help with the housework at home?
+W: Yes, I always make my bed and sometimes cook dinner.","M: Do you help with the housework at home?
+W: Yes, I always make my bed and sometimes cook dinner.",created,200,131040,no,,1,openai
+"openai|nova|0.85||W: Tom! I heard you finished your first marathon last weekend! Congratulations!
+M: Thank you! It was the hardest thing I've ever done.
+W: How long was the race?
+M: 42 kilometers. I never thought I could run that far.
+W: How did you train?
+M: I've been training for six months. I started with 5 km, then 10, 20, and finally up to 35.
+W: Did you reach your goal time?
+M: My goal was to finish in 5 hours. I actually finished in 4 hours and 45 minutes!
+W: Wow, even better than your goal! How did you feel at the end?
+M: Tired but very proud. My family came to cheer for me. My little sister was so excited.
+W: What was the hardest part?
+M: The last 5 km. My legs were so heavy. But the cheering crowd kept me going.
+W: Will you do another one?
+M: Definitely! I've already signed up for another race in October. I want to improve my time.
+W: You're really inspiring, Tom. Maybe I should try running too.
+M: You should! Start small. Anyone can train if they really want to.","W: Tom! I heard you finished your first marathon last weekend! Congratulations!
+M: Thank you! It was the hardest thing I've ever done.
+W: How long was the race?
+M: 42 kilometers. I never thought I could run that far.
+W: How did you train?
+M: I've been training for six months. I started with 5 km, then 10, 20, and finally up to 35.
+W: Did you reach your goal time?
+M: My goal was to finish in 5 hours. I actually finished in 4 hours and 45 minutes!
+W: Wow, even better than your goal! How did you feel at the end?
+M: Tired but very proud. My family came to cheer for me. My little sister was so excited.
+W: What was the hardest part?
+M: The last 5 km. My legs were so heavy. But the cheering crowd kept me going.
+W: Will you do another one?
+M: Definitely! I've already signed up for another race in October. I want to improve my time.
+W: You're really inspiring, Tom. Maybe I should try running too.
+M: You should! Start small. Anyone can train if they really want to.",created,200,1408800,no,,1,openai
+"openai|nova|0.85||We should never give up our dreams, no matter how difficult things get.","We should never give up our dreams, no matter how difficult things get.",created,200,96480,no,,1,openai
+"openai|nova|0.85||M: Reading is my favorite hobby. What about you?
+W: I love painting. It's relaxing after a long day.","M: Reading is my favorite hobby. What about you?
+W: I love painting. It's relaxing after a long day.",created,200,134880,no,,1,openai
+"openai|nova|0.85||W: Do you think robots will replace teachers in the future?
+M: No, I don't think so. Teachers are too important to be replaced.","W: Do you think robots will replace teachers in the future?
+M: No, I don't think so. Teachers are too important to be replaced.",created,200,174240,no,,1,openai
+"openai|nova|0.85||Attention please, students! This is an important announcement from our school volunteer club.
+
+Next Sunday, March twelfth, we are going to hold a tree planting activity. We need fifty student volunteers from Grade Eight to help.
+
+The activity will be held in Green Mountain Park. We will meet at the school gate at seven thirty in the morning. The school bus will take us to the park.
+
+Each volunteer will get a free T-shirt and a bag of tools. You only need to bring water, a hat, and gloves.
+
+Our goal is to plant two hundred small trees. Last year we only planted one hundred and fifty, so we need everyone's help. After the work, we will have a small picnic together.
+
+To sign up, please write your name and class on the list outside the teacher's office before this Friday. Help us make our city greener!","Attention please, students! This is an important announcement from our school volunteer club.
+
+Next Sunday, March twelfth, we are going to hold a tree planting activity. We need fifty student volunteers from Grade Eight to help.
+
+The activity will be held in Green Mountain Park. We will meet at the school gate at seven thirty in the morning. The school bus will take us to the park.
+
+Each volunteer will get a free T-shirt and a bag of tools. You only need to bring water, a hat, and gloves.
+
+Our goal is to plant two hundred small trees. Last year we only planted one hundred and fifty, so we need everyone's help. After the work, we will have a small picnic together.
+
+To sign up, please write your name and class on the list outside the teacher's office before this Friday. Help us make our city greener!",created,200,1170240,no,,1,openai
+"openai|nova|0.85||When I grow up, I want to be a doctor. Doctors help sick people get better. To be a good doctor, I need to study hard, especially science. I also need to be patient and kind. I know it's not easy, but I will try my best.","When I grow up, I want to be a doctor. Doctors help sick people get better. To be a good doctor, I need to study hard, especially science. I also need to be patient and kind. I know it's not easy, but I will try my best.",created,200,305760,no,,1,openai
+"openai|nova|0.85||Hangzhou has changed dramatically in the past 20 years. The population has grown from 6 million to over 12 million. The subway system has expanded from 2 lines to 11 lines. The city now has more than 50 high-tech parks. Hangzhou hosted the G20 summit in 2016 and the Asian Games in 2023, putting it on the world stage.
+
+【填空内容】
+Hangzhou's population has grown from _____ million to over 12 million. The subway has _____ lines now. There are more than _____ high-tech parks. The city hosted the Asian Games in _____.","Hangzhou has changed dramatically in the past 20 years. The population has grown from 6 million to over 12 million. The subway system has expanded from 2 lines to 11 lines. The city now has more than 50 high-tech parks. Hangzhou hosted the G20 summit in 2016 and the Asian Games in 2023, putting it on the world stage.
+
+【填空内容】
+Hangzhou's population has grown from _____ million to over 12 million. The subway has _____ lines now. There are more than _____ high-tech parks. The city hosted the Asian Games in _____.",created,200,858240,no,,1,openai
+"openai|nova|0.85||M: What shall we do this Saturday?
+W: How about going hiking? The weather forecast says it will be sunny.","M: What shall we do this Saturday?
+W: How about going hiking? The weather forecast says it will be sunny.",created,200,143520,no,,1,openai
+"openai|nova|0.85||A recent study found that teenagers spend an average of 5 hours a day on screens. About 40% of them feel anxious about social media. Sleep quality has decreased significantly — only 60% of teens sleep more than 7 hours per night. Experts recommend limiting screen time and increasing outdoor activities.
+
+【填空内容】
+Teenagers spend _____ hours per day on screens. _____ percent feel anxious about social media. Only _____ percent sleep more than 7 hours. Experts recommend more _____ activities.","A recent study found that teenagers spend an average of 5 hours a day on screens. About 40% of them feel anxious about social media. Sleep quality has decreased significantly — only 60% of teens sleep more than 7 hours per night. Experts recommend limiting screen time and increasing outdoor activities.
+
+【填空内容】
+Teenagers spend _____ hours per day on screens. _____ percent feel anxious about social media. Only _____ percent sleep more than 7 hours. Experts recommend more _____ activities.",created,200,761280,no,,1,openai
+"openai|nova|0.85||M: Did you have a good summer holiday, Lily?
+W: Yes, I went to Sanya with my family. The beach was so beautiful!","M: Did you have a good summer holiday, Lily?
+W: Yes, I went to Sanya with my family. The beach was so beautiful!",created,200,156960,no,,1,openai
+"openai|nova|0.85||W: Have you tried using AI tools to help with study?
+M: Yes, I use them to check grammar in my English essays.
+W: Aren't you worried they might give wrong answers?
+M: That's why I always double-check with my teacher.
+W: Smart approach. What other tools do you use?
+M: I use online dictionaries and language exchange apps.
+W: How do they help you?
+M: I practice English with native speakers from different countries.
+W: That sounds interesting. Where do you find them?
+M: There's an app where students from around the world can practice languages together.","W: Have you tried using AI tools to help with study?
+M: Yes, I use them to check grammar in my English essays.
+W: Aren't you worried they might give wrong answers?
+M: That's why I always double-check with my teacher.
+W: Smart approach. What other tools do you use?
+M: I use online dictionaries and language exchange apps.
+W: How do they help you?
+M: I practice English with native speakers from different countries.
+W: That sounds interesting. Where do you find them?
+M: There's an app where students from around the world can practice languages together.",created,200,793440,no,,1,openai
+"openai|nova|0.85||M: How do you feel about online learning?
+W: It's convenient, but I miss interacting with classmates in person.","M: How do you feel about online learning?
+W: It's convenient, but I miss interacting with classmates in person.",created,200,151680,no,,1,openai
+"openai|nova|0.85||W: Tony, you've lost weight! What's your secret?
+M: I started a fitness program 3 months ago.
+W: Tell me about it!
+M: I exercise for 1 hour daily — running, swimming and weight training.
+W: What about your diet?
+M: I cut down on sugar and fried food. I eat more fruits, vegetables and lean protein.
+W: Is it hard to maintain?
+M: At first, yes. But after 2 months, it became natural.
+W: How much weight have you lost?
+M: About 8 kilograms. But more importantly, I feel much stronger and more energetic.","W: Tony, you've lost weight! What's your secret?
+M: I started a fitness program 3 months ago.
+W: Tell me about it!
+M: I exercise for 1 hour daily — running, swimming and weight training.
+W: What about your diet?
+M: I cut down on sugar and fried food. I eat more fruits, vegetables and lean protein.
+W: Is it hard to maintain?
+M: At first, yes. But after 2 months, it became natural.
+W: How much weight have you lost?
+M: About 8 kilograms. But more importantly, I feel much stronger and more energetic.",created,200,714240,no,,1,openai
+"openai|nova|0.85||M: Lin, I can't decide between two summer camps. Can you help me?
+W: Sure! What are the two options?
+M: One is a math camp in Beijing, the other is an English camp in Shanghai. Both are two weeks.
+W: Hmm. If you go to the math camp, what will you learn?
+M: Advanced math and how to solve competition problems.
+W: And the English camp?
+M: I'll practice speaking with foreign teachers and improve my listening.
+W: Which one do you need more right now?
+M: My math is OK, but my English speaking is weak. If I go to the English camp, I'll feel more confident.
+W: Then go to the English camp! If you don't practice now, you might miss this great chance.
+M: But the math camp has a competition at the end. I could win a prize.
+W: If a prize is more important than improving English, choose math. Otherwise, choose English.
+M: You're right. I'll go to the English camp. Thanks for helping me decide!","M: Lin, I can't decide between two summer camps. Can you help me?
+W: Sure! What are the two options?
+M: One is a math camp in Beijing, the other is an English camp in Shanghai. Both are two weeks.
+W: Hmm. If you go to the math camp, what will you learn?
+M: Advanced math and how to solve competition problems.
+W: And the English camp?
+M: I'll practice speaking with foreign teachers and improve my listening.
+W: Which one do you need more right now?
+M: My math is OK, but my English speaking is weak. If I go to the English camp, I'll feel more confident.
+W: Then go to the English camp! If you don't practice now, you might miss this great chance.
+M: But the math camp has a competition at the end. I could win a prize.
+W: If a prize is more important than improving English, choose math. Otherwise, choose English.
+M: You're right. I'll go to the English camp. Thanks for helping me decide!",created,200,1262880,no,,1,openai
+"openai|nova|0.85||M: Emma, your painting won first prize in the city competition!
+W: Thank you! I worked on it for 3 months.
+M: Tell me about it. What's the theme?
+W: It's called ""Hope"". I drew children planting trees on a hillside.
+M: That's beautiful. Why this theme?
+W: I wanted to show that the future is in young people's hands.
+M: How long have you been painting?
+W: Since I was 8 years old. My grandmother taught me.
+M: Will you continue painting in high school?
+W: Definitely. I want to apply to art universities someday.","M: Emma, your painting won first prize in the city competition!
+W: Thank you! I worked on it for 3 months.
+M: Tell me about it. What's the theme?
+W: It's called ""Hope"". I drew children planting trees on a hillside.
+M: That's beautiful. Why this theme?
+W: I wanted to show that the future is in young people's hands.
+M: How long have you been painting?
+W: Since I was 8 years old. My grandmother taught me.
+M: Will you continue painting in high school?
+W: Definitely. I want to apply to art universities someday.",created,200,728160,no,,1,openai
+"openai|nova|0.85||W: Where will you go for the summer vacation?
+M: My family is planning a trip to Yunnan to see the beautiful scenery.","W: Where will you go for the summer vacation?
+M: My family is planning a trip to Yunnan to see the beautiful scenery.",created,200,161280,no,,1,openai
+"openai|nova|0.85||M: After high school, what's your plan?
+W: I want to study abroad and become a translator.","M: After high school, what's your plan?
+W: I want to study abroad and become a translator.",created,200,101280,no,,1,openai
+"openai|nova|0.85||M: Is your sister as outgoing as you, Lin?
+W: No, she's much quieter. I'm more talkative than her.","M: Is your sister as outgoing as you, Lin?
+W: No, she's much quieter. I'm more talkative than her.",created,200,115680,no,,1,openai
+"openai|nova|0.85||M: Mom, why do I have to do so many chores? My friends don't!
+W: Tom, doing chores teaches you responsibility. It's an important life skill.
+M: But my friends spend their weekends playing. I have to clean and cook!
+W: Listen, you don't have to cook every day, just on Saturdays. And I always help.
+M: What chores does Lily do? She's younger than me.
+W: She has to feed the cat and water the plants every day. She also folds her own laundry.
+M: That's easier than my chores!
+W: That's because she's younger. As you grow up, your responsibilities grow too.
+M: When can I stop doing chores?
+W: Never, Tom. Even adults do chores. But you'll thank me one day. Many of my friends couldn't cook when they got married. You won't have that problem.
+M: I see your point. Maybe I should be grateful instead of complaining.
+W: That's the spirit! Now please take out the trash before dinner.","M: Mom, why do I have to do so many chores? My friends don't!
+W: Tom, doing chores teaches you responsibility. It's an important life skill.
+M: But my friends spend their weekends playing. I have to clean and cook!
+W: Listen, you don't have to cook every day, just on Saturdays. And I always help.
+M: What chores does Lily do? She's younger than me.
+W: She has to feed the cat and water the plants every day. She also folds her own laundry.
+M: That's easier than my chores!
+W: That's because she's younger. As you grow up, your responsibilities grow too.
+M: When can I stop doing chores?
+W: Never, Tom. Even adults do chores. But you'll thank me one day. Many of my friends couldn't cook when they got married. You won't have that problem.
+M: I see your point. Maybe I should be grateful instead of complaining.
+W: That's the spirit! Now please take out the trash before dinner.",created,200,1235520,no,,1,openai
+"openai|nova|0.85||W: Did you take the bus or subway today?
+M: Neither. I biked because of the nice weather.","W: Did you take the bus or subway today?
+M: Neither. I biked because of the nice weather.",created,200,100800,no,,1,openai
+"openai|nova|0.85||W: Would you mind helping me with the dishes after dinner?
+M: Not at all. I'll wash and you can dry.","W: Would you mind helping me with the dishes after dinner?
+M: Not at all. I'll wash and you can dry.",created,200,129600,no,,1,openai
+"openai|nova|0.85||W: Where did you volunteer last summer, Tom?
+M: I taught English to children in a small village for two weeks.","W: Where did you volunteer last summer, Tom?
+M: I taught English to children in a small village for two weeks.",created,200,152160,no,,1,openai
+"openai|nova|0.85||M: Why did the train arrive so late?
+W: There was a heavy rainstorm last night. It blocked some of the tracks.","M: Why did the train arrive so late?
+W: There was a heavy rainstorm last night. It blocked some of the tracks.",created,200,139200,no,,1,openai
+"openai|nova|0.85||W: Hi Tom, what's wrong with you today?
+M: Doctor, I've been feeling tired all the time, even after a full night's sleep.
+W: How long have you been feeling like this?
+M: For about three weeks now. It's getting worse.
+W: I see. How often do you exercise these days?
+M: I rarely exercise. I'm too busy with school and homework.
+W: That might be part of the problem. What about your eating habits?
+M: I usually skip breakfast and have fast food for lunch and dinner.
+W: You should change that. Eat breakfast every day, drink eight glasses of water, and exercise at least three times a week.
+M: OK, I'll try. Should I also take any medicine?
+W: Not yet. Try these changes for two weeks. If you still feel tired, come back and I'll do more tests.","W: Hi Tom, what's wrong with you today?
+M: Doctor, I've been feeling tired all the time, even after a full night's sleep.
+W: How long have you been feeling like this?
+M: For about three weeks now. It's getting worse.
+W: I see. How often do you exercise these days?
+M: I rarely exercise. I'm too busy with school and homework.
+W: That might be part of the problem. What about your eating habits?
+M: I usually skip breakfast and have fast food for lunch and dinner.
+W: You should change that. Eat breakfast every day, drink eight glasses of water, and exercise at least three times a week.
+M: OK, I'll try. Should I also take any medicine?
+W: Not yet. Try these changes for two weeks. If you still feel tired, come back and I'll do more tests.",created,200,1037280,no,,1,openai
+"openai|nova|0.85||Climate change is one of the biggest problems facing our planet today. The Earth's temperature has risen by about 1 degree Celsius over the past century. This has caused melting glaciers, rising sea levels and extreme weather. Scientists say if we don't act soon, the situation will get much worse. Each of us can help by using less electricity, walking or biking instead of driving, and recycling. Small actions can make a big difference. We must protect our planet for future generations.","Climate change is one of the biggest problems facing our planet today. The Earth's temperature has risen by about 1 degree Celsius over the past century. This has caused melting glaciers, rising sea levels and extreme weather. Scientists say if we don't act soon, the situation will get much worse. Each of us can help by using less electricity, walking or biking instead of driving, and recycling. Small actions can make a big difference. We must protect our planet for future generations.",created,200,715680,no,,1,openai
+"openai|nova|0.85||W: Mom, can I go play now?
+M: Not yet. You have to clean your room and take out the trash first.","W: Mom, can I go play now?
+M: Not yet. You have to clean your room and take out the trash first.",created,200,120480,no,,1,openai
+"openai|nova|0.85||W: I'm thinking of buying a new smartphone.
+M: Why? Yours still works fine.","W: I'm thinking of buying a new smartphone.
+M: Why? Yours still works fine.",created,200,106080,no,,1,openai
+"openai|nova|0.85||W: Tom, do you think technology will change our lives a lot in 20 years?
+M: Definitely. I think robots will do most of the housework, like cleaning and cooking.
+W: That sounds nice. What else?
+M: Cars will drive themselves. We won't need to learn how to drive anymore.
+W: Hmm, but what about jobs? Will robots take all our jobs?
+M: Not all of them. We'll still need teachers, doctors, and artists. Robots can't be creative like humans.
+W: I'm worried about the environment, though. Will it get better or worse?
+M: I hope better. Many countries are using more solar and wind power. Cars will be electric.
+W: What about education?
+M: Students will learn from anywhere using virtual reality. School won't look like today's.
+W: That's exciting! But I'll miss the classroom feel.
+M: Same here. Some things shouldn't change.","W: Tom, do you think technology will change our lives a lot in 20 years?
+M: Definitely. I think robots will do most of the housework, like cleaning and cooking.
+W: That sounds nice. What else?
+M: Cars will drive themselves. We won't need to learn how to drive anymore.
+W: Hmm, but what about jobs? Will robots take all our jobs?
+M: Not all of them. We'll still need teachers, doctors, and artists. Robots can't be creative like humans.
+W: I'm worried about the environment, though. Will it get better or worse?
+M: I hope better. Many countries are using more solar and wind power. Cars will be electric.
+W: What about education?
+M: Students will learn from anywhere using virtual reality. School won't look like today's.
+W: That's exciting! But I'll miss the classroom feel.
+M: Same here. Some things shouldn't change.",created,200,1161600,no,,1,openai
+"openai|nova|0.85||W: This soup smells delicious! What's in it?
+M: Mushrooms, tomatoes and a bit of garlic. Try it!","W: This soup smells delicious! What's in it?
+M: Mushrooms, tomatoes and a bit of garlic. Try it!",created,200,128160,no,,1,openai
+"openai|nova|0.85||W: Is math more difficult than English for you?
+M: Yes, much more. I'm good at English, but math is really hard.","W: Is math more difficult than English for you?
+M: Yes, much more. I'm good at English, but math is really hard.",created,200,158400,no,,1,openai
+"openai|nova|0.85||Being a teenager is both exciting and challenging. You're discovering who you are and what you want from life. Friendships become more important. School becomes more demanding. Sometimes you may disagree with your parents and feel misunderstood. These feelings are normal. The teenage years are about learning, growing and making mistakes. Don't be afraid to try new things. Don't be afraid to fail. Each experience shapes you. Talk to trusted adults — parents, teachers or counselors — when you need help. Remember, you're not alone. Every adult has gone through what you're feeling.","Being a teenager is both exciting and challenging. You're discovering who you are and what you want from life. Friendships become more important. School becomes more demanding. Sometimes you may disagree with your parents and feel misunderstood. These feelings are normal. The teenage years are about learning, growing and making mistakes. Don't be afraid to try new things. Don't be afraid to fail. Each experience shapes you. Talk to trusted adults — parents, teachers or counselors — when you need help. Remember, you're not alone. Every adult has gone through what you're feeling.",created,200,843360,no,,1,openai
+"openai|nova|0.85||W: Have you ever traveled by plane, Mike?
+M: No, never. I'd love to try it someday.","W: Have you ever traveled by plane, Mike?
+M: No, never. I'd love to try it someday.",created,200,111840,no,,1,openai
+"openai|nova|0.85||M: Would you mind turning down the music, Lily? I'm studying.
+W: Oh, sorry. I'll use my headphones.","M: Would you mind turning down the music, Lily? I'm studying.
+W: Oh, sorry. I'll use my headphones.",created,200,125280,no,,1,openai
+openai|nova|0.85||The teacher who understands students best can change their lives forever.,The teacher who understands students best can change their lives forever.,created,200,90240,no,,1,openai
+"openai|nova|0.85||M: Lily, I heard you have a twin brother. Are you two similar?
+W: Actually, no. We're very different. Tom is more outgoing than me.
+M: Really? In what other ways are you different?
+W: I'm taller than him by 2 centimeters, but he's heavier. He loves eating!
+M: Haha! Who is better at sports?
+W: Definitely Tom. He's the best basketball player on his team. I prefer reading and art.
+M: So you're more like an artist?
+W: Yes. I'm the most creative person in my family, I think. Tom is more athletic.
+M: What about study? Who gets better grades?
+W: We're about the same. But Tom is better at math, while I'm the strongest at English.
+M: Sounds like you complement each other well.
+W: We do! That's why we're also best friends.","M: Lily, I heard you have a twin brother. Are you two similar?
+W: Actually, no. We're very different. Tom is more outgoing than me.
+M: Really? In what other ways are you different?
+W: I'm taller than him by 2 centimeters, but he's heavier. He loves eating!
+M: Haha! Who is better at sports?
+W: Definitely Tom. He's the best basketball player on his team. I prefer reading and art.
+M: So you're more like an artist?
+W: Yes. I'm the most creative person in my family, I think. Tom is more athletic.
+M: What about study? Who gets better grades?
+W: We're about the same. But Tom is better at math, while I'm the strongest at English.
+M: Sounds like you complement each other well.
+W: We do! That's why we're also best friends.",created,200,987360,no,,1,openai
+"openai|nova|0.85||M: Should I take the bus or ride my bike to school?
+W: It's raining today. The bus would be better — drier and warmer.","M: Should I take the bus or ride my bike to school?
+W: It's raining today. The bus would be better — drier and warmer.",created,200,166080,no,,1,openai
+"openai|nova|0.85||M: Will computers be smarter than humans someday?
+W: They are already smarter at many things, but humans still have feelings.","M: Will computers be smarter than humans someday?
+W: They are already smarter at many things, but humans still have feelings.",created,200,177600,no,,1,openai
+"openai|nova|0.85||W: How often do you exercise, Tom?
+M: I run three times a week and play basketball every Sunday.","W: How often do you exercise, Tom?
+M: I run three times a week and play basketball every Sunday.",created,200,135360,no,,1,openai
+"openai|nova|0.85||M: Do you help with housework?
+W: Yes, I cook dinner twice a week and do the laundry on weekends.","M: Do you help with housework?
+W: Yes, I cook dinner twice a week and do the laundry on weekends.",created,200,132480,no,,1,openai
+"openai|nova|0.85||M: How long have you been studying English?
+W: For about six years. I started in primary school.","M: How long have you been studying English?
+W: For about six years. I started in primary school.",created,200,130080,no,,1,openai
+"openai|nova|0.85||W: Should kids have smartphones?
+M: It depends on age and how they use them.","W: Should kids have smartphones?
+M: It depends on age and how they use them.",created,200,99360,no,,1,openai
+openai|nova|0.85||Reducing plastic waste is everyone's responsibility in protecting the environment.,Reducing plastic waste is everyone's responsibility in protecting the environment.,created,200,102240,no,,1,openai
+"openai|nova|0.85||Helping those in need not only helps them, but also makes us better people.","Helping those in need not only helps them, but also makes us better people.",created,200,96960,no,,1,openai
+"openai|nova|0.85||A survey of 1000 middle school students reveals interesting trends. 75% spend over 3 hours daily on homework. The most popular subject is English, chosen by 35%. About 80% want to attend universities, while 15% prefer vocational schools. Only 5% have not decided yet. The biggest concern is exam pressure.
+
+【填空内容】
+The survey covered _____ students. _____ percent spend over 3 hours on homework. The most popular subject is _____. _____ percent prefer vocational schools.","A survey of 1000 middle school students reveals interesting trends. 75% spend over 3 hours daily on homework. The most popular subject is English, chosen by 35%. About 80% want to attend universities, while 15% prefer vocational schools. Only 5% have not decided yet. The biggest concern is exam pressure.
+
+【填空内容】
+The survey covered _____ students. _____ percent spend over 3 hours on homework. The most popular subject is _____. _____ percent prefer vocational schools.",created,200,759840,no,,1,openai
+"openai|nova|0.85||Artificial intelligence, or AI, is changing our world rapidly. AI can already drive cars, translate languages and help doctors diagnose diseases. In the future, AI will likely transform many jobs. Some tasks will be done by robots, but new jobs will also be created. Experts predict that creative thinking, communication skills and emotional intelligence will be the most valuable skills in the AI era. Students today need to develop these skills along with technical knowledge. The future is uncertain but full of possibilities. Those who can adapt and keep learning will succeed.","Artificial intelligence, or AI, is changing our world rapidly. AI can already drive cars, translate languages and help doctors diagnose diseases. In the future, AI will likely transform many jobs. Some tasks will be done by robots, but new jobs will also be created. Experts predict that creative thinking, communication skills and emotional intelligence will be the most valuable skills in the AI era. Students today need to develop these skills along with technical knowledge. The future is uncertain but full of possibilities. Those who can adapt and keep learning will succeed.",created,200,834720,no,,1,openai
+"openai|nova|0.85||W: Would you like to come to my birthday party on Saturday?
+M: I'd love to! What time should I be there?","W: Would you like to come to my birthday party on Saturday?
+M: I'd love to! What time should I be there?",created,200,132480,no,,1,openai
+elevenlabs|el:lily|0.7||His name is Lin Tao.,His name is Lin Tao.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||His friend is from England.,His friend is from England.,created,200,79104,no,,1,openai
+elevenlabs|el:lily|0.7||A greeting when you meet someone.,A greeting when you meet someone.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||She asks him to spell his name.,She asks him to spell his name.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.7||They are in the same class.,They are in the same class.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||Class starts at eight.,Class starts at eight.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||The schoolbag is blue.,The schoolbag is blue.,created,200,69120,no,,1,openai
+elevenlabs|el:lily|0.7||There is an eraser and a key.,There is an eraser and a key.,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.7||The key is not his.,The key is not his.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||The bottle is green.,The bottle is green.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||He is tidy.,He is tidy.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||The books are his.,The books are his.,created,200,48384,no,,1,openai
+elevenlabs|el:lily|0.7||There is a tree in the yard.,There is a tree in the yard.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||There are two geese.,There are two geese.,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||Ten flowers.,Ten flowers.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||A welcome.,A welcome.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||A carrot is in the basket.,A carrot is in the basket.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||The yard is fun.,The yard is fun.,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||His name is Tom.,His name is Tom.,created,200,43776,no,,1,openai
+"elevenlabs|el:lily|0.7||Class Three, Grade Seven","Class Three, Grade Seven",created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.7||Lily is from England.,Lily is from England.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||She is thirteen.,She is thirteen.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||Nice to meet you!,Nice to meet you!,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||We are in the same class.,We are in the same class.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||His grandparents live with him.,His grandparents live with him.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||Father plays chess with him.,Father plays chess with him.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||Mother is a doctor.,Mother is a doctor.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||Grandfather plays the violin.,Grandfather plays the violin.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||They do activities together.,They do activities together.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||He has a twin brother.,He has a twin brother.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||There is a library.,There is a library.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.7||The office is on the second floor.,The office is on the second floor.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||The playground is in front of the building.,The playground is in front of the building.,created,200,77760,no,,1,openai
+elevenlabs|el:lily|0.7||They raise the flag on the playground.,They raise the flag on the playground.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||The gym is behind the office.,The gym is behind the office.,created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.7||The school is amazing.,The school is amazing.,created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.7||She likes English best.,She likes English best.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||English is useful.,English is useful.,created,200,36096,no,,1,openai
+elevenlabs|el:lily|0.7||She works hard at maths.,She works hard at maths.,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||The teacher is kind.,The teacher is kind.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||Three subjects on Monday.,Three subjects on Monday.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||She wants to learn English well.,She wants to learn English well.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||He can sing and play guitar.,He can sing and play guitar.,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.7||Sam can dance.,Sam can dance.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||He wants the music club.,He wants the music club.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||Students paint in the art club.,Students paint in the art club.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||He can play chess.,He can play chess.,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||Clubs help make friends.,Clubs help make friends.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||He gets up at six thirty.,He gets up at six thirty.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||Breakfast at seven.,Breakfast at seven.,created,200,87168,no,,1,openai
+elevenlabs|el:lily|0.7||Four morning classes.,Four morning classes.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||He plays basketball after school.,He plays basketball after school.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||Bed at ten.,Bed at ten.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||His day is busy but happy.,His day is busy but happy.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||Birthday on October 1st.,Birthday on October 1st.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||A party every year.,A party every year.,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.7||He makes a wish.,He makes a wish.,created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.7||He wants a bike.,He wants a bike.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||Grandmother makes noodles.,Grandmother makes noodles.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||He is happy.,He is happy.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||She likes pandas.,She likes pandas.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||The giraffe has a long neck.,The giraffe has a long neck.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||Elephants are big and grey.,Elephants are big and grey.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||Pandas come from China.,Pandas come from China.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||Koalas are from Australia.,Koalas are from Australia.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||He doesn't like snakes.,He doesn't like snakes.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||They must wear a uniform.,They must wear a uniform.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||Running in the hallways is not allowed.,Running in the hallways is not allowed.,created,200,96384,no,,1,openai
+elevenlabs|el:lily|0.7||They must arrive before eight.,They must arrive before eight.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||Phones are not allowed in class.,Phones are not allowed in class.,created,200,69120,no,,1,openai
+elevenlabs|el:lily|0.7||Keep the classroom clean.,Keep the classroom clean.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||Respect the teachers.,Respect the teachers.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||He always runs in the morning.,He always runs in the morning.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||Twice a week.,Twice a week.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||He seldom eats junk food.,He seldom eats junk food.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||Asking about frequency.,Asking about frequency.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||Jumping rope is healthy.,Jumping rope is healthy.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||He never drinks cola.,He never drinks cola.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||He wants dumplings.,He wants dumplings.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||Asking about a countable number.,Asking about a countable number.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||She drinks milk in the morning.,She drinks milk in the morning.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||Sugar is bad for teeth.,Sugar is bad for teeth.,created,200,90624,no,,1,openai
+elevenlabs|el:lily|0.7||Eat more vegetables and fruit.,Eat more vegetables and fruit.,created,200,72576,no,,1,openai
+elevenlabs|el:lily|0.7||He eats little meat.,He eats little meat.,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||Mother is making zongzi.,Mother is making zongzi.,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||They are watching a race.,They are watching a race.,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||He is writing a message.,He is writing a message.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||Somebody is singing.,Somebody is singing.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||The children are riding bikes.,The children are riding bikes.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||The baby is sleeping.,The baby is sleeping.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||It is raining hard.,It is raining hard.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||Asking about the weather.,Asking about the weather.,created,200,41472,no,,1,openai
+elevenlabs|el:lily|0.7||The north is cold and windy.,The north is cold and windy.,created,200,64512,no,,1,openai
+elevenlabs|el:lily|0.7||It is snowing.,It is snowing.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||It is very cold today.,It is very cold today.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||They stay inside because of the storm.,They stay inside because of the storm.,created,200,103296,no,,1,openai
+elevenlabs|el:lily|0.7||They went to the museum.,They went to the museum.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||They saw robots.,They saw robots.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.7||He took many photos.,He took many photos.,created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.7||They planted trees.,They planted trees.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||He enjoyed the trip.,He enjoyed the trip.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||It was a wonderful day.,It was a wonderful day.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||There was a wise old man.,There was a wise old man.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.7||He asked how to be happy.,He asked how to be happy.,created,200,76032,no,,1,openai
+elevenlabs|el:lily|0.7||Don't tell lies.,Don't tell lies.,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.7||He helped the poor.,He helped the poor.,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.7||The emperor became happy.,The emperor became happy.,created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.7||People lived in villages.,People lived in villages.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||He went to the mountains.,He went to the mountains.,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.7||The scenery was beautiful.,The scenery was beautiful.,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||She stayed around home.,She stayed around home.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||They stayed in a nice hotel.,They stayed in a nice hotel.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||A guide led their tour.,A guide led their tour.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.7||She took lots of photos.,She took lots of photos.,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||He is asking for help to pack boxes.,He is asking for help to pack boxes.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.7||She is asking permission to decorate her bedroom.,She is asking permission to decorate her bedroom.,created,200,89280,no,,1,openai
+elevenlabs|el:lily|0.7||They asked the neighbours to come for dinner.,They asked the neighbours to come for dinner.,created,200,81120,no,,1,openai
+elevenlabs|el:lily|0.7||He is asking to borrow some plates.,He is asking to borrow some plates.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.7||He wants the books put on the balcony.,He wants the books put on the balcony.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||She wants flowers added to the living room.,She wants flowers added to the living room.,created,200,78240,no,,1,openai
+elevenlabs|el:lily|0.7||His sister is more outgoing than him,His sister is more outgoing than him,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.7||Tom works as hard as Jack,Tom works as hard as Jack,created,200,49536,no,,1,openai
+elevenlabs|el:lily|0.7||Lily is taller and slimmer than Ann,Lily is taller and slimmer than Ann,created,200,94464,no,,1,openai
+elevenlabs|el:lily|0.7||We share many things,We share many things,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.7||My friend is shyer than me,My friend is shyer than me,created,200,72576,no,,1,openai
+elevenlabs|el:lily|0.7||Their characters are not the same,Their characters are not the same,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.7||The cheetah runs faster than any other land animal.,The cheetah runs faster than any other land animal.,created,200,92640,no,,1,openai
+elevenlabs|el:lily|0.7||Bamboo is among the most useful plants.,Bamboo is among the most useful plants.,created,200,97536,no,,1,openai
+elevenlabs|el:lily|0.7||Bees move pollen between flowers.,Bees move pollen between flowers.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.7||No ocean animal is larger than the blue whale.,No ocean animal is larger than the blue whale.,created,200,83040,no,,1,openai
+elevenlabs|el:lily|0.7||The butterfly's wings are very colourful.,The butterfly's wings are very colourful.,created,200,73920,no,,1,openai
+elevenlabs|el:lily|0.7||The redwood is among the tallest trees.,The redwood is among the tallest trees.,created,200,81792,no,,1,openai
+elevenlabs|el:lily|0.7||You should heat oil in the pan first.,You should heat oil in the pan first.,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.7||The cake you baked is very delicious.,The cake you baked is very delicious.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||You should mix the flour and butter together.,You should mix the flour and butter together.,created,200,81120,no,,1,openai
+elevenlabs|el:lily|0.7||The recipe is very easy.,The recipe is very easy.,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||We need cheese and a little pepper.,We need cheese and a little pepper.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||Bake the pie in the oven for twenty minutes.,Bake the pie in the oven for twenty minutes.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.7||He plans to learn the guitar this year.,He plans to learn the guitar this year.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.7||She plans to read one English book each week.,She plans to read one English book each week.,created,200,82560,no,,1,openai
+elevenlabs|el:lily|0.7||His small goal is ten new words each day.,His small goal is ten new words each day.,created,200,74400,no,,1,openai
+elevenlabs|el:lily|0.7||He hopes to be an engineer in the future.,He hopes to be an engineer in the future.,created,200,74400,no,,1,openai
+elevenlabs|el:lily|0.7||She will keep trying even after failing.,She will keep trying even after failing.,created,200,78336,no,,1,openai
+elevenlabs|el:lily|0.7||He plans to be organized and keep his room tidy.,He plans to be organized and keep his room tidy.,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||Robots will take care of most housework.,Robots will take care of most housework.,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.7||A better transport system will mean fewer accidents.,A better transport system will mean fewer accidents.,created,200,94080,no,,1,openai
+"elevenlabs|el:lily|0.7||Old jobs may go, and new jobs like AI experts will come.","Old jobs may go, and new jobs like AI experts will come.",created,200,98400,no,,1,openai
+elevenlabs|el:lily|0.7||The speaker is asking if most people will live in space.,The speaker is asking if most people will live in space.,created,200,100320,no,,1,openai
+elevenlabs|el:lily|0.7||Human creativity means AI won't fully replace us.,Human creativity means AI won't fully replace us.,created,200,89280,no,,1,openai
+elevenlabs|el:lily|0.7||What you choose today will shape your future.,What you choose today will shape your future.,created,200,80160,no,,1,openai
+elevenlabs|el:lily|0.7||Listening well helps you understand people more.,Listening well helps you understand people more.,created,200,84960,no,,1,openai
+elevenlabs|el:lily|0.7||You should focus when someone is speaking.,You should focus when someone is speaking.,created,200,76320,no,,1,openai
+elevenlabs|el:lily|0.7||Texting online can lead to confusion.,Texting online can lead to confusion.,created,200,70272,no,,1,openai
+elevenlabs|el:lily|0.7||A smile makes others feel at ease.,A smile makes others feel at ease.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.7||Important things are best discussed in person.,Important things are best discussed in person.,created,200,83520,no,,1,openai
+"elevenlabs|el:lily|0.7||After an argument, you should make peace.","After an argument, you should make peace.",created,200,72960,no,,1,openai
+elevenlabs|el:lily|0.7||He learns calligraphy to show his feelings.,He learns calligraphy to show his feelings.,created,200,77760,no,,1,openai
+elevenlabs|el:lily|0.7||My dad asked me to talk with him after dinner.,My dad asked me to talk with him after dinner.,created,200,83040,no,,1,openai
+elevenlabs|el:lily|0.7||We take a trip each weekend to relax.,We take a trip each weekend to relax.,created,200,83712,no,,1,openai
+elevenlabs|el:lily|0.7||I felt afraid but I kept on.,I felt afraid but I kept on.,created,200,67968,no,,1,openai
+elevenlabs|el:lily|0.7||Yoga helps me feel less stressed.,Yoga helps me feel less stressed.,created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.7||My teacher told me not to fear failure.,My teacher told me not to fear failure.,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.7||He feels sick and plans to see a doctor.,He feels sick and plans to see a doctor.,created,200,76032,no,,1,openai
+elevenlabs|el:lily|0.7||The advice is to drink warm water and take medicine.,The advice is to drink warm water and take medicine.,created,200,93600,no,,1,openai
+elevenlabs|el:lily|0.7||You could hurt yourself with the knife.,You could hurt yourself with the knife.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||You could lie down and rest.,You could lie down and rest.,created,200,78336,no,,1,openai
+elevenlabs|el:lily|0.7||Learning first aid helps them care for themselves.,Learning first aid helps them care for themselves.,created,200,90720,no,,1,openai
+elevenlabs|el:lily|0.7||Exercise often and stay away from junk food.,Exercise often and stay away from junk food.,created,200,78240,no,,1,openai
+elevenlabs|el:lily|0.7||She made friends even though she felt lonely.,She made friends even though she felt lonely.,created,200,82080,no,,1,openai
+elevenlabs|el:lily|0.7||She calmed down only after taking deep breaths.,She calmed down only after taking deep breaths.,created,200,85920,no,,1,openai
+elevenlabs|el:lily|0.7||She wrote a letter to make up with her friend.,She wrote a letter to make up with her friend.,created,200,82080,no,,1,openai
+elevenlabs|el:lily|0.7||The coach was proud even though the team lost.,The coach was proud even though the team lost.,created,200,83040,no,,1,openai
+elevenlabs|el:lily|0.7||She kept the secret until her emotions became too strong.,She kept the secret until her emotions became too strong.,created,200,104640,no,,1,openai
+elevenlabs|el:lily|0.7||He was kind to me to help me feel less upset.,He was kind to me to help me feel less upset.,created,200,82080,no,,1,openai
+elevenlabs|el:lily|0.7||The mountain is the highest in the world.,The mountain is the highest in the world.,created,200,73920,no,,1,openai
+elevenlabs|el:lily|0.7||The river is longer than expected.,The river is longer than expected.,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.7||Water is important for surviving in the desert.,Water is important for surviving in the desert.,created,200,84480,no,,1,openai
+elevenlabs|el:lily|0.7||The waterfall is the most popular spot in the area.,The waterfall is the most popular spot in the area.,created,200,93120,no,,1,openai
+elevenlabs|el:lily|0.7||The coast is known for its natural beauty.,The coast is known for its natural beauty.,created,200,75360,no,,1,openai
+elevenlabs|el:lily|0.7||Climbing the cliff was the most dangerous part.,Climbing the cliff was the most dangerous part.,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||The storm began while he was walking home.,The storm began while he was walking home.,created,200,76320,no,,1,openai
+elevenlabs|el:lily|0.7||People were told to leave before the tsunami.,People were told to leave before the tsunami.,created,200,82560,no,,1,openai
+elevenlabs|el:lily|0.7||The earthquake woke her sister while she slept.,The earthquake woke her sister while she slept.,created,200,84000,no,,1,openai
+elevenlabs|el:lily|0.7||The rescue team gave the village food and water.,The rescue team gave the village food and water.,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||The typhoon damaged part of the roof.,The typhoon damaged part of the roof.,created,200,105984,no,,1,openai
+elevenlabs|el:lily|0.7||We hid under the table as the building shook.,We hid under the table as the building shook.,created,200,81120,no,,1,openai
+elevenlabs|el:lily|0.7||Japanese people bow right after meeting.,Japanese people bow right after meeting.,created,200,92928,no,,1,openai
+"elevenlabs|el:lily|0.7||You must say thank you, or the host may feel you are impolite.","You must say thank you, or the host may feel you are impolite.",created,200,109920,no,,1,openai
+elevenlabs|el:lily|0.7||Putting elbows on the table is bad manners.,Putting elbows on the table is bad manners.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.7||You should thank the giver right after receiving a gift.,You should thank the giver right after receiving a gift.,created,200,100320,no,,1,openai
+elevenlabs|el:lily|0.7||The strict custom stopped people eating before the host.,The strict custom stopped people eating before the host.,created,200,101280,no,,1,openai
+elevenlabs|el:lily|0.7||French friends greet by kissing the cheek.,French friends greet by kissing the cheek.,created,200,75360,no,,1,openai
+elevenlabs|el:lily|0.7||The speaker has only recently completed a detective story.,The speaker has only recently completed a detective story.,created,200,105120,no,,1,openai
+elevenlabs|el:lily|0.7||The speaker is asking if you have already read the fantasy novel.,The speaker is asking if you have already read the fantasy novel.,created,200,117120,no,,1,openai
+elevenlabs|el:lily|0.7||The friend has not read a mystery book at any time before.,The friend has not read a mystery book at any time before.,created,200,104640,no,,1,openai
+elevenlabs|el:lily|0.7||The teacher has suggested three books to the class.,The teacher has suggested three books to the class.,created,200,91680,no,,1,openai
+elevenlabs|el:lily|0.7||The story made the speaker want to write a story too.,The story made the speaker want to write a story too.,created,200,96480,no,,1,openai
+elevenlabs|el:lily|0.7||The speaker is asking about your past experience of meeting a writer.,The speaker is asking about your past experience of meeting a writer.,created,200,125280,no,,1,openai
+elevenlabs|el:lily|0.7||The speaker has volunteered at the nursing home for two years.,The speaker has volunteered at the nursing home for two years.,created,200,111840,no,,1,openai
+elevenlabs|el:lily|0.7||They have given clothes to children in need since spring.,They have given clothes to children in need since spring.,created,200,103200,no,,1,openai
+elevenlabs|el:lily|0.7||The brother has helped the elderly every weekend since age twelve.,The brother has helped the elderly every weekend since age twelve.,created,200,119520,no,,1,openai
+elevenlabs|el:lily|0.7||The charity has provided food for poor families for five years.,The charity has provided food for poor families for five years.,created,200,113760,no,,1,openai
+elevenlabs|el:lily|0.7||She has been active in the group since last October.,She has been active in the group since last October.,created,200,94560,no,,1,openai
+elevenlabs|el:lily|0.7||I am willing to make an effort to help others.,I am willing to make an effort to help others.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.7||I study English by reading stories every night.,I study English by reading stories every night.,created,200,84960,no,,1,openai
+elevenlabs|el:lily|0.7||How do you improve your listening?,How do you improve your listening?,created,200,89856,no,,1,openai
+elevenlabs|el:lily|0.7||You can learn new words by making word cards.,You can learn new words by making word cards.,created,200,81600,no,,1,openai
+elevenlabs|el:lily|0.7||I improved my listening by watching English videos.,I improved my listening by watching English videos.,created,200,93120,no,,1,openai
+"elevenlabs|el:lily|0.7||Be patient, and you will get better step by step.","Be patient, and you will get better step by step.",created,200,85440,no,,1,openai
+elevenlabs|el:lily|0.7||Everyone can become a good learner by working hard.,Everyone can become a good learner by working hard.,created,200,91200,no,,1,openai
+elevenlabs|el:lily|0.7||I think that mooncakes are delicious.,I think that mooncakes are delicious.,created,200,110208,no,,1,openai
+elevenlabs|el:lily|0.7||What a wonderful festival it is!,What a wonderful festival it is!,created,200,61056,no,,1,openai
+elevenlabs|el:lily|0.7||We watch the dragon boat races by the river.,We watch the dragon boat races by the river.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.7||Families get together and look at the full moon.,Families get together and look at the full moon.,created,200,86400,no,,1,openai
+elevenlabs|el:lily|0.7||How exciting the lantern show is!,How exciting the lantern show is!,created,200,77184,no,,1,openai
+elevenlabs|el:lily|0.7||People give red packets at Spring Festival.,People give red packets at Spring Festival.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.7||How was your vacation?,How was your vacation?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||What are they used for?,What are they used for?,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.7||What a cool story!,What a cool story!,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||Do you think you have made correct matches in 2a?,Do you think you have made correct matches in 2a?,created,200,92160,no,,1,openai
+elevenlabs|el:lily|0.7||Is he/she asked …?,Is he/she asked …?,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||Do you know when the bookstore closes today?,Do you know when the bookstore closes today?,created,200,78240,no,,1,openai
+elevenlabs|el:lily|0.7||Can you tell me who she is?,Can you tell me who she is?,created,200,61056,no,,1,openai

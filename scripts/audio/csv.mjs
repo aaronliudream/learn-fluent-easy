@@ -8,33 +8,43 @@
  * 单测见 src/lib/primaryHub/audioAuditCore.test.ts（含 CRLF fixture）。
  */
 
-/** @returns {Array<Record<string,string>>} */
+/**
+ * @returns {Array<Record<string,string>>}
+ *
+ * ⚠️ 必须**单趟扫描**，不能"先按换行切行、再按引号切列"。
+ * 后者对带换行的单元格（初中听力 `transcript` 就有）会把一行切成好几条垃圾记录：
+ * 表面上"解析成功、条数还变多了"，实际 cache_key 全是碎片。
+ * 我们自己踩过：junior 盘点第一版按 CSV 统计出 9974 条缺口，而导出侧只有 9502 条。
+ */
 export function parseCsv(text) {
-  const lines = String(text).replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.length > 0);
-  if (!lines.length) return [];
-  const cols = splitLine(lines[0]);
-  return lines.slice(1).map((line) => {
-    const cells = splitLine(line);
-    return Object.fromEntries(cols.map((c, i) => [c, cells[i] ?? '']));
-  });
-}
-
-function splitLine(line) {
-  const out = [];
+  const s = String(text).replace(/^﻿/, '');
+  const rows = [];
+  let row = [];
   let cur = '';
   let q = false;
-  for (let i = 0; i < line.length; i++) {
-    const c = line[i];
+  let started = false; // 本行是否已有内容（用来区分"空行"与"末尾换行"）
+  const endCell = () => { row.push(cur); cur = ''; started = true; };
+  const endRow = () => { endCell(); rows.push(row); row = []; started = false; };
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
     if (q) {
       if (c === '"') {
-        if (line[i + 1] === '"') { cur += '"'; i++; } else q = false;
+        if (s[i + 1] === '"') { cur += '"'; i++; } else q = false;
       } else cur += c;
-    } else if (c === '"') q = true;
-    else if (c === ',') { out.push(cur); cur = ''; }
-    else cur += c;
+      continue;
+    }
+    if (c === '"') { q = true; started = true; continue; }
+    if (c === ',') { endCell(); continue; }
+    if (c === '\r') { if (s[i + 1] === '\n') i++; endRow(); continue; }
+    if (c === '\n') { endRow(); continue; }
+    cur += c;
+    started = true;
   }
-  out.push(cur);
-  return out;
+  if (started || cur.length) endRow();
+  const nonEmpty = rows.filter((r) => r.length > 1 || r[0] !== '');
+  if (!nonEmpty.length) return [];
+  const cols = nonEmpty[0];
+  return nonEmpty.slice(1).map((cells) => Object.fromEntries(cols.map((c, i) => [c, cells[i] ?? ''])));
 }
 
 export const escapeCell = (v) => {

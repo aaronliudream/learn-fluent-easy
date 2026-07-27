@@ -1,0 +1,278 @@
+﻿key,text,status,cdn_status,bytes,needs_purge,reason,attempts,provider
+elevenlabs|el:lily|0.85||Alfred,Alfred,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.7||Alfred,Alfred,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||Billy,Billy,created,200,18816,no,,1,openai
+elevenlabs|el:lily|0.7||Billy,Billy,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.7||boarding,boarding,created,200,33408,no,,1,openai
+elevenlabs|el:lily|0.85||Candy,Candy,created,200,21504,no,,1,openai
+elevenlabs|el:lily|0.8||Candy,Candy,created,200,41856,no,,1,openai
+elevenlabs|el:lily|0.7||Candy,Candy,created,200,36096,no,,1,openai
+elevenlabs|el:lily|0.85||Berlin,Berlin,created,200,24192,no,,1,openai
+elevenlabs|el:lily|0.8||Berlin,Berlin,created,200,24576,no,,1,openai
+elevenlabs|el:lily|0.7||Berlin,Berlin,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||atend,atend,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.8||atend,atend,created,200,41856,no,,1,openai
+elevenlabs|el:lily|0.7||atend,atend,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||Carla,Carla,created,200,20352,no,,1,openai
+elevenlabs|el:lily|0.8||Carla,Carla,created,200,28800,no,,1,openai
+elevenlabs|el:lily|0.7||Carla,Carla,created,200,20736,no,,1,openai
+elevenlabs|el:lily|0.85||Carmen,Carmen,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.8||Carmen,Carmen,created,200,25728,no,,1,openai
+elevenlabs|el:lily|0.7||Carmen,Carmen,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||Dan,Dan,created,200,21504,no,,1,openai
+elevenlabs|el:lily|0.8||Dan,Dan,created,200,18816,no,,1,openai
+elevenlabs|el:lily|0.7||Dan,Dan,created,200,56448,no,,1,openai
+elevenlabs|el:lily|0.85||Brazil,Brazil,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.8||Brazil,Brazil,created,200,27648,no,,1,openai
+elevenlabs|el:lily|0.7||Brazil,Brazil,created,200,39168,no,,1,openai
+elevenlabs|el:lily|0.85||Cali,Cali,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.8||Cali,Cali,created,200,23808,no,,1,openai
+elevenlabs|el:lily|0.7||Cali,Cali,created,200,23424,no,,1,openai
+elevenlabs|el:lily|0.85||Colombia,Colombia,created,200,26112,no,,1,openai
+elevenlabs|el:lily|0.8||Colombia,Colombia,created,200,24576,no,,1,openai
+elevenlabs|el:lily|0.7||Colombia,Colombia,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||Bert,Bert,created,200,17664,no,,1,openai
+elevenlabs|el:lily|0.8||Bert,Bert,created,200,35712,no,,1,openai
+elevenlabs|el:lily|0.7||Bert,Bert,created,200,16512,no,,1,openai
+elevenlabs|el:lily|0.85||(overslept,(overslept,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.8||(overslept,(overslept,created,200,24576,no,,1,openai
+elevenlabs|el:lily|0.7||(overslept,(overslept,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.85||burnt; burned,burnt; burned,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.8||burnt; burned,burnt; burned,created,200,34944,no,,1,openai
+elevenlabs|el:lily|0.7||burnt; burned,burnt; burned,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.85||aﬀord,aﬀord,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.8||aﬀord,aﬀord,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.7||aﬀord,aﬀord,created,200,31488,no,,1,openai
+elevenlabs|el:lily|0.85||botle,botle,created,200,18816,no,,1,openai
+elevenlabs|el:lily|0.8||botle,botle,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.7||botle,botle,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.85||botom,botom,created,200,18816,no,,1,openai
+elevenlabs|el:lily|0.8||botom,botom,created,200,10752,no,,1,openai
+elevenlabs|el:lily|0.7||botom,botom,created,200,25344,no,,1,openai
+elevenlabs|el:lily|0.85||(overcame,(overcame,created,200,20352,no,,1,openai
+elevenlabs|el:lily|0.8||(overcame,(overcame,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||(overcame,(overcame,created,200,38016,no,,1,openai
+elevenlabs|el:lily|0.85||Brian,Brian,created,200,18816,no,,1,openai
+elevenlabs|el:lily|0.8||Brian,Brian,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.7||Brian,Brian,created,200,19968,no,,1,openai
+elevenlabs|el:lily|0.85||Griffin,Griffin,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.8||Griffin,Griffin,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.7||Griffin,Griffin,created,200,24576,no,,1,openai
+"elevenlabs|el:lily|0.8||My grandparents live with us, so we are a big and happy family.","My grandparents live with us, so we are a big and happy family.",created,200,98880,no,,1,openai
+elevenlabs|el:lily|0.8||My father plays chess with me every weekend.,My father plays chess with me every weekend.,created,200,69120,no,,1,openai
+elevenlabs|el:lily|0.8||My mother is a doctor. She works in a hospital.,My mother is a doctor. She works in a hospital.,created,200,72480,no,,1,openai
+elevenlabs|el:lily|0.8||My grandfather can play the violin very well.,My grandfather can play the violin very well.,created,200,71040,no,,1,openai
+"elevenlabs|el:lily|0.8||On weekends, my family often does activities together.","On weekends, my family often does activities together.",created,200,84000,no,,1,openai
+elevenlabs|el:lily|0.8||I have a twin brother. We look the same.,I have a twin brother. We look the same.,created,200,81792,no,,1,openai
+elevenlabs|el:lily|0.8||There is a big library in our school.,There is a big library in our school.,created,200,77952,no,,1,openai
+elevenlabs|el:lily|0.8||The office is on the second floor.,The office is on the second floor.,created,200,49920,no,,1,openai
+"elevenlabs|el:lily|0.8||In front of the building, there is a playground.","In front of the building, there is a playground.",created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.8||We raise the flag on the playground every morning.,We raise the flag on the playground every morning.,created,200,77280,no,,1,openai
+elevenlabs|el:lily|0.8||The gym is behind the office.,The gym is behind the office.,created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.8||My school is amazing and clean.,My school is amazing and clean.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.8||My favourite subject is English.,My favourite subject is English.,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.8||I like English because it is useful.,I like English because it is useful.,created,200,67584,no,,1,openai
+"elevenlabs|el:lily|0.8||Maths is difficult, but I still work hard.","Maths is difficult, but I still work hard.",created,200,63840,no,,1,openai
+elevenlabs|el:lily|0.8||My English teacher is very kind.,My English teacher is very kind.,created,200,79488,no,,1,openai
+"elevenlabs|el:lily|0.8||I have Chinese, maths and history on Monday.","I have Chinese, maths and history on Monday.",created,200,68160,no,,1,openai
+elevenlabs|el:lily|0.8||I want to learn English well in the future.,I want to learn English well in the future.,created,200,67680,no,,1,openai
+elevenlabs|el:lily|0.8||I can sing and play the guitar.,I can sing and play the guitar.,created,200,61824,no,,1,openai
+"elevenlabs|el:lily|0.8||Sam can't sing, but he can dance.","Sam can't sing, but he can dance.",created,200,77952,no,,1,openai
+elevenlabs|el:lily|0.8||I want to join the music club.,I want to join the music club.,created,200,50688,no,,1,openai
+"elevenlabs|el:lily|0.8||In the art club, students can paint.","In the art club, students can paint.",created,200,53760,no,,1,openai
+"elevenlabs|el:lily|0.8||Can you play chess? Yes, I can.","Can you play chess? Yes, I can.",created,200,62592,no,,1,openai
+elevenlabs|el:lily|0.8||Clubs help us make new friends.,Clubs help us make new friends.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.8||I get up at six thirty every day.,I get up at six thirty every day.,created,200,61824,no,,1,openai
+elevenlabs|el:lily|0.8||I have breakfast at seven.,I have breakfast at seven.,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.8||I have four classes in the morning.,I have four classes in the morning.,created,200,56832,no,,1,openai
+"elevenlabs|el:lily|0.8||After school, I play basketball.","After school, I play basketball.",created,200,53760,no,,1,openai
+elevenlabs|el:lily|0.8||I go to bed at ten.,I go to bed at ten.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.8||My day is busy but happy.,My day is busy but happy.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.8||My birthday is on October 1st.,My birthday is on October 1st.,created,200,55680,no,,1,openai
+elevenlabs|el:lily|0.8||My family has a party for me every year.,My family has a party for me every year.,created,200,62592,no,,1,openai
+elevenlabs|el:lily|0.8||I make a wish before I eat the cake.,I make a wish before I eat the cake.,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.8||This year I want a new bike.,This year I want a new bike.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.8||My grandmother makes noodles for my birthday.,My grandmother makes noodles for my birthday.,created,200,72000,no,,1,openai
+elevenlabs|el:lily|0.8||I am very happy on my birthday.,I am very happy on my birthday.,created,200,55680,no,,1,openai
+elevenlabs|el:lily|0.8||Koalas are from Australia and they sleep a lot.,Koalas are from Australia and they sleep a lot.,created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.8||Students must wear a uniform at our school.,Students must wear a uniform at our school.,created,200,69120,no,,1,openai
+elevenlabs|el:lily|0.8||Don't run in the hallways.,Don't run in the hallways.,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.8||We have to arrive before eight o'clock.,We have to arrive before eight o'clock.,created,200,54528,no,,1,openai
+elevenlabs|el:lily|0.8||You can't use your phone in class.,You can't use your phone in class.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.8||Please keep the classroom clean and don't litter.,Please keep the classroom clean and don't litter.,created,200,75360,no,,1,openai
+elevenlabs|el:lily|0.8||We must respect our teachers.,We must respect our teachers.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.8||I always run in the morning.,I always run in the morning.,created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.8||She exercises twice a week.,She exercises twice a week.,created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.8||I hardly ever eat junk food.,I hardly ever eat junk food.,created,200,60672,no,,1,openai
+elevenlabs|el:lily|0.8||How often do you play baseball?,How often do you play baseball?,created,200,55680,no,,1,openai
+elevenlabs|el:lily|0.8||Jumping rope is good for your health.,Jumping rope is good for your health.,created,200,60672,no,,1,openai
+elevenlabs|el:lily|0.8||He never drinks cola.,He never drinks cola.,created,200,45696,no,,1,openai
+"elevenlabs|el:lily|0.8||I would like some dumplings, please.","I would like some dumplings, please.",created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.8||How many apples do you want?,How many apples do you want?,created,200,43776,no,,1,openai
+elevenlabs|el:lily|0.8||She drinks a glass of milk every morning.,She drinks a glass of milk every morning.,created,200,65760,no,,1,openai
+elevenlabs|el:lily|0.8||Too much sugar is bad for your teeth.,Too much sugar is bad for your teeth.,created,200,62592,no,,1,openai
+elevenlabs|el:lily|0.8||We should eat more vegetables and fruit.,We should eat more vegetables and fruit.,created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.8||I don't eat much meat.,I don't eat much meat.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.8||My mother is making zongzi now.,My mother is making zongzi now.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.8||Look! They are watching a boat race.,Look! They are watching a boat race.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.8||I am writing a message to my friend.,I am writing a message to my friend.,created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.8||Listen! Somebody is singing.,Listen! Somebody is singing.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.8||The children are riding their bikes.,The children are riding their bikes.,created,200,60672,no,,1,openai
+"elevenlabs|el:lily|0.8||Be quiet, the baby is sleeping.","Be quiet, the baby is sleeping.",created,200,68736,no,,1,openai
+elevenlabs|el:lily|0.8||It is raining heavily in our city.,It is raining heavily in our city.,created,200,55680,no,,1,openai
+elevenlabs|el:lily|0.8||How's the weather in Beijing today?,How's the weather in Beijing today?,created,200,77952,no,,1,openai
+elevenlabs|el:lily|0.8||It is cold and windy in the north.,It is cold and windy in the north.,created,200,61824,no,,1,openai
+"elevenlabs|el:lily|0.8||Look, it is snowing outside!","Look, it is snowing outside!",created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.8||The temperature is very low today.,The temperature is very low today.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.8||People are staying inside because it is stormy.,People are staying inside because it is stormy.,created,200,74400,no,,1,openai
+elevenlabs|el:lily|0.8||Last weekend we went to the museum.,Last weekend we went to the museum.,created,200,90624,no,,1,openai
+elevenlabs|el:lily|0.8||We saw many robots there.,We saw many robots there.,created,200,84864,no,,1,openai
+elevenlabs|el:lily|0.8||I took a lot of photos on the trip.,I took a lot of photos on the trip.,created,200,73728,no,,1,openai
+elevenlabs|el:lily|0.8||We planted trees in the afternoon.,We planted trees in the afternoon.,created,200,52992,no,,1,openai
+"elevenlabs|el:lily|0.8||Did you enjoy the trip? Yes, I did.","Did you enjoy the trip? Yes, I did.",created,200,100608,no,,1,openai
+elevenlabs|el:lily|0.8||It was a wonderful day to remember.,It was a wonderful day to remember.,created,200,69888,no,,1,openai
+"elevenlabs|el:lily|0.8||Once upon a time, there was a wise old man.","Once upon a time, there was a wise old man.",created,200,63360,no,,1,openai
+elevenlabs|el:lily|0.8||The emperor asked how to become happy.,The emperor asked how to become happy.,created,200,60672,no,,1,openai
+"elevenlabs|el:lily|0.8||The old man said, do not tell lies.","The old man said, do not tell lies.",created,200,76800,no,,1,openai
+"elevenlabs|el:lily|0.8||Later, the emperor helped the poor.","Later, the emperor helped the poor.",created,200,61824,no,,1,openai
+"elevenlabs|el:lily|0.8||In the end, the emperor was truly happy.","In the end, the emperor was truly happy.",created,200,61824,no,,1,openai
+"elevenlabs|el:lily|0.8||Long ago, people lived in small villages.","Long ago, people lived in small villages.",created,200,62880,no,,1,openai
+"elevenlabs|el:lily|0.8||In the future, robots will do almost all our housework.","In the future, robots will do almost all our housework.",created,200,84960,no,,1,openai
+"elevenlabs|el:lily|0.8||Some jobs will disappear, but there will be new jobs like AI experts.","Some jobs will disappear, but there will be new jobs like AI experts.",created,200,108960,no,,1,openai
+"elevenlabs|el:lily|0.8||If you feel a pain in your stomach, you could lie down and rest.","If you feel a pain in your stomach, you could lie down and rest.",created,200,99840,no,,1,openai
+elevenlabs|el:lily|0.8||We learned some first aid so we can take care of ourselves at home.,We learned some first aid so we can take care of ourselves at home.,created,200,105120,no,,1,openai
+"elevenlabs|el:lily|0.8||Although I felt lonely at my new school, I tried hard to make new friends.","Although I felt lonely at my new school, I tried hard to make new friends.",created,200,114240,no,,1,openai
+elevenlabs|el:lily|0.8||He spoke to me kindly so that I would not feel so upset.,He spoke to me kindly so that I would not feel so upset.,created,200,88800,no,,1,openai
+"elevenlabs|el:lily|0.8||To survive in the desert, travellers need plenty of water.","To survive in the desert, travellers need plenty of water.",created,200,91200,no,,1,openai
+elevenlabs|el:lily|0.8||The rescue team brought food and water to the village.,The rescue team brought food and water to the village.,created,200,85440,no,,1,openai
+elevenlabs|el:lily|0.8||It is rude to put your elbows on the table while eating.,It is rude to put your elbows on the table while eating.,created,200,88800,no,,1,openai
+"elevenlabs|el:lily|0.8||As soon as you receive a gift, it is polite to thank the giver.","As soon as you receive a gift, it is polite to thank the giver.",created,200,98880,no,,1,openai
+elevenlabs|el:lily|0.8||You can learn new words by making word cards.,You can learn new words by making word cards.,created,200,71040,no,,1,openai
+elevenlabs|el:lily|0.8||Everyone can become a good learner by working hard.,Everyone can become a good learner by working hard.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.8||I think that mooncakes are delicious.,I think that mooncakes are delicious.,created,200,81792,no,,1,openai
+elevenlabs|el:lily|0.8||What a wonderful festival it is!,What a wonderful festival it is!,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.8||We watch the dragon boat races by the river.,We watch the dragon boat races by the river.,created,200,64800,no,,1,openai
+elevenlabs|el:lily|0.8||Families get together and look at the full moon.,Families get together and look at the full moon.,created,200,75360,no,,1,openai
+elevenlabs|el:lily|0.8||How exciting the lantern show is!,How exciting the lantern show is!,created,200,79488,no,,1,openai
+elevenlabs|el:lily|0.8||People give red packets at Spring Festival.,People give red packets at Spring Festival.,created,200,67680,no,,1,openai
+elevenlabs|el:lily|0.8||How was your vacation?,How was your vacation?,created,200,34944,no,,1,openai
+elevenlabs|el:lily|0.8||Do you think you have made correct matches in 2a?,Do you think you have made correct matches in 2a?,created,200,83520,no,,1,openai
+elevenlabs|el:lily|0.8||Is he/she asked …?,Is he/she asked …?,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.8||Do you know when the bookstore closes today?,Do you know when the bookstore closes today?,created,200,69600,no,,1,openai
+elevenlabs|el:lily|0.8||Can you tell me who she is?,Can you tell me who she is?,created,200,49920,no,,1,openai
+"elevenlabs|el:lily|1||I love my school, and I have a very busy but happy life here.","I love my school, and I have a very busy but happy life here.",created,200,76800,no,,1,openai
+"elevenlabs|el:lily|1||After a good breakfast, I go to school with my friend, Lin Tao.","After a good breakfast, I go to school with my friend, Lin Tao.",created,200,76800,no,,1,openai
+elevenlabs|el:lily|1||My favorite subject is science.,My favorite subject is science.,created,200,49920,no,,1,openai
+"elevenlabs|el:lily|1||At 12:00, we have lunch in the school dining hall.","At 12:00, we have lunch in the school dining hall.",created,200,75360,no,,1,openai
+elevenlabs|el:lily|1||The food there is very healthy.,The food there is very healthy.,created,200,39168,no,,1,openai
+elevenlabs|el:lily|1||I usually go to bed at 9:30.,I usually go to bed at 9:30.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|1||Today I want to tell you about my school life in China.,Today I want to tell you about my school life in China.,created,200,71040,no,,1,openai
+"elevenlabs|el:lily|1||We have many subjects, such as Chinese, math, English, and history.","We have many subjects, such as Chinese, math, English, and history.",created,200,79680,no,,1,openai
+elevenlabs|el:lily|1||It is difficult but my teacher makes it very interesting.,It is difficult but my teacher makes it very interesting.,created,200,72960,no,,1,openai
+"elevenlabs|el:lily|1||For lunch, I often have rice, fish, and some vegetables.","For lunch, I often have rice, fish, and some vegetables.",created,200,66240,no,,1,openai
+"elevenlabs|el:lily|1||We have two classes, and then it is time for sports.","We have two classes, and then it is time for sports.",created,200,64800,no,,1,openai
+"elevenlabs|el:lily|1||Tom has four soccer balls, and he plays really well.","Tom has four soccer balls, and he plays really well.",created,200,64800,no,,1,openai
+elevenlabs|el:lily|1||I usually go home and finish my homework before dinner.,I usually go home and finish my homework before dinner.,created,200,70080,no,,1,openai
+elevenlabs|el:lily|1||Today is his birthday.,Today is his birthday.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|1||She wants to buy something delicious for dinner.,She wants to buy something delicious for dinner.,created,200,61920,no,,1,openai
+elevenlabs|el:lily|1||Eric's father goes to the clothes store to buy a new jacket for Eric.,Eric's father goes to the clothes store to buy a new jacket for Eric.,created,200,87840,no,,1,openai
+"elevenlabs|el:lily|1||Eric likes sports, and his favorite color is blue.","Eric likes sports, and his favorite color is blue.",created,200,61920,no,,1,openai
+elevenlabs|el:lily|1||The party starts at 6:30 p.m.,The party starts at 6:30 p.m.,created,200,41088,no,,1,openai
+elevenlabs|el:lily|1||They all have a great time at the party.,They all have a great time at the party.,created,200,41856,no,,1,openai
+elevenlabs|el:lily|1||She has three tennis rackets and a lot of tennis balls.,She has three tennis rackets and a lot of tennis balls.,created,200,70080,no,,1,openai
+elevenlabs|el:lily|1||We often help each other with our lessons on the phone.,We often help each other with our lessons on the phone.,created,200,70080,no,,1,openai
+elevenlabs|el:lily|1||Let's have,Let's have,created,200,23424,no,,1,openai
+elevenlabs|el:lily|1||English is very useful. We must learn it well,English is very useful. We must learn it well,created,200,55680,no,,1,openai
+elevenlabs|el:lily|1||Doing sports every day helps us stay healthy,Doing sports every day helps us stay healthy,created,200,54720,no,,1,openai
+elevenlabs|el:lily|1||My cousin always watches,My cousin always watches,created,200,36096,no,,1,openai
+elevenlabs|el:lily|1||These black keys are not mine. They are his,These black keys are not mine. They are his,created,200,53280,no,,1,openai
+elevenlabs|el:lily|1||There are three libraries,There are three libraries,created,200,40320,no,,1,openai
+elevenlabs|el:lily|1||March is the third,March is the third,created,200,35328,no,,1,openai
+elevenlabs|el:lily|1||These books are not mine. They belong to the girls,These books are not mine. They belong to the girls,created,200,62400,no,,1,openai
+elevenlabs|el:lily|1||Playing basketball after school is very relaxing,Playing basketball after school is very relaxing,created,200,61920,no,,1,openai
+elevenlabs|el:lily|1||Look! There are five boxes,Look! There are five boxes,created,200,37632,no,,1,openai
+elevenlabs|el:lily|1||The weather was sunny and warm.,The weather was sunny and warm.,created,200,46464,no,,1,openai
+elevenlabs|el:lily|1||It took us about one hour to get there by car.,It took us about one hour to get there by car.,created,200,58080,no,,1,openai
+"elevenlabs|el:lily|1||First, a farmer showed us around the farm.","First, a farmer showed us around the farm.",created,200,51360,no,,1,openai
+"elevenlabs|el:lily|1||It was my first time to do that, so I was a little nervous, but it was very exciting!","It was my first time to do that, so I was a little nervous, but it was very exciting!",created,200,105600,no,,1,openai
+"elevenlabs|el:lily|1||My brother, Mike, rode a horse with the farmer's help.","My brother, Mike, rode a horse with the farmer's help.",created,200,66240,no,,1,openai
+elevenlabs|el:lily|1||We ate some fresh fruit and bread.,We ate some fresh fruit and bread.,created,200,56064,no,,1,openai
+elevenlabs|el:lily|1||We picked some red apples and put them into our baskets.,We picked some red apples and put them into our baskets.,created,200,70080,no,,1,openai
+"elevenlabs|el:lily|1||We were all very tired, but we were extremely happy.","We were all very tired, but we were extremely happy.",created,200,64800,no,,1,openai
+elevenlabs|el:lily|1||It was a really interesting school trip.,It was a really interesting school trip.,created,200,43392,no,,1,openai
+elevenlabs|el:lily|1||I hope I can go there again in the future.,I hope I can go there again in the future.,created,200,53760,no,,1,openai
+"elevenlabs|el:lily|1||Suddenly, he saw a young boy sitting on a bench.","Suddenly, he saw a young boy sitting on a bench.",created,200,60000,no,,1,openai
+elevenlabs|el:lily|1||The old man walked over to him and sat down.,The old man walked over to him and sat down.,created,200,55200,no,,1,openai
+"elevenlabs|el:lily|1||""What's wrong, my young friend?"" asked the old man kindly.","""What's wrong, my young friend?"" asked the old man kindly.",created,200,69600,no,,1,openai
+"elevenlabs|el:lily|1||I came to the park with my parents this afternoon, but I can't find them now.","I came to the park with my parents this afternoon, but I can't find them now.",created,200,89760,no,,1,openai
+"elevenlabs|el:lily|1||Do you remember your parents' phone number?"" The boy shook his head and said, ""No, I forgot.","Do you remember your parents' phone number?"" The boy shook his head and said, ""No, I forgot.",created,200,112320,no,,1,openai
+elevenlabs|el:lily|1||It was only two blocks away from the park.,It was only two blocks away from the park.,created,200,53760,no,,1,openai
+"elevenlabs|el:lily|1||Let's go there and find someone to help you."" They walked out of the park together.","Let's go there and find someone to help you."" They walked out of the park together.",created,200,103680,no,,1,openai
+elevenlabs|el:lily|1||The boy was so happy because his parents were talking to the policeman!,The boy was so happy because his parents were talking to the policeman!,created,200,84480,no,,1,openai
+elevenlabs|el:lily|1||The boy smiled and said goodbye to the old man.,The boy smiled and said goodbye to the old man.,created,200,59520,no,,1,openai
+elevenlabs|el:lily|1||He is of medium height and he has big blue eyes.,He is of medium height and he has big blue eyes.,created,200,60960,no,,1,openai
+elevenlabs|el:lily|1||He always wears a white T-shirt and blue jeans.,He always wears a white T-shirt and blue jeans.,created,200,59520,no,,1,openai
+elevenlabs|el:lily|1||Last Saturday was Peter's thirteenth birthday.,Last Saturday was Peter's thirteenth birthday.,created,200,58560,no,,1,openai
+"elevenlabs|el:lily|1||It is on a quiet street, across from a big park.","It is on a quiet street, across from a big park.",created,200,59520,no,,1,openai
+"elevenlabs|el:lily|1||When we arrived, Peter's mother was making a large chocolate cake in the kitchen.","When we arrived, Peter's mother was making a large chocolate cake in the kitchen.",created,200,100800,no,,1,openai
+elevenlabs|el:lily|1||Peter was very happy.,Peter was very happy.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|1||Peter's father showed us some old photos of Peter when he was a baby.,Peter's father showed us some old photos of Peter when he was a baby.,created,200,88320,no,,1,openai
+elevenlabs|el:lily|1||Peter's mother also made some strawberry juice for us.,Peter's mother also made some strawberry juice for us.,created,200,69600,no,,1,openai
+elevenlabs|el:lily|1||We had a great time at Peter's birthday party.,We had a great time at Peter's birthday party.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|1||He is of medium height and he has big brown eyes.,He is of medium height and he has big brown eyes.,created,200,62880,no,,1,openai
+elevenlabs|el:lily|1||He always wears a black jacket and blue jeans.,He always wears a black jacket and blue jeans.,created,200,59040,no,,1,openai
+elevenlabs|el:lily|1||Last Saturday was Tom's thirteenth birthday.,Last Saturday was Tom's thirteenth birthday.,created,200,55680,no,,1,openai
+"elevenlabs|el:lily|1||It is on a quiet street, across from a big hospital.","It is on a quiet street, across from a big hospital.",created,200,65280,no,,1,openai
+"elevenlabs|el:lily|1||When we arrived, Tom's mother was making a large strawberry cake in the kitchen.","When we arrived, Tom's mother was making a large strawberry cake in the kitchen.",created,200,99360,no,,1,openai
+elevenlabs|el:lily|1||Tom was very happy.,Tom was very happy.,created,200,40320,no,,1,openai
+elevenlabs|el:lily|1||Tom's father showed us some old photos of Tom when he was a little baby.,Tom's father showed us some old photos of Tom when he was a little baby.,created,200,92640,no,,1,openai
+elevenlabs|el:lily|1||Tom's mother also made some fresh orange juice for us.,Tom's mother also made some fresh orange juice for us.,created,200,69600,no,,1,openai
+elevenlabs|el:lily|1||We had a great time at Tom's birthday party.,We had a great time at Tom's birthday party.,created,200,55680,no,,1,openai
+"elevenlabs|el:lily|1||The weather was cool and sunny, which was perfect for an outdoor trip.","The weather was cool and sunny, which was perfect for an outdoor trip.",created,200,87840,no,,1,openai
+elevenlabs|el:lily|1||We went there by school bus.,We went there by school bus.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|1||They were very tall and had long necks.,They were very tall and had long necks.,created,200,56064,no,,1,openai
+"elevenlabs|el:lily|1||Some of them were eating bamboo, while others were sleeping on the ground.","Some of them were eating bamboo, while others were sleeping on the ground.",created,200,93600,no,,1,openai
+elevenlabs|el:lily|1||Everyone took out their cameras and took a lot of photos.,Everyone took out their cameras and took a lot of photos.,created,200,72000,no,,1,openai
+"elevenlabs|el:lily|1||We ate the food we brought from home, like sandwiches, cakes and fruit.","We ate the food we brought from home, like sandwiches, cakes and fruit.",created,200,87840,no,,1,openai
+elevenlabs|el:lily|1||The monkeys were the smartest animals in the park.,The monkeys were the smartest animals in the park.,created,200,59040,no,,1,openai
+"elevenlabs|el:lily|1||They were jumping up and down, and some even did funny things to make us laugh.","They were jumping up and down, and some even did funny things to make us laugh.",created,200,98880,no,,1,openai
+elevenlabs|el:lily|1||It was truly an interesting school trip.,It was truly an interesting school trip.,created,200,52224,no,,1,openai
+elevenlabs|el:lily|1||He is of medium height and he has short curly brown hair.,He is of medium height and he has short curly brown hair.,created,200,72960,no,,1,openai
+"elevenlabs|el:lily|1||It is on a quiet street, across from a big city park.","It is on a quiet street, across from a big city park.",created,200,66240,no,,1,openai
+"elevenlabs|el:lily|1||When we arrived, Peter's mother was making a large strawberry cake in the kitchen.","When we arrived, Peter's mother was making a large strawberry cake in the kitchen.",created,200,102240,no,,1,openai
+elevenlabs|el:lily|1||Peter's father showed us some old photos of Peter when he was a little baby.,Peter's father showed us some old photos of Peter when he was a little baby.,created,200,96000,no,,1,openai
+elevenlabs|el:lily|1||Peter's mother also made some fresh orange juice for us.,Peter's mother also made some fresh orange juice for us.,created,200,72000,no,,1,openai
+"elevenlabs|el:lily|1||The weather was cool and sunny, which was perfect for taking a school trip.","The weather was cool and sunny, which was perfect for taking a school trip.",created,200,95040,no,,1,openai
+elevenlabs|el:lily|1||We went there by school bus together.,We went there by school bus together.,created,200,49920,no,,1,openai
+"elevenlabs|el:lily|1||First, a guide showed us around the robot hall.","First, a guide showed us around the robot hall.",created,200,58080,no,,1,openai
+"elevenlabs|el:lily|1||Some of them could play chess, while others could dance to music.","Some of them could play chess, while others could dance to music.",created,200,82080,no,,1,openai
+elevenlabs|el:lily|1||I took out my camera and took many photos.,I took out my camera and took many photos.,created,200,53760,no,,1,openai
+"elevenlabs|el:lily|1||We ate the food we brought from home, like sandwiches, bread and some fruit.","We ate the food we brought from home, like sandwiches, bread and some fruit.",created,200,92640,no,,1,openai
+elevenlabs|el:lily|1||It was so interesting that nobody wanted to leave.,It was so interesting that nobody wanted to leave.,created,200,64320,no,,1,openai
+"elevenlabs|el:lily|1||We felt a little tired because we walked a lot, but our hearts were full of joy.","We felt a little tired because we walked a lot, but our hearts were full of joy.",created,200,100800,no,,1,openai
+elevenlabs|el:lily|1||It was truly an unforgettable school trip.,It was truly an unforgettable school trip.,created,200,53280,no,,1,openai
+elevenlabs|el:lily|1||What can you do for our club?,What can you do for our club?,created,200,32256,no,,1,openai
+elevenlabs|el:lily|1||Tony is cleaning his room now.,Tony is cleaning his room now.,created,200,44928,no,,1,openai
+elevenlabs|el:lily|1||Don't run in the hallways!,Don't run in the hallways!,created,200,37632,no,,1,openai
+elevenlabs|el:lily|1||This is an elephant from Africa.,This is an elephant from Africa.,created,200,38400,no,,1,openai
+elevenlabs|el:lily|1||Where did you go on vacation?,Where did you go on vacation?,created,200,41088,no,,1,openai
+elevenlabs|el:lily|1||How do you get to school?,How do you get to school?,created,200,34560,no,,1,openai
+elevenlabs|el:lily|1||She can play chess very well.,She can play chess very well.,created,200,47232,no,,1,openai
+elevenlabs|el:lily|1||Is there a hospital near here?,Is there a hospital near here?,created,200,33024,no,,1,openai
+elevenlabs|el:lily|1||We went to the zoo yesterday.,We went to the zoo yesterday.,created,200,38400,no,,1,openai
+elevenlabs|el:lily|1||What kind of pizza would you like?,What kind of pizza would you like?,created,200,36096,no,,1,openai
+elevenlabs|el:lily|1||She has big and beautiful eyes. / She has beautiful and big eyes.,She has big and beautiful eyes. / She has beautiful and big eyes.,created,200,80640,no,,1,openai
+elevenlabs|el:lily|1||Is there a bank near your house?,Is there a bank near your house?,created,200,39168,no,,1,openai
+elevenlabs|el:lily|1||How was the weather yesterday?,How was the weather yesterday?,created,200,31488,no,,1,openai
+elevenlabs|el:lily|1||They played chess under the tree.,They played chess under the tree.,created,200,37632,no,,1,openai
+elevenlabs|el:lily|1||What kind of soup would you like?,What kind of soup would you like?,created,200,43392,no,,1,openai
+elevenlabs|el:lily|1||My sister has long straight hair.,My sister has long straight hair.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|1||Is there a pay phone near the bank?,Is there a pay phone near the bank?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|1||How was the weather in New York?,How was the weather in New York?,created,200,40320,no,,1,openai
+elevenlabs|el:lily|1||We went to the countryside last weekend.,We went to the countryside last weekend.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|1||What kind of food would you like?,What kind of food would you like?,created,200,43392,no,,1,openai
+elevenlabs|el:lily|1||My mother has long straight hair.,My mother has long straight hair.,created,200,48000,no,,1,openai
+elevenlabs|el:lily|1||How was the weather in London?,How was the weather in London?,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.85||It's next to the art room.,It's next to the art room.,created,200,35328,no,,1,openai
+"elevenlabs|el:lily|0.85||No, it isn't.","No, it isn't.",created,200,29952,no,,1,openai
+"elevenlabs|el:lily|0.85||Yes, we do.","Yes, we do.",created,200,39552,no,,1,openai

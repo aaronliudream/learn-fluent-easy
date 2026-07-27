@@ -84,7 +84,7 @@ async function main() {
   // ---------------- 只抽这些文件 ----------------
   let items;
   try {
-    items = [...extractItems(cfg, { allFiles: inScope, allowEmptySources: true }).values()];
+    items = [...(await extractItems(cfg, { allFiles: inScope, allowEmptySources: true })).values()];
   } catch (e) {
     if (e instanceof ConfigError) { console.error(e.message); return 2; }
     throw e;

@@ -5,6 +5,7 @@ import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
 import { getUnitState, savePersist } from "@/lib/juniorHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
 import { prefetchTTSBatchKid } from "@/lib/speak";
+import { JUNIOR_SPEAK_SPEED, prefetchJuniorWriteStage } from "@/lib/juniorHub/speakSpeeds";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
@@ -240,7 +241,7 @@ function VocabStage({
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
   const topRef = useRef<HTMLDivElement | null>(null);
 
-  const speakWord = (word: string) => hubSpeak(word, 0.85, grade);
+  const speakWord = (word: string) => hubSpeak(word, JUNIOR_SPEAK_SPEED.normal, grade);
 
   // 切组 / 进中转卡时滚到顶部,让新内容(中转卡 / 下一组卡片)立即可见。
   // 否则手机端用户停在底部点"本组完成"后,短中转卡在屏幕上方,看起来像"没反应"。
@@ -253,7 +254,7 @@ function VocabStage({
     if (!words) return;
     prefetchTTSBatchKid(
       words.map((v) => v.en),
-      { grade, speed: 0.85 },
+      { grade, speed: JUNIOR_SPEAK_SPEED.normal },
     );
   }, [grade, words]);
 
@@ -538,7 +539,7 @@ function ListenMcStage({
   useEffect(() => {
     prefetchTTSBatchKid(
       questions.map((item) => item.audio),
-      { grade, speed: 0.8 },
+      { grade, speed: JUNIOR_SPEAK_SPEED.listen },
     );
   }, [grade, questions]);
 
@@ -578,7 +579,7 @@ function ListenMcStage({
             <button
               type="button"
               className="ml-2 rounded-lg bg-[#378ADD] px-2.5 py-1 text-xs text-white"
-              onClick={() => hubSpeak(q.opts[q.answer], 0.7, grade)}
+              onClick={() => hubSpeak(q.opts[q.answer], JUNIOR_SPEAK_SPEED.slow, grade)}
             >
               🔊 慢速
             </button>
@@ -619,7 +620,7 @@ function ListenMcStage({
         <button
           type="button"
           className="mx-auto grid size-16 place-items-center rounded-full bg-[#378ADD] text-2xl text-white shadow-md"
-          onClick={() => hubSpeak(q.audio, 0.8, grade)}
+          onClick={() => hubSpeak(q.audio, JUNIOR_SPEAK_SPEED.listen, grade)}
         >
           🔊
         </button>
@@ -771,7 +772,7 @@ function SentenceStage({ grade, onFinish }: { grade: number; onFinish: () => voi
             <button
               type="button"
               className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-              onClick={() => hubSpeak(s.q, 0.85, grade)}
+              onClick={() => hubSpeak(s.q, JUNIOR_SPEAK_SPEED.normal, grade)}
             >
               🔊
             </button>
@@ -786,7 +787,7 @@ function SentenceStage({ grade, onFinish }: { grade: number; onFinish: () => voi
                     <button
                       type="button"
                       className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-                      onClick={() => hubSpeak(s.a, 0.85, grade)}
+                      onClick={() => hubSpeak(s.a, JUNIOR_SPEAK_SPEED.normal, grade)}
                     >
                       🔊
                     </button>
@@ -831,9 +832,11 @@ function WriteStage({
   const [retrying, setRetrying] = useState<Set<number>>(() => new Set());
 
   useEffect(() => {
-    prefetchTTSBatchKid(
+    // 默写关同一批词会按两档播（答对 normal / 答错·点读 slow），必须两档都热。
+    // 原来写 { grade } 会漏传 speed → 落到 getKidSpeed(7/8/9)=1.0，预热 100% 作废。
+    prefetchJuniorWriteStage(
       vocabulary.map((v) => v.en),
-      { grade },
+      grade,
     );
   }, [grade, vocabulary]);
 
@@ -880,7 +883,7 @@ function WriteStage({
         return next;
       });
       onCorrect();
-      hubSpeak(answer, 0.85, grade);
+      hubSpeak(answer, JUNIOR_SPEAK_SPEED.normal, grade);
     } else {
       setFeedbacks((prev) => ({
         ...prev,
@@ -898,7 +901,7 @@ function WriteStage({
         answer: 0,
         point: "单词拼写",
       });
-      hubSpeak(answer, 0.7, grade);
+      hubSpeak(answer, JUNIOR_SPEAK_SPEED.slow, grade);
       requestAnimationFrame(() => inputRefs.current[i]?.focus());
     }
   };
@@ -917,7 +920,7 @@ function WriteStage({
             <button
               type="button"
               className="grid size-7 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-              onClick={() => hubSpeak(v.en, 0.7, grade)}
+              onClick={() => hubSpeak(v.en, JUNIOR_SPEAK_SPEED.slow, grade)}
             >
               🔊
             </button>
@@ -999,7 +1002,7 @@ function FinalQuizStage({
   // 进关即预热听力题的 audio_text(云端 TTS 冷合成 ~1-3s)→ 用户做到听力题时 MP3 已在缓存,点🔊瞬时。
   useEffect(() => {
     const audios = questions.map((item) => item.audio).filter((a): a is string => !!a);
-    if (audios.length) prefetchTTSBatchKid(audios, { grade, speed: 0.8 });
+    if (audios.length) prefetchTTSBatchKid(audios, { grade, speed: JUNIOR_SPEAK_SPEED.listen });
   }, [grade, questions]);
 
   const handlePick = (optIdx: number) => {
@@ -1081,7 +1084,7 @@ function FinalQuizStage({
       {q.kind === "listening" && q.audio && (
         <button
           type="button"
-          onClick={() => hubSpeak(q.audio!, 0.8, grade)}
+          onClick={() => hubSpeak(q.audio!, JUNIOR_SPEAK_SPEED.listen, grade)}
           className="mb-4 inline-flex items-center gap-2 rounded-xl bg-[#FFE9AD] px-4 py-2 text-sm font-bold text-[#854F0B] active:scale-95"
         >
           🔊 播放句子

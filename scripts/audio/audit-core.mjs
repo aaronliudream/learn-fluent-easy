@@ -69,8 +69,9 @@ export function assertNoFake200(probeResults) {
  *   - outOfScope status=unverified：本身就是"尚未确认"，每轮提示一次
  * @param readFile (relPath) => string，找不到文件应抛错
  * @param grepRepo (needle) => string[] 命中该字符串的文件列表
+ * @param matchFiles (glob) => string[] 把映射表里的 glob 展开成真实文件（assertUnreferenced 用）
  */
-export function reviewDeclarations(cfg, { readFile, grepRepo }) {
+export function reviewDeclarations(cfg, { readFile, grepRepo, matchFiles }) {
   const PLAY_PATTERNS = ['speak(', 'speakKid(', 'hubSpeak(', 'hubSpeakAtSpeed(', 'speakFromUrl(', 'new Audio(', 'speechSynthesis'];
   const items = [];
 
@@ -90,8 +91,21 @@ export function reviewDeclarations(cfg, { readFile, grepRepo }) {
       }
     }
     if (af.assertUnreferenced) {
-      const base = String(af.files).split('/').pop();
-      const refs = grepRepo(base).filter((f) => !f.startsWith('scripts/audio/'));
+      // files 可能是 glob（`_backup/*.json`）。直接拿 basename 去 grep 会变成搜 "*.json"，
+      // 命中一大片、每轮都告警 —— 一个永远在响的告警等于没有告警。
+      // 有 files 清单时把 glob 展开成真实文件名逐个 grep；展开不到就明说，不假装通过。
+      const pat = String(af.files);
+      const names = pat.includes('*')
+        ? (matchFiles ? matchFiles(pat).map((f) => f.split('/').pop()) : null)
+        : [pat.split('/').pop()];
+      if (!names) {
+        items.push({
+          kind: 'audioFree', severity: 'warn', target: pat,
+          detail: 'assertUnreferenced 用了 glob，但本次没有文件清单可展开 —— 零引用断言这轮没真正执行',
+        });
+        continue;
+      }
+      const refs = [...new Set(names.flatMap((n) => grepRepo(n)))].filter((f) => !f.startsWith('scripts/audio/'));
       if (refs.length) {
         items.push({
           kind: 'audioFree', severity: 'warn', target: af.files,

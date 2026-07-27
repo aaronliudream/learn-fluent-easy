@@ -310,13 +310,6 @@ function VocabStage({
           >
             继续下一组 →
           </button>
-          <button
-            type="button"
-            className="rounded-xl border-2 border-[#EEEAE0] px-5 py-2 text-sm font-bold text-[#5C5751] dark:border-border dark:text-muted-foreground"
-            onClick={onFinish}
-          >
-            先完成本关
-          </button>
         </div>
       </div>
     );
@@ -723,7 +716,9 @@ function ListenWordStage({
       <div className="rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-card">
         <div className="mb-2 text-lg font-bold text-[#2C2C2A] dark:text-foreground">本组完成 🎉</div>
         <div className="mb-4 text-sm text-[#5C5751] dark:text-muted-foreground">
-          本单元还有 <strong>{remaining}</strong> 个词没测,继续测下一组吗?
+          本单元还有 <strong>{remaining}</strong> 个词没测。
+          <br />
+          <span className="text-xs opacity-80">全部测完才算通关;想先离开可直接返回,进度已保存。</span>
         </div>
         <div className="flex justify-center gap-3">
           <button
@@ -735,13 +730,6 @@ function ListenWordStage({
             }}
           >
             继续下一组 →
-          </button>
-          <button
-            type="button"
-            className="rounded-xl border-2 border-[#EEEAE0] px-5 py-2 text-sm font-bold text-[#5C5751] dark:border-border dark:text-muted-foreground"
-            onClick={onFinish}
-          >
-            先完成本关
           </button>
         </div>
       </div>
@@ -1339,11 +1327,14 @@ function ReadingStage({
     };
   }, [unit.id, unit.book, unit.unitKey, grade]);
 
-  // 做过≥1篇 → 只标记本关通过(不跳总览、幂等);停留在卡片列表。
+  // ★完成判据(Aaron 2026-07-27 收紧)★:本单元**全部篇目都做过**才算通关。
+  // 旧判据是 tried >= 1 —— 做 1 篇就打 ✓,于是单元卡显示 100% 而学生只读了 1/5 篇,
+  // 「完成度」失去意义。改成 tried === total(UI 上本来就在显示 {tried}/{total} 篇)。
+  // 历史数据按方案 B 保留:已打过的 ✓ 不回收,新判据只对新行为生效。
   useEffect(() => {
     if (!dbRows || dbRows.length === 0) return;
     const tried = dbRows.filter((r) => !!mastery[r.id]).length;
-    if (tried >= 1 && !markedRef.current) {
+    if (tried >= dbRows.length && !markedRef.current) {
       markedRef.current = true;
       markComplete();
     }
@@ -1540,7 +1531,8 @@ function ClozeStage({
   useEffect(() => {
     if (!dbRows || dbRows.length === 0) return;
     const tried = dbRows.filter((r) => !!mastery[r.id]).length;
-    if (tried >= 1 && !markedRef.current) {
+    // ★完成判据收紧(同阅读关)★:全部篇/条做过才通关,不再是做 1 条就 ✓。
+    if (tried >= dbRows.length && !markedRef.current) {
       markedRef.current = true;
       markComplete();
     }
@@ -1678,7 +1670,8 @@ function ListeningStage({
   useEffect(() => {
     if (!dbRows || dbRows.length === 0) return;
     const tried = dbRows.filter((r) => !!mastery[r.id]).length;
-    if (tried >= 1 && !markedRef.current) {
+    // ★完成判据收紧(同阅读关)★:全部篇/条做过才通关,不再是做 1 条就 ✓。
+    if (tried >= dbRows.length && !markedRef.current) {
       markedRef.current = true;
       markComplete();
     }
@@ -2082,14 +2075,10 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     onComplete(needAi);
   }, [completeStage, onComplete, stageIdx, unitId]);
 
-  // 从专区 play 页做完后带 ?done=1 返回 → 标记本关通过(替代旧"标记本关通过"按钮)。ref 防重。
-  const doneHandledRef = useRef(false);
-  useEffect(() => {
-    if (hubSearch.get("done") === "1" && !doneHandledRef.current) {
-      doneHandledRef.current = true;
-      handleFinish();
-    }
-  }, [hubSearch, handleFinish]);
+  // ★已删除 ?done=1 后门(Aaron 2026-07-27)★
+  // 它绕开所有关卡判据:URL 上带一个参数就把本关标记通过。删除前全仓查证:
+  // **没有任何代码拼出过 done=1**(只剩两条注释提到它),即这条后门早已是死路径。
+  // 从专区 play 页返回后的正路 = 各关自己的判据(阅读/完形/听力 = 全部篇目做过)。
 
   const listenSentQuestions = useMemo(() => {
     if (!unit) return [];

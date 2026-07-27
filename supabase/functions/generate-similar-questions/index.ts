@@ -13,8 +13,8 @@ const corsHeaders = {
 };
 
 const ATTEMPTS = [
-  { model: "gemini-2.5-flash", timeoutMs: 45_000 }, // 首试:质量优先
-  { model: "gemini-2.5-flash-lite", timeoutMs: 30_000 }, // 兜救:低延迟(thinking 更少)
+  { model: "gpt-4o-mini", timeoutMs: 45_000 }, // 首试:质量优先
+  { model: "gpt-4o-mini", timeoutMs: 30_000 }, // 兜救:低延迟(thinking 更少)
 ];
 
 Deno.serve(async (req) => {
@@ -24,10 +24,10 @@ Deno.serve(async (req) => {
   try {
     const { module, source_label, question, correct_answer, explanation, snapshot } = await req.json();
     const qLog = String(question ?? "").slice(0, 80);
-    const apiKey = Deno.env.get("GOOGLE_AI_API_KEY");
+    const apiKey = Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
-      console.error("[similar] missing GOOGLE_AI_API_KEY");
-      return new Response(JSON.stringify({ error: "missing GOOGLE_AI_API_KEY" }), {
+      console.error("[similar] missing OPENAI_API_KEY");
+      return new Response(JSON.stringify({ error: "missing OPENAI_API_KEY" }), {
         status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
@@ -54,7 +54,7 @@ Deno.serve(async (req) => {
       const timer = setTimeout(() => ctrl.abort(), timeoutMs);
       const ta = Date.now();
       try {
-        const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
+        const r = await fetch("https://api.openai.com/v1/chat/completions", {
           method: "POST",
           headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
           body: JSON.stringify({

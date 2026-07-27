@@ -2,6 +2,7 @@
 import { useGaokaoHub } from "@/lib/gaokaoHub/context";
 import { findSemester, getGradeCourse, unitLabel } from "@/lib/gaokaoHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/gaokaoHub/progress";
+import { useSemesterMastery } from "@/hooks/useSemesterMastery";
 import { savePersist } from "@/lib/gaokaoHub/storage";
 import { withPublisher } from "@/lib/gaokaoHub/publisher";
 
@@ -13,6 +14,8 @@ export default function GaokaoHubSemester() {
   const course = getGradeCourse(grade, publisher);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/gaokao/hub/${grade}`;
+  // ⚠️ 必须在 early-return 之前调用(hook 顺序)。整册一次批量拉取,grade+9 与单元页同口径。
+  const masteryMap = useSemesterMastery(sem?.units, grade + 9, publisher);
   const wp = (p: string) => withPublisher(p, publisher);
 
   if (!sem || !semId) {
@@ -88,12 +91,21 @@ export default function GaokaoHubSemester() {
                 <span>{!unit.available ? "🔒" : isDone ? "✅" : isCurrent ? "▶️" : ""}</span>
               </div>
               {unit.available ? (
-                <div className="mt-2 flex items-center gap-2">
-                  <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#F4F0E6]">
-                    <div className="h-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627]" style={{ width: `${p.percent}%` }} />
+                <>
+                  <div className="mt-2 flex items-center gap-2">
+                    <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#F4F0E6]">
+                      <div className="h-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627]" style={{ width: `${p.percent}%` }} />
+                    </div>
+                    <span className="text-xs font-bold">{p.percent}%</span>
                   </div>
-                  <span className="text-xs font-bold">{p.percent}%</span>
-                </div>
+                  {/* 掌握度与完成度并列(与单元内页同口径同数据源)。无数据时整行不渲染。 */}
+                  {masteryMap[unit.id] ? (
+                    <div className="mt-1 flex items-center gap-2 text-xs">
+                      <span className="text-[#888780]">掌握度·词汇+语法</span>
+                      <span className="font-bold text-amber-600">{masteryMap[unit.id].pct}%</span>
+                    </div>
+                  ) : null}
+                </>
               ) : (
                 <div className="mt-2 text-xs text-[#888780]">📅 即将开放</div>
               )}

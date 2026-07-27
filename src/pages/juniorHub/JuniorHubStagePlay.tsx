@@ -1159,6 +1159,38 @@ function GrammarStage({
   const masteryPath = pointId ? `${basePath}/grammar/${pointId}/mastery?returnTo=${returnTo}${pubQ}` : null;
   const kpPracticeId = useKnowledgePointId(unit.grammarKpCode);
 
+  // ★完成判据(Aaron 2026-07-27 收紧)★:本单元语法题**全部做过**才自动通关。
+  // 旧判据是三个「已完成,标记本关通过」按钮 —— 学生自己声明,最弱的一种。
+  // 这里读 loadProgressForCodes 的 done/total(题级,与语法专项页/单元综合测试同源),
+  // done === total 时自动 onFinish(ref 防重)。历史 ✓ 按方案 B 保留,不回收。
+  const [gp, setGp] = useState<{ done: number; total: number } | null>(null);
+  const gDoneRef = useRef(false);
+  useEffect(() => {
+    let cancelled = false;
+    const codes = unit.grammarCodes ?? [];
+    if (!codes.length) return;
+    (async () => {
+      const p = await loadProgressForCodes(codes, pub ?? undefined);
+      if (!cancelled) setGp({ done: p.done, total: p.total });
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id, pub]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (gp && gp.total > 0 && gp.done >= gp.total && !gDoneRef.current) {
+      gDoneRef.current = true;
+      onFinish();
+    }
+  }, [gp]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /** 语法关底部的进度提示 —— 取代原来的「标记本关通过」按钮。 */
+  const grammarProgressHint = gp && gp.total > 0 ? (
+    <p className="mt-2 text-center text-xs text-[#888780]">
+      本单元语法题 {gp.done}/{gp.total} 已做过{gp.done >= gp.total ? " · 已通关 ✓" : " · 全部做过即自动通关"}
+    </p>
+  ) : null;
+
   // 单知识点专项：配了 grammarKpCode 的单元只练该 kp(优先于综合测/单点闯关)。
   if (unit.grammarKpCode && kpPracticeId) {
     const kpPath = `${basePath}/grammar/kp/${kpPracticeId}?returnTo=${returnTo}${pubQ}`;
@@ -1172,13 +1204,7 @@ function GrammarStage({
         >
           进入专项练习 →
         </Link>
-        <button
-          type="button"
-          onClick={onFinish}
-          className="w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
-        >
-          已完成，标记本关通过
-        </button>
+        {grammarProgressHint}
       </div>
     );
   }
@@ -1199,13 +1225,7 @@ function GrammarStage({
         >
           进入综合测试 →
         </Link>
-        <button
-          type="button"
-          onClick={onFinish}
-          className="w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
-        >
-          已完成，标记本关通过
-        </button>
+        {grammarProgressHint}
       </div>
     );
   }
@@ -1222,13 +1242,7 @@ function GrammarStage({
         >
           进入语法测试 →
         </Link>
-        <button
-          type="button"
-          onClick={onFinish}
-          className="w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
-        >
-          已完成，标记本关通过
-        </button>
+        {grammarProgressHint}
       </div>
     );
   }

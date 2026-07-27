@@ -186,7 +186,7 @@ export default function WordMatchingGame({
             本组 {batchTotal} 个词全部配对完成！
           </p>
           <p className="mt-1 text-sm text-[#888780]">
-            还剩 <strong className="text-[#E0623F]">{remainingAll}</strong> 个词，要不要再来一组？
+            还剩 <strong className="text-[#E0623F]">{remainingAll}</strong> 个词，全部配完才算通关。
           </p>
           <div className="mt-5 flex flex-col gap-2">
             <button
@@ -195,13 +195,6 @@ export default function WordMatchingGame({
               className="w-full rounded-xl bg-[#FF6B35] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#E55A28]"
             >
               再来一组 →（剩 {remainingAll} 个）
-            </button>
-            <button
-              type="button"
-              onClick={onFinish}
-              className="w-full rounded-xl border-2 border-[#E7E2D6] bg-white px-4 py-2.5 text-sm font-semibold text-[#888780] transition hover:bg-[#FAF7F0]"
-            >
-              先到这儿，完成本关 →
             </button>
           </div>
         </div>

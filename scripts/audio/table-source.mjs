@@ -23,16 +23,28 @@ export const DEFAULT_MAX_PAGES = 30;
 
 export class TableSourceError extends Error {}
 
-/** 从仓库根的 .env 读 Supabase 连接信息（表源必需；纯 JSON 源的 section 不需要）。 */
+/**
+ * 读 Supabase 连接信息（表源必需；纯 JSON 源的 section 不需要）。
+ * 优先级：**进程环境变量 → 仓库根 .env**。
+ * 顺序这样定是为了 CI：GitHub Actions 里没有 .env，值从仓库变量注入到 env
+ * （`vars.VITE_SUPABASE_URL` / `vars.VITE_SUPABASE_PUBLISHABLE_KEY`，本来就随前端 bundle 公开）。
+ */
 export function loadDbEnv(repoRoot) {
+  if (process.env.VITE_SUPABASE_URL && process.env.VITE_SUPABASE_PUBLISHABLE_KEY) {
+    return {
+      url: process.env.VITE_SUPABASE_URL.replace(/\/$/, ''),
+      key: process.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+    };
+  }
   const p = path.join(repoRoot, '.env');
   if (!fs.existsSync(p)) {
     throw new TableSourceError(
-`✗ 表源需要 .env（VITE_SUPABASE_URL + VITE_SUPABASE_PUBLISHABLE_KEY），但找不到 ${p}
+`✗ 表源需要 VITE_SUPABASE_URL + VITE_SUPABASE_PUBLISHABLE_KEY，两条路都没拿到：
+   ① 进程环境变量（CI 走这条：workflow 里从 vars.* 注入）
+   ② 仓库根 .env（本地走这条）——当前找不到 ${p}
 
 注意：只含 JSON 源的 section（如 primary）**不需要**任何凭据；
-一旦 section 声明了 table 源，巡检/precheck 就必须能连库。CI 里跑该 section 需要把
-这两个值配成变量（它们本来就随前端 bundle 公开，不是密钥，但仓库里没有）。`);
+一旦 section 声明了 table 源，巡检就必须能连库。`);
   }
   const env = Object.fromEntries(
     fs.readFileSync(p, 'utf8').split(/\r?\n/).filter((l) => l.includes('='))

@@ -175,6 +175,11 @@ function speedsFor(cfg, tierName, grade) {
   throw new ConfigError(`✗ 档位 "${tierName}" 既没有 speeds 也没有 byGrade`);
 }
 
+/** 该 section 声明的表源（`files` 以 `table:` 开头）。供调用方在跳过它们时如实说明。 */
+export const tableSourcesOf = (cfg) =>
+  (cfg.sources ?? []).filter((s) => String(s.files).startsWith('table:'))
+    .map((s) => ({ id: s.id, table: String(s.files).slice('table:'.length), tiers: s.tiers }));
+
 const gradeOf = (rel, how) => {
   if (how !== 'filename') return null;
   const m = /grade(\d)/.exec(rel);
@@ -185,11 +190,12 @@ const gradeOf = (rel, how) => {
  * 按映射表抽出全部「可达 (文本 × 档位)」对象。
  * @returns {Map<string, {cache_key,text,voice_id,speed,cdn_url,storage_url,source_ref,record_id,field}>}
  */
-export async function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false } = {}) {
+export async function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false, skipTables = false } = {}) {
   const files = allFiles ?? checkCoverage(cfg);
   const rows_ = new Map();
   for (const s of cfg.sources ?? []) {
     if (onlySource && s.id !== onlySource) continue;
+    if (skipTables && String(s.files).startsWith('table:')) continue; // 调用方负责把跳过的表源**说出来**（见 tableSourcesOf）
     if (String(s.files).startsWith('table:')) {
       // 表源已解封（依据见 table-source.mjs 末尾三条）。取数走 fetchTableRows：
       // 分页触顶硬失败 + 抽取数必须与 count=exact 相等，绝不静默截断。

@@ -9,6 +9,13 @@ name: audio-precheck
 # 不需要任何 secret：只对公开 CDN（audio.bigmooneducation.com）发 HEAD。
 # 修复动作在作者本地跑（那里有 anon key），失败信息里给出可复制的命令。
 #
+# 覆盖范围（重要，别误读）：
+#   ✅ 文件型内容源（primary/junior 的 JSON + junior 写死在组件里的 SENTENCE_PATTERNS）
+#   ❌ **表源**（junior_vocab / junior_listening_exercises）—— DB 内容不在 diff 里，
+#      用 SQL 加词不产生任何文件改动，按文件 diff 的闸门在结构上就管不到。
+#      那部分由周巡检 audio-audit（--section junior --threshold 0）兜住，最长 7 天检出。
+#      脚本会把跳过的表源逐条打印出来，不静默。
+#
 # 退出码：0 = 无缺口/未触及内容；1 = 有缺口（要作者本地 backfill 后重推）；
 #         2 = 配置/覆盖率错误（新内容文件没在映射表分类）；3 = 金丝雀失败，本轮作废。
 
@@ -16,6 +23,13 @@ on:
   pull_request:
     paths:
       - 'src/data/**'
+      # junior 句型关的 4 组句型写死在这个组件里（junior.json 的 extraFiles）。
+      # 它不在 src/data 下，不列出来就等于"改那 7 条文本可以绕过闸门"。
+      - 'src/pages/juniorHub/JuniorHubStagePlay.tsx'
+      # 映射表/抽取逻辑本身改了也要重跑：档位改一个数，缺口集合就变了。
+      - 'scripts/audio/audio-sources/*.json'
+      - 'scripts/audio/pickers.mjs'
+      - 'scripts/audio/extract.mjs'
 
 jobs:
   precheck:
@@ -32,10 +46,23 @@ jobs:
           node-version: '24'
 
       # 只用 Node 内置模块（fs/path/crypto/fetch），不装依赖
-      - name: 只检查本 PR 改动到的内容文件
+      #
+      # 两个 section 各跑一步、**都不加 continue-on-error**：
+      # 任一有缺口就判红。分成两步是为了让红叉直接指出是哪个学段。
+      - name: primary —— 只检查本 PR 改动到的内容文件
         run: |
           node scripts/audio/precheck-changed.mjs \
             --section primary \
+            --base "origin/${{ github.base_ref }}"
+
+      # junior 的表源（junior_vocab / junior_listening_exercises）在这里会被**显式跳过并打印**：
+      # DB 内容不在 diff 里，按文件 diff 的闸门在结构上覆盖不到，那部分由周巡检兜。
+      # 因此这一步同样**不需要任何凭据**（只对公开 CDN 发 HEAD）。
+      - name: junior —— 只检查本 PR 改动到的内容文件
+        if: always()   # primary 红了也要把 junior 的结论一起给出来，省一轮往返
+        run: |
+          node scripts/audio/precheck-changed.mjs \
+            --section junior \
             --base "origin/${{ github.base_ref }}"
 
       - name: 上传缺口清单（便于本地直接喂给 backfill）
@@ -43,5 +70,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: audio-precheck-gap-list
-          path: data/audio-audit/precheck_primary_list.csv
+          path: |
+            data/audio-audit/precheck_primary_list.csv
+            data/audio-audit/precheck_junior_list.csv
           if-no-files-found: ignore

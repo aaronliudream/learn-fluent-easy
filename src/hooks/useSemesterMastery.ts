@@ -33,6 +33,12 @@ export function useSemesterMastery(
   const [map, setMap] = useState<UnitMasteryMap>({});
   const key = (units ?? []).map((u) => u.id).join(",");
 
+  // ★这里收到的必须已经是 DB 层的 publisher 值★
+  //   初中 URL 层是 pep/fltrp,DB 列存历史值 junior/junior_fltrp(见 juniorHub/publisher.ts);
+  //   高中是另一套命名空间。两条线共用本 hook,所以**不在这里做映射** —— 谁调用谁负责转换,
+  //   否则用初中的映射去套高中的值,会把高中一并弄坏。
+  const dbPub = publisher || null;
+
   useEffect(() => {
     let cancelled = false;
     const list = units ?? [];
@@ -55,7 +61,7 @@ export function useSemesterMastery(
           .select("id,unit")
           .eq("grade", grade)
           .eq("volume", book);
-        if (publisher) q = q.eq("publisher", publisher);
+        if (dbPub) q = q.eq("publisher", dbPub);
         const { data } = await q;
         if (cancelled) return;
         for (const r of (data ?? []) as { id: string; unit: string }[]) {
@@ -88,7 +94,7 @@ export function useSemesterMastery(
       const byUnitQids: Record<string, string[]> = {};
       if (allCodes.length) {
         let pq = supabase.from("junior_grammar_points").select("id,code").in("code", allCodes);
-        if (publisher) pq = pq.eq("publisher", publisher);
+        if (dbPub) pq = pq.eq("publisher", dbPub);
         const { data: pts } = await pq;
         if (cancelled) return;
         const pointToUnit: Record<string, string> = {};
@@ -130,7 +136,7 @@ export function useSemesterMastery(
     return () => {
       cancelled = true;
     };
-  }, [key, grade, publisher]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [key, grade, dbPub]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return map;
 }

@@ -13,7 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadConfig, checkCoverage, extractItems, REPO } from './extract.mjs';
 import { loadDbEnv, fetchTableRows } from './table-source.mjs';
-import { parseCsv } from './csv.mjs';
+import { parseCsv, toCsv } from './csv.mjs';
 
 const arg = (name, dflt) => {
   const i = process.argv.indexOf(name);
@@ -85,6 +85,40 @@ const main = async () => {
     `  ${String(label).padEnd(38)} 总 ${String(total).padStart(6)}   缺 ${String(missing).padStart(6)}   覆盖 ${((1 - missing / total) * 100).toFixed(1)}%`;
 
   const auto = all.filter((r) => isAutoplay(r, fcAutoplayIds));
+
+  // --emit-batches：把缺口清单按 P0–P4 切成子清单，喂 backfill-missing-audio.ts --list。
+  // 分批定义与上面的统计**共用同一份判据**（尤其"自动播"），不另写一套免得漂。
+  if (process.argv.includes('--emit-batches')) {
+    const missRows = parseCsv(fs.readFileSync(abs, 'utf8'));
+    const byKey = new Map(all.map((r) => [r.cache_key, r]));
+    const tierOf = (m) => (m.field.split('@')[1] ?? '');
+    const fieldOf = (m) => m.field.split('@')[0];
+    const isAuto = (m) => { const r = byKey.get(m.cache_key); return r ? isAutoplay(r, fcAutoplayIds) : false; };
+    const batches = [
+      ['p0_autoplay', (m) => isAuto(m)],
+      ['p1_listening', (m) => !isAuto(m) && (m.field === 'transcript@userDefault' || fieldOf(m) === 'listeningQuestions.opts[answer]')],
+      ['p2_words', (m) => !isAuto(m) && fieldOf(m) === 'word'],
+      ['p3_chunks', (m) => !isAuto(m) && ['chunks.en', 'phrase_en', 'example_en'].includes(fieldOf(m))],
+      ['p4_rest', () => true], // 兜底：前面没被认领的全在这里，保证四批之和 = 清单总数
+    ];
+    const left = new Set(missRows);
+    const cols = ['cache_key', 'text', 'voice_id', 'speed', 'cdn_url', 'storage_url', 'source_ref', 'record_id', 'field'];
+    console.log('\n分批清单（--emit-batches）：');
+    let acc = 0;
+    for (const [name, pred] of batches) {
+      const picked = [...left].filter(pred);
+      picked.forEach((m) => left.delete(m));
+      const out = `data/audio-audit/junior_${name}.csv`;
+      fs.writeFileSync(path.join(REPO, out), toCsv(cols, picked), 'utf8');
+      const chars = picked.reduce((n, m) => n + m.text.length, 0);
+      const el = picked.filter((m) => m.voice_id.startsWith('el:'));
+      acc += picked.length;
+      console.log(`  ${out.padEnd(44)} ${String(picked.length).padStart(5)} 条  ${String(chars).padStart(7)} 字符  (elevenlabs ${el.length} 条/${el.reduce((n, m) => n + m.text.length, 0)} 字符)`);
+    }
+    if (acc !== missRows.length) { console.error(`✗ 分批之和 ${acc} ≠ 清单 ${missRows.length}`); process.exitCode = 2; return; }
+    console.log(`  分批之和 ${acc} = 清单总数 ${missRows.length} ✓`);
+    return;
+  }
   console.log(`可达对象 ${all.length}  缺口 ${missingKeys.size}  覆盖 ${((1 - missingKeys.size / all.length) * 100).toFixed(1)}%\n`);
   console.log('按档位：');
   for (const [k, v] of tally(all, (r) => r.field.split('@')[1])) console.log(line(k, v));

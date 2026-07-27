@@ -175,6 +175,32 @@ describe('声明复核（防 audioFree / outOfScope 声明过期）', () => {
     expect(items[0].detail).toContain('仍被这些文件引用');
   });
 
+  /**
+   * glob 形式的 assertUnreferenced（junior 的 `_backup/*.json`）：
+   * 旧实现直接取 basename → 拿 "*.json" 去 grep → 命中一大片，**每轮都告警**。
+   * 一个永远在响的告警等于没有告警，所以这里钉住两件事：
+   * 展开后按真实文件名 grep；展开不了时必须明说"这轮没执行"，不许假装通过。
+   */
+  it('assertUnreferenced 用 glob：展开成真实文件名再 grep，不拿 "*.json" 去搜', () => {
+    const cfg = { audioFree: [{ files: 'x/_backup/*.json', why: 'w', assertUnreferenced: true }], outOfScope: [] };
+    const searched: string[] = [];
+    const items = auditCore.reviewDeclarations(cfg, {
+      readFile: () => '',
+      grepRepo: (needle: string) => { searched.push(needle); return []; },
+      matchFiles: () => ['x/_backup/old_a.json', 'x/_backup/old_b.json'],
+    });
+    expect(searched).toEqual(['old_a.json', 'old_b.json']);
+    expect(searched).not.toContain('*.json');
+    expect(items).toHaveLength(0);
+  });
+
+  it('assertUnreferenced 用 glob 但没给 matchFiles → 告警"这轮没执行"，不静默放行', () => {
+    const cfg = { audioFree: [{ files: 'x/_backup/*.json', why: 'w', assertUnreferenced: true }], outOfScope: [] };
+    const items = auditCore.reviewDeclarations(cfg, { readFile: () => '', grepRepo: () => [] });
+    expect(items).toHaveLength(1);
+    expect(items[0].detail).toContain('没真正执行');
+  });
+
   it('outOfScope status=unverified → 每轮告警一次；confirmed 不告警', () => {
     const cfg = {
       audioFree: [],

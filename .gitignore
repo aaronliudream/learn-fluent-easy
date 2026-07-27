@@ -61,3 +61,14 @@ data/audio-audit/audit_*.json
 data/audio-audit/precheck_*_list.csv
 data/audio-audit/pipeline_*.csv
 data/audio-audit/pipeline_progress.json
+
+# junior 的 P0–P4 分批清单：由 `node scripts/audio/junior-breakdown.mjs --emit-batches`
+# 从 junior_missing.csv 秒级重算（脚本里有"分批之和 = 清单总数"的断言），不必入库占 4MB。
+# 生成的**结果**与**进度**（junior_p*_result.csv / junior_p*_progress.json）照常入库——
+# 那两样是"实际发生了什么"的记录，重算不出来。
+data/audio-audit/junior_p0_autoplay.csv
+data/audio-audit/junior_p1_listening.csv
+data/audio-audit/junior_p2_words.csv
+data/audio-audit/junior_p3_chunks.csv
+data/audio-audit/junior_p4_rest.csv
+data/audio-audit/junior_existing_pool.csv

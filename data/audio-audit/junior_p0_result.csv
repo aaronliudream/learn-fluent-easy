@@ -1,0 +1,1896 @@
+﻿key,text,status,cdn_status,bytes,needs_purge,reason,attempts,provider
+openai|nova|0.85||chemistry,chemistry,created,200,26112,no,,1,openai
+openai|nova|0.85||public,public,created,200,22272,no,,1,openai
+openai|nova|0.85||Christmas,Christmas,created,200,34560,no,,1,openai
+openai|nova|0.85||afraid,afraid,created,200,20352,no,,1,openai
+openai|nova|0.85||seat,seat,created,200,24192,no,,1,openai
+openai|nova|0.85||lifetime,lifetime,created,200,25344,no,,1,openai
+openai|nova|0.85||lantern,lantern,created,200,21504,no,,1,openai
+openai|nova|0.85||disappoint,disappoint,created,200,31872,no,,1,openai
+openai|nova|0.85||mash,mash,created,200,21504,no,,1,openai
+openai|nova|0.85||northern,northern,created,200,46848,no,,1,openai
+openai|nova|0.85||make sb's bed,make sb's bed,created,200,54144,no,,1,openai
+openai|nova|0.85||wash,wash,created,200,17664,no,,1,openai
+openai|nova|0.85||support,support,created,200,8448,no,,1,openai
+openai|nova|0.85||fail,fail,created,200,32640,no,,1,openai
+openai|nova|0.85||polite,polite,created,200,18816,no,,1,openai
+openai|nova|0.85||nearby,nearby,created,200,24192,no,,1,openai
+openai|nova|0.85||pick,pick,created,200,28032,no,,1,openai
+openai|nova|0.85||knock,knock,created,200,52224,no,,1,openai
+openai|nova|0.85||takeaway,takeaway,created,200,31872,no,,1,openai
+openai|nova|0.85||laptop,laptop,created,200,31872,no,,1,openai
+openai|nova|0.85||put oneself in sb's shoes,put oneself in sb's shoes,created,200,51456,no,,1,openai
+openai|nova|0.85||unlock,unlock,created,200,36480,no,,1,openai
+openai|nova|0.85||snack,snack,created,200,35328,no,,1,openai
+openai|nova|0.85||recall,recall,created,200,20352,no,,1,openai
+openai|nova|0.85||grape,grape,created,200,19584,no,,1,openai
+openai|nova|0.85||safety,safety,created,200,31872,no,,1,openai
+openai|nova|0.85||Olympics,Olympics,created,200,26112,no,,1,openai
+openai|nova|0.85||pack up,pack up,created,200,20352,no,,1,openai
+openai|nova|0.85||presenter,presenter,created,200,27264,no,,1,openai
+openai|nova|0.85||challenging,challenging,created,200,18816,no,,1,openai
+openai|nova|0.85||uncomfortable,uncomfortable,created,200,29184,no,,1,openai
+openai|nova|0.85||puppet,puppet,created,200,24192,no,,1,openai
+openai|nova|0.85||hardly ever,hardly ever,created,200,35328,no,,1,openai
+openai|nova|0.85||opening,opening,created,200,31872,no,,1,openai
+openai|nova|0.85||bath,bath,created,200,25344,no,,1,openai
+openai|nova|0.85||side by side,side by side,created,200,31872,no,,1,openai
+openai|nova|0.85||wig,wig,created,200,44160,no,,1,openai
+openai|nova|0.85||college,college,created,200,27264,no,,1,openai
+openai|nova|0.85||table manners,table manners,created,200,30720,no,,1,openai
+openai|nova|0.85||nervously,nervously,created,200,31872,no,,1,openai
+openai|nova|0.85||call back,call back,created,200,35328,no,,1,openai
+openai|nova|0.85||growth,growth,created,200,18816,no,,1,openai
+openai|nova|0.85||advertisement,advertisement,created,200,36480,no,,1,openai
+openai|nova|0.85||thunder,thunder,created,200,30720,no,,1,openai
+openai|nova|0.85||volleyball,volleyball,created,200,33792,no,,1,openai
+openai|nova|0.85||cost,cost,created,200,22272,no,,1,openai
+openai|nova|0.85||injury,injury,created,200,28032,no,,1,openai
+openai|nova|0.85||project,project,created,200,39552,no,,1,openai
+openai|nova|0.85||except,except,created,200,27264,no,,1,openai
+openai|nova|0.85||fit,fit,created,200,23424,no,,1,openai
+openai|nova|0.85||suggestion,suggestion,created,200,26112,no,,1,openai
+openai|nova|0.85||energy,energy,created,200,24192,no,,1,openai
+openai|nova|0.85||archaeologist,archaeologist,created,200,52224,no,,1,openai
+openai|nova|0.85||so that,so that,created,200,32640,no,,1,openai
+openai|nova|0.85||not only ... but also ...,not only ... but also ...,created,200,57984,no,,1,openai
+openai|nova|0.85||object,object,created,200,17664,no,,1,openai
+openai|nova|0.85||trouble,trouble,created,200,33792,no,,1,openai
+openai|nova|0.85||mail,mail,created,200,16896,no,,1,openai
+openai|nova|0.85||context,context,created,200,20352,no,,1,openai
+openai|nova|0.85||palace,palace,created,200,46080,no,,1,openai
+openai|nova|0.85||attention,attention,created,200,17664,no,,1,openai
+openai|nova|0.85||stress,stress,created,200,26112,no,,1,openai
+openai|nova|0.85||smartphone,smartphone,created,200,25344,no,,1,openai
+openai|nova|0.85||vulnerable,vulnerable,created,200,19584,no,,1,openai
+openai|nova|0.85||victory,victory,created,200,23424,no,,1,openai
+openai|nova|0.85||caring,caring,created,200,8448,no,,1,openai
+openai|nova|0.85||shocking,shocking,created,200,23424,no,,1,openai
+openai|nova|0.85||wastewater,wastewater,created,200,37632,no,,1,openai
+openai|nova|0.85||reef,reef,created,200,24192,no,,1,openai
+openai|nova|0.85||energetic,energetic,created,200,33792,no,,1,openai
+openai|nova|0.85||listener,listener,created,200,48000,no,,1,openai
+openai|nova|0.85||base camp,base camp,created,200,24192,no,,1,openai
+openai|nova|0.85||share sth with sb,share sth with sb,created,200,59136,no,,1,openai
+openai|nova|0.85||reunion,reunion,created,200,24192,no,,1,openai
+openai|nova|0.85||miss,miss,created,200,42240,no,,1,openai
+openai|nova|0.85||eastern,eastern,created,200,27264,no,,1,openai
+openai|nova|0.85||health,health,created,200,32640,no,,1,openai
+openai|nova|0.85||rapid,rapid,created,200,18816,no,,1,openai
+openai|nova|0.85||symbol,symbol,created,200,18816,no,,1,openai
+openai|nova|0.85||customer,customer,created,200,19584,no,,1,openai
+openai|nova|0.85||too much,too much,created,200,27264,no,,1,openai
+openai|nova|0.85||disagreement,disagreement,created,200,22272,no,,1,openai
+openai|nova|0.85||take a seat,take a seat,created,200,29952,no,,1,openai
+openai|nova|0.85||play Chinese chess,play Chinese chess,created,200,46848,no,,1,openai
+openai|nova|0.85||term,term,created,200,17664,no,,1,openai
+openai|nova|0.85||directly,directly,created,200,27264,no,,1,openai
+openai|nova|0.85||chain,chain,created,200,28032,no,,1,openai
+openai|nova|0.85||likely,likely,created,200,35328,no,,1,openai
+openai|nova|0.85||shy,shy,created,200,28032,no,,1,openai
+openai|nova|0.85||go boating,go boating,created,200,35328,no,,1,openai
+openai|nova|0.85||ingredient,ingredient,created,200,41088,no,,1,openai
+openai|nova|0.85||a number of,a number of,created,200,19584,no,,1,openai
+openai|nova|0.85||teamwork,teamwork,created,200,24192,no,,1,openai
+openai|nova|0.85||socialist,socialist,created,200,33792,no,,1,openai
+openai|nova|0.85||of course,of course,created,200,43008,no,,1,openai
+openai|nova|0.85||tail,tail,created,200,29184,no,,1,openai
+openai|nova|0.85||mixture,mixture,created,200,23424,no,,1,openai
+openai|nova|0.85||pork,pork,created,200,26112,no,,1,openai
+openai|nova|0.85||double,double,created,200,17664,no,,1,openai
+openai|nova|0.85||musical instrument,musical instrument,created,200,37632,no,,1,openai
+openai|nova|0.85||show sb around,show sb around,created,200,42240,no,,1,openai
+openai|nova|0.85||gentle,gentle,created,200,42240,no,,1,openai
+openai|nova|0.85||shine,shine,created,200,28032,no,,1,openai
+openai|nova|0.85||madam,madam,created,200,18816,no,,1,openai
+openai|nova|0.85||result,result,created,200,16896,no,,1,openai
+openai|nova|0.85||a bottle of,a bottle of,created,200,35328,no,,1,openai
+openai|nova|0.85||field,field,created,200,29184,no,,1,openai
+openai|nova|0.85||interest,interest,created,200,51456,no,,1,openai
+openai|nova|0.85||part,part,created,200,25344,no,,1,openai
+openai|nova|0.85||increase,increase,created,200,30720,no,,1,openai
+openai|nova|0.85||successful,successful,created,200,30720,no,,1,openai
+openai|nova|0.85||in high spirits,in high spirits,created,200,40320,no,,1,openai
+openai|nova|0.85||in fact,in fact,created,200,28032,no,,1,openai
+openai|nova|0.85||chip,chip,created,200,29952,no,,1,openai
+openai|nova|0.85||future,future,created,200,25344,no,,1,openai
+openai|nova|0.85||research,research,created,200,29184,no,,1,openai
+openai|nova|0.85||kingdom,kingdom,created,200,34560,no,,1,openai
+openai|nova|0.85||reply,reply,created,200,42240,no,,1,openai
+openai|nova|0.85||throw,throw,created,200,25344,no,,1,openai
+openai|nova|0.85||stamp,stamp,created,200,30720,no,,1,openai
+openai|nova|0.85||flash,flash,created,200,21504,no,,1,openai
+openai|nova|0.85||cashier,cashier,created,200,19584,no,,1,openai
+openai|nova|0.85||line,line,created,200,26112,no,,1,openai
+openai|nova|0.85||closing,closing,created,200,23424,no,,1,openai
+openai|nova|0.85||negative,negative,created,200,28032,no,,1,openai
+openai|nova|0.85||pull together,pull together,created,200,42240,no,,1,openai
+openai|nova|0.85||breathe,breathe,created,200,51456,no,,1,openai
+openai|nova|0.85||exhibition,exhibition,created,200,21504,no,,1,openai
+openai|nova|0.85||au revoir,au revoir,created,200,41088,no,,1,openai
+openai|nova|0.85||the movies,the movies,created,200,31872,no,,1,openai
+openai|nova|0.85||mm,mm,created,200,23424,no,,1,openai
+openai|nova|0.85||multimedia,multimedia,created,200,35328,no,,1,openai
+openai|nova|0.85||description,description,created,200,27264,no,,1,openai
+openai|nova|0.85||boarding school,boarding school,created,200,54144,no,,1,openai
+openai|nova|0.85||feel blue,feel blue,created,200,20352,no,,1,openai
+openai|nova|0.85||take place,take place,created,200,29184,no,,1,openai
+openai|nova|0.85||honesty,honesty,created,200,25344,no,,1,openai
+openai|nova|0.85||thirsty,thirsty,skipped,200,29184,no,,0,
+openai|nova|0.85||agree with,agree with,created,200,22272,no,,1,openai
+openai|nova|0.85||get lost,get lost,created,200,33792,no,,1,openai
+openai|nova|0.85||sort,sort,created,200,27264,no,,1,openai
+openai|nova|0.85||power,power,created,200,21504,no,,1,openai
+openai|nova|0.85||sail,sail,created,200,44928,no,,1,openai
+openai|nova|0.85||cream,cream,created,200,19584,no,,1,openai
+openai|nova|0.85||such as,such as,created,200,19584,no,,1,openai
+openai|nova|0.85||imaginative,imaginative,created,200,42240,no,,1,openai
+openai|nova|0.85||amber,amber,created,200,19584,no,,1,openai
+openai|nova|0.85||ready to do sth,ready to do sth,created,200,44928,no,,1,openai
+openai|nova|0.85||award,award,created,200,42240,no,,1,openai
+openai|nova|0.85||wisely,wisely,created,200,33792,no,,1,openai
+openai|nova|0.85||go a long way,go a long way,created,200,40320,no,,1,openai
+openai|nova|0.85||restroom,restroom,created,200,26112,no,,1,openai
+openai|nova|0.85||reaction,reaction,created,200,20352,no,,1,openai
+openai|nova|0.85||speaker,speaker,created,200,24192,no,,1,openai
+openai|nova|0.85||accept,accept,created,200,24192,no,,1,openai
+openai|nova|0.85||during,during,created,200,19584,no,,1,openai
+openai|nova|0.85||fear,fear,created,200,25344,no,,1,openai
+openai|nova|0.85||aid,aid,created,200,26112,no,,1,openai
+openai|nova|0.85||however,however,created,200,28032,no,,1,openai
+openai|nova|0.85||fact,fact,created,200,44160,no,,1,openai
+openai|nova|0.85||kiss,kiss,created,200,42240,no,,1,openai
+openai|nova|0.85||boil,boil,created,200,29184,no,,1,openai
+openai|nova|0.85||shark,shark,created,200,30720,no,,1,openai
+openai|nova|0.85||occasion,occasion,created,200,25344,no,,1,openai
+openai|nova|0.85||digital,digital,created,200,17664,no,,1,openai
+openai|nova|0.85||against the law,against the law,created,200,35328,no,,1,openai
+openai|nova|0.85||robot,robot,created,200,56064,no,,1,openai
+openai|nova|0.85||stranger,stranger,created,200,24192,no,,1,openai
+openai|nova|0.85||canal,canal,created,200,26112,no,,1,openai
+openai|nova|0.85||allow,allow,created,200,18816,no,,1,openai
+openai|nova|0.85||daily,daily,created,200,29184,no,,1,openai
+openai|nova|0.85||truly,truly,created,200,16896,no,,1,openai
+openai|nova|0.85||planet,planet,created,200,30720,no,,1,openai
+openai|nova|0.85||simply,simply,created,200,26112,no,,1,openai
+openai|nova|0.85||tight,tight,created,200,20352,no,,1,openai
+openai|nova|0.85||inventor,inventor,created,200,50688,no,,1,openai
+openai|nova|0.85||logo,logo,created,200,20352,no,,1,openai
+openai|nova|0.85||thankful,thankful,created,200,42240,no,,1,openai
+openai|nova|0.85||suggest,suggest,created,200,32640,no,,1,openai
+openai|nova|0.85||scary,scary,created,200,20352,no,,1,openai
+openai|nova|0.85||heel,heel,created,200,23424,no,,1,openai
+openai|nova|0.85||ruler,ruler,created,200,29952,no,,1,openai
+openai|nova|0.85||climax,climax,created,200,22272,no,,1,openai
+openai|nova|0.85||title,title,created,200,24192,no,,1,openai
+openai|nova|0.85||comb,comb,created,200,8448,no,,1,openai
+openai|nova|0.85||wallet,wallet,created,200,22272,no,,1,openai
+openai|nova|0.85||factory,factory,created,200,3840,no,,1,openai
+openai|nova|0.85||cloudy,cloudy,created,200,24192,no,,1,openai
+openai|nova|0.85||watery,watery,created,200,22272,no,,1,openai
+openai|nova|0.85||hit,hit,created,200,19584,no,,1,openai
+openai|nova|0.85||fascinating,fascinating,created,200,23424,no,,1,openai
+openai|nova|0.85||daily life,daily life,created,200,36480,no,,1,openai
+openai|nova|0.85||literary,literary,created,200,28032,no,,1,openai
+openai|nova|0.85||within,within,created,200,19584,no,,1,openai
+openai|nova|0.85||pay attention,pay attention,created,200,25344,no,,1,openai
+openai|nova|0.85||traffic,traffic,created,200,35328,no,,1,openai
+openai|nova|0.85||gas,gas,created,200,25344,no,,1,openai
+openai|nova|0.85||pull,pull,skipped,200,22272,no,,0,
+openai|nova|0.85||seriously,seriously,created,200,53376,no,,1,openai
+openai|nova|0.85||law,law,created,200,37632,no,,1,openai
+openai|nova|0.85||musician,musician,created,200,19584,no,,1,openai
+openai|nova|0.85||seat belt,seat belt,created,200,32640,no,,1,openai
+openai|nova|0.85||put on,put on,created,200,29184,no,,1,openai
+openai|nova|0.85||glad,glad,created,200,29184,no,,1,openai
+openai|nova|0.85||rock,rock,created,200,33792,no,,1,openai
+openai|nova|0.85||hallway,hallway,created,200,25344,no,,1,openai
+openai|nova|0.85||silver lining,silver lining,created,200,27264,no,,1,openai
+openai|nova|0.85||porridge,porridge,created,200,27264,no,,1,openai
+openai|nova|0.85||lazy,lazy,created,200,26112,no,,1,openai
+openai|nova|0.85||interview,interview,created,200,19584,no,,1,openai
+openai|nova|0.85||stick to sth,stick to sth,created,200,55296,no,,1,openai
+openai|nova|0.85||take part in,take part in,created,200,34560,no,,1,openai
+openai|nova|0.85||shuttlecock,shuttlecock,created,200,24192,no,,1,openai
+openai|nova|0.85||behave,behave,created,200,49920,no,,1,openai
+openai|nova|0.85||below,below,created,200,26112,no,,1,openai
+openai|nova|0.85||front line,front line,created,200,30720,no,,1,openai
+openai|nova|0.85||training,training,created,200,22272,no,,1,openai
+openai|nova|0.85||on the go,on the go,created,200,20352,no,,1,openai
+openai|nova|0.85||lock,lock,created,200,52224,no,,1,openai
+openai|nova|0.85||jeans,jeans,created,200,16896,no,,1,openai
+openai|nova|0.85||forgetful,forgetful,created,200,34560,no,,1,openai
+openai|nova|0.85||mistake,mistake,created,200,28032,no,,1,openai
+openai|nova|0.85||meet up,meet up,created,200,24192,no,,1,openai
+openai|nova|0.85||cent,cent,created,200,22272,no,,1,openai
+openai|nova|0.85||form,form,created,200,20352,no,,1,openai
+openai|nova|0.85||tennis,tennis,created,200,44928,no,,1,openai
+openai|nova|0.85||differently,differently,created,200,23424,no,,1,openai
+openai|nova|0.85||test,test,created,200,52224,no,,1,openai
+openai|nova|0.85||hoax,hoax,created,200,35328,no,,1,openai
+openai|nova|0.85||kilometre,kilometre,created,200,20352,no,,1,openai
+openai|nova|0.85||border,border,created,200,29952,no,,1,openai
+openai|nova|0.85||carrot,carrot,created,200,21504,no,,1,openai
+openai|nova|0.85||backache,backache,created,200,30720,no,,1,openai
+openai|nova|0.85||fry,fry,created,200,29184,no,,1,openai
+openai|nova|0.85||wing,wing,created,200,18816,no,,1,openai
+openai|nova|0.85||base,base,created,200,19584,no,,1,openai
+openai|nova|0.85||repeat,repeat,created,200,52224,no,,1,openai
+openai|nova|0.85||tool,tool,created,200,8448,no,,1,openai
+openai|nova|0.85||speed,speed,created,200,25344,no,,1,openai
+openai|nova|0.85||cinnamon,cinnamon,created,200,32640,no,,1,openai
+openai|nova|0.85||organise,organise,created,200,29184,no,,1,openai
+openai|nova|0.85||hamburger,hamburger,created,200,34560,no,,1,openai
+openai|nova|0.85||classmate,classmate,created,200,29184,no,,1,openai
+openai|nova|0.85||donate,donate,created,200,19584,no,,1,openai
+openai|nova|0.85||mine,mine,created,200,35328,no,,1,openai
+openai|nova|0.85||aloud,aloud,created,200,14208,no,,1,openai
+openai|nova|0.85||glacier,glacier,created,200,17664,no,,1,openai
+openai|nova|0.85||dumpling,dumpling,created,200,21504,no,,1,openai
+openai|nova|0.85||continue,continue,created,200,22272,no,,1,openai
+openai|nova|0.85||receive,receive,created,200,20352,no,,1,openai
+openai|nova|0.85||confidence,confidence,created,200,44928,no,,1,openai
+openai|nova|0.85||roller coaster,roller coaster,created,200,24192,no,,1,openai
+openai|nova|0.85||tourist,tourist,created,200,23424,no,,1,openai
+openai|nova|0.85||excuse,excuse,created,200,29184,no,,1,openai
+openai|nova|0.85||body,body,created,200,38400,no,,1,openai
+openai|nova|0.85||wheat,wheat,created,200,21504,no,,1,openai
+openai|nova|0.85||in line with,in line with,created,200,44160,no,,1,openai
+openai|nova|0.85||produce,produce,created,200,19584,no,,1,openai
+openai|nova|0.85||go by,go by,created,200,41088,no,,1,openai
+openai|nova|0.85||airline,airline,created,200,25344,no,,1,openai
+openai|nova|0.85||familiar with,familiar with,created,200,29184,no,,1,openai
+openai|nova|0.85||review,review,created,200,29184,no,,1,openai
+openai|nova|0.85||beaver,beaver,created,200,30720,no,,1,openai
+openai|nova|0.85||pill,pill,created,200,19584,no,,1,openai
+openai|nova|0.85||jump rope,jump rope,created,200,36480,no,,1,openai
+openai|nova|0.85||pink,pink,created,200,21504,no,,1,openai
+openai|nova|0.85||mid-summer,mid-summer,created,200,29184,no,,1,openai
+openai|nova|0.85||mat,mat,created,200,24192,no,,1,openai
+openai|nova|0.85||avoid,avoid,created,200,24192,no,,1,openai
+openai|nova|0.85||missing,missing,created,200,15744,no,,1,openai
+openai|nova|0.85||whom,whom,created,200,8448,no,,1,openai
+openai|nova|0.85||cup,cup,created,200,48000,no,,1,openai
+openai|nova|0.85||housework,housework,created,200,31872,no,,1,openai
+openai|nova|0.85||be used to,be used to,created,200,30720,no,,1,openai
+openai|nova|0.85||earring,earring,created,200,18816,no,,1,openai
+openai|nova|0.85||recommend,recommend,created,200,19584,no,,1,openai
+openai|nova|0.85||weather,weather,created,200,20352,no,,1,openai
+openai|nova|0.85||Dr,Dr,created,200,30720,no,,1,openai
+openai|nova|0.85||wave,wave,created,200,19584,no,,1,openai
+openai|nova|0.85||fantasy,fantasy,created,200,40320,no,,1,openai
+openai|nova|0.85||alive,alive,created,200,27264,no,,1,openai
+openai|nova|0.85||herself,herself,created,200,27264,no,,1,openai
+openai|nova|0.85||illness,illness,created,200,41088,no,,1,openai
+openai|nova|0.85||sunlight,sunlight,created,200,22272,no,,1,openai
+openai|nova|0.85||pick up,pick up,created,200,22272,no,,1,openai
+openai|nova|0.85||silent,silent,created,200,23424,no,,1,openai
+openai|nova|0.85||role,role,created,200,20352,no,,1,openai
+openai|nova|0.85||curiosity,curiosity,created,200,24192,no,,1,openai
+openai|nova|0.85||impossible,impossible,created,200,22272,no,,1,openai
+openai|nova|0.85||parking lot,parking lot,created,200,29184,no,,1,openai
+openai|nova|0.85||argue,argue,created,200,29184,no,,1,openai
+openai|nova|0.85||all of a sudden,all of a sudden,created,200,33792,no,,1,openai
+openai|nova|0.85||abroad,abroad,created,200,38400,no,,1,openai
+openai|nova|0.85||mile,mile,created,200,38400,no,,1,openai
+openai|nova|0.85||first name,first name,created,200,49920,no,,1,openai
+openai|nova|0.85||be flooded with,be flooded with,created,200,27264,no,,1,openai
+openai|nova|0.85||model,model,created,200,22272,no,,1,openai
+openai|nova|0.85||be yourself,be yourself,created,200,35328,no,,1,openai
+openai|nova|0.85||over there,over there,created,200,50688,no,,1,openai
+openai|nova|0.85||believable,believable,created,200,24192,no,,1,openai
+openai|nova|0.85||search,search,created,200,16896,no,,1,openai
+openai|nova|0.85||skill,skill,created,200,22272,no,,1,openai
+openai|nova|0.85||example,example,created,200,21504,no,,1,openai
+openai|nova|0.85||mean,mean,created,200,8448,no,,1,openai
+openai|nova|0.85||thanks to,thanks to,created,200,25344,no,,1,openai
+openai|nova|0.85||show up,show up,created,200,25344,no,,1,openai
+openai|nova|0.85||besides,besides,created,200,48000,no,,1,openai
+openai|nova|0.85||by the time,by the time,created,200,43008,no,,1,openai
+openai|nova|0.85||turtle,turtle,created,200,8448,no,,1,openai
+openai|nova|0.85||painting,painting,created,200,18816,no,,1,openai
+openai|nova|0.85||purpose,purpose,created,200,8448,no,,1,openai
+openai|nova|0.85||have to,have to,created,200,26112,no,,1,openai
+openai|nova|0.85||butterfly,butterfly,created,200,34560,no,,1,openai
+openai|nova|0.85||in a row,in a row,created,200,25344,no,,1,openai
+openai|nova|0.85||meal,meal,created,200,27264,no,,1,openai
+openai|nova|0.85||farmer,farmer,created,200,21504,no,,1,openai
+openai|nova|0.85||logging,logging,created,200,21504,no,,1,openai
+openai|nova|0.85||prevent,prevent,created,200,27264,no,,1,openai
+openai|nova|0.85||hide,hide,created,200,21504,no,,1,openai
+openai|nova|0.85||movie,movie,created,200,35328,no,,1,openai
+openai|nova|0.85||mini-goal,mini-goal,created,200,27264,no,,1,openai
+openai|nova|0.85||reusable,reusable,created,200,29184,no,,1,openai
+openai|nova|0.85||balcony,balcony,created,200,31872,no,,1,openai
+openai|nova|0.85||rub,rub,created,200,41088,no,,1,openai
+openai|nova|0.85||normal,normal,created,200,29952,no,,1,openai
+openai|nova|0.85||great-aunt,great-aunt,created,200,27264,no,,1,openai
+openai|nova|0.85||lemon,lemon,created,200,57216,no,,1,openai
+openai|nova|0.85||go camping,go camping,created,200,28032,no,,1,openai
+openai|nova|0.85||fence,fence,created,200,26112,no,,1,openai
+openai|nova|0.85||pollen,pollen,created,200,27264,no,,1,openai
+openai|nova|0.85||working day,working day,created,200,24192,no,,1,openai
+openai|nova|0.85||late for,late for,created,200,30720,no,,1,openai
+openai|nova|0.85||station,station,created,200,21504,no,,1,openai
+openai|nova|0.85||introduce,introduce,created,200,24192,no,,1,openai
+openai|nova|0.85||via,via,created,200,43008,no,,1,openai
+openai|nova|0.85||take a walk,take a walk,created,200,25344,no,,1,openai
+openai|nova|0.85||villager,villager,created,200,17664,no,,1,openai
+openai|nova|0.85||fame,fame,created,200,25344,no,,1,openai
+openai|nova|0.85||budget,budget,created,200,48000,no,,1,openai
+openai|nova|0.85||online,online,created,200,27264,no,,1,openai
+openai|nova|0.85||powerful,powerful,created,200,23424,no,,1,openai
+openai|nova|0.85||personal,personal,created,200,16896,no,,1,openai
+openai|nova|0.85||folk,folk,created,200,19584,no,,1,openai
+openai|nova|0.85||once in a while,once in a while,created,200,22272,no,,1,openai
+openai|nova|0.85||dynasty,dynasty,created,200,23424,no,,1,openai
+openai|nova|0.85||painful,painful,created,200,25344,no,,1,openai
+openai|nova|0.85||from time to time,from time to time,created,200,53376,no,,1,openai
+openai|nova|0.85||in time,in time,created,200,31872,no,,1,openai
+openai|nova|0.85||article,article,created,200,26112,no,,1,openai
+openai|nova|0.85||be friends with sb.,be friends with sb.,created,200,59136,no,,1,openai
+openai|nova|0.85||emission,emission,created,200,28032,no,,1,openai
+openai|nova|0.85||primary school,primary school,created,200,29184,no,,1,openai
+openai|nova|0.85||gram,gram,created,200,38400,no,,1,openai
+openai|nova|0.85||delicious,delicious,created,200,48000,no,,1,openai
+openai|nova|0.85||ton,ton,created,200,15744,no,,1,openai
+openai|nova|0.85||passport,passport,created,200,31872,no,,1,openai
+openai|nova|0.85||engineer,engineer,created,200,23424,no,,1,openai
+openai|nova|0.85||keep one's cool,keep one's cool,created,200,27264,no,,1,openai
+openai|nova|0.85||secret,secret,created,200,21504,no,,1,openai
+openai|nova|0.85||score,score,created,200,46848,no,,1,openai
+openai|nova|0.85||item,item,created,200,23424,no,,1,openai
+openai|nova|0.85||taxi,taxi,created,200,29952,no,,1,openai
+openai|nova|0.85||bill,bill,created,200,25344,no,,1,openai
+openai|nova|0.85||private,private,created,200,23424,no,,1,openai
+openai|nova|0.85||serve,serve,created,200,27264,no,,1,openai
+openai|nova|0.85||wisdom,wisdom,created,200,40320,no,,1,openai
+openai|nova|0.85||autopilot,autopilot,created,200,24192,no,,1,openai
+openai|nova|0.85||airport,airport,created,200,20352,no,,1,openai
+openai|nova|0.85||pride,pride,created,200,29952,no,,1,openai
+openai|nova|0.85||describe,describe,created,200,38400,no,,1,openai
+openai|nova|0.85||bee-keeping,bee-keeping,created,200,23424,no,,1,openai
+openai|nova|0.85||creativity,creativity,created,200,26112,no,,1,openai
+openai|nova|0.85||report,report,created,200,24192,no,,1,openai
+openai|nova|0.85||discussion,discussion,created,200,23424,no,,1,openai
+openai|nova|0.85||slow down,slow down,created,200,29952,no,,1,openai
+openai|nova|0.85||lawyer,lawyer,created,200,22272,no,,1,openai
+openai|nova|0.85||local,local,created,200,25344,no,,1,openai
+openai|nova|0.85||regret,regret,created,200,17664,no,,1,openai
+openai|nova|0.85||plenty of,plenty of,created,200,31872,no,,1,openai
+openai|nova|0.85||moving,moving,created,200,22272,no,,1,openai
+openai|nova|0.85||painter,painter,created,200,29952,no,,1,openai
+openai|nova|0.85||cross,cross,created,200,41088,no,,1,openai
+openai|nova|0.85||regular,regular,created,200,28032,no,,1,openai
+openai|nova|0.85||railway,railway,created,200,32640,no,,1,openai
+openai|nova|0.85||happily,happily,created,200,29952,no,,1,openai
+openai|nova|0.85||rubbish,rubbish,created,200,19584,no,,1,openai
+openai|nova|0.85||relaxed,relaxed,created,200,48768,no,,1,openai
+openai|nova|0.85||childhood,childhood,created,200,24192,no,,1,openai
+openai|nova|0.85||afford,afford,created,200,19584,no,,1,openai
+openai|nova|0.85||whether,whether,created,200,22272,no,,1,openai
+openai|nova|0.85||historical,historical,created,200,24192,no,,1,openai
+openai|nova|0.85||dividing line,dividing line,created,200,35328,no,,1,openai
+openai|nova|0.85||character,character,created,200,23424,no,,1,openai
+openai|nova|0.85||lining,lining,created,200,19584,no,,1,openai
+openai|nova|0.85||overcome,overcome,created,200,29952,no,,1,openai
+openai|nova|0.85||ladder,ladder,created,200,21504,no,,1,openai
+openai|nova|0.85||up to,up to,created,200,25344,no,,1,openai
+openai|nova|0.85||put up,put up,created,200,29184,no,,1,openai
+openai|nova|0.85||fist,fist,created,200,22272,no,,1,openai
+openai|nova|0.85||guard,guard,created,200,29184,no,,1,openai
+openai|nova|0.85||smoke,smoke,created,200,24192,no,,1,openai
+openai|nova|0.85||pollination,pollination,created,200,30720,no,,1,openai
+openai|nova|0.85||act,act,created,200,20352,no,,1,openai
+openai|nova|0.85||fashionable,fashionable,created,200,22272,no,,1,openai
+openai|nova|0.85||cyberbullying,cyberbullying,created,200,30720,no,,1,openai
+openai|nova|0.85||stir-fry,stir-fry,created,200,23424,no,,1,openai
+openai|nova|0.85||handbag,handbag,created,200,22272,no,,1,openai
+openai|nova|0.85||bad,bad,created,200,21504,no,,1,openai
+openai|nova|0.85||standard,standard,created,200,44160,no,,1,openai
+openai|nova|0.85||play a part,play a part,created,200,46848,no,,1,openai
+openai|nova|0.85||traditional,traditional,created,200,53376,no,,1,openai
+openai|nova|0.85||chance,chance,created,200,28032,no,,1,openai
+openai|nova|0.85||rope,rope,created,200,14976,no,,1,openai
+openai|nova|0.85||lightning,lightning,created,200,31872,no,,1,openai
+openai|nova|0.85||skateboarding,skateboarding,created,200,22272,no,,1,openai
+openai|nova|0.85||mouthful,mouthful,created,200,24192,no,,1,openai
+openai|nova|0.85||return,return,created,200,37632,no,,1,openai
+openai|nova|0.85||excuse me,excuse me,created,200,29952,no,,1,openai
+openai|nova|0.85||racket,racket,created,200,18816,no,,1,openai
+openai|nova|0.85||coach,coach,created,200,17664,no,,1,openai
+openai|nova|0.85||industry,industry,created,200,46080,no,,1,openai
+openai|nova|0.85||belong to,belong to,created,200,36480,no,,1,openai
+openai|nova|0.85||tower,tower,created,200,39552,no,,1,openai
+openai|nova|0.85||throw away,throw away,created,200,26112,no,,1,openai
+openai|nova|0.85||pack,pack,created,200,19584,no,,1,openai
+openai|nova|0.85||poem,poem,created,200,19584,no,,1,openai
+openai|nova|0.85||silence,silence,created,200,33792,no,,1,openai
+openai|nova|0.85||rain,rain,created,200,17664,no,,1,openai
+openai|nova|0.85||valuable,valuable,created,200,24192,no,,1,openai
+openai|nova|0.85||in person,in person,created,200,24192,no,,1,openai
+openai|nova|0.85||pigeon,pigeon,created,200,26112,no,,1,openai
+openai|nova|0.85||pass,pass,created,200,40320,no,,1,openai
+openai|nova|0.85||allergic,allergic,created,200,23424,no,,1,openai
+openai|nova|0.85||cool,cool,created,200,35328,no,,1,openai
+openai|nova|0.85||low,low,created,200,29952,no,,1,openai
+openai|nova|0.85||AI,AI,created,200,16896,no,,1,openai
+openai|nova|0.85||stomachache,stomachache,created,200,8448,no,,1,openai
+openai|nova|0.85||bean,bean,created,200,19584,no,,1,openai
+openai|nova|0.85||arrive,arrive,created,200,29184,no,,1,openai
+openai|nova|0.85||replace,replace,created,200,25344,no,,1,openai
+openai|nova|0.85||deal with,deal with,created,200,24192,no,,1,openai
+openai|nova|0.85||to sb's surprise,to sb's surprise,created,200,50688,no,,1,openai
+openai|nova|0.85||inspiration,inspiration,created,200,27264,no,,1,openai
+openai|nova|0.85||peony,peony,created,200,27264,no,,1,openai
+openai|nova|0.85||sadly,sadly,created,200,32640,no,,1,openai
+openai|nova|0.85||improper,improper,created,200,29952,no,,1,openai
+openai|nova|0.85||government,government,created,200,14976,no,,1,openai
+openai|nova|0.85||bug,bug,created,200,14976,no,,1,openai
+openai|nova|0.85||medium,medium,created,200,29184,no,,1,openai
+openai|nova|0.85||pauper,pauper,created,200,35328,no,,1,openai
+openai|nova|0.85||accidental,accidental,created,200,29952,no,,1,openai
+openai|nova|0.85||give sb a lift,give sb a lift,created,200,43008,no,,1,openai
+openai|nova|0.85||polish,polish,created,200,18816,no,,1,openai
+openai|nova|0.85||move on (to sth),move on (to sth),created,200,53376,no,,1,openai
+openai|nova|0.85||service,service,created,200,57984,no,,1,openai
+openai|nova|0.85||weakness,weakness,created,200,30720,no,,1,openai
+openai|nova|0.85||tea,tea,created,200,37632,no,,1,openai
+openai|nova|0.85||benefit … from …,benefit … from …,created,200,64896,no,,1,openai
+openai|nova|0.85||knee,knee,created,200,29952,no,,1,openai
+openai|nova|0.85||trip,trip,created,200,28032,no,,1,openai
+openai|nova|0.85||zipper,zipper,created,200,17664,no,,1,openai
+openai|nova|0.85||base on,base on,created,200,30720,no,,1,openai
+openai|nova|0.85||by accident,by accident,created,200,27264,no,,1,openai
+openai|nova|0.85||tiger,tiger,created,200,43008,no,,1,openai
+openai|nova|0.85||southern,southern,created,200,42240,no,,1,openai
+openai|nova|0.85||die,die,created,200,25344,no,,1,openai
+openai|nova|0.85||last but not least,last but not least,created,200,36480,no,,1,openai
+openai|nova|0.85||bottom,bottom,created,200,20352,no,,1,openai
+openai|nova|0.85||make ends meet,make ends meet,created,200,36480,no,,1,openai
+openai|nova|0.85||dining hall,dining hall,created,200,48000,no,,1,openai
+openai|nova|0.85||everyday,everyday,created,200,51456,no,,1,openai
+openai|nova|0.85||twin,twin,created,200,34560,no,,1,openai
+openai|nova|0.85||lively,lively,created,200,17664,no,,1,openai
+openai|nova|0.85||artist,artist,created,200,16896,no,,1,openai
+openai|nova|0.85||message,message,created,200,26112,no,,1,openai
+openai|nova|0.85||Britain,Britain,created,200,14208,no,,1,openai
+openai|nova|0.85||topic,topic,created,200,24192,no,,1,openai
+openai|nova|0.85||classic,classic,created,200,21504,no,,1,openai
+openai|nova|0.85||glue,glue,created,200,21504,no,,1,openai
+openai|nova|0.85||stove,stove,created,200,39552,no,,1,openai
+openai|nova|0.85||agreement,agreement,created,200,29184,no,,1,openai
+openai|nova|0.85||everybody,everybody,created,200,25344,no,,1,openai
+openai|nova|0.85||cut sth in/into sth,cut sth in/into sth,created,200,76032,no,,1,openai
+openai|nova|0.85||go on a trip,go on a trip,created,200,30720,no,,1,openai
+openai|nova|0.85||outside,outside,created,200,23424,no,,1,openai
+openai|nova|0.85||ours,ours,created,200,24192,no,,1,openai
+openai|nova|0.85||knowledge,knowledge,created,200,20352,no,,1,openai
+openai|nova|0.85||clearly,clearly,created,200,35328,no,,1,openai
+openai|nova|0.85||emergency,emergency,created,200,27264,no,,1,openai
+openai|nova|0.85||cheetah,cheetah,created,200,26112,no,,1,openai
+openai|nova|0.85||measurement,measurement,created,200,25344,no,,1,openai
+openai|nova|0.85||passage,passage,created,200,27264,no,,1,openai
+openai|nova|0.85||surprisingly,surprisingly,created,200,35328,no,,1,openai
+openai|nova|0.85||drama,drama,created,200,29184,no,,1,openai
+openai|nova|0.85||sense,sense,skipped,200,20352,no,,0,
+openai|nova|0.85||entry,entry,created,200,29184,no,,1,openai
+openai|nova|0.85||electric,electric,created,200,52224,no,,1,openai
+openai|nova|0.85||band,band,created,200,32640,no,,1,openai
+openai|nova|0.85||silver,silver,created,200,29184,no,,1,openai
+openai|nova|0.85||around the world,around the world,created,200,33792,no,,1,openai
+openai|nova|0.85||sincerely,sincerely,created,200,46080,no,,1,openai
+openai|nova|0.85||You're welcome.,You're welcome.,created,200,31872,no,,1,openai
+openai|nova|0.85||refuse,refuse,created,200,29184,no,,1,openai
+openai|nova|0.85||unless,unless,created,200,25344,no,,1,openai
+openai|nova|0.85||pea,pea,created,200,27264,no,,1,openai
+openai|nova|0.85||overfish,overfish,created,200,29184,no,,1,openai
+openai|nova|0.85||pity,pity,created,200,22272,no,,1,openai
+openai|nova|0.85||finger,finger,created,200,55296,no,,1,openai
+openai|nova|0.85||long-lasting,long-lasting,created,200,41088,no,,1,openai
+openai|nova|0.85||appearance,appearance,created,200,23424,no,,1,openai
+openai|nova|0.85||sand,sand,created,200,21504,no,,1,openai
+openai|nova|0.85||culture,culture,created,200,48768,no,,1,openai
+openai|nova|0.85||scientific research,scientific research,created,200,30720,no,,1,openai
+openai|nova|0.85||boss,boss,created,200,26112,no,,1,openai
+openai|nova|0.85||buy,buy,created,200,14208,no,,1,openai
+openai|nova|0.85||purple,purple,created,200,19584,no,,1,openai
+openai|nova|0.85||elephant,elephant,created,200,33792,no,,1,openai
+openai|nova|0.85||different from,different from,created,200,46848,no,,1,openai
+openai|nova|0.85||social,social,created,200,33792,no,,1,openai
+openai|nova|0.85||empty,empty,created,200,19584,no,,1,openai
+openai|nova|0.85||society,society,created,200,29184,no,,1,openai
+openai|nova|0.85||trailer,trailer,created,200,28032,no,,1,openai
+openai|nova|0.85||cubic metre,cubic metre,created,200,38400,no,,1,openai
+openai|nova|0.85||remains,remains,created,200,44160,no,,1,openai
+openai|nova|0.85||make a mistake,make a mistake,created,200,30720,no,,1,openai
+openai|nova|0.85||climate,climate,created,200,24192,no,,1,openai
+openai|nova|0.85||correct,correct,created,200,22272,no,,1,openai
+openai|nova|0.85||desert,desert,created,200,21504,no,,1,openai
+openai|nova|0.85||president,president,created,200,30720,no,,1,openai
+openai|nova|0.85||hold your breath,hold your breath,created,200,34560,no,,1,openai
+openai|nova|0.85||mask,mask,created,200,29184,no,,1,openai
+openai|nova|0.85||style,style,created,200,34560,no,,1,openai
+openai|nova|0.85||leave a message,leave a message,created,200,29952,no,,1,openai
+openai|nova|0.85||the more ... the more ...,the more ... the more ...,created,200,98688,no,,1,openai
+openai|nova|0.85||artificial,artificial,created,200,20352,no,,1,openai
+openai|nova|0.85||download,download,created,200,22272,no,,1,openai
+openai|nova|0.85||forgive,forgive,created,200,31872,no,,1,openai
+openai|nova|0.85||on time,on time,created,200,32640,no,,1,openai
+openai|nova|0.85||translate,translate,created,200,23424,no,,1,openai
+openai|nova|0.85||activity,activity,created,200,34560,no,,1,openai
+openai|nova|0.85||accident,accident,created,200,23424,no,,1,openai
+openai|nova|0.85||honeycomb,honeycomb,created,200,35328,no,,1,openai
+openai|nova|0.85||couple,couple,created,200,27264,no,,1,openai
+openai|nova|0.85||list,list,created,200,8448,no,,1,openai
+openai|nova|0.85||inexpensive,inexpensive,created,200,31872,no,,1,openai
+openai|nova|0.85||preparation,preparation,created,200,30720,no,,1,openai
+openai|nova|0.85||disappear,disappear,created,200,42240,no,,1,openai
+openai|nova|0.85||succeed in doing sth,succeed in doing sth,created,200,36480,no,,1,openai
+openai|nova|0.85||temple,temple,created,200,24192,no,,1,openai
+openai|nova|0.85||flood,flood,created,200,36480,no,,1,openai
+openai|nova|0.85||player,player,created,200,27264,no,,1,openai
+openai|nova|0.85||fever,fever,created,200,39552,no,,1,openai
+openai|nova|0.85||subway,subway,created,200,25344,no,,1,openai
+openai|nova|0.85||pull ... down,pull ... down,created,200,44160,no,,1,openai
+openai|nova|0.85||value,value,created,200,20352,no,,1,openai
+openai|nova|0.85||Australian,Australian,created,200,25344,no,,1,openai
+openai|nova|0.85||cure,cure,created,200,29184,no,,1,openai
+openai|nova|0.85||ocean,ocean,created,200,20352,no,,1,openai
+openai|nova|0.85||action,action,created,200,24192,no,,1,openai
+openai|nova|0.85||paragraph,paragraph,created,200,28032,no,,1,openai
+openai|nova|0.85||take sb's breath away,take sb's breath away,created,200,38400,no,,1,openai
+openai|nova|0.85||bite through,bite through,created,200,28032,no,,1,openai
+openai|nova|0.85||metal,metal,created,200,20352,no,,1,openai
+openai|nova|0.85||school uniform,school uniform,created,200,34560,no,,1,openai
+openai|nova|0.85||part-time,part-time,created,200,32640,no,,1,openai
+openai|nova|0.85||life-saving,life-saving,created,200,48768,no,,1,openai
+openai|nova|0.85||granddaughter,granddaughter,created,200,31872,no,,1,openai
+openai|nova|0.85||from now on,from now on,created,200,28032,no,,1,openai
+openai|nova|0.85||elbow,elbow,created,200,19584,no,,1,openai
+openai|nova|0.85||coast,coast,created,200,23424,no,,1,openai
+openai|nova|0.85||nowadays,nowadays,created,200,27264,no,,1,openai
+openai|nova|0.85||weak,weak,created,200,24192,no,,1,openai
+openai|nova|0.85||go to bed,go to bed,created,200,31872,no,,1,openai
+openai|nova|0.85||visible,visible,created,200,17664,no,,1,openai
+openai|nova|0.85||happiness,happiness,created,200,34560,no,,1,openai
+openai|nova|0.85||neither ... nor ...,neither ... nor ...,created,200,60288,no,,1,openai
+openai|nova|0.85||postman,postman,created,200,41088,no,,1,openai
+openai|nova|0.85||instruction,instruction,created,200,26112,no,,1,openai
+openai|nova|0.85||cause,cause,created,200,29184,no,,1,openai
+openai|nova|0.85||widely,widely,created,200,28032,no,,1,openai
+openai|nova|0.85||charge,charge,created,200,23424,no,,1,openai
+openai|nova|0.85||instead of,instead of,created,200,28032,no,,1,openai
+openai|nova|0.85||healthily,healthily,created,200,19584,no,,1,openai
+openai|nova|0.85||monster,monster,created,200,36480,no,,1,openai
+openai|nova|0.85||in a hurry,in a hurry,created,200,28032,no,,1,openai
+openai|nova|0.85||come along,come along,created,200,27264,no,,1,openai
+openai|nova|0.85||wound,wound,created,200,32640,no,,1,openai
+openai|nova|0.85||coal,coal,created,200,8448,no,,1,openai
+openai|nova|0.85||independent,independent,created,200,24192,no,,1,openai
+openai|nova|0.85||stomach,stomach,created,200,29184,no,,1,openai
+openai|nova|0.85||stuck,stuck,created,200,46080,no,,1,openai
+openai|nova|0.85||expression,expression,created,200,23424,no,,1,openai
+openai|nova|0.85||material,material,created,200,21504,no,,1,openai
+openai|nova|0.85||guest,guest,created,200,21504,no,,1,openai
+openai|nova|0.85||deaf,deaf,created,200,14208,no,,1,openai
+openai|nova|0.85||technology,technology,created,200,30720,no,,1,openai
+openai|nova|0.85||trade,trade,created,200,17664,no,,1,openai
+openai|nova|0.85||smelly,smelly,created,200,18816,no,,1,openai
+openai|nova|0.85||competition,competition,created,200,31872,no,,1,openai
+openai|nova|0.85||pumpkin,pumpkin,created,200,41088,no,,1,openai
+openai|nova|0.85||touch,touch,created,200,19584,no,,1,openai
+openai|nova|0.85||pay,pay,created,200,18816,no,,1,openai
+openai|nova|0.85||researcher,researcher,created,200,18816,no,,1,openai
+openai|nova|0.85||yoga,yoga,created,200,24192,no,,1,openai
+openai|nova|0.85||level,level,created,200,8448,no,,1,openai
+openai|nova|0.85||dreamland,dreamland,created,200,40320,no,,1,openai
+openai|nova|0.85||textbook,textbook,created,200,20352,no,,1,openai
+openai|nova|0.85||spaghetti,spaghetti,created,200,29184,no,,1,openai
+openai|nova|0.85||theme,theme,created,200,50688,no,,1,openai
+openai|nova|0.85||astronaut,astronaut,created,200,24192,no,,1,openai
+openai|nova|0.85||seed,seed,created,200,25344,no,,1,openai
+openai|nova|0.85||break,break,created,200,20352,no,,1,openai
+openai|nova|0.85||proud,proud,created,200,29952,no,,1,openai
+openai|nova|0.85||treatment,treatment,created,200,31872,no,,1,openai
+openai|nova|0.85||shh,shh,created,200,28032,no,,1,openai
+openai|nova|0.85||transport,transport,created,200,28032,no,,1,openai
+openai|nova|0.85||for this reason,for this reason,created,200,40320,no,,1,openai
+openai|nova|0.85||Finnish,Finnish,created,200,11136,no,,1,openai
+openai|nova|0.85||a few,a few,created,200,27264,no,,1,openai
+openai|nova|0.85||penny,penny,created,200,18816,no,,1,openai
+openai|nova|0.85||hear from,hear from,created,200,22272,no,,1,openai
+openai|nova|0.85||in need,in need,created,200,34560,no,,1,openai
+openai|nova|0.85||reasonable,reasonable,created,200,20352,no,,1,openai
+openai|nova|0.85||cinema,cinema,created,200,31872,no,,1,openai
+openai|nova|0.85||oven,oven,created,200,28032,no,,1,openai
+openai|nova|0.85||capital,capital,created,200,29952,no,,1,openai
+openai|nova|0.85||class teacher,class teacher,created,200,41088,no,,1,openai
+openai|nova|0.85||account,account,created,200,27264,no,,1,openai
+openai|nova|0.85||no way,no way,created,200,24192,no,,1,openai
+openai|nova|0.85||do chores,do chores,created,200,37632,no,,1,openai
+openai|nova|0.85||tie,tie,created,200,31872,no,,1,openai
+openai|nova|0.85||according to,according to,created,200,24192,no,,1,openai
+openai|nova|0.85||primary,primary,created,200,54144,no,,1,openai
+openai|nova|0.85||scientific,scientific,created,200,25344,no,,1,openai
+openai|nova|0.85||pen,pen,created,200,25344,no,,1,openai
+openai|nova|0.85||lung,lung,created,200,27264,no,,1,openai
+openai|nova|0.85||partner,partner,created,200,29952,no,,1,openai
+openai|nova|0.85||wonderful,wonderful,created,200,21504,no,,1,openai
+openai|nova|0.85||video,video,created,200,21504,no,,1,openai
+openai|nova|0.85||dreamer,dreamer,created,200,18816,no,,1,openai
+openai|nova|0.85||attack,attack,created,200,15744,no,,1,openai
+openai|nova|0.85||the elderly,the elderly,created,200,24192,no,,1,openai
+openai|nova|0.85||pale,pale,created,200,39552,no,,1,openai
+openai|nova|0.85||necessary,necessary,created,200,20352,no,,1,openai
+openai|nova|0.85||look for,look for,created,200,21504,no,,1,openai
+openai|nova|0.85||newborn,newborn,created,200,29184,no,,1,openai
+openai|nova|0.85||make a difference,make a difference,created,200,35328,no,,1,openai
+openai|nova|0.85||at the top of,at the top of,created,200,30720,no,,1,openai
+openai|nova|0.85||first aid,first aid,created,200,40320,no,,1,openai
+openai|nova|0.85||World War II,World War II,created,200,41088,no,,1,openai
+openai|nova|0.85||teen,teen,created,200,33792,no,,1,openai
+openai|nova|0.85||hold on,hold on,created,200,25344,no,,1,openai
+openai|nova|0.85||seldom,seldom,created,200,31872,no,,1,openai
+openai|nova|0.85||actress,actress,created,200,27264,no,,1,openai
+openai|nova|0.85||separate from,separate from,created,200,38400,no,,1,openai
+openai|nova|0.85||paper-cut,paper-cut,created,200,22272,no,,1,openai
+openai|nova|0.85||prince,prince,created,200,34560,no,,1,openai
+openai|nova|0.85||divide into,divide into,created,200,28032,no,,1,openai
+openai|nova|0.85||focus on,focus on,created,200,46080,no,,1,openai
+openai|nova|0.85||firework,firework,created,200,31872,no,,1,openai
+openai|nova|0.85||die out,die out,created,200,22272,no,,1,openai
+openai|nova|0.85||realise,realise,created,200,23424,no,,1,openai
+openai|nova|0.85||cancel,cancel,created,200,24192,no,,1,openai
+openai|nova|0.85||clean up,clean up,created,200,24192,no,,1,openai
+openai|nova|0.85||smile,smile,created,200,8448,no,,1,openai
+openai|nova|0.85||make ... feel at home,make ... feel at home,created,200,57216,no,,1,openai
+openai|nova|0.85||cash,cash,created,200,22272,no,,1,openai
+openai|nova|0.85||gradually,gradually,created,200,39552,no,,1,openai
+openai|nova|0.85||citizen,citizen,created,200,26112,no,,1,openai
+openai|nova|0.85||merci,merci,created,200,29184,no,,1,openai
+openai|nova|0.85||thankfully,thankfully,created,200,29952,no,,1,openai
+openai|nova|0.85||Indian,Indian,created,200,48000,no,,1,openai
+openai|nova|0.85||actually,actually,created,200,44928,no,,1,openai
+openai|nova|0.85||educator,educator,created,200,21504,no,,1,openai
+openai|nova|0.85||noisy,noisy,created,200,44160,no,,1,openai
+openai|nova|0.85||add,add,created,200,49920,no,,1,openai
+openai|nova|0.85||scissors,scissors,created,200,24192,no,,1,openai
+openai|nova|0.85||firm,firm,created,200,27264,no,,1,openai
+openai|nova|0.85||clerk,clerk,created,200,22272,no,,1,openai
+openai|nova|0.85||fireman,fireman,created,200,22272,no,,1,openai
+openai|nova|0.85||director,director,created,200,33792,no,,1,openai
+openai|nova|0.85||special,special,created,200,27264,no,,1,openai
+openai|nova|0.85||put out,put out,created,200,17664,no,,1,openai
+openai|nova|0.85||crowd,crowd,created,200,31872,no,,1,openai
+openai|nova|0.85||salty,salty,created,200,46080,no,,1,openai
+openai|nova|0.85||kilogram,kilogram,created,200,38400,no,,1,openai
+openai|nova|0.85||talk back,talk back,created,200,24192,no,,1,openai
+openai|nova|0.85||patient,patient,created,200,36480,no,,1,openai
+openai|nova|0.85||upside down,upside down,created,200,31872,no,,1,openai
+openai|nova|0.85||push-up,push-up,created,200,31872,no,,1,openai
+openai|nova|0.85||argue with sb,argue with sb,created,200,40320,no,,1,openai
+openai|nova|0.85||mystery,mystery,created,200,27264,no,,1,openai
+openai|nova|0.85||separate,separate,created,200,26112,no,,1,openai
+openai|nova|0.85||clay,clay,created,200,23424,no,,1,openai
+openai|nova|0.85||relative,relative,created,200,22272,no,,1,openai
+openai|nova|0.85||drive sb. crazy,drive sb. crazy,created,200,64896,no,,1,openai
+openai|nova|0.85||freshwater,freshwater,created,200,31872,no,,1,openai
+openai|nova|0.85||biscuit,biscuit,created,200,16896,no,,1,openai
+openai|nova|0.85||play a role (in),play a role (in),created,200,40320,no,,1,openai
+openai|nova|0.85||carefully,carefully,created,200,21504,no,,1,openai
+openai|nova|0.85||iron,iron,created,200,17664,no,,1,openai
+openai|nova|0.85||ear,ear,created,200,18816,no,,1,openai
+openai|nova|0.85||in front of,in front of,created,200,32640,no,,1,openai
+openai|nova|0.85||red scarf,red scarf,created,200,31872,no,,1,openai
+openai|nova|0.85||without,without,created,200,19584,no,,1,openai
+openai|nova|0.85||memory,memory,created,200,26112,no,,1,openai
+openai|nova|0.85||midsummer,midsummer,created,200,31872,no,,1,openai
+openai|nova|0.85||national,national,created,200,21504,no,,1,openai
+openai|nova|0.85||pollute,pollute,created,200,15744,no,,1,openai
+openai|nova|0.85||dialogue,dialogue,created,200,32640,no,,1,openai
+openai|nova|0.85||bring,bring,created,200,35328,no,,1,openai
+openai|nova|0.85||environmental,environmental,created,200,24192,no,,1,openai
+openai|nova|0.85||waterfall,waterfall,created,200,24192,no,,1,openai
+openai|nova|0.85||mobile,mobile,created,200,21504,no,,1,openai
+openai|nova|0.85||sell out,sell out,created,200,27264,no,,1,openai
+openai|nova|0.85||documentary,documentary,created,200,22272,no,,1,openai
+openai|nova|0.85||provide,provide,created,200,20352,no,,1,openai
+openai|nova|0.85||lastly,lastly,created,200,17664,no,,1,openai
+openai|nova|0.85||sink,sink,created,200,29952,no,,1,openai
+openai|nova|0.85||knock down,knock down,created,200,38400,no,,1,openai
+openai|nova|0.85||direct,direct,created,200,22272,no,,1,openai
+openai|nova|0.85||difficulty,difficulty,created,200,27264,no,,1,openai
+openai|nova|0.85||lightning rod,lightning rod,created,200,32640,no,,1,openai
+openai|nova|0.85||roll,roll,created,200,56064,no,,1,openai
+openai|nova|0.85||matchbox,matchbox,created,200,34560,no,,1,openai
+openai|nova|0.85||grass,grass,created,200,29184,no,,1,openai
+openai|nova|0.85||stand,stand,created,200,15744,no,,1,openai
+openai|nova|0.85||basic,basic,created,200,20352,no,,1,openai
+openai|nova|0.85||plate,plate,created,200,24192,no,,1,openai
+openai|nova|0.85||active,active,created,200,50688,no,,1,openai
+openai|nova|0.85||lend,lend,created,200,27264,no,,1,openai
+openai|nova|0.85||magnifier,magnifier,created,200,28032,no,,1,openai
+openai|nova|0.85||spare,spare,created,200,24192,no,,1,openai
+openai|nova|0.85||the food chain,the food chain,created,200,25344,no,,1,openai
+openai|nova|0.85||senior high (school),senior high (school),created,200,40320,no,,1,openai
+openai|nova|0.85||northeastern,northeastern,created,200,26112,no,,1,openai
+openai|nova|0.85||hey,hey,created,200,14976,no,,1,openai
+openai|nova|0.85||cheer,cheer,created,200,24192,no,,1,openai
+openai|nova|0.85||disbelief,disbelief,created,200,20352,no,,1,openai
+openai|nova|0.85||flowerpot,flowerpot,created,200,33792,no,,1,openai
+openai|nova|0.85||page,page,created,200,29184,no,,1,openai
+openai|nova|0.85||method,method,created,200,28032,no,,1,openai
+openai|nova|0.85||a bit,a bit,created,200,46080,no,,1,openai
+openai|nova|0.85||collection,collection,created,200,36480,no,,1,openai
+openai|nova|0.85||boring,boring,created,200,34560,no,,1,openai
+openai|nova|0.85||anybody,anybody,created,200,46848,no,,1,openai
+openai|nova|0.85||outdoors,outdoors,created,200,25344,no,,1,openai
+openai|nova|0.85||fridge magnet,fridge magnet,created,200,31872,no,,1,openai
+openai|nova|0.85||physical,physical,created,200,25344,no,,1,openai
+openai|nova|0.85||fix,fix,created,200,18816,no,,1,openai
+openai|nova|0.85||tell the truth,tell the truth,created,200,29184,no,,1,openai
+openai|nova|0.85||village,village,created,200,17664,no,,1,openai
+openai|nova|0.85||fur,fur,created,200,23424,no,,1,openai
+openai|nova|0.85||athlete,athlete,created,200,19584,no,,1,openai
+openai|nova|0.85||bedroom,bedroom,created,200,22272,no,,1,openai
+openai|nova|0.85||note,note,created,200,20352,no,,1,openai
+openai|nova|0.85||encouraging,encouraging,created,200,19584,no,,1,openai
+openai|nova|0.85||take action,take action,created,200,32640,no,,1,openai
+openai|nova|0.85||conclusion,conclusion,created,200,21504,no,,1,openai
+openai|nova|0.85||take pride in,take pride in,created,200,36480,no,,1,openai
+openai|nova|0.85||noon,noon,created,200,30720,no,,1,openai
+openai|nova|0.85||swan,swan,created,200,51456,no,,1,openai
+openai|nova|0.85||savings,savings,created,200,49920,no,,1,openai
+openai|nova|0.85||wealth,wealth,created,200,21504,no,,1,openai
+openai|nova|0.85||cultural,cultural,created,200,22272,no,,1,openai
+openai|nova|0.85||defeat,defeat,created,200,19584,no,,1,openai
+openai|nova|0.85||pocket money,pocket money,created,200,50688,no,,1,openai
+openai|nova|0.85||heroine,heroine,created,200,27264,no,,1,openai
+openai|nova|0.85||chopstick,chopstick,created,200,27264,no,,1,openai
+openai|nova|0.85||history,history,created,200,44160,no,,1,openai
+openai|nova|0.85||without doubt,without doubt,created,200,31872,no,,1,openai
+openai|nova|0.85||mutton,mutton,created,200,53376,no,,1,openai
+openai|nova|0.85||crowded,crowded,created,200,33792,no,,1,openai
+openai|nova|0.85||interested in,interested in,created,200,28032,no,,1,openai
+openai|nova|0.85||prize,prize,created,200,36480,no,,1,openai
+openai|nova|0.85||moss,moss,created,200,31872,no,,1,openai
+openai|nova|0.85||task,task,created,200,23424,no,,1,openai
+openai|nova|0.85||resolution,resolution,created,200,24192,no,,1,openai
+openai|nova|0.85||windy,windy,created,200,27264,no,,1,openai
+openai|nova|0.85||lift,lift,created,200,27264,no,,1,openai
+openai|nova|0.85||manner,manner,created,200,18816,no,,1,openai
+openai|nova|0.85||Canadian,Canadian,created,200,21504,no,,1,openai
+openai|nova|0.85||alone,alone,created,200,24192,no,,1,openai
+openai|nova|0.85||type,type,created,200,26112,no,,1,openai
+openai|nova|0.85||make an effort,make an effort,created,200,32640,no,,1,openai
+openai|nova|0.85||centre,centre,created,200,23424,no,,1,openai
+openai|nova|0.85||as long as,as long as,created,200,48768,no,,1,openai
+openai|nova|0.85||mess,mess,created,200,22272,no,,1,openai
+openai|nova|0.85||lyrics,lyrics,created,200,26112,no,,1,openai
+openai|nova|0.85||weekday,weekday,created,200,29184,no,,1,openai
+openai|nova|0.85||firstly,firstly,created,200,26112,no,,1,openai
+openai|nova|0.85||let ... down,let ... down,created,200,30720,no,,1,openai
+openai|nova|0.85||lock up,lock up,created,200,22272,no,,1,openai
+openai|nova|0.85||fashion,fashion,created,200,29184,no,,1,openai
+openai|nova|0.85||graduation,graduation,created,200,26112,no,,1,openai
+openai|nova|0.85||toothbrush,toothbrush,created,200,24192,no,,1,openai
+openai|nova|0.85||boat,boat,created,200,15744,no,,1,openai
+openai|nova|0.85||arrival,arrival,created,200,21504,no,,1,openai
+openai|nova|0.85||fruit,fruit,created,200,28032,no,,1,openai
+openai|nova|0.85||cheers,cheers,created,200,29184,no,,1,openai
+openai|nova|0.85||photography,photography,created,200,32640,no,,1,openai
+openai|nova|0.85||treat,treat,created,200,15744,no,,1,openai
+openai|nova|0.85||chemical,chemical,created,200,42240,no,,1,openai
+openai|nova|0.85||urgent,urgent,created,200,29952,no,,1,openai
+openai|nova|0.85||shocked,shocked,created,200,27264,no,,1,openai
+openai|nova|0.85||webpage,webpage,created,200,30720,no,,1,openai
+openai|nova|0.85||achieve,achieve,created,200,29952,no,,1,openai
+openai|nova|0.85||physics,physics,created,200,27264,no,,1,openai
+openai|nova|0.85||fisherman,fisherman,created,200,46848,no,,1,openai
+openai|nova|0.85||better,better,created,200,30720,no,,1,openai
+openai|nova|0.85||cancer,cancer,created,200,41088,no,,1,openai
+openai|nova|0.85||fall upon,fall upon,created,200,41088,no,,1,openai
+openai|nova|0.85||on duty,on duty,created,200,26112,no,,1,openai
+openai|nova|0.85||volunteer,volunteer,created,200,22272,no,,1,openai
+openai|nova|0.85||unsafe,unsafe,created,200,26112,no,,1,openai
+openai|nova|0.85||weekend,weekend,created,200,24192,no,,1,openai
+openai|nova|0.85||countryside,countryside,created,200,40320,no,,1,openai
+openai|nova|0.85||set out,set out,created,200,44928,no,,1,openai
+openai|nova|0.85||central,central,created,200,17664,no,,1,openai
+openai|nova|0.85||do with,do with,created,200,46080,no,,1,openai
+openai|nova|0.85||pay for,pay for,created,200,48000,no,,1,openai
+openai|nova|0.85||sign-off,sign-off,created,200,26112,no,,1,openai
+openai|nova|0.85||warmth,warmth,created,200,26112,no,,1,openai
+openai|nova|0.85||sincere,sincere,created,200,21504,no,,1,openai
+openai|nova|0.85||chat,chat,created,200,22272,no,,1,openai
+openai|nova|0.85||natural resources,natural resources,created,200,34560,no,,1,openai
+openai|nova|0.85||react,react,created,200,25344,no,,1,openai
+openai|nova|0.85||on purpose,on purpose,created,200,24192,no,,1,openai
+openai|nova|0.85||folk arts,folk arts,created,200,27264,no,,1,openai
+openai|nova|0.85||performer,performer,created,200,25344,no,,1,openai
+openai|nova|0.85||coral,coral,created,200,23424,no,,1,openai
+openai|nova|0.85||stadium,stadium,created,200,37632,no,,1,openai
+openai|nova|0.85||media,media,created,200,18816,no,,1,openai
+openai|nova|0.85||charity,charity,created,200,18816,no,,1,openai
+openai|nova|0.85||hand,hand,created,200,24192,no,,1,openai
+openai|nova|0.85||surface,surface,created,200,29184,no,,1,openai
+openai|nova|0.85||pass away,pass away,created,200,31872,no,,1,openai
+openai|nova|0.85||careless,careless,created,200,20352,no,,1,openai
+openai|nova|0.85||amaze,amaze,created,200,25344,no,,1,openai
+openai|nova|0.85||most of all,most of all,created,200,26112,no,,1,openai
+openai|nova|0.85||tourism,tourism,created,200,37632,no,,1,openai
+openai|nova|0.85||trust,trust,created,200,28032,no,,1,openai
+openai|nova|0.85||possible,possible,created,200,19584,no,,1,openai
+openai|nova|0.85||take over,take over,created,200,30720,no,,1,openai
+openai|nova|0.85||importance,importance,created,200,36480,no,,1,openai
+openai|nova|0.85||fiction,fiction,created,200,30720,no,,1,openai
+openai|nova|0.85||cartoon,cartoon,created,200,21504,no,,1,openai
+openai|nova|0.85||fin,fin,created,200,28032,no,,1,openai
+openai|nova|0.85||made of,made of,created,200,27264,no,,1,openai
+openai|nova|0.85||clear your throat,clear your throat,created,200,30720,no,,1,openai
+openai|nova|0.85||fridge,fridge,created,200,32640,no,,1,openai
+openai|nova|0.85||correctly,correctly,created,200,56064,no,,1,openai
+openai|nova|0.85||building,building,created,200,25344,no,,1,openai
+openai|nova|0.85||group,group,created,200,44928,no,,1,openai
+openai|nova|0.85||bone,bone,created,200,19584,no,,1,openai
+openai|nova|0.85||remind,remind,created,200,29952,no,,1,openai
+openai|nova|0.85||gun,gun,created,200,24192,no,,1,openai
+openai|nova|0.85||control,control,created,200,19584,no,,1,openai
+openai|nova|0.85||take a deep breath,take a deep breath,created,200,51456,no,,1,openai
+openai|nova|0.85||laugh at,laugh at,created,200,29184,no,,1,openai
+openai|nova|0.85||artwork,artwork,created,200,35328,no,,1,openai
+openai|nova|0.85||offer,offer,created,200,25344,no,,1,openai
+openai|nova|0.85||upload,upload,created,200,19584,no,,1,openai
+openai|nova|0.85||sound,sound,created,200,22272,no,,1,openai
+openai|nova|0.85||global warming,global warming,created,200,32640,no,,1,openai
+openai|nova|0.85||runny,runny,created,200,21504,no,,1,openai
+openai|nova|0.85||a great deal,a great deal,created,200,25344,no,,1,openai
+openai|nova|0.85||leaf,leaf,created,200,17664,no,,1,openai
+openai|nova|0.85||oxygen,oxygen,created,200,21504,no,,1,openai
+openai|nova|0.85||block,block,created,200,4608,no,,1,openai
+openai|nova|0.85||write down,write down,created,200,33792,no,,1,openai
+openai|nova|0.85||get dressed,get dressed,created,200,29952,no,,1,openai
+openai|nova|0.85||former,former,created,200,23424,no,,1,openai
+openai|nova|0.85||goodness,goodness,created,200,19584,no,,1,openai
+openai|nova|0.85||cheek,cheek,created,200,24192,no,,1,openai
+openai|nova|0.85||once upon a time,once upon a time,created,200,36480,no,,1,openai
+openai|nova|0.85||friendly,friendly,created,200,26112,no,,1,openai
+openai|nova|0.85||burning,burning,created,200,20352,no,,1,openai
+openai|nova|0.85||wizard,wizard,created,200,19584,no,,1,openai
+openai|nova|0.85||stressed,stressed,created,200,24192,no,,1,openai
+openai|nova|0.85||kg,kg,created,200,31872,no,,1,openai
+openai|nova|0.85||skiing,skiing,created,200,23424,no,,1,openai
+openai|nova|0.85||scoop,scoop,created,200,19584,no,,1,openai
+openai|nova|0.85||crust,crust,created,200,26112,no,,1,openai
+openai|nova|0.85||mad,mad,created,200,22272,no,,1,openai
+openai|nova|0.85||prime minister,prime minister,created,200,31872,no,,1,openai
+openai|nova|0.85||wow,wow,created,200,17664,no,,1,openai
+openai|nova|0.85||mirror,mirror,created,200,27264,no,,1,openai
+openai|nova|0.85||tape,tape,created,200,18816,no,,1,openai
+openai|nova|0.85||point out,point out,created,200,29184,no,,1,openai
+openai|nova|0.85||cut down,cut down,created,200,29184,no,,1,openai
+openai|nova|0.85||European,European,created,200,21504,no,,1,openai
+openai|nova|0.85||medicine,medicine,created,200,51456,no,,1,openai
+openai|nova|0.85||brand,brand,created,200,23424,no,,1,openai
+openai|nova|0.85||dirty,dirty,created,200,19584,no,,1,openai
+openai|nova|0.85||payment,payment,created,200,24192,no,,1,openai
+openai|nova|0.85||have sth in common,have sth in common,created,200,72192,no,,1,openai
+openai|nova|0.85||formal,formal,created,200,46080,no,,1,openai
+openai|nova|0.85||benefit,benefit,created,200,23424,no,,1,openai
+openai|nova|0.85||car,car,created,200,21504,no,,1,openai
+openai|nova|0.85||bank,bank,created,200,46080,no,,1,openai
+openai|nova|0.85||strawberry,strawberry,created,200,52224,no,,1,openai
+openai|nova|0.85||co-pilot,co-pilot,created,200,21504,no,,1,openai
+openai|nova|0.85||invite,invite,created,200,21504,no,,1,openai
+openai|nova|0.85||laboratory,laboratory,created,200,30720,no,,1,openai
+openai|nova|0.85||recipe,recipe,created,200,20352,no,,1,openai
+openai|nova|0.85||in general,in general,created,200,26112,no,,1,openai
+openai|nova|0.85||bright,bright,created,200,29184,no,,1,openai
+openai|nova|0.85||complete,complete,created,200,36480,no,,1,openai
+openai|nova|0.85||paint,paint,created,200,23424,no,,1,openai
+openai|nova|0.85||phone,phone,created,200,29184,no,,1,openai
+openai|nova|0.85||team,team,created,200,23424,no,,1,openai
+openai|nova|0.85||dialog,dialog,created,200,27264,no,,1,openai
+openai|nova|0.85||literature,literature,created,200,17664,no,,1,openai
+openai|nova|0.85||normally,normally,created,200,36480,no,,1,openai
+openai|nova|0.85||surprise,surprise,created,200,27264,no,,1,openai
+openai|nova|0.85||all smiles,all smiles,created,200,33792,no,,1,openai
+openai|nova|0.85||army,army,created,200,20352,no,,1,openai
+openai|nova|0.85||celebration,celebration,created,200,29952,no,,1,openai
+openai|nova|0.85||shut off,shut off,created,200,21504,no,,1,openai
+openai|nova|0.85||couch,couch,created,200,20352,no,,1,openai
+openai|nova|0.85||eat out,eat out,created,200,35328,no,,1,openai
+openai|nova|0.85||harmful,harmful,created,200,25344,no,,1,openai
+openai|nova|0.85||expert,expert,created,200,30720,no,,1,openai
+openai|nova|0.85||name... after,name... after,created,200,36480,no,,1,openai
+openai|nova|0.85||accordion,accordion,created,200,34560,no,,1,openai
+openai|nova|0.85||confused,confused,created,200,21504,no,,1,openai
+openai|nova|0.85||weigh,weigh,created,200,35328,no,,1,openai
+openai|nova|0.85||require,require,created,200,28032,no,,1,openai
+openai|nova|0.85||next time,next time,created,200,31872,no,,1,openai
+openai|nova|0.85||tsunami,tsunami,created,200,35328,no,,1,openai
+openai|nova|0.85||performance,performance,created,200,37632,no,,1,openai
+openai|nova|0.85||gentleman,gentleman,created,200,21504,no,,1,openai
+openai|nova|0.85||unknown,unknown,created,200,22272,no,,1,openai
+openai|nova|0.85||worth,worth,created,200,29952,no,,1,openai
+openai|nova|0.85||bring back,bring back,created,200,26112,no,,1,openai
+openai|nova|0.85||pie,pie,created,200,24192,no,,1,openai
+openai|nova|0.85||in return,in return,created,200,48768,no,,1,openai
+openai|nova|0.85||university,university,created,200,26112,no,,1,openai
+openai|nova|0.85||mobile phone,mobile phone,created,200,25344,no,,1,openai
+openai|nova|0.85||make sense,make sense,created,200,37632,no,,1,openai
+openai|nova|0.85||corn silk,corn silk,created,200,53376,no,,1,openai
+openai|nova|0.85||leave... behind,leave... behind,created,200,59136,no,,1,openai
+openai|nova|0.85||apologize,apologize,created,200,26112,no,,1,openai
+openai|nova|0.85||bully,bully,created,200,19584,no,,1,openai
+openai|nova|0.85||embarrassed,embarrassed,created,200,21504,no,,1,openai
+openai|nova|0.85||familiar,familiar,created,200,24192,no,,1,openai
+openai|nova|0.85||dessert,dessert,created,200,23424,no,,1,openai
+openai|nova|0.85||depend,depend,created,200,34560,no,,1,openai
+openai|nova|0.85||close,close,created,200,21504,no,,1,openai
+openai|nova|0.85||bored,bored,created,200,34560,no,,1,openai
+openai|nova|0.85||zoo,zoo,created,200,24192,no,,1,openai
+openai|nova|0.85||stay in,stay in,created,200,26112,no,,1,openai
+openai|nova|0.85||pronunciation,pronunciation,created,200,21504,no,,1,openai
+openai|nova|0.85||civilization,civilization,created,200,28032,no,,1,openai
+openai|nova|0.85||win,win,created,200,18816,no,,1,openai
+openai|nova|0.85||shake,shake,created,200,8448,no,,1,openai
+openai|nova|0.85||bathroom,bathroom,created,200,32640,no,,1,openai
+openai|nova|0.85||introduction,introduction,created,200,36480,no,,1,openai
+openai|nova|0.85||Switzerland,Switzerland,created,200,27264,no,,1,openai
+openai|nova|0.85||talent,talent,created,200,20352,no,,1,openai
+openai|nova|0.85||yesterday,yesterday,created,200,48000,no,,1,openai
+openai|nova|0.85||droppings,droppings,created,200,36480,no,,1,openai
+openai|nova|0.85||be known for,be known for,created,200,34560,no,,1,openai
+openai|nova|0.85||superman,superman,created,200,23424,no,,1,openai
+openai|nova|0.85||X-ray,X-ray,created,200,21504,no,,1,openai
+openai|nova|0.85||oversleep,oversleep,created,200,44928,no,,1,openai
+openai|nova|0.85||pollution,pollution,created,200,25344,no,,1,openai
+openai|nova|0.85||places of interest,places of interest,created,200,39552,no,,1,openai
+openai|nova|0.85||darling,darling,created,200,22272,no,,1,openai
+openai|nova|0.85||have a point,have a point,created,200,28032,no,,1,openai
+openai|nova|0.85||pay attention to,pay attention to,created,200,42240,no,,1,openai
+openai|nova|0.85||watermelon,watermelon,created,200,28032,no,,1,openai
+openai|nova|0.85||leadership,leadership,created,200,21504,no,,1,openai
+openai|nova|0.85||one by one,one by one,created,200,28032,no,,1,openai
+openai|nova|0.85||clean ... off,clean ... off,created,200,65664,no,,1,openai
+openai|nova|0.85||go away,go away,created,200,31872,no,,1,openai
+openai|nova|0.85||experiment,experiment,created,200,41088,no,,1,openai
+openai|nova|0.85||speech,speech,created,200,25344,no,,1,openai
+openai|nova|0.85||text,text,created,200,21504,no,,1,openai
+openai|nova|0.85||hen,hen,created,200,20352,no,,1,openai
+openai|nova|0.85||century,century,created,200,48000,no,,1,openai
+openai|nova|0.85||virtual,virtual,created,200,23424,no,,1,openai
+openai|nova|0.85||some day,some day,created,200,26112,no,,1,openai
+openai|nova|0.85||lab,lab,created,200,37632,no,,1,openai
+openai|nova|0.85||run after,run after,created,200,25344,no,,1,openai
+openai|nova|0.85||keep off,keep off,created,200,44160,no,,1,openai
+openai|nova|0.85||feather,feather,created,200,18816,no,,1,openai
+openai|nova|0.85||on top of the world,on top of the world,created,200,29952,no,,1,openai
+openai|nova|0.85||attract,attract,created,200,17664,no,,1,openai
+openai|nova|0.85||the silver screen,the silver screen,created,200,50688,no,,1,openai
+openai|nova|0.85||hurry,hurry,created,200,14976,no,,1,openai
+openai|nova|0.85||newspaper,newspaper,created,200,30720,no,,1,openai
+openai|nova|0.85||get along,get along,created,200,27264,no,,1,openai
+openai|nova|0.85||smell,smell,created,200,44928,no,,1,openai
+openai|nova|0.85||come over,come over,created,200,25344,no,,1,openai
+openai|nova|0.85||street,street,created,200,23424,no,,1,openai
+openai|nova|0.85||plot,plot,created,200,37632,no,,1,openai
+openai|nova|0.85||scramble,scramble,created,200,37632,no,,1,openai
+openai|nova|0.85||adventure,adventure,created,200,20352,no,,1,openai
+openai|nova|0.85||dodo,dodo,created,200,29952,no,,1,openai
+openai|nova|0.85||prime,prime,created,200,19584,no,,1,openai
+openai|nova|0.85||businessman,businessman,created,200,27264,no,,1,openai
+openai|nova|0.85||sea level,sea level,created,200,29184,no,,1,openai
+openai|nova|0.85||sick,sick,created,200,18816,no,,1,openai
+openai|nova|0.85||social media,social media,created,200,31872,no,,1,openai
+openai|nova|0.85||lotus,lotus,created,200,26112,no,,1,openai
+openai|nova|0.85||along with sb/sth,along with sb/sth,created,200,59136,no,,1,openai
+openai|nova|0.85||be careful with,be careful with,created,200,41088,no,,1,openai
+openai|nova|0.85||surprised,surprised,created,200,19584,no,,1,openai
+openai|nova|0.85||bring out,bring out,created,200,32640,no,,1,openai
+openai|nova|0.85||tonight,tonight,created,200,20352,no,,1,openai
+openai|nova|0.85||province,province,created,200,24192,no,,1,openai
+openai|nova|0.85||electronic,electronic,created,200,36480,no,,1,openai
+openai|nova|0.85||excerpt,excerpt,created,200,17664,no,,1,openai
+openai|nova|0.85||bruised,bruised,created,200,19584,no,,1,openai
+openai|nova|0.85||secondly,secondly,created,200,29952,no,,1,openai
+openai|nova|0.85||grassland,grassland,created,200,34560,no,,1,openai
+openai|nova|0.85||make a promise,make a promise,created,200,38400,no,,1,openai
+openai|nova|0.85||warmly,warmly,created,200,25344,no,,1,openai
+openai|nova|0.85||in the middle,in the middle,created,200,36480,no,,1,openai
+openai|nova|0.85||rush hour,rush hour,created,200,25344,no,,1,openai
+openai|nova|0.85||magical,magical,created,200,34560,no,,1,openai
+openai|nova|0.85||fork,fork,created,200,41088,no,,1,openai
+openai|nova|0.85||straightforward,straightforward,created,200,23424,no,,1,openai
+openai|nova|0.85||common,common,created,200,20352,no,,1,openai
+openai|nova|0.85||nation,nation,created,200,18816,no,,1,openai
+openai|nova|0.85||curious,curious,created,200,22272,no,,1,openai
+"openai|nova|0.85||the ""roof of the world""","the ""roof of the world""",created,200,32640,no,,1,openai
+openai|nova|0.85||diet,diet,created,200,24192,no,,1,openai
+openai|nova|0.85||disappointed,disappointed,created,200,26112,no,,1,openai
+openai|nova|0.85||virus,virus,created,200,24192,no,,1,openai
+openai|nova|0.85||mushroom,mushroom,created,200,22272,no,,1,openai
+openai|nova|0.85||outer,outer,created,200,22272,no,,1,openai
+openai|nova|0.85||giant,giant,created,200,29184,no,,1,openai
+openai|nova|0.85||rabbit,rabbit,created,200,22272,no,,1,openai
+openai|nova|0.85||schoolgirl,schoolgirl,created,200,26112,no,,1,openai
+openai|nova|0.85||have to do with,have to do with,created,200,48000,no,,1,openai
+openai|nova|0.85||hat,hat,created,200,21504,no,,1,openai
+openai|nova|0.85||simple,simple,created,200,27264,no,,1,openai
+openai|nova|0.85||cough,cough,created,200,38400,no,,1,openai
+openai|nova|0.85||rice,rice,created,200,22272,no,,1,openai
+openai|nova|0.85||by mistake,by mistake,created,200,25344,no,,1,openai
+openai|nova|0.85||hand out,hand out,created,200,50688,no,,1,openai
+openai|nova|0.85||relate,relate,created,200,19584,no,,1,openai
+openai|nova|0.85||be glued to sth,be glued to sth,created,200,65664,no,,1,openai
+openai|nova|0.85||lower,lower,created,200,17664,no,,1,openai
+openai|nova|0.85||sudden,sudden,created,200,24192,no,,1,openai
+openai|nova|0.85||embarrassing,embarrassing,created,200,22272,no,,1,openai
+openai|nova|0.85||Western,Western,created,200,35328,no,,1,openai
+openai|nova|0.85||printer,printer,created,200,24192,no,,1,openai
+openai|nova|0.85||scientist,scientist,created,200,23424,no,,1,openai
+openai|nova|0.85||scared,scared,created,200,25344,no,,1,openai
+openai|nova|0.85||only if,only if,created,200,24192,no,,1,openai
+openai|nova|0.85||put sth. to good use,put sth. to good use,created,200,43008,no,,1,openai
+openai|nova|0.85||joyful,joyful,created,200,18816,no,,1,openai
+openai|nova|0.85||shoulder the responsibility,shoulder the responsibility,created,200,56064,no,,1,openai
+openai|nova|0.85||hers,hers,created,200,25344,no,,1,openai
+openai|nova|0.85||influence,influence,created,200,36480,no,,1,openai
+openai|nova|0.85||cry,cry,created,200,20352,no,,1,openai
+openai|nova|0.85||warm up,warm up,created,200,27264,no,,1,openai
+openai|nova|0.85||ecosystem,ecosystem,created,200,32640,no,,1,openai
+openai|nova|0.85||give it a go,give it a go,created,200,32640,no,,1,openai
+openai|nova|0.85||brave,brave,created,200,26112,no,,1,openai
+openai|nova|0.85||decision,decision,created,200,35328,no,,1,openai
+openai|nova|0.85||uncrowded,uncrowded,created,200,46848,no,,1,openai
+openai|nova|0.85||fair,fair,created,200,35328,no,,1,openai
+openai|nova|0.85||in the future,in the future,created,200,29184,no,,1,openai
+openai|nova|0.85||insect,insect,created,200,22272,no,,1,openai
+openai|nova|0.85||dollar,dollar,created,200,22272,no,,1,openai
+openai|nova|0.85||fighter,fighter,created,200,34560,no,,1,openai
+openai|nova|0.85||How about...?,How about...?,created,200,25344,no,,1,openai
+openai|nova|0.85||single,single,created,200,27264,no,,1,openai
+openai|nova|0.85||snowstorm,snowstorm,created,200,32640,no,,1,openai
+openai|nova|0.85||become,become,created,200,23424,no,,1,openai
+openai|nova|0.85||American,American,created,200,19584,no,,1,openai
+openai|nova|0.85||bleed,bleed,created,200,18816,no,,1,openai
+openai|nova|0.85||communication,communication,created,200,28032,no,,1,openai
+openai|nova|0.85||feel like,feel like,created,200,51456,no,,1,openai
+openai|nova|0.85||forever,forever,created,200,27264,no,,1,openai
+openai|nova|0.85||workshop,workshop,created,200,17664,no,,1,openai
+openai|nova|0.85||environment,environment,created,200,22272,no,,1,openai
+openai|nova|0.85||professor,professor,created,200,25344,no,,1,openai
+openai|nova|0.85||French,French,created,200,25344,no,,1,openai
+openai|nova|0.85||shyness,shyness,created,200,32640,no,,1,openai
+openai|nova|0.85||compare,compare,created,200,20352,no,,1,openai
+openai|nova|0.85||redwood,redwood,created,200,17664,no,,1,openai
+openai|nova|0.85||accord,accord,created,200,15744,no,,1,openai
+openai|nova|0.85||chocolate,chocolate,created,200,19584,no,,1,openai
+openai|nova|0.85||shortage,shortage,created,200,22272,no,,1,openai
+openai|nova|0.85||show interest in sth,show interest in sth,created,200,42240,no,,1,openai
+openai|nova|0.85||burial,burial,created,200,16896,no,,1,openai
+openai|nova|0.85||be connected with/to,be connected with/to,created,200,57984,no,,1,openai
+openai|nova|0.85||explorer,explorer,created,200,35328,no,,1,openai
+openai|nova|0.85||host,host,created,200,19584,no,,1,openai
+openai|nova|0.85||give ... a lift,give ... a lift,created,200,39552,no,,1,openai
+openai|nova|0.85||packet,packet,created,200,27264,no,,1,openai
+openai|nova|0.85||lend (sb) a hand,lend (sb) a hand,created,200,40320,no,,1,openai
+openai|nova|0.85||nicely,nicely,created,200,29184,no,,1,openai
+openai|nova|0.85||discuss,discuss,created,200,28032,no,,1,openai
+openai|nova|0.85||natural,natural,created,200,29184,no,,1,openai
+openai|nova|0.85||remove,remove,created,200,16896,no,,1,openai
+openai|nova|0.85||Christmas Eve,Christmas Eve,created,200,29952,no,,1,openai
+openai|nova|0.85||right away,right away,created,200,17664,no,,1,openai
+openai|nova|0.85||kick sb. off,kick sb. off,created,200,56064,no,,1,openai
+openai|nova|0.85||engine,engine,created,200,29184,no,,1,openai
+openai|nova|0.85||stone,stone,created,200,19584,no,,1,openai
+openai|nova|0.85||meeting,meeting,created,200,8448,no,,1,openai
+openai|nova|0.85||communicate,communicate,created,200,21504,no,,1,openai
+openai|nova|0.85||surely,surely,created,200,30720,no,,1,openai
+openai|nova|0.85||focus,focus,created,200,44928,no,,1,openai
+openai|nova|0.85||underwater,underwater,created,200,30720,no,,1,openai
+openai|nova|0.85||hearing,hearing,created,200,24192,no,,1,openai
+openai|nova|0.85||the Olympics,the Olympics,created,200,36480,no,,1,openai
+openai|nova|0.85||get over,get over,created,200,28032,no,,1,openai
+openai|nova|0.85||everywhere,everywhere,created,200,25344,no,,1,openai
+openai|nova|0.85||pocket,pocket,created,200,34560,no,,1,openai
+openai|nova|0.85||advise,advise,created,200,21504,no,,1,openai
+openai|nova|0.85||leave out,leave out,created,200,22272,no,,1,openai
+openai|nova|0.85||imagine,imagine,created,200,27264,no,,1,openai
+openai|nova|0.85||at all costs,at all costs,created,200,34560,no,,1,openai
+openai|nova|0.85||chief,chief,created,200,18816,no,,1,openai
+openai|nova|0.85||hold,hold,created,200,25344,no,,1,openai
+openai|nova|0.85||sunless,sunless,created,200,20352,no,,1,openai
+openai|nova|0.85||to start with,to start with,created,200,44928,no,,1,openai
+openai|nova|0.85||thinking,thinking,skipped,200,29952,no,,0,
+openai|nova|0.85||no matter,no matter,created,200,22272,no,,1,openai
+openai|nova|0.85||get in the way of,get in the way of,created,200,44928,no,,1,openai
+openai|nova|0.85||luggage,luggage,created,200,27264,no,,1,openai
+openai|nova|0.85||in public,in public,created,200,55296,no,,1,openai
+openai|nova|0.85||magic,magic,created,200,29184,no,,1,openai
+openai|nova|0.85||in total,in total,created,200,24192,no,,1,openai
+openai|nova|0.85||recommendation,recommendation,created,200,34560,no,,1,openai
+openai|nova|0.85||in order to,in order to,created,200,55296,no,,1,openai
+openai|nova|0.85||connected,connected,created,200,19584,no,,1,openai
+openai|nova|0.85||efficient,efficient,created,200,30720,no,,1,openai
+openai|nova|0.85||along with,along with,created,200,46848,no,,1,openai
+openai|nova|0.85||progress,progress,created,200,30720,no,,1,openai
+openai|nova|0.85||steamed chicken soup,steamed chicken soup,created,200,48000,no,,1,openai
+openai|nova|0.85||pilot,pilot,created,200,21504,no,,1,openai
+openai|nova|0.85||writer,writer,created,200,29184,no,,1,openai
+openai|nova|0.85||importantly,importantly,created,200,26112,no,,1,openai
+openai|nova|0.85||angry,angry,created,200,23424,no,,1,openai
+openai|nova|0.85||soundly,soundly,created,200,34560,no,,1,openai
+openai|nova|0.85||whose,whose,created,200,32640,no,,1,openai
+openai|nova|0.85||madly,madly,created,200,24192,no,,1,openai
+openai|nova|0.85||alien,alien,created,200,30720,no,,1,openai
+openai|nova|0.85||foreigner,foreigner,created,200,28032,no,,1,openai
+openai|nova|0.85||loud,loud,created,200,34560,no,,1,openai
+openai|nova|0.85||restaurant,restaurant,created,200,34560,no,,1,openai
+openai|nova|0.85||staff,staff,created,200,34560,no,,1,openai
+openai|nova|0.85||landslide,landslide,created,200,31872,no,,1,openai
+openai|nova|0.85||honor,honor,created,200,14976,no,,1,openai
+openai|nova|0.85||willing,willing,created,200,18816,no,,1,openai
+openai|nova|0.85||typhoon,typhoon,created,200,36480,no,,1,openai
+openai|nova|0.85||sci-fi,sci-fi,created,200,37632,no,,1,openai
+openai|nova|0.85||summary,summary,created,200,32640,no,,1,openai
+openai|nova|0.85||narrow,narrow,created,200,15744,no,,1,openai
+openai|nova|0.85||faraway,faraway,created,200,28032,no,,1,openai
+openai|nova|0.85||freshly,freshly,created,200,18816,no,,1,openai
+openai|nova|0.85||cloud,cloud,created,200,22272,no,,1,openai
+openai|nova|0.85||metre,metre,created,200,22272,no,,1,openai
+openai|nova|0.85||second,second,created,200,21504,no,,1,openai
+openai|nova|0.85||monkey,monkey,created,200,15744,no,,1,openai
+openai|nova|0.85||bridge,bridge,created,200,32640,no,,1,openai
+openai|nova|0.85||bark,bark,created,200,18816,no,,1,openai
+openai|nova|0.85||TV,TV,created,200,20352,no,,1,openai
+openai|nova|0.85||make preparations,make preparations,created,200,63744,no,,1,openai
+openai|nova|0.85||vacation,vacation,created,200,25344,no,,1,openai
+openai|nova|0.85||point,point,created,200,15744,no,,1,openai
+openai|nova|0.85||ahead of,ahead of,created,200,26112,no,,1,openai
+openai|nova|0.85||work on,work on,created,200,33792,no,,1,openai
+openai|nova|0.85||voluntary,voluntary,created,200,22272,no,,1,openai
+openai|nova|0.85||once again,once again,created,200,33792,no,,1,openai
+openai|nova|0.85||divide,divide,created,200,24192,no,,1,openai
+openai|nova|0.85||look back at,look back at,created,200,26112,no,,1,openai
+openai|nova|0.85||as … as …,as … as …,created,200,46080,no,,1,openai
+openai|nova|0.85||examination,examination,created,200,29952,no,,1,openai
+openai|nova|0.85||belief,belief,created,200,25344,no,,1,openai
+openai|nova|0.85||sometime,sometime,created,200,21504,no,,1,openai
+openai|nova|0.85||beauty,beauty,created,200,20352,no,,1,openai
+openai|nova|0.85||turn off,turn off,created,200,32640,no,,1,openai
+openai|nova|0.85||folding fan,folding fan,created,200,36480,no,,1,openai
+openai|nova|0.85||rather than,rather than,created,200,23424,no,,1,openai
+openai|nova|0.85||date,date,created,200,16896,no,,1,openai
+openai|nova|0.85||safeguard,safeguard,created,200,27264,no,,1,openai
+openai|nova|0.85||solve,solve,created,200,44928,no,,1,openai
+openai|nova|0.85||unexplored,unexplored,created,200,29952,no,,1,openai
+openai|nova|0.85||plateau,plateau,created,200,24192,no,,1,openai
+openai|nova|0.85||address,address,created,200,44928,no,,1,openai
+openai|nova|0.85||self-improvement,self-improvement,created,200,34560,no,,1,openai
+openai|nova|0.85||picnic,picnic,created,200,8448,no,,1,openai
+openai|nova|0.85||washroom,washroom,created,200,57984,no,,1,openai
+openai|nova|0.85||quality,quality,created,200,15744,no,,1,openai
+openai|nova|0.85||pressure,pressure,created,200,19584,no,,1,openai
+openai|nova|0.85||length,length,created,200,54144,no,,1,openai
+openai|nova|0.85||outer space,outer space,created,200,30720,no,,1,openai
+openai|nova|0.85||mistake... for...,mistake... for...,created,200,38400,no,,1,openai
+openai|nova|0.85||actor,actor,created,200,16896,no,,1,openai
+openai|nova|0.85||geographical,geographical,created,200,38400,no,,1,openai
+openai|nova|0.85||onto,onto,created,200,18816,no,,1,openai
+openai|nova|0.85||slowly,slowly,created,200,15744,no,,1,openai
+openai|nova|0.85||bake,bake,created,200,16896,no,,1,openai
+openai|nova|0.85||clothes,clothes,created,200,21504,no,,1,openai
+openai|nova|0.85||stir,stir,created,200,20352,no,,1,openai
+openai|nova|0.85||reduce,reduce,created,200,33792,no,,1,openai
+openai|nova|0.85||British,British,created,200,28032,no,,1,openai
+openai|nova|0.85||manager,manager,created,200,38400,no,,1,openai
+openai|nova|0.85||old-fashioned,old-fashioned,created,200,42240,no,,1,openai
+openai|nova|0.85||costume party,costume party,created,200,41088,no,,1,openai
+openai|nova|0.85||goodwill,goodwill,created,200,35328,no,,1,openai
+openai|nova|0.85||hopefully,hopefully,created,200,20352,no,,1,openai
+openai|nova|0.85||make progress,make progress,created,200,25344,no,,1,openai
+openai|nova|0.85||invention,invention,created,200,29184,no,,1,openai
+openai|nova|0.85||brain,brain,created,200,24192,no,,1,openai
+openai|nova|0.85||coat,coat,created,200,36480,no,,1,openai
+openai|nova|0.85||come to life,come to life,created,200,20352,no,,1,openai
+openai|nova|0.85||too many,too many,created,200,37632,no,,1,openai
+openai|nova|0.85||congratulations,congratulations,created,200,33792,no,,1,openai
+openai|nova|0.85||grandchild,grandchild,created,200,28032,no,,1,openai
+openai|nova|0.85||submersible,submersible,created,200,35328,no,,1,openai
+openai|nova|0.85||slice,slice,created,200,41088,no,,1,openai
+openai|nova|0.85||ordinary,ordinary,created,200,21504,no,,1,openai
+openai|nova|0.85||what's more,what's more,created,200,30720,no,,1,openai
+openai|nova|0.85||bin,bin,created,200,25344,no,,1,openai
+openai|nova|0.85||graduate,graduate,created,200,25344,no,,1,openai
+openai|nova|0.85||more than,more than,created,200,46080,no,,1,openai
+openai|nova|0.85||search for,search for,created,200,24192,no,,1,openai
+openai|nova|0.85||clause,clause,created,200,24192,no,,1,openai
+openai|nova|0.85||youthful,youthful,created,200,38400,no,,1,openai
+openai|nova|0.85||add sth to sth,add sth to sth,created,200,46848,no,,1,openai
+openai|nova|0.85||face to face,face to face,created,200,39552,no,,1,openai
+openai|nova|0.85||microphone,microphone,created,200,22272,no,,1,openai
+openai|nova|0.85||footstep,footstep,created,200,21504,no,,1,openai
+openai|nova|0.85||stick to,stick to,created,200,27264,no,,1,openai
+openai|nova|0.85||expensive,expensive,created,200,32640,no,,1,openai
+openai|nova|0.85||be thirsty for,be thirsty for,created,200,40320,no,,1,openai
+openai|nova|0.85||thirdly,thirdly,created,200,30720,no,,1,openai
+openai|nova|0.85||too ... to,too ... to,created,200,50688,no,,1,openai
+openai|nova|0.85||on fire,on fire,created,200,31872,no,,1,openai
+openai|nova|0.85||day by day,day by day,created,200,27264,no,,1,openai
+openai|nova|0.85||dangerous,dangerous,created,200,23424,no,,1,openai
+openai|nova|0.85||extinguisher,extinguisher,created,200,26112,no,,1,openai
+openai|nova|0.85||rainfall,rainfall,created,200,23424,no,,1,openai
+openai|nova|0.85||cage,cage,created,200,26112,no,,1,openai
+openai|nova|0.85||notebook,notebook,created,200,33792,no,,1,openai
+openai|nova|0.85||concert,concert,created,200,24192,no,,1,openai
+openai|nova|0.85||five-year-old,five-year-old,created,200,27264,no,,1,openai
+openai|nova|0.85||moneybox,moneybox,created,200,33792,no,,1,openai
+openai|nova|0.85||lover,lover,created,200,46848,no,,1,openai
+openai|nova|0.85||pound,pound,created,200,29952,no,,1,openai
+openai|nova|0.85||dull,dull,created,200,33792,no,,1,openai
+openai|nova|0.85||get mad,get mad,created,200,34560,no,,1,openai
+openai|nova|0.85||average,average,created,200,21504,no,,1,openai
+openai|nova|0.85||ice-skating,ice-skating,created,200,30720,no,,1,openai
+openai|nova|0.85||depend on/upon,depend on/upon,created,200,42240,no,,1,openai
+openai|nova|0.85||southwestern,southwestern,created,200,21504,no,,1,openai
+openai|nova|0.85||shelf,shelf,created,200,18816,no,,1,openai
+openai|nova|0.85||fool,fool,created,200,33792,no,,1,openai
+openai|nova|0.85||late,late,created,200,26112,no,,1,openai
+openai|nova|0.85||minister,minister,created,200,18816,no,,1,openai
+openai|nova|0.85||per,per,created,200,26112,no,,1,openai
+openai|nova|0.85||position,position,created,200,23424,no,,1,openai
+openai|nova|0.85||satisfied,satisfied,created,200,24192,no,,1,openai
+openai|nova|0.85||soup,soup,created,200,8448,no,,1,openai
+openai|nova|0.85||pot,pot,created,200,29952,no,,1,openai
+openai|nova|0.85||go out of one's way,go out of one's way,created,200,38400,no,,1,openai
+openai|nova|0.85||elder,elder,created,200,30720,no,,1,openai
+openai|nova|0.85||treasure,treasure,created,200,52224,no,,1,openai
+openai|nova|0.85||alarm clock,alarm clock,created,200,29952,no,,1,openai
+openai|nova|0.85||farmland,farmland,created,200,25344,no,,1,openai
+openai|nova|0.85||plastic,plastic,created,200,22272,no,,1,openai
+openai|nova|0.85||friendship,friendship,created,200,19584,no,,1,openai
+openai|nova|0.85||do exercises,do exercises,created,200,46080,no,,1,openai
+openai|nova|0.85||misunderstanding,misunderstanding,created,200,28032,no,,1,openai
+openai|nova|0.85||take sb's temperature,take sb's temperature,created,200,48000,no,,1,openai
+openai|nova|0.85||get along with,get along with,created,200,27264,no,,1,openai
+openai|nova|0.85||education,education,created,200,21504,no,,1,openai
+openai|nova|0.85||firefighter,firefighter,created,200,33792,no,,1,openai
+openai|nova|0.85||unlock the secrets of sth,unlock the secrets of sth,created,200,41088,no,,1,openai
+openai|nova|0.85||lead,lead,created,200,14208,no,,1,openai
+openai|nova|0.85||square kilometre,square kilometre,created,200,35328,no,,1,openai
+openai|nova|0.85||namaste,namaste,created,200,44160,no,,1,openai
+openai|nova|0.85||lend sb a hand,lend sb a hand,created,200,44160,no,,1,openai
+openai|nova|0.85||soft drink,soft drink,created,200,21504,no,,1,openai
+openai|nova|0.85||kilo,kilo,created,200,24192,no,,1,openai
+openai|nova|0.85||stick,stick,created,200,23424,no,,1,openai
+openai|nova|0.85||African,African,created,200,29184,no,,1,openai
+openai|nova|0.85||medical,medical,created,200,31872,no,,1,openai
+openai|nova|0.85||percent,percent,created,200,29952,no,,1,openai
+openai|nova|0.85||keyboard,keyboard,created,200,28032,no,,1,openai
+openai|nova|0.85||surfboard,surfboard,created,200,29952,no,,1,openai
+openai|nova|0.85||Russian,Russian,created,200,42240,no,,1,openai
+openai|nova|0.85||serious,serious,created,200,23424,no,,1,openai
+openai|nova|0.85||disease,disease,created,200,18816,no,,1,openai
+openai|nova|0.85||anger,anger,created,200,40320,no,,1,openai
+openai|nova|0.85||Korea,Korea,created,200,28032,no,,1,openai
+openai|nova|0.85||sweetness,sweetness,created,200,28032,no,,1,openai
+openai|nova|0.85||drop off,drop off,created,200,30720,no,,1,openai
+openai|nova|0.85||Thai,Thai,created,200,49920,no,,1,openai
+openai|nova|0.85||out of breath,out of breath,created,200,28032,no,,1,openai
+openai|nova|0.85||at the moment,at the moment,created,200,43008,no,,1,openai
+openai|nova|0.85||take back,take back,created,200,32640,no,,1,openai
+openai|nova|0.85||3-D,3-D,created,200,53376,no,,1,openai
+openai|nova|0.85||care about,care about,created,200,24192,no,,1,openai
+openai|nova|0.85||supermarket,supermarket,created,200,29952,no,,1,openai
+openai|nova|0.85||not ... at all,not ... at all,created,200,36480,no,,1,openai
+openai|nova|0.85||treasure hunt,treasure hunt,created,200,29184,no,,1,openai
+openai|nova|0.85||period,period,created,200,17664,no,,1,openai
+openai|nova|0.85||degree,degree,created,200,15744,no,,1,openai
+openai|nova|0.85||courage,courage,created,200,18816,no,,1,openai
+openai|nova|0.85||get together,get together,created,200,24192,no,,1,openai
+openai|nova|0.85||saint,saint,created,200,18816,no,,1,openai
+openai|nova|0.85||try,try,skipped,200,17664,no,,0,
+openai|nova|0.85||keep on doing sth,keep on doing sth,created,200,48000,no,,1,openai
+openai|nova|0.85||junior high,junior high,created,200,27264,no,,1,openai
+openai|nova|0.85||sleepy,sleepy,created,200,8448,no,,1,openai
+openai|nova|0.85||mix … with …,mix … with …,created,200,43008,no,,1,openai
+openai|nova|0.85||roof,roof,created,200,48000,no,,1,openai
+openai|nova|0.85||news,news,created,200,8448,no,,1,openai
+openai|nova|0.85||bite,bite,created,200,19584,no,,1,openai
+openai|nova|0.85||count,count,created,200,23424,no,,1,openai
+openai|nova|0.85||marry,marry,created,200,14976,no,,1,openai
+openai|nova|0.85||intelligent,intelligent,created,200,31872,no,,1,openai
+openai|nova|0.85||headache,headache,created,200,18816,no,,1,openai
+openai|nova|0.85||main,main,created,200,26112,no,,1,openai
+openai|nova|0.85||appear,appear,created,200,18816,no,,1,openai
+openai|nova|0.85||offline,offline,created,200,29184,no,,1,openai
+openai|nova|0.85||nursing home,nursing home,created,200,24192,no,,1,openai
+openai|nova|0.85||temper,temper,created,200,24192,no,,1,openai
+openai|nova|0.85||What about,What about,created,200,29184,no,,1,openai
+openai|nova|0.85||surprising,surprising,created,200,29184,no,,1,openai
+openai|nova|0.85||space,space,created,200,21504,no,,1,openai
+openai|nova|0.85||license,license,created,200,53376,no,,1,openai
+openai|nova|0.85||a lot,a lot,created,200,27264,no,,1,openai
+openai|nova|0.85||donation,donation,created,200,44160,no,,1,openai
+openai|nova|0.85||develop,develop,created,200,25344,no,,1,openai
+openai|nova|0.85||belt,belt,created,200,19584,no,,1,openai
+openai|nova|0.85||km,km,created,200,30720,no,,1,openai
+openai|nova|0.85||south,south,created,200,21504,no,,1,openai
+openai|nova|0.85||flame,flame,created,200,37632,no,,1,openai
+openai|nova|0.85||make one's own decision,make one's own decision,created,200,38400,no,,1,openai
+openai|nova|0.85||practical,practical,created,200,29184,no,,1,openai
+openai|nova|0.85||opposite,opposite,created,200,25344,no,,1,openai
+openai|nova|0.85||trunk,trunk,created,200,32640,no,,1,openai
+openai|nova|0.85||take up,take up,created,200,25344,no,,1,openai
+openai|nova|0.85||lucky you,lucky you,created,200,24192,no,,1,openai
+openai|nova|0.85||mount,mount,created,200,18816,no,,1,openai
+openai|nova|0.85||course,course,created,200,21504,no,,1,openai
+openai|nova|0.85||tap,tap,created,200,25344,no,,1,openai
+openai|nova|0.85||lifelong,lifelong,created,200,29952,no,,1,openai
+openai|nova|0.85||recycle,recycle,created,200,22272,no,,1,openai
+openai|nova|0.85||lane,lane,created,200,37632,no,,1,openai
+openai|nova|0.85||solar panel,solar panel,created,200,29184,no,,1,openai
+openai|nova|0.85||rock music,rock music,created,200,30720,no,,1,openai
+openai|nova|0.85||solar,solar,created,200,23424,no,,1,openai
+openai|nova|0.85||stare,stare,created,200,31872,no,,1,openai
+openai|nova|0.85||froth,froth,created,200,21504,no,,1,openai
+openai|nova|0.85||shoot,shoot,created,200,22272,no,,1,openai
+openai|nova|0.85||climber,climber,created,200,48000,no,,1,openai
+openai|nova|0.85||general,general,created,200,21504,no,,1,openai
+openai|nova|0.85||full of,full of,created,200,52224,no,,1,openai
+openai|nova|0.85||hobby,hobby,created,200,39552,no,,1,openai
+openai|nova|0.85||informal,informal,created,200,28032,no,,1,openai
+openai|nova|0.85||unexpected,unexpected,created,200,21504,no,,1,openai
+openai|nova|0.85||rainstorm,rainstorm,created,200,25344,no,,1,openai
+openai|nova|0.85||keep ... away from,keep ... away from,created,200,53376,no,,1,openai
+openai|nova|0.85||money,money,created,200,20352,no,,1,openai
+openai|nova|0.85||highlight,highlight,created,200,29184,no,,1,openai
+openai|nova|0.85||loudly,loudly,created,200,29952,no,,1,openai
+openai|nova|0.85||beyond,beyond,created,200,25344,no,,1,openai
+openai|nova|0.85||advantage,advantage,created,200,27264,no,,1,openai
+openai|nova|0.85||superhero,superhero,created,200,28032,no,,1,openai
+openai|nova|0.85||homeless,homeless,created,200,55296,no,,1,openai
+openai|nova|0.85||be tired of,be tired of,created,200,38400,no,,1,openai
+openai|nova|0.85||permit,permit,created,200,37632,no,,1,openai
+openai|nova|0.85||Chinese chess,Chinese chess,created,200,29184,no,,1,openai
+openai|nova|0.85||probably,probably,created,200,42240,no,,1,openai
+openai|nova|0.85||after all,after all,created,200,50688,no,,1,openai
+openai|nova|0.85||pass by,pass by,created,200,22272,no,,1,openai
+openai|nova|0.85||cut up,cut up,created,200,29952,no,,1,openai
+openai|nova|0.85||at the start,at the start,created,200,55296,no,,1,openai
+openai|nova|0.85||mix,mix,created,200,18816,no,,1,openai
+openai|nova|0.85||humorous,humorous,created,200,44928,no,,1,openai
+openai|nova|0.85||club,club,created,200,16896,no,,1,openai
+openai|nova|0.85||detail,detail,created,200,18816,no,,1,openai
+openai|nova|0.85||bus,bus,created,200,23424,no,,1,openai
+openai|nova|0.85||motherland,motherland,created,200,26112,no,,1,openai
+openai|nova|0.85||germ,germ,created,200,31872,no,,1,openai
+openai|nova|0.85||popularity,popularity,created,200,25344,no,,1,openai
+openai|nova|0.85||rehearsal,rehearsal,created,200,19584,no,,1,openai
+openai|nova|0.85||convenient,convenient,created,200,22272,no,,1,openai
+openai|nova|0.85||fish and chips,fish and chips,created,200,32640,no,,1,openai
+openai|nova|0.85||blood,blood,created,200,23424,no,,1,openai
+openai|nova|0.85||break down,break down,created,200,55296,no,,1,openai
+openai|nova|0.85||France,France,created,200,24192,no,,1,openai
+openai|nova|0.85||product,product,created,200,31872,no,,1,openai
+openai|nova|0.85||stop short,stop short,created,200,25344,no,,1,openai
+openai|nova|0.85||northwest,northwest,created,200,50688,no,,1,openai
+openai|nova|0.85||peer,peer,created,200,17664,no,,1,openai
+openai|nova|0.85||make money,make money,created,200,36480,no,,1,openai
+openai|nova|0.85||let down,let down,created,200,28032,no,,1,openai
+openai|nova|0.85||memorize,memorize,created,200,29952,no,,1,openai
+openai|nova|0.85||lizard,lizard,created,200,20352,no,,1,openai
+openai|nova|0.85||similarity,similarity,created,200,25344,no,,1,openai
+openai|nova|0.85||relationship,relationship,created,200,25344,no,,1,openai
+openai|nova|0.85||crazy,crazy,created,200,19584,no,,1,openai
+openai|nova|0.85||go with,go with,created,200,27264,no,,1,openai
+openai|nova|0.85||Mount,Mount,created,200,31872,no,,1,openai
+openai|nova|0.85||at school,at school,created,200,30720,no,,1,openai
+openai|nova|0.85||marathon,marathon,created,200,24192,no,,1,openai
+openai|nova|0.85||ever since,ever since,created,200,29952,no,,1,openai
+openai|nova|0.85||come out,come out,created,200,32640,no,,1,openai
+openai|nova|0.85||nod,nod,created,200,18816,no,,1,openai
+openai|nova|0.85||go on an outing,go on an outing,created,200,31872,no,,1,openai
+openai|nova|0.85||on sale,on sale,created,200,37632,no,,1,openai
+openai|nova|0.85||wrong,wrong,created,200,37632,no,,1,openai
+openai|nova|0.85||calm,calm,created,200,21504,no,,1,openai
+openai|nova|0.85||idiom,idiom,created,200,24192,no,,1,openai
+openai|nova|0.85||first of all,first of all,created,200,39552,no,,1,openai
+openai|nova|0.85||measure,measure,created,200,23424,no,,1,openai
+openai|nova|0.85||face-to-face,face-to-face,created,200,33792,no,,1,openai
+openai|nova|0.85||build-up,build-up,created,200,31872,no,,1,openai
+openai|nova|0.85||sore,sore,created,200,46080,no,,1,openai
+openai|nova|0.85||scared of,scared of,created,200,23424,no,,1,openai
+openai|nova|0.85||as well,as well,created,200,23424,no,,1,openai
+openai|nova|0.85||toothache,toothache,created,200,28032,no,,1,openai
+openai|nova|0.85||stroke,stroke,created,200,25344,no,,1,openai
+openai|nova|0.85||feel free (to do sth),feel free (to do sth),created,200,49920,no,,1,openai
+openai|nova|0.85||wake up,wake up,created,200,41088,no,,1,openai
+openai|nova|0.85||midnight,midnight,created,200,15744,no,,1,openai
+openai|nova|0.85||mosquito,mosquito,created,200,32640,no,,1,openai
+openai|nova|0.85||used to,used to,created,200,23424,no,,1,openai
+openai|nova|0.85||by no means,by no means,created,200,30720,no,,1,openai
+openai|nova|0.85||ivory,ivory,created,200,20352,no,,1,openai
+openai|nova|0.85||glass,glass,created,200,29184,no,,1,openai
+openai|nova|0.85||the fruit of,the fruit of,created,200,30720,no,,1,openai
+openai|nova|0.85||spare time,spare time,created,200,29184,no,,1,openai
+openai|nova|0.85||keep (…) away from …,keep (…) away from …,created,200,55296,no,,1,openai
+openai|nova|0.85||sign up,sign up,created,200,25344,no,,1,openai
+openai|nova|0.85||hostess,hostess,created,200,21504,no,,1,openai
+openai|nova|0.85||emotion,emotion,created,200,17664,no,,1,openai
+openai|nova|0.85||invent,invent,created,200,37632,no,,1,openai
+openai|nova|0.85||bowl,bowl,created,200,17664,no,,1,openai
+openai|nova|0.85||act out,act out,created,200,39552,no,,1,openai
+openai|nova|0.85||be home to sb/sth,be home to sb/sth,created,200,62208,no,,1,openai
+openai|nova|0.85||aware,aware,created,200,17664,no,,1,openai
+openai|nova|0.85||feather-covered,feather-covered,created,200,32640,no,,1,openai
+openai|nova|0.85||senior,senior,created,200,19584,no,,1,openai
+openai|nova|0.85||drop by,drop by,created,200,29184,no,,1,openai
+openai|nova|0.85||couch potato,couch potato,created,200,48000,no,,1,openai
+openai|nova|0.85||stormy,stormy,created,200,17664,no,,1,openai
+openai|nova|0.85||go off,go off,created,200,27264,no,,1,openai
+openai|nova|0.85||board,board,created,200,14976,no,,1,openai
+openai|nova|0.85||relief,relief,created,200,26112,no,,1,openai
+openai|nova|0.85||forget,forget,created,200,25344,no,,1,openai
+openai|nova|0.85||chalk,chalk,created,200,19584,no,,1,openai
+openai|nova|0.85||changeable,changeable,created,200,22272,no,,1,openai
+openai|nova|0.85||paper cutting,paper cutting,created,200,27264,no,,1,openai
+openai|nova|0.85||turn around,turn around,created,200,30720,no,,1,openai
+openai|nova|0.85||try one's best,try one's best,created,200,33792,no,,1,openai
+openai|nova|0.85||turn on,turn on,created,200,28032,no,,1,openai
+openai|nova|0.85||clear,clear,created,200,16896,no,,1,openai
+openai|nova|0.85||official,official,created,200,20352,no,,1,openai
+openai|nova|0.85||sale,sale,created,200,34560,no,,1,openai
+openai|nova|0.85||politely,politely,created,200,21504,no,,1,openai
+openai|nova|0.85||next to,next to,created,200,28032,no,,1,openai
+openai|nova|0.85||put sth back,put sth back,created,200,31872,no,,1,openai
+openai|nova|0.85||flat,flat,created,200,28032,no,,1,openai
+openai|nova|0.85||by the end of,by the end of,created,200,32640,no,,1,openai
+openai|nova|0.85||sit up,sit up,created,200,33792,no,,1,openai
+openai|nova|0.85||detective,detective,created,200,27264,no,,1,openai
+openai|nova|0.85||homework,homework,created,200,17664,no,,1,openai
+openai|nova|0.85||in low spirits,in low spirits,created,200,29184,no,,1,openai
+openai|nova|0.85||in that case,in that case,created,200,32640,no,,1,openai
+openai|nova|0.85||would rather,would rather,created,200,26112,no,,1,openai
+openai|nova|0.85||congratulate,congratulate,created,200,24192,no,,1,openai
+openai|nova|0.85||root,root,created,200,26112,no,,1,openai
+openai|nova|0.85||born,born,created,200,26112,no,,1,openai
+openai|nova|0.85||exploration,exploration,created,200,27264,no,,1,openai
+openai|nova|0.85||recently,recently,created,200,36480,no,,1,openai
+openai|nova|0.85||countless,countless,created,200,23424,no,,1,openai
+openai|nova|0.85||viewer,viewer,created,200,27264,no,,1,openai
+openai|nova|0.85||organized,organized,created,200,23424,no,,1,openai
+openai|nova|0.85||steal,steal,created,200,22272,no,,1,openai
+openai|nova|0.85||final,final,created,200,39552,no,,1,openai
+openai|nova|0.85||dive,dive,created,200,29952,no,,1,openai
+openai|nova|0.85||professional,professional,created,200,52224,no,,1,openai
+openai|nova|0.85||matter,matter,created,200,29184,no,,1,openai
+openai|nova|0.85||try on,try on,created,200,35328,no,,1,openai
+openai|nova|0.85||endless,endless,created,200,24192,no,,1,openai
+openai|nova|0.85||inspire,inspire,created,200,24192,no,,1,openai
+openai|nova|0.85||high school,high school,created,200,20352,no,,1,openai
+openai|nova|0.85||make a mess,make a mess,created,200,34560,no,,1,openai
+openai|nova|0.85||policewoman,policewoman,created,200,39552,no,,1,openai
+openai|nova|0.85||pool,pool,created,200,20352,no,,1,openai
+openai|nova|0.85||guy,guy,created,200,17664,no,,1,openai
+openai|nova|0.85||language,language,created,200,26112,no,,1,openai
+openai|nova|0.85||neighbourhood,neighbourhood,created,200,33792,no,,1,openai
+openai|nova|0.85||swimmer,swimmer,created,200,18816,no,,1,openai
+openai|nova|0.85||pierce,pierce,created,200,23424,no,,1,openai
+openai|nova|0.85||ice cream,ice cream,created,200,19584,no,,1,openai
+openai|nova|0.85||greenhouse gases,greenhouse gases,created,200,31872,no,,1,openai
+openai|nova|0.85||get into,get into,created,200,37632,no,,1,openai
+openai|nova|0.85||long ago,long ago,created,200,48768,no,,1,openai
+openai|nova|0.85||decorate,decorate,created,200,29952,no,,1,openai
+openai|nova|0.85||reader,reader,created,200,15744,no,,1,openai
+openai|nova|0.85||as happy as a clam,as happy as a clam,created,200,36480,no,,1,openai
+openai|nova|0.85||call in,call in,created,200,24192,no,,1,openai
+openai|nova|0.85||whiteboard,whiteboard,created,200,35328,no,,1,openai
+openai|nova|0.85||take care of,take care of,created,200,34560,no,,1,openai
+openai|nova|0.85||strict,strict,created,200,17664,no,,1,openai
+openai|nova|0.85||find out,find out,created,200,23424,no,,1,openai
+openai|nova|0.85||program,program,created,200,20352,no,,1,openai
+openai|nova|0.85||kite,kite,created,200,20352,no,,1,openai
+openai|nova|0.85||living room,living room,created,200,18816,no,,1,openai
+openai|nova|0.85||so far,so far,created,200,18816,no,,1,openai
+openai|nova|0.85||Iranian,Iranian,created,200,18816,no,,1,openai
+openai|nova|0.85||fill … with …,fill … with …,created,200,31872,no,,1,openai
+openai|nova|0.85||in danger,in danger,created,200,29184,no,,1,openai
+openai|nova|0.85||reuse,reuse,created,200,34560,no,,1,openai
+openai|nova|0.85||hospital,hospital,created,200,28032,no,,1,openai
+openai|nova|0.85||sky,sky,created,200,26112,no,,1,openai
+openai|nova|0.85||at the same time,at the same time,created,200,29184,no,,1,openai
+openai|nova|0.85||serving chopsticks,serving chopsticks,created,200,67584,no,,1,openai
+openai|nova|0.85||set ... free,set ... free,created,200,114432,no,,1,openai
+openai|nova|0.85||cooperation,cooperation,created,200,38400,no,,1,openai
+openai|nova|0.85||perform,perform,created,200,24192,no,,1,openai
+openai|nova|0.85||paper-cutting,paper-cutting,created,200,22272,no,,1,openai
+openai|nova|0.85||married,married,created,200,22272,no,,1,openai
+openai|nova|0.85||blouse,blouse,created,200,22272,no,,1,openai
+openai|nova|0.85||press,press,created,200,31872,no,,1,openai
+openai|nova|0.85||make up,make up,created,200,19584,no,,1,openai
+openai|nova|0.85||genie,genie,created,200,21504,no,,1,openai
+openai|nova|0.85||spoiled,spoiled,created,200,20352,no,,1,openai
+openai|nova|0.85||oil,oil,created,200,24192,no,,1,openai
+openai|nova|0.85||stop sth from doing,stop sth from doing,created,200,46080,no,,1,openai
+openai|nova|0.85||all over,all over,created,200,19584,no,,1,openai
+openai|nova|0.85||wildfire,wildfire,created,200,27264,no,,1,openai
+openai|nova|0.85||tear,tear,created,200,23424,no,,1,openai
+openai|nova|0.85||peanut,peanut,created,200,30720,no,,1,openai
+openai|nova|0.85||policeman,policeman,created,200,36480,no,,1,openai
+openai|nova|0.85||at the end,at the end,created,200,23424,no,,1,openai
+openai|nova|0.85||be responsible for,be responsible for,created,200,46080,no,,1,openai
+openai|nova|0.85||timeline,timeline,created,200,31872,no,,1,openai
+openai|nova|0.85||surfing,surfing,created,200,24192,no,,1,openai
+openai|nova|0.85||humour,humour,created,200,18816,no,,1,openai
+openai|nova|0.85||hometown,hometown,created,200,42240,no,,1,openai
+openai|nova|0.85||home economics,home economics,created,200,62976,no,,1,openai
+openai|nova|0.85||parrot,parrot,created,200,17664,no,,1,openai
+openai|nova|0.85||beach volleyball,beach volleyball,created,200,33792,no,,1,openai
+openai|nova|0.85||take a photo,take a photo,created,200,39552,no,,1,openai
+openai|nova|0.85||be thankful to sb.,be thankful to sb.,created,200,41088,no,,1,openai
+openai|nova|0.85||make sure,make sure,created,200,30720,no,,1,openai
+openai|nova|0.85||alarm,alarm,created,200,14208,no,,1,openai
+openai|nova|0.85||banana,banana,created,200,27264,no,,1,openai
+openai|nova|0.85||go wrong,go wrong,created,200,25344,no,,1,openai
+openai|nova|0.85||pronounce,pronounce,created,200,35328,no,,1,openai
+openai|nova|0.85||foreign,foreign,created,200,48768,no,,1,openai
+openai|nova|0.85||smoothly,smoothly,created,200,32640,no,,1,openai
+openai|nova|0.85||visitor,visitor,created,200,14208,no,,1,openai
+openai|nova|0.85||be hard on,be hard on,created,200,31872,no,,1,openai
+openai|nova|0.85||emotional,emotional,created,200,27264,no,,1,openai
+openai|nova|0.85||be about to,be about to,created,200,30720,no,,1,openai
+openai|nova|0.85||ginkgo,ginkgo,created,200,29184,no,,1,openai
+openai|nova|0.85||false,false,created,200,26112,no,,1,openai
+openai|nova|0.85||shut away,shut away,created,200,34560,no,,1,openai
+openai|nova|0.85||be/get ready,be/get ready,created,200,42240,no,,1,openai
+openai|nova|0.85||mashed potatoes,mashed potatoes,created,200,51456,no,,1,openai
+openai|nova|0.85||waitress,waitress,created,200,25344,no,,1,openai
+openai|nova|0.85||scream,scream,created,200,27264,no,,1,openai
+openai|nova|0.85||pizza,pizza,created,200,24192,no,,1,openai
+openai|nova|0.85||totally,totally,created,200,28032,no,,1,openai
+openai|nova|0.85||costume,costume,created,200,29184,no,,1,openai
+openai|nova|0.85||opinion,opinion,created,200,16896,no,,1,openai
+openai|nova|0.85||floodwater,floodwater,created,200,33792,no,,1,openai
+openai|nova|0.85||rainforest,rainforest,created,200,37632,no,,1,openai
+openai|nova|0.85||outing,outing,created,200,16896,no,,1,openai
+openai|nova|0.85||poster,poster,created,200,32640,no,,1,openai
+openai|nova|0.85||workday,workday,created,200,27264,no,,1,openai
+openai|nova|0.85||intelligence,intelligence,created,200,25344,no,,1,openai
+openai|nova|0.85||traveller,traveller,created,200,18816,no,,1,openai
+openai|nova|0.85||because of,because of,created,200,21504,no,,1,openai
+openai|nova|0.85||event,event,created,200,24192,no,,1,openai
+openai|nova|0.85||confident,confident,created,200,29184,no,,1,openai
+openai|nova|0.85||leg,leg,created,200,24192,no,,1,openai
+openai|nova|0.85||thirty-metre-high,thirty-metre-high,created,200,34560,no,,1,openai
+openai|nova|0.85||north,north,created,200,23424,no,,1,openai
+openai|nova|0.85||click,click,created,200,28032,no,,1,openai
+openai|nova|0.85||etc.,etc.,created,200,18816,no,,1,openai
+openai|nova|0.85||look on the bright side,look on the bright side,created,200,32640,no,,1,openai
+openai|nova|0.85||a good read,a good read,created,200,35328,no,,1,openai
+openai|nova|0.85||get used to,get used to,created,200,27264,no,,1,openai
+openai|nova|0.85||napkin,napkin,created,200,22272,no,,1,openai
+openai|nova|0.85||proud of,proud of,created,200,43008,no,,1,openai
+openai|nova|0.85||wind,wind,created,200,15744,no,,1,openai
+openai|nova|0.85||behaviour,behaviour,created,200,23424,no,,1,openai
+openai|nova|0.85||tired,tired,created,200,21504,no,,1,openai
+openai|nova|0.85||think about,think about,created,200,32640,no,,1,openai
+openai|nova|0.85||population,population,created,200,29184,no,,1,openai
+openai|nova|0.85||knock around,knock around,created,200,32640,no,,1,openai
+openai|nova|0.85||arm,arm,created,200,23424,no,,1,openai
+openai|nova|0.85||species,species,created,200,37632,no,,1,openai
+openai|nova|0.85||at the top,at the top,created,200,16896,no,,1,openai
+openai|nova|0.85||finding,finding,created,200,31872,no,,1,openai
+openai|nova|0.85||punish,punish,created,200,15744,no,,1,openai
+openai|nova|0.85||hear of,hear of,created,200,22272,no,,1,openai
+openai|nova|0.85||time zone,time zone,created,200,23424,no,,1,openai
+openai|nova|0.85||look up to,look up to,created,200,37632,no,,1,openai
+openai|nova|0.85||curry,curry,created,200,32640,no,,1,openai
+openai|nova|0.85||help out,help out,created,200,21504,no,,1,openai
+openai|nova|0.85||mountaineering,mountaineering,created,200,31872,no,,1,openai
+openai|nova|0.85||pour sth into sth,pour sth into sth,created,200,46848,no,,1,openai
+openai|nova|0.85||birthmark,birthmark,created,200,25344,no,,1,openai
+openai|nova|0.85||catch fire,catch fire,created,200,31872,no,,1,openai
+openai|nova|0.85||take a message,take a message,created,200,46848,no,,1,openai
+openai|nova|0.85||look at,look at,created,200,27264,no,,1,openai
+openai|nova|0.85||on average,on average,created,200,28032,no,,1,openai
+openai|nova|0.85||lungfish,lungfish,created,200,29952,no,,1,openai
+openai|nova|0.85||at least,at least,created,200,28032,no,,1,openai
+openai|nova|0.85||serving,serving,created,200,49920,no,,1,openai
+openai|nova|0.85||barber,barber,created,200,23424,no,,1,openai
+openai|nova|0.85||referee,referee,created,200,25344,no,,1,openai
+openai|nova|0.85||knife,knife,created,200,24192,no,,1,openai
+openai|nova|0.85||clear the air,clear the air,created,200,35328,no,,1,openai
+openai|nova|0.85||completely,completely,created,200,27264,no,,1,openai
+openai|nova|0.85||suppose,suppose,created,200,23424,no,,1,openai
+openai|nova|0.85||zero,zero,created,200,21504,no,,1,openai
+openai|nova|0.85||heartbreaking,heartbreaking,created,200,29184,no,,1,openai
+openai|nova|0.85||survivor,survivor,created,200,25344,no,,1,openai
+openai|nova|0.85||ache,ache,created,200,39552,no,,1,openai
+openai|nova|0.85||as dead as a dodo,as dead as a dodo,created,200,41088,no,,1,openai
+openai|nova|0.85||soil,soil,created,200,29952,no,,1,openai
+openai|nova|0.85||company,company,created,200,17664,no,,1,openai
+openai|nova|0.85||surfer,surfer,created,200,29184,no,,1,openai
+openai|nova|0.85||by the time ...,by the time ...,created,200,36480,no,,1,openai
+openai|nova|0.85||confusing,confusing,created,200,23424,no,,1,openai
+openai|nova|0.85||competitor,competitor,created,200,31872,no,,1,openai
+openai|nova|0.85||educate,educate,created,200,23424,no,,1,openai
+openai|nova|0.85||wherever,wherever,created,200,23424,no,,1,openai
+openai|nova|0.85||yeah,yeah,created,200,12288,no,,1,openai
+openai|nova|0.85||in the end,in the end,created,200,24192,no,,1,openai
+openai|nova|0.85||imagination,imagination,created,200,30720,no,,1,openai
+openai|nova|0.85||get out,get out,created,200,22272,no,,1,openai
+openai|nova|0.85||attach,attach,created,200,48768,no,,1,openai
+openai|nova|0.85||be hard on sb.,be hard on sb.,created,200,40320,no,,1,openai
+openai|nova|0.85||selfish,selfish,created,200,39552,no,,1,openai
+openai|nova|0.85||look after,look after,created,200,27264,no,,1,openai
+openai|nova|0.85||bit by bit,bit by bit,created,200,31872,no,,1,openai
+openai|nova|0.85||worry about,worry about,created,200,42240,no,,1,openai
+openai|nova|0.85||banker,banker,created,200,19584,no,,1,openai
+openai|nova|0.85||hang up,hang up,created,200,22272,no,,1,openai
+openai|nova|0.85||cotton,cotton,created,200,127872,no,,1,openai
+openai|nova|0.85||make use of,make use of,created,200,28032,no,,1,openai
+openai|nova|0.85||jacket,jacket,created,200,24192,no,,1,openai
+openai|nova|0.85||hang out,hang out,created,200,28032,no,,1,openai
+openai|nova|0.85||tip,tip,created,200,40320,no,,1,openai
+openai|nova|0.85||sit-up,sit-up,created,200,21504,no,,1,openai
+openai|nova|0.85||industrial,industrial,created,200,23424,no,,1,openai
+openai|nova|0.85||endangered,endangered,created,200,38400,no,,1,openai
+openai|nova|0.85||drop sb a line,drop sb a line,created,200,48768,no,,1,openai
+openai|nova|0.85||uncommon,uncommon,created,200,20352,no,,1,openai
+openai|nova|0.85||shame,shame,created,200,51456,no,,1,openai
+openai|nova|0.85||umbrella,umbrella,created,200,23424,no,,1,openai
+openai|nova|0.85||go public,go public,created,200,30720,no,,1,openai
+openai|nova|0.85||ping-pong bat,ping-pong bat,created,200,29184,no,,1,openai
+openai|nova|0.85||bump,bump,created,200,40320,no,,1,openai
+openai|nova|0.85||unlucky,unlucky,created,200,21504,no,,1,openai
+openai|nova|0.85||magazine,magazine,created,200,29184,no,,1,openai
+openai|nova|0.85||as a result,as a result,created,200,27264,no,,1,openai
+openai|nova|0.85||cliff,cliff,created,200,49920,no,,1,openai
+openai|nova|0.85||shout at,shout at,created,200,22272,no,,1,openai
+openai|nova|0.85||calendar,calendar,created,200,22272,no,,1,openai
+openai|nova|0.85||programmer,programmer,created,200,43008,no,,1,openai
+openai|nova|0.85||responsibility,responsibility,created,200,29184,no,,1,openai
+openai|nova|0.85||lift sb's spirits,lift sb's spirits,created,200,33792,no,,1,openai
+openai|nova|0.85||peaceful,peaceful,created,200,22272,no,,1,openai
+openai|nova|0.85||in the sun,in the sun,created,200,35328,no,,1,openai
+openai|nova|0.85||ah,ah,created,200,30720,no,,1,openai
+openai|nova|0.85||absent from,absent from,created,200,36480,no,,1,openai
+openai|nova|0.85||run low (on sth),run low (on sth),created,200,62976,no,,1,openai
+openai|nova|0.85||be harmful to,be harmful to,created,200,62208,no,,1,openai
+openai|nova|0.85||officer,officer,created,200,29952,no,,1,openai
+openai|nova|0.85||teaching building,teaching building,created,200,32640,no,,1,openai
+openai|nova|0.85||make every effort,make every effort,created,200,31872,no,,1,openai
+openai|nova|0.85||be proud of,be proud of,created,200,41088,no,,1,openai
+openai|nova|0.85||metro,metro,created,200,27264,no,,1,openai
+openai|nova|0.85||cut in half,cut in half,created,200,29952,no,,1,openai
+openai|nova|0.85||yours,yours,created,200,29952,no,,1,openai
+openai|nova|0.85||saying,saying,created,200,29952,no,,1,openai
+openai|nova|0.85||thousands of,thousands of,created,200,26112,no,,1,openai
+openai|nova|0.85||hard-working,hard-working,created,200,31872,no,,1,openai
+openai|nova|0.85||easily,easily,created,200,27264,no,,1,openai
+openai|nova|0.85||heatwave,heatwave,created,200,32640,no,,1,openai
+openai|nova|0.85||connection,connection,created,200,23424,no,,1,openai
+openai|nova|0.85||librarian,librarian,created,200,31872,no,,1,openai
+openai|nova|0.85||photographer,photographer,created,200,40320,no,,1,openai
+openai|nova|0.85||hall,hall,created,200,22272,no,,1,openai
+openai|nova|0.85||right now,right now,created,200,25344,no,,1,openai
+openai|nova|0.85||get to one's feet,get to one's feet,created,200,44928,no,,1,openai
+openai|nova|0.85||sad,sad,created,200,22272,no,,1,openai
+openai|nova|0.85||fog,fog,created,200,31872,no,,1,openai
+openai|nova|0.85||sweater,sweater,created,200,16896,no,,1,openai
+openai|nova|0.85||argument,argument,created,200,24192,no,,1,openai
+openai|nova|0.85||wheelchair,wheelchair,created,200,23424,no,,1,openai
+openai|nova|0.85||security,security,created,200,22272,no,,1,openai
+openai|nova|0.85||structure,structure,created,200,23424,no,,1,openai
+openai|nova|0.85||stem,stem,created,200,26112,no,,1,openai
+openai|nova|0.85||king,king,created,200,18816,no,,1,openai
+openai|nova|0.85||cheap,cheap,created,200,24192,no,,1,openai
+openai|nova|0.85||protection,protection,created,200,28032,no,,1,openai
+openai|nova|0.85||priceless,priceless,created,200,24192,no,,1,openai
+openai|nova|0.85||daily routine,daily routine,created,200,42240,no,,1,openai
+openai|nova|0.85||transportation,transportation,created,200,28032,no,,1,openai
+openai|nova|0.85||historian,historian,created,200,23424,no,,1,openai
+openai|nova|0.85||queue,queue,created,200,24192,no,,1,openai
+openai|nova|0.85||suffer from,suffer from,created,200,28032,no,,1,openai
+openai|nova|0.85||flute,flute,created,200,35328,no,,1,openai
+openai|nova|0.85||artificial intelligence,artificial intelligence,created,200,44928,no,,1,openai
+openai|nova|0.85||refrigerator,refrigerator,created,200,32640,no,,1,openai
+openai|nova|0.85||security guard,security guard,created,200,38400,no,,1,openai
+openai|nova|0.85||include,include,created,200,25344,no,,1,openai
+openai|nova|0.85||dream of,dream of,created,200,37632,no,,1,openai
+openai|nova|0.85||frog,frog,created,200,28032,no,,1,openai
+openai|nova|0.85||sink or swim,sink or swim,created,200,34560,no,,1,openai
+openai|nova|0.85||help sb with,help sb with,created,200,29952,no,,1,openai
+openai|nova|0.85||keyhole,keyhole,created,200,43008,no,,1,openai
+openai|nova|0.85||well-used,well-used,created,200,29952,no,,1,openai
+openai|nova|0.85||naughty,naughty,created,200,19584,no,,1,openai
+openai|nova|0.85||upcycle,upcycle,created,200,21504,no,,1,openai
+openai|nova|0.85||rainbow,rainbow,created,200,48768,no,,1,openai
+openai|nova|0.85||as soon as,as soon as,created,200,38400,no,,1,openai
+openai|nova|0.85||twice,twice,created,200,16896,no,,1,openai
+openai|nova|0.85||nothing but,nothing but,created,200,31872,no,,1,openai
+openai|nova|0.85||locker,locker,created,200,38400,no,,1,openai
+openai|nova|0.85||in future,in future,created,200,31872,no,,1,openai
+openai|nova|0.85||programme,programme,created,200,40320,no,,1,openai
+openai|nova|0.85||take notes,take notes,created,200,44160,no,,1,openai
+openai|nova|0.85||boiling,boiling,created,200,22272,no,,1,openai
+openai|nova|0.85||blow out,blow out,created,200,18816,no,,1,openai
+openai|nova|0.85||sunbathe,sunbathe,created,200,36480,no,,1,openai
+openai|nova|0.85||audience,audience,created,200,26112,no,,1,openai
+openai|nova|0.85||nosebleed,nosebleed,created,200,22272,no,,1,openai
+openai|nova|0.85||German,German,created,200,25344,no,,1,openai
+openai|nova|0.85||take off,take off,created,200,39552,no,,1,openai
+openai|nova|0.85||pain,pain,created,200,22272,no,,1,openai
+openai|nova|0.85||information,information,created,200,44928,no,,1,openai
+openai|nova|0.85||backpack,backpack,created,200,28032,no,,1,openai
+openai|nova|0.85||even though,even though,created,200,18816,no,,1,openai
+openai|nova|0.85||emotional intelligence,emotional intelligence,created,200,48768,no,,1,openai
+openai|nova|0.85||resource,resource,created,200,42240,no,,1,openai
+openai|nova|0.85||reach for,reach for,created,200,27264,no,,1,openai
+openai|nova|0.85||ice-skate,ice-skate,created,200,22272,no,,1,openai
+openai|nova|0.85||unforgettable,unforgettable,created,200,29952,no,,1,openai
+openai|nova|0.85||worst,worst,created,200,18816,no,,1,openai
+openai|nova|0.85||from ... to ...,from ... to ...,created,200,40320,no,,1,openai
+openai|nova|0.85||open-minded,open-minded,created,200,37632,no,,1,openai
+openai|nova|0.85||start over,start over,created,200,31872,no,,1,openai
+openai|nova|0.85||Stonehenge,Stonehenge,created,200,26112,no,,1,openai
+openai|nova|0.85||bookstore,bookstore,created,200,21504,no,,1,openai
+openai|nova|0.85||draw to a close,draw to a close,created,200,36480,no,,1,openai
+openai|nova|0.85||death,death,created,200,29952,no,,1,openai
+openai|nova|0.85||pardon,pardon,created,200,25344,no,,1,openai
+openai|nova|0.85||catch,catch,created,200,25344,no,,1,openai
+openai|nova|0.85||ice hockey,ice hockey,created,200,39552,no,,1,openai
+openai|nova|0.85||go shopping,go shopping,created,200,28032,no,,1,openai
+openai|nova|0.85||believe in,believe in,created,200,27264,no,,1,openai
+openai|nova|0.85||think of,think of,created,200,51456,no,,1,openai
+openai|nova|0.85||touching,touching,created,200,28032,no,,1,openai
+openai|nova|0.85||sadness,sadness,created,200,53376,no,,1,openai
+openai|nova|0.85||tablespoon,tablespoon,created,200,33792,no,,1,openai
+openai|nova|0.85||background,background,created,200,30720,no,,1,openai
+openai|nova|0.85||play the guitar,play the guitar,created,200,29952,no,,1,openai
+openai|nova|0.85||wildlife,wildlife,created,200,49920,no,,1,openai
+openai|nova|0.85||disappointment,disappointment,created,200,32640,no,,1,openai
+openai|nova|0.85||steel,steel,created,200,27264,no,,1,openai
+openai|nova|0.85||ancestor,ancestor,created,200,22272,no,,1,openai
+openai|nova|0.85||tent,tent,created,200,23424,no,,1,openai
+openai|nova|0.85||jump the queue,jump the queue,created,200,48768,no,,1,openai
+openai|nova|0.85||rain or shine,rain or shine,created,200,36480,no,,1,openai
+openai|nova|0.85||come off,come off,created,200,42240,no,,1,openai
+openai|nova|0.85||borrow,borrow,created,200,20352,no,,1,openai
+openai|nova|0.85||fight against sb/sth,fight against sb/sth,created,200,53376,no,,1,openai
+openai|nova|0.85||further,further,created,200,44928,no,,1,openai
+openai|nova|0.85||text message,text message,created,200,31872,no,,1,openai
+"elevenlabs|el:lily|1||Is this blue schoolbag yours, Tom? No, mine is black. The blue one belongs to Peter.","Is this blue schoolbag yours, Tom? No, mine is black. The blue one belongs to Peter.",created,200,100800,no,,1,openai
+"elevenlabs|el:lily|1||Do you like playing basketball, Linda? No, I don't. It's difficult. I like playing tennis.","Do you like playing basketball, Linda? No, I don't. It's difficult. I like playing tennis.",created,200,108480,no,,1,openai
+"elevenlabs|el:lily|1||Who is the woman in the photo, Alice? She is my father's sister. Her name is Helen.","Who is the woman in the photo, Alice? She is my father's sister. Her name is Helen.",created,200,101280,no,,1,openai
+"elevenlabs|el:lily|1||Excuse me, Frank. Is this green eraser yours? No, it isn't. My eraser is yellow. Ask Grace, please.","Excuse me, Frank. Is this green eraser yours? No, it isn't. My eraser is yellow. Ask Grace, please.",created,200,116160,no,,1,openai
+"elevenlabs|el:lily|1||Good morning, Helen. Do you know where my keys are? Look, Bob! They are right there under your schoolbag.","Good morning, Helen. Do you know where my keys are? Look, Bob! They are right there under your schoolbag.",created,200,125760,no,,1,openai
+"elevenlabs|el:lily|1||What a nice cap, Eric! Is it new? Thanks! It's a birthday gift from my uncle. He bought it last week.","What a nice cap, Eric! Is it new? Thanks! It's a birthday gift from my uncle. He bought it last week.",created,200,120000,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Dale. Is your cousin's birthday in October? No. My sister's birthday is in October. My cousin's birthday is in December.","Hi, Dale. Is your cousin's birthday in October? No. My sister's birthday is in October. My cousin's birthday is in December.",created,200,151200,no,,1,openai
+"elevenlabs|el:lily|1||Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.","Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.",created,200,504960,no,,1,openai
+"elevenlabs|el:lily|1||When is your birthday, Tom? Is it in July? No, my birthday is on August 12th. July is my sister's birthday month.","When is your birthday, Tom? Is it in July? No, my birthday is on August 12th. July is my sister's birthday month.",created,200,143520,no,,1,openai
+"elevenlabs|el:lily|1||Your new watch looks very nice, Grace. Where did you get it? Thanks! It's a gift from my grandmother for the new school year.","Your new watch looks very nice, Grace. Where did you get it? Thanks! It's a gift from my grandmother for the new school year.",created,200,153600,no,,1,openai
+"elevenlabs|el:lily|1||Let's go to the school library to read some books, Peter. Good idea, but I have a soccer game now. How about we go there tomorrow?","Let's go to the school library to read some books, Peter. Good idea, but I have a soccer game now. How about we go there tomorrow?",created,200,160320,no,,1,openai
+"elevenlabs|el:lily|1||Let's go to the fruit store after school, Dale. Good idea. I want to buy some apples and bananas.","Let's go to the fruit store after school, Dale. Good idea. I want to buy some apples and bananas.",created,200,119040,no,,1,openai
+"elevenlabs|el:lily|1||Do you have any plans for Sunday morning, Grace? Yes, I always clean my room first, and then I play tennis with my cousin.","Do you have any plans for Sunday morning, Grace? Yes, I always clean my room first, and then I play tennis with my cousin.",created,200,150720,no,,1,openai
+"elevenlabs|el:lily|1||Your brother looks very cool, Jack. Is he a student in Grade 7? No, he is fourteen years old. He is a student in Grade 9.","Your brother looks very cool, Jack. Is he a student in Grade 7? No, he is fourteen years old. He is a student in Grade 9.",created,200,154560,no,,1,openai
+"elevenlabs|el:lily|1||Good morning, Alice! ... I am looking for my English book. I can't find it.","Good morning, Alice! ... I am looking for my English book. I can't find it.",created,200,89280,no,,1,openai
+"elevenlabs|el:lily|1||I am looking for my English book. ... No, it isn't on my desk.","I am looking for my English book. ... No, it isn't on my desk.",created,200,73920,no,,1,openai
+"elevenlabs|el:lily|1||Is that book under your chair? Oh, yes! ____ Thank you so much!","Is that book under your chair? Oh, yes! ____ Thank you so much!",created,200,75360,no,,1,openai
+elevenlabs|el:lily|1||Do you have time this afternoon? ____ That sounds great! I love tennis.,Do you have time this afternoon? ____ That sounds great! I love tennis.,created,200,85920,no,,1,openai
+"elevenlabs|el:lily|1||Let's meet at the school gate at 4:30 p.m. OK, ____! See you!","Let's meet at the school gate at 4:30 p.m. OK, ____! See you!",created,200,83040,no,,1,openai
+"elevenlabs|el:lily|1||Good afternoon, sir. Can I help you? Yes, please. ____ What color do you like?","Good afternoon, sir. Can I help you? Yes, please. ____ What color do you like?",created,200,90720,no,,1,openai
+"elevenlabs|el:lily|1||I like blue. ____ Yes, here is a blue one. It's very warm.","I like blue. ____ Yes, here is a blue one. It's very warm.",created,200,68640,no,,1,openai
+elevenlabs|el:lily|1||It looks nice. ____ It is 45 dollars.,It looks nice. ____ It is 45 dollars.,created,200,83328,no,,1,openai
+elevenlabs|el:lily|1||Green is also good. I like it. ____ Sure. Here is your sweater and the change.,Green is also good. I like it. ____ Sure. Here is your sweater and the change.,created,200,94560,no,,1,openai
+elevenlabs|el:lily|1||What's your favorite sport? ____ I think it is very fun.,What's your favorite sport? ____ I think it is very fun.,created,200,68160,no,,1,openai
+"elevenlabs|el:lily|1||Do you have a basketball? Yes, ____ I have two basketballs.","Do you have a basketball? Yes, ____ I have two basketballs.",created,200,72480,no,,1,openai
+elevenlabs|el:lily|1||Great! ____ this afternoon? That sounds good! But where shall we play?,Great! ____ this afternoon? That sounds good! But where shall we play?,created,200,84000,no,,1,openai
+elevenlabs|el:lily|1||My sister can play the guitar very well.,My sister can play the guitar very well.,created,200,54528,no,,1,openai
+elevenlabs|el:lily|1||Look! The children are swimming in the pool.,Look! The children are swimming in the pool.,created,200,54240,no,,1,openai
+"elevenlabs|el:lily|1||Don't eat in the classroom, please.","Don't eat in the classroom, please.",created,200,48000,no,,1,openai
+elevenlabs|el:lily|1||I saw some cute pandas at the zoo yesterday.,I saw some cute pandas at the zoo yesterday.,created,200,56160,no,,1,openai
+elevenlabs|el:lily|1||Go straight and turn left at the first crossing.,Go straight and turn left at the first crossing.,created,200,60480,no,,1,openai
+"elevenlabs|el:lily|1||What are you doing, Linda? I'm watching TV, dad. What about you? I'm cooking soup in the kitchen.","What are you doing, Linda? I'm watching TV, dad. What about you? I'm cooking soup in the kitchen.",created,200,115680,no,,1,openai
+"elevenlabs|el:lily|1||Can you play chess, Mary? No, I can't. But I can play basketball.","Can you play chess, Mary? No, I can't. But I can play basketball.",created,200,77280,no,,1,openai
+"elevenlabs|el:lily|1||Why do you like koalas, Jenny? Because they are very cute and interesting.","Why do you like koalas, Jenny? Because they are very cute and interesting.",created,200,88800,no,,1,openai
+"elevenlabs|el:lily|1||Where is the library, please? It's across from the bank, next to the supermarket.","Where is the library, please? It's across from the bank, next to the supermarket.",created,200,97920,no,,1,openai
+"elevenlabs|el:lily|1||How was your weekend, Alice? It was great! I visited my grandparents in the countryside.","How was your weekend, Alice? It was great! I visited my grandparents in the countryside.",created,200,107520,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.","Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.",created,200,459360,no,,1,openai
+elevenlabs|el:lily|1||Steve usually goes to school by bike.,Steve usually goes to school by bike.,created,200,49920,no,,1,openai
+elevenlabs|el:lily|1||It's raining heavily in Beijing right now.,It's raining heavily in Beijing right now.,created,200,53760,no,,1,openai
+elevenlabs|el:lily|1||My grandmother loves to feed the chickens on the farm.,My grandmother loves to feed the chickens on the farm.,created,200,69600,no,,1,openai
+elevenlabs|el:lily|1||Please listen to the teacher carefully in class.,Please listen to the teacher carefully in class.,created,200,61920,no,,1,openai
+elevenlabs|el:lily|1||They had a wonderful campfire party last night.,They had a wonderful campfire party last night.,created,200,59040,no,,1,openai
+"elevenlabs|el:lily|1||What time do you usually get up on school days, Susan? I usually get up at six thirty, but today I got up at seven o'clock.","What time do you usually get up on school days, Susan? I usually get up at six thirty, but today I got up at seven o'clock.",created,200,151200,no,,1,openai
+"elevenlabs|el:lily|1||Where are you going, Lily? I'm going to the commercial bank. I need to get some money.","Where are you going, Lily? I'm going to the commercial bank. I need to get some money.",created,200,102720,no,,1,openai
+"elevenlabs|el:lily|1||Is your mother watching TV in the living room? No, she isn't. She is washing the dishes in the kitchen.","Is your mother watching TV in the living room? No, she isn't. She is washing the dishes in the kitchen.",created,200,127680,no,,1,openai
+"elevenlabs|el:lily|1||Did you see any lions at the zoo, Amy? No, I didn't. But I saw some scary tigers.","Did you see any lions at the zoo, Amy? No, I didn't. But I saw some scary tigers.",created,200,98400,no,,1,openai
+"elevenlabs|el:lily|1||How is the weather in Toronto today, Mary? It's very windy and cold.","How is the weather in Toronto today, Mary? It's very windy and cold.",created,200,84000,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.","Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.",created,200,558240,no,,1,openai
+elevenlabs|el:lily|1||My uncle is tall and he has short curly hair.,My uncle is tall and he has short curly hair.,created,200,58080,no,,1,openai
+"elevenlabs|el:lily|1||I'd like a large bowl of beef soup, please.","I'd like a large bowl of beef soup, please.",created,200,52320,no,,1,openai
+elevenlabs|el:lily|1||It's cloudy and cool in London today.,It's cloudy and cool in London today.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|1||They went to the beach and played volleyball last Saturday.,They went to the beach and played volleyball last Saturday.,created,200,75840,no,,1,openai
+elevenlabs|el:lily|1||You can see a big supermarket next to the post office.,You can see a big supermarket next to the post office.,created,200,69120,no,,1,openai
+"elevenlabs|el:lily|1||What would you like to eat, Tina? I'd like some mutton and cabbage noodles.","What would you like to eat, Tina? I'd like some mutton and cabbage noodles.",created,200,89760,no,,1,openai
+"elevenlabs|el:lily|1||Who is that girl over there, Anna? Oh, that's my new classmate, Lucy. She is of medium height and wears glasses.","Who is that girl over there, Anna? Oh, that's my new classmate, Lucy. She is of medium height and wears glasses.",created,200,135360,no,,1,openai
+"elevenlabs|el:lily|1||Where did you go last weekend, Lily? I went to the countryside with my uncle. We went fishing by the river.","Where did you go last weekend, Lily? I went to the countryside with my uncle. We went fishing by the river.",created,200,130560,no,,1,openai
+"elevenlabs|el:lily|1||Excuse me, is there a pay phone near here? Yes, walk down this street and turn right. It's behind the hotel.","Excuse me, is there a pay phone near here? Yes, walk down this street and turn right. It's behind the hotel.",created,200,132000,no,,1,openai
+"elevenlabs|el:lily|1||Why do you like elephants, Sarah? Because they are very smart and they can help people carry things.","Why do you like elephants, Sarah? Because they are very smart and they can help people carry things.",created,200,120960,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!","Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!",created,200,564000,no,,1,openai
+elevenlabs|el:lily|1||Look! The girl is taking photos of the flowers.,Look! The girl is taking photos of the flowers.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|1||I'd like a large pizza with onions and cheese.,I'd like a large pizza with onions and cheese.,created,200,58080,no,,1,openai
+elevenlabs|el:lily|1||It's snowing heavily in Harbin today.,It's snowing heavily in Harbin today.,created,200,54528,no,,1,openai
+elevenlabs|el:lily|1||The boy fell off his bike and hurt his leg yesterday.,The boy fell off his bike and hurt his leg yesterday.,created,200,68640,no,,1,openai
+elevenlabs|el:lily|1||Go along this street and the library is across from the post office.,Go along this street and the library is across from the post office.,created,200,86400,no,,1,openai
+"elevenlabs|el:lily|1||What would you like to order, Lily? I'd like a medium bowl of beef and tomato noodles, please.","What would you like to order, Lily? I'd like a medium bowl of beef and tomato noodles, please.",created,200,115680,no,,1,openai
+"elevenlabs|el:lily|1||Who is that tall boy with short curly hair, Susan? Oh, that's my cousin, David. He is a very smart student.","Who is that tall boy with short curly hair, Susan? Oh, that's my cousin, David. He is a very smart student.",created,200,129120,no,,1,openai
+"elevenlabs|el:lily|1||Did you go to the beach on your vacation, Jane? No, I didn't. I visited my grandparents on their farm and fed the sheep.","Did you go to the beach on your vacation, Jane? No, I didn't. I visited my grandparents on their farm and fed the sheep.",created,200,146880,no,,1,openai
+"elevenlabs|el:lily|1||Excuse me, how can I get to the police station? Just go straight and turn left at the first crossing. It's next to the hotel.","Excuse me, how can I get to the police station? Just go straight and turn left at the first crossing. It's next to the hotel.",created,200,155040,no,,1,openai
+"elevenlabs|el:lily|1||Why do you think lions are scary, Mary? Because they have sharp teeth and run very fast.","Why do you think lions are scary, Mary? Because they have sharp teeth and run very fast.",created,200,108960,no,,1,openai
+"elevenlabs|el:lily|1||Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!","Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!",created,200,564480,no,,1,openai
+elevenlabs|el:lily|1||The kids are making a snowman outside because it's snowing.,The kids are making a snowman outside because it's snowing.,created,200,74880,no,,1,openai
+elevenlabs|el:lily|1||I went to the farm and milked a cow last weekend.,I went to the farm and milked a cow last weekend.,created,200,62400,no,,1,openai
+"elevenlabs|el:lily|1||Turn left at the first crossing, and you will see the post office.","Turn left at the first crossing, and you will see the post office.",created,200,82560,no,,1,openai
+elevenlabs|el:lily|1||I'd like a large bowl of tomato and egg soup.,I'd like a large bowl of tomato and egg soup.,created,200,57600,no,,1,openai
+elevenlabs|el:lily|1||My brother is tall and he has short straight hair.,My brother is tall and he has short straight hair.,created,200,63840,no,,1,openai
+"elevenlabs|el:lily|1||What would you like to eat, Grace? I'd like a small bowl of beef noodles, please.","What would you like to eat, Grace? I'd like a small bowl of beef noodles, please.",created,200,97920,no,,1,openai
+"elevenlabs|el:lily|1||Where is your sister, Helen? Is she watching TV? No, she is practicing the guitar in her bedroom.","Where is your sister, Helen? Is she watching TV? No, she is practicing the guitar in her bedroom.",created,200,116640,no,,1,openai
+"elevenlabs|el:lily|1||Did you see any pandas at the zoo yesterday, Sally? No, I didn't. But I saw some clever monkeys.","Did you see any pandas at the zoo yesterday, Sally? No, I didn't. But I saw some clever monkeys.",created,200,115200,no,,1,openai
+"elevenlabs|el:lily|1||Excuse me, is there a hospital near here? Yes, go along this street. It's next to the city park, across from the bank.","Excuse me, is there a hospital near here? Yes, go along this street. It's next to the city park, across from the bank.",created,200,144000,no,,1,openai
+"elevenlabs|el:lily|1||How was your school trip to the history museum, Amy? It was boring. It was too crowded and we couldn't see anything.","How was your school trip to the history museum, Amy? It was boring. It was too crowded and we couldn't see anything.",created,200,144480,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!","Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!",created,200,568800,no,,1,openai
+elevenlabs|el:lily|1||The young man has a long beard and wears a black hat.,The young man has a long beard and wears a black hat.,created,200,66720,no,,1,openai
+"elevenlabs|el:lily|1||I'd like a medium order of dumplings with cabbage and pork, please.","I'd like a medium order of dumplings with cabbage and pork, please.",created,200,83040,no,,1,openai
+"elevenlabs|el:lily|1||It's a sunny and hot day, so many people are buying ice-cream.","It's a sunny and hot day, so many people are buying ice-cream.",created,200,77280,no,,1,openai
+elevenlabs|el:lily|1||We visited an old history museum and saw some cool things yesterday.,We visited an old history museum and saw some cool things yesterday.,created,200,86880,no,,1,openai
+elevenlabs|el:lily|1||The hospital is between the library and the big supermarket.,The hospital is between the library and the big supermarket.,created,200,76320,no,,1,openai
+"elevenlabs|el:lily|1||What would you like to drink, Sarah? I'd like a large glass of orange juice. What about you? Just a cup of green tea for me.","What would you like to drink, Sarah? I'd like a large glass of orange juice. What about you? Just a cup of green tea for me.",created,200,150720,no,,1,openai
+"elevenlabs|el:lily|1||Is that your brother over there, Mary? The one with short straight hair? No, my brother is the tall boy with short curly hair and big eyes.","Is that your brother over there, Mary? The one with short straight hair? No, my brother is the tall boy with short curly hair and big eyes.",created,200,171360,no,,1,openai
+"elevenlabs|el:lily|1||Did you stay at home and do your homework last night, Linda? No, my parents took me to a theater. We watched an interesting scary movie.","Did you stay at home and do your homework last night, Linda? No, my parents took me to a theater. We watched an interesting scary movie.",created,200,168000,no,,1,openai
+"elevenlabs|el:lily|1||Excuse me, is there a post office near here? Yes. Walk down this street and turn right. It's behind the bank.","Excuse me, is there a post office near here? Yes. Walk down this street and turn right. It's behind the bank.",created,200,133920,no,,1,openai
+"elevenlabs|el:lily|1||Why do you like monkeys so much, Tony? Because they are very clever and their actions make people laugh.","Why do you like monkeys so much, Tony? Because they are very clever and their actions make people laugh.",created,200,129120,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.","Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.",created,200,572160,no,,1,openai
+elevenlabs|el:lily|1||Tony usually gets up at six fifteen on school days.,Tony usually gets up at six fifteen on school days.,created,200,65760,no,,1,openai
+elevenlabs|el:lily|1||Miss Green is a beautiful woman with long straight hair.,Miss Green is a beautiful woman with long straight hair.,created,200,72000,no,,1,openai
+elevenlabs|el:lily|1||My family ordered a large pizza with beef and tomatoes last night.,My family ordered a large pizza with beef and tomatoes last night.,created,200,83040,no,,1,openai
+elevenlabs|el:lily|1||Look! Some people are flying kites in the park because it's windy.,Look! Some people are flying kites in the park because it's windy.,created,200,82080,no,,1,openai
+elevenlabs|el:lily|1||We went to the beach and collected beautiful shells on vacation.,We went to the beach and collected beautiful shells on vacation.,created,200,81120,no,,1,openai
+"elevenlabs|el:lily|1||What time do you usually eat dinner, Lily? I usually have dinner at seven o'clock, but on Fridays I have it at seven thirty.","What time do you usually eat dinner, Lily? I usually have dinner at seven o'clock, but on Fridays I have it at seven thirty.",created,200,152160,no,,1,openai
+"elevenlabs|el:lily|1||Who is your best friend, Susan? The boy wearing glasses? No, my best friend is Jack. He is heavy and has short curly hair.","Who is your best friend, Susan? The boy wearing glasses? No, my best friend is Jack. He is heavy and has short curly hair.",created,200,148320,no,,1,openai
+"elevenlabs|el:lily|1||What would you like to eat, Grace? I'd like a medium bowl of chicken and cabbage noodles, please.","What would you like to eat, Grace? I'd like a medium bowl of chicken and cabbage noodles, please.",created,200,117600,no,,1,openai
+"elevenlabs|el:lily|1||Did you go to the zoo yesterday, Tom? No, I didn't. It rained all day, so I stayed at home and listened to music.","Did you go to the zoo yesterday, Tom? No, I didn't. It rained all day, so I stayed at home and listened to music.",created,200,137280,no,,1,openai
+"elevenlabs|el:lily|1||Excuse me, where is the science museum? Go straight along this street and turn left. It's across from the library.","Excuse me, where is the science museum? Go straight along this street and turn left. It's across from the library.",created,200,141600,no,,1,openai
+"elevenlabs|el:lily|1||Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.","Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.",created,200,659040,no,,1,openai
+"elevenlabs|el:lily|1||Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.","Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.",created,200,483360,no,,1,openai
+"elevenlabs|el:lily|1||Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.","Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.",created,200,633600,no,,1,openai
+"elevenlabs|el:lily|1||Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!","Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!",created,200,517920,no,,1,openai
+"elevenlabs|el:lily|1||Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!","Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!",created,200,527040,no,,1,openai
+"elevenlabs|el:lily|1||Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!","Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!",created,200,633600,no,,1,openai
+"elevenlabs|el:lily|1||Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!","Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!",created,200,549600,no,,1,openai
+"elevenlabs|el:lily|1||Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!","Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!",created,200,562080,no,,1,openai

@@ -7,6 +7,12 @@
 
 > 本轮**未生成、未删除任何音频对象，未改任何播放代码**（唯一的代码改动是上一提交 `965a6c1d` 的默写关预热修复）。
 
+> **⚠️ 数字时效**：本文是**生成前**的快照（覆盖 35.7%）。
+> 随后 P0+P1 已生成 2277 条，最新覆盖为 **7545/14770 = 51.1%**，
+> 剩余 7225 条（P2/P3/P4）等成本确认 —— 见 `docs/audio/JUNIOR_3_generation.md`。
+> `data/audio-audit/junior_missing.csv` 同样是生成前快照；**还没生成的部分**以
+> `junior_p2_words.csv` / `junior_p3_chunks.csv` / `junior_p4_rest.csv` 三份子清单为准。
+
 ---
 
 ## 1. 总量

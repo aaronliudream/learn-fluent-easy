@@ -2,6 +2,20 @@ import { findSemester, findUnit, getGradeCourse, isUnitListed } from "./courseDa
 import { getCompletableStageIndices } from "./stageCompletable";
 import { readUnitState } from "./storage";
 import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
+/**
+ * ★口径★ 小学线用「各单元百分比取平均」,且**单关未完成也能贡献 0–99 的部分进度**
+ * (见 getStagePercent 读 stageProgress)。
+ * **初中/高中线不同** —— 它们用「关卡计数」,单关只有 0 或 100,学期/册百分比是
+ * Σ完成关数 / Σ总关数。所以同样显示 "30%",三条线含义不一样。
+ * 这是**已知且刻意保留**的差异,详见 docs/notes/进度口径对照表.md。
+ * ⚠️ 看到三条线数字对不上时,先读那份文档再动手,别当 bug 顺手"修"。
+ *
+ * ★筛选口径★ 本线用 isUnitListed(= available && published !== false),
+ * 比另两线的 available 更严格 —— 这是对的,不要"对齐"回去。
+ *
+ * ★与掌握度无关★ 本文件只读 completedStages / stageProgress,不读任何 mastery 表。
+ */
+
 export function getStagePercent(us: UnitState, stageIdx: number): number {
   if (us.completedStages.includes(stageIdx)) return 100;
   const saved = us.stageProgress?.[stageIdx];

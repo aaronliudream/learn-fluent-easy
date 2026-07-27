@@ -8,8 +8,17 @@ import { ArrowLeft, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { fetchUnits, fetchCompletedCounts, type AmericanLesson } from "@/lib/american/data";
+import { AMERICAN_STAGES } from "@/lib/american/stages";
 
-const STAGES_PER_LESSON = 10;
+/**
+ * 完成环的分母 = 关卡结构的实际长度,不再硬编码 10。
+ * 原先写死 `const STAGES_PER_LESSON = 10`,与 AMERICAN_STAGES 形成两个真相来源:
+ * 哪天关卡结构增删一关,环就会静默算错(且不报错、不崩溃 —— 只是数字不对)。
+ * ⚠️ 美语关卡是**全局固定结构**(AMERICAN_STAGES),不是 per-lesson 数据,
+ *    所以本次改动实测数值影响为 0(每课都恰好 10 关),纯属消除重复真相来源。
+ * 口径说明见 docs/notes/进度口径对照表.md。
+ */
+const STAGES_PER_LESSON = AMERICAN_STAGES.length;
 
 export default function AmericanUnit() {
   const { unit, bookNo: bookNoParam } = useParams<{ unit: string; bookNo: string }>();

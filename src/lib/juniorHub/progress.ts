@@ -3,6 +3,17 @@ import { getUnitState } from "./storage";
 import type { JuniorPublisher } from "./publisher";
 import { AI_TEST_PROGRESS_STEP, type JuniorHubGrade, type JuniorHubPersist } from "./types";
 
+/**
+ * ★口径★ 初中线用「关卡计数」:百分比 = 已完成关数 / 总关数,单关只有 0 或 100,没有中间态。
+ * 高中线(gaokaoHub/progress.ts)同口径;**小学线(primaryHub/progress.ts)不同** —— 它用
+ * 「各单元百分比取平均」,且单关未完成也能贡献 0–99 的部分进度。
+ * 三条线口径不一致是**已知且刻意保留**的,详见 docs/notes/进度口径对照表.md。
+ * ⚠️ 看到三条线数字对不上时,先读那份文档再动手,别当 bug 顺手"修"。
+ *
+ * ★与掌握度无关★ 本文件只读 completedStages(本地 + 云同步的关卡完成计数),
+ * 不读任何 mastery 表。进度高 ≠ 学会了(阅读/完形/听力关做过 ≥1 篇就打 ✓,答错也算)。
+ */
+
 export function getUnitProgress(state: JuniorHubPersist, unitId: string) {
   const unit = findUnit(unitId);
   if (!unit || !unit.stages.length) return { percent: 0, completed: 0, total: 0, ratio: 0 };
@@ -21,7 +32,11 @@ export function getSemesterProgress(state: JuniorHubPersist, semesterId: string)
   let totalStages = 0;
   let completedStages = 0;
   let completedUnits = 0;
-  semester.units.forEach((u) => {
+  // 未开放单元(available:false)不进分母 —— 与 gaokaoHub/progress.ts 对齐。
+  // 否则"整理中"的占位单元会把分母撑大,学生进度被系统性稀释。
+  // (2026-07-26 实测:当时六册数据全部 available:true,故此改动数值影响为 0;
+  //  但按既定流程"新整册先 available:false 整理中",下一册进来时就会生效。)
+  semester.units.filter((u) => u.available).forEach((u) => {
     const p = getUnitProgress(state, u.id);
     totalStages += p.total;
     completedStages += p.completed;
@@ -41,7 +56,8 @@ export function getGradeProgress(state: JuniorHubPersist, grade: JuniorHubGrade,
   let totalStages = 0;
   let completedStages = 0;
   Object.values(course.semesters).forEach((sem) => {
-    sem.units.forEach((u) => {
+    // 同 getSemesterProgress:未开放单元不进分母,与 gaokaoHub 对齐。
+    sem.units.filter((u) => u.available).forEach((u) => {
       const p = getUnitProgress(state, u.id);
       totalStages += p.total;
       completedStages += p.completed;

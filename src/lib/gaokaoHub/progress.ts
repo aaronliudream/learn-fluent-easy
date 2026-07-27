@@ -2,6 +2,16 @@ import { findSemester, findUnit, getGradeCourse } from "./courseData";
 import { getUnitState } from "./storage";
 import { AI_TEST_PROGRESS_STEP, type GaokaoHubGrade, type GaokaoHubPersist } from "./types";
 
+/**
+ * ★口径★ 高中线用「关卡计数」:百分比 = 已完成关数 / 总关数,单关只有 0 或 100,没有中间态。
+ * 初中线(juniorHub/progress.ts)同口径;**小学线(primaryHub/progress.ts)不同** —— 它用
+ * 「各单元百分比取平均」,且单关未完成也能贡献 0–99 的部分进度。
+ * 三条线口径不一致是**已知且刻意保留**的,详见 docs/notes/进度口径对照表.md。
+ * ⚠️ 看到三条线数字对不上时,先读那份文档再动手,别当 bug 顺手"修"。
+ *
+ * ★与掌握度无关★ 本文件只读 completedStages(本地 + 云同步的关卡完成计数),不读任何 mastery 表。
+ */
+
 export function getUnitProgress(state: GaokaoHubPersist, unitId: string) {
   const unit = findUnit(unitId);
   if (!unit || !unit.stages.length) return { percent: 0, completed: 0, total: 0, ratio: 0 };

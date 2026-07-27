@@ -52,7 +52,9 @@ jobs:
         env:
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
-        run: node scripts/audio/audit-audio.mjs --section junior --threshold 0
+        # 并发压到 5：junior 要探 1.4 万条，CI 出口 IP 上并发 8 会撞 CDN 限流。
+        # 限流现在不会再被误报成缺口了（前置④ 会把整轮判作废），但作废也要重跑，不如一次探明白。
+        run: node scripts/audio/audit-audio.mjs --section junior --threshold 0 --concurrency 5
 
       - name: 上传结构化结果
         if: always()

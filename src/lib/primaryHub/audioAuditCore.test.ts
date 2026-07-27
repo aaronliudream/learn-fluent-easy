@@ -86,6 +86,48 @@ describe('CSV 解析对 CRLF 免疫', () => {
   });
 });
 
+describe('探测三态：unknown 不许当成缺失（前置④）', () => {
+  const it2 = (t: string) => ({
+    cache_key: `k:${t}`, text: t, voice_id: 'el:lily', speed: 0.85,
+    cdn_url: `https://cdn.test/${t}.mp3`, storage_url: '', source_ref: 'x', record_id: t, field: 'f@fixed',
+  });
+
+  /**
+   * CI 上真踩过：并发探 1.4 万条撞 CDN 限流，19 条**实际存在**的对象被报成缺失
+   * （本地逐条复验 19/19 都是 200）。根因是探测器把"重试用完仍没答案"压成了 exists:false。
+   * 把不确定说成结论，和假绿是同一类错误，只是方向相反。
+   */
+  it('限流导致的 unknown 归入 unknown，不进 missing', async () => {
+    const items = [it2('a'), it2('b'), it2('c')];
+    const probed = new Map([
+      ['https://cdn.test/a.mp3', { status: 200, bytes: 30000, exists: true, missing: false, unknown: false }],
+      ['https://cdn.test/b.mp3', { status: 404, bytes: 0, exists: false, missing: true, unknown: false }],
+      // 429 重试耗尽 → status 0
+      ['https://cdn.test/c.mp3', { status: 0, bytes: 0, exists: false, missing: false, unknown: true }],
+    ]);
+    const { missing, unknown } = await auditCore.checkMissing(items, async () => probed);
+    expect(missing.map((m: { text: string }) => m.text)).toEqual(['b']);
+    expect(unknown.map((m: { text: string }) => m.text)).toEqual(['c']);
+  });
+
+  it('有 unknown → 探测确定性判定不通过（整轮作废，而不是报缺口）', () => {
+    expect(auditCore.assertProbeConclusive([], 100).passed).toBe(true);
+    const v = auditCore.assertProbeConclusive([{ text: 'x' }], 100);
+    expect(v.passed).toBe(false);
+    expect(v.reason).toContain('不可信');
+  });
+
+  it('旧探测器（只回 exists）仍按原语义工作，不静默把一切算成 unknown', async () => {
+    const probed = new Map([
+      ['https://cdn.test/a.mp3', { status: 200, bytes: 30000, exists: true }],
+      ['https://cdn.test/b.mp3', { status: 404, bytes: 0, exists: false }],
+    ]);
+    const { missing, unknown } = await auditCore.checkMissing([it2('a'), it2('b')], async () => probed);
+    expect(missing.map((m: { text: string }) => m.text)).toEqual(['b']);
+    expect(unknown).toHaveLength(0);
+  });
+});
+
 describe('金丝雀能识破空转的检查器', () => {
   const item = (t: string) => ({
     cache_key: `elevenlabs|el:lily|0.85||${t}`, text: t, voice_id: 'el:lily', speed: 0.85,

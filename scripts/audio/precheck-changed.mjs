@@ -13,7 +13,7 @@
  * 不需要任何凭据：只对公开 CDN 发 HEAD。
  * 抽取逻辑复用 extract.mjs，金丝雀复用 audit-core.mjs —— 不另写一份。
  *
- * 退出码：0 = 无缺口/无内容改动；1 = 有缺口；2 = 配置错误；3 = 金丝雀失败（本轮作废）。
+ * 退出码：0 = 无缺口/无内容改动；1 = 有缺口；2 = 配置错误；3 = 本轮作废（金丝雀失败，或探测撞限流没拿到确定答案）。
  *
  * ⚠️ 结构说明：所有分支都必须走 `return <code>`，由末尾统一 finish()。
  * 不要在中途调 process.exit()：fetch 之后立刻硬退会在 Windows 触发 libuv 断言
@@ -28,7 +28,7 @@ import {
   REPO, ConfigError, loadConfig, checkCoverage, extractItems, probeExistence,
   cacheKeyOf, cdnUrlOf, tableSourcesOf,
 } from './extract.mjs';
-import { makeCanaryItem, checkMissing, assertCanary } from './audit-core.mjs';
+import { makeCanaryItem, checkMissing, assertCanary, assertProbeConclusive } from './audit-core.mjs';
 import { toCsv } from './csv.mjs';
 
 const argv = process.argv.slice(2);
@@ -119,7 +119,17 @@ async function main() {
   // ---------------- 金丝雀 + 探测 ----------------
   const canary = makeCanaryItem(cfg.voiceId, cdnUrlOf, cacheKeyOf);
   console.log(`\n待检查 ${items.length} 个 (文本 × 档位) 对象（+1 金丝雀）…`);
-  const { missing } = await checkMissing([...items, canary], (urls) => probeExistence(urls, { concurrency: CONC }));
+  const { missing, unknown } = await checkMissing([...items, canary], (urls) => probeExistence(urls, { concurrency: CONC }));
+
+  // 探测确定性：有 unknown 就说明这轮没探明白（CDN 限流最常见）。
+  // 那时**不能**把它们算成缺口去卡作者——那是冤枉人。整轮作废、让 CI 重跑。
+  const conclusive = assertProbeConclusive(unknown, items.length + 1);
+  if (!conclusive.passed) {
+    console.error(`
+✗ 探测没拿到确定答案 → 本轮作废（不判缺口、也不判通过）：${conclusive.reason}`);
+    for (const u of unknown.slice(0, 10)) console.error(`   ? ${JSON.stringify(u.text)} ${u.cdn_url}`);
+    return 3;
+  }
 
   const canaryVerdict = assertCanary(missing, canary);
   if (!canaryVerdict.passed) {

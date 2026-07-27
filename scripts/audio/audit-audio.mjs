@@ -10,7 +10,7 @@
  * 因此可以放进 CI 定时跑（见 docs/audio/AUDIO_PIPELINE.md 的「巡检」章节）。
  *
  * 退出码：
- *   0 = 三条前置断言通过且缺失数 ≤ 阈值
+ *   0 = 四条前置断言通过且缺失数 ≤ 阈值
  *   1 = 前置通过但缺失超阈值（真实缺口）
  *   3 = **前置断言未通过 → 本轮结论作废**（不是"全绿"，也不是普通失败，单独一个码便于告警区分）
  *   2 = 配置/覆盖率错误
@@ -25,7 +25,7 @@ import {
   REPO, ConfigError, loadConfig, checkCoverage, extractItems, probeExistence,
   cacheKeyOf, cdnUrlOf,
 } from './extract.mjs';
-import { makeCanaryItem, checkMissing, assertCanary, assertNoFake200, reviewDeclarations } from './audit-core.mjs';
+import { makeCanaryItem, checkMissing, assertCanary, assertNoFake200, assertProbeConclusive, reviewDeclarations } from './audit-core.mjs';
 
 const argv = process.argv.slice(2);
 const arg = (f, d) => { const i = argv.lastIndexOf(f); return i >= 0 && argv[i + 1] ? argv[i + 1] : d; };
@@ -106,15 +106,24 @@ async function main() {
   const canary = makeCanaryItem(cfg.voiceId, cdnUrlOf, cacheKeyOf);
   console.log(`可达对象 ${items.length} 个（+1 金丝雀），开始探测…`);
 
-  const { missing } = await checkMissing([...items, canary], (urls) =>
+  const { missing, unknown } = await checkMissing([...items, canary], (urls) =>
     probeExistence(urls, { concurrency: CONC, onProgress: (d, t) => console.log(`  探测 ${d}/${t}`) }));
+
+  // 前置④：探测确定性。有 unknown（限流/抖动/超时耗尽重试）就说明这轮没探明白，
+  // 缺失统计不可信 —— 与假200/金丝雀同级作废，而不是把它们报成缺口。
+  const conclusive = assertProbeConclusive(unknown, items.length + 1);
+  report.preflight.conclusive = conclusive;
+  console.log(`前置④ 探测确定性：${conclusive.passed ? '✅' : '❌'} ${conclusive.reason}`);
+  if (!conclusive.passed) {
+    report.preflight.unknownSample = unknown.slice(0, 20).map((u) => ({ text: u.text, cdn_url: u.cdn_url }));
+  }
 
   const canaryVerdict = assertCanary(missing, canary);
   report.preflight.canary = { ...canaryVerdict, cacheKey: canary.cache_key };
   console.log(`前置② 金丝雀：${canaryVerdict.passed ? '✅' : '❌'} ${canaryVerdict.reason}`);
 
   // ---------------- 前置未过 → 整轮作废 ----------------
-  const preflightOk = fake200.passed && canaryVerdict.passed && report.preflight.sentinel.passed;
+  const preflightOk = fake200.passed && canaryVerdict.passed && report.preflight.sentinel.passed && conclusive.passed;
   if (!preflightOk) {
     report.verdict = 'invalid:preflight';
     report.totals = { reachable: items.length, note: '前置断言未通过，缺失统计不可信，已丢弃' };
@@ -122,7 +131,8 @@ async function main() {
   `\n✗ 前置断言未通过 → **本轮巡检作废**，不输出任何"全绿"结论。
      假200探针：${fake200.passed ? 'ok' : fake200.reason}
      金丝雀：${canaryVerdict.passed ? 'ok' : canaryVerdict.reason}
-     反向哨兵：${report.preflight.sentinel.passed ? 'ok' : report.preflight.sentinel.reason}`);
+     反向哨兵：${report.preflight.sentinel.passed ? 'ok' : report.preflight.sentinel.reason}
+     探测确定性：${conclusive.passed ? 'ok' : conclusive.reason}`);
   }
 
   // ---------------- 主体统计 ----------------
@@ -182,7 +192,7 @@ async function main() {
 
   const over = realMissing.length > THRESHOLD;
   report.verdict = over ? 'fail:missing-over-threshold' : 'pass';
-  console.log(over ? `\n❌ 缺失 ${realMissing.length} 超阈值 ${THRESHOLD}` : `\n✅ 通过（前置三条全过，缺失 ${realMissing.length} ≤ 阈值 ${THRESHOLD}）`);
+  console.log(over ? `\n❌ 缺失 ${realMissing.length} 超阈值 ${THRESHOLD}` : `\n✅ 通过（前置四条全过，缺失 ${realMissing.length} ≤ 阈值 ${THRESHOLD}）`);
   writeReport();
     return over ? 1 : 0;
 

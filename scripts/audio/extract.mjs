@@ -271,19 +271,21 @@ pep / fltrp / sufe 是高中的。只按 publisher 过滤会把高中行算进�
 }
 
 /** 并发 HEAD 探测；判定「存在」= 200 且 ≥ minBytes（默认 2KB，用来揪出空音频）。 */
-export async function probeExistence(urls, { concurrency = 8, minBytes = 2048, onProgress } = {}) {
+export async function probeExistence(urls, { concurrency = 8, minBytes = 2048, onProgress, attempts = 5 } = {}) {
   const result = new Map();
   const q = [...urls];
   let done = 0;
   const head = async (url) => {
-    for (let a = 0; a < 3; a++) {
+    for (let a = 0; a < attempts; a++) {
       try {
         const r = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(20000) });
+        // 只有这三个状态是**确定答案**：200=在、404/400=不在。
+        // 429/5xx/超时都不是答案，退避重试；重试用完仍没答案 → 记 unknown，绝不当成"不在"。
         if (r.status === 200 || r.status === 400 || r.status === 404) {
           return { status: r.status, bytes: Number(r.headers.get('content-length') || 0), ct: r.headers.get('content-type') || '' };
         }
       } catch { /* retry */ }
-      await new Promise((x) => setTimeout(x, 800 * (a + 1)));
+      await new Promise((x) => setTimeout(x, 800 * 2 ** a + Math.floor(Math.random() * 400)));
     }
     return { status: 0, bytes: 0, ct: '' };
   };
@@ -292,7 +294,20 @@ export async function probeExistence(urls, { concurrency = 8, minBytes = 2048, o
       const u = q.shift();
       if (!u) return;
       const h = await head(u);
-      result.set(u, { ...h, exists: h.status === 200 && h.bytes >= minBytes });
+      // 三态，别再压成两态：
+      //   exists  —— 确定在（200 且体积够）
+      //   missing —— 确定不在（404/400，或 200 但体积过小=空音频）
+      //   unknown —— 没拿到确定答案（限流/网关抖动/超时）
+      // 曾经把 unknown 压成 exists:false：CI 上并发探 1.4 万条撞到 CDN 限流，
+      // 19 条**实际存在**的对象被报成缺失（本地逐条复验 19/19 都是 200）。
+      // 把不确定说成结论，和假绿是同一类错误，只是方向相反。
+      const unknown = h.status === 0;
+      result.set(u, {
+        ...h,
+        unknown,
+        exists: h.status === 200 && h.bytes >= minBytes,
+        missing: !unknown && !(h.status === 200 && h.bytes >= minBytes),
+      });
       if (onProgress && ++done % 500 === 0) onProgress(done, urls.length);
     }
   }));

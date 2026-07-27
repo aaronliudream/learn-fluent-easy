@@ -23,6 +23,8 @@ type Mistake = {
   module: string;
   source_key: string;
   question: string;
+  /** 学生**当时做错**时选的那个字母(写入器冻结下来的),不是本次复习所选。 */
+  user_answer: string | null;
   correct_answer: string | null;
   explanation: string | null;
   snapshot: { options?: Record<string, unknown>; correct_answer?: unknown; questions?: unknown[] } | null;
@@ -30,6 +32,38 @@ type Mistake = {
 };
 
 type OptionPair = [string, string];
+
+/**
+ * 完形填空题干拆解:【第 N 空】前缀 + 整段带 ___N___ 占位的原文。
+ *
+ * ★为什么需要★
+ * 美语关7 的错题题干存的是**整段对话原文**(含 4~5 个空),写入器给它加了 `【第 N 空】` 前缀
+ * (americanMistake.ts 走 recordZoneMistake,stem 取的是 payload.context)。
+ * 卡片若原样输出,学生看到 5 个空却只有一组选项,**根本不知道考的是哪一个空**。
+ *
+ * 返回 blankNo=null 时表示解析不到(旧记录没有前缀 / 非完形题)→ 调用方原样渲染,不高亮、不报错。
+ */
+export function parseClozeStem(question: string): { blankNo: number | null; body: string } {
+  const m = /^【第\s*(\d+)\s*空】\s*\n?/.exec(question);
+  if (!m) return { blankNo: null, body: question };
+  return { blankNo: Number(m[1]), body: question.slice(m[0].length) };
+}
+
+/** 把原文按 `___N___` 切成片段;isBlank 的片段带上它的空号,供渲染层决定高亮谁。 */
+export type StemSeg = { text: string; blankNo: number | null };
+export function splitByBlanks(body: string): StemSeg[] {
+  const out: StemSeg[] = [];
+  const re = /_{2,}(\d+)_{2,}/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(body)) !== null) {
+    if (m.index > last) out.push({ text: body.slice(last, m.index), blankNo: null });
+    out.push({ text: m[0], blankNo: Number(m[1]) });
+    last = m.index + m[0].length;
+  }
+  if (last < body.length) out.push({ text: body.slice(last), blankNo: null });
+  return out;
+}
 
 function optionPairs(m: Mistake): OptionPair[] {
   const opts = m.snapshot?.options;
@@ -57,7 +91,7 @@ async function fetchDueRedoable(): Promise<Mistake[]> {
   const now = Date.now();
   const { data, error } = await supabase
     .from("user_mistakes")
-    .select("id,module,source_key,question,correct_answer,explanation,snapshot,next_review_at")
+    .select("id,module,source_key,question,user_answer,correct_answer,explanation,snapshot,next_review_at")
     .eq("is_resolved", false)
     .not("module", "in", "(listening,cloze,vocab,grammar,writing,phonics)")
     .lte("next_review_at", new Date(now).toISOString())
@@ -122,6 +156,14 @@ export function MistakeReviewGate() {
   const correctLetter = cur ? frozenCorrect(cur) : "";
   const revealed = picked != null;
   const hasNext = idx + 1 < items.length;
+  // 题干拆解:完形题取出【第 N 空】与带占位的原文;非完形/旧记录 blankNo=null,原样渲染。
+  const stem = useMemo(() => parseClozeStem(cur?.question ?? ""), [cur]);
+  const stemSegs = useMemo(
+    () => (stem.blankNo == null ? null : splitByBlanks(stem.body)),
+    [stem],
+  );
+  /** 学生当时选的字母(冻结值);为空说明写入器没记(老记录)。 */
+  const pastLetter = (cur?.user_answer ?? "").trim() || null;
   // 选完答案后把操作区滚进视口(手机上它常在选项下方屏外)。
   // ⚠️ 必须放在 `revealed` 声明**之后** —— 之前放在 useState 组后面,读到的是 TDZ 里的 `revealed`,
   // 每次渲染直接抛 ReferenceError;本组件挂在 App 全局,于是全站白屏(#242 事故)。
@@ -184,9 +226,35 @@ export function MistakeReviewGate() {
                 <T>做满 5 道错题就能继续或关闭。做对会帮你推进复习进度。</T>
               </p>
             )}
-            {/* 题干 */}
+            {/* 空号标题:完形题才有。**始终显示**,不随"藏答案"规则隐藏 ——
+                知道自己考的是第几空不构成答案泄露,那正是本次要解决的问题。 */}
+            {stem.blankNo != null && (
+              <div className="mb-2 inline-flex items-center rounded-lg bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-800 dark:bg-amber-500/20 dark:text-amber-300">
+                {`第 ${stem.blankNo} 空`}
+              </div>
+            )}
+            {/* 题干。完形题:整段原文完整保留(不截断),目标空高亮、其余空保持灰色可读的 ___N___。 */}
             <div className="mb-4 whitespace-pre-wrap text-sm font-medium leading-relaxed">
-              {cur.question || <span className="text-muted-foreground"><T>(此题无题干文本)</T></span>}
+              {!cur.question ? (
+                <span className="text-muted-foreground"><T>(此题无题干文本)</T></span>
+              ) : stemSegs ? (
+                stemSegs.map((seg, i) =>
+                  seg.blankNo == null ? (
+                    <span key={i}>{seg.text}</span>
+                  ) : seg.blankNo === stem.blankNo ? (
+                    <span
+                      key={i}
+                      className="rounded bg-amber-200 px-1 font-extrabold text-amber-900 dark:bg-amber-500/40 dark:text-amber-100"
+                    >
+                      {seg.text}
+                    </span>
+                  ) : (
+                    <span key={i} className="text-muted-foreground/60">{seg.text}</span>
+                  ),
+                )
+              ) : (
+                cur.question
+              )}
             </div>
             {/* 选项 */}
             <div className="space-y-2">
@@ -209,12 +277,35 @@ export function MistakeReviewGate() {
                   >
                     <span className="mt-0.5 font-bold text-muted-foreground">{letter}</span>
                     <span className="flex-1">{text}</span>
+                    {/* 「当时选了」只在揭晓后出现 —— 提前显示等于告诉学生"别选这个",四选一变三选一。 */}
+                    {revealed && pastLetter === letter && (
+                      <span className="mt-0.5 shrink-0 rounded-md bg-rose-100 px-1.5 py-0.5 text-[10px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
+                        <T>你当时选了</T>
+                      </span>
+                    )}
                     {revealed && isCorrect && <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" />}
                     {revealed && isPicked && !isCorrect && <XCircle className="mt-0.5 size-4 shrink-0 text-rose-600" />}
                   </button>
                 );
               })}
             </div>
+            {/* 答后汇总:本次所选 / 当时所选 / 正确答案 三者并列,避免"本次"与"当时"看混。 */}
+            {revealed && (
+              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 rounded-xl bg-muted/40 px-3 py-2 text-xs">
+                <span>
+                  <T>本次你选</T>{" "}
+                  <b className={cn(picked === correctLetter ? "text-emerald-600" : "text-rose-600")}>{picked}</b>
+                </span>
+                {pastLetter && (
+                  <span className="text-muted-foreground">
+                    <T>当时你选</T> <b className="text-rose-600">{pastLetter}</b>
+                  </span>
+                )}
+                <span>
+                  <T>正确答案</T> <b className="text-emerald-600">{correctLetter}</b>
+                </span>
+              </div>
+            )}
             {/* 解析 */}
             {revealed && cur.explanation && (
               <div className="mt-3 rounded-xl bg-muted/60 px-3 py-2.5 text-xs leading-relaxed text-muted-foreground">

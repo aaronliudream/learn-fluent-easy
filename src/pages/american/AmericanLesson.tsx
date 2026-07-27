@@ -51,6 +51,26 @@ export default function AmericanLesson() {
         <header className="mt-3 mb-5">
           <h1 className="text-xl font-bold text-slate-900">{lesson.title_en}</h1>
           <p className="mt-0.5 text-sm text-slate-400">{lesson.title_cn}{lesson.grammar_focus ? ` · ${lesson.grammar_focus}` : ""}</p>
+          {/* 课时级汇总:完成度与掌握度并列。只有完成度时,走完所有关就是 100%,
+              但那只代表「走过」——每关的琥珀环才是掌握,这里把它们汇总到一处对照。 */}
+          {(() => {
+            const stages = AMERICAN_STAGES.filter((s) => s.ready);
+            if (!stages.length) return null;
+            const doneCount = stages.filter((s) => prog[s.stage]?.done).length;
+            const fracSum = stages.reduce((a, s) => a + (prog[s.stage]?.masteredFrac ?? 0), 0);
+            const masteredPct = Math.round((fracSum / stages.length) * 100);
+            return (
+              <div className="mt-2 flex items-center gap-4 text-xs">
+                <span className="font-semibold text-emerald-600">
+                  <T>完成度</T> {Math.round((doneCount / stages.length) * 100)}%
+                  <span className="ml-1 text-slate-400">({doneCount}/{stages.length})</span>
+                </span>
+                <span className="font-semibold text-amber-600">
+                  <T>掌握度</T> {masteredPct}%
+                </span>
+              </div>
+            );
+          })()}
         </header>
 
         <div className="space-y-2.5">

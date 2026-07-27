@@ -1,10 +1,16 @@
 name: audio-audit
 
-# 小学音频巡检（Phase A 审计逻辑的固化版）。
+# 音频巡检（Phase A 审计逻辑的固化版）——小学 + 初中。
 #
-# 为什么能放进 CI：这个任务**不需要任何凭据**——只对公开 CDN
-# （audio.bigmooneducation.com）与生产站点发 HEAD，不碰 Supabase 密钥、不调 edge。
-# 需要凭据的是"生成"（audio:backfill 要 anon key 调 tts edge），那一步不在这里跑。
+# 覆盖 primary 与 junior 两个学段。
+# primary 全是 JSON 内容源，**不需要任何凭据**——只对公开 CDN 与生产站点发 HEAD。
+# junior 有表源（junior_vocab / junior_listening_exercises），要连库读内容，
+# 所以注入 VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY —— 用 repository
+# **variables**（这两个值随前端 bundle 公开，不是密钥），不用 secrets。
+# 仍然不需要写权限、不调 tts edge："生成"那一步（要 anon key 调 edge）不在这里跑。
+#
+# 这个 workflow 是**唯一**能发现"用 SQL 往 DB 加了内容却没生成音频"的地方——
+# PR 闸按文件 diff 触发，看不到 DB 改动。
 #
 # 退出码语义（脚本定义）：
 #   0 = 三条前置断言通过且缺失 ≤ 阈值
@@ -16,14 +22,15 @@ name: audio-audit
 on:
   workflow_dispatch:
   schedule:
-    # 每周一 02:00 UTC（北京时间 10:00）。私有仓库的 Actions 分钟数是计费的，
-    # 单轮约 3400 次 HEAD、并发 8，实测 4~6 分钟，按周跑约 25 分钟/月。
+    # 每周一 02:00 UTC（北京时间 10:00）。私有仓库的 Actions 分钟数是计费的。
+    # primary 约 3400 次 HEAD（实测 4~6 分钟）；junior 约 14800 次（本地实测约 20 分钟，
+    # CI 网络更快）。两段合计按周跑约 100~130 分钟/月。
     - cron: '0 2 * * 1'
 
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -35,9 +42,26 @@ jobs:
       - name: 音频巡检（primary）
         run: node scripts/audio/audit-audio.mjs --section primary --threshold 0
 
+      # junior 与 primary 有两点不同：
+      #   ① 它有**表源**（junior_vocab / junior_listening_exercises），所以要能连库
+      #      —— 那两个值随前端 bundle 公开，不是密钥，用 repository **variables** 而不是 secrets；
+      #   ② 它是**唯一**能发现"用 SQL 加了内容但没生成音频"的地方（PR 闸看不到 DB 改动）。
+      # threshold 0：junior 已经是 14770/14770，任何新增缺口都该当场判红，而不是攒着。
+      - name: 音频巡检（junior）
+        if: always()   # primary 红了也要跑 junior，一轮拿到两个学段的结论
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        # 并发压到 5：junior 要探 1.4 万条，CI 出口 IP 上并发 8 会撞 CDN 限流。
+        # 限流现在不会再被误报成缺口了（前置④ 会把整轮判作废），但作废也要重跑，不如一次探明白。
+        run: node scripts/audio/audit-audio.mjs --section junior --threshold 0 --concurrency 5
+
       - name: 上传结构化结果
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audio-audit-primary
-          path: data/audio-audit/audit_primary.json
+          name: audio-audit-results
+          path: |
+            data/audio-audit/audit_primary.json
+            data/audio-audit/audit_junior.json
+          if-no-files-found: ignore

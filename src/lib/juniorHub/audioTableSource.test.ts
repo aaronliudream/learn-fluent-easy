@@ -169,6 +169,53 @@ describe('映射表档位 === 代码常量（矩阵与 junior.json 不许各说�
   });
 });
 
+describe('CI 接入：凭据来源与 PR 闸的表源跳过', () => {
+  it('loadDbEnv 优先读进程环境变量（CI 里没有 .env）', async () => {
+    const { loadDbEnv } = await import('../../../scripts/audio/table-source.mjs');
+    vi.stubEnv('VITE_SUPABASE_URL', 'https://ci.example.co/');
+    vi.stubEnv('VITE_SUPABASE_PUBLISHABLE_KEY', 'sb_publishable_ci');
+    // 传一个不存在的目录：若还去读 .env 就会抛错，能读到就说明走的是 env
+    expect(loadDbEnv('/no/such/repo/root')).toEqual({ url: 'https://ci.example.co', key: 'sb_publishable_ci' });
+    vi.unstubAllEnvs();
+  });
+
+  /**
+   * PR 闸只按文件 diff 触发，而 DB 内容不产生文件改动（用 SQL 加词，任何 PR 都看不见）。
+   * 所以 precheck 必须能把表源整段跳过——否则改一个 junior JSON 就要探测整张表
+   * （约 1.2 万对象），还会用无关的 DB 缺口把这个 PR 判红。
+   * 跳过本身不许静默：调用方用 tableSourcesOf() 把跳过的源逐条打印。
+   */
+  it('extractItems skipTables=true 时不碰表源，且 tableSourcesOf 能列出被跳过的源', async () => {
+    const { extractItems, tableSourcesOf } = await import('../../../scripts/audio/extract.mjs');
+    const fetchMock = vi.fn();
+    vi.stubGlobal('fetch', fetchMock);
+    const cfg = readJunior();
+    const rows = await extractItems(cfg, { allFiles: [], allowEmptySources: true, skipTables: true });
+    expect(fetchMock, '跳过表源就不该发任何请求').not.toHaveBeenCalled();
+    expect([...rows.values()].some((r) => r.source_ref.startsWith('table:'))).toBe(false);
+    // 被跳过的东西必须能被列出来（否则调用方无法如实说明覆盖范围）
+    const skipped = tableSourcesOf(cfg);
+    expect(skipped.map((s) => s.table).sort()).toEqual(['junior_listening_exercises', 'junior_vocab', 'junior_vocab']);
+    vi.unstubAllGlobals();
+  });
+
+  it('PR 闸 workflow 覆盖 junior，且把 extraFiles 的路径也列进 paths', () => {
+    const wf = fs.readFileSync(path.resolve(__dirname, '../../../.github/workflows/audio-precheck.yml'), 'utf8');
+    expect(wf).toContain('--section junior');
+    for (const e of readJunior().extraFiles as Array<{ path: string }>) {
+      expect(wf, `extraFiles 的 ${e.path} 不在 workflow 的 paths 里 → 改它可以绕过闸门`).toContain(e.path);
+    }
+  });
+
+  it('周巡检覆盖 junior 且阈值为 0（DB 新增缺口只有它能发现）', () => {
+    const wf = fs.readFileSync(path.resolve(__dirname, '../../../.github/workflows/audio-audit.yml'), 'utf8');
+    expect(wf).toMatch(/--section junior --threshold 0/);
+    // 表源要连库 → 必须注入这两个变量，否则那一步会直接报错
+    expect(wf).toContain('VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}');
+    expect(wf).toContain('VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}');
+  });
+});
+
 describe('绊线：junior_listening_items 一旦变可达，映射表必须跟上', () => {
   /**
    * 现状（2026-07-26 实测）：`junior_listening_items` **没有** audio_url 这一列，

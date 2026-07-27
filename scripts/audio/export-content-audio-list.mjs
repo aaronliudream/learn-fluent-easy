@@ -61,8 +61,16 @@ if (NO_PROBE) {
     onProgress: (d, t) => console.log(`  探测 ${d}/${t}`),
   });
   const before = missing.length;
+  const unknownCount = missing.filter((r) => probed.get(r.cdn_url)?.unknown).length;
   missing = missing.filter((r) => !probed.get(r.cdn_url)?.exists);
-  console.log(`已存在 ${before - missing.length} / 缺口 ${missing.length}`);
+  console.log(`已存在 ${before - missing.length} / 待生成 ${missing.length}`);
+  if (unknownCount) {
+    // 生成本身是幂等的（backfill 每条先 HEAD 再决定），所以 unknown 留在清单里无害；
+    // 但必须报出来，否则"待生成 N"会被当成"确定缺 N 条"。
+    console.log(`  ⚠ 其中 ${unknownCount} 条是**探测没探明白**（限流/抖动），不代表确定缺失；`);
+    console.log(`    它们留在清单里是安全的（backfill 会先 HEAD，已存在则记 skipped），但别当成真实缺口计数。`);
+    console.log(`    想拿准确数字：降低 --concurrency 重跑。`);
+  }
 }
 
 if (missing.length) {

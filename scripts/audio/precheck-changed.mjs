@@ -13,7 +13,7 @@
  * 不需要任何凭据：只对公开 CDN 发 HEAD。
  * 抽取逻辑复用 extract.mjs，金丝雀复用 audit-core.mjs —— 不另写一份。
  *
- * 退出码：0 = 无缺口/无内容改动；1 = 有缺口；2 = 配置错误；3 = 金丝雀失败（本轮作废）。
+ * 退出码：0 = 无缺口/无内容改动；1 = 有缺口；2 = 配置错误；3 = 本轮作废（金丝雀失败，或探测撞限流没拿到确定答案）。
  *
  * ⚠️ 结构说明：所有分支都必须走 `return <code>`，由末尾统一 finish()。
  * 不要在中途调 process.exit()：fetch 之后立刻硬退会在 Windows 触发 libuv 断言
@@ -26,9 +26,9 @@ import path from 'node:path';
 import { execSync } from 'node:child_process';
 import {
   REPO, ConfigError, loadConfig, checkCoverage, extractItems, probeExistence,
-  cacheKeyOf, cdnUrlOf,
+  cacheKeyOf, cdnUrlOf, tableSourcesOf,
 } from './extract.mjs';
-import { makeCanaryItem, checkMissing, assertCanary } from './audit-core.mjs';
+import { makeCanaryItem, checkMissing, assertCanary, assertProbeConclusive } from './audit-core.mjs';
 import { toCsv } from './csv.mjs';
 
 const argv = process.argv.slice(2);
@@ -72,9 +72,15 @@ async function main() {
     throw e;
   }
 
-  const inScope = changed.filter((f) => cfg.dataRoots.some((r) => f === r || f.startsWith(`${r}/`)));
+  // in-scope = dataRoots 下的文件 **+ extraFiles**（文本写死在代码里的内容源，
+  // 例如 junior 句型关的 SENTENCE_PATTERNS 就在 JuniorHubStagePlay.tsx 里）。
+  // 漏掉 extraFiles，改那 4 组句型就绕过闸门了。
+  const extraFiles = (cfg.extraFiles ?? []).map((e) => e.path ?? e);
+  const inScope = changed.filter((f) =>
+    cfg.dataRoots.some((r) => f === r || f.startsWith(`${r}/`)) || extraFiles.includes(f));
   if (!inScope.length) {
-    console.log(`本次改动没有触及 ${SECTION} 的内容目录（${cfg.dataRoots.join(', ')}），无需检查。`);
+    const scopeDesc = [...cfg.dataRoots, ...extraFiles].join(', ');
+    console.log(`本次改动没有触及 ${SECTION} 的内容范围（${scopeDesc}），无需检查。`);
     console.log(`改动文件 ${changed.length} 个，其中内容文件 0 个。耗时 ${secs()}s`);
     return 0;
   }
@@ -82,9 +88,24 @@ async function main() {
   for (const f of inScope) console.log('   ' + f);
 
   // ---------------- 只抽这些文件 ----------------
+  //
+  // **表源在 PR 闸里一律跳过**，而且要说出来。三个理由：
+  //   ① DB 内容不在 diff 里 —— 用 SQL 往 junior_vocab 加词，任何 PR 都看不到，
+  //      按文件 diff 触发的闸门在结构上就管不到它（那是周巡检的活）。
+  //   ② 一改任意一个 junior JSON 就把整张表拉进来探测（junior_vocab 展开后约 1.2 万对象），
+  //      每个 PR 十几分钟，还会用**无关的** DB 缺口把这个 PR 判红。
+  //   ③ 闸门的契约写在文件头："只检查本次改动到的内容文件"。表源不属于"本次改动"。
+  // 静默跳过是不行的——那会让人以为闸门覆盖了 DB。所以这里逐条列出来 + 指向周巡检。
+  const tables = tableSourcesOf(cfg);
+  if (tables.length) {
+    console.log(`\n⏭ 跳过 ${tables.length} 个表源（DB 内容不在 diff 里，按文件 diff 的闸门覆盖不到）：`);
+    for (const t of tables) console.log(`   ${t.id} → ${t.table} @${(t.tiers ?? []).join('/')}`);
+    console.log(`   这部分由周巡检 audio-audit（--section ${SECTION} --threshold 0）兜住，最长 7 天检出。`);
+  }
+
   let items;
   try {
-    items = [...(await extractItems(cfg, { allFiles: inScope, allowEmptySources: true })).values()];
+    items = [...(await extractItems(cfg, { allFiles: inScope, allowEmptySources: true, skipTables: true })).values()];
   } catch (e) {
     if (e instanceof ConfigError) { console.error(e.message); return 2; }
     throw e;
@@ -98,7 +119,17 @@ async function main() {
   // ---------------- 金丝雀 + 探测 ----------------
   const canary = makeCanaryItem(cfg.voiceId, cdnUrlOf, cacheKeyOf);
   console.log(`\n待检查 ${items.length} 个 (文本 × 档位) 对象（+1 金丝雀）…`);
-  const { missing } = await checkMissing([...items, canary], (urls) => probeExistence(urls, { concurrency: CONC }));
+  const { missing, unknown } = await checkMissing([...items, canary], (urls) => probeExistence(urls, { concurrency: CONC }));
+
+  // 探测确定性：有 unknown 就说明这轮没探明白（CDN 限流最常见）。
+  // 那时**不能**把它们算成缺口去卡作者——那是冤枉人。整轮作废、让 CI 重跑。
+  const conclusive = assertProbeConclusive(unknown, items.length + 1);
+  if (!conclusive.passed) {
+    console.error(`
+✗ 探测没拿到确定答案 → 本轮作废（不判缺口、也不判通过）：${conclusive.reason}`);
+    for (const u of unknown.slice(0, 10)) console.error(`   ? ${JSON.stringify(u.text)} ${u.cdn_url}`);
+    return 3;
+  }
 
   const canaryVerdict = assertCanary(missing, canary);
   if (!canaryVerdict.passed) {
@@ -131,14 +162,20 @@ async function main() {
 这批新内容的音频还没生成。**自动播路径上冷 key 等于没有声音**
 （游戏切词、关卡自动读题、闯关每题 250ms 自动播），所以要在合入前补掉。
 
-在本地仓库根目录跑（需要 .env 里的 anon key，CI 没有凭据所以不能代跑）：
-
-    npm run audio:backfill
-
-只想补本 PR 这批（清单已写好）：
+在本地仓库根目录跑（需要 .env 里的 anon key，CI 没有凭据所以不能代跑）。
+清单已经写好，直接补本 PR 这批：
 
     node scripts/audio/backfill-missing-audio.ts --list ${listPath} \\
-      --out data/audio-audit/precheck_result.csv
+      --out data/audio-audit/precheck_${SECTION}_result.csv \\
+      --progress data/audio-audit/precheck_${SECTION}_progress.json
+
+想把 ${SECTION} 的缺口全补一遍（不只本 PR）：
+
+    node scripts/audio/export-content-audio-list.mjs --section ${SECTION} \\
+      --out data/audio-audit/${SECTION}_gap_list.csv
+    node scripts/audio/backfill-missing-audio.ts --list data/audio-audit/${SECTION}_gap_list.csv \\
+      --out data/audio-audit/${SECTION}_gap_result.csv \\
+      --progress data/audio-audit/${SECTION}_gap_progress.json
 
 跑完重推本 PR，这个闸会自动变绿。
 ────────────────────────────────────────────────────────`);

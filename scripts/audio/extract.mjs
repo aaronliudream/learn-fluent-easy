@@ -175,6 +175,11 @@ function speedsFor(cfg, tierName, grade) {
   throw new ConfigError(`✗ 档位 "${tierName}" 既没有 speeds 也没有 byGrade`);
 }
 
+/** 该 section 声明的表源（`files` 以 `table:` 开头）。供调用方在跳过它们时如实说明。 */
+export const tableSourcesOf = (cfg) =>
+  (cfg.sources ?? []).filter((s) => String(s.files).startsWith('table:'))
+    .map((s) => ({ id: s.id, table: String(s.files).slice('table:'.length), tiers: s.tiers }));
+
 const gradeOf = (rel, how) => {
   if (how !== 'filename') return null;
   const m = /grade(\d)/.exec(rel);
@@ -185,11 +190,12 @@ const gradeOf = (rel, how) => {
  * 按映射表抽出全部「可达 (文本 × 档位)」对象。
  * @returns {Map<string, {cache_key,text,voice_id,speed,cdn_url,storage_url,source_ref,record_id,field}>}
  */
-export async function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false } = {}) {
+export async function extractItems(cfg, { allFiles, onlySource = '', allowEmptySources = false, skipTables = false } = {}) {
   const files = allFiles ?? checkCoverage(cfg);
   const rows_ = new Map();
   for (const s of cfg.sources ?? []) {
     if (onlySource && s.id !== onlySource) continue;
+    if (skipTables && String(s.files).startsWith('table:')) continue; // 调用方负责把跳过的表源**说出来**（见 tableSourcesOf）
     if (String(s.files).startsWith('table:')) {
       // 表源已解封（依据见 table-source.mjs 末尾三条）。取数走 fetchTableRows：
       // 分页触顶硬失败 + 抽取数必须与 count=exact 相等，绝不静默截断。
@@ -265,19 +271,21 @@ pep / fltrp / sufe 是高中的。只按 publisher 过滤会把高中行算进�
 }
 
 /** 并发 HEAD 探测；判定「存在」= 200 且 ≥ minBytes（默认 2KB，用来揪出空音频）。 */
-export async function probeExistence(urls, { concurrency = 8, minBytes = 2048, onProgress } = {}) {
+export async function probeExistence(urls, { concurrency = 8, minBytes = 2048, onProgress, attempts = 5 } = {}) {
   const result = new Map();
   const q = [...urls];
   let done = 0;
   const head = async (url) => {
-    for (let a = 0; a < 3; a++) {
+    for (let a = 0; a < attempts; a++) {
       try {
         const r = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(20000) });
+        // 只有这三个状态是**确定答案**：200=在、404/400=不在。
+        // 429/5xx/超时都不是答案，退避重试；重试用完仍没答案 → 记 unknown，绝不当成"不在"。
         if (r.status === 200 || r.status === 400 || r.status === 404) {
           return { status: r.status, bytes: Number(r.headers.get('content-length') || 0), ct: r.headers.get('content-type') || '' };
         }
       } catch { /* retry */ }
-      await new Promise((x) => setTimeout(x, 800 * (a + 1)));
+      await new Promise((x) => setTimeout(x, 800 * 2 ** a + Math.floor(Math.random() * 400)));
     }
     return { status: 0, bytes: 0, ct: '' };
   };
@@ -286,7 +294,20 @@ export async function probeExistence(urls, { concurrency = 8, minBytes = 2048, o
       const u = q.shift();
       if (!u) return;
       const h = await head(u);
-      result.set(u, { ...h, exists: h.status === 200 && h.bytes >= minBytes });
+      // 三态，别再压成两态：
+      //   exists  —— 确定在（200 且体积够）
+      //   missing —— 确定不在（404/400，或 200 但体积过小=空音频）
+      //   unknown —— 没拿到确定答案（限流/网关抖动/超时）
+      // 曾经把 unknown 压成 exists:false：CI 上并发探 1.4 万条撞到 CDN 限流，
+      // 19 条**实际存在**的对象被报成缺失（本地逐条复验 19/19 都是 200）。
+      // 把不确定说成结论，和假绿是同一类错误，只是方向相反。
+      const unknown = h.status === 0;
+      result.set(u, {
+        ...h,
+        unknown,
+        exists: h.status === 200 && h.bytes >= minBytes,
+        missing: !unknown && !(h.status === 200 && h.bytes >= minBytes),
+      });
       if (onProgress && ++done % 500 === 0) onProgress(done, urls.length);
     }
   }));

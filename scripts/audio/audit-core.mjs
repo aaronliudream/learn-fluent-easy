@@ -2,12 +2,15 @@
  * 巡检内核（无副作用、无网络，探测函数由外部注入 → 可被单测直接驱动）。
  *
  * 设计要点：**先证明检查器不空转，再信它的结论。**
- * 三条前置断言任一不过 → 整轮判无效，禁止输出"全绿"：
+ * 四条前置断言任一不过 → 整轮判无效，禁止输出"全绿"：
  *   1. 假 200 探针：4 条**必然不存在**的静态资源必须返回 404。返回 200 text/html 说明
  *      SPA 兜底回归，那时所有"缺失检查"都会假绿（这就是审计里 water.mp3 的原始故障）。
  *   2. 金丝雀：往被检查集合里注入一个**必然缺失**的 key（随机 UUID 文本），
  *      断言检查器能把它报成缺失。报不出来 = 检查器空转（例如探测函数恒返回 200）。
  *   3. 反向哨兵：无游离内容目录（见 coverage.mjs）。
+ *   4. 探测确定性：不允许有 unknown（重试用完仍是 429/5xx/超时）。unknown 既不是"在"也不是
+ *      "不在"，把它当成缺失会让人去重生成本来就存在的对象 —— CI 上撞 CDN 限流时踩过，
+ *      19 条实际存在的被报成缺口（本地逐条复验 19/19 都是 200）。
  */
 import crypto from 'node:crypto';
 
@@ -31,8 +34,32 @@ export function makeCanaryItem(voiceId, cdnUrlOf, cacheKeyOf) {
 export async function checkMissing(items, probe) {
   const urls = [...new Set(items.map((i) => i.cdn_url))];
   const probed = await probe(urls);
-  const missing = items.filter((i) => !probed.get(i.cdn_url)?.exists);
-  return { probed, missing };
+  // 三态：确定不在 = missing；没拿到确定答案 = unknown（限流/抖动/超时）。
+  // ⚠️ unknown **不能**并进 missing —— 那会把"没探明白"报成"没有音频"，
+  // 让人去重新生成本来就在的对象。CI 上撞 CDN 限流时踩过：19 条实际存在的被报成缺失。
+  // 兼容旧探测器（只回 exists 的实现）：没有 unknown 字段时退回原语义。
+  const unknown = items.filter((i) => probed.get(i.cdn_url)?.unknown === true);
+  const missing = items.filter((i) => {
+    const p = probed.get(i.cdn_url);
+    if (p && 'unknown' in p) return p.missing === true;
+    return !p?.exists;
+  });
+  return { probed, missing, unknown };
+}
+
+/**
+ * 探测确定性判定：有 unknown 就说明这轮探测没探明白。
+ * 与金丝雀/假200 同级——**结论不可信，整轮作废**，而不是当成缺口报红。
+ */
+export function assertProbeConclusive(unknown, total) {
+  return unknown.length === 0
+    ? { passed: true, reason: `全部 ${total} 条都拿到确定答案（200 或 404/400）` }
+    : {
+      passed: false,
+      reason: `${unknown.length}/${total} 条探测没拿到确定答案（重试用完仍是 429/5xx/超时）。`
+        + '这些既不能算"在"也不能算"不在" —— 本轮缺失统计不可信，'
+        + '降低 --concurrency 后重跑（CDN 限流是最常见原因）。',
+    };
 }
 
 /**

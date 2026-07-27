@@ -23,6 +23,12 @@ export function useUnitMastery(unit: UnitDef | null, grade: number, publisher?: 
   const unitId = unit?.id ?? "";
   const codesKey = (unit?.grammarCodes ?? []).join(",");
 
+  // ★这里收到的必须已经是 DB 层的 publisher 值★
+  //   初中 URL 层是 pep/fltrp,DB 列存历史值 junior/junior_fltrp(见 juniorHub/publisher.ts);
+  //   高中是另一套命名空间。两条线共用本 hook,所以**不在这里做映射** —— 谁调用谁负责转换,
+  //   否则用初中的映射去套高中的值,会把高中一并弄坏。
+  const dbPub = publisher || null;
+
   useEffect(() => {
     let cancelled = false;
     if (!unit) {
@@ -39,7 +45,7 @@ export function useUnitMastery(unit: UnitDef | null, grade: number, publisher?: 
           .eq("grade", grade)
           .eq("volume", unit.book)
           .eq("unit", unit.unitKey);
-        if (publisher) q = q.eq("publisher", publisher);
+        if (dbPub) q = q.eq("publisher", dbPub);
         const { data } = await q;
         const ids = (data ?? []).map((r: { id: string }) => r.id);
         if (ids.length) vocab = await loadUnitVocabProgress(ids);
@@ -61,7 +67,7 @@ export function useUnitMastery(unit: UnitDef | null, grade: number, publisher?: 
     return () => {
       cancelled = true;
     };
-  }, [unitId, codesKey, grade, publisher]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [unitId, codesKey, grade, dbPub]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return result;
 }

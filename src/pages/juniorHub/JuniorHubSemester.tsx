@@ -1,7 +1,7 @@
 ﻿import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
-import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
+import { readJuniorPublisherParam, withJuniorPublisher, dbPublisherFor } from "@/lib/juniorHub/publisher";
 import { unitLabel } from "./JuniorHubUnit";
 import { getSemesterProgress, getUnitProgress } from "@/lib/juniorHub/progress";
 import { useSemesterMastery } from "@/hooks/useSemesterMastery";
@@ -20,7 +20,7 @@ export default function JuniorHubSemester() {
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/junior/hub/${grade}`;
   // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。整册一次批量拉取。
-  const masteryMap = useSemesterMastery(sem?.units, grade, pub);
+  const masteryMap = useSemesterMastery(sem?.units, grade, dbPublisherFor(pub));
 
   if (!sem || !semId) {
     return <div className="p-6 text-center">课程未找到</div>;

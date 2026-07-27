@@ -12,7 +12,7 @@ import { useUnitMastery } from "@/hooks/useUnitMastery";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/juniorHub/types";
-import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
+import { readJuniorPublisherParam, withJuniorPublisher, dbPublisherFor } from "@/lib/juniorHub/publisher";
 
 const GROUP = 12; // 每组词数(与三关一致)
 
@@ -208,7 +208,7 @@ export default function JuniorHubUnit() {
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
   const base = `/junior/hub/${grade}`;
   // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。unit 为 null 时内部短路。
-  const unitMastery = useUnitMastery(unit, grade, pub);
+  const unitMastery = useUnitMastery(unit, grade, dbPublisherFor(pub));
 
   if (!unit || !unitId || !semId) {
     return <div className="p-6 text-center">单元未找到</div>;

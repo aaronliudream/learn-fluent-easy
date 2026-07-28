@@ -17,11 +17,11 @@ export default function PrimaryHubUnit() {
     ? getUnitProgress(state, unitId)
     : { percent: 0, completed: 0, total: 0, stageCount: 0 };
   const base = `/primary/hub/${grade}`;
-  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  // 返回=沿层级向上:单元页的父级是它所属的册页(semId 就在 URL 上)。见 useHubBack。
   const goBack = useHubBack(`${base}/semester/${semId}`);
 
   if (!unit || !unitId || !semId) {
-    return <NotFoundCard title="未找到这个单元" homePath={`/primary/hub/${grade}`} />;
+    return <NotFoundCard title="未找到这个单元" homePath={"/primary"} />;
   }
 
   if (!isUnitPublished(unit)) {

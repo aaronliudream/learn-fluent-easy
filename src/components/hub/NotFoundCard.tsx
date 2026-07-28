@@ -30,18 +30,13 @@ export default function NotFoundCard({
         <p className="mt-1 text-sm text-[#888780] dark:text-muted-foreground">
           {hint ?? "这个地址可能已经变更,或者链接里少了点什么。"}
         </p>
-        <div className="mt-6 flex flex-col gap-2">
-          <button
-            type="button"
-            onClick={() => nav(-1)}
-            className="w-full rounded-xl bg-[#FF6B35] px-4 py-2.5 text-sm font-semibold text-white"
-          >
-            ← 回上一页
-          </button>
+        <div className="mt-6">
+          {/* 只给「回学段首页」一条出路 —— 错误页上做 nav(-1) 容易再弹回那个坏 URL,
+              而且历史栈里往回弹本来就是这次返回链事故的成因。 */}
           <button
             type="button"
             onClick={() => nav(homePath)}
-            className="w-full rounded-xl border-2 border-[#EEEAE0] px-4 py-2.5 text-sm font-semibold text-[#5C5751] dark:border-border dark:text-muted-foreground"
+            className="w-full rounded-xl bg-[#FF6B35] px-4 py-2.5 text-sm font-semibold text-white"
           >
             {homeLabel}
           </button>

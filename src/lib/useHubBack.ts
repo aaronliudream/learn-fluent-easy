@@ -1,32 +1,32 @@
 import { useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 /**
- * Hub 内「返回」的统一行为:**优先原路退回**,没有来路才回兜底页。
+ * Hub 内「返回」——**沿层级向上一层,直接 navigate 到确定的父路径**。
  *
- * ★为什么需要★
- * 册页的返回按钮原先硬编码到 `${base}/course`(三条线都是)。在「课程 tab」的语义下
- * 那是上一级没错,但用户常常是**从 hub 仪表盘直接点某一册**进来的
- * (`JuniorHubHome` → `/semester/:semId`),此时返回就跳到了一个他根本没经过的橙色选课页。
- * Aaron 2026-07-27 真机撞到:紫仪表盘 → 册页 → 单元 → 关卡,返回却落到 /course。
+ * ★为什么不用 nav(-1)★(2026-07-27 Aaron 实测被困后改)
+ * 第一版用 `location.key !== "default" → nav(-1)` 做「原路退回」。看起来对,实测会把人困住:
+ * 单元页 ↔ 关卡页反复横跳几次,历史栈里就堆满了这两页;此时点「返回单元」只是往回弹一格,
+ * 又回到关卡 → 再点又回单元……用户在两页之间打转,唯一出口是「返回首页」。
+ * **历史栈记录的是「走过的顺序」,不是「层级关系」** —— 用它做返回,层级越深越容易打转。
  *
- * ★实现★
- * react-router 给初始进入的 location.key 是 "default";只要不是 "default",
- * 说明是站内跳转过来的、history 里有上一条,直接 nav(-1) 原路退回。
- * 直接粘贴 URL / 刷新 / 新标签打开 → key 是 "default" → 用 fallback(保持老行为)。
+ * ★现在的做法★ 每一层的父路径都能从当前路由参数推出,直接跳过去,不依赖历史:
+ *   关卡 → 它所属的单元页(semId + unitId 都在 URL 上)
+ *   单元 → 它所属的册页(semId 在 URL 上)
+ *   册页 → 该学段根页(/junior /gaokao /primary)
+ * 美语线一直是这么做的(层级父路径从数据推出),没出过这个问题。
  *
- * 这样既满足「不得跳到用户没来过的页面」,又不会在深链进入时退到站外。
+ * ★为什么册页的父级是学段根、不是 hub 仪表盘★
+ * 用户进册页有三条来路:仪表盘、课程 tab、星空选版页。仪表盘只是其中一条,
+ * 把它当成唯一父级,对另外两条路进来的人就是「跳到没来过的页面」——
+ * Aaron 从 /gaokao 星空页深入后点返回落到 /gaokao/hub/2 仪表盘,就是这个。
+ * 学段根是三条来路的共同上游,谁进来都认得。
  */
-export function useHubBack(fallback: string) {
+export function useHubBack(parentPath: string) {
   const nav = useNavigate();
-  const loc = useLocation();
   return useCallback(() => {
-    if (loc.key && loc.key !== "default") {
-      nav(-1);
-      return;
-    }
-    nav(fallback);
-  }, [nav, loc.key, fallback]);
+    nav(parentPath);
+  }, [nav, parentPath]);
 }
 
 export default useHubBack;

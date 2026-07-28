@@ -15,13 +15,14 @@ export default function PrimaryHubSemester() {
   const course = getGradeCourse(grade);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/primary/hub/${grade}`;
-  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
-  const goBack = useHubBack(`${base}/course`);
+  // 返回=沿层级向上:册页的父级是**学段根**,不是 hub 仪表盘 ——
+  // 进册页有三条来路(仪表盘/课程tab/星空选版页),仪表盘只是其中一条。见 useHubBack。
+  const goBack = useHubBack("/primary");
   // semId 形如 grade4_volume1 / grade4_volume2 —— 上册取 v1 题库，下册默认 v2。
   const vol = semId?.includes("volume1") ? "v1" : "v2";
 
   if (!sem || !semId) {
-    return <NotFoundCard title="未找到这一册" homePath={`/primary/hub/${grade}`} />;
+    return <NotFoundCard title="未找到这一册" homePath={"/primary"} />;
   }
 
   return (

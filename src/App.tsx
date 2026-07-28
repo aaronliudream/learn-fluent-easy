@@ -33,7 +33,6 @@ const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
 const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
-const AdminGrammarContent = lazy(() => import("./pages/AdminGrammarContent.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
 const Privacy = lazy(() => import("./pages/Privacy.tsx"));
 const Terms = lazy(() => import("./pages/Terms.tsx"));
@@ -126,7 +125,6 @@ const GaokaoReading = lazy(() => import("./pages/GaokaoReading.tsx"));
 const GaokaoReadingPlay = lazy(() => import("./pages/GaokaoReadingPlay.tsx"));
 const GaokaoReadingArticle = lazy(() => import("./pages/GaokaoReadingArticle.tsx"));
 const GaokaoReadingKnowledge = lazy(() => import("./pages/GaokaoReadingKnowledge.tsx"));
-const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
 const GaokaoUnitGrammarTest = lazy(() => import("./pages/gaokaoHub/GaokaoUnitGrammarTest.tsx"));
 const GaokaoGrammarBoard = lazy(() => import("./pages/gaokaoHub/GaokaoGrammarBoard.tsx"));
 const GaokaoVocabBoard = lazy(() => import("./pages/gaokaoHub/GaokaoVocabBoard.tsx"));
@@ -518,9 +516,7 @@ const App = () => (
           <Route path="/gaokao/reading/knowledge" element={<ChineseOnlyRoute><GaokaoReadingKnowledge /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/article/:id" element={<ChineseOnlyRoute><GaokaoReadingArticle /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/:id" element={<ChineseOnlyRoute><GaokaoReadingPlay /></ChineseOnlyRoute>} />
-          {/* 词汇板块 = 7册分册(选册→必修一读 junior_vocab 真实单元词汇,测一测写 junior_word_mastery 互通)。旧3500壳留 vocab-board-legacy。 */}
           <Route path="/gaokao/vocab" element={<ChineseOnlyRoute><GaokaoVocabBoard /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/vocab-board-legacy" element={<ChineseOnlyRoute><GaokaoVocab /></ChineseOnlyRoute>} />
           {/* 完形板块 = 7册分册(junior_cloze + ①镜像路由 /gaokao/lesson/cloze)。旧壳留 -legacy。 */}
           <Route path="/gaokao/cloze" element={<ChineseOnlyRoute><GaokaoExerciseBoard boardTitle="完形专项" boardEmoji="🧩" basePath="/gaokao/cloze" table="junior_cloze" module="junior_cloze" lessonSeg="cloze" /></ChineseOnlyRoute>} />
           <Route path="/gaokao/cloze-board-legacy" element={<ChineseOnlyRoute><GaokaoCloze /></ChineseOnlyRoute>} />
@@ -559,7 +555,6 @@ const App = () => (
           <Route path="/level/:levelId/unit/:unitId" element={<Navigate to="/american" replace />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Navigate to="/american" replace />} />
           <Route path="/admin/feedback" element={<AdminFeedback />} />
-          <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
           <Route path="/pricing" element={<Pricing />} />
           {/* /dashboard is the canonical Student Hub (redesigned 2026-05). */}
           <Route path="/dashboard" element={<Dashboard />} />

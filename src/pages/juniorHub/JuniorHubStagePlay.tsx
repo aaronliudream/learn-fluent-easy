@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import WritingScaffold from "@/components/juniorHub/WritingScaffold";
 import { useRevealScroll } from "@/lib/useRevealScroll";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
@@ -1866,6 +1867,10 @@ function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number;
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<WritingResult | null>(null);
+  // ★四屏脚手架★ 有 cards+templates 的单元先走「填素材→选模板→看草稿」三屏,
+  // 再进这里原有的编辑+提交分支(屏4)。批改链路一行没动 —— 脚手架只是喂给它一段草稿。
+  const hasScaffold = !!(w?.cards?.length && w?.templates);
+  const [scaffoldDone, setScaffoldDone] = useState(false);
   const minWords = w?.minWords ?? 40;
   const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
 
@@ -1944,6 +1949,20 @@ function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number;
       setLoading(false);
     }
   };
+
+  // 屏1-3:脚手架(可跳过)。跳过或用草稿开始写 → 落到下面原有的屏4。
+  if (hasScaffold && !scaffoldDone) {
+    return (
+      <WritingScaffold
+        w={w!}
+        onUseDraft={(d) => {
+          setText(d);
+          setScaffoldDone(true);
+        }}
+        onSkip={() => setScaffoldDone(true)}
+      />
+    );
+  }
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-card">

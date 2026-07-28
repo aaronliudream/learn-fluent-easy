@@ -55,8 +55,6 @@ const JuniorHubSemester = lazy(() => import("./pages/juniorHub/JuniorHubSemester
 const JuniorHubUnit = lazy(() => import("./pages/juniorHub/JuniorHubUnit.tsx"));
 const JuniorHubStage = lazy(() => import("./pages/juniorHub/JuniorHubStage.tsx"));
 const JuniorHubProfile = lazy(() => import("./pages/juniorHub/JuniorHubProfile.tsx"));
-const JuniorHubAITest = lazy(() => import("./pages/juniorHub/JuniorHubAITest.tsx"));
-const JuniorHubAIHistory = lazy(() => import("./pages/juniorHub/JuniorHubAIHistory.tsx"));
 const JuniorHubFinalChallenge = lazy(() => import("./pages/juniorHub/JuniorHubFinalChallenge.tsx"));
 const JuniorHubFinalChallengeLevel = lazy(() => import("./pages/juniorHub/JuniorHubFinalChallengeLevel.tsx"));
 const GaokaoHubLayout = lazy(() => import("./pages/gaokaoHub/GaokaoHubLayout.tsx"));
@@ -66,8 +64,6 @@ const GaokaoHubSemester = lazy(() => import("./pages/gaokaoHub/GaokaoHubSemester
 const GaokaoHubUnit = lazy(() => import("./pages/gaokaoHub/GaokaoHubUnit.tsx"));
 const GaokaoHubStage = lazy(() => import("./pages/gaokaoHub/GaokaoHubStage.tsx"));
 const GaokaoHubProfile = lazy(() => import("./pages/gaokaoHub/GaokaoHubProfile.tsx"));
-const GaokaoHubAITest = lazy(() => import("./pages/gaokaoHub/GaokaoHubAITest.tsx"));
-const GaokaoHubAIHistory = lazy(() => import("./pages/gaokaoHub/GaokaoHubAIHistory.tsx"));
 const PrimaryHubHome = lazy(() => import("./pages/primaryHub/PrimaryHubHome.tsx"));
 const PrimaryHubCourse = lazy(() => import("./pages/primaryHub/PrimaryHubCourse.tsx"));
 const PrimaryHubSemester = lazy(() => import("./pages/primaryHub/PrimaryHubSemester.tsx"));
@@ -76,8 +72,6 @@ const PrimaryHubStage = lazy(() => import("./pages/primaryHub/PrimaryHubStage.ts
 const PrimaryHubPhonicsRoute = lazy(() => import("./pages/primaryHub/PrimaryHubPhonicsRoute.tsx"));
 const PrimaryHubMistakes = lazy(() => import("./pages/primaryHub/PrimaryHubMistakes.tsx"));
 const PrimaryHubProfile = lazy(() => import("./pages/primaryHub/PrimaryHubProfile.tsx"));
-const PrimaryHubAITest = lazy(() => import("./pages/primaryHub/PrimaryHubAITest.tsx"));
-const PrimaryHubAIHistory = lazy(() => import("./pages/primaryHub/PrimaryHubAIHistory.tsx"));
 const PrimaryHubFinalChallenge = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallenge.tsx"));
 const PrimaryHubFinalChallengeLevel = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallengeLevel.tsx"));
 const PrimaryHubFinalChallengeStrengthen = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallengeStrengthen.tsx"));
@@ -395,8 +389,6 @@ const App = () => (
             />
             <Route path="mistakes" element={<PrimaryHubMistakes />} />
             <Route path="profile" element={<PrimaryHubProfile />} />
-            <Route path="aitest" element={<PrimaryHubAITest />} />
-            <Route path="aihistory" element={<PrimaryHubAIHistory />} />
             <Route
               path="final-challenge"
               element={
@@ -444,8 +436,6 @@ const App = () => (
             {/* 错题本统一到全站 DB 版;旧 hub 内 LS 页面已退役,深链重定向。 */}
             <Route path="mistakes" element={<Navigate to="/mistakes" replace />} />
             <Route path="profile" element={<JuniorHubProfile />} />
-            <Route path="aitest" element={<JuniorHubAITest />} />
-            <Route path="aihistory" element={<JuniorHubAIHistory />} />
             <Route
               path="final-challenge"
               element={
@@ -508,8 +498,6 @@ const App = () => (
             {/* 错题本统一到全站 DB 版;旧 hub 内 LS 页面已退役,深链重定向。 */}
             <Route path="mistakes" element={<Navigate to="/mistakes" replace />} />
             <Route path="profile" element={<GaokaoHubProfile />} />
-            <Route path="aitest" element={<GaokaoHubAITest />} />
-            <Route path="aihistory" element={<GaokaoHubAIHistory />} />
           </Route>
           <Route path="/gaokao" element={<ChineseOnlyRoute><Gaokao /></ChineseOnlyRoute>} />
           <Route path="/gaokao/books/:group" element={<ChineseOnlyRoute><GaokaoBooks /></ChineseOnlyRoute>} />

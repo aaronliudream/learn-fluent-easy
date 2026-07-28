@@ -9,7 +9,6 @@ import {
 } from "@/lib/gaokaoHub/progress";
 import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/gaokaoHub/courseData";
 import { getUnitState } from "@/lib/gaokaoHub/storage";
-import { GaokaoAITestCard } from "@/components/gaokaoHub/AITestCard";
 import { withPublisher } from "@/lib/gaokaoHub/publisher";
 
 export default function GaokaoHubHome() {
@@ -67,7 +66,6 @@ export default function GaokaoHubHome() {
       </div>
 
       <div className="px-4 pt-4">
-        <GaokaoAITestCard />
 
         {nextStage && currentUnit?.available && (
           <section className="mb-4">

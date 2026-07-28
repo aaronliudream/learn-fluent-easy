@@ -8,6 +8,7 @@ import {
 import { loadJuniorGrammarMasteryAll } from "./juniorGrammarFsrs";
 import { loadKpMastery } from "./juniorKnowledgePoint";
 import { shuffleArray } from "./juniorHub/context";
+import { canSplitDialogue } from "@/lib/juniorHub/dialogueSplit";
 import { supabase } from "@/integrations/supabase/client";
 import type { UnitDef } from "./juniorHub/types";
 import type { QuizQuestion } from "./juniorHub/types";
@@ -290,22 +291,17 @@ async function loadListeningItems(grade: number, volume: string, unit: string): 
   // data=null → 下面的 `data ?? []` 把错误吞掉当成"题库 0 行" → 每次都静默回退内联题。
   // 结果是这批 384 道题从灌库那天起一道都没被用过，而且没有任何报错能看出来。
   //
-  // ⚠️ 只取 kind='sentence'：dialogue 类（244 道，占这张表的 2/3）**暂不进抽题池**。
-  // 原因是播放层现在把整条 audio_text 当一个字符串丢给 hubSpeak，而对话文本形如
-  // "W: ... M: ..."（女声/男声）或 "A: ... B: ..."：
-  //   ① 一男一女的对话会被**同一个音色**从头读到尾；
-  //   ② "W:" "M:" 这些说话人标记会被 TTS 一起念出来。
-  // 要放开 dialogue，得先做「按说话人切句 + 分角色音色」（speak.ts 已有 speakSequence 可用），
-  // 那是独立一件事。放开时**必须同步**改这里的过滤、junior.json 的表源过滤与播放点，
-  // 否则 244 道题会以"一个音色读到底"的形态直接上线 —— 有测试盯着这三处（见
-  // src/lib/juniorListeningItems.test.ts 的「绊线」用例）。
+  // sentence 与 dialogue 都取。对话由 `dialogueSplit` 按说话人切句、分角色朗读
+  // （女=el:lily，男=echo，见 speakDialogue.ts）。
+  // 唯一排除的是**性别不可判**的那批：说话人写成 Linda: / Dr Lu: / Reporter: 之类，
+  // 无法机械判定男女 —— `canSplitDialogue` 返回 false，直接不进池（不猜）。
+  // 那 8 条在 junior.json 的 unreachableSources 里有声明（status=unverified，巡检每轮提醒）。
   const { data, error } = await supabase
     .from("junior_listening_items")
     .select("difficulty,kind,audio_text,question,options,answer,explanation")
     .eq("grade", grade)
     .eq("volume", volume)
-    .eq("unit", unit)
-    .eq("kind", "sentence");
+    .eq("unit", unit);
   if (error) {
     // 查询失败仍然回退内联（保住做题体验），但**必须留下痕迹**：
     // 静默回退正是上面那个 bug 藏了这么久的原因。
@@ -315,7 +311,8 @@ async function loadListeningItems(grade: number, volume: string, unit: string): 
     );
     return [];
   }
-  const rows = (data ?? []) as ListeningRow[];
+  // 性别不可判的对话不进池（与抽取侧、播放侧共用同一个 dialogueSplit）
+  const rows = ((data ?? []) as ListeningRow[]).filter((r) => canSplitDialogue(r.audio_text));
   if (!rows.length) return [];
   const byD: Record<number, ListeningRow[]> = { 1: [], 2: [], 3: [] };
   for (const r of rows) (byD[r.difficulty] ?? (byD[r.difficulty] = [])).push(r);

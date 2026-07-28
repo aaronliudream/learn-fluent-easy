@@ -169,8 +169,14 @@ async function processRow(row: Row): Promise<Result> {
   if (DRY) {
     return { ...base, status: 'skipped', cdn_status: pre.status, bytes: pre.bytes, reason: 'dry-run', attempts: 0, provider: '' };
   }
-  // 2) 合成
-  const s = await synth(row.text, row.voice_id || 'el:lily', Number(row.speed));
+  // 2) 合成 + 复验（复验没过就再合成一次，最多 SYNTH_ROUNDS 轮）
+  //
+  // 为什么要重试整轮而不是只重试 HEAD：实测有 5 条 edge 返回了正确 URL、却没真正落库
+  // （再调一次 edge 是 cached:false，说明上一轮的对象确实不存在；重试后 5/5 都好了）。
+  // 高并发下 edge 侧的上传偶发失败，一次复验就判 failed 会把"本来能生成的"记成失败，
+  // 让人去追一个并不存在的内容问题。
+  const SYNTH_ROUNDS = 3;
+  let s = await synth(row.text, row.voice_id || 'el:lily', Number(row.speed));
   if (!s.ok) {
     return { ...base, status: 'failed', cdn_status: pre.status, bytes: 0, reason: s.reason, attempts: s.attempts, provider: '' };
   }
@@ -178,21 +184,33 @@ async function processRow(row: Row): Promise<Result> {
   if (s.url !== row.cdn_url) {
     return { ...base, status: 'failed', cdn_status: 0, bytes: 0, reason: `url_mismatch:${s.url}`.slice(0, 120), attempts: s.attempts, provider: s.provider };
   }
-  // 3) 复验
-  await sleep(300);
-  const post = await head(row.cdn_url);
-  if (post.status === 200 && post.bytes >= MIN_BYTES) {
-    return { ...base, status: 'created', cdn_status: post.status, bytes: post.bytes, reason: '', attempts: s.attempts, provider: s.provider };
+  // 3) 复验；没过就再合成一轮（edge 偶发"返回了 URL 但没落库"）
+  let post = { status: 0, bytes: 0 };
+  let st = { status: 0, bytes: 0 };
+  for (let round = 1; ; round++) {
+    await sleep(300 * round);
+    post = await head(row.cdn_url);
+    if (post.status === 200 && post.bytes >= MIN_BYTES) {
+      return { ...base, status: 'created', cdn_status: post.status, bytes: post.bytes, reason: round > 1 ? `ok_after_${round}_rounds` : '', attempts: s.attempts, provider: s.provider };
+    }
+    if (post.status === 200 && post.bytes < MIN_BYTES) {
+      return { ...base, status: 'failed', cdn_status: post.status, bytes: post.bytes, reason: `too_small_lt_${MIN_BYTES}B`, attempts: s.attempts, provider: s.provider };
+    }
+    // CDN 拿不到 → 看存储侧。存储有、CDN 没有 = CDN 负缓存，需要 purge，单列出来不静默
+    st = await head(row.storage_url);
+    if (st.status === 200 && st.bytes >= MIN_BYTES) {
+      return { ...base, status: 'created', cdn_status: post.status, bytes: st.bytes, needs_purge: 'yes', reason: 'cdn_negative_cache', attempts: s.attempts, provider: s.provider };
+    }
+    if (round >= SYNTH_ROUNDS) break;
+    // 两边都没有 → 上一轮 edge 其实没把对象落库，重新合成一次再验
+    const again = await synth(row.text, row.voice_id || 'el:lily', Number(row.speed));
+    if (!again.ok) break;
+    if (again.url !== row.cdn_url) {
+      return { ...base, status: 'failed', cdn_status: 0, bytes: 0, reason: `url_mismatch:${again.url}`.slice(0, 120), attempts: s.attempts + again.attempts, provider: again.provider };
+    }
+    s = { ...again, attempts: s.attempts + again.attempts };
   }
-  if (post.status === 200 && post.bytes < MIN_BYTES) {
-    return { ...base, status: 'failed', cdn_status: post.status, bytes: post.bytes, reason: `too_small_lt_${MIN_BYTES}B`, attempts: s.attempts, provider: s.provider };
-  }
-  // CDN 拿不到 → 看存储侧。存储有、CDN 没有 = CDN 负缓存，需要 purge，单列出来不静默
-  const st = await head(row.storage_url);
-  if (st.status === 200 && st.bytes >= MIN_BYTES) {
-    return { ...base, status: 'created', cdn_status: post.status, bytes: st.bytes, needs_purge: 'yes', reason: 'cdn_negative_cache', attempts: s.attempts, provider: s.provider };
-  }
-  return { ...base, status: 'failed', cdn_status: post.status, bytes: 0, reason: `verify_missing(storage=${st.status})`, attempts: s.attempts, provider: s.provider };
+  return { ...base, status: 'failed', cdn_status: post.status, bytes: 0, reason: `verify_missing_after_${SYNTH_ROUNDS}_rounds(storage=${st.status})`, attempts: s.attempts, provider: s.provider };
 }
 
 // ---------------- main ----------------

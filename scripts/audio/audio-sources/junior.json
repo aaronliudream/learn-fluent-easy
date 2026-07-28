@@ -67,6 +67,15 @@
       "code": "JUNIOR_SPEAK_SPEED.listen",
       "modules": "听力关题目（:630）、听音辨词的目标词（ListenWordStage 把词当 q.audio 喂给 ListenMcStage）、单元通关听力题（:1099）"
     },
+    "hubListenMale": {
+      "speeds": [
+        0.8
+      ],
+      "voiceId": "echo",
+      "code": "speakDialogue.ts 的 MALE_VOICE（src/lib/juniorHub/speakDialogue.ts）",
+      "modules": "**只用于单元通关听力题的对话轮次**：M / Boy / B 说的那几句走这一档；其余全站不用。",
+      "whyNote": "初中此前只有两种音色（hub 的 el:lily 与用户设置的 nova）。对话要分角色，就必须有第二个音色，否则一男一女被同一把嗓子读完。女声沿用 hubListen(el:lily@0.8) 不变，只新增男声 echo@0.8 —— key 里换的是 voice 位，没有为\"角色\"另加字段（cache key 公式结构不动）。"
+    },
     "hubSlow": {
       "speeds": [
         0.7
@@ -131,19 +140,23 @@
       "select": "id,audio_text,grade,volume,unit,difficulty,kind,publisher",
       "filters": {
         "grade": "in.(7,8,9)",
-        "volume": "in.(7B,8A,8B)",
-        "kind": "eq.sentence"
+        "volume": "in.(7B,8A,8B)"
       },
       "orderBy": "id",
       "picker": "juniorListeningItemAudioText",
       "tiers": [
-        "hubListen"
+        "hubListen",
+        "hubListenMale"
       ],
-      "playedBy": "单元通关 FinalQuizStage：预热 :1017、播放 :1099，都是 hubSpeak(..., JUNIOR_SPEAK_SPEED.listen)=0.8",
-      "scopeNote": "三个过滤条件都是照抄代码（juniorFinalQuiz.ts 的 loadListeningItems / listeningItemsForUnit），映射表与取数必须逐条一致：① volume 只有 7B/8A/8B 会被查（别的册灌了题也取不到）；② kind 只取 sentence。实测 grade 7-9 共 384 行全在这三册（各 128，24 单元 × 16 题），其中 sentence 140 条、dialogue 244 条。",
-      "dialogueDeferredNote": "**dialogue 类 244 条暂缓，不进可达集**：播放层现在把整条 audio_text 当一个字符串交给 hubSpeak，而对话文本形如 \"W: … M: …\" / \"A: … B: …\"（176 条带说话人标记），后果是①一男一女被同一个音色读完、②\"W:\"\"M:\"这些标记被 TTS 念出来。放开它需要先做「按说话人切句 + 分角色音色」（speak.ts 的 speakSequence 已具备能力），届时要同步改三处：本表源的 kind 过滤、loadListeningItems 的 kind 过滤、FinalQuizStage 的播放点（换 speakSequence）+ 预热。三处不同步就会让 244 道题以\"一个音色读到底\"的形态上线 —— src/lib/juniorListeningItems.test.ts 的绊线用例盯着这件事。另注：dialogue 暂缓的连带影响是 17 个单元的 difficulty 3 档没有 sentence 题（d3 基本都是对话），抽题会落到\"不足 3 档则从其余补足\"的分支，仍然出 3 题但易中难搭配退化。",
-      "orphanObjectsNote": "决策 C 之前已经按整段对话生成过 244 条音频对象（每条一个完整对话一个文件）。它们现在不在可达集里 —— 不删，留着；将来若改成按说话人切句，那批会作废（cache key 变），到时再统一清理。",
-      "historyNote": "这张表曾长期不可达：取数 select 里多写了一个表里不存在的 audio_url 列 → PostgREST 400 → data=null → `data ?? []` 吞掉错误当成 0 行 → 每次都静默回退内联题。384 道题从灌库起一道没用过。已修（去掉该列 + 查询出错时 console.error），不再静默。"
+      "playedBy": "单元通关 FinalQuizStage：speakDialogue() 按说话人逐句朗读（女=hubListen el:lily@0.8，男=hubListenMale echo@0.8）；预热同源。",
+      "scopeNote": "过滤条件照抄代码（juniorFinalQuiz.ts 的 loadListeningItems / listeningItemsForUnit）：volume 只有 7B/8A/8B 会被查。**kind 不再过滤** —— sentence 与 dialogue 都进池，dialogue 由 dialogueSplit.ts 按说话人切成独立对象。",
+      "orphanObjectsNote": "此前按“整段对话一个文件”生成过 244 条对象，切句后它们的 key 全部作废（清单见 data/audio-audit/junior_dialogue_orphans.csv）。按 Aaron 指示**先不删**。",
+      "historyNote": "这张表曾长期不可达：取数 select 里多写了一个表里不存在的 audio_url 列 → PostgREST 400 → data=null → `data ?? []` 吞掉错误当成 0 行 → 每次都静默回退内联题。384 道题从灌库起一道没用过。已修（去掉该列 + 查询出错时 console.error），不再静默。",
+      "genderTiers": [
+        "hubListen",
+        "hubListenMale"
+      ],
+      "splitNote": "每一轮对话是一个独立音频对象，key 走各自的 voice。切分规则的唯一实现是 src/lib/juniorHub/dialogueSplit.ts —— 取数(能不能进池)、抽取(可达对象)、播放(分角色)三处 import 同一个文件，不允许各写一份。"
     },
     {
       "id": "junior-listening-transcript-db",
@@ -235,7 +248,17 @@
     }
   ],
   "artifacts": [],
-  "unreachableSources": [],
-  "unreachableSourcesNote": "曾有一条：table:junior_listening_items（384 行）因为取数 select 带了表里不存在的 audio_url 列而 400、静默回退内联题。2026-07-27 已修并转为正式源 junior-listening-items-db，见上面的 historyNote。",
-  "deadFieldsNote": "grade9.json 里 14 个 unit 带 dialogues 字段，但**全站零消费**：句型关读的是组件常量 SENTENCE_PATTERNS，`unit.dialogues` 在 src 内没有任何读取点（与小学不同，小学的 courseDialoguePairs 是真播放源）。因此不给它建 source；若将来句型关改成读 unit.dialogues，必须回来加一条。"
+  "unreachableSources": [
+    {
+      "ref": "table:junior_listening_items（8 条具名/职业标记的对话）",
+      "rows": 8,
+      "status": "unverified",
+      "why": "说话人标记是 Linda: / Mary: / Mandy: / Dr Lu: / Reporter: / Host:（其中 1 条还是三人对话）。性别无法从标记机械判定，按“宁可不做也不猜”留在暂缓池：dialogueSplit() 对它们返回 null → 不进抽题池、不进可达集、不生成音频。",
+      "where": "全部在 8A：U3 ×2、U7 ×6",
+      "reachableIf": "人工给这 8 条定角色性别（例如在 DB 加一列，或把标记改写成 W:/M:）。改完 dialogueSplit 会自动接纳它们，届时可达集 +若干句，需要重跑生成。",
+      "verifiedAt": "2026-07-28"
+    }
+  ],
+  "deadFieldsNote": "grade9.json 里 14 个 unit 带 dialogues 字段，但**全站零消费**：句型关读的是组件常量 SENTENCE_PATTERNS，`unit.dialogues` 在 src 内没有任何读取点（与小学不同，小学的 courseDialoguePairs 是真播放源）。因此不给它建 source；若将来句型关改成读 unit.dialogues，必须回来加一条。",
+  "unreachableSourcesNote": "status=unverified 的条目由巡检每轮告警一次（audit-core.reviewDeclarations），不判失败——目的是别让\"暂缓\"变成\"消失\"。"
 }

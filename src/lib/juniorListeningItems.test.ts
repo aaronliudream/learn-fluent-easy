@@ -120,53 +120,67 @@ describe('②查询报错：回退内联，但必须留痕', () => {
   });
 });
 
-describe('绊线：dialogue 类放开前，多音频朗读必须先就绪', () => {
+describe('绊线：多音色链路的三处必须齐备', () => {
   const read = (rel: string) => fs.readFileSync(path.resolve(__dirname, '..', '..', rel), 'utf8');
   const junior = () => JSON.parse(read('scripts/audio/audio-sources/junior.json'));
-  const itemsSource = () => (junior().sources as Array<{ files: string; filters: Record<string, string>; dialogueVoices?: unknown }>)
+  const itemsSource = () => (junior().sources as Array<{ files: string; filters: Record<string, string>; genderTiers?: string[]; tiers: string[] }>)
     .find((s) => s.files === 'table:junior_listening_items')!;
 
   /**
-   * 现状（决策 C）：只取 kind='sentence'。dialogue 类 244 条暂缓，因为播放层是单次
-   * `hubSpeak(整段文本)`——"W: … M: …" 会被一个音色读完，说话人标记还会被念出来。
-   *
-   * 这条测试盯的是"有人放开 dialogue"那一刻：三处必须同时到位
-   * （取数过滤、映射表过滤、播放点换成 speakSequence + 声明分角色音色），
-   * 少一处就红。否则 244 道题会以"一个音色读到底"的形态直接上线。
+   * dialogue 已放开（244 条进池）。原来那三条绊线盯的是"放开但没做多音色"，
+   * 现在多音色做完了，盯的东西换成**链路别缺角**：
+   *   ① 取数不再按 kind 过滤，且映射表同样不过滤（两边一致）
+   *   ② 播放点确实走 speakDialogue（不是又退回单次 hubSpeak(整段)）
+   *   ③ 映射表声明了男女两档，且男声档有独立 voiceId
+   * 少任何一环，结果都是"一个音色读到底"或"生成的对象没人播"。
    */
-  it('代码与映射表的 kind 过滤必须一致（要么都限 sentence，要么都放开）', () => {
-    const codeFiltersSentence = /\.eq\("kind",\s*"sentence"\)/.test(read('src/lib/juniorFinalQuiz.ts'));
-    const cfgFiltersSentence = itemsSource().filters.kind === 'eq.sentence';
-    expect(
-      codeFiltersSentence,
-      `取数过滤(${codeFiltersSentence}) 与 junior.json 过滤(${cfgFiltersSentence}) 不一致：`
-      + '一边放开 dialogue 另一边没放，会导致这批文本没人给它生成音频（或反之，生成了没人播）',
-    ).toBe(cfgFiltersSentence);
+  it('① 取数与映射表都不再按 kind 过滤（两边一致）', () => {
+    expect(read('src/lib/juniorFinalQuiz.ts')).not.toMatch(/\.eq\("kind",\s*"sentence"\)/);
+    expect(itemsSource().filters.kind).toBeUndefined();
   });
 
-  it('一旦放开 dialogue：播放点必须已换成 speakSequence，且映射表声明了分角色音色', () => {
-    const codeFiltersSentence = /\.eq\("kind",\s*"sentence"\)/.test(read('src/lib/juniorFinalQuiz.ts'));
-    if (codeFiltersSentence) {
-      // 仍是决策 C 的状态：确认"暂缓"的理由还写在映射表里，别哪天被人删成谜
-      expect(itemsSource().dialogueDeferredNote, 'dialogue 暂缓的原因必须留在映射表里').toBeTruthy();
-      return;
-    }
+  it('② 播放点走 speakDialogue，预热走 prefetchDialogue（不是单次 hubSpeak 整段）', () => {
     const stage = read('src/pages/juniorHub/JuniorHubStagePlay.tsx');
-    expect(
-      stage.includes('speakSequence'),
-      'dialogue 已放开，但单元通关听力题还在用单次 hubSpeak(整段) —— 一男一女会被同一个音色读完',
-    ).toBe(true);
-    expect(
-      itemsSource().dialogueVoices,
-      'dialogue 已放开，但映射表没声明分角色音色（W/M 或 A/B → 哪个 voiceId），可达集算不出来',
-    ).toBeTruthy();
+    expect(stage).toContain('speakDialogue(q.audio!, grade)');
+    expect(stage).toContain('prefetchDialogue(audios, grade)');
+    // 听力题按钮不该再出现"把整段交给 hubSpeak"的写法
+    expect(stage).not.toMatch(/hubSpeak\(q\.audio!/);
   });
 
-  it('只取 sentence 时，抽题池里不会出现带说话人标记的文本', async () => {
-    // 说话人标记（"W:"/"M:"/"A:"/"B:"）是 dialogue 的形态特征；sentence 类不该有
-    queryResult = { data: [row(1, 'd1-a'), row(2, 'd2-a'), row(3, 'd3-a')], error: null };
-    const items = await listeningItemsForUnit(unitOf('7B'));
-    expect(items.every((i) => !/(^|\s)[A-Z]\s*:/.test(i.audio ?? ''))).toBe(true);
+  it('③ 映射表声明男女两档，男声档有独立 voiceId 且与代码一致', async () => {
+    const src = itemsSource();
+    expect(src.genderTiers).toHaveLength(2);
+    for (const t of src.genderTiers!) expect(src.tiers).toContain(t);
+    const tiers = junior().tiers as Record<string, { speeds: number[]; voiceId?: string }>;
+    const [femaleTier, maleTier] = src.genderTiers!;
+    expect(tiers[maleTier].voiceId, '男声档必须有独立音色，否则男女同声').toBeTruthy();
+    expect(tiers[maleTier].voiceId).not.toBe(tiers[femaleTier].voiceId);
+    const { MALE_VOICE, DIALOGUE_SPEED } = await import('./juniorHub/speakDialogue');
+    expect(tiers[maleTier].voiceId).toBe(MALE_VOICE);
+    expect(tiers[maleTier].speeds).toEqual([DIALOGUE_SPEED]);
+    expect(tiers[femaleTier].speeds).toEqual([DIALOGUE_SPEED]);
+  });
+
+  it('④ 性别不可判的那批仍被显式声明（status=unverified，巡检每轮提醒）', () => {
+    const un = (junior().unreachableSources ?? []) as Array<{ ref: string; status: string; rows: number }>;
+    const row = un.find((u) => u.ref.includes('junior_listening_items'));
+    expect(row, '8 条不可判的对话必须留在 unreachableSources 里，别让"暂缓"变成"消失"').toBeTruthy();
+    expect(row!.status).toBe('unverified');
+    expect(row!.rows).toBe(8);
+  });
+
+  it('⑤ 不可判的对话不会进抽题池（取数侧用同一个 dialogueSplit 过滤）', async () => {
+    queryResult = {
+      data: [
+        { ...row(1, 'ok-1'), audio_text: 'W: Hi. M: Hello.' },
+        { ...row(2, 'ok-2'), audio_text: 'W: How are you? M: Fine.' },
+        { ...row(3, 'ok-3'), audio_text: 'Hello everyone. I am Peter.' },
+        { ...row(3, 'bad'), audio_text: 'Linda: I am not splittable.' },
+      ],
+      error: null,
+    };
+    const items = await listeningItemsForUnit(unitOf('8A'));
+    expect(items.every((i) => !i.audio?.startsWith('Linda:'))).toBe(true);
   });
 });
 

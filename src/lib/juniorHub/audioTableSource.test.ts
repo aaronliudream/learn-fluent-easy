@@ -160,8 +160,10 @@ describe('映射表档位 === 代码常量（矩阵与 junior.json 不许各说�
     const t = readJunior().tiers as Record<string, { speeds: number[]; voiceId?: string }>;
     expect(t.userDefault.voiceId).toBe(DEFAULT_SETTINGS.voiceId);
     expect(t.userDefault.speeds).toEqual([DEFAULT_SETTINGS.speed]);
-    const overridden = Object.entries(t).filter(([, v]) => v.voiceId).map(([k]) => k);
-    expect(overridden).toEqual(['userDefault']);
+    // 带 voiceId 覆盖的档现在有两个：userDefault(nova) 与 hubListenMale(echo，对话男声)。
+    // 断言"具体是哪两个"而不是"只有一个"——多一个档就该在这里被看见。
+    const overridden = Object.entries(t).filter(([, v]) => v.voiceId).map(([k]) => k).sort();
+    expect(overridden).toEqual(['hubListenMale', 'userDefault']);
   });
 
   it('闯关档 = getKidSpeed(7/8/9) = 1.0（junior 年级钳不到 0.7/0.85 分支）', () => {

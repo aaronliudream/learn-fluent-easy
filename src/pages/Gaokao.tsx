@@ -55,7 +55,10 @@ function PublisherChooser() {
                 <span className="text-5xl">{meta.emoji}</span>
                 <span className="mt-3 text-lg font-extrabold" style={{ color: NAVY }}>{meta.name}</span>
                 <span className="mt-1 text-xs text-muted-foreground">{meta.sub}</span>
-                <span className="mt-3 text-[11px] leading-snug text-muted-foreground">{meta.tagline}</span>
+                {/* 版本年份是学生选版的唯一判据,字号刻意大于出版社全名(sub),与初中选版页同规格 */}
+                <span className="mt-3 text-[15px] font-semibold leading-snug" style={{ color: NAVY, opacity: 0.85 }}>
+                  {meta.tagline}
+                </span>
               </Link>
             );
           })}

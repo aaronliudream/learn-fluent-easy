@@ -18,8 +18,8 @@ export const JUNIOR_PUBLISHER_META: Record<
   JuniorPublisher,
   { name: string; sub: string; emoji: string; tagline: string }
 > = {
-  pep: { name: "人教版", sub: "人民教育出版社", emoji: "📕", tagline: "课本同步 7-9 年级 · 8 关闯关 · 中考真题" },
-  fltrp: { name: "外研社版", sub: "外语教学与研究出版社", emoji: "📗", tagline: "课本同步(2024 新版)· 6 大专项,内容陆续上线" },
+  pep: { name: "人教版", sub: "人民教育出版社", emoji: "📕", tagline: "课本同步（2024新版）" },
+  fltrp: { name: "外研社版", sub: "外语教学与研究出版社", emoji: "📗", tagline: "课本同步（2024新版）" },
 };
 
 /** 选择页卡片顺序。 */

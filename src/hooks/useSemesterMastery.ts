@@ -7,7 +7,7 @@ import {
 } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef } from "@/lib/juniorHub/types";
 
-export type UnitMasteryMap = Record<string, { mastered: number; total: number; pct: number }>;
+export type UnitMasteryMap = Record<string, { mastered: number; done: number; total: number; pct: number; donePct: number }>;
 
 /**
  * 册页每张单元卡的「掌握度」——**整册一次批量拉取**,不是逐卡查询。
@@ -72,6 +72,7 @@ export function useSemesterMastery(
       }
       const allWordIds = Object.values(byUnitWords).flat();
       const masteredWords = new Set<string>();
+      const touchedWords = new Set<string>();   // 有 junior_word_mastery 记录 = 做过
       for (let i = 0; i < allWordIds.length; i += 200) {
         const slice = allWordIds.slice(i, i + 200);
         const { data } = await supabase
@@ -81,9 +82,9 @@ export function useSemesterMastery(
           .in("word_id", slice);
         if (cancelled) return;
         for (const r of (data ?? []) as Record<string, never>[]) {
-          if (isWordMastered(r as unknown as Record<string, number>)) {
-            masteredWords.add((r as unknown as { word_id: string }).word_id);
-          }
+          const wid = (r as unknown as { word_id: string }).word_id;
+          touchedWords.add(wid);
+          if (isWordMastered(r as unknown as Record<string, number>)) masteredWords.add(wid);
         }
       }
 
@@ -129,7 +130,9 @@ export function useSemesterMastery(
         const total = wordIds.length + g.total;
         if (total <= 0) continue;
         const mastered = wordIds.filter((id) => masteredWords.has(id)).length + g.mastered;
-        out[u.id] = { mastered, total, pct: pctOf(mastered, total) };
+        // 「已做过」= 有练习记录的词/题数(中间层口径,见 combineUnitMastery)
+        const done = wordIds.filter((id) => touchedWords.has(id)).length + g.done;
+        out[u.id] = { mastered, done, total, pct: pctOf(mastered, total), donePct: pctOf(done, total) };
       }
       if (!cancelled) setMap(out);
     })();

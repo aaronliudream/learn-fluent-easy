@@ -1,5 +1,6 @@
 ﻿import { useNavigate, useParams } from "react-router-dom";
 import { useGaokaoHub } from "@/lib/gaokaoHub/context";
+import { useHubBack } from "@/lib/useHubBack";
 import { findSemester, getGradeCourse, unitLabel } from "@/lib/gaokaoHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/gaokaoHub/progress";
 import { useSemesterMastery } from "@/hooks/useSemesterMastery";
@@ -14,6 +15,8 @@ export default function GaokaoHubSemester() {
   const course = getGradeCourse(grade, publisher);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/gaokao/hub/${grade}`;
+  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  const goBack = useHubBack(wp(`${base}/course`));
   // ⚠️ 必须在 early-return 之前调用(hook 顺序)。整册一次批量拉取,grade+9 与单元页同口径。
   const masteryMap = useSemesterMastery(sem?.units, grade + 9, publisher);
   const wp = (p: string) => withPublisher(p, publisher);
@@ -25,7 +28,7 @@ export default function GaokaoHubSemester() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(wp(`${base}/course`))} className="text-xl">
+        <button type="button" onClick={goBack} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">

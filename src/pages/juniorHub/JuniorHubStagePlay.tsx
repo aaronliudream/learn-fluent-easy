@@ -2316,7 +2316,8 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 answerIdx: q.answer,
                 pickedIdx: q.picked ?? null,
                 audio: q.audio ?? null,
-                audioUrl: q.audioUrl ?? null,
+                // 不传 audioUrl：单元通关的听力题没有预生成 MP3，错题本按 audio 文本走 TTS。
+                // （原来这里传的是 junior_listening_items.audio_url，而那张表根本没有这一列。）
                 explanation: q.explanation ?? null,
                 idSuffix: q.questionId ?? q.q,
               });

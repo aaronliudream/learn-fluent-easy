@@ -195,7 +195,8 @@ describe('CI 接入：凭据来源与 PR 闸的表源跳过', () => {
     expect([...rows.values()].some((r) => r.source_ref.startsWith('table:'))).toBe(false);
     // 被跳过的东西必须能被列出来（否则调用方无法如实说明覆盖范围）
     const skipped = tableSourcesOf(cfg);
-    expect(skipped.map((s) => s.table).sort()).toEqual(['junior_listening_exercises', 'junior_vocab', 'junior_vocab']);
+    expect(skipped.map((s) => s.table).sort())
+      .toEqual(['junior_listening_exercises', 'junior_listening_items', 'junior_vocab', 'junior_vocab']);
     vi.unstubAllGlobals();
   });
 
@@ -216,29 +217,49 @@ describe('CI 接入：凭据来源与 PR 闸的表源跳过', () => {
   });
 });
 
-describe('绊线：junior_listening_items 一旦变可达，映射表必须跟上', () => {
+describe('绊线：junior_listening_items 的取数与映射表必须同步', () => {
+  const finalQuizSrc = () => fs.readFileSync(path.resolve(__dirname, '../juniorFinalQuiz.ts'), 'utf8');
+  const selectCols = () => {
+    const m = /from\("junior_listening_items"\)\s*\n?\s*\.select\("([^"]+)"\)/.exec(finalQuizSrc());
+    expect(m, '取数写法变了，先重新核可达性再改这条测试').not.toBeNull();
+    return m![1].split(',').map((c) => c.trim());
+  };
+
   /**
-   * 现状（2026-07-26 实测）：`junior_listening_items` **没有** audio_url 这一列，
-   * 而 juniorFinalQuiz.ts 的 select 带了它 → PostgREST 400 → data=null → `data ?? []`
-   * 吞掉错误 → 单元通关听力题永远回退内联 JSON。那 384 条 audio_text 因此播不到，
-   * 所以 junior.json 没给它建 source。
-   *
-   * 这条测试盯的是"修好那天"：select 一旦不再带 audio_url，384 条就变成可达的 0.8 档文本，
-   * 必须同时给 junior.json 加表源，否则单元通关听力题会全程冷合成、而且没人会发现。
+   * 这批题曾经**一道都没被用过**：select 里多写了一个表里不存在的 `audio_url` 列 →
+   * PostgREST 400 → data=null → `data ?? []` 吞掉错误当成"题库 0 行" → 每次静默回退内联题。
+   * 没有任何报错，所以从灌库到发现隔了很久。这条测试就是钉住"别再退回去"。
    */
-  it('select 仍带不存在的 audio_url（=仍不可达）；若已改，则 junior.json 必须有该表源', () => {
-    const src = fs.readFileSync(path.resolve(__dirname, '../juniorFinalQuiz.ts'), 'utf8');
-    const sel = /from\("junior_listening_items"\)\s*\n?\s*\.select\("([^"]+)"\)/.exec(src);
-    expect(sel, '取数写法变了，先重新核可达性再改这条测试').not.toBeNull();
-    const stillBroken = sel![1].includes('audio_url');
+  it('select 不许再出现 audio_url（这张表没有这一列，带上就是 400 → 静默回退）', () => {
+    expect(selectCols()).not.toContain('audio_url');
+  });
+
+  it('select 与 junior.json 表源的取数字段一致：audio_text 两边都要有', () => {
+    expect(selectCols()).toContain('audio_text');
+    const src = (readJunior().sources as Array<{ files: string; select: string }>)
+      .find((s) => s.files === 'table:junior_listening_items');
+    expect(src, 'junior_listening_items 已可达，映射表必须有对应表源，否则这批文本没人给它生成音频').toBeTruthy();
+    expect(src!.select.split(',').map((c) => c.trim())).toContain('audio_text');
+  });
+
+  it('查询出错不许再被静默吞掉（回退路径必须留痕）', () => {
+    const src = finalQuizSrc();
+    expect(src).toMatch(/const \{ data, error \}[\s\S]{0,400}junior_listening_items/);
+    expect(src).toMatch(/if \(error\)[\s\S]{0,300}console\.error/);
+  });
+
+  it('映射表的 volume 过滤与代码里的可达册一致（代码只对 7B/8A/8B 查这张表）', () => {
+    const books = /\[("7B",\s*"8A",\s*"8B")\]\.includes\(unit\.book\)/.exec(finalQuizSrc());
+    expect(books, 'listeningItemsForUnit 的可达册变了 → junior.json 的 volume 过滤要同步').not.toBeNull();
+    const src = (readJunior().sources as Array<{ files: string; filters: Record<string, string> }>)
+      .find((s) => s.files === 'table:junior_listening_items');
+    expect(src!.filters.volume).toBe('in.(7B,8A,8B)');
+  });
+
+  it('不再挂在 unreachableSources 下（同一张表不能既"不可达"又是正式源）', () => {
     const cfg = readJunior();
-    const declared = (cfg.sources as { files: string }[]).some((s) => s.files === 'table:junior_listening_items');
-    if (stillBroken) {
-      expect(declared, 'select 仍会 400 → 该表不可达 → 不该建 source').toBe(false);
-      expect((cfg.unreachableSources ?? []).map((u: { ref: string }) => u.ref)).toContain('table:junior_listening_items');
-    } else {
-      expect(declared, 'select 已修好 → 384 条 audio_text 变可达 → junior.json 必须加 table:junior_listening_items（tier=hubListen）').toBe(true);
-    }
+    expect((cfg.unreachableSources ?? []).map((u: { ref: string }) => u.ref))
+      .not.toContain('table:junior_listening_items');
   });
 });
 

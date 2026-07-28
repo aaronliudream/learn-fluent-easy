@@ -33,7 +33,10 @@ export async function recordFinalQuizMistake(p: {
   answerIdx: number;
   pickedIdx?: number | null;
   audio?: string | null; // 听力题朗读文本(TTS,现场合成兜底)
-  audioUrl?: string | null; // 听力题真 MP3(junior_listening_items.audio_url,做题实际播放来源,优先)
+  // 听力题真 MP3(有则优先播原声,无则按 audio 文本走 TTS)。
+  // 来源是听力专区 junior_listening_exercises.audio_url;**单元通关那条线不带**
+  // (junior_listening_items 没有 audio_url 列,那批题一律 TTS)。
+  audioUrl?: string | null;
   explanation?: string | null;
   /** 稳定标识后缀:语法题有 questionId 时传它,否则留空(内部按题干+选项哈希兜底)。 */
   idSuffix?: string | null;

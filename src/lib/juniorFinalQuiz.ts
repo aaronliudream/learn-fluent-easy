@@ -37,7 +37,10 @@ export type FinalQuizKind = "grammar" | "listening" | "vocab" | "reading";
 export type FinalQuizItem = QuizQuestion & {
   kind?: FinalQuizKind;
   explanation?: string;
-  audioUrl?: string | null; // 听力题:junior_listening_items.audio_url(真 MP3,做题/专区实际播放的来源)
+  // 听力题的真 MP3。**单元通关这条线不设它**——junior_listening_items 没有 audio_url 列，
+  // 这批题一律走 TTS（audio 文本 @0.8）。字段保留是给听力专区那条线用的
+  // （junior_listening_exercises 确实有预生成 MP3），错题本据此优先放原声。
+  audioUrl?: string | null;
 
   questionId?: string; // 语法题:junior_grammar_questions.id(记录用)
   pointId?: string; // 语法题归属 point(记录用)
@@ -255,7 +258,6 @@ type ListeningRow = {
   difficulty: number;
   kind: string;
   audio_text: string;
-  audio_url: string | null;
   question: string;
   options: unknown;
   answer: string;
@@ -271,8 +273,7 @@ function dbListeningItem(r: ListeningRow): FinalQuizItem {
     q: r.question,
     opts,
     answer: idx >= 0 && idx < opts.length ? idx : 0,
-    audio: r.audio_text,
-    audioUrl: r.audio_url, // 真 MP3 一并带上(专区/做题播放用它;错题本据此放原声)
+    audio: r.audio_text, // 这批没有预生成 MP3,走 TTS(hubSpeak @0.8),见 audio-sources/junior.json
     explanation: r.explanation || undefined,
     point: "听力",
     dim: "listening",
@@ -284,12 +285,36 @@ function dbListeningItem(r: ListeningRow): FinalQuizItem {
  * 返回少于 LISTENING_N 时(题库不足)由调用层回退内联。
  */
 async function loadListeningItems(grade: number, volume: string, unit: string): Promise<FinalQuizItem[]> {
-  const { data } = await supabase
+  // ⚠️ select 里只许出现这张表**真实存在**的列。
+  // 这里曾经多写了一个 audio_url（表里没有这一列）→ PostgREST 直接 400 →
+  // data=null → 下面的 `data ?? []` 把错误吞掉当成"题库 0 行" → 每次都静默回退内联题。
+  // 结果是这批 384 道题从灌库那天起一道都没被用过，而且没有任何报错能看出来。
+  //
+  // ⚠️ 只取 kind='sentence'：dialogue 类（244 道，占这张表的 2/3）**暂不进抽题池**。
+  // 原因是播放层现在把整条 audio_text 当一个字符串丢给 hubSpeak，而对话文本形如
+  // "W: ... M: ..."（女声/男声）或 "A: ... B: ..."：
+  //   ① 一男一女的对话会被**同一个音色**从头读到尾；
+  //   ② "W:" "M:" 这些说话人标记会被 TTS 一起念出来。
+  // 要放开 dialogue，得先做「按说话人切句 + 分角色音色」（speak.ts 已有 speakSequence 可用），
+  // 那是独立一件事。放开时**必须同步**改这里的过滤、junior.json 的表源过滤与播放点，
+  // 否则 244 道题会以"一个音色读到底"的形态直接上线 —— 有测试盯着这三处（见
+  // src/lib/juniorListeningItems.test.ts 的「绊线」用例）。
+  const { data, error } = await supabase
     .from("junior_listening_items")
-    .select("difficulty,kind,audio_text,audio_url,question,options,answer,explanation")
+    .select("difficulty,kind,audio_text,question,options,answer,explanation")
     .eq("grade", grade)
     .eq("volume", volume)
-    .eq("unit", unit);
+    .eq("unit", unit)
+    .eq("kind", "sentence");
+  if (error) {
+    // 查询失败仍然回退内联（保住做题体验），但**必须留下痕迹**：
+    // 静默回退正是上面那个 bug 藏了这么久的原因。
+    console.error(
+      `[juniorFinalQuiz] junior_listening_items 查询失败，本单元回退内联听力题（${volume}/${unit}）：`,
+      error.message ?? error,
+    );
+    return [];
+  }
   const rows = (data ?? []) as ListeningRow[];
   if (!rows.length) return [];
   const byD: Record<number, ListeningRow[]> = { 1: [], 2: [], 3: [] };
@@ -321,7 +346,9 @@ async function loadListeningItems(grade: number, volume: string, unit: string): 
  * 听力 3 题来源:7B + 八年级(8A/8B)从 junior_listening_items 抽(难度 1/2/3 各 1·自适应);
  * 题库未覆盖/不足 3 题的单元(如 8 年级尚未灌库的 15 单元)回退内联 6 条,保证够 3 题、不报错不白屏。
  */
-async function listeningItemsForUnit(unit: UnitDef): Promise<FinalQuizItem[]> {
+// 导出仅为守门测试（juniorListeningItems.test.ts）：这条路径出过一次"静默回退"的事故，
+// 靠 buildFinalQuiz 整条链去测要铺一堆语法/掌握度的假数据，测不到点子上。
+export async function listeningItemsForUnit(unit: UnitDef): Promise<FinalQuizItem[]> {
   if (["7B", "8A", "8B"].includes(unit.book)) {
     const grade = parseInt(unit.book, 10) || 7; // '7B'→7,'8A'/'8B'→8
     const fromDb = await loadListeningItems(grade, unit.book, unit.unitKey);

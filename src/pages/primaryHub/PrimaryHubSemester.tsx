@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import NotFoundCard from "@/components/hub/NotFoundCard";
 import { useHubBack } from "@/lib/useHubBack";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findSemester, getGradeCourse, isUnitListed } from "@/lib/primaryHub/courseData";
@@ -20,7 +21,7 @@ export default function PrimaryHubSemester() {
   const vol = semId?.includes("volume1") ? "v1" : "v2";
 
   if (!sem || !semId) {
-    return <div className="p-6 text-center">课程未找到</div>;
+    return <NotFoundCard title="未找到这一册" homePath={`/primary/hub/${grade}`} />;
   }
 
   return (

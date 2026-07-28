@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NotFoundCard from "@/components/hub/NotFoundCard";
 import { useHubBack } from "@/lib/useHubBack";
 import { useNavigate, useParams, type NavigateFunction } from "react-router-dom";
 import { useGaokaoHub } from "@/lib/gaokaoHub/context";
@@ -136,7 +137,7 @@ export default function GaokaoHubUnit() {
   const unitMastery = useUnitMastery(unit, grade + 9, publisher);
 
   if (!unit || !unitId || !semId) {
-    return <div className="p-6 text-center">单元未找到</div>;
+    return <NotFoundCard title="未找到这个单元" homePath={`/gaokao/hub/${grade}`} />;
   }
 
   return (

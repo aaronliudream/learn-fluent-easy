@@ -1,5 +1,6 @@
 ﻿import { useNavigate, useParams } from "react-router-dom";
 import { useGaokaoHub } from "@/lib/gaokaoHub/context";
+import NotFoundCard from "@/components/hub/NotFoundCard";
 import { useHubBack } from "@/lib/useHubBack";
 import { findSemester, getGradeCourse, unitLabel } from "@/lib/gaokaoHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/gaokaoHub/progress";
@@ -15,14 +16,15 @@ export default function GaokaoHubSemester() {
   const course = getGradeCourse(grade, publisher);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/gaokao/hub/${grade}`;
-  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
-  const goBack = useHubBack(wp(`${base}/course`));
   // ⚠️ 必须在 early-return 之前调用(hook 顺序)。整册一次批量拉取,grade+9 与单元页同口径。
   const masteryMap = useSemesterMastery(sem?.units, grade + 9, publisher);
   const wp = (p: string) => withPublisher(p, publisher);
+  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  // ⚠️ 必须放在 `wp` 声明**之后** —— 之前放在 base 后面,读到的是 TDZ 里的 wp,高中册页整页崩。
+  const goBack = useHubBack(wp(`${base}/course`));
 
   if (!sem || !semId) {
-    return <div className="p-6 text-center">课程未找到</div>;
+    return <NotFoundCard title="未找到这一册" homePath={`/gaokao/hub/${grade}`} />;
   }
 
   return (

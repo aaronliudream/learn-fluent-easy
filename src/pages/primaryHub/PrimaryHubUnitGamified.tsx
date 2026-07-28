@@ -28,6 +28,7 @@
  */
 
 import { Fragment, useMemo } from "react";
+import NotFoundCard from "@/components/hub/NotFoundCard";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import {
   BookOpen,
@@ -142,7 +143,7 @@ export default function PrimaryHubUnitGamified() {
   );
 
   if (!unit || !unitId || !semId) {
-    return <div className="p-6 text-center">单元未找到</div>;
+    return <NotFoundCard title="未找到这个单元" homePath={`/primary/hub/${grade}`} />;
   }
 
   if (!isUnitPublished(unit)) {

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import NotFoundCard from "@/components/hub/NotFoundCard";
 import { useHubBack } from "@/lib/useHubBack";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
@@ -214,7 +215,7 @@ export default function JuniorHubUnit() {
   const unitMastery = useUnitMastery(unit, grade, dbPublisherFor(pub));
 
   if (!unit || !unitId || !semId) {
-    return <div className="p-6 text-center">单元未找到</div>;
+    return <NotFoundCard title="未找到这个单元" homePath={`/junior/hub/${grade}`} />;
   }
 
   return (

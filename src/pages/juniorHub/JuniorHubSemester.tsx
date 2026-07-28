@@ -1,5 +1,6 @@
 ﻿import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
+import NotFoundCard from "@/components/hub/NotFoundCard";
 import { useHubBack } from "@/lib/useHubBack";
 import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
 import { readJuniorPublisherParam, withJuniorPublisher, dbPublisherFor } from "@/lib/juniorHub/publisher";
@@ -26,7 +27,7 @@ export default function JuniorHubSemester() {
   const masteryMap = useSemesterMastery(sem?.units, grade, dbPublisherFor(pub));
 
   if (!sem || !semId) {
-    return <div className="p-6 text-center">课程未找到</div>;
+    return <NotFoundCard title="未找到这一册" homePath={`/junior/hub/${grade}`} />;
   }
 
   return (

@@ -252,10 +252,16 @@ export default function JuniorHubUnit() {
           {/* 掌握度与完成度并列 —— 完成度只数「走完几关」,阅读/完形/听力做过 1 篇就打 ✓,
               单独看它会让学生以为学完了。覆盖范围标在副文案里,不含无单元归属的听力/阅读题库。 */}
           {unitMastery && (
-            <div>
-              <div className="text-lg font-bold">{unitMastery.pct}%</div>
-              <div className="text-xs opacity-90">掌握度·词汇+语法</div>
-            </div>
+            <>
+              <div>
+                <div className="text-lg font-bold">{unitMastery.donePct}%</div>
+                <div className="text-xs opacity-90">已做过</div>
+              </div>
+              <div>
+                <div className="text-lg font-bold">{unitMastery.pct}%</div>
+                <div className="text-xs opacity-90">掌握度·词汇+语法</div>
+              </div>
+            </>
           )}
         </div>
       </div>

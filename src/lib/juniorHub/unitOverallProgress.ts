@@ -113,11 +113,15 @@ export const pctOf = (n: number, d: number) => (d > 0 ? Math.round((n / d) * 100
  * 两块都没数据时返回 null(调用方据此不渲染,而不是显示一个假的 0%)。
  */
 export function combineUnitMastery(
-  vocab: { mastered: number; total: number } | null | undefined,
-  grammar: { mastered: number; total: number } | null | undefined,
-): { mastered: number; total: number; pct: number } | null {
+  vocab: { mastered: number; total: number; done?: number } | null | undefined,
+  grammar: { mastered: number; total: number; done?: number } | null | undefined,
+): { mastered: number; done: number; total: number; pct: number; donePct: number } | null {
   const total = (vocab?.total ?? 0) + (grammar?.total ?? 0);
   if (total <= 0) return null;
   const mastered = (vocab?.mastered ?? 0) + (grammar?.mastered ?? 0);
-  return { mastered, total, pct: pctOf(mastered, total) };
+  // ★「已做过」是三层口径里的中间层(Aaron 2026-07-27 定)★
+  //   完成度 = 走完几关 · 已做过 = 练过多少题/词 · 掌握度 = 会不会(答对 2 次)
+  //   只有掌握度时,学生认真做完一整套测试数字仍是 0%(每题只答对 1 次),努力不可见。
+  const done = (vocab?.done ?? 0) + (grammar?.done ?? 0);
+  return { mastered, done, total, pct: pctOf(mastered, total), donePct: pctOf(done, total) };
 }

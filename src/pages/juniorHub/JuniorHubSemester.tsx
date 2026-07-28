@@ -108,9 +108,9 @@ export default function JuniorHubSemester() {
                   {/* 掌握度与完成度并列(与单元内页同口径同数据源)。整册批量拉取,不逐卡查询。
                       没有掌握数据时整行不渲染 —— 不显示假的 0%,也不能影响上面「即将开放」的判断。 */}
                   {masteryMap[unit.id] ? (
-                    <div className="mt-1 flex items-center gap-2 text-xs">
-                      <span className="text-[#888780]">掌握度·词汇+语法</span>
-                      <span className="font-bold text-amber-600">{masteryMap[unit.id].pct}%</span>
+                    <div className="mt-1 flex items-center gap-3 text-xs">
+                      <span className="text-[#888780]">已做过 <span className="font-bold text-sky-600">{masteryMap[unit.id].donePct}%</span></span>
+                      <span className="text-[#888780]">掌握度 <span className="font-bold text-amber-600">{masteryMap[unit.id].pct}%</span></span>
                     </div>
                   ) : null}
                 </>

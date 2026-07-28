@@ -9,18 +9,55 @@ import type { WritingBlock } from "@/lib/juniorHub/types";
  * 当初不敢直接接线,就是因为 WritingStudio 会用四屏**换掉**真批改;现在是四屏**喂给**真批改。
  *
  * ★为什么不复用 WritingStudio.tsx★
- * 那个组件从没运行过(全仓零 import),而且里面焊死了 7B 那一课的假设:
- * `values.subj` 推 He/She、`values.name` 判开头句。五册的 card key 各不相同,这些假设要么无效、
- * 要么误导。它真正有价值的是两个纯函数的语义(`{key}` 插值、缺值显示占位),这里保留了;
- * UI 部分重写,不继承未验证代码。原文件留待删除清单处理。
+ * 那个组件从没运行过(全仓零 import),UI 部分不继承未验证代码。
+ * ⚠️ 但它的**逻辑**里有真东西:`subj` → He/She/His/Her 的人称派生。
+ * 我第一版把它当成「7B 单课假设」丢掉了 —— **那个判断是错的**,人教 7A U4 这类
+ * 「介绍一个朋友」的模板正依赖它(cards 只给 `subj`,模板写 `{Poss} name is {name}`)。
+ * 丢掉的后果是那一课草稿永远留着 ____,由数据面实测抓出后已恢复(见 deriveValues)。
+ * 它另一处 `values.name` 判开头句才是真的单课假设,没有继承。
  *
  * ★数据零新造★ cards / templates / opener / sampleWords / minWords 全部来自五册现成的 writing 块。
  */
 
+/**
+ * 人称派生:填了 `subj`(he/she)就自动得到 `{Subj}` `{subj}` `{Poss}` `{poss}`。
+ *
+ * ⚠️ 这**不是**某一课的特例 —— 人教 7A U4 这类"介绍一个朋友"的模板依赖它
+ * (cards 里只有 `subj`,模板里写的是 `{Poss} name is {name}`)。
+ * 我第一版把它当成 WritingStudio 的单课包袱丢掉了,结果那一课的草稿会留下永远填不上的 ____。
+ * 数据面实测(writing-scaffold-check)把这个抓了出来。
+ */
+export function deriveValues(values: Record<string, string>): Record<string, string> {
+  const out = { ...values };
+  const raw = (values.subj ?? "").trim().toLowerCase();
+  if (raw) {
+    const she = raw === "she" || raw === "her";
+    out.subj = she ? "she" : "he";
+    out.Subj = she ? "She" : "He";
+    out.poss = she ? "her" : "his";
+    out.Poss = she ? "Her" : "His";
+  }
+  return out;
+}
+
+/** 模板里实际引用到的占位符(含派生出来的),用来决定屏1 显示哪些卡片。 */
+export function usedKeys(templates: WritingBlock["templates"]): Set<string> {
+  const out = new Set<string>();
+  for (const lv of ["l1", "l2", "l3"] as const) {
+    for (const line of templates?.[lv] ?? []) {
+      for (const m of line.matchAll(/\{(\w+)\}/g)) out.add(m[1]);
+    }
+  }
+  // 用到任一派生形,就等于用到了 subj 这张卡
+  if (out.has("Subj") || out.has("Poss") || out.has("poss")) out.add("subj");
+  return out;
+}
+
 /** 把 `{key}` 换成学生填的值;没填的显示成下划线占位,让人一眼看出还缺什么。 */
 export function fillTemplate(line: string, values: Record<string, string>): string {
+  const derived = deriveValues(values);
   return line.replace(/\{(\w+)\}/g, (_m, k: string) => {
-    const v = (values[k] ?? "").trim();
+    const v = (derived[k] ?? "").trim();
     return v || "____";
   });
 }
@@ -69,8 +106,12 @@ export default function WritingScaffold({
   /** 直接写:跳过脚手架,空白进屏4 */
   onSkip: () => void;
 }) {
-  const cards = w.cards ?? [];
   const templates = w.templates;
+  // ★只显示模板真正用到的卡片★ 有几课 cards 里定义了模板根本没引用的 key
+  // (人教 8A U4 的 {feeling}、8B U3 的三个),显示出来就是白让学生填。
+  const allCards = w.cards ?? [];
+  const used = useMemo(() => usedKeys(templates), [templates]);
+  const cards = allCards.filter((c) => used.has(c.key));
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [values, setValues] = useState<Record<string, string>>(
     () => Object.fromEntries(cards.map((c) => [c.key, ""])),

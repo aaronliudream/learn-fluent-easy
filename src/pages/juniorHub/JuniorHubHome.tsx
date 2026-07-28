@@ -11,7 +11,6 @@ import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/juniorHub/c
 import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { unitLabel } from "./JuniorHubUnit";
 import { getUnitState } from "@/lib/juniorHub/storage";
-import { AITestCard } from "@/components/juniorHub/AITestCard";
 
 export default function JuniorHubHome() {
   const { grade, state } = useJuniorHub();
@@ -79,7 +78,6 @@ export default function JuniorHubHome() {
             📖 外研社 2024 新版九年级教材陆续出版中
           </div>
         )}
-        <AITestCard />
 
         {nextStage && currentUnit?.available && (
           <section className="mb-4">

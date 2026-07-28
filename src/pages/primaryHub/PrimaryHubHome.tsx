@@ -9,7 +9,6 @@ import {
 } from "@/lib/primaryHub/progress";
 import { findUnit, getGradeCourse, isUnitListed, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
 import { readUnitState } from "@/lib/primaryHub/storage";
-import { AITestCard } from "@/components/primaryHub/AITestCard";
 import { getWordsForGrade } from "@/lib/primaryHub/vocabGames/words";
 import { getProgress } from "@/lib/primaryHub/vocabGames/srs";
 
@@ -70,7 +69,6 @@ export default function PrimaryHubHome() {
       </div>
 
       <div className="px-4 pt-4">
-        <AITestCard />
 
         {nextStage && currentUnit && isUnitListed(currentUnit) && (
           <section className="mb-4">

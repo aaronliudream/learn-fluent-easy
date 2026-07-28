@@ -14,11 +14,31 @@ const FILES = [
   ['src/data/juniorHub/fltrp-grade7.json', 'wy7A/wy7B'],
   ['src/data/juniorHub/fltrp-grade8.json', 'wy8A/wy8B'],
   ['src/data/juniorHub/fltrp-grade9.json', 'wy9A'],
+  // 2026-07-27 人教各册进白名单后一并纳入检查
+  ['src/data/juniorHub/grade7.json', '人教 7A/7B'],
+  ['src/data/juniorHub/grade8.json', '人教 8A/8B'],
+  ['src/data/juniorHub/grade9.json', '人教 9'],
 ];
 
-const fill = (line, values) => line.replace(/\{(\w+)\}/g, (_m, k) => (values[k] ?? '').trim() || '____');
+// 与 WritingScaffold.deriveValues 同口径:填了 subj 就自动有 Subj/subj/Poss/poss
+const derive = (values) => {
+  const out = { ...values };
+  const raw = (values.subj ?? '').trim().toLowerCase();
+  if (raw) {
+    const she = raw === 'she' || raw === 'her';
+    out.subj = she ? 'she' : 'he'; out.Subj = she ? 'She' : 'He';
+    out.poss = she ? 'her' : 'his'; out.Poss = she ? 'Her' : 'His';
+  }
+  return out;
+};
+const DERIVED = new Set(['Subj', 'Poss', 'poss']);
+const fill = (line, values) => {
+  const d = derive(values);
+  return line.replace(/\{(\w+)\}/g, (_m, k) => (d[k] ?? '').trim() || '____');
+};
 
 let bad = 0, checked = 0, scaffoldable = 0;
+const notes = [];
 for (const [file, label] of FILES) {
   const grade = Object.values(JSON.parse(readFileSync(file, 'utf8')))[0];
   for (const [semId, sem] of Object.entries(grade.semesters ?? {})) {
@@ -42,11 +62,13 @@ for (const [file, label] of FILES) {
         for (const line of t[lv] ?? []) {
           for (const m of line.matchAll(/\{(\w+)\}/g)) {
             used.add(m[1]);
-            if (!keys.has(m[1])) problems.push(`模板用了未定义占位符 {${m[1]}}`);
+            if (!keys.has(m[1]) && !DERIVED.has(m[1])) problems.push(`模板用了未定义占位符 {${m[1]}}`);
           }
         }
       }
-      for (const k of keys) if (!used.has(k)) problems.push(`cards 定义了 {${k}} 但模板没用`);
+      // 模板没用到的卡片:UI 已自动隐藏(WritingScaffold 按 usedKeys 过滤),只作提示不判失败
+      const unused = [...keys].filter((k) => !used.has(k) && !(k === 'subj' && [...used].some((x) => DERIVED.has(x))));
+      if (unused.length) notes.push(`${label} ${u.id}: cards 里 {${unused.join('} {')}} 模板没用到 → UI 已隐藏`);
       // ⑤ 全填示例值 → 草稿不应再有 ____
       const values = Object.fromEntries(cards.map((c) => [c.key, 'X']));
       for (const lv of ['l1', 'l2', 'l3']) {

@@ -27,3 +27,27 @@ export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABL
   },
   global: { fetch: timeoutFetch },
 });
+
+// 例外二(手动加,重新生成时请保留):把 edge function 的**上游响应体**透出到 error.message。
+//
+// ★为什么必须有★ supabase-js 的 invoke 出错时只给一句 "Edge Function returned a
+// non-2xx status code",真正的原因在响应体里、被默认吞掉。2026-07-26 就是因为这个,
+// 「写作批改一直坏着」查了好几轮才发现上游返回的是 403 PERMISSION_DENIED
+// (Google 项目被停用)—— 而那条信息其实一直躺在 body 里没人看见。
+//
+// 在客户端包一层,31 处调用点全部受益,不用逐个改(逐个改必漏)。
+// 读的是 clone(),不动原始 Response,调用方仍可自行读取。
+const rawInvoke = supabase.functions.invoke.bind(supabase.functions);
+supabase.functions.invoke = (async (fnName: string, options?: unknown) => {
+  const res = await (rawInvoke as (n: string, o?: unknown) => Promise<{ data: unknown; error: unknown }>)(fnName, options);
+  const err = res?.error as (Error & { context?: Response }) | null;
+  if (err && err.context && typeof err.context.clone === "function") {
+    try {
+      const body = await err.context.clone().text();
+      if (body) err.message = `${err.message} | ${fnName}: ${body.slice(0, 500)}`;
+    } catch {
+      /* 响应体读不出(已消费/非文本)→ 保持原样,不因为诊断代码本身再抛错 */
+    }
+  }
+  return res;
+}) as typeof supabase.functions.invoke;

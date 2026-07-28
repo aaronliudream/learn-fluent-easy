@@ -13,12 +13,12 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY")!;
+const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY")!;
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
-const MODEL_LITE = "gemini-2.5-flash-lite";
+const MODEL_LITE = "gpt-4o-mini";
 const CACHE_TTL_HOURS = 24;
 const MIN_ATTEMPTS_FOR_AI = 50; // 不足则走模板
 
@@ -91,10 +91,10 @@ ${summary.weak_top3.map((w, i) => `${i + 1}. ${w.label}（${moduleCn(w.module)}�
 请用中文输出 JSON：{ "insights": ["建议1","建议2","建议3"], "expected_gain": 数字(0-20，预计本周可提升的百分点) }
 建议要具体、克制、可执行，每条 ≤ 30 字。只回 JSON。`;
 
-  const res = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Lovable-API-Key": GOOGLE_AI_API_KEY,
+      "Lovable-API-Key": OPENAI_API_KEY,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({

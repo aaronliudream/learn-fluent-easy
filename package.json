@@ -18,7 +18,9 @@
     "audio:precheck": "node scripts/audio/export-content-audio-list.mjs --section primary --precheck",
     "audio:backfill": "node scripts/audio/export-content-audio-list.mjs --section primary --out data/audio-audit/pipeline_list.csv && node scripts/audio/backfill-missing-audio.ts --list data/audio-audit/pipeline_list.csv --out data/audio-audit/pipeline_result.csv --progress data/audio-audit/pipeline_progress.json",
     "audio:audit": "node scripts/audio/audit-audio.mjs --section primary",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:all": "node -e \"const{execSync}=require('child_process');const r=execSync('node scripts/qa/smoke-routes-all.mjs').toString().trim();execSync(`node scripts/smoke.mjs --routes=${r}`,{stdio:'inherit'})\"",
+    "smoke:coverage": "node scripts/qa/smoke-coverage-check.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",

@@ -19,7 +19,15 @@ import { spawn } from 'node:child_process';
 import { chromium } from 'playwright';
 
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`))?.split('=')[1]) ?? d;
-const ROUTES = arg('routes', '/,/junior,/primary').split(',').map((s) => s.trim()).filter(Boolean);
+// ★默认清单常驻三条「故意的坏 id」★ 它们专守兜底路径 —— 真实用户手打错、点旧收藏才会走到,
+// 除了自动化没有别的办法能测到。2026-07-27 高中册页崩就是这类路径没人测。
+const DEFAULT_ROUTES = [
+  '/', '/junior', '/primary',
+  '/junior/hub/7/semester/__BOGUS__',
+  '/gaokao/hub/1/semester/__BOGUS__',
+  '/primary/hub/3/semester/__BOGUS__',
+].join(',');
+const ROUTES = arg('routes', DEFAULT_ROUTES).split(',').map((s) => s.trim()).filter(Boolean);
 const EXTERNAL = arg('base', '');
 const PORT = Number(arg('port', '4173'));
 const BASE = EXTERNAL || `http://localhost:${PORT}`;

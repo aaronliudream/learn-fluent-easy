@@ -20,7 +20,8 @@
     "audio:audit": "node scripts/audio/audit-audio.mjs --section primary",
     "smoke": "node scripts/smoke.mjs",
     "smoke:all": "node -e \"const{execSync}=require('child_process');const r=execSync('node scripts/qa/smoke-routes-all.mjs').toString().trim();execSync(`node scripts/smoke.mjs --routes=${r}`,{stdio:'inherit'})\"",
-    "smoke:coverage": "node scripts/qa/smoke-coverage-check.mjs"
+    "smoke:coverage": "node scripts/qa/smoke-coverage-check.mjs",
+    "qa:cards": "node scripts/qa/card-copy-numbers-check.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",

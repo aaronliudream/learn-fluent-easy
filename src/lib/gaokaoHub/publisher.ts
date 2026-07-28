@@ -15,12 +15,22 @@ export type Publisher = "pep" | "fltrp" | "sufe";
 export const DEFAULT_PUBLISHER: Publisher = "pep";
 export const SENIOR_PUBLISHERS: Publisher[] = ["pep", "fltrp", "sufe"];
 
-/** 出版社选择页元数据(封面/文案各异,渲染逻辑同一套)。顺序 = 选择页卡片顺序。
- *  hasExam:是否含「高考真题」专项(仅人教有;且真题还要再过 email 白名单)。 */
-export const PUBLISHER_META: Record<Publisher, { name: string; sub: string; emoji: string; tagline: string; hasExam: boolean }> = {
-  pep: { name: "人教版", sub: "人民教育出版社", emoji: "📕", tagline: "课本同步 7 册 · 6 大专项 · 高考真题", hasExam: true },
-  sufe: { name: "上外版", sub: "上海外语教育出版社", emoji: "📘", tagline: "课本同步 · 5 大专项(内容陆续上线)", hasExam: false },
-  fltrp: { name: "外研社版", sub: "外语教学与研究出版社", emoji: "📗", tagline: "课本同步 · 5 大专项(内容陆续上线)", hasExam: false },
+/**
+ * 出版社选择页元数据(封面/文案各异,渲染逻辑同一套)。顺序 = 选择页卡片顺序。
+ *
+ * ★tagline 里的每个数字都必须有 DB 兜底,禁止凭记忆写★
+ * 现值来自 2026-07-27 实测(`scripts/qa/gaokao-content-census.mjs`,改文案前重跑一遍):
+ *   人教  7 册 36 单元 · 词 1706 · 语法 108 点/2160 题 · 阅读 216 篇 · 完形 216 · 听力 216(缺音频 0)
+ *   上外  7 册 28 单元 · 词 1331 · 语法  87 点/1740 题 · 阅读 168 篇 · 完形 168 · 听力 168(缺音频 0)
+ *   外研社 7 册 42 单元 · 词 2011 · 语法 126 点/2520 题 · 阅读 252 篇 · 完形 252 · 听力 252(缺音频 0)
+ * 归一到单元后三家完全一致(每单元 6 阅读/6 完形/6 听力/3 语法点),
+ * 总量差异 100% 来自教材本身的单元数 —— **不是灌库进度差**,所以谁的卡上都不该再写「内容陆续上线」。
+ * 「6 大专项」= 词汇/语法/阅读/完形/听力/写作,三家齐备(上外/外研社原先写 5 是少报了自己)。
+ */
+export const PUBLISHER_META: Record<Publisher, { name: string; sub: string; emoji: string; tagline: string }> = {
+  pep: { name: "人教版", sub: "人民教育出版社", emoji: "📕", tagline: "课本同步 7 册 · 36 单元 · 6 大专项" },
+  sufe: { name: "上外版", sub: "上海外语教育出版社", emoji: "📘", tagline: "课本同步 7 册 · 28 单元 · 6 大专项" },
+  fltrp: { name: "外研社版", sub: "外语教学与研究出版社", emoji: "📗", tagline: "课本同步 7 册 · 42 单元 · 6 大专项" },
 };
 export const PUBLISHER_ORDER: Publisher[] = ["pep", "sufe", "fltrp"];
 

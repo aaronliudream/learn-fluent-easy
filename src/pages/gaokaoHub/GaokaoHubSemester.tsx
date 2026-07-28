@@ -19,10 +19,11 @@ export default function GaokaoHubSemester() {
   // ⚠️ 必须在 early-return 之前调用(hook 顺序)。整册一次批量拉取,grade+9 与单元页同口径。
   const masteryMap = useSemesterMastery(sem?.units, grade + 9, publisher);
   const wp = (p: string) => withPublisher(p, publisher);
-  // 返回=沿层级向上:册页的父级是**学段根**,不是 hub 仪表盘 ——
-  // 进册页有三条来路(仪表盘/课程tab/星空选版页),仪表盘只是其中一条。见 useHubBack。
-  // ⚠️ 必须放在 `wp` 声明**之后** —— 之前放在 base 后面,读到的是 TDZ 里的 wp,高中册页整页崩。
-  const goBack = useHubBack("/gaokao");
+  // 返回=沿层级向上:册页的父级是**本年级仪表盘**(hub/:grade),不是学段根。
+  // ⚠️ 这一页上有两个返回控件,职责不同,必须一致地指向层级上一层:
+  //    顶栏 BackLink(初中/高中在 Layout、小学在 Home 自带)= 回大本营;页面级 ← = 上一层。
+  // #268 我把页面级 ← 指到了学段根,与顶栏指向不一致 —— 从仪表盘进册页再返回会少一层。
+  const goBack = useHubBack(wp(base));
 
   if (!sem || !semId) {
     return <NotFoundCard title="未找到这一册" homePath={"/gaokao"} />;

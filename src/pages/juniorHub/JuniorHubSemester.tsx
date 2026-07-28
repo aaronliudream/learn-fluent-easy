@@ -1,5 +1,6 @@
 ﻿import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
+import { useHubBack } from "@/lib/useHubBack";
 import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
 import { readJuniorPublisherParam, withJuniorPublisher, dbPublisherFor } from "@/lib/juniorHub/publisher";
 import { unitLabel } from "./JuniorHubUnit";
@@ -19,6 +20,8 @@ export default function JuniorHubSemester() {
   const course = getGradeCourse(grade, pub);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/junior/hub/${grade}`;
+  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  const goBack = useHubBack(wp(`${base}/course`));
   // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。整册一次批量拉取。
   const masteryMap = useSemesterMastery(sem?.units, grade, dbPublisherFor(pub));
 
@@ -29,7 +32,7 @@ export default function JuniorHubSemester() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(wp(`${base}/course`))} className="text-xl">
+        <button type="button" onClick={goBack} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">

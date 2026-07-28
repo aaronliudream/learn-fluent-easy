@@ -1,4 +1,5 @@
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useHubBack } from "@/lib/useHubBack";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit, isUnitPublished } from "@/lib/primaryHub/courseData";
 import { getUnitProgress, getStagePercent } from "@/lib/primaryHub/progress";
@@ -15,6 +16,8 @@ export default function PrimaryHubUnit() {
     ? getUnitProgress(state, unitId)
     : { percent: 0, completed: 0, total: 0, stageCount: 0 };
   const base = `/primary/hub/${grade}`;
+  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  const goBack = useHubBack(`${base}/semester/${semId}`);
 
   if (!unit || !unitId || !semId) {
     return <div className="p-6 text-center">单元未找到</div>;
@@ -27,7 +30,7 @@ export default function PrimaryHubUnit() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(`${base}/semester/${semId}`)} className="text-xl">
+        <button type="button" onClick={goBack} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">

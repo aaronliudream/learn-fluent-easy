@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useHubBack } from "@/lib/useHubBack";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findSemester, getGradeCourse, isUnitListed } from "@/lib/primaryHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/primaryHub/progress";
@@ -13,6 +14,8 @@ export default function PrimaryHubSemester() {
   const course = getGradeCourse(grade);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/primary/hub/${grade}`;
+  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  const goBack = useHubBack(`${base}/course`);
   // semId 形如 grade4_volume1 / grade4_volume2 —— 上册取 v1 题库，下册默认 v2。
   const vol = semId?.includes("volume1") ? "v1" : "v2";
 
@@ -23,7 +26,7 @@ export default function PrimaryHubSemester() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(`${base}/course`)} className="text-xl">
+        <button type="button" onClick={goBack} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">

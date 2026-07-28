@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useHubBack } from "@/lib/useHubBack";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findUnit } from "@/lib/juniorHub/courseData";
@@ -207,6 +208,8 @@ export default function JuniorHubUnit() {
   const us = unitId ? getUnitState(state, unitId) : null;
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
   const base = `/junior/hub/${grade}`;
+  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  const goBack = useHubBack(withJuniorPublisher(`${base}/semester/${semId}`, pub));
   // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。unit 为 null 时内部短路。
   const unitMastery = useUnitMastery(unit, grade, dbPublisherFor(pub));
 
@@ -217,7 +220,7 @@ export default function JuniorHubUnit() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(withJuniorPublisher(`${base}/semester/${semId}`, pub))} className="text-xl">
+        <button type="button" onClick={goBack} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">

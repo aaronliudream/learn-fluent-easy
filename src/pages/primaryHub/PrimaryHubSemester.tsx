@@ -15,9 +15,11 @@ export default function PrimaryHubSemester() {
   const course = getGradeCourse(grade);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/primary/hub/${grade}`;
-  // 返回=沿层级向上:册页的父级是**学段根**,不是 hub 仪表盘 ——
-  // 进册页有三条来路(仪表盘/课程tab/星空选版页),仪表盘只是其中一条。见 useHubBack。
-  const goBack = useHubBack("/primary");
+  // 返回=沿层级向上:册页的父级是**本年级仪表盘**(hub/:grade),不是学段根。
+  // ⚠️ 这一页上有两个返回控件,职责不同,必须一致地指向层级上一层:
+  //    顶栏 BackLink(初中/高中在 Layout、小学在 Home 自带)= 回大本营;页面级 ← = 上一层。
+  // #268 我把页面级 ← 指到了学段根,与顶栏指向不一致 —— 从仪表盘进册页再返回会少一层。
+  const goBack = useHubBack(base);
   // semId 形如 grade4_volume1 / grade4_volume2 —— 上册取 v1 题库，下册默认 v2。
   const vol = semId?.includes("volume1") ? "v1" : "v2";
 

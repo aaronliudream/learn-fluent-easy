@@ -21,9 +21,11 @@ export default function JuniorHubSemester() {
   const course = getGradeCourse(grade, pub);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/junior/hub/${grade}`;
-  // 返回=沿层级向上:册页的父级是**学段根**,不是 hub 仪表盘 ——
-  // 进册页有三条来路(仪表盘/课程tab/星空选版页),仪表盘只是其中一条。见 useHubBack。
-  const goBack = useHubBack("/junior");
+  // 返回=沿层级向上:册页的父级是**本年级仪表盘**(hub/:grade),不是学段根。
+  // ⚠️ 这一页上有两个返回控件,职责不同,必须一致地指向层级上一层:
+  //    顶栏 BackLink(初中/高中在 Layout、小学在 Home 自带)= 回大本营;页面级 ← = 上一层。
+  // #268 我把页面级 ← 指到了学段根,与顶栏指向不一致 —— 从仪表盘进册页再返回会少一层。
+  const goBack = useHubBack(wp(base));
   // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。整册一次批量拉取。
   const masteryMap = useSemesterMastery(sem?.units, grade, dbPublisherFor(pub));
 

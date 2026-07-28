@@ -131,13 +131,13 @@ export default function GaokaoHubUnit() {
   const us = unitId ? getUnitState(state, unitId) : null;
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
   const base = `/gaokao/hub/${grade}`;
-  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
+  // 返回=沿层级向上:单元页的父级是它所属的册页(semId 就在 URL 上)。见 useHubBack。
   const goBack = useHubBack(withPublisher(`${base}/semester/${semId}`, publisher));
   // ⚠️ 必须在 early-return 之前调用(hook 顺序)。unit 为 null 时内部短路。
   const unitMastery = useUnitMastery(unit, grade + 9, publisher);
 
   if (!unit || !unitId || !semId) {
-    return <NotFoundCard title="未找到这个单元" homePath={`/gaokao/hub/${grade}`} />;
+    return <NotFoundCard title="未找到这个单元" homePath={"/gaokao"} />;
   }
 
   return (

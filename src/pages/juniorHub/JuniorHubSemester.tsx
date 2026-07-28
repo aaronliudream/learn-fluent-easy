@@ -21,13 +21,14 @@ export default function JuniorHubSemester() {
   const course = getGradeCourse(grade, pub);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/junior/hub/${grade}`;
-  // 返回=原路退回;没有来路(深链/刷新)才回兜底页。见 useHubBack。
-  const goBack = useHubBack(wp(`${base}/course`));
+  // 返回=沿层级向上:册页的父级是**学段根**,不是 hub 仪表盘 ——
+  // 进册页有三条来路(仪表盘/课程tab/星空选版页),仪表盘只是其中一条。见 useHubBack。
+  const goBack = useHubBack("/junior");
   // ⚠️ 必须在下面的 early-return 之前调用(hook 顺序)。整册一次批量拉取。
   const masteryMap = useSemesterMastery(sem?.units, grade, dbPublisherFor(pub));
 
   if (!sem || !semId) {
-    return <NotFoundCard title="未找到这一册" homePath={`/junior/hub/${grade}`} />;
+    return <NotFoundCard title="未找到这一册" homePath={"/junior"} />;
   }
 
   return (

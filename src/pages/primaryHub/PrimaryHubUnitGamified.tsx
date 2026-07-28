@@ -143,7 +143,7 @@ export default function PrimaryHubUnitGamified() {
   );
 
   if (!unit || !unitId || !semId) {
-    return <NotFoundCard title="未找到这个单元" homePath={`/primary/hub/${grade}`} />;
+    return <NotFoundCard title="未找到这个单元" homePath={"/primary"} />;
   }
 
   if (!isUnitPublished(unit)) {

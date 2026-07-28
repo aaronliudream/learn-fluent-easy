@@ -126,6 +126,26 @@
       "scopeNote": "与 useUnitVocab 的 chunks 取法一致：**例句优先，无例句才用短语**（不是两个都取）。"
     },
     {
+      "id": "junior-listening-items-db",
+      "files": "table:junior_listening_items",
+      "select": "id,audio_text,grade,volume,unit,difficulty,kind,publisher",
+      "filters": {
+        "grade": "in.(7,8,9)",
+        "volume": "in.(7B,8A,8B)",
+        "kind": "eq.sentence"
+      },
+      "orderBy": "id",
+      "picker": "juniorListeningItemAudioText",
+      "tiers": [
+        "hubListen"
+      ],
+      "playedBy": "单元通关 FinalQuizStage：预热 :1017、播放 :1099，都是 hubSpeak(..., JUNIOR_SPEAK_SPEED.listen)=0.8",
+      "scopeNote": "三个过滤条件都是照抄代码（juniorFinalQuiz.ts 的 loadListeningItems / listeningItemsForUnit），映射表与取数必须逐条一致：① volume 只有 7B/8A/8B 会被查（别的册灌了题也取不到）；② kind 只取 sentence。实测 grade 7-9 共 384 行全在这三册（各 128，24 单元 × 16 题），其中 sentence 140 条、dialogue 244 条。",
+      "dialogueDeferredNote": "**dialogue 类 244 条暂缓，不进可达集**：播放层现在把整条 audio_text 当一个字符串交给 hubSpeak，而对话文本形如 \"W: … M: …\" / \"A: … B: …\"（176 条带说话人标记），后果是①一男一女被同一个音色读完、②\"W:\"\"M:\"这些标记被 TTS 念出来。放开它需要先做「按说话人切句 + 分角色音色」（speak.ts 的 speakSequence 已具备能力），届时要同步改三处：本表源的 kind 过滤、loadListeningItems 的 kind 过滤、FinalQuizStage 的播放点（换 speakSequence）+ 预热。三处不同步就会让 244 道题以\"一个音色读到底\"的形态上线 —— src/lib/juniorListeningItems.test.ts 的绊线用例盯着这件事。另注：dialogue 暂缓的连带影响是 17 个单元的 difficulty 3 档没有 sentence 题（d3 基本都是对话），抽题会落到\"不足 3 档则从其余补足\"的分支，仍然出 3 题但易中难搭配退化。",
+      "orphanObjectsNote": "决策 C 之前已经按整段对话生成过 244 条音频对象（每条一个完整对话一个文件）。它们现在不在可达集里 —— 不删，留着；将来若改成按说话人切句，那批会作废（cache key 变），到时再统一清理。",
+      "historyNote": "这张表曾长期不可达：取数 select 里多写了一个表里不存在的 audio_url 列 → PostgREST 400 → data=null → `data ?? []` 吞掉错误当成 0 行 → 每次都静默回退内联题。384 道题从灌库起一道没用过。已修（去掉该列 + 查询出错时 console.error），不再静默。"
+    },
+    {
       "id": "junior-listening-transcript-db",
       "files": "table:junior_listening_exercises",
       "select": "id,transcript,audio_url,grade,publisher,volume,unit",
@@ -215,15 +235,7 @@
     }
   ],
   "artifacts": [],
-  "unreachableSources": [
-    {
-      "ref": "table:junior_listening_items",
-      "rows": 384,
-      "wouldBeTier": "hubListen",
-      "why": "单元通关听力题**本该**从这张表抽（juniorFinalQuiz.ts:288 loadListeningItems，7B/8A/8B），播放点 StagePlay:1099 读的是 audio_text。但该 select 里带了一列 `audio_url`，而这张表**没有这一列** —— PostgREST 直接 400（实测 `column junior_listening_items.audio_url does not exist`），supabase-js 返回 data=null，代码 `data ?? []` 吞掉错误 → 永远返回 0 行 → 每次都回退内联 JSON 题。所以这 384 条 audio_text 目前**一条都播不到**，不进盘点。",
-      "reachableIf": "把 select 里的 audio_url 去掉（或给表加这一列）。届时 384 条唯一 audio_text 变成可达，必须回来加一个 table 源（tier=hubListen 0.8），否则单元通关听力题全是冷合成。",
-      "verifiedAt": "2026-07-26"
-    }
-  ],
+  "unreachableSources": [],
+  "unreachableSourcesNote": "曾有一条：table:junior_listening_items（384 行）因为取数 select 带了表里不存在的 audio_url 列而 400、静默回退内联题。2026-07-27 已修并转为正式源 junior-listening-items-db，见上面的 historyNote。",
   "deadFieldsNote": "grade9.json 里 14 个 unit 带 dialogues 字段，但**全站零消费**：句型关读的是组件常量 SENTENCE_PATTERNS，`unit.dialogues` 在 src 内没有任何读取点（与小学不同，小学的 courseDialoguePairs 是真播放源）。因此不给它建 source；若将来句型关改成读 unit.dialogues，必须回来加一条。"
 }

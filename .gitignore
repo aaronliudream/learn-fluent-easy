@@ -72,3 +72,6 @@ data/audio-audit/junior_p2_words.csv
 data/audio-audit/junior_p3_chunks.csv
 data/audio-audit/junior_p4_rest.csv
 data/audio-audit/junior_existing_pool.csv
+# junior_listening_items 的生成清单同理（可由 export-content-audio-list.mjs --source 重算）；
+# 结果与进度照常入库。
+data/audio-audit/junior_listening_items_list.csv

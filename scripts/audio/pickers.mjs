@@ -191,6 +191,18 @@ export const pickers = {
   },
 
   /**
+   * junior_listening_items.audio_text —— 单元通关（FinalQuizStage）听力题的朗读文本。
+   * 这张表**没有** audio_url 列，所以整批走 TTS：预热 :1017 与播放 :1099 都是 @0.8。
+   * 只有 7B / 8A / 8B 会被取到（juniorFinalQuiz.ts listeningItemsForUnit 的判断），
+   * 故 junior.json 里同时卡 volume —— 将来往 9A/9B 灌题而代码没放开，那批就是不可达的。
+   */
+  juniorListeningItemAudioText(rows) {
+    return rows
+      .filter((r) => r.audio_text)
+      .map((r) => ({ text: r.audio_text, record_id: `junior_listening_items:${r.id}`, field: 'audio_text', grade: r.grade }));
+  },
+
+  /**
    * junior_listening_exercises.transcript —— 仅当该行**没有**预生成 audio_url 时才会被
    * JuniorListeningPlay 用 speak() 现场朗读（用户默认音色）。有 audio_url 的直接播 CDN 文件。
    */
@@ -269,6 +281,11 @@ export const PICKER_ANCHORS = {
   juniorVocabChunk: [
     { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'speakWord(c.en)', why: '语块按钮 @0.85 —— 语块**会被朗读**，不是纯展示' },
     { file: 'src/lib/juniorHub/useUnitVocab.ts', anchor: 'chunks: example ? [example] : phrase ? [{ en: phrase, cn: "" }] : undefined', why: '例句优先、无例句才用短语 —— picker 抄的就是这一行' },
+  ],
+  juniorListeningItemAudioText: [
+    { file: 'src/lib/juniorFinalQuiz.ts', anchor: '.select("difficulty,kind,audio_text,question,options,answer,explanation")', why: '取数字段以此为准；带上表里不存在的列会 400 → 静默回退内联题（踩过）' },
+    { file: 'src/lib/juniorFinalQuiz.ts', anchor: 'audio: r.audio_text,', why: '朗读文本就是 audio_text' },
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(q.audio!, JUNIOR_SPEAK_SPEED.listen, grade)', why: '单元通关听力题 @0.8' },
   ],
   juniorListeningTranscript: [
     { file: 'src/pages/JuniorListeningPlay.tsx', anchor: 'speak(e.transcript)', why: '无预生成 MP3 时现场读整段' },

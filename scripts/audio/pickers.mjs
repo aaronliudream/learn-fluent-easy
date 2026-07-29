@@ -9,6 +9,8 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+// 切分规则的唯一实现（取数/抽取/播放三处共用）——Node 24 原生 import .ts
+import { splitDialogue } from '../../src/lib/juniorHub/dialogueSplit.ts';
 
 /** grade3.json → { grade3: {...} } */
 const course = (json) => json[Object.keys(json)[0]];
@@ -196,10 +198,30 @@ export const pickers = {
    * 只有 7B / 8A / 8B 会被取到（juniorFinalQuiz.ts listeningItemsForUnit 的判断），
    * 故 junior.json 里同时卡 volume —— 将来往 9A/9B 灌题而代码没放开，那批就是不可达的。
    */
-  juniorListeningItemAudioText(rows) {
-    return rows
-      .filter((r) => r.audio_text)
-      .map((r) => ({ text: r.audio_text, record_id: `junior_listening_items:${r.id}`, field: 'audio_text', grade: r.grade }));
+  juniorListeningItemAudioText(rows, { source } = {}) {
+    const [femaleTier, maleTier] = source?.genderTiers ?? [];
+    if (!femaleTier || !maleTier) {
+      throw new Error('✗ junior_listening_items 源必须声明 genderTiers: ["<女声档>", "<男声档>"]（对话要分角色）');
+    }
+    const out = [];
+    for (const r of rows) {
+      if (!r.audio_text) continue;
+      // **切分规则只有一份**：与取数（能不能进池）、播放（分角色朗读）共用
+      // src/lib/juniorHub/dialogueSplit.ts。null = 出现白名单外的说话人标记，
+      // 性别不可判 → 不进可达集（junior.json 的 unreachableSources 里有声明）。
+      const segs = splitDialogue(r.audio_text);
+      if (!segs) continue;
+      segs.forEach((seg, i) => {
+        out.push({
+          text: seg.text,
+          tier: seg.gender === 'male' ? maleTier : femaleTier,
+          record_id: `junior_listening_items:${r.id}${segs.length > 1 ? `#${i + 1}${seg.speaker ?? ''}` : ''}`,
+          field: 'audio_text',
+          grade: r.grade,
+        });
+      });
+    }
+    return out;
   },
 
   /**
@@ -285,7 +307,9 @@ export const PICKER_ANCHORS = {
   juniorListeningItemAudioText: [
     { file: 'src/lib/juniorFinalQuiz.ts', anchor: '.select("difficulty,kind,audio_text,question,options,answer,explanation")', why: '取数字段以此为准；带上表里不存在的列会 400 → 静默回退内联题（踩过）' },
     { file: 'src/lib/juniorFinalQuiz.ts', anchor: 'audio: r.audio_text,', why: '朗读文本就是 audio_text' },
-    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'hubSpeak(q.audio!, JUNIOR_SPEAK_SPEED.listen, grade)', why: '单元通关听力题 @0.8' },
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'speakDialogue(q.audio!, grade)', why: '单元通关听力题按说话人分角色朗读' },
+    { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'prefetchDialogue(audios, grade)', why: '预热与播放同源（都过 dialogueVoiceOf）' },
+    { file: 'src/lib/juniorHub/speakDialogue.ts', anchor: 'export const MALE_VOICE = "echo"', why: '男声音色；女声沿用 KID_VOICE_ID' },
   ],
   juniorListeningTranscript: [
     { file: 'src/pages/JuniorListeningPlay.tsx', anchor: 'speak(e.transcript)', why: '无预生成 MP3 时现场读整段' },

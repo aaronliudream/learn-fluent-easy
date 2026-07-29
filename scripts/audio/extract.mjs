@@ -11,6 +11,8 @@ import { fileURLToPath } from 'node:url';
 import { pickers } from './pickers.mjs';
 import { strayUnderContentParents } from './coverage.mjs';
 import { loadDbEnv, fetchTableRows, TableSourceError } from './table-source.mjs';
+// 唯一实现：播放侧发给 edge 的就是 cleanForTTS 之后的文本，抽取必须用同一个函数算 key。
+import { cleanForTTS } from '../../src/lib/ttsClean.ts';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const REPO = path.resolve(HERE, '../..');
@@ -20,7 +22,25 @@ export class ConfigError extends Error {}
 export const CDN_BASE = (process.env.AUDIO_CDN_BASE || 'https://audio.bigmooneducation.com').replace(/\/$/, '');
 const STORAGE_BASE = (process.env.AUDIO_STORAGE_BASE || 'https://degqpiiddkxcuzwombwp.supabase.co').replace(/\/$/, '');
 
-const normText = (s) => String(s).trim().replace(/[\u2018\u2019\u201B\u2032]/g, "'");
+/**
+ * 文本 → **送进 TTS 的那一串**（cache key 就是按它算的）。
+ *
+ * 两步，缺一不可：
+ *   ① trim + 弯撇号归一 —— 与 `toHubTtsText`（src/lib/primaryHub/speech.ts）一致
+ *   ② `cleanForTTS` —— 与 `fetchTTS`（src/lib/speak.ts:411）一致：
+ *      它在**发给 edge 之前**就把文本换掉了（剥说话人标记、把 sb/sth/etc. 展开成整词），
+ *      而 edge 是拿收到的文本算 hash 的。所以对象真正落在 cleanForTTS 之后的 key 上。
+ *
+ * ⚠️ 这里曾经只做 ①：凡是 cleanForTTS 会改写的文本（junior 实测 292 条：
+ * "make sb's bed" → "make somebody's bed"、带 W:/M: 的听力原文…），
+ * 抽取算出的 key 与 app 实际请求的 key **不是同一个** —— 生成的对象没人播，
+ * 播的时候又当成冷 key 重新合成。primary 侧 0 条受影响（没有 sb/sth/标记），
+ * 所以此前的 3436/3436 不受影响。
+ *
+ * cleanForTTS 直接从 src 引入（Node 24 原生支持 import .ts），**不另写一份** ——
+ * 另写必然漂，漂了就是同一个 bug 换个地方复发。
+ */
+const normText = (s) => cleanForTTS(String(s).trim().replace(/[\u2018\u2019\u201B\u2032]/g, "'"));
 /**
  * provider 必须**按 voice 派生**，与 supabase/functions/tts/index.ts:310-315 一致：
  *   voiceId 以 "el:" 开头 → elevenlabs，否则 → openai。
@@ -219,7 +239,19 @@ pep / fltrp / sufe 是高中的。只按 publisher 过滤会把高中行算进�
       for (const item of pick(rows, { source: s })) {
         const text = normText(item.text);
         if (!text) continue;
-        for (const tier of s.tiers) {
+        // picker 可以为**单条**指定档位（对话按说话人分男女声就靠这个）。
+        // 指定的档位必须在该 source 的 tiers 里声明过，否则 exit 2 ——
+        // 不允许出现"映射表没覆盖的组合"，那正是会生成一批没人播的对象的路子。
+        let tiers = s.tiers;
+        if (item.tier) {
+          if (!s.tiers.includes(item.tier)) {
+            throw new ConfigError(
+`✗ 内容源 ${s.id} 的 picker 给某条文本指定了档位 "${item.tier}"，但该源的 tiers 里没有它（只有 ${s.tiers.join(', ')}）。
+   映射表未覆盖的组合一律判错：放行等于按一个没人播的 key 生成音频。`);
+          }
+          tiers = [item.tier];
+        }
+        for (const tier of tiers) {
           const voice = cfg.tiers?.[tier]?.voiceId ?? cfg.voiceId;
           for (const sp of speedsFor(cfg, tier, item.grade ?? null)) {
             const k = cacheKeyOf(voice, text, sp);

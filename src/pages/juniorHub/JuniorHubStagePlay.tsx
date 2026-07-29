@@ -7,6 +7,7 @@ import { getUnitState, savePersist } from "@/lib/juniorHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
 import { prefetchTTSBatchKid } from "@/lib/speak";
 import { JUNIOR_SPEAK_SPEED, prefetchJuniorWriteStage } from "@/lib/juniorHub/speakSpeeds";
+import { speakDialogue, prefetchDialogue } from "@/lib/juniorHub/speakDialogue";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
@@ -1001,9 +1002,11 @@ function FinalQuizStage({
   const isLast = idx === questions.length - 1;
 
   // 进关即预热听力题的 audio_text(云端 TTS 冷合成 ~1-3s)→ 用户做到听力题时 MP3 已在缓存,点🔊瞬时。
+  // 对话题按说话人切句、逐句按各自音色预热 —— prefetchDialogue 与播放侧 speakDialogue
+  // 共用 dialogueVoiceOf,不在这里自己拼 voice/speed(拼两次就会热到没人播的 key 上)。
   useEffect(() => {
     const audios = questions.map((item) => item.audio).filter((a): a is string => !!a);
-    if (audios.length) prefetchTTSBatchKid(audios, { grade, speed: JUNIOR_SPEAK_SPEED.listen });
+    if (audios.length) prefetchDialogue(audios, grade);
   }, [grade, questions]);
 
   const handlePick = (optIdx: number) => {
@@ -1085,7 +1088,7 @@ function FinalQuizStage({
       {q.kind === "listening" && q.audio && (
         <button
           type="button"
-          onClick={() => hubSpeak(q.audio!, JUNIOR_SPEAK_SPEED.listen, grade)}
+          onClick={() => void speakDialogue(q.audio!, grade)}  /* 对话题分角色:女=el:lily,男=echo;独白仍单人读 */
           className="mb-4 inline-flex items-center gap-2 rounded-xl bg-[#FFE9AD] px-4 py-2 text-sm font-bold text-[#854F0B] active:scale-95"
         >
           🔊 播放句子

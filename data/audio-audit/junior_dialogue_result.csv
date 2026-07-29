@@ -1,0 +1,1398 @@
+﻿key,text,status,cdn_status,bytes,needs_purge,reason,attempts,provider
+elevenlabs|el:lily|0.85||make somebody's bed,make somebody's bed,created,200,31872,no,,1,openai
+elevenlabs|el:lily|0.8||make somebody's bed,make somebody's bed,created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.7||make somebody's bed,make somebody's bed,created,200,52992,no,,1,openai
+openai|nova|0.85||make somebody's bed,make somebody's bed,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.85||put oneself in somebody's shoes,put oneself in somebody's shoes,created,200,57984,no,,1,openai
+elevenlabs|el:lily|0.8||put oneself in somebody's shoes,put oneself in somebody's shoes,created,200,67584,no,,1,openai
+elevenlabs|el:lily|0.7||put oneself in somebody's shoes,put oneself in somebody's shoes,created,200,77184,no,,1,openai
+openai|nova|0.85||put oneself in somebody's shoes,put oneself in somebody's shoes,created,200,56064,no,,1,openai
+elevenlabs|el:lily|0.8||share something with somebody,share something with somebody,created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.7||share something with somebody,share something with somebody,created,200,59904,no,,1,openai
+openai|nova|0.85||share something with somebody,share something with somebody,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.85||show somebody around,show somebody around,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.8||show somebody around,show somebody around,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.7||show somebody around,show somebody around,created,200,41472,no,,1,openai
+openai|nova|0.85||show somebody around,show somebody around,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.8||ready to do something,ready to do something,created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.7||ready to do something,ready to do something,created,200,38016,no,,1,openai
+openai|nova|0.85||ready to do something,ready to do something,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||stick to something,stick to something,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.8||stick to something,stick to something,created,200,30720,no,,1,openai
+elevenlabs|el:lily|0.7||stick to something,stick to something,created,200,36864,no,,1,openai
+openai|nova|0.85||stick to something,stick to something,created,200,29952,no,,1,openai
+elevenlabs|el:lily|0.85||be friends with somebody.,be friends with somebody.,created,200,36480,no,,1,openai
+elevenlabs|el:lily|0.8||be friends with somebody.,be friends with somebody.,created,200,53760,no,,1,openai
+elevenlabs|el:lily|0.7||be friends with somebody.,be friends with somebody.,created,200,48384,no,,1,openai
+openai|nova|0.85||be friends with somebody.,be friends with somebody.,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.85||to somebody's surprise,to somebody's surprise,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.8||to somebody's surprise,to somebody's surprise,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||to somebody's surprise,to somebody's surprise,created,200,52992,no,,1,openai
+openai|nova|0.85||to somebody's surprise,to somebody's surprise,created,200,55296,no,,1,openai
+elevenlabs|el:lily|0.8||give somebody a lift,give somebody a lift,created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.7||give somebody a lift,give somebody a lift,created,200,54144,no,,1,openai
+openai|nova|0.85||give somebody a lift,give somebody a lift,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.85||move on (to something),move on (to something),created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.8||move on (to something),move on (to something),created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.7||move on (to something),move on (to something),created,200,55296,no,,1,openai
+openai|nova|0.85||move on (to something),move on (to something),created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.7||cut something in/into something,cut something in/into something,created,200,86400,no,,1,openai
+openai|nova|0.85||cut something in/into something,cut something in/into something,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.85||succeed in doing something,succeed in doing something,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.8||succeed in doing something,succeed in doing something,created,200,45696,no,,1,openai
+elevenlabs|el:lily|0.7||succeed in doing something,succeed in doing something,created,200,87168,no,,1,openai
+openai|nova|0.85||succeed in doing something,succeed in doing something,created,200,40320,no,,1,openai
+elevenlabs|el:lily|0.7||take somebody's breath away,take somebody's breath away,created,200,57600,no,,1,openai
+openai|nova|0.85||take somebody's breath away,take somebody's breath away,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||argue with somebody,argue with somebody,created,200,41088,no,,1,openai
+elevenlabs|el:lily|0.8||argue with somebody,argue with somebody,created,200,45696,no,,1,openai
+elevenlabs|el:lily|0.7||argue with somebody,argue with somebody,created,200,69120,no,,1,openai
+openai|nova|0.85||argue with somebody,argue with somebody,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.85||drive somebody. crazy,drive somebody. crazy,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.8||drive somebody. crazy,drive somebody. crazy,created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.7||drive somebody. crazy,drive somebody. crazy,created,200,63744,no,,1,openai
+openai|nova|0.85||drive somebody. crazy,drive somebody. crazy,created,200,49920,no,,1,openai
+elevenlabs|el:lily|0.7||have something in common,have something in common,created,200,61056,no,,1,openai
+openai|nova|0.85||have something in common,have something in common,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.7||along with somebody/something,along with somebody/something,skipped,200,70272,no,,0,
+openai|nova|0.85||along with somebody/something,along with somebody/something,created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.85||be glued to something,be glued to something,created,200,44160,no,,1,openai
+elevenlabs|el:lily|0.8||be glued to something,be glued to something,created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.7||be glued to something,be glued to something,skipped,200,54144,no,,0,
+openai|nova|0.85||be glued to something,be glued to something,created,200,57984,no,,1,openai
+elevenlabs|el:lily|0.85||put something. to good use,put something. to good use,skipped,200,59136,no,,0,
+elevenlabs|el:lily|0.8||put something. to good use,put something. to good use,created,200,77952,no,,1,openai
+elevenlabs|el:lily|0.7||put something. to good use,put something. to good use,created,200,57600,no,,1,openai
+openai|nova|0.85||put something. to good use,put something. to good use,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||show interest in something,show interest in something,created,200,76032,no,,1,openai
+elevenlabs|el:lily|0.8||show interest in something,show interest in something,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.7||show interest in something,show interest in something,created,200,52992,no,,1,openai
+openai|nova|0.85||show interest in something,show interest in something,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||lend (somebody) a hand,lend (somebody) a hand,created,200,54144,no,,1,openai
+elevenlabs|el:lily|0.8||lend (somebody) a hand,lend (somebody) a hand,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.7||lend (somebody) a hand,lend (somebody) a hand,created,200,74880,no,,1,openai
+openai|nova|0.85||lend (somebody) a hand,lend (somebody) a hand,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||kick somebody. off,kick somebody. off,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.8||kick somebody. off,kick somebody. off,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||kick somebody. off,kick somebody. off,created,200,44928,no,,1,openai
+openai|nova|0.85||kick somebody. off,kick somebody. off,skipped,200,39552,no,,0,
+elevenlabs|el:lily|0.8||add something to something,add something to something,created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.7||add something to something,add something to something,created,200,71424,no,,1,openai
+openai|nova|0.85||add something to something,add something to something,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||take somebody's temperature,take somebody's temperature,created,200,57216,no,,1,openai
+elevenlabs|el:lily|0.8||take somebody's temperature,take somebody's temperature,skipped,200,54528,no,,0,
+elevenlabs|el:lily|0.7||take somebody's temperature,take somebody's temperature,created,200,81792,no,,1,openai
+openai|nova|0.85||take somebody's temperature,take somebody's temperature,created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.85||unlock the secrets of something,unlock the secrets of something,created,200,71424,no,,1,openai
+elevenlabs|el:lily|0.8||unlock the secrets of something,unlock the secrets of something,created,200,38784,no,,1,openai
+elevenlabs|el:lily|0.7||unlock the secrets of something,unlock the secrets of something,created,200,77184,no,,1,openai
+openai|nova|0.85||unlock the secrets of something,unlock the secrets of something,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||lend somebody a hand,lend somebody a hand,created,200,74880,no,,1,openai
+openai|nova|0.85||lend somebody a hand,lend somebody a hand,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.85||keep on doing something,keep on doing something,created,200,43008,no,,1,openai
+elevenlabs|el:lily|0.7||keep on doing something,keep on doing something,created,200,51840,no,,1,openai
+openai|nova|0.85||keep on doing something,keep on doing something,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.85||prepare something for,prepare something for,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.8||prepare something for,prepare something for,created,200,36864,no,,1,openai
+elevenlabs|el:lily|0.7||prepare something for,prepare something for,created,200,42624,no,,1,openai
+openai|nova|0.85||prepare something for,prepare something for,created,200,46080,no,,1,openai
+elevenlabs|el:lily|0.8||feel free (to do something),feel free (to do something),created,200,53760,no,,1,openai
+elevenlabs|el:lily|0.7||feel free (to do something),feel free (to do something),created,200,70272,no,,1,openai
+openai|nova|0.85||feel free (to do something),feel free (to do something),created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.7||be home to somebody/something,be home to somebody/something,created,200,70272,no,,1,openai
+openai|nova|0.85||be home to somebody/something,be home to somebody/something,created,200,62976,no,,1,openai
+elevenlabs|el:lily|0.7||put something back,put something back,created,200,38016,no,,1,openai
+openai|nova|0.85||put something back,put something back,created,200,32640,no,,1,openai
+elevenlabs|el:lily|0.85||stop something from doing,stop something from doing,created,200,53376,no,,1,openai
+elevenlabs|el:lily|0.8||stop something from doing,stop something from doing,created,200,51840,no,,1,openai
+elevenlabs|el:lily|0.7||stop something from doing,stop something from doing,created,200,43776,no,,1,openai
+openai|nova|0.85||stop something from doing,stop something from doing,created,200,46848,no,,1,openai
+elevenlabs|el:lily|0.85||be thankful to somebody.,be thankful to somebody.,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.8||be thankful to somebody.,be thankful to somebody.,created,200,67584,no,,1,openai
+elevenlabs|el:lily|0.7||be thankful to somebody.,be thankful to somebody.,created,200,67968,no,,1,openai
+openai|nova|0.85||be thankful to somebody.,be thankful to somebody.,created,200,34560,no,,1,openai
+elevenlabs|el:lily|0.85||et cetera,et cetera,created,200,22272,no,,1,openai
+elevenlabs|el:lily|0.8||et cetera,et cetera,created,200,33792,no,,1,openai
+elevenlabs|el:lily|0.7||et cetera,et cetera,created,200,41472,no,,1,openai
+openai|nova|0.85||et cetera,et cetera,created,200,20352,no,,1,openai
+elevenlabs|el:lily|0.8||pour something into something,pour something into something,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.7||pour something into something,pour something into something,created,200,70272,no,,1,openai
+openai|nova|0.85||pour something into something,pour something into something,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.85||be hard on somebody.,be hard on somebody.,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.8||be hard on somebody.,be hard on somebody.,created,200,35712,no,,1,openai
+elevenlabs|el:lily|0.7||be hard on somebody.,be hard on somebody.,created,200,59904,no,,1,openai
+openai|nova|0.85||be hard on somebody.,be hard on somebody.,created,200,38400,no,,1,openai
+elevenlabs|el:lily|0.85||drop somebody a line,drop somebody a line,created,200,42240,no,,1,openai
+elevenlabs|el:lily|0.8||drop somebody a line,drop somebody a line,created,200,38784,no,,1,openai
+elevenlabs|el:lily|0.7||drop somebody a line,drop somebody a line,created,200,47232,no,,1,openai
+elevenlabs|el:lily|0.85||lift somebody's spirits,lift somebody's spirits,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.8||lift somebody's spirits,lift somebody's spirits,created,200,44928,no,,1,openai
+elevenlabs|el:lily|0.7||lift somebody's spirits,lift somebody's spirits,created,200,67968,no,,1,openai
+openai|nova|0.85||lift somebody's spirits,lift somebody's spirits,created,200,52224,no,,1,openai
+elevenlabs|el:lily|0.85||run low (on something),run low (on something),created,200,51456,no,,1,openai
+elevenlabs|el:lily|0.8||run low (on something),run low (on something),created,200,54528,no,,1,openai
+elevenlabs|el:lily|0.7||run low (on something),run low (on something),created,200,59904,no,,1,openai
+openai|nova|0.85||run low (on something),run low (on something),created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.85||help somebody with,help somebody with,created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.8||help somebody with,help somebody with,created,200,45696,no,,1,openai
+elevenlabs|el:lily|0.7||help somebody with,help somebody with,created,200,38016,no,,1,openai
+openai|nova|0.85||help somebody with,help somebody with,created,200,57216,no,,1,openai
+elevenlabs|el:lily|0.7||fight against somebody/something,fight against somebody/something,created,200,81792,no,,1,openai
+openai|nova|0.85||fight against somebody/something,fight against somebody/something,created,200,62208,no,,1,openai
+elevenlabs|el:lily|0.8||What does this charity provide for people in need?,What does this charity provide for people in need?,created,200,79680,no,,1,openai
+"openai|echo|0.8||It provides food, shelter and other practical help.","It provides food, shelter and other practical help.",created,200,78240,no,,1,openai
+elevenlabs|el:lily|0.8||You look pale. Do you have a fever?,You look pale. Do you have a fever?,created,200,61824,no,,1,openai
+"openai|echo|0.8||No, but I have a runny nose and a cough.","No, but I have a runny nose and a cough.",created,200,79488,no,,1,openai
+elevenlabs|el:lily|0.8||I'm not sure which book to read.,I'm not sure which book to read.,created,200,53760,no,,1,openai
+openai|echo|0.8||Did you consider this fantasy novel? It's based on an old kingdom.,Did you consider this fantasy novel? It's based on an old kingdom.,created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.8||What happened in it?,What happened in it?,created,200,39552,no,,1,openai
+openai|echo|0.8||A brave girl defeated the enemy and saved her people. The climax was wonderful.,A brave girl defeated the enemy and saved her people. The climax was wonderful.,created,200,124320,no,,1,openai
+"elevenlabs|el:lily|0.8||Great, I'll read it first.","Great, I'll read it first.",created,200,67584,no,,1,openai
+elevenlabs|el:lily|0.8||How did you like the mystery book I lent you?,How did you like the mystery book I lent you?,created,200,71040,no,,1,openai
+openai|echo|0.8||It was great. The story had a strong effect on me.,It was great. The story had a strong effect on me.,created,200,78240,no,,1,openai
+elevenlabs|el:lily|0.8||Which part did you like best?,Which part did you like best?,created,200,57600,no,,1,openai
+openai|echo|0.8||The hidden secret at the climax. I never guessed it.,The hidden secret at the climax. I never guessed it.,created,200,79200,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes, that part surprised me too.","Yes, that part surprised me too.",created,200,66816,no,,1,openai
+elevenlabs|el:lily|0.8||Where is this beautiful coral reef located?,Where is this beautiful coral reef located?,created,200,67680,no,,1,openai
+openai|echo|0.8||It lies along the northeastern coast of Australia.,It lies along the northeastern coast of Australia.,created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.8||My grandpa says collecting stamps is old-fashioned.,My grandpa says collecting stamps is old-fashioned.,created,200,79680,no,,1,openai
+openai|echo|0.8||I don't think so. It allows him to relax and reduce stress.,I don't think so. It allows him to relax and reduce stress.,created,200,90720,no,,1,openai
+elevenlabs|el:lily|0.8||Is voluntary work paid?,Is voluntary work paid?,created,200,50688,no,,1,openai
+"openai|echo|0.8||No, it's unpaid. But most of all, it lets you help people in need and feel its real value.","No, it's unpaid. But most of all, it lets you help people in need and feel its real value.",created,200,134400,no,,1,openai
+elevenlabs|el:lily|0.8||Why should we protect these wonders of nature?,Why should we protect these wonders of nature?,created,200,57600,no,,1,openai
+openai|echo|0.8||Because some coral and turtles may die out. We must save them before it is too late.,Because some coral and turtles may die out. We must save them before it is too late.,created,200,132000,no,,1,openai
+elevenlabs|el:lily|0.8||Where did you go on vacation?,Where did you go on vacation?,created,200,44928,no,,1,openai
+openai|echo|0.8||I visited a beautiful old town and saw the famous landscape.,I visited a beautiful old town and saw the famous landscape.,created,200,94560,no,,1,openai
+elevenlabs|el:lily|0.8||How does writing a program help you relax?,How does writing a program help you relax?,created,200,66240,no,,1,openai
+"openai|echo|0.8||When I manage to finish a single program, the achievement helps me forget my stress.","When I manage to finish a single program, the achievement helps me forget my stress.",created,200,129120,no,,1,openai
+elevenlabs|el:lily|0.8||What kind of book did you read on the weekend?,What kind of book did you read on the weekend?,created,200,72000,no,,1,openai
+"openai|echo|0.8||I read a science fiction book. The aliens in it tried to destroy the Earth, but the people fought back.","I read a science fiction book. The aliens in it tried to destroy the Earth, but the people fought back.",created,200,158400,no,,1,openai
+elevenlabs|el:lily|0.8||Did you buy anything?,Did you buy anything?,created,200,42624,no,,1,openai
+"openai|echo|0.8||Yes, I got a silk scarf and some steamed fish.","Yes, I got a silk scarf and some steamed fish.",created,200,70560,no,,1,openai
+elevenlabs|el:lily|0.8||How did you feel at the top of the mountain?,How did you feel at the top of the mountain?,created,200,69600,no,,1,openai
+"openai|echo|0.8||Honestly, the view was so beautiful that it took my breath away. I'll never forget that moment.","Honestly, the view was so beautiful that it took my breath away. I'll never forget that moment.",created,200,147360,no,,1,openai
+"elevenlabs|el:lily|0.8||I want to do something useful in my youth, but I'm just an ordinary student.","I want to do something useful in my youth, but I'm just an ordinary student.",created,200,118560,no,,1,openai
+"openai|echo|0.8||Don't worry. Sign up for this organization, and even a small effort can make a difference.","Don't worry. Sign up for this organization, and even a small effort can make a difference.",created,200,138240,no,,1,openai
+"elevenlabs|el:lily|0.8||When I travel, how can I avoid being rude to local people?","When I travel, how can I avoid being rude to local people?",created,200,89280,no,,1,openai
+openai|echo|0.8||Learn their customs first. A little respect goes a long way wherever you go.,Learn their customs first. A little respect goes a long way wherever you go.,created,200,114720,no,,1,openai
+elevenlabs|el:lily|0.8||How deep can a submersible dive?,How deep can a submersible dive?,created,200,53760,no,,1,openai
+"openai|echo|0.8||Some can reach the very bottom of the sea, more than ten thousand metres down.","Some can reach the very bottom of the sea, more than ten thousand metres down.",created,200,122880,no,,1,openai
+elevenlabs|el:lily|0.8||You seem in low spirits these days. What's wrong?,You seem in low spirits these days. What's wrong?,created,200,75360,no,,1,openai
+"openai|echo|0.8||There is too much pressure, and I feel everybody is being hard on me.","There is too much pressure, and I feel everybody is being hard on me.",created,200,107520,no,,1,openai
+"elevenlabs|el:lily|0.8||When the tornado was coming closer, why weren't you screaming like the others?","When the tornado was coming closer, why weren't you screaming like the others?",created,200,122400,no,,1,openai
+"openai|echo|0.8||Thankfully, because of my knowledge, I was hiding in a safe corner while they were running outside.","Thankfully, because of my knowledge, I was hiding in a safe corner while they were running outside.",created,200,151680,no,,1,openai
+elevenlabs|el:lily|0.8||How can an ordinary person be so successful at helping others?,How can an ordinary person be so successful at helping others?,created,200,98880,no,,1,openai
+"openai|echo|0.8||He is active and willing, and most of all, he values teamwork. That's what makes a difference.","He is active and willing, and most of all, he values teamwork. That's what makes a difference.",created,200,112128,no,,1,openai
+elevenlabs|el:lily|0.8||This explorer measured the depth of the waterfall successfully.,This explorer measured the depth of the waterfall successfully.,created,200,98400,no,,1,openai
+"openai|echo|0.8||Right. With his teammate's help, he did it, even though the work was very risky.","Right. With his teammate's help, he did it, even though the work was very risky.",created,200,120960,no,,1,openai
+elevenlabs|el:lily|0.8||I was careless and cut my finger with a knife.,I was careless and cut my finger with a knife.,created,200,73920,no,,1,openai
+"openai|echo|0.8||Press the cut to stop the bleeding, and keep the injury clean for safety.","Press the cut to stop the bleeding, and keep the injury clean for safety.",created,200,110880,no,,1,openai
+elevenlabs|el:lily|0.8||The patient says she has a headache and a high fever.,The patient says she has a headache and a high fever.,created,200,84480,no,,1,openai
+"openai|echo|0.8||She may have the flu, so she needs to rest and drink more water.","She may have the flu, so she needs to rest and drink more water.",created,200,96960,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you learn calligraphy every weekend?,Why do you learn calligraphy every weekend?,created,200,66720,no,,1,openai
+"openai|echo|0.8||It allows me to relax, and each single stroke helps me forget my stress.","It allows me to relax, and each single stroke helps me forget my stress.",created,200,111360,no,,1,openai
+elevenlabs|el:lily|0.8||What were your relatives doing when the floodwater came?,What were your relatives doing when the floodwater came?,created,200,83520,no,,1,openai
+"openai|echo|0.8||They were carrying supplies to a truck, getting ready to leave.","They were carrying supplies to a truck, getting ready to leave.",created,200,77568,no,,1,openai
+elevenlabs|el:lily|0.8||You look so happy!,You look so happy!,created,200,53760,no,,1,openai
+"openai|echo|0.8||Yes! I just came back from my holiday. The landscape was fantastic, and I even saw a rainbow over the hills.","Yes! I just came back from my holiday. The landscape was fantastic, and I even saw a rainbow over the hills.",created,200,164160,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you like this place so much?,Why do you like this place so much?,created,200,55680,no,,1,openai
+openai|echo|0.8||The scenery here reminds me of peace. I feel comfortable and relaxed whenever I visit on holiday.,The scenery here reminds me of peace. I feel comfortable and relaxed whenever I visit on holiday.,created,200,151680,no,,1,openai
+elevenlabs|el:lily|0.8||Do you have any recommendation for me? I want a good read for the holiday.,Do you have any recommendation for me? I want a good read for the holiday.,created,200,114720,no,,1,openai
+openai|echo|0.8||Sure. I just read an adventure story last week. The hero got lost at sea but never gave up. I really enjoyed it.,Sure. I just read an adventure story last week. The hero got lost at sea but never gave up. I really enjoyed it.,created,200,172320,no,,1,openai
+elevenlabs|el:lily|0.8||That sounds exciting. I'll borrow it tomorrow.,That sounds exciting. I'll borrow it tomorrow.,created,200,70080,no,,1,openai
+elevenlabs|el:lily|0.8||How do you reduce your stress after exams?,How do you reduce your stress after exams?,created,200,67200,no,,1,openai
+openai|echo|0.8||I do yoga and go on an outing once in a while.,I do yoga and go on an outing once in a while.,created,200,72000,no,,1,openai
+elevenlabs|el:lily|0.8||You look happy. What did you read?,You look happy. What did you read?,created,200,51840,no,,1,openai
+openai|echo|0.8||A historical novel. A weak boy grew strong day by day and proved everyone wrong.,A historical novel. A weak boy grew strong day by day and proved everyone wrong.,created,200,100992,no,,1,openai
+elevenlabs|el:lily|0.8||Did it inspire you?,Did it inspire you?,created,200,37632,no,,1,openai
+"openai|echo|0.8||Yes, a lot. I want to recommend it to the whole class.","Yes, a lot. I want to recommend it to the whole class.",created,200,80640,no,,1,openai
+elevenlabs|el:lily|0.8||Then please bring it to school tomorrow.,Then please bring it to school tomorrow.,created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.8||How do people greet each other in your country?,How do people greet each other in your country?,created,200,74400,no,,1,openai
+"openai|echo|0.8||We usually shake hands, but close friends may hug.","We usually shake hands, but close friends may hug.",created,200,76320,no,,1,openai
+elevenlabs|el:lily|0.8||I feel scared of skiing and want to give up.,I feel scared of skiing and want to give up.,created,200,70080,no,,1,openai
+"openai|echo|0.8||Don't give up. Give it a go once in a while, and you will get over your fear.","Don't give up. Give it a go once in a while, and you will get over your fear.",created,200,114240,no,,1,openai
+elevenlabs|el:lily|0.8||My stomach has been aching since this morning.,My stomach has been aching since this morning.,created,200,71040,no,,1,openai
+openai|echo|0.8||You should avoid cold food and see a doctor if the pain doesn't go away.,You should avoid cold food and see a doctor if the pain doesn't go away.,created,200,113280,no,,1,openai
+elevenlabs|el:lily|0.8||I heard a coral reef is alive.,I heard a coral reef is alive.,created,200,64896,no,,1,openai
+"openai|echo|0.8||Yes. It is a huge living structure, and many types of turtles live there in their lifetime.","Yes. It is a huge living structure, and many types of turtles live there in their lifetime.",created,200,140160,no,,1,openai
+elevenlabs|el:lily|0.8||Why do climbers risk their lives on such high cliffs?,Why do climbers risk their lives on such high cliffs?,created,200,82560,no,,1,openai
+openai|echo|0.8||I think curiosity drives them. They want to reach the top at all costs.,I think curiosity drives them. They want to reach the top at all costs.,created,200,109920,no,,1,openai
+"openai|echo|0.8||Hi, Lucy. Is that your twin sister Lily? You look exactly the same!","Hi, Lucy. Is that your twin sister Lily? You look exactly the same!",created,200,101280,no,,1,openai
+"elevenlabs|el:lily|0.8||Haha, yes. But actually, Lily is a bit taller than me, and her hair is longer than mine.","Haha, yes. But actually, Lily is a bit taller than me, and her hair is longer than mine.",created,200,133920,no,,1,openai
+"elevenlabs|el:lily|0.8||Jack, do you think friends should be exactly the same?","Jack, do you think friends should be exactly the same?",created,200,83520,no,,1,openai
+"openai|echo|0.8||Not really. For example, my best friend Tom is much more outgoing than me, but we both love playing basketball, so we are great friends.","Not really. For example, my best friend Tom is much more outgoing than me, but we both love playing basketball, so we are great friends.",created,200,209760,no,,1,openai
+"elevenlabs|el:lily|0.8||Sam, did you see the exam results? You did great!","Sam, did you see the exam results? You did great!",created,200,74880,no,,1,openai
+openai|echo|0.8||Thanks! I got an A this time because my friend Kevin is very straightforward. He pointed out my mistakes before the exam so I could correct them.,Thanks! I got an A this time because my friend Kevin is very straightforward. He pointed out my mistakes before the exam so I could correct them.,created,200,223200,no,,1,openai
+"elevenlabs|el:lily|0.8||Is that your brother, Paul? He looks much taller than you.","Is that your brother, Paul? He looks much taller than you.",created,200,88800,no,,1,openai
+"openai|echo|0.8||Yes, that is Mike. He is taller, but I am faster at running.","Yes, that is Mike. He is taller, but I am faster at running.",created,200,89760,no,,1,openai
+"openai|echo|0.8||Who do you think should be a friend, Betty? Someone alike or different?","Who do you think should be a friend, Betty? Someone alike or different?",created,200,105600,no,,1,openai
+"elevenlabs|el:lily|0.8||I think friends should be different. My best friend Sally is very outgoing, while I am kind of shy. She helps me become more confident.","I think friends should be different. My best friend Sally is very outgoing, while I am kind of shy. She helps me become more confident.",created,200,209280,no,,1,openai
+"elevenlabs|el:lily|0.8||Hey, Dave. You look happy today!","Hey, Dave. You look happy today!",created,200,73728,no,,1,openai
+"openai|echo|0.8||Yeah, my friend Frank just helped me find some grammar mistakes in my essay. He is always straightforward and honest, which makes me a better student.","Yeah, my friend Frank just helped me find some grammar mistakes in my essay. He is always straightforward and honest, which makes me a better student.",created,200,233760,no,,1,openai
+"openai|echo|0.8||Do you and your twin sister have the same hobbies, Alice?","Do you and your twin sister have the same hobbies, Alice?",created,200,84960,no,,1,openai
+"elevenlabs|el:lily|0.8||Not really. I enjoy reading history books, but she reads a lot of novels.","Not really. I enjoy reading history books, but she reads a lot of novels.",created,200,112800,no,,1,openai
+"elevenlabs|el:lily|0.8||Why are you practicing badminton so hard, Tom?","Why are you practicing badminton so hard, Tom?",created,200,70560,no,,1,openai
+"openai|echo|0.8||Because my friend Stephen always wins our matches! He plays better than me, so I want to try harder.","Because my friend Stephen always wins our matches! He plays better than me, so I want to try harder.",created,200,154560,no,,1,openai
+"openai|echo|0.8||Lily, you look sad. What is wrong?","Lily, you look sad. What is wrong?",created,200,76800,no,,1,openai
+elevenlabs|el:lily|0.8||I failed my music test. But my friend Rose told me a funny joke and helped me see the silver lining. Now I feel much better.,I failed my music test. But my friend Rose told me a funny joke and helped me see the silver lining. Now I feel much better.,created,200,194880,no,,1,openai
+"elevenlabs|el:lily|0.8||Max, who is more hard-working, you or your cousin Sam?","Max, who is more hard-working, you or your cousin Sam?",created,200,81600,no,,1,openai
+openai|echo|0.8||Sam is. He always gets up earlier than me to study in the morning.,Sam is. He always gets up earlier than me to study in the morning.,created,200,104160,no,,1,openai
+"elevenlabs|el:lily|0.8||Who is your favorite friend, Kevin?","Who is your favorite friend, Kevin?",created,200,60672,no,,1,openai
+"openai|echo|0.8||I like Lucy best. She is not very funny, but she is a great listener. She is always there when I have a problem.","I like Lucy best. She is not very funny, but she is a great listener. She is always there when I have a problem.",created,200,169920,no,,1,openai
+"elevenlabs|el:lily|0.8||Look at my new photo, Tom. It was taken in the Shunan Bamboo Forest.","Look at my new photo, Tom. It was taken in the Shunan Bamboo Forest.",created,200,104160,no,,1,openai
+"openai|echo|0.8||Wow, it is beautiful! I know it is the largest bamboo forest in China.","Wow, it is beautiful! I know it is the largest bamboo forest in China.",created,200,107040,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes, and I learned that bamboo is one of the fastest-growing plants on Earth. It can grow up to one meter a day!","Yes, and I learned that bamboo is one of the fastest-growing plants on Earth. It can grow up to one meter a day!",created,200,174720,no,,1,openai
+openai|echo|0.8||That is amazing! It is also very useful for making tools.,That is amazing! It is also very useful for making tools.,created,200,87360,no,,1,openai
+elevenlabs|el:lily|0.8||I learned that bamboo is one of the fastest-growing plants on Earth. It can grow up to one meter a day!,I learned that bamboo is one of the fastest-growing plants on Earth. It can grow up to one meter a day!,created,200,161280,no,,1,openai
+"openai|echo|0.8||Why do scientists care so much about bees, Lily? They are so small.","Why do scientists care so much about bees, Lily? They are so small.",created,200,100320,no,,1,openai
+"elevenlabs|el:lily|0.8||Because they are the most important animals for pollination. Without them, about 80% of the plants in the world could not grow.","Because they are the most important animals for pollination. Without them, about 80% of the plants in the world could not grow.",created,200,208320,no,,1,openai
+openai|echo|0.8||Really? I did not know they played such a big role in the ecosystem.,Really? I did not know they played such a big role in the ecosystem.,created,200,106080,no,,1,openai
+"elevenlabs|el:lily|0.8||They are the most important animals for pollination. Without them, about 80% of the plants in the world could not grow.","They are the most important animals for pollination. Without them, about 80% of the plants in the world could not grow.",created,200,194400,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes, so protecting bees means protecting our own food supply.","Yes, so protecting bees means protecting our own food supply.",created,200,95040,no,,1,openai
+elevenlabs|el:lily|0.8||I watched a documentary about blue whales yesterday. They are the heaviest animals on earth.,I watched a documentary about blue whales yesterday. They are the heaviest animals on earth.,created,200,144480,no,,1,openai
+"openai|echo|0.8||Yes, they can weigh up to 200 tons. Where do they live?","Yes, they can weigh up to 200 tons. Where do they live?",created,200,97920,no,,1,openai
+"elevenlabs|el:lily|0.8||They live in almost all oceans, except the Arctic Ocean.","They live in almost all oceans, except the Arctic Ocean.",created,200,68736,no,,1,openai
+"openai|echo|0.8||They are huge, but I heard they eat very small ocean animals.","They are huge, but I heard they eat very small ocean animals.",created,200,95040,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes. They live in almost all oceans, except the Arctic Ocean.","Yes. They live in almost all oceans, except the Arctic Ocean.",created,200,74880,no,,1,openai
+openai|echo|0.8||Did you know that bees use a dance to talk to each other?,Did you know that bees use a dance to talk to each other?,created,200,75840,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes, it is one of the most interesting things about them. They tell others where food is.","Yes, it is one of the most interesting things about them. They tell others where food is.",created,200,138240,no,,1,openai
+openai|echo|0.8||Nature is so amazing. But the text says their population is dropping.,Nature is so amazing. But the text says their population is dropping.,created,200,108480,no,,1,openai
+elevenlabs|el:lily|0.8||That is true. We must take action to protect them before it is too late.,That is true. We must take action to protect them before it is too late.,created,200,112320,no,,1,openai
+"openai|echo|0.8||Hey Lily, can you teach me how to cook a popular Chinese dish?","Hey Lily, can you teach me how to cook a popular Chinese dish?",created,200,74880,no,,1,openai
+"elevenlabs|el:lily|0.8||Sure. How about stir-fried eggs and tomatoes? First, cut the tomatoes into small pieces. Next, mix the eggs in a bowl.","Sure. How about stir-fried eggs and tomatoes? First, cut the tomatoes into small pieces. Next, mix the eggs in a bowl.",created,200,179520,no,,1,openai
+openai|echo|0.8||This banana milk shake tastes amazing! How do you make it?,This banana milk shake tastes amazing! How do you make it?,created,200,89760,no,,1,openai
+"elevenlabs|el:lily|0.8||It is easy. You need three bananas, one tablespoon of ice cream, and a cup of milk. First, peel and cut up the bananas.","It is easy. You need three bananas, one tablespoon of ice cream, and a cup of milk. First, peel and cut up the bananas.",created,200,180960,no,,1,openai
+"elevenlabs|el:lily|0.8||First, peel and cut up the bananas. After that, put them with the ice cream into the blender. Next, pour the milk in and turn it on.","First, peel and cut up the bananas. After that, put them with the ice cream into the blender. Next, pour the milk in and turn it on.",created,200,201120,no,,1,openai
+elevenlabs|el:lily|0.8||Look at this strawberry cake! Did you make it by yourself?,Look at this strawberry cake! Did you make it by yourself?,created,200,88800,no,,1,openai
+"openai|echo|0.8||Yes, I made it for your birthday. Try some!","Yes, I made it for your birthday. Try some!",created,200,63840,no,,1,openai
+"elevenlabs|el:lily|0.8||Oh, what a lovely cake! And how delicious it tastes! You are a great cook.","Oh, what a lovely cake! And how delicious it tastes! You are a great cook.",created,200,111360,no,,1,openai
+"openai|echo|0.8||Jane, do you know how to make mashed potatoes?","Jane, do you know how to make mashed potatoes?",created,200,70560,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes. First, wash the potatoes, cut them into pieces, and boil them until they are soft. Then mash them.","Yes. First, wash the potatoes, cut them into pieces, and boil them until they are soft. Then mash them.",created,200,155040,no,,1,openai
+"elevenlabs|el:lily|0.8||After boiling and mashing the potatoes, add one tablespoon of butter, half a cup of milk, and some salt and pepper. Mix them all together.","After boiling and mashing the potatoes, add one tablespoon of butter, half a cup of milk, and some salt and pepper. Mix them all together.",created,200,213600,no,,1,openai
+"elevenlabs|el:lily|0.8||What do you want to be when you grow up, Li Ming?","What do you want to be when you grow up, Li Ming?",created,200,74880,no,,1,openai
+openai|echo|0.8||I want to be an IT engineer. I am really interested in computers.,I want to be an IT engineer. I am really interested in computers.,created,200,101280,no,,1,openai
+elevenlabs|el:lily|0.8||That sounds cool! How are you going to do that?,That sounds cool! How are you going to do that?,created,200,73920,no,,1,openai
+openai|echo|0.8||I am going to work hard at maths and learn coding this summer.,I am going to work hard at maths and learn coding this summer.,created,200,96000,no,,1,openai
+elevenlabs|el:lily|0.8||How are you going to be an IT engineer?,How are you going to be an IT engineer?,created,200,62592,no,,1,openai
+"openai|echo|0.8||Hey, Sarah. Are you going to exercise more next year?","Hey, Sarah. Are you going to exercise more next year?",created,200,79200,no,,1,openai
+elevenlabs|el:lily|0.8||Yes. I made a health resolution. I am going to take up jogging.,Yes. I made a health resolution. I am going to take up jogging.,created,200,96960,no,,1,openai
+openai|echo|0.8||How often are you going to jog?,How often are you going to jog?,created,200,60672,no,,1,openai
+elevenlabs|el:lily|0.8||I am going to jog every morning before school.,I am going to jog every morning before school.,created,200,72960,no,,1,openai
+"elevenlabs|el:lily|0.8||Sam, your English speaking skills are getting better.","Sam, your English speaking skills are getting better.",created,200,82560,no,,1,openai
+"openai|echo|0.8||Thanks, Lily. I practice speaking English for half an hour every day.","Thanks, Lily. I practice speaking English for half an hour every day.",created,200,104160,no,,1,openai
+elevenlabs|el:lily|0.8||Are you going to do anything else to improve your English?,Are you going to do anything else to improve your English?,created,200,89760,no,,1,openai
+"openai|echo|0.8||Yes, I am going to read more English classics this term.","Yes, I am going to read more English classics this term.",created,200,87840,no,,1,openai
+openai|echo|0.8||My parents want me to be a teacher like my mother.,My parents want me to be a teacher like my mother.,created,200,73920,no,,1,openai
+"elevenlabs|el:lily|0.8||Do you want to be a teacher, Tom?","Do you want to be a teacher, Tom?",created,200,51840,no,,1,openai
+openai|echo|0.8||Not really. I prefer drawing.,Not really. I prefer drawing.,created,200,57600,no,,1,openai
+openai|echo|0.8||Not really. I prefer drawing. I am going to take art lessons and become a fashion designer.,Not really. I prefer drawing. I am going to take art lessons and become a fashion designer.,created,200,141120,no,,1,openai
+"elevenlabs|el:lily|0.8||What will the transport system be like in 50 years, Tom?","What will the transport system be like in 50 years, Tom?",created,200,89760,no,,1,openai
+openai|echo|0.8||There will be fewer traffic accidents because we will have self-driving flying cars.,There will be fewer traffic accidents because we will have self-driving flying cars.,created,200,132960,no,,1,openai
+elevenlabs|el:lily|0.8||Do you think robots will do all the housework for us one day?,Do you think robots will do all the housework for us one day?,created,200,96480,no,,1,openai
+"openai|echo|0.8||Yes, I do. Service robots will make our life much easier, but they will not replace humans completely.","Yes, I do. Service robots will make our life much easier, but they will not replace humans completely.",created,200,157920,no,,1,openai
+elevenlabs|el:lily|0.8||Will many jobs today disappear because of AI?,Will many jobs today disappear because of AI?,created,200,70080,no,,1,openai
+"openai|echo|0.8||Yes, but there will be more challenging new jobs, like space pilots and AI experts.","Yes, but there will be more challenging new jobs, like space pilots and AI experts.",created,200,103296,no,,1,openai
+"elevenlabs|el:lily|0.8||How can we prepare for the rapid changes in the future, Mr. Lu?","How can we prepare for the rapid changes in the future, Mr. Lu?",created,200,96480,no,,1,openai
+"openai|echo|0.8||It is simple. We should accept change, keep learning, and work hard every day.","It is simple. We should accept change, keep learning, and work hard every day.",created,200,119040,no,,1,openai
+"openai|echo|0.8||Hi, Lily. I am so nervous about talking to the new student in our class.","Hi, Lily. I am so nervous about talking to the new student in our class.",created,200,100800,no,,1,openai
+"elevenlabs|el:lily|0.8||Do not worry, Sam. If you smile and ask him about his hobbies, he will be happy to talk to you.","Do not worry, Sam. If you smile and ask him about his hobbies, he will be happy to talk to you.",created,200,145440,no,,1,openai
+"elevenlabs|el:lily|0.8||Hey, John. What is a good topic to talk about when meeting someone for the first time?","Hey, John. What is a good topic to talk about when meeting someone for the first time?",created,200,133920,no,,1,openai
+"openai|echo|0.8||Well, if you talk about the weather, sports, or travel, it usually works the best. But remember not to ask personal questions.","Well, if you talk about the weather, sports, or travel, it usually works the best. But remember not to ask personal questions.",created,200,188640,no,,1,openai
+openai|echo|0.8||I had a fight with my best friend yesterday because we did not agree with each other.,I had a fight with my best friend yesterday because we did not agree with each other.,created,200,124800,no,,1,openai
+"elevenlabs|el:lily|0.8||If you do not agree with others, you should not argue with them. You should stay calm and say sorry.","If you do not agree with others, you should not argue with them. You should stay calm and say sorry.",created,200,156000,no,,1,openai
+"elevenlabs|el:lily|0.8||Tom, you look so stiff. Are you nervous about your speech?","Tom, you look so stiff. Are you nervous about your speech?",created,200,89760,no,,1,openai
+"openai|echo|0.8||Yes, my body language is terrible when I stand in front of many people.","Yes, my body language is terrible when I stand in front of many people.",created,200,111840,no,,1,openai
+"elevenlabs|el:lily|0.8||Just stand up straight, smile, and be yourself. You will do great!","Just stand up straight, smile, and be yourself. You will do great!",created,200,100800,no,,1,openai
+"elevenlabs|el:lily|0.8||When you listen to someone, what should you show?","When you listen to someone, what should you show?",created,200,74880,no,,1,openai
+"openai|echo|0.8||You should show interest in others. If you are a good listener, you will find good points to ask questions about.","You should show interest in others. If you are a good listener, you will find good points to ask questions about.",created,200,170400,no,,1,openai
+openai|echo|0.8||Is it okay to ask about someone personal information when we first meet?,Is it okay to ask about someone personal information when we first meet?,created,200,108000,no,,1,openai
+"elevenlabs|el:lily|0.8||No, it is impolite to ask someone age, weight, or other personal information.","No, it is impolite to ask someone age, weight, or other personal information.",created,200,117600,no,,1,openai
+openai|echo|0.8||My friend told me about a topic I know nothing about. What should I say?,My friend told me about a topic I know nothing about. What should I say?,created,200,109440,no,,1,openai
+"elevenlabs|el:lily|0.8||Just be honest. Say I do not know much about it. Do not pretend, because people can find out you are not telling the truth.","Just be honest. Say I do not know much about it. Do not pretend, because people can find out you are not telling the truth.",created,200,152064,no,,1,openai
+elevenlabs|el:lily|0.8||I always feel nervous before giving a speech.,I always feel nervous before giving a speech.,created,200,56448,no,,1,openai
+"openai|echo|0.8||If you feel nervous, try to take a deep breath first. Then stand up straight and smile.","If you feel nervous, try to take a deep breath first. Then stand up straight and smile.",created,200,134400,no,,1,openai
+"openai|echo|0.8||If someone disagrees with me during a conversation, what should I do?","If someone disagrees with me during a conversation, what should I do?",created,200,108000,no,,1,openai
+elevenlabs|el:lily|0.8||Do not argue with them. Just move on to another topic politely.,Do not argue with them. Just move on to another topic politely.,created,200,98880,no,,1,openai
+elevenlabs|el:lily|0.8||Why is body language so important in a conversation?,Why is body language so important in a conversation?,created,200,65280,no,,1,openai
+openai|echo|0.8||Sometimes it is just as important as your words. A smile and good posture show that you are friendly.,Sometimes it is just as important as your words. A smile and good posture show that you are friendly.,created,200,155040,no,,1,openai
+elevenlabs|el:lily|0.8||Are you scared of ice-skating?,Are you scared of ice-skating?,created,200,62592,no,,1,openai
+"openai|echo|0.8||A little, but my instructor allows me to try slowly, so I give it a go.","A little, but my instructor allows me to try slowly, so I give it a go.",created,200,107520,no,,1,openai
+"elevenlabs|el:lily|0.8||When the wildfire was spreading, was everyone leaving the neighbourhood?","When the wildfire was spreading, was everyone leaving the neighbourhood?",created,200,112320,no,,1,openai
+"openai|echo|0.8||No, one old man was refusing to go, so a hero was carrying him to a truck through the thick smoke.","No, one old man was refusing to go, so a hero was carrying him to a truck through the thick smoke.",created,200,152640,no,,1,openai
+"elevenlabs|el:lily|0.8||My friend said something hurtful, and I don't dare to talk to her.","My friend said something hurtful, and I don't dare to talk to her.",created,200,102240,no,,1,openai
+openai|echo|0.8||Why not clear the air so that you both feel relaxed again?,Why not clear the air so that you both feel relaxed again?,created,200,73344,no,,1,openai
+elevenlabs|el:lily|0.8||Where do koalas come from?,Where do koalas come from?,created,200,52992,no,,1,openai
+openai|echo|0.8||They come from Australia.,They come from Australia.,created,200,48768,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you like monkeys?,Why do you like monkeys?,created,200,48768,no,,1,openai
+openai|echo|0.8||Because they are very smart.,Because they are very smart.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.8||Do you see any giraffes here?,Do you see any giraffes here?,created,200,48768,no,,1,openai
+"openai|echo|0.8||Yes, they are eating leaves over there.","Yes, they are eating leaves over there.",created,200,71808,no,,1,openai
+elevenlabs|el:lily|0.8||Let's see the pandas first.,Let's see the pandas first.,created,200,50688,no,,1,openai
+"openai|echo|0.8||No, the pandas are sleeping now. Let's see the bears.","No, the pandas are sleeping now. Let's see the bears.",created,200,80160,no,,1,openai
+elevenlabs|el:lily|0.8||Do you have a pet at home?,Do you have a pet at home?,created,200,49920,no,,1,openai
+"openai|echo|0.8||Yes, I have a small black cat.","Yes, I have a small black cat.",created,200,74880,no,,1,openai
+elevenlabs|el:lily|0.8||Is the white animal a rabbit?,Is the white animal a rabbit?,created,200,51840,no,,1,openai
+"openai|echo|0.8||No, it is a polar bear from the snow.","No, it is a polar bear from the snow.",created,200,57600,no,,1,openai
+elevenlabs|el:lily|0.8||Does your father like the big elephants?,Does your father like the big elephants?,created,200,63744,no,,1,openai
+"openai|echo|0.8||No, he thinks they are too lazy.","No, he thinks they are too lazy.",created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.8||I want to see the dangerous tigers and lions.,I want to see the dangerous tigers and lions.,created,200,68160,no,,1,openai
+openai|echo|0.8||I don't like them. I like beautiful birds and cute koalas. Let's go to the bird house.,I don't like them. I like beautiful birds and cute koalas. Let's go to the bird house.,created,200,131520,no,,1,openai
+"elevenlabs|el:lily|0.8||Hey Mary, where are the monkeys?","Hey Mary, where are the monkeys?",created,200,57600,no,,1,openai
+"openai|echo|0.8||They are next to the big elephants, and the elephants are across from the lions.","They are next to the big elephants, and the elephants are across from the lions.",created,200,117600,no,,1,openai
+elevenlabs|el:lily|0.8||Does this school zoo have any animals from Africa?,Does this school zoo have any animals from Africa?,created,200,80640,no,,1,openai
+"openai|echo|0.8||Yes, we have two lions, but we don't have any giraffes this year.","Yes, we have two lions, but we don't have any giraffes this year.",created,200,98880,no,,1,openai
+"elevenlabs|el:lily|0.8||Wow, that small dog can walk on two legs!","Wow, that small dog can walk on two legs!",created,200,62880,no,,1,openai
+"openai|echo|0.8||Yes, it is very smart. My dog can't do that, it only sleeps all day.","Yes, it is very smart. My dog can't do that, it only sleeps all day.",created,200,102720,no,,1,openai
+elevenlabs|el:lily|0.8||Can we wear hats in class?,Can we wear hats in class?,created,200,58752,no,,1,openai
+"openai|echo|0.8||No, we can't.","No, we can't.",created,200,37632,no,,1,openai
+elevenlabs|el:lily|0.8||Do we have to wear uniforms today?,Do we have to wear uniforms today?,created,200,67584,no,,1,openai
+"openai|echo|0.8||Yes, we do.","Yes, we do.",created,200,37632,no,,1,openai
+"elevenlabs|el:lily|0.8||Don't eat in the classroom, Tom.","Don't eat in the classroom, Tom.",created,200,55680,no,,1,openai
+"openai|echo|0.8||Sorry, Miss White.","Sorry, Miss White.",created,200,41856,no,,1,openai
+"elevenlabs|el:lily|0.8||Can I bring my mobile phone to school, Mr. Smith?","Can I bring my mobile phone to school, Mr. Smith?",created,200,74400,no,,1,openai
+"openai|echo|0.8||No, you can't. You should leave it at home.","No, you can't. You should leave it at home.",created,200,63840,no,,1,openai
+elevenlabs|el:lily|0.8||We have many rules at school.,We have many rules at school.,created,200,58752,no,,1,openai
+"openai|echo|0.8||Yes, but we don't have any rules on weekends.","Yes, but we don't have any rules on weekends.",created,200,69120,no,,1,openai
+"elevenlabs|el:lily|0.8||Please line up for your food, young man.","Please line up for your food, young man.",created,200,64896,no,,1,openai
+"openai|echo|0.8||Okay, I am sorry. I always forget this dining hall rule.","Okay, I am sorry. I always forget this dining hall rule.",created,200,82560,no,,1,openai
+"elevenlabs|el:lily|0.8||Remember to return the book to the library today, Lily.","Remember to return the book to the library today, Lily.",created,200,84480,no,,1,openai
+"openai|echo|0.8||No, I can keep it for three more days.","No, I can keep it for three more days.",created,200,60672,no,,1,openai
+"elevenlabs|el:lily|0.8||Can we listen to music here, Linda?","Can we listen to music here, Linda?",created,200,90624,no,,1,openai
+"openai|echo|0.8||We can't do it in the library, but we can put on our headphones in the computer room.","We can't do it in the library, but we can put on our headphones in the computer room.",created,200,128160,no,,1,openai
+"elevenlabs|el:lily|0.8||Do you like your music class, Peter?","Do you like your music class, Peter?",created,200,48768,no,,1,openai
+"openai|echo|0.8||Yes, I like singing. But we must be on time, and we can't bring food to the music room.","Yes, I like singing. But we must be on time, and we can't bring food to the music room.",created,200,133440,no,,1,openai
+"elevenlabs|el:lily|0.8||Why are you so angry, Alice?","Why are you so angry, Alice?",created,200,59904,no,,1,openai
+openai|echo|0.8||Tom always runs fast in the hallways. It's against the school rules. I think he should walk slowly.,Tom always runs fast in the hallways. It's against the school rules. I think he should walk slowly.,created,200,153120,no,,1,openai
+elevenlabs|el:lily|0.8||Can we take photos in the school art museum?,Can we take photos in the school art museum?,created,200,68640,no,,1,openai
+"openai|echo|0.8||Look at that sign. It says ""No Food"", but we can take photos if we don't use flash.","Look at that sign. It says ""No Food"", but we can take photos if we don't use flash.",created,200,118560,no,,1,openai
+elevenlabs|el:lily|0.8||How often do you exercise?,How often do you exercise?,created,200,54528,no,,1,openai
+openai|echo|0.8||I exercise every day.,I exercise every day.,created,200,58752,no,,1,openai
+elevenlabs|el:lily|0.8||Do you like tennis?,Do you like tennis?,created,200,33792,no,,1,openai
+"openai|echo|0.8||No, I like football.","No, I like football.",created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.8||Where do you usually swim?,Where do you usually swim?,created,200,41856,no,,1,openai
+openai|echo|0.8||In the school swimming pool.,In the school swimming pool.,created,200,43776,no,,1,openai
+"elevenlabs|el:lily|0.8||Let's play badminton this afternoon, Lucy.","Let's play badminton this afternoon, Lucy.",created,200,64320,no,,1,openai
+openai|echo|0.8||I have no time. I need to run.,I have no time. I need to run.,created,200,59904,no,,1,openai
+elevenlabs|el:lily|0.8||Do you exercise on weekends?,Do you exercise on weekends?,created,200,45696,no,,1,openai
+"openai|echo|0.8||No, I only exercise from Monday to Friday.","No, I only exercise from Monday to Friday.",created,200,61920,no,,1,openai
+elevenlabs|el:lily|0.8||Is football your favorite sport?,Is football your favorite sport?,created,200,68736,no,,1,openai
+"openai|echo|0.8||No, it's boring. I think club sports are better.","No, it's boring. I think club sports are better.",created,200,72000,no,,1,openai
+elevenlabs|el:lily|0.8||Your sport shirt looks clean and beautiful.,Your sport shirt looks clean and beautiful.,created,200,68640,no,,1,openai
+"openai|echo|0.8||Thanks, I always wash it after playing tennis.","Thanks, I always wash it after playing tennis.",created,200,69120,no,,1,openai
+"elevenlabs|el:lily|0.8||Do you want to go swimming with me, Eric?","Do you want to go swimming with me, Eric?",created,200,62400,no,,1,openai
+"openai|echo|0.8||I want to, but I have a bad cold today. I can only watch you swim.","I want to, but I have a bad cold today. I can only watch you swim.",created,200,100800,no,,1,openai
+elevenlabs|el:lily|0.8||Do we have a sports club meeting on Tuesday or Thursday?,Do we have a sports club meeting on Tuesday or Thursday?,created,200,69504,no,,1,openai
+"openai|echo|0.8||It is usually on Tuesday, but this week we have it on Friday.","It is usually on Tuesday, but this week we have it on Friday.",created,200,75648,no,,1,openai
+"elevenlabs|el:lily|0.8||Why do you run so much every day, Lily?","Why do you run so much every day, Lily?",created,200,69888,no,,1,openai
+openai|echo|0.8||I am a weak girl. My doctor says running makes my heart strong.,I am a weak girl. My doctor says running makes my heart strong.,created,200,96960,no,,1,openai
+elevenlabs|el:lily|0.8||Let's join the basketball club together.,Let's join the basketball club together.,created,200,54528,no,,1,openai
+openai|echo|0.8||I don't like basketball. I prefer the dance club because I think it keeps me fit.,I don't like basketball. I prefer the dance club because I think it keeps me fit.,created,200,123840,no,,1,openai
+elevenlabs|el:lily|0.8||What do you have for lunch?,What do you have for lunch?,created,200,48768,no,,1,openai
+openai|echo|0.8||I have rice and fish.,I have rice and fish.,created,200,47616,no,,1,openai
+elevenlabs|el:lily|0.8||Do you like vegetables?,Do you like vegetables?,created,200,53760,no,,1,openai
+"openai|echo|0.8||Yes, carrots are my favorite.","Yes, carrots are my favorite.",created,200,70656,no,,1,openai
+elevenlabs|el:lily|0.8||Is fast food healthy?,Is fast food healthy?,created,200,50688,no,,1,openai
+"openai|echo|0.8||No, it has too much fat.","No, it has too much fat.",created,200,64896,no,,1,openai
+elevenlabs|el:lily|0.8||Do you want some hamburgers for dinner?,Do you want some hamburgers for dinner?,created,200,48768,no,,1,openai
+"openai|echo|0.8||No, let's have tomato noodles.","No, let's have tomato noodles.",created,200,63744,no,,1,openai
+elevenlabs|el:lily|0.8||Do you eat dessert after lunch?,Do you eat dessert after lunch?,created,200,55680,no,,1,openai
+"openai|echo|0.8||No, I usually eat a banana or an orange.","No, I usually eat a banana or an orange.",created,200,85632,no,,1,openai
+elevenlabs|el:lily|0.8||How many meals do you have a day?,How many meals do you have a day?,created,200,58752,no,,1,openai
+"openai|echo|0.8||I have three meals, and breakfast is the biggest.","I have three meals, and breakfast is the biggest.",created,200,74880,no,,1,openai
+"elevenlabs|el:lily|0.8||Do you like onions, Tom?","Do you like onions, Tom?",created,200,53760,no,,1,openai
+"openai|echo|0.8||No, they taste bad. But my parents like them.","No, they taste bad. But my parents like them.",created,200,66240,no,,1,openai
+"elevenlabs|el:lily|0.8||What do you want to drink, milk or cola?","What do you want to drink, milk or cola?",created,200,68736,no,,1,openai
+"openai|echo|0.8||I know cola tastes great, but milk is much healthier. Give me milk, please.","I know cola tastes great, but milk is much healthier. Give me milk, please.",created,200,111840,no,,1,openai
+elevenlabs|el:lily|0.8||Let's buy some food for the weekend picnic. We need meat and vegetables.,Let's buy some food for the weekend picnic. We need meat and vegetables.,created,200,112320,no,,1,openai
+"openai|echo|0.8||Okay, we can buy some chicken and fresh carrots.","Okay, we can buy some chicken and fresh carrots.",created,200,73920,no,,1,openai
+"elevenlabs|el:lily|0.8||Do you eat a lot of candy, Mary?","Do you eat a lot of candy, Mary?",created,200,64896,no,,1,openai
+"openai|echo|0.8||No. Candy has too much sugar. It is bad for my teeth, so I never buy it.","No. Candy has too much sugar. It is bad for my teeth, so I never buy it.",created,200,109920,no,,1,openai
+elevenlabs|el:lily|0.8||I usually skip breakfast when I am busy.,I usually skip breakfast when I am busy.,created,200,91776,no,,1,openai
+openai|echo|0.8||That's bad. A good breakfast gives you energy for the whole morning. You should change this habit.,That's bad. A good breakfast gives you energy for the whole morning. You should change this habit.,created,200,151680,no,,1,openai
+"elevenlabs|el:lily|0.8||What are you doing now, Tom?","What are you doing now, Tom?",created,200,52992,no,,1,openai
+openai|echo|0.8||I am doing my homework.,I am doing my homework.,created,200,50688,no,,1,openai
+elevenlabs|el:lily|0.8||Is your father sleeping now?,Is your father sleeping now?,created,200,48768,no,,1,openai
+"openai|echo|0.8||No, he is reading a newspaper.","No, he is reading a newspaper.",created,200,52992,no,,1,openai
+elevenlabs|el:lily|0.8||Look! Who is swimming in the river?,Look! Who is swimming in the river?,created,200,56832,no,,1,openai
+openai|echo|0.8||Mike is swimming there.,Mike is swimming there.,created,200,37632,no,,1,openai
+"elevenlabs|el:lily|0.8||Is your sister cleaning her bedroom now, Lucy?","Is your sister cleaning her bedroom now, Lucy?",created,200,71040,no,,1,openai
+"openai|echo|0.8||No, she is washing her white shoes.","No, she is washing her white shoes.",created,200,65664,no,,1,openai
+elevenlabs|el:lily|0.8||Listen! Are the girls talking loudly in the classroom?,Listen! Are the girls talking loudly in the classroom?,created,200,83040,no,,1,openai
+"openai|echo|0.8||No, they are listening to the teacher.","No, they are listening to the teacher.",created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.8||What is David doing in the computer room now?,What is David doing in the computer room now?,created,200,69120,no,,1,openai
+openai|echo|0.8||He is typing a new story on the computer.,He is typing a new story on the computer.,created,200,63840,no,,1,openai
+elevenlabs|el:lily|0.8||Are you eating hamburgers with your friends now?,Are you eating hamburgers with your friends now?,created,200,75360,no,,1,openai
+"openai|echo|0.8||No, we are waiting for our hot vegetable soup.","No, we are waiting for our hot vegetable soup.",created,200,71040,no,,1,openai
+"elevenlabs|el:lily|0.8||Hey Mary, are you and your brother drawing pictures in your bedroom now?","Hey Mary, are you and your brother drawing pictures in your bedroom now?",created,200,113280,no,,1,openai
+"openai|echo|0.8||No, we are in the living room. My brother is playing with his toy cars, and I am drinking milk.","No, we are in the living room. My brother is playing with his toy cars, and I am drinking milk.",created,200,143520,no,,1,openai
+elevenlabs|el:lily|0.8||Look at the lake! Is the old man fishing under the tree now?,Look at the lake! Is the old man fishing under the tree now?,created,200,93600,no,,1,openai
+"openai|echo|0.8||No, he is walking his dog near the lake. Two young men are fishing there.","No, he is walking his dog near the lake. Two young men are fishing there.",created,200,112800,no,,1,openai
+"elevenlabs|el:lily|0.8||Is everyone having fun at the school party now, Lily?","Is everyone having fun at the school party now, Lily?",created,200,83520,no,,1,openai
+"openai|echo|0.8||Yes, Eric is dancing, and Alice is singing. But Tom is just sitting and drinking water.","Yes, Eric is dancing, and Alice is singing. But Tom is just sitting and drinking water.",created,200,133920,no,,1,openai
+elevenlabs|el:lily|0.8||Where is Miss White now?,Where is Miss White now?,created,200,44928,no,,1,openai
+"openai|echo|0.8||She is standing near the school gate. She is talking to a young mother, and we are waiting for her.","She is standing near the school gate. She is talking to a young mother, and we are waiting for her.",created,200,144960,no,,1,openai
+elevenlabs|el:lily|0.8||Is it snowy in Harbin now?,Is it snowy in Harbin now?,created,200,44928,no,,1,openai
+"openai|echo|0.8||Yes, it is snowing heavily.","Yes, it is snowing heavily.",created,200,70656,no,,1,openai
+elevenlabs|el:lily|0.8||How is the weather in London today?,How is the weather in London today?,created,200,49920,no,,1,openai
+openai|echo|0.8||It is very windy.,It is very windy.,created,200,42624,no,,1,openai
+elevenlabs|el:lily|0.8||Do you want to go swimming?,Do you want to go swimming?,created,200,54528,no,,1,openai
+"openai|echo|0.8||No, look at the sky. It is very dark and cloudy.","No, look at the sky. It is very dark and cloudy.",created,200,72960,no,,1,openai
+elevenlabs|el:lily|0.8||The sun is shining brightly. Let's go to the beach.,The sun is shining brightly. Let's go to the beach.,created,200,78720,no,,1,openai
+openai|echo|0.8||That's a great idea! I love sunny weather.,That's a great idea! I love sunny weather.,created,200,60960,no,,1,openai
+elevenlabs|el:lily|0.8||Listen to the wind! Is it raining outside now?,Listen to the wind! Is it raining outside now?,created,200,71040,no,,1,openai
+"openai|echo|0.8||No, it is just very windy, but the rain stops.","No, it is just very windy, but the rain stops.",created,200,69600,no,,1,openai
+"elevenlabs|el:lily|0.8||Why are you taking a raincoat, Peter?","Why are you taking a raincoat, Peter?",created,200,63744,no,,1,openai
+openai|echo|0.8||Look out of the window! The weather is changing and it is turning cloudy.,Look out of the window! The weather is changing and it is turning cloudy.,created,200,111360,no,,1,openai
+elevenlabs|el:lily|0.8||Is the weather hot and dry in your city in summer?,Is the weather hot and dry in your city in summer?,created,200,79680,no,,1,openai
+"openai|echo|0.8||No, it is usually very wet because it rains a lot.","No, it is usually very wet because it rains a lot.",created,200,76800,no,,1,openai
+elevenlabs|el:lily|0.8||Hi Jane. Is it sunny and hot in New York today?,Hi Jane. Is it sunny and hot in New York today?,created,200,72960,no,,1,openai
+"openai|echo|0.8||No. It is cloudy here, but my mom says it is raining hard in London, and my dad is working in snowy Beijing.","No. It is cloudy here, but my mom says it is raining hard in London, and my dad is working in snowy Beijing.",created,200,167040,no,,1,openai
+elevenlabs|el:lily|0.8||It's a fine sunny day. Let's play basketball on the playground.,It's a fine sunny day. Let's play basketball on the playground.,created,200,97920,no,,1,openai
+openai|echo|0.8||But the wind is too strong now. Why don't we watch a movie at home?,But the wind is too strong now. Why don't we watch a movie at home?,created,200,101280,no,,1,openai
+"elevenlabs|el:lily|0.8||Look at the heavy snow! Let's go out and make a snowman, Sally.","Look at the heavy snow! Let's go out and make a snowman, Sally.",created,200,94560,no,,1,openai
+"openai|echo|0.8||I want to go, but my cold is bad, so I am just watching the snow through the window.","I want to go, but my cold is bad, so I am just watching the snow through the window.",created,200,127680,no,,1,openai
+"elevenlabs|el:lily|0.8||The morning newspaper says it is sunny today, but look! It is raining now.","The morning newspaper says it is sunny today, but look! It is raining now.",created,200,114240,no,,1,openai
+"openai|echo|0.8||Yes, the weather always changes quickly in spring. Let's take an umbrella with us.","Yes, the weather always changes quickly in spring. Let's take an umbrella with us.",created,200,125280,no,,1,openai
+"elevenlabs|el:lily|0.8||Where did you go last night, Linda?","Where did you go last night, Linda?",created,200,51840,no,,1,openai
+openai|echo|0.8||I went to the restaurant and had a big dinner with my parents.,I went to the restaurant and had a big dinner with my parents.,created,200,92160,no,,1,openai
+elevenlabs|el:lily|0.8||Did you watch the football match on TV yesterday afternoon?,Did you watch the football match on TV yesterday afternoon?,created,200,94560,no,,1,openai
+"openai|echo|0.8||No, I played chess with my grandpa.","No, I played chess with my grandpa.",created,200,54528,no,,1,openai
+elevenlabs|el:lily|0.8||Was the school trip interesting yesterday?,Was the school trip interesting yesterday?,created,200,65760,no,,1,openai
+"openai|echo|0.8||Yes, it was great. We saw many dangerous animals.","Yes, it was great. We saw many dangerous animals.",created,200,75360,no,,1,openai
+"elevenlabs|el:lily|0.8||Did you buy that expensive English book in the bookstore yesterday, Sally?","Did you buy that expensive English book in the bookstore yesterday, Sally?",created,200,117120,no,,1,openai
+"openai|echo|0.8||No, it was too dear, so I just borrowed a magazine from the library.","No, it was too dear, so I just borrowed a magazine from the library.",created,200,98880,no,,1,openai
+"elevenlabs|el:lily|0.8||How was your weekend, Eric?","How was your weekend, Eric?",created,200,54528,no,,1,openai
+openai|echo|0.8||It was busy. I cleaned my room on Saturday and helped my uncle on his farm on Sunday.,It was busy. I cleaned my room on Saturday and helped my uncle on his farm on Sunday.,created,200,106368,no,,1,openai
+elevenlabs|el:lily|0.8||I didn't see you at the school party last night. Were you ill?,I didn't see you at the school party last night. Were you ill?,created,200,95040,no,,1,openai
+"openai|echo|0.8||No, I was fine. I practiced the guitar for the music competition all night.","No, I was fine. I practiced the guitar for the music competition all night.",created,200,108480,no,,1,openai
+elevenlabs|el:lily|0.8||Did you find your black wallet under the desk yesterday afternoon?,Did you find your black wallet under the desk yesterday afternoon?,created,200,106080,no,,1,openai
+"openai|echo|0.8||No, I found it in my schoolbag this morning.","No, I found it in my schoolbag this morning.",created,200,66720,no,,1,openai
+"elevenlabs|el:lily|0.8||Hi, Mike. Did you go to the beach with David last Sunday?","Hi, Mike. Did you go to the beach with David last Sunday?",created,200,84000,no,,1,openai
+"openai|echo|0.8||David wanted to go there, but I liked the mountains. In the end, we went to the science museum together.","David wanted to go there, but I liked the mountains. In the end, we went to the science museum together.",created,200,159840,no,,1,openai
+"elevenlabs|el:lily|0.8||What did you buy for your father's birthday yesterday, Helen?","What did you buy for your father's birthday yesterday, Helen?",created,200,94560,no,,1,openai
+"openai|echo|0.8||I saw a nice tie in the shop, but it was too long. So I made a beautiful birthday card for him at home.","I saw a nice tie in the shop, but it was too long. So I made a beautiful birthday card for him at home.",created,200,152640,no,,1,openai
+"elevenlabs|el:lily|0.8||I went to the park yesterday, but it started to rain. Did you have a good time at the cinema, Lucy?","I went to the park yesterday, but it started to rain. Did you have a good time at the cinema, Lucy?",created,200,151680,no,,1,openai
+openai|echo|0.8||I didn't go to the cinema because the tickets sold out. I just stayed at home and cooked with my mom.,I didn't go to the cinema because the tickets sold out. I just stayed at home and cooked with my mom.,created,200,156000,no,,1,openai
+"elevenlabs|el:lily|0.8||Did your classroom win the basketball match yesterday morning, Jack?","Did your classroom win the basketball match yesterday morning, Jack?",created,200,107040,no,,1,openai
+"openai|echo|0.8||Yes! At first, the other team was ahead, but Tom caught the ball and scored in the last minute. We were so happy!","Yes! At first, the other team was ahead, but Tom caught the ball and scored in the last minute. We were so happy!",created,200,172320,no,,1,openai
+elevenlabs|el:lily|0.8||Did the little boy cry when he lost his way in the forest?,Did the little boy cry when he lost his way in the forest?,created,200,92160,no,,1,openai
+"openai|echo|0.8||No, he was very brave and found his home.","No, he was very brave and found his home.",created,200,63840,no,,1,openai
+elevenlabs|el:lily|0.8||Who took the gold ring from the king's table?,Who took the gold ring from the king's table?,created,200,69600,no,,1,openai
+openai|echo|0.8||A smart bird flew into the room and took it away.,A smart bird flew into the room and took it away.,created,200,75360,no,,1,openai
+elevenlabs|el:lily|0.8||Where did the kind queen go once upon a time?,Where did the kind queen go once upon a time?,created,200,68160,no,,1,openai
+openai|echo|0.8||She visited a poor family and gave them some bread.,She visited a poor family and gave them some bread.,created,200,80160,no,,1,openai
+elevenlabs|el:lily|0.8||Did the old man kill the snake when he found it in the cold snow?,Did the old man kill the snake when he found it in the cold snow?,created,200,104640,no,,1,openai
+"openai|echo|0.8||No, he was very kind. He saved the snake and made it warm.","No, he was very kind. He saved the snake and made it warm.",created,200,89280,no,,1,openai
+elevenlabs|el:lily|0.8||What did the clever girl do when the giant chased her?,What did the clever girl do when the giant chased her?,created,200,84480,no,,1,openai
+"openai|echo|0.8||She ran fast and climbed up a tall tree, so the giant didn't catch her.","She ran fast and climbed up a tall tree, so the giant didn't catch her.",created,200,111360,no,,1,openai
+elevenlabs|el:lily|0.8||Did the young hunter shoot the tiger with his bow yesterday?,Did the young hunter shoot the tiger with his bow yesterday?,created,200,96480,no,,1,openai
+"openai|echo|0.8||No, he missed the tiger, and the animal ran away into the mountains.","No, he missed the tiger, and the animal ran away into the mountains.",created,200,104640,no,,1,openai
+elevenlabs|el:lily|0.8||Why did the king become very angry with the cook this morning?,Why did the king become very angry with the cook this morning?,created,200,97440,no,,1,openai
+openai|echo|0.8||Because the cook dropped the delicious fish onto the dirty floor.,Because the cook dropped the delicious fish onto the dirty floor.,created,200,101760,no,,1,openai
+"elevenlabs|el:lily|0.8||One day, a little mouse helped a big lion. Did the mouse bite the net or dig a hole?","One day, a little mouse helped a big lion. Did the mouse bite the net or dig a hole?",created,200,130080,no,,1,openai
+"openai|echo|0.8||It didn't dig a hole. The lion was in a strong net, and the mouse bit the net with its sharp teeth.","It didn't dig a hole. The lion was in a strong net, and the mouse bit the net with its sharp teeth.",created,200,154080,no,,1,openai
+"elevenlabs|el:lily|0.8||I read a story yesterday. A boy found a goose, and it laid a golden egg every day.","I read a story yesterday. A boy found a goose, and it laid a golden egg every day.",created,200,126720,no,,1,openai
+openai|echo|0.8||Wow! Did the boy become rich?,Wow! Did the boy become rich?,created,200,55680,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes, but he was greedy. He killed the goose because he wanted more eggs inside, but he found nothing.","Yes, but he was greedy. He killed the goose because he wanted more eggs inside, but he found nothing.",created,200,155040,no,,1,openai
+"elevenlabs|el:lily|0.8||Once, a thirsty crow wanted to drink water in a bottle, but the water was too low.","Once, a thirsty crow wanted to drink water in a bottle, but the water was too low.",created,200,126720,no,,1,openai
+openai|echo|0.8||Did it break the bottle?,Did it break the bottle?,created,200,35712,no,,1,openai
+"elevenlabs|el:lily|0.8||No, it dropped many small stones into the bottle, and the water rose up.","No, it dropped many small stones into the bottle, and the water rose up.",created,200,87552,no,,1,openai
+"elevenlabs|el:lily|0.8||Long ago, a young boy looked after many sheep. One day, he shouted ""Wolf! Wolf!"" to play a joke.","Long ago, a young boy looked after many sheep. One day, he shouted ""Wolf! Wolf!"" to play a joke.",created,200,114816,no,,1,openai
+openai|echo|0.8||Did the villagers come to help him?,Did the villagers come to help him?,created,200,51840,no,,1,openai
+"elevenlabs|el:lily|0.8||Yes, they ran up the hill, but they saw no wolf. The boy laughed loudly.","Yes, they ran up the hill, but they saw no wolf. The boy laughed loudly.",created,200,108480,no,,1,openai
+elevenlabs|el:lily|0.8||Where were you when the earthquake hit?,Where were you when the earthquake hit?,created,200,52992,no,,1,openai
+"openai|echo|0.8||I was sitting in class, and we were nearly all hiding under the desks.","I was sitting in class, and we were nearly all hiding under the desks.",created,200,107040,no,,1,openai
+elevenlabs|el:lily|0.8||The new flat smells of fresh paint.,The new flat smells of fresh paint.,created,200,78720,no,,1,openai
+"openai|echo|0.8||Yes, but it feels like home already.","Yes, but it feels like home already.",created,200,70656,no,,1,openai
+elevenlabs|el:lily|0.8||How do you control your anger when things go wrong?,How do you control your anger when things go wrong?,created,200,81600,no,,1,openai
+openai|echo|0.8||I take a deep breath and try to look on the bright side.,I take a deep breath and try to look on the bright side.,created,200,82560,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you look so upset today?,Why do you look so upset today?,created,200,60672,no,,1,openai
+"openai|echo|0.8||I had an argument with my best friend, and I feel lonely now.","I had an argument with my best friend, and I feel lonely now.",created,200,95040,no,,1,openai
+"elevenlabs|el:lily|0.8||Even though I lost the game, my coach still feels proud of me.","Even though I lost the game, my coach still feels proud of me.",created,200,77184,no,,1,openai
+"openai|echo|0.8||He is right. You behave well and never give up, and that matters more than the score.","He is right. You behave well and never give up, and that matters more than the score.",created,200,131040,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you go to the nursing home every weekend?,Why do you go to the nursing home every weekend?,created,200,74400,no,,1,openai
+openai|echo|0.8||I want to help the elderly. It really makes a difference.,I want to help the elderly. It really makes a difference.,created,200,81600,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you eat the curry with your hand instead of a fork?,Why do you eat the curry with your hand instead of a fork?,created,200,90720,no,,1,openai
+"openai|echo|0.8||It is our custom in India. Unless you grow up here, it may seem surprising.","It is our custom in India. Unless you grow up here, it may seem surprising.",created,200,114240,no,,1,openai
+elevenlabs|el:lily|0.8||What's wrong with you today?,What's wrong with you today?,created,200,36864,no,,1,openai
+openai|echo|0.8||I have a toothache and my gums feel sore.,I have a toothache and my gums feel sore.,created,200,64320,no,,1,openai
+elevenlabs|el:lily|0.8||They say it was the worst earthquake in years. What were you doing when it hit?,They say it was the worst earthquake in years. What were you doing when it hit?,created,200,123840,no,,1,openai
+"openai|echo|0.8||I was making preparations for school, and suddenly the roof was shaking and froth was coming up from the ground.","I was making preparations for school, and suddenly the roof was shaking and froth was coming up from the ground.",created,200,175200,no,,1,openai
+elevenlabs|el:lily|0.8||I have a sore throat and feel tired. What should I do?,I have a sore throat and feel tired. What should I do?,created,200,84000,no,,1,openai
+openai|echo|0.8||You'd better take some medicine and wear a mask to protect others.,You'd better take some medicine and wear a mask to protect others.,created,200,104640,no,,1,openai
+"elevenlabs|el:lily|0.8||While the tsunami waves were coming, what were people doing on the beach?","While the tsunami waves were coming, what were people doing on the beach?",created,200,114240,no,,1,openai
+"openai|echo|0.8||Unfortunately, many were still swimming, and a guard was screaming and warning them to run.","Unfortunately, many were still swimming, and a guard was screaming and warning them to run.",created,200,141120,no,,1,openai
+elevenlabs|el:lily|0.8||Have you cleaned the bathroom yet?,Have you cleaned the bathroom yet?,created,200,52992,no,,1,openai
+"openai|echo|0.8||Not yet, but I've already packed up all my clothes.","Not yet, but I've already packed up all my clothes.",created,200,76320,no,,1,openai
+"elevenlabs|el:lily|0.8||At the dinner, should I sit up straight and keep my elbows off the table?","At the dinner, should I sit up straight and keep my elbows off the table?",created,200,114240,no,,1,openai
+openai|echo|0.8||Yes. Good table manners show respect on such an occasion.,Yes. Good table manners show respect on such an occasion.,created,200,89760,no,,1,openai
+elevenlabs|el:lily|0.8||Why do you love this old apartment so much?,Why do you love this old apartment so much?,created,200,65760,no,,1,openai
+openai|echo|0.8||Because every room is full of happy memories.,Because every room is full of happy memories.,created,200,71520,no,,1,openai
+elevenlabs|el:lily|0.8||This box is too heavy to carry upstairs.,This box is too heavy to carry upstairs.,created,200,75648,no,,1,openai
+"openai|echo|0.8||No problem, let's take the lift with the luggage.","No problem, let's take the lift with the luggage.",created,200,75360,no,,1,openai
+elevenlabs|el:lily|0.8||I felt embarrassed when I bowed and my Indian friend put his palms together.,I felt embarrassed when I bowed and my Indian friend put his palms together.,created,200,120960,no,,1,openai
+"openai|echo|0.8||Don't worry. Every culture has its own way to greet, and your friend won't think it's rude.","Don't worry. Every culture has its own way to greet, and your friend won't think it's rude.",created,200,131040,no,,1,openai
+elevenlabs|el:lily|0.8||Shall we invite our new neighbours for tea?,Shall we invite our new neighbours for tea?,created,200,68640,no,,1,openai
+openai|echo|0.8||Good idea! I'll bake some biscuits and clean up the living room.,Good idea! I'll bake some biscuits and clean up the living room.,created,200,96960,no,,1,openai
+elevenlabs|el:lily|0.8||Where do these donations go?,Where do these donations go?,created,200,45696,no,,1,openai
+openai|echo|0.8||A charity hands them out to elderly people who live alone and need help.,A charity hands them out to elderly people who live alone and need help.,created,200,110400,no,,1,openai
+elevenlabs|el:lily|0.8||Was the detective novel you finished a good read?,Was the detective novel you finished a good read?,created,200,78240,no,,1,openai
+"openai|echo|0.8||Yes, it was. The detective was clever, and I had no doubt that he would catch the thief.","Yes, it was. The detective was clever, and I had no doubt that he would catch the thief.",created,200,133920,no,,1,openai
+"elevenlabs|el:lily|0.8||I think it is my fault, so I want to apologize to him.","I think it is my fault, so I want to apologize to him.",created,200,84480,no,,1,openai
+"openai|echo|0.8||That's good. When you say sorry, he will surely forgive you.","That's good. When you say sorry, he will surely forgive you.",created,200,91200,no,,1,openai
+elevenlabs|el:lily|0.8||Where shall we hang up the photos?,Where shall we hang up the photos?,created,200,55680,no,,1,openai
+openai|echo|0.8||Let's put them on the living room wall.,Let's put them on the living room wall.,created,200,56832,no,,1,openai
+elevenlabs|el:lily|0.8||How was your holiday?,How was your holiday?,created,200,35712,no,,1,openai
+openai|echo|0.8||It was fantastic! The mountain scenery was amazing.,It was fantastic! The mountain scenery was amazing.,created,200,76320,no,,1,openai
+elevenlabs|el:lily|0.8||Is it polite to use serving chopsticks here?,Is it polite to use serving chopsticks here?,created,200,69120,no,,1,openai
+"openai|echo|0.8||Yes, it is proper to use them for shared dishes.","Yes, it is proper to use them for shared dishes.",created,200,74400,no,,1,openai
+"openai|nova|0.85||How do you feel about the upcoming high school entrance exam?
+A little nervous, but I've been preparing hard.","How do you feel about the upcoming high school entrance exam?
+A little nervous, but I've been preparing hard.",created,200,154560,no,,1,openai
+"openai|nova|0.85||Have you signed up for the beach cleanup?
+Yes, I'll go this Saturday with my classmates.","Have you signed up for the beach cleanup?
+Yes, I'll go this Saturday with my classmates.",created,200,129600,no,,1,openai
+"openai|nova|0.85||Mike, what do you usually do in your free time?
+I love watching movies. I watch at least two movies every week.
+Cool! What kind of movies do you like best?
+Action movies and science fiction. I'm crazy about superhero films.
+Have you seen the new Spider-Man movie?
+Yes, twice already! It's the best one I've seen this year.
+What about reading? Do you enjoy reading too?
+Honestly, not as much as movies. But I do read comic books sometimes.
+My hobby is different. I love painting. It's relaxing after a long day at school.
+Painting? Are you good at it?
+I'm getting better. I've been taking lessons for two years. I want to enter a competition next month.
+Good luck! I'd love to see your paintings sometime.","Mike, what do you usually do in your free time?
+I love watching movies. I watch at least two movies every week.
+Cool! What kind of movies do you like best?
+Action movies and science fiction. I'm crazy about superhero films.
+Have you seen the new Spider-Man movie?
+Yes, twice already! It's the best one I've seen this year.
+What about reading? Do you enjoy reading too?
+Honestly, not as much as movies. But I do read comic books sometimes.
+My hobby is different. I love painting. It's relaxing after a long day at school.
+Painting? Are you good at it?
+I'm getting better. I've been taking lessons for two years. I want to enter a competition next month.
+Good luck! I'd love to see your paintings sometime.",created,200,1004160,no,,1,openai
+"openai|nova|0.85||I'm going to help at the animal shelter this Saturday. Want to come?
+Sure! I'd love to help take care of the dogs.","I'm going to help at the animal shelter this Saturday. Want to come?
+Sure! I'd love to help take care of the dogs.",created,200,163680,no,,1,openai
+"openai|nova|0.85||We should plant more trees to fight climate change.
+Absolutely. Every tree counts.","We should plant more trees to fight climate change.
+Absolutely. Every tree counts.",created,200,106080,no,,1,openai
+"openai|nova|0.85||How do you handle exam stress?
+I take deep breaths and remind myself I've prepared well.","How do you handle exam stress?
+I take deep breaths and remind myself I've prepared well.",created,200,126720,no,,1,openai
+"openai|nova|0.85||Did you hear about the new bike-sharing program in our city?
+Yes, it's great. It encourages people to use less cars.","Did you hear about the new bike-sharing program in our city?
+Yes, it's great. It encourages people to use less cars.",created,200,147360,no,,1,openai
+"openai|nova|0.85||Why are you carrying a reusable bag?
+To reduce plastic waste. We should all do our part.","Why are you carrying a reusable bag?
+To reduce plastic waste. We should all do our part.",created,200,126240,no,,1,openai
+"openai|nova|0.85||What kind of books do you like?
+I prefer science fiction. They open up my imagination.","What kind of books do you like?
+I prefer science fiction. They open up my imagination.",created,200,124320,no,,1,openai
+"openai|nova|0.85||I'm so bored. There's nothing to do.
+Why don't we go to the new shopping mall? It opened last weekend.","I'm so bored. There's nothing to do.
+Why don't we go to the new shopping mall? It opened last weekend.",created,200,143520,no,,1,openai
+"openai|nova|0.85||How often do you visit your grandparents?
+Every other weekend. They live in the next city.","How often do you visit your grandparents?
+Every other weekend. They live in the next city.",created,200,103680,no,,1,openai
+"openai|nova|0.85||Why are you wearing that special vest?
+I'm a volunteer at the marathon today, helping with traffic control.","Why are you wearing that special vest?
+I'm a volunteer at the marathon today, helping with traffic control.",created,200,156960,no,,1,openai
+"openai|nova|0.85||Hi Lin! Have you made your New Year's resolutions for this year?
+Yes! I've made three big plans this year. First, I want to read 50 books.
+Wow, that's ambitious! Why so many?
+I want to improve my Chinese and English at the same time. Half in each language.
+That's smart. What's your second plan?
+I've decided to learn the violin. I've always wanted to play a musical instrument.
+Cool! What's the third one?
+I plan to volunteer at the local library every Saturday. It's a way to give back to my community.
+That's wonderful, Lin. How will you find time for everything?
+I'll wake up an hour earlier and use my time better. I hope to be more disciplined this year.
+I admire your goals. Maybe I should make some too.
+You should! Setting goals helps us grow.","Hi Lin! Have you made your New Year's resolutions for this year?
+Yes! I've made three big plans this year. First, I want to read 50 books.
+Wow, that's ambitious! Why so many?
+I want to improve my Chinese and English at the same time. Half in each language.
+That's smart. What's your second plan?
+I've decided to learn the violin. I've always wanted to play a musical instrument.
+Cool! What's the third one?
+I plan to volunteer at the local library every Saturday. It's a way to give back to my community.
+That's wonderful, Lin. How will you find time for everything?
+I'll wake up an hour earlier and use my time better. I hope to be more disciplined this year.
+I admire your goals. Maybe I should make some too.
+You should! Setting goals helps us grow.",created,200,1076640,no,,1,openai
+"openai|nova|0.85||How long have you been learning Spanish?
+For about two years now. I can have basic conversations.","How long have you been learning Spanish?
+For about two years now. I can have basic conversations.",created,200,131040,no,,1,openai
+"openai|nova|0.85||I'm trying to eat healthier. Any tips?
+Eat more vegetables and drink less soda.","I'm trying to eat healthier. Any tips?
+Eat more vegetables and drink less soda.",created,200,112800,no,,1,openai
+"openai|nova|0.85||I've learned to swim this summer. What about you?
+I've learned to ride a bike! It took me weeks to balance.","I've learned to swim this summer. What about you?
+I've learned to ride a bike! It took me weeks to balance.",created,200,141120,no,,1,openai
+"openai|nova|0.85||What clubs are you joining this semester?
+The chess club and the photography club.","What clubs are you joining this semester?
+The chess club and the photography club.",created,200,104160,no,,1,openai
+"openai|nova|0.85||I can't decide between the red dress and the blue one.
+I think the blue one suits you better. It matches your eyes.","I can't decide between the red dress and the blue one.
+I think the blue one suits you better. It matches your eyes.",created,200,167520,no,,1,openai
+"openai|nova|0.85||How are your studies going for the entrance exam?
+I review every subject systematically and practice past papers.","How are your studies going for the entrance exam?
+I review every subject systematically and practice past papers.",created,200,163680,no,,1,openai
+"openai|nova|0.85||Where were you on Sunday morning?
+I helped my neighbors clean up the community garden.","Where were you on Sunday morning?
+I helped my neighbors clean up the community garden.",created,200,112800,no,,1,openai
+"openai|nova|0.85||Your English has improved a lot. What's your secret?
+I watch English movies with subtitles every day.","Your English has improved a lot. What's your secret?
+I watch English movies with subtitles every day.",created,200,143040,no,,1,openai
+"openai|nova|0.85||Lily, you look worried. What's wrong?
+I lost my wallet on the way home from school yesterday!
+Oh no! Did you have a lot of money in it?
+About 200 yuan, plus my school card and my house key.
+When did you notice it was missing?
+When I got home, I tried to open the door. Then I realized my key was gone.
+Where did you go yesterday?
+After school, I took the bus, then I went to the supermarket to buy snacks.
+Maybe you dropped it on the bus or in the supermarket?
+I called the bus company and they didn't find anything. The supermarket said the same.
+Don't give up. Let's go check again. Maybe someone turned it in.
+That's a good idea. Thank you for helping me, Mike.
+No problem. Did you tell your parents?
+Yes. My dad was so worried, but he said next time I should keep important things in different places.","Lily, you look worried. What's wrong?
+I lost my wallet on the way home from school yesterday!
+Oh no! Did you have a lot of money in it?
+About 200 yuan, plus my school card and my house key.
+When did you notice it was missing?
+When I got home, I tried to open the door. Then I realized my key was gone.
+Where did you go yesterday?
+After school, I took the bus, then I went to the supermarket to buy snacks.
+Maybe you dropped it on the bus or in the supermarket?
+I called the bus company and they didn't find anything. The supermarket said the same.
+Don't give up. Let's go check again. Maybe someone turned it in.
+That's a good idea. Thank you for helping me, Mike.
+No problem. Did you tell your parents?
+Yes. My dad was so worried, but he said next time I should keep important things in different places.",created,200,1154400,no,,1,openai
+"openai|nova|0.85||Have you done any volunteer work before?
+Yes, I enjoy reading to the elderly at the senior center every Sunday.","Have you done any volunteer work before?
+Yes, I enjoy reading to the elderly at the senior center every Sunday.",created,200,148800,no,,1,openai
+"openai|nova|0.85||Mike, what were you doing during the rainstorm last Friday?
+I was walking home from school. I didn't bring an umbrella!
+Oh no! Did you get totally wet?
+Yes, completely. While I was running for shelter, I slipped and fell into a puddle.
+That's terrible! Were you hurt?
+My knee was bleeding a little. But the worst part was — my phone fell out of my bag.
+Oh no, did it break?
+Luckily it landed on grass. The screen cracked but it still works. What about you?
+I was at the library when the storm started. I had to wait two hours for it to stop.
+Did you study while you were waiting?
+I tried, but the wind was so loud I couldn't concentrate. I just watched the rain.
+It was a memorable Friday for both of us!
+Yes, and now I always check the weather before leaving home.","Mike, what were you doing during the rainstorm last Friday?
+I was walking home from school. I didn't bring an umbrella!
+Oh no! Did you get totally wet?
+Yes, completely. While I was running for shelter, I slipped and fell into a puddle.
+That's terrible! Were you hurt?
+My knee was bleeding a little. But the worst part was — my phone fell out of my bag.
+Oh no, did it break?
+Luckily it landed on grass. The screen cracked but it still works. What about you?
+I was at the library when the storm started. I had to wait two hours for it to stop.
+Did you study while you were waiting?
+I tried, but the wind was so loud I couldn't concentrate. I just watched the rain.
+It was a memorable Friday for both of us!
+Yes, and now I always check the weather before leaving home.",created,200,1100160,no,,1,openai
+"openai|nova|0.85||David, have you decided on which high school you want to apply to?
+Yes, I'm aiming for Central High School. Their science program is excellent.
+That's a tough school. The cut-off score was 580 last year.
+I know. I've been preparing intensively for 6 months now.
+What subjects do you focus on the most?
+Math and physics, since they're my weak points but Central values them highly.
+Have you visited the school?
+Yes, twice. My older sister also went there, so I'm familiar with it.
+That's great. Good luck with your exams!
+Thanks. I'll need it.","David, have you decided on which high school you want to apply to?
+Yes, I'm aiming for Central High School. Their science program is excellent.
+That's a tough school. The cut-off score was 580 last year.
+I know. I've been preparing intensively for 6 months now.
+What subjects do you focus on the most?
+Math and physics, since they're my weak points but Central values them highly.
+Have you visited the school?
+Yes, twice. My older sister also went there, so I'm familiar with it.
+That's great. Good luck with your exams!
+Thanks. I'll need it.",created,200,795840,no,,1,openai
+"openai|nova|0.85||I love this book so much! It's the best mystery I've ever read.
+Can I borrow it after you finish?","I love this book so much! It's the best mystery I've ever read.
+Can I borrow it after you finish?",created,200,134880,no,,1,openai
+"openai|nova|0.85||Have you ever been to the Great Wall, Tom?
+Yes, I have. I went there twice with my parents last year.","Have you ever been to the Great Wall, Tom?
+Yes, I have. I went there twice with my parents last year.",created,200,127200,no,,1,openai
+"openai|nova|0.85||I've decided to learn the piano this year.
+Great idea! How often will you practice?","I've decided to learn the piano this year.
+Great idea! How often will you practice?",created,200,114720,no,,1,openai
+"openai|nova|0.85||I lost my key on the way home. Can you help me find it?
+Sure! Where do you think you might have dropped it?","I lost my key on the way home. Can you help me find it?
+Sure! Where do you think you might have dropped it?",created,200,154560,no,,1,openai
+"openai|nova|0.85||Have you ever celebrated Mid-Autumn Festival abroad?
+Yes, last year I shared mooncakes with my host family in America.","Have you ever celebrated Mid-Autumn Festival abroad?
+Yes, last year I shared mooncakes with my host family in America.",created,200,162240,no,,1,openai
+"openai|nova|0.85||Have you ever tried Chinese calligraphy?
+Yes, I started learning it three years ago. It's very relaxing.","Have you ever tried Chinese calligraphy?
+Yes, I started learning it three years ago. It's very relaxing.",created,200,103680,no,,1,openai
+"openai|nova|0.85||Why are you so excited?
+Our team won the basketball championship!","Why are you so excited?
+Our team won the basketball championship!",created,200,96000,no,,1,openai
+"openai|nova|0.85||Have you decided which high school to apply to?
+I'm aiming for No. 1 High School. It's the best in our district.","Have you decided which high school to apply to?
+I'm aiming for No. 1 High School. It's the best in our district.",created,200,158400,no,,1,openai
+"openai|nova|0.85||I just adopted a cat from a shelter.
+That's wonderful! Adoption saves lives.","I just adopted a cat from a shelter.
+That's wonderful! Adoption saves lives.",created,200,108960,no,,1,openai
+"openai|nova|0.85||Are you participating in the sports day?
+Yes, I'm running the 400 meters.","Are you participating in the sports day?
+Yes, I'm running the 400 meters.",created,200,117120,no,,1,openai
+"openai|nova|0.85||I have a bad cold, Doctor.
+You should drink lots of water and stay in bed. Don't go to school today.","I have a bad cold, Doctor.
+You should drink lots of water and stay in bed. Don't go to school today.",created,200,131520,no,,1,openai
+"openai|nova|0.85||How often do you eat fruit, Lily?
+Every day. I have an apple after lunch and some berries with breakfast.","How often do you eat fruit, Lily?
+Every day. I have an apple after lunch and some berries with breakfast.",created,200,152640,no,,1,openai
+"openai|nova|0.85||Do you exercise regularly?
+Yes, I run for 30 minutes every morning before school.","Do you exercise regularly?
+Yes, I run for 30 minutes every morning before school.",created,200,121440,no,,1,openai
+"openai|nova|0.85||My grandma can't read Chinese very well anymore.
+I can come over and read to her on weekends.","My grandma can't read Chinese very well anymore.
+I can come over and read to her on weekends.",created,200,133440,no,,1,openai
+"openai|nova|0.85||Lin, your English is really impressive. How long have you been learning?
+Thanks! I've been studying English for nine years now. I started in Grade 1.
+That's a long time. Have you ever been to an English-speaking country?
+Yes, I've been to Singapore once with my parents. It was really helpful.
+What's the most important thing you've learned about English?
+Practice makes perfect. I read English news every day and watch English movies.
+Have you ever entered any English competitions?
+Yes! I've won three certificates so far. Last year I got first place in the city speaking contest.
+First place? Wow, that's amazing!
+Thank you. The competition was really tough. I had to prepare for two months.
+I'd love to improve my English. Do you have any tips?
+Yes! Don't be afraid to speak. Make mistakes, learn, and improve. I've made thousands of mistakes!
+That's good advice. Have you decided what to do next?
+I want to become an English teacher. I hope to help others love English the way I do.","Lin, your English is really impressive. How long have you been learning?
+Thanks! I've been studying English for nine years now. I started in Grade 1.
+That's a long time. Have you ever been to an English-speaking country?
+Yes, I've been to Singapore once with my parents. It was really helpful.
+What's the most important thing you've learned about English?
+Practice makes perfect. I read English news every day and watch English movies.
+Have you ever entered any English competitions?
+Yes! I've won three certificates so far. Last year I got first place in the city speaking contest.
+First place? Wow, that's amazing!
+Thank you. The competition was really tough. I had to prepare for two months.
+I'd love to improve my English. Do you have any tips?
+Yes! Don't be afraid to speak. Make mistakes, learn, and improve. I've made thousands of mistakes!
+That's good advice. Have you decided what to do next?
+I want to become an English teacher. I hope to help others love English the way I do.",created,200,1410240,no,,1,openai
+"openai|nova|0.85||I really enjoy Mrs. Chen's class. Her stories are amazing.
+I agree. She makes history come alive.","I really enjoy Mrs. Chen's class. Her stories are amazing.
+I agree. She makes history come alive.",created,200,136320,no,,1,openai
+"openai|nova|0.85||I heard you fell off your bike yesterday. Are you OK?
+Yes, I'm fine. I was riding too fast when I hit a stone.","I heard you fell off your bike yesterday. Are you OK?
+Yes, I'm fine. I was riding too fast when I hit a stone.",created,200,157440,no,,1,openai
+"openai|nova|0.85||I started playing guitar last month.
+That's cool! Can you play any songs yet?","I started playing guitar last month.
+That's cool! Can you play any songs yet?",created,200,108480,no,,1,openai
+"openai|nova|0.85||Lin, you travel a lot. How many countries have you been to?
+I've been to seven countries so far. I started traveling when I was 8.
+Wow! Which one was your favorite?
+Japan, definitely. The food, the culture, and the people are all wonderful.
+Have you ever been to Europe?
+Yes, I've been to France and Italy. Paris was beautiful but very crowded.
+What's on your travel list now?
+I really want to visit Australia. I've never seen kangaroos in person before.
+Are you going there this year?
+I hope so. My parents have promised to take me there next summer if I get good grades.","Lin, you travel a lot. How many countries have you been to?
+I've been to seven countries so far. I started traveling when I was 8.
+Wow! Which one was your favorite?
+Japan, definitely. The food, the culture, and the people are all wonderful.
+Have you ever been to Europe?
+Yes, I've been to France and Italy. Paris was beautiful but very crowded.
+What's on your travel list now?
+I really want to visit Australia. I've never seen kangaroos in person before.
+Are you going there this year?
+I hope so. My parents have promised to take me there next summer if I get good grades.",created,200,801120,no,,1,openai
+"openai|nova|0.85||Our school will hold a charity sale next week.
+Great! I'll donate some old toys and books from home.","Our school will hold a charity sale next week.
+Great! I'll donate some old toys and books from home.",created,200,130560,no,,1,openai
+"openai|nova|0.85||Is your brother taller than you, Mike?
+No, I'm taller. But he's heavier than me — he loves eating!","Is your brother taller than you, Mike?
+No, I'm taller. But he's heavier than me — he loves eating!",created,200,135840,no,,1,openai
+"openai|nova|0.85||Are you joining the volunteer club this year?
+Yes, I want to help kids in the children's hospital.","Are you joining the volunteer club this year?
+Yes, I want to help kids in the children's hospital.",created,200,130080,no,,1,openai
+"openai|nova|0.85||How was your weekend, Sara?
+Pretty good. I went to a music festival on Saturday and visited my grandma on Sunday.","How was your weekend, Sara?
+Pretty good. I went to a music festival on Saturday and visited my grandma on Sunday.",created,200,146400,no,,1,openai
+"openai|nova|0.85||Have you been to any foreign countries?
+Yes, I've been to Japan and Thailand. Both were amazing experiences.","Have you been to any foreign countries?
+Yes, I've been to Japan and Thailand. Both were amazing experiences.",created,200,152160,no,,1,openai
+"openai|nova|0.85||Tom, I heard you joined the volunteer club. What do you do?
+We do many things! Last weekend, we cleaned up the local park.
+That sounds great. Have you done any other activities?
+Yes. We've visited the elderly home twice this month. We sing songs and chat with the residents.
+Wonderful. How long have you been a volunteer?
+About six months. I started in March.
+What's your favorite activity so far?
+Teaching English to migrant workers' children. Their smiles make me really happy.
+Why did you decide to volunteer in the first place?
+My mom is a nurse. She always taught me to help others. I wanted to do my part too.
+How can I join? It sounds amazing.
+Come to our meeting next Saturday at 2 p.m. in the community center. You can sign up there.","Tom, I heard you joined the volunteer club. What do you do?
+We do many things! Last weekend, we cleaned up the local park.
+That sounds great. Have you done any other activities?
+Yes. We've visited the elderly home twice this month. We sing songs and chat with the residents.
+Wonderful. How long have you been a volunteer?
+About six months. I started in March.
+What's your favorite activity so far?
+Teaching English to migrant workers' children. Their smiles make me really happy.
+Why did you decide to volunteer in the first place?
+My mom is a nurse. She always taught me to help others. I wanted to do my part too.
+How can I join? It sounds amazing.
+Come to our meeting next Saturday at 2 p.m. in the community center. You can sign up there.",created,200,1063200,no,,1,openai
+"openai|nova|0.85||How was your trip to the Great Wall?
+Amazing! It was much longer than I imagined.","How was your trip to the Great Wall?
+Amazing! It was much longer than I imagined.",created,200,118080,no,,1,openai
+"openai|nova|0.85||Why are you so tired, Lily?
+I had to do the laundry, sweep the floor and wash the dishes today. My mom is sick.","Why are you so tired, Lily?
+I had to do the laundry, sweep the floor and wash the dishes today. My mom is sick.",created,200,149760,no,,1,openai
+"openai|nova|0.85||What were you doing when the earthquake happened?
+I was cooking in the kitchen. It was so scary!","What were you doing when the earthquake happened?
+I was cooking in the kitchen. It was so scary!",created,200,136320,no,,1,openai
+"openai|nova|0.85||Tom, did you finish the math homework?
+Not yet. It's really difficult. I'll ask Mr. Wang for help tomorrow.","Tom, did you finish the math homework?
+Not yet. It's really difficult. I'll ask Mr. Wang for help tomorrow.",created,200,144480,no,,1,openai
+"openai|nova|0.85||Have you seen the new Marvel movie yet?
+Yes! I watched it last weekend with my friends. It was awesome.","Have you seen the new Marvel movie yet?
+Yes! I watched it last weekend with my friends. It was awesome.",created,200,147840,no,,1,openai
+"openai|nova|0.85||Who is the funniest student in your class, Lily?
+Definitely Tom. He always makes everyone laugh.","Who is the funniest student in your class, Lily?
+Definitely Tom. He always makes everyone laugh.",created,200,127680,no,,1,openai
+"openai|nova|0.85||Do you spend a lot of time on social media?
+I try to limit it to one hour a day. Too much screen time isn't healthy.","Do you spend a lot of time on social media?
+I try to limit it to one hour a day. Too much screen time isn't healthy.",created,200,168480,no,,1,openai
+"openai|nova|0.85||I always argue with my parents lately.
+Don't worry. It's a normal part of growing up.","I always argue with my parents lately.
+Don't worry. It's a normal part of growing up.",created,200,122880,no,,1,openai
+"openai|nova|0.85||I had a fight with my best friend yesterday.
+You should apologize and talk it out.","I had a fight with my best friend yesterday.
+You should apologize and talk it out.",created,200,114720,no,,1,openai
+"openai|nova|0.85||How was the volunteer work at the nursing home?
+Very meaningful. The elderly people had so many stories to share.","How was the volunteer work at the nursing home?
+Very meaningful. The elderly people had so many stories to share.",created,200,162240,no,,1,openai
+"openai|nova|0.85||What do you want to do in the future?
+I want to become a teacher and help students learn.","What do you want to do in the future?
+I want to become a teacher and help students learn.",created,200,109920,no,,1,openai
+"openai|nova|0.85||Are you sad about leaving middle school soon?
+A bit, but I'm also excited about the new chapter ahead.","Are you sad about leaving middle school soon?
+A bit, but I'm also excited about the new chapter ahead.",created,200,147840,no,,1,openai
+"openai|nova|0.85||My best friend is moving to another city next month.
+I'm sorry to hear that. You can still keep in touch online.","My best friend is moving to another city next month.
+I'm sorry to hear that. You can still keep in touch online.",created,200,145440,no,,1,openai
+"openai|nova|0.85||Have you ever won a prize, Lin?
+Yes! I won first place in the school singing contest last month.","Have you ever won a prize, Lin?
+Yes! I won first place in the school singing contest last month.",created,200,132480,no,,1,openai
+"openai|nova|0.85||Do you enjoy watching soap operas, Tom?
+Not really. I prefer watching news and sports.","Do you enjoy watching soap operas, Tom?
+Not really. I prefer watching news and sports.",created,200,97920,no,,1,openai
+"openai|nova|0.85||What do you want to be when you grow up, Mike?
+I want to be a doctor like my mother. I want to help people.","What do you want to be when you grow up, Mike?
+I want to be a doctor like my mother. I want to help people.",created,200,119520,no,,1,openai
+"openai|nova|0.85||Ben, you look stressed lately. Is everything OK?
+I've been worried about the entrance exam. I can't sleep well.
+That's tough. How long have you felt this way?
+For about two months now. I study late every night.
+You should talk to someone. Have you considered seeing the school counselor?
+I haven't, but maybe I should.
+Also, taking breaks and exercising can help reduce stress.
+I'll try to add some exercise to my daily routine.
+That's great. Remember, your health comes first.
+Thanks for the advice, Sara. I really appreciate it.","Ben, you look stressed lately. Is everything OK?
+I've been worried about the entrance exam. I can't sleep well.
+That's tough. How long have you felt this way?
+For about two months now. I study late every night.
+You should talk to someone. Have you considered seeing the school counselor?
+I haven't, but maybe I should.
+Also, taking breaks and exercising can help reduce stress.
+I'll try to add some exercise to my daily routine.
+That's great. Remember, your health comes first.
+Thanks for the advice, Sara. I really appreciate it.",created,200,757440,no,,1,openai
+"openai|nova|0.85||Hi Tom! How was your summer holiday?
+It was amazing! My family and I went to Yunnan for two weeks.
+Yunnan? That sounds wonderful. Where exactly did you go?
+We visited Kunming, Dali, and Lijiang. Lijiang was my favorite — the old town is so beautiful at night.
+How was the weather there?
+Much cooler than Shanghai. We needed jackets in the evening, even in August.
+Did you try any local food?
+Yes! We had crossing-the-bridge noodles in Kunming. The soup was really hot but delicious.
+I want to go there too. How long did it take to travel from city to city?
+About 3-4 hours by bus. Yunnan is bigger than I thought. You should plan at least 10 days for a trip.","Hi Tom! How was your summer holiday?
+It was amazing! My family and I went to Yunnan for two weeks.
+Yunnan? That sounds wonderful. Where exactly did you go?
+We visited Kunming, Dali, and Lijiang. Lijiang was my favorite — the old town is so beautiful at night.
+How was the weather there?
+Much cooler than Shanghai. We needed jackets in the evening, even in August.
+Did you try any local food?
+Yes! We had crossing-the-bridge noodles in Kunming. The soup was really hot but delicious.
+I want to go there too. How long did it take to travel from city to city?
+About 3-4 hours by bus. Yunnan is bigger than I thought. You should plan at least 10 days for a trip.",created,200,960960,no,,1,openai
+"openai|nova|0.85||I'm going to an art exhibition this weekend. Want to come?
+Sure, I love modern art.","I'm going to an art exhibition this weekend. Want to come?
+Sure, I love modern art.",created,200,113280,no,,1,openai
+"openai|nova|0.85||Should I go to the party tonight, Mike?
+If you go, you'll have a great time. But if you stay home, you can finish your project.","Should I go to the party tonight, Mike?
+If you go, you'll have a great time. But if you stay home, you can finish your project.",created,200,179040,no,,1,openai
+"openai|nova|0.85||Lin, what are you going to do during the winter holiday?
+I'm going to visit my grandma in the countryside. We'll stay there for a week.","Lin, what are you going to do during the winter holiday?
+I'm going to visit my grandma in the countryside. We'll stay there for a week.",created,200,153600,no,,1,openai
+"openai|nova|0.85||Tom, what happened to your phone screen? It's cracked!
+I dropped it while I was running for the bus this morning.","Tom, what happened to your phone screen? It's cracked!
+I dropped it while I was running for the bus this morning.",created,200,153120,no,,1,openai
+"openai|nova|0.85||Tom, what are you doing this Saturday? Want to hang out?
+Sure! What did you have in mind?
+How about going to the new science museum? They have a special robot exhibit this month.
+Sounds fun! What time should we meet?
+Let's meet at 10 a.m. at the subway station. We can grab coffee on the way.
+Perfect. Should we invite Lin too?
+Good idea! She loves science. I'll send her a message.
+After the museum, would you like to have lunch together?
+Yes! There's a great Chinese restaurant nearby. They make amazing dumplings.
+I love dumplings! What time does the museum close?
+At 5 p.m. So we have plenty of time. Maybe we can also see a movie afterwards?
+That sounds like a perfect Saturday!","Tom, what are you doing this Saturday? Want to hang out?
+Sure! What did you have in mind?
+How about going to the new science museum? They have a special robot exhibit this month.
+Sounds fun! What time should we meet?
+Let's meet at 10 a.m. at the subway station. We can grab coffee on the way.
+Perfect. Should we invite Lin too?
+Good idea! She loves science. I'll send her a message.
+After the museum, would you like to have lunch together?
+Yes! There's a great Chinese restaurant nearby. They make amazing dumplings.
+I love dumplings! What time does the museum close?
+At 5 p.m. So we have plenty of time. Maybe we can also see a movie afterwards?
+That sounds like a perfect Saturday!",created,200,994080,no,,1,openai
+"openai|nova|0.85||How much did you pay for that backpack?
+It was 200 yuan, but I got 20% off.","How much did you pay for that backpack?
+It was 200 yuan, but I got 20% off.",created,200,116640,no,,1,openai
+"openai|nova|0.85||I'm going to buy a new phone this weekend.
+Why? Your phone looks fine to me.","I'm going to buy a new phone this weekend.
+Why? Your phone looks fine to me.",created,200,104160,no,,1,openai
+"openai|nova|0.85||Sophie, where did you go on Saturday morning?
+I joined a volunteer activity at the city library.
+That sounds interesting. What did you do?
+We organized a reading event for kids from 6 to 10 years old.
+How many kids came?
+About 25. We read stories and helped them with crafts.
+Was it tiring?
+A little, but very rewarding. The kids were so enthusiastic.
+How did you get involved?
+I signed up through the volunteer center website. They have many opportunities.
+I'd like to try too. Can you send me the link?","Sophie, where did you go on Saturday morning?
+I joined a volunteer activity at the city library.
+That sounds interesting. What did you do?
+We organized a reading event for kids from 6 to 10 years old.
+How many kids came?
+About 25. We read stories and helped them with crafts.
+Was it tiring?
+A little, but very rewarding. The kids were so enthusiastic.
+How did you get involved?
+I signed up through the volunteer center website. They have many opportunities.
+I'd like to try too. Can you send me the link?",created,200,751200,no,,1,openai
+"openai|nova|0.85||Lisa, I heard you spent last summer studying in Australia?
+Yes, I attended an English summer camp in Sydney for 4 weeks.
+How was it?
+Eye-opening. We had classes in the morning and explored the city in the afternoons.
+Did you make friends?
+Yes, students from 10 different countries! I still chat with my Japanese roommate online.
+What was the most challenging part?
+Adjusting to the food and the time difference. But I learned to cook some Australian dishes.
+Would you do it again?
+Absolutely! It made me more independent and broadened my view of the world.","Lisa, I heard you spent last summer studying in Australia?
+Yes, I attended an English summer camp in Sydney for 4 weeks.
+How was it?
+Eye-opening. We had classes in the morning and explored the city in the afternoons.
+Did you make friends?
+Yes, students from 10 different countries! I still chat with my Japanese roommate online.
+What was the most challenging part?
+Adjusting to the food and the time difference. But I learned to cook some Australian dishes.
+Would you do it again?
+Absolutely! It made me more independent and broadened my view of the world.",created,200,799200,no,,1,openai
+"openai|nova|0.85||What are your plans for next year, Tom?
+I'm going to work harder on math and join the school basketball team.","What are your plans for next year, Tom?
+I'm going to work harder on math and join the school basketball team.",created,200,144960,no,,1,openai
+"openai|nova|0.85||Do you want to come over for dinner tonight? I'm making dumplings.
+Sounds great, but I have to study for tomorrow's test. Maybe next time?","Do you want to come over for dinner tonight? I'm making dumplings.
+Sounds great, but I have to study for tomorrow's test. Maybe next time?",created,200,199200,no,,1,openai
+"openai|nova|0.85||Jack, I heard our school is starting a recycling project. Are you joining?
+Yes! I'm actually one of the organizers.
+That's great. What does it involve?
+We collect plastic bottles, paper and cans across the campus weekly.
+How does the school benefit?
+We sell them and use the money to plant trees on campus.
+How many trees have you planted so far?
+Over 50 in the past year. We aim for 100 by next summer.
+Amazing! Can I help?
+Definitely! We meet every Friday afternoon at 4.","Jack, I heard our school is starting a recycling project. Are you joining?
+Yes! I'm actually one of the organizers.
+That's great. What does it involve?
+We collect plastic bottles, paper and cans across the campus weekly.
+How does the school benefit?
+We sell them and use the money to plant trees on campus.
+How many trees have you planted so far?
+Over 50 in the past year. We aim for 100 by next summer.
+Amazing! Can I help?
+Definitely! We meet every Friday afternoon at 4.",created,200,705120,no,,1,openai
+"openai|nova|0.85||How will people travel in 50 years, do you think?
+I think we'll have flying cars and travel to the moon for vacation.","How will people travel in 50 years, do you think?
+I think we'll have flying cars and travel to the moon for vacation.",created,200,173280,no,,1,openai
+"openai|nova|0.85||My dream is to travel around the world someday.
+That sounds amazing! I hope to study abroad after graduation.","My dream is to travel around the world someday.
+That sounds amazing! I hope to study abroad after graduation.",created,200,149280,no,,1,openai
+"openai|nova|0.85||What's your favorite type of music?
+I love classical music. It helps me focus when studying.","What's your favorite type of music?
+I love classical music. It helps me focus when studying.",created,200,99456,no,,1,openai
+"openai|nova|0.85||I had a fight with my best friend. What should I do?
+You should apologize first. A real friendship is worth saving.","I had a fight with my best friend. What should I do?
+You should apologize first. A real friendship is worth saving.",created,200,164160,no,,1,openai
+"openai|nova|0.85||Did you finish the project on time?
+Yes, but I had to stay up late for two nights.","Did you finish the project on time?
+Yes, but I had to stay up late for two nights.",created,200,119520,no,,1,openai
+"openai|nova|0.85||How many books do you read in a month?
+Usually 3 to 4. Reading is my biggest hobby.","How many books do you read in a month?
+Usually 3 to 4. Reading is my biggest hobby.",created,200,120960,no,,1,openai
+"openai|nova|0.85||Are you celebrating Spring Festival traditionally this year?
+Yes, but with some modern twists. We use video calls to connect with relatives abroad.
+That's a nice mix. Do you still make dumplings together?
+Of course! That's the highlight of our family celebration.
+How many do you make?
+Hundreds! We make different fillings — pork, vegetables, even seafood.
+What about the New Year's Eve dinner?
+We go to my grandmother's house. She prepares 12 dishes for good luck.
+Why 12?
+Each dish represents a month of the new year, full of good wishes.","Are you celebrating Spring Festival traditionally this year?
+Yes, but with some modern twists. We use video calls to connect with relatives abroad.
+That's a nice mix. Do you still make dumplings together?
+Of course! That's the highlight of our family celebration.
+How many do you make?
+Hundreds! We make different fillings — pork, vegetables, even seafood.
+What about the New Year's Eve dinner?
+We go to my grandmother's house. She prepares 12 dishes for good luck.
+Why 12?
+Each dish represents a month of the new year, full of good wishes.",created,200,785760,no,,1,openai
+"openai|nova|0.85||How was your trip to Yunnan, Mom?
+Wonderful! The weather was perfect and the food was amazing.","How was your trip to Yunnan, Mom?
+Wonderful! The weather was perfect and the food was amazing.",created,200,133440,no,,1,openai
+"openai|nova|0.85||You look tired today. Did you sleep well?
+Not really. I was preparing for the speech contest until midnight.","You look tired today. Did you sleep well?
+Not really. I was preparing for the speech contest until midnight.",created,200,156000,no,,1,openai
+"openai|nova|0.85||Lily, what do you want to be in the future?
+I want to be a doctor. Specifically, a pediatrician.
+Why pediatrics?
+I love working with children. They're full of innocence and hope.
+That requires many years of study.
+Yes, about 8 years total — university plus residency.
+That's a long path. What inspired you?
+My younger brother had a serious illness when I was 10. The doctor saved his life.
+That's a powerful experience.
+Yes. From that moment, I knew I wanted to help children too.","Lily, what do you want to be in the future?
+I want to be a doctor. Specifically, a pediatrician.
+Why pediatrics?
+I love working with children. They're full of innocence and hope.
+That requires many years of study.
+Yes, about 8 years total — university plus residency.
+That's a long path. What inspired you?
+My younger brother had a serious illness when I was 10. The doctor saved his life.
+That's a powerful experience.
+Yes. From that moment, I knew I wanted to help children too.",created,200,702720,no,,1,openai
+"openai|nova|0.85||Do you help with the housework at home?
+Yes, I always make my bed and sometimes cook dinner.","Do you help with the housework at home?
+Yes, I always make my bed and sometimes cook dinner.",created,200,129120,no,,1,openai
+"openai|nova|0.85||Tom! I heard you finished your first marathon last weekend! Congratulations!
+Thank you! It was the hardest thing I've ever done.
+How long was the race?
+M: 42 kilometers. I never thought I could run that far.
+How did you train?
+I've been training for six months. I started with 5 km, then 10, 20, and finally up to 35.
+Did you reach your goal time?
+My goal was to finish in 5 hours. I actually finished in 4 hours and 45 minutes!
+Wow, even better than your goal! How did you feel at the end?
+Tired but very proud. My family came to cheer for me. My little sister was so excited.
+What was the hardest part?
+The last 5 km. My legs were so heavy. But the cheering crowd kept me going.
+Will you do another one?
+Definitely! I've already signed up for another race in October. I want to improve my time.
+You're really inspiring, Tom. Maybe I should try running too.
+You should! Start small. Anyone can train if they really want to.","Tom! I heard you finished your first marathon last weekend! Congratulations!
+Thank you! It was the hardest thing I've ever done.
+How long was the race?
+M: 42 kilometers. I never thought I could run that far.
+How did you train?
+I've been training for six months. I started with 5 km, then 10, 20, and finally up to 35.
+Did you reach your goal time?
+My goal was to finish in 5 hours. I actually finished in 4 hours and 45 minutes!
+Wow, even better than your goal! How did you feel at the end?
+Tired but very proud. My family came to cheer for me. My little sister was so excited.
+What was the hardest part?
+The last 5 km. My legs were so heavy. But the cheering crowd kept me going.
+Will you do another one?
+Definitely! I've already signed up for another race in October. I want to improve my time.
+You're really inspiring, Tom. Maybe I should try running too.
+You should! Start small. Anyone can train if they really want to.",created,200,1377600,no,,1,openai
+"openai|nova|0.85||Reading is my favorite hobby. What about you?
+I love painting. It's relaxing after a long day.","Reading is my favorite hobby. What about you?
+I love painting. It's relaxing after a long day.",created,200,134880,no,,1,openai
+"openai|nova|0.85||Do you think robots will replace teachers in the future?
+No, I don't think so. Teachers are too important to be replaced.","Do you think robots will replace teachers in the future?
+No, I don't think so. Teachers are too important to be replaced.",created,200,169920,no,,1,openai
+"openai|nova|0.85||What shall we do this Saturday?
+How about going hiking? The weather forecast says it will be sunny.","What shall we do this Saturday?
+How about going hiking? The weather forecast says it will be sunny.",created,200,132480,no,,1,openai
+"openai|nova|0.85||Did you have a good summer holiday, Lily?
+Yes, I went to Sanya with my family. The beach was so beautiful!","Did you have a good summer holiday, Lily?
+Yes, I went to Sanya with my family. The beach was so beautiful!",created,200,145440,no,,1,openai
+"openai|nova|0.85||Have you tried using AI tools to help with study?
+Yes, I use them to check grammar in my English essays.
+Aren't you worried they might give wrong answers?
+That's why I always double-check with my teacher.
+Smart approach. What other tools do you use?
+I use online dictionaries and language exchange apps.
+How do they help you?
+I practice English with native speakers from different countries.
+That sounds interesting. Where do you find them?
+There's an app where students from around the world can practice languages together.","Have you tried using AI tools to help with study?
+Yes, I use them to check grammar in my English essays.
+Aren't you worried they might give wrong answers?
+That's why I always double-check with my teacher.
+Smart approach. What other tools do you use?
+I use online dictionaries and language exchange apps.
+How do they help you?
+I practice English with native speakers from different countries.
+That sounds interesting. Where do you find them?
+There's an app where students from around the world can practice languages together.",created,200,754080,no,,1,openai
+"openai|nova|0.85||How do you feel about online learning?
+It's convenient, but I miss interacting with classmates in person.","How do you feel about online learning?
+It's convenient, but I miss interacting with classmates in person.",created,200,154080,no,,1,openai
+"openai|nova|0.85||Tony, you've lost weight! What's your secret?
+I started a fitness program 3 months ago.
+Tell me about it!
+I exercise for 1 hour daily — running, swimming and weight training.
+What about your diet?
+I cut down on sugar and fried food. I eat more fruits, vegetables and lean protein.
+Is it hard to maintain?
+At first, yes. But after 2 months, it became natural.
+How much weight have you lost?
+About 8 kilograms. But more importantly, I feel much stronger and more energetic.","Tony, you've lost weight! What's your secret?
+I started a fitness program 3 months ago.
+Tell me about it!
+I exercise for 1 hour daily — running, swimming and weight training.
+What about your diet?
+I cut down on sugar and fried food. I eat more fruits, vegetables and lean protein.
+Is it hard to maintain?
+At first, yes. But after 2 months, it became natural.
+How much weight have you lost?
+About 8 kilograms. But more importantly, I feel much stronger and more energetic.",created,200,693600,no,,1,openai
+"openai|nova|0.85||Lin, I can't decide between two summer camps. Can you help me?
+Sure! What are the two options?
+One is a math camp in Beijing, the other is an English camp in Shanghai. Both are two weeks.
+Hmm. If you go to the math camp, what will you learn?
+Advanced math and how to solve competition problems.
+And the English camp?
+I'll practice speaking with foreign teachers and improve my listening.
+Which one do you need more right now?
+My math is OK, but my English speaking is weak. If I go to the English camp, I'll feel more confident.
+Then go to the English camp! If you don't practice now, you might miss this great chance.
+But the math camp has a competition at the end. I could win a prize.
+If a prize is more important than improving English, choose math. Otherwise, choose English.
+You're right. I'll go to the English camp. Thanks for helping me decide!","Lin, I can't decide between two summer camps. Can you help me?
+Sure! What are the two options?
+One is a math camp in Beijing, the other is an English camp in Shanghai. Both are two weeks.
+Hmm. If you go to the math camp, what will you learn?
+Advanced math and how to solve competition problems.
+And the English camp?
+I'll practice speaking with foreign teachers and improve my listening.
+Which one do you need more right now?
+My math is OK, but my English speaking is weak. If I go to the English camp, I'll feel more confident.
+Then go to the English camp! If you don't practice now, you might miss this great chance.
+But the math camp has a competition at the end. I could win a prize.
+If a prize is more important than improving English, choose math. Otherwise, choose English.
+You're right. I'll go to the English camp. Thanks for helping me decide!",created,200,1226400,no,,1,openai
+"openai|nova|0.85||Emma, your painting won first prize in the city competition!
+Thank you! I worked on it for 3 months.
+Tell me about it. What's the theme?
+It's called ""Hope"". I drew children planting trees on a hillside.
+That's beautiful. Why this theme?
+I wanted to show that the future is in young people's hands.
+How long have you been painting?
+Since I was 8 years old. My grandmother taught me.
+Will you continue painting in high school?
+Definitely. I want to apply to art universities someday.","Emma, your painting won first prize in the city competition!
+Thank you! I worked on it for 3 months.
+Tell me about it. What's the theme?
+It's called ""Hope"". I drew children planting trees on a hillside.
+That's beautiful. Why this theme?
+I wanted to show that the future is in young people's hands.
+How long have you been painting?
+Since I was 8 years old. My grandmother taught me.
+Will you continue painting in high school?
+Definitely. I want to apply to art universities someday.",created,200,695040,no,,1,openai
+"openai|nova|0.85||Where will you go for the summer vacation?
+My family is planning a trip to Yunnan to see the beautiful scenery.","Where will you go for the summer vacation?
+My family is planning a trip to Yunnan to see the beautiful scenery.",created,200,163680,no,,1,openai
+"openai|nova|0.85||After high school, what's your plan?
+I want to study abroad and become a translator.","After high school, what's your plan?
+I want to study abroad and become a translator.",created,200,114240,no,,1,openai
+"openai|nova|0.85||Is your sister as outgoing as you, Lin?
+No, she's much quieter. I'm more talkative than her.","Is your sister as outgoing as you, Lin?
+No, she's much quieter. I'm more talkative than her.",created,200,124320,no,,1,openai
+"openai|nova|0.85||Mom, why do I have to do so many chores? My friends don't!
+Tom, doing chores teaches you responsibility. It's an important life skill.
+But my friends spend their weekends playing. I have to clean and cook!
+Listen, you don't have to cook every day, just on Saturdays. And I always help.
+What chores does Lily do? She's younger than me.
+She has to feed the cat and water the plants every day. She also folds her own laundry.
+That's easier than my chores!
+That's because she's younger. As you grow up, your responsibilities grow too.
+When can I stop doing chores?
+Never, Tom. Even adults do chores. But you'll thank me one day. Many of my friends couldn't cook when they got married. You won't have that problem.
+I see your point. Maybe I should be grateful instead of complaining.
+That's the spirit! Now please take out the trash before dinner.","Mom, why do I have to do so many chores? My friends don't!
+Tom, doing chores teaches you responsibility. It's an important life skill.
+But my friends spend their weekends playing. I have to clean and cook!
+Listen, you don't have to cook every day, just on Saturdays. And I always help.
+What chores does Lily do? She's younger than me.
+She has to feed the cat and water the plants every day. She also folds her own laundry.
+That's easier than my chores!
+That's because she's younger. As you grow up, your responsibilities grow too.
+When can I stop doing chores?
+Never, Tom. Even adults do chores. But you'll thank me one day. Many of my friends couldn't cook when they got married. You won't have that problem.
+I see your point. Maybe I should be grateful instead of complaining.
+That's the spirit! Now please take out the trash before dinner.",created,200,1206720,no,,1,openai
+"openai|nova|0.85||Did you take the bus or subway today?
+Neither. I biked because of the nice weather.","Did you take the bus or subway today?
+Neither. I biked because of the nice weather.",created,200,113280,no,,1,openai
+"openai|nova|0.85||Would you mind helping me with the dishes after dinner?
+Not at all. I'll wash and you can dry.","Would you mind helping me with the dishes after dinner?
+Not at all. I'll wash and you can dry.",created,200,131040,no,,1,openai
+"openai|nova|0.85||Where did you volunteer last summer, Tom?
+I taught English to children in a small village for two weeks.","Where did you volunteer last summer, Tom?
+I taught English to children in a small village for two weeks.",created,200,140160,no,,1,openai
+"openai|nova|0.85||Why did the train arrive so late?
+There was a heavy rainstorm last night. It blocked some of the tracks.","Why did the train arrive so late?
+There was a heavy rainstorm last night. It blocked some of the tracks.",created,200,132000,no,,1,openai
+"openai|nova|0.85||Hi Tom, what's wrong with you today?
+Doctor, I've been feeling tired all the time, even after a full night's sleep.
+How long have you been feeling like this?
+For about three weeks now. It's getting worse.
+I see. How often do you exercise these days?
+I rarely exercise. I'm too busy with school and homework.
+That might be part of the problem. What about your eating habits?
+I usually skip breakfast and have fast food for lunch and dinner.
+You should change that. Eat breakfast every day, drink eight glasses of water, and exercise at least three times a week.
+OK, I'll try. Should I also take any medicine?
+Not yet. Try these changes for two weeks. If you still feel tired, come back and I'll do more tests.","Hi Tom, what's wrong with you today?
+Doctor, I've been feeling tired all the time, even after a full night's sleep.
+How long have you been feeling like this?
+For about three weeks now. It's getting worse.
+I see. How often do you exercise these days?
+I rarely exercise. I'm too busy with school and homework.
+That might be part of the problem. What about your eating habits?
+I usually skip breakfast and have fast food for lunch and dinner.
+You should change that. Eat breakfast every day, drink eight glasses of water, and exercise at least three times a week.
+OK, I'll try. Should I also take any medicine?
+Not yet. Try these changes for two weeks. If you still feel tired, come back and I'll do more tests.",created,200,1014240,no,,1,openai
+"openai|nova|0.85||Mom, can I go play now?
+Not yet. You have to clean your room and take out the trash first.","Mom, can I go play now?
+Not yet. You have to clean your room and take out the trash first.",created,200,121920,no,,1,openai
+"openai|nova|0.85||I'm thinking of buying a new smartphone.
+Why? Yours still works fine.","I'm thinking of buying a new smartphone.
+Why? Yours still works fine.",created,200,96000,no,,1,openai
+"openai|nova|0.85||Tom, do you think technology will change our lives a lot in 20 years?
+Definitely. I think robots will do most of the housework, like cleaning and cooking.
+That sounds nice. What else?
+Cars will drive themselves. We won't need to learn how to drive anymore.
+Hmm, but what about jobs? Will robots take all our jobs?
+Not all of them. We'll still need teachers, doctors, and artists. Robots can't be creative like humans.
+I'm worried about the environment, though. Will it get better or worse?
+I hope better. Many countries are using more solar and wind power. Cars will be electric.
+What about education?
+Students will learn from anywhere using virtual reality. School won't look like today's.
+That's exciting! But I'll miss the classroom feel.
+Same here. Some things shouldn't change.","Tom, do you think technology will change our lives a lot in 20 years?
+Definitely. I think robots will do most of the housework, like cleaning and cooking.
+That sounds nice. What else?
+Cars will drive themselves. We won't need to learn how to drive anymore.
+Hmm, but what about jobs? Will robots take all our jobs?
+Not all of them. We'll still need teachers, doctors, and artists. Robots can't be creative like humans.
+I'm worried about the environment, though. Will it get better or worse?
+I hope better. Many countries are using more solar and wind power. Cars will be electric.
+What about education?
+Students will learn from anywhere using virtual reality. School won't look like today's.
+That's exciting! But I'll miss the classroom feel.
+Same here. Some things shouldn't change.",created,200,1108320,no,,1,openai
+"openai|nova|0.85||This soup smells delicious! What's in it?
+Mushrooms, tomatoes and a bit of garlic. Try it!","This soup smells delicious! What's in it?
+Mushrooms, tomatoes and a bit of garlic. Try it!",created,200,127200,no,,1,openai
+"openai|nova|0.85||Is math more difficult than English for you?
+Yes, much more. I'm good at English, but math is really hard.","Is math more difficult than English for you?
+Yes, much more. I'm good at English, but math is really hard.",created,200,146400,no,,1,openai
+"openai|nova|0.85||Have you ever traveled by plane, Mike?
+No, never. I'd love to try it someday.","Have you ever traveled by plane, Mike?
+No, never. I'd love to try it someday.",created,200,106080,no,,1,openai
+"openai|nova|0.85||Would you mind turning down the music, Lily? I'm studying.
+Oh, sorry. I'll use my headphones.","Would you mind turning down the music, Lily? I'm studying.
+Oh, sorry. I'll use my headphones.",created,200,123840,no,,1,openai
+"openai|nova|0.85||Lily, I heard you have a twin brother. Are you two similar?
+Actually, no. We're very different. Tom is more outgoing than me.
+Really? In what other ways are you different?
+I'm taller than him by 2 centimeters, but he's heavier. He loves eating!
+Haha! Who is better at sports?
+Definitely Tom. He's the best basketball player on his team. I prefer reading and art.
+So you're more like an artist?
+Yes. I'm the most creative person in my family, I think. Tom is more athletic.
+What about study? Who gets better grades?
+We're about the same. But Tom is better at math, while I'm the strongest at English.
+Sounds like you complement each other well.
+We do! That's why we're also best friends.","Lily, I heard you have a twin brother. Are you two similar?
+Actually, no. We're very different. Tom is more outgoing than me.
+Really? In what other ways are you different?
+I'm taller than him by 2 centimeters, but he's heavier. He loves eating!
+Haha! Who is better at sports?
+Definitely Tom. He's the best basketball player on his team. I prefer reading and art.
+So you're more like an artist?
+Yes. I'm the most creative person in my family, I think. Tom is more athletic.
+What about study? Who gets better grades?
+We're about the same. But Tom is better at math, while I'm the strongest at English.
+Sounds like you complement each other well.
+We do! That's why we're also best friends.",created,200,978720,no,,1,openai
+"openai|nova|0.85||Should I take the bus or ride my bike to school?
+It's raining today. The bus would be better — drier and warmer.","Should I take the bus or ride my bike to school?
+It's raining today. The bus would be better — drier and warmer.",created,200,153120,no,,1,openai
+"openai|nova|0.85||Will computers be smarter than humans someday?
+They are already smarter at many things, but humans still have feelings.","Will computers be smarter than humans someday?
+They are already smarter at many things, but humans still have feelings.",created,200,175200,no,,1,openai
+"openai|nova|0.85||How often do you exercise, Tom?
+I run three times a week and play basketball every Sunday.","How often do you exercise, Tom?
+I run three times a week and play basketball every Sunday.",created,200,132000,no,,1,openai
+"openai|nova|0.85||Do you help with housework?
+Yes, I cook dinner twice a week and do the laundry on weekends.","Do you help with housework?
+Yes, I cook dinner twice a week and do the laundry on weekends.",created,200,133920,no,,1,openai
+"openai|nova|0.85||How long have you been studying English?
+For about six years. I started in primary school.","How long have you been studying English?
+For about six years. I started in primary school.",created,200,132000,no,,1,openai
+"openai|nova|0.85||Should kids have smartphones?
+It depends on age and how they use them.","Should kids have smartphones?
+It depends on age and how they use them.",created,200,102240,no,,1,openai
+"openai|nova|0.85||Would you like to come to my birthday party on Saturday?
+I'd love to! What time should I be there?","Would you like to come to my birthday party on Saturday?
+I'd love to! What time should I be there?",created,200,141120,no,,1,openai
+elevenlabs|el:lily|0.85||remind somebody to do,remind somebody to do,created,200,39552,no,,1,openai
+elevenlabs|el:lily|0.85||pay attention to somebody,pay attention to somebody,created,200,48000,no,,1,openai
+elevenlabs|el:lily|0.85||be sincere with somebody,be sincere with somebody,created,200,50688,no,,1,openai

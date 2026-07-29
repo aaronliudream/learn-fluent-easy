@@ -142,6 +142,17 @@ export function reviewDeclarations(cfg, { readFile, grepRepo, matchFiles }) {
     }
   }
 
+  // unreachableSources：明确"知道它存在、但现在够不到"的内容。status=unverified 的每轮提醒一次。
+  // 目的很具体：别让"暂缓"过几个月变成"消失"——没人记得还有一批内容从来没生成过音频。
+  for (const u of cfg.unreachableSources ?? []) {
+    if (u.status !== 'unverified') continue;
+    items.push({
+      kind: 'unreachableSource', severity: 'warn', target: u.ref ?? '(未命名)',
+      detail: `status=unverified：${u.rows ? `${u.rows} 条内容` : '一批内容'}暂缓，不在可达集里。${u.why ?? ''}`
+        + `${u.reachableIf ? ` —— 解封条件：${u.reachableIf}` : ''}`,
+    });
+  }
+
   for (const os of cfg.outOfScope ?? []) {
     if (os.status === 'unverified') {
       items.push({

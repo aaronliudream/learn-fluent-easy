@@ -63,7 +63,7 @@ describe('播放：按说话人换音色', () => {
   });
 
   it('性别不可判的对话不播（取数侧本就该拦住，这里是第二道）', async () => {
-    await speakDialogue('Linda: In 20 years, students will study at home.', 8);
+    await speakDialogue('Teacher: In 20 years, students will study at home.', 8);
     expect(calls).toHaveLength(0);
   });
 });
@@ -87,7 +87,7 @@ describe('预热 key === 播放 key（逐段比对）', () => {
   });
 
   it('批量：混合独白/对话/不可判，预热与播放仍逐条相等', async () => {
-    const list = [DIALOGUE, 'Hello everyone. I am Peter.', 'Linda: unsplittable.', 'Boy: Hi. Girl: Hello.'];
+    const list = [DIALOGUE, 'Hello everyone. I am Peter.', 'Teacher: unsplittable.', 'Boy: Hi. Girl: Hello.'];
     prefetchDialogue(list, 8);
     const warm = calls.map(keyOf).sort();
     calls.length = 0;

@@ -76,3 +76,4 @@ data/audio-audit/junior_existing_pool.csv
 # 结果与进度照常入库。
 data/audio-audit/junior_listening_items_list.csv
 data/audio-audit/junior_dialogue_gap.csv
+data/audio-audit/junior_named_gap.csv

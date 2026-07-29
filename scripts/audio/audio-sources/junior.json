@@ -156,7 +156,7 @@
         "hubListen",
         "hubListenMale"
       ],
-      "splitNote": "每一轮对话是一个独立音频对象，key 走各自的 voice。切分规则的唯一实现是 src/lib/juniorHub/dialogueSplit.ts —— 取数(能不能进池)、抽取(可达对象)、播放(分角色)三处 import 同一个文件，不允许各写一份。"
+      "splitNote": "每一轮对话是一个独立音频对象，key 走各自的 voice。切分规则的唯一实现是 src/lib/juniorHub/dialogueSplit.ts —— 取数(能不能进池)、抽取(可达对象)、播放(分角色)三处 import 同一个文件，不允许各写一份。 【2026-07-28】具名/职业标记已纳入白名单，该表 384 条全部进可达集，不再有暂缓条目。"
     },
     {
       "id": "junior-listening-transcript-db",
@@ -248,17 +248,7 @@
     }
   ],
   "artifacts": [],
-  "unreachableSources": [
-    {
-      "ref": "table:junior_listening_items（8 条具名/职业标记的对话）",
-      "rows": 8,
-      "status": "unverified",
-      "why": "说话人标记是 Linda: / Mary: / Mandy: / Dr Lu: / Reporter: / Host:（其中 1 条还是三人对话）。性别无法从标记机械判定，按“宁可不做也不猜”留在暂缓池：dialogueSplit() 对它们返回 null → 不进抽题池、不进可达集、不生成音频。",
-      "where": "全部在 8A：U3 ×2、U7 ×6",
-      "reachableIf": "人工给这 8 条定角色性别（例如在 DB 加一列，或把标记改写成 W:/M:）。改完 dialogueSplit 会自动接纳它们，届时可达集 +若干句，需要重跑生成。",
-      "verifiedAt": "2026-07-28"
-    }
-  ],
+  "unreachableSources": [],
   "deadFieldsNote": "grade9.json 里 14 个 unit 带 dialogues 字段，但**全站零消费**：句型关读的是组件常量 SENTENCE_PATTERNS，`unit.dialogues` 在 src 内没有任何读取点（与小学不同，小学的 courseDialoguePairs 是真播放源）。因此不给它建 source；若将来句型关改成读 unit.dialogues，必须回来加一条。",
-  "unreachableSourcesNote": "status=unverified 的条目由巡检每轮告警一次（audit-core.reviewDeclarations），不判失败——目的是别让\"暂缓\"变成\"消失\"。"
+  "unreachableSourcesNote": "status=unverified 的条目由巡检每轮告警一次（audit-core.reviewDeclarations），不判失败——目的是别让\"暂缓\"变成\"消失\"。【2026-07-28 解封】此前挂着的 8 条具名/职业标记对话已全部接纳：Linda / Mary / Mandy 走 dialogueSplit.ts 的 NAMED_GENDER 显式表（一条条列，不做启发式，将来出现新名字必须手工加一行，不加就仍判 null）；Dr Lu / Reporter / Host 这类无性别信息的职业称谓走 ROLE_MARKERS，按**出场顺序交替**（首个未知性别的说话人女声、第二个男声、依此类推，具名/通用标记不占号）。依据是这批题考听力理解不是角色识别，两个音色能区分即可。白名单外的新标记仍然返回 null —— 加交替规则不等于默认放行（有单测钉住）。实测：384 条 dialogue 现在 384/384 可切，切分后 604 段（此前 376 条 / 591 段）。⚠️ 已知代价：8A/U3 那条三人对话（Reporter + Linda + Mary）按规则算出来三人全女声，性别判断没错但听不出换人；要区分需人工给该条单独指定角色性别。"
 }

@@ -1,0 +1,139 @@
+{
+ "list": "data/audio-audit/junior_named_gap.csv",
+ "startedAt": "2026-07-29T05:51:48.741Z",
+ "updatedAt": "2026-07-29T05:52:08.641Z",
+ "done": {
+  "elevenlabs|el:lily|0.8||Do you think you two are similar or different?": {
+   "key": "elevenlabs|el:lily|0.8||Do you think you two are similar or different?",
+   "text": "Do you think you two are similar or different?",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 57984,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||Yes! We have been best friends for three years.": {
+   "key": "elevenlabs|el:lily|0.8||Yes! We have been best friends for three years.",
+   "text": "Yes! We have been best friends for three years.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 72480,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||Girls, you are best friends, right?": {
+   "key": "elevenlabs|el:lily|0.8||Girls, you are best friends, right?",
+   "text": "Girls, you are best friends, right?",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 89856,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||We have different personalities. Linda is very funny and loves telling jokes. I am much quieter than her.": {
+   "key": "elevenlabs|el:lily|0.8||We have different personalities. Linda is very funny and loves telling jokes. I am much quieter than her.",
+   "text": "We have different personalities. Linda is very funny and loves telling jokes. I am much quieter than her.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 163200,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||In 20 years, students probably will not go to a school building every day. Instead, they will study at home or any place they want through VR technology.": {
+   "key": "elevenlabs|el:lily|0.8||In 20 years, students probably will not go to a school building every day. Instead, they will study at home or any place they want through VR technology.",
+   "text": "In 20 years, students probably will not go to a school building every day. Instead, they will study at home or any place they want through VR technology.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 198144,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||Because we share the same hobbies. We both love music. Mary plays the piano better than I do, and I am better at singing.": {
+   "key": "elevenlabs|el:lily|0.8||Because we share the same hobbies. We both love music. Mary plays the piano better than I do, and I am better at singing.",
+   "text": "Because we share the same hobbies. We both love music. Mary plays the piano better than I do, and I am better at singing.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 150528,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||You will see robots working everywhere. China robotics industry is growing fast. Robots will make our life easier. We will have service robots.": {
+   "key": "elevenlabs|el:lily|0.8||You will see robots working everywhere. China robotics industry is growing fast. Robots will make our life easier. We will have service robots.",
+   "text": "You will see robots working everywhere. China robotics industry is growing fast. Robots will make our life easier. We will have service robots.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 178176,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||Do you think robots will replace humans one day?": {
+   "key": "elevenlabs|el:lily|0.8||Do you think robots will replace humans one day?",
+   "text": "Do you think robots will replace humans one day?",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 74880,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||AI teachers will help answer questions. However, real teachers will still be important because they can understand students emotions better.": {
+   "key": "elevenlabs|el:lily|0.8||AI teachers will help answer questions. However, real teachers will still be important because they can understand students emotions better.",
+   "text": "AI teachers will help answer questions. However, real teachers will still be important because they can understand students emotions better.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 219840,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||A smart refrigerator will know what you need and order food for you when you are running low. It will save us a lot of time.": {
+   "key": "elevenlabs|el:lily|0.8||A smart refrigerator will know what you need and order food for you when you are running low. It will save us a lot of time.",
+   "text": "A smart refrigerator will know what you need and order food for you when you are running low. It will save us a lot of time.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 157056,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "openai|echo|0.8||No, I do not. Our creativity and emotional intelligence are important for relationships. AI will not replace humans for those things.": {
+   "key": "openai|echo|0.8||No, I do not. Our creativity and emotional intelligence are important for relationships. AI will not replace humans for those things.",
+   "text": "No, I do not. Our creativity and emotional intelligence are important for relationships. AI will not replace humans for those things.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 206400,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  },
+  "elevenlabs|el:lily|0.8||I believe these dreams will come true as long as I study hard and keep on trying. I will create my own works of art too.": {
+   "key": "elevenlabs|el:lily|0.8||I believe these dreams will come true as long as I study hard and keep on trying. I will create my own works of art too.",
+   "text": "I believe these dreams will come true as long as I study hard and keep on trying. I will create my own works of art too.",
+   "needs_purge": "no",
+   "status": "created",
+   "cdn_status": 200,
+   "bytes": 190080,
+   "reason": "",
+   "attempts": 1,
+   "provider": "openai"
+  }
+ }
+}

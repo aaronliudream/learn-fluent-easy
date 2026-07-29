@@ -386,6 +386,29 @@ export const PICKER_ANCHORS = {
     { file: 'src/pages/juniorHub/JuniorHubStagePlay.tsx', anchor: 'speakWord(c.en)', why: '语块按钮 @0.85 —— 语块**会被朗读**，不是纯展示' },
     { file: 'src/lib/juniorHub/useUnitVocab.ts', anchor: 'chunks: example ? [example] : phrase ? [{ en: phrase, cn: "" }] : undefined', why: '例句优先、无例句才用短语 —— picker 抄的就是这一行' },
   ],
+  // ---- senior ----
+  seniorUnits: [
+    { file: 'src/lib/gaokaoHub/courseData.ts', anchor: 'import year1 from "@/data/gaokaoHub/year1.json"', why: '高中课程结构来自这几份 JSON；seniorUnits 的遍历形状抄的就是它们' },
+    { file: 'src/lib/gaokaoHub/courseData.ts', anchor: 'import sufeCourses from "@/data/gaokaoHub/sufe-courses.json"', why: 'sufe/fltrp 的顶层是 { "1":…, "2":…, "3":… } 三份，不能只取第一个顶层键' },
+  ],
+  seniorCourseVocab: [
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'hubSpeak(v.en);', why: '词卡关朗读 vocabulary[].en @0.85（默认 rate）' },
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'hubSpeak(v.en, 0.7)', why: '默写关词表点读 @0.7' },
+  ],
+  seniorCourseListeningAudio: [
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'hubSpeak(q.audio, 0.8)', why: '听力关题目 @0.8' },
+  ],
+  seniorCourseListeningAnswer: [
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'hubSpeak(q.opts[q.answer], 0.7)', why: '听力关正确项正音 @0.7 —— 与题目不同档，故两个 picker 分开' },
+  ],
+  seniorCourseDialogues: [
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'SENTENCE_PATTERNS.map', why: '句型关读的是组件常量而**不是** unit.dialogues —— 这个锚点在，就说明 dialogues 仍然零播放，该 source 不该启用' },
+  ],
+  seniorSentencePatternsTsx: [
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'const SENTENCE_PATTERNS = [', why: '高中句型关的文本写死在这个常量里' },
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'hubSpeak(s.q)', why: '句型 q @0.85' },
+    { file: 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx', anchor: 'hubSpeak(s.a)', why: '句型 a @0.85' },
+  ],
   juniorListeningItemAudioText: [
     { file: 'src/lib/juniorFinalQuiz.ts', anchor: '.select("difficulty,kind,audio_text,question,options,answer,explanation")', why: '取数字段以此为准；带上表里不存在的列会 400 → 静默回退内联题（踩过）' },
     { file: 'src/lib/juniorFinalQuiz.ts', anchor: 'audio: r.audio_text,', why: '朗读文本就是 audio_text' },

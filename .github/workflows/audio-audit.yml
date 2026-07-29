@@ -56,6 +56,24 @@ jobs:
         # 限流现在不会再被误报成缺口了（前置④ 会把整轮判作废），但作废也要重跑，不如一次探明白。
         run: node scripts/audio/audit-audio.mjs --section junior --threshold 0 --concurrency 5
 
+      # senior 与 junior 同样有表源（junior_vocab / junior_listening_exercises 的高中行），要连库。
+      - name: 音频巡检（senior）
+        if: always()
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: node scripts/audio/audit-audio.mjs --section senior --threshold 0 --concurrency 5
+
+      # 预生成听力 MP3 的存活探测（初中 + 高中）。
+      # 这批文件**不经运行时 cache key**，可达集里没有它们 —— 覆盖率 100% 也证明不了它们还活着。
+      # 播放侧现在会在播放失败时回落实时 TTS，但那是降级（慢 + 换音色），死链仍要当场知道。
+      - name: 听力 audio_url 存活探测（初中 + 高中）
+        if: always()
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: node scripts/audio/probe-listening-urls.mjs --concurrency 4
+
       - name: 上传结构化结果
         if: always()
         uses: actions/upload-artifact@v4
@@ -64,4 +82,6 @@ jobs:
           path: |
             data/audio-audit/audit_primary.json
             data/audio-audit/audit_junior.json
+            data/audio-audit/audit_senior.json
+            data/audio-audit/listening_url_probe.json
           if-no-files-found: ignore

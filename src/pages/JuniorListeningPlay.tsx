@@ -6,7 +6,8 @@ import { withJuniorPublisher, type JuniorPublisher } from "@/lib/juniorHub/publi
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { speak, speakFromUrl, stopSpeaking, prefetchTTS } from "@/lib/speak";
+import { stopSpeaking, prefetchTTS } from "@/lib/speak";
+import { playListeningAudio } from "@/lib/juniorHub/playListeningAudio";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
@@ -98,13 +99,10 @@ export default function JuniorListeningPlay() {
 
   const playAudio = () => {
     if (!e) return;
-    // 走 speakFromUrl(被 speak.ts 的 currentAudio 追踪):再点自动停旧→不叠加;
+    // 走 playListeningAudio:预生成 MP3 优先,**播不出来回落 TTS**(URL 死链不再等于彻底没声)。
+    // 底层仍是 speakFromUrl(被 speak.ts 的 currentAudio 追踪):再点自动停旧→不叠加;
     // 路由切换时全局 StopAudioOnRouteChange 的 stopSpeaking() 能停掉它(裸 new Audio 停不掉)。
-    if (e.audio_url) {
-      speakFromUrl(e.audio_url);
-    } else {
-      speak(e.transcript);
-    }
+    void playListeningAudio(e);
   };
 
   // 卸载时停音频(双保险:覆盖 SPA 同路径切换等全局 StopAudioOnRouteChange 漏掉的边角)。

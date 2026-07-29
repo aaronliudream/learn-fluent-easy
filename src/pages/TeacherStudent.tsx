@@ -410,7 +410,10 @@ export default function TeacherStudent() {
                                       return (
                                         <button
                                           type="button"
-                                          onClick={() => void (snap.audio_url ? speakFromUrl(snap.audio_url) : speakTTS(String(snap.audio), { voiceId: getAlexVoice() }))}
+                                          onClick={() => void (async () => {
+                                            const played = snap.audio_url ? await speakFromUrl(snap.audio_url) : false;
+                                            if (!played && snap.audio) await speakTTS(String(snap.audio), { voiceId: getAlexVoice() });
+                                          })()}
                                           className="grid size-7 flex-shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300"
                                           aria-label="重听录音">
                                           <Volume2 className="size-3.5" />

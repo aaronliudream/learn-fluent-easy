@@ -577,16 +577,28 @@ const playUrl = async (
 // `await`, so mobile browsers see this as a valid user-initiated playback.
 // The async work continues afterwards and just updates the src.
 /** Play a known-good MP3 URL (same mobile unlock path as `speak`). */
-export const speakFromUrl = (url: string): Promise<void> => {
-  if (typeof window === "undefined" || !url) return Promise.resolve();
+/**
+ * 播一个**预生成的音频文件**（不经 TTS）。
+ *
+ * @returns `true` = 确实播出来了；`false` = 没播成（URL 404/网络失败/被更新的播放请求抢占）。
+ *
+ * ⚠️ 为什么返回布尔而不是抛错：这个函数有 6 个调用点，其中几处是 `void speakFromUrl(...)`
+ * 或挂在 onClick 上，抛错会变成未捕获的 rejection。返回值是**让失败可感知**的最小改动，
+ * 老调用方忽略返回值时行为不变。
+ *
+ * 在此之前它恒 resolve(void)：URL 死了也**静默无声、且调用方无从得知**——
+ * 听力专区就是 `if (audio_url) speakFromUrl() else speak(transcript)` 的二选一，
+ * 死链意味着彻底没声。现在调用方可以据此回落到 TTS。
+ */
+export const speakFromUrl = (url: string): Promise<boolean> => {
+  if (typeof window === "undefined" || !url) return Promise.resolve(false);
   const resolved = url.startsWith("/") ? `${window.location.origin}${url}` : url;
   stopCurrent();
   const audio = unlockAudioSync();
   const myToken = speakToken;
   return (async () => {
-    const played = await playUrl(audio, resolved, myToken);
-    if (played) return;
-    await playUrlDirect(resolved, myToken);
+    if (await playUrl(audio, resolved, myToken)) return true;
+    return playUrlDirect(resolved, myToken);
   })();
 };
 

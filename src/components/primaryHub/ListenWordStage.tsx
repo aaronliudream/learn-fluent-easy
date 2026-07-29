@@ -89,7 +89,14 @@ export default function ListenWordStage({
       };
       // 优先:预生成 CF 音频(固定文件、秒播,走解锁元素绕开实时 TTS 抽风)。
       if (audioUrl) {
-        speakFromUrl(audioUrl).then(done).catch(done);
+        // speakFromUrl 现在返回"是否真的播出来了"。原来这里写的是 .then(done).catch(done),
+        // 而它**永不 reject** → catch 分支是死代码,预生成文件 404 时就是静默无声。
+        // 现在按返回值回落实时 TTS(与下面无 URL 的分支同一条路)。
+        void speakFromUrl(audioUrl).then((played) => {
+          if (played) { done(); return; }
+          console.warn("[listenWord] 预生成音频播放失败,回落实时 TTS:", audioUrl);
+          void speakKid(spoken, { grade, speed: cfg.speechRate }).then(done).catch(done);
+        });
         after(2500, done);
         return;
       }

@@ -265,8 +265,9 @@ const MistakesPage = () => {
     if (!audioUrl && !text) {toast.info("没有可朗读的内容");return;}
     setPlayingId(m.id);
     try {
-      if (audioUrl) await speakFromUrl(audioUrl);
-      else await speakTTS(text, { voiceId: getAlexVoice() });
+      // 真 MP3 优先;播不出来(死链/网络)且有文本 → 回落 TTS,别让"点了没反应"
+      const played = audioUrl ? await speakFromUrl(audioUrl) : false;
+      if (!played && text) await speakTTS(text, { voiceId: getAlexVoice() });
     } catch {/* noop */}
     setPlayingId((cur) => cur === m.id ? null : cur);
   };
@@ -670,7 +671,10 @@ function RedoQuestionModal({
         {(audioUrl || audio) &&
         <button
           type="button"
-          onClick={() => void (audioUrl ? speakFromUrl(audioUrl) : speakTTS(audio, { voiceId: getAlexVoice() }))}
+          onClick={() => void (async () => {
+            const played = audioUrl ? await speakFromUrl(audioUrl) : false;
+            if (!played && audio) await speakTTS(audio, { voiceId: getAlexVoice() });
+          })()}
           className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300">
           <Volume2 className="size-4" /> <T>🔊 重听录音</T>
         </button>

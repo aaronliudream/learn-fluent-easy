@@ -169,6 +169,88 @@ export const pickers = {
     return out;
   },
 
+  // ---- senior（高中）JSON 课程源 ----
+  //
+  // 结构与初中不同：顶层可能是 { year1: {...} }（人教）也可能是 { "1": {...}, "2": ..., "3": ... }
+  // （上外/外研社按年级分三份），下一层统一是 { name, semesters: { gk_required1: { units: [...] } } }。
+  // 所以不能照抄 `course(json)` 只取第一个顶层键——那样会漏掉 sufe/fltrp 的第 2、3 份。
+  seniorUnits(json) {
+    const out = [];
+    for (const grade of Object.values(json ?? {})) {
+      for (const sem of Object.values(grade?.semesters ?? {})) {
+        for (const u of sem?.units ?? []) out.push(u);
+      }
+    }
+    return out;
+  },
+
+  /** 5 步关卡词卡/配对/默写：unit.vocabulary[].en（只有人教 year*.json 有，sufe/fltrp 为 0）。 */
+  seniorCourseVocab(json) {
+    const out = [];
+    for (const u of pickers.seniorUnits(json)) {
+      for (const [i, v] of (u.vocabulary ?? []).entries()) {
+        if (v?.en) out.push({ text: v.en, record_id: `${u.id}#vocab[${i}]`, field: 'vocabulary.en' });
+      }
+    }
+    return out;
+  },
+
+  /** 听力关题目：GaokaoHubStagePlay:354 hubSpeak(q.audio, 0.8)。 */
+  seniorCourseListeningAudio(json) {
+    const out = [];
+    for (const u of pickers.seniorUnits(json)) {
+      for (const [i, lq] of (u.listeningQuestions ?? []).entries()) {
+        if (lq?.audio) out.push({ text: lq.audio, record_id: `${u.id}#listening[${i}]`, field: 'listeningQuestions.audio' });
+      }
+    }
+    return out;
+  },
+
+  /** 听力关正确项正音：:320 hubSpeak(q.opts[q.answer], 0.7)。 */
+  seniorCourseListeningAnswer(json) {
+    const out = [];
+    for (const u of pickers.seniorUnits(json)) {
+      for (const [i, lq] of (u.listeningQuestions ?? []).entries()) {
+        const ans = lq?.opts?.[lq.answer];
+        if (ans) out.push({ text: ans, record_id: `${u.id}#listening[${i}].answer`, field: 'listeningQuestions.opts[answer]' });
+      }
+    }
+    return out;
+  },
+
+  /**
+   * unit.dialogues.lines[].text —— **目前没有播放调用**（句型关读的是组件常量 SENTENCE_PATTERNS）。
+   * 保留 picker 是为了"哪天真接上了"能直接启用；senior.json 里这个 source 不挂 tiers 生效。
+   */
+  seniorCourseDialogues(json) {
+    const out = [];
+    for (const u of pickers.seniorUnits(json)) {
+      for (const [di, d] of (u.dialogues ?? []).entries()) {
+        for (const [li, l] of (d.lines ?? []).entries()) {
+          if (l?.text) out.push({ text: l.text, record_id: `${u.id}#dialogue[${di}].line[${li}]`, field: 'dialogues.lines.text' });
+        }
+      }
+    }
+    return out;
+  },
+
+  /** 高中句型关的 4 组句型写死在 GaokaoHubStagePlay.tsx 的 SENTENCE_PATTERNS 里。 */
+  seniorSentencePatternsTsx(_json, ctx) {
+    const src = fs.readFileSync(ctx.absPath, 'utf8');
+    const block = /const SENTENCE_PATTERNS = \[([\s\S]*?)\n\];/.exec(src);
+    if (!block) {
+      throw new Error(`✗ ${ctx.rel} 里找不到 SENTENCE_PATTERNS 常量——高中句型关的文本来源变了，先核播放点再改 picker`);
+    }
+    const out = [];
+    for (const key of ['q', 'a']) {
+      for (const m of block[1].matchAll(new RegExp(`\\n\\s{4}${key}: "([^"]+)"`, 'g'))) {
+        out.push({ text: m[1], record_id: `SENTENCE_PATTERNS#${key}`, field: `SENTENCE_PATTERNS.${key}` });
+      }
+    }
+    if (!out.length) throw new Error(`✗ ${ctx.rel} 的 SENTENCE_PATTERNS 抽到 0 条文本`);
+    return out;
+  },
+
   // ---- 表源 picker（入参是 DB 行数组，不是 JSON 文件）----
 
   /** junior_vocab.word —— 初中 hub 里唯一被朗读的词字段（词卡/听音辨词/默写关都是它）。 */

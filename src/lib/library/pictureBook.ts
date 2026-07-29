@@ -55,6 +55,7 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   "aesop-easy-readers#31",
   // ch32 只有 2 句,是全书第一个 2 页章(buildPages 按分组数出页,不强制 3 页)。
   "aesop-easy-readers#32",
+  "aesop-easy-readers#33",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

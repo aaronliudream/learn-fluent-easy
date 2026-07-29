@@ -161,12 +161,11 @@ describe('绊线：多音色链路的三处必须齐备', () => {
     expect(tiers[femaleTier].speeds).toEqual([DIALOGUE_SPEED]);
   });
 
-  it('④ 性别不可判的那批仍被显式声明（status=unverified，巡检每轮提醒）', () => {
-    const un = (junior().unreachableSources ?? []) as Array<{ ref: string; status: string; rows: number }>;
-    const row = un.find((u) => u.ref.includes('junior_listening_items'));
-    expect(row, '8 条不可判的对话必须留在 unreachableSources 里，别让"暂缓"变成"消失"').toBeTruthy();
-    expect(row!.status).toBe('unverified');
-    expect(row!.rows).toBe(8);
+  it('④ 暂缓池已清空：这张表没有条目再挂在 unreachableSources 下', () => {
+    const un = (junior().unreachableSources ?? []) as Array<{ ref: string }>;
+    expect(un.find((u) => u.ref.includes('junior_listening_items'))).toBeFalsy();
+    // 清空不等于可以不写依据：解封理由必须留在映射表里
+    expect(junior().unreachableSourcesNote).toContain('解封');
   });
 
   it('⑤ 不可判的对话不会进抽题池（取数侧用同一个 dialogueSplit 过滤）', async () => {
@@ -175,12 +174,12 @@ describe('绊线：多音色链路的三处必须齐备', () => {
         { ...row(1, 'ok-1'), audio_text: 'W: Hi. M: Hello.' },
         { ...row(2, 'ok-2'), audio_text: 'W: How are you? M: Fine.' },
         { ...row(3, 'ok-3'), audio_text: 'Hello everyone. I am Peter.' },
-        { ...row(3, 'bad'), audio_text: 'Linda: I am not splittable.' },
+        { ...row(3, 'bad'), audio_text: 'Teacher: I am not in the whitelist.' },
       ],
       error: null,
     };
     const items = await listeningItemsForUnit(unitOf('8A'));
-    expect(items.every((i) => !i.audio?.startsWith('Linda:'))).toBe(true);
+    expect(items.every((i) => !i.audio?.startsWith('Teacher:'))).toBe(true);
   });
 });
 

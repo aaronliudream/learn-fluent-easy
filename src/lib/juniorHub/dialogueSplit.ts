@@ -28,7 +28,7 @@ export type DialogueSegment = {
   gender: DialogueGender;
 };
 
-/** 白名单标记 → 性别。改这里等于改音色分配，两侧同时生效。 */
+/** 通用标记 → 性别。改这里等于改音色分配，两侧同时生效。 */
 export const SPEAKER_GENDER: Readonly<Record<string, DialogueGender>> = {
   W: "female",
   Girl: "female",
@@ -38,10 +38,42 @@ export const SPEAKER_GENDER: Readonly<Record<string, DialogueGender>> = {
   B: "male",
 };
 
+/**
+ * 具名说话人 → 性别，**显式一条条列**，不做任何启发式（不按词尾、不查名字库）。
+ * 将来题库里出现新名字，必须手工在这里加一行；不加就是"未知标记" → 整条判 null。
+ * 这样做的代价是要人工维护，换来的是"永远不会猜错某个名字的性别"。
+ */
+export const NAMED_GENDER: Readonly<Record<string, DialogueGender>> = {
+  Linda: "female",
+  Mary: "female",
+  Mandy: "female",
+};
+
+/**
+ * 职业/称谓标记：本身**不含性别信息**（Reporter 可男可女，Dr Lu 也判不出）。
+ * 这类按**出场顺序交替**分配：这批题考的是听力理解不是角色识别，
+ * 只要两个说话人音色能区分就够了。
+ *
+ * 交替口径（实现见 assignRoleGender）：
+ *   在**未知性别的说话人**里按首次出场排序，第 1 个 → 女声、第 2 个 → 男声、第 3 个 → 女声…
+ *   具名/通用标记不参与这个序号（它们的性别是定死的，谁先出场都不影响）。
+ * 同一段文本跑多少次结果都一样（纯按文本顺序，不随机、不看时间）。
+ */
+export const ROLE_MARKERS: ReadonlySet<string> = new Set(["Dr Lu", "Reporter", "Host"]);
+
+/** 交替起点：第 1 个未知性别的说话人用女声。 */
+const ROLE_ALTERNATION: readonly DialogueGender[] = ["female", "male"];
+
 /** 独白（无标记）按女声读——与既有听力/词汇的音色一致。 */
 export const MONOLOGUE_GENDER: DialogueGender = "female";
 
-const WHITELIST = Object.keys(SPEAKER_GENDER).sort((a, b) => b.length - a.length).join("|");
+/** 三类合起来才是白名单；长的排前面，"Dr Lu" 不会被 "Dr" 抢先匹配。 */
+const WHITELIST_TOKENS = [
+  ...Object.keys(SPEAKER_GENDER),
+  ...Object.keys(NAMED_GENDER),
+  ...ROLE_MARKERS,
+].sort((a, b) => b.length - a.length);
+const WHITELIST = WHITELIST_TOKENS.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
 /** 白名单标记：行首或空白之后 + 标记 + 冒号 + 空白。 */
 const KNOWN_MARK = new RegExp(`(^|\\s)(${WHITELIST})\\s*:\\s*`, "g");
 /**
@@ -50,8 +82,28 @@ const KNOWN_MARK = new RegExp(`(^|\\s)(${WHITELIST})\\s*:\\s*`, "g");
  */
 const ANY_MARK = /(^|\s)([A-Z][A-Za-z.'-]{0,9}(?:\s[A-Z][A-Za-z.'-]{0,9})?)\s*:\s/g;
 
+const has = (o: Readonly<Record<string, DialogueGender>>, k: string) =>
+  Object.prototype.hasOwnProperty.call(o, k);
+
 const isKnown = (token: string): boolean =>
-  Object.prototype.hasOwnProperty.call(SPEAKER_GENDER, token);
+  has(SPEAKER_GENDER, token) || has(NAMED_GENDER, token) || ROLE_MARKERS.has(token);
+
+/**
+ * 给整段对话里的每个说话人定性别。
+ * 顺序：通用标记 → 具名表 → 职业标记按出场交替。
+ * 交替的序号只在**未知性别的说话人**之间累加（具名/通用不占号）。
+ */
+function assignGenders(speakers: readonly string[]): Map<string, DialogueGender> {
+  const out = new Map<string, DialogueGender>();
+  let roleIdx = 0;
+  for (const s of speakers) {
+    if (out.has(s)) continue;
+    if (has(SPEAKER_GENDER, s)) out.set(s, SPEAKER_GENDER[s]);
+    else if (has(NAMED_GENDER, s)) out.set(s, NAMED_GENDER[s]);
+    else out.set(s, ROLE_ALTERNATION[roleIdx++ % ROLE_ALTERNATION.length]);
+  }
+  return out;
+}
 
 /**
  * @returns 切分后的段落；**null 表示不可安全分角色**（出现了白名单外的说话人标记）。
@@ -80,6 +132,7 @@ export function splitDialogue(raw: string): DialogueSegment[] | null {
   // 必须以标记开头，否则第一段没有归属，属于形态异常 → 不猜
   if ((marks[0].index ?? -1) !== 0) return null;
 
+  const genders = assignGenders(marks.map((m) => m[2]));
   const out: DialogueSegment[] = [];
   for (let i = 0; i < marks.length; i++) {
     const m = marks[i];
@@ -88,7 +141,7 @@ export function splitDialogue(raw: string): DialogueSegment[] | null {
     const to = i + 1 < marks.length ? (marks[i + 1].index ?? text.length) : text.length;
     const seg = text.slice(from, to).trim();
     if (!seg) continue; // 标记后没内容：跳过该轮（实测 0 条，防御性）
-    out.push({ speaker, text: seg, gender: SPEAKER_GENDER[speaker] });
+    out.push({ speaker, text: seg, gender: genders.get(speaker) as DialogueGender });
   }
   return out.length ? out : null;
 }

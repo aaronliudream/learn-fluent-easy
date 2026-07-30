@@ -61,6 +61,7 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   // ch36 同 ch32,只有 2 句 → 2 页章。
   "aesop-easy-readers#36",
   "aesop-easy-readers#37",
+  "aesop-easy-readers#38",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

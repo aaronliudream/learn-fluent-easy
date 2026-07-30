@@ -1,0 +1,190 @@
+{
+  "section": "senior",
+  "voiceId": "el:lily",
+  "matrixDoc": "docs/audio/SENIOR_1_speed_matrix.md",
+  "note": "档位来源于 SENIOR_1 可达语速档矩阵（逐个播放点抓实参）。高中与初中最大的不同：**两个数据源并存** —— 5 步关卡（GaokaoHubStagePlay）读 JSON（courseData → year*.json / sufe-courses.json / fltrp-courses.json），词汇专区（GaokaoVocabBoard）读 DB（junior_vocab，volume=required*/elective*，按 publisher 过滤）。两者的档位与音色都不同，不能混。",
+  "dataRoots": [
+    "src/data/gaokao",
+    "src/data/gaokaoHub"
+  ],
+  "extraFiles": [
+    {
+      "path": "src/pages/gaokaoHub/GaokaoHubStagePlay.tsx",
+      "why": "句型关的 4 组句型写死在组件常量 SENTENCE_PATTERNS 里（:19 起），:492/:507 会朗读。与 junior 同型。"
+    }
+  ],
+  "contentParents": [
+    "src/data"
+  ],
+  "outOfScope": [
+    {
+      "paths": [
+        "src/data/primaryHub"
+      ],
+      "why": "小学 section 的内容，已由 primary.json 全量覆盖",
+      "status": "confirmed",
+      "ownedBy": "primary"
+    },
+    {
+      "paths": [
+        "src/data/juniorHub"
+      ],
+      "why": "初中 section 的内容，已由 junior.json 全量覆盖",
+      "status": "confirmed",
+      "ownedBy": "junior"
+    },
+    {
+      "paths": [
+        "src/data/exams"
+      ],
+      "why": "真题卷数据，尚未确认是否有朗读入口（与 primary.json / junior.json 同一条，三处保持同步）",
+      "status": "unverified"
+    },
+    {
+      "paths": [
+        "src/data/aiLessonsG2.json",
+        "src/data/badges.ts",
+        "src/data/sparkMoods.ts",
+        "src/data/sparkPhrases.ts",
+        "src/data/sightWords.ts",
+        "src/data/g2LessonStages.ts"
+      ],
+      "why": "src/data 顶层散文件，属小学侧/通用文案，不经高中任何播放入口",
+      "status": "confirmed"
+    }
+  ],
+  "outOfScopeNote": "反向哨兵：管线会枚举 contentParents 下的实际条目，任何既不在 dataRoots、也不在 outOfScope 里的游离目录/文件都会让管线报错退出。",
+  "tiers": {
+    "hubNormal": {
+      "speeds": [
+        0.85
+      ],
+      "code": "hubSpeak 的默认 rate = HUB_FIXED_SPEAK_SPEED (src/lib/primaryHub/hubSpeakSpeed.ts)",
+      "modules": "5 步关卡：词卡翻卡 :184/:226/:231/:249/:254、词义配对英侧 :390、句型关 :492/:507、默写关答对正音 :563"
+    },
+    "hubListen": {
+      "speeds": [
+        0.8
+      ],
+      "code": "hubSpeak(q.audio, 0.8) —— 显式传参",
+      "modules": "听力关题目 :354"
+    },
+    "hubSlow": {
+      "speeds": [
+        0.7
+      ],
+      "code": "hubSpeak(..., 0.7) —— 显式传参",
+      "modules": "听力关正确项正音 :320、默写关答错正音 :579、默写关词表点读 :601"
+    },
+    "userDefault": {
+      "speeds": [
+        0.85
+      ],
+      "voiceId": "nova",
+      "code": "DEFAULT_SETTINGS (src/lib/voice.ts) = nova@0.85；GaokaoVocabBoard 用 speak(w.word) 走用户设置",
+      "modules": "词汇专区 GaokaoVocabBoard:219 点读、:206 预热（prefetchTTSBatch 同键）",
+      "coverageNote": "用户可切 6 音色 × 5 语速 = 30 种组合，只生成默认档；其余按需冷合成。该页全部点击触发，无自动播。"
+    }
+  },
+  "sources": [
+    {
+      "id": "senior-course-vocab-json",
+      "files": "src/data/gaokaoHub/*.json",
+      "picker": "seniorCourseVocab",
+      "tiers": [
+        "hubNormal",
+        "hubSlow"
+      ],
+      "playedBy": "5 步关卡：词卡/配对 @0.85（:184/:226/:231/:249/:254/:390）、默写关词表点读 @0.7（:601）",
+      "scopeNote": "只有人教 year*.json 带 vocabulary（16+10+10=36 个单元、1706 条）；sufe/fltrp 的 courses.json 里 vocabulary 全为 0 —— 那两社的词只在 DB（见 senior-vocab-db）。"
+    },
+    {
+      "id": "senior-course-listening-audio-json",
+      "files": "src/data/gaokaoHub/*.json",
+      "picker": "seniorCourseListeningAudio",
+      "tiers": [
+        "hubListen"
+      ],
+      "playedBy": "听力关题目 GaokaoHubStagePlay:354 hubSpeak(q.audio, 0.8)"
+    },
+    {
+      "id": "senior-course-listening-answer-json",
+      "files": "src/data/gaokaoHub/*.json",
+      "picker": "seniorCourseListeningAnswer",
+      "tiers": [
+        "hubSlow"
+      ],
+      "playedBy": "听力关正确项正音 :320 hubSpeak(q.opts[q.answer], 0.7)",
+      "scopeNote": "与题目拆成两个 source：这两处是不同档位（0.8 / 0.7），合成一个会给每条文本各多生成一档没人播的对象。"
+    },
+    {
+      "id": "senior-sentence-patterns",
+      "files": "src/pages/gaokaoHub/GaokaoHubStagePlay.tsx",
+      "picker": "seniorSentencePatternsTsx",
+      "tiers": [
+        "hubNormal"
+      ],
+      "playedBy": "句型关 :492 q / :507 a",
+      "scopeNote": "靠 extraFiles 纳入（文本写死在组件里，不在 src/data 下）。picker 抽不到就抛错，防止组件重构后静默归零。"
+    },
+    {
+      "id": "senior-vocab-db",
+      "files": "table:junior_vocab",
+      "select": "id,word,grade,volume,publisher",
+      "filters": {
+        "grade": "in.(10,11,12)",
+        "volume": "in.(required1,required2,required3,elective1,elective2,elective3,elective4)"
+      },
+      "orderBy": "id",
+      "picker": "juniorVocabWord",
+      "tiers": [
+        "userDefault"
+      ],
+      "playedBy": "词汇专区 GaokaoVocabBoard:219 speak(w.word) —— 用户设置音色，默认 nova@0.85",
+      "scopeNote": "同时卡 grade 与 volume：junior_vocab 是初高中混表，初中 publisher 是 junior/junior_fltrp、高中是 pep/sufe/fltrp。实测 volume in (required*/elective*) 共 5052 行、grade 全是 10/11/12。**只挂 userDefault 一档**：这批 DB 词只有词汇专区在读，5 步关卡读的是 JSON（见 senior-course-vocab-json）。",
+      "publisherNote": "publisher 不进 cache key，三社同词命中同一对象（实测：三社唯一词形 pep 1670 / sufe 1134 / fltrp 1889，并集 2918，三社共有 472）。"
+    },
+    {
+      "id": "senior-listening-transcript-db",
+      "files": "table:junior_listening_exercises",
+      "select": "id,transcript,audio_url,grade,volume,publisher",
+      "filters": {
+        "grade": "in.(10,11,12)",
+        "volume": "in.(required1,required2,required3,elective1,elective2,elective3,elective4)"
+      },
+      "orderBy": "id",
+      "picker": "juniorListeningTranscript",
+      "tiers": [
+        "userDefault"
+      ],
+      "playedBy": "听力专区 JuniorListeningPlay:106 —— 仅当该行没有 audio_url 时才现场 speak(transcript)",
+      "scopeNote": "高中 636 行**全部有 audio_url**（2026-07-29 实测 636/636 HTTP 200 且 ≥2KB，零死链），所以 picker 过滤后产出 0 条。⚠️ speakFromUrl 失败**不会**回退 TTS（playUrl→playUrlDirect 都返回 false 后直接 resolve），一旦有死链就是彻底没声——所以这批 URL 的存活要靠巡检盯，不能靠回退兜。"
+    }
+  ],
+  "audioFree": [
+    {
+      "files": "src/data/gaokao/*.ts",
+      "why": "grammarQuestions.ts / readingArticles.ts —— 语法题与阅读文章，高中侧 grep 未见任何播放调用（GaokaoGrammarBoard / GaokaoExerciseBoard 零命中 speak/hubSpeak）",
+      "consumers": [
+        "src/pages/gaokaoHub/GaokaoGrammarBoard.tsx",
+        "src/pages/gaokaoHub/GaokaoExerciseBoard.tsx"
+      ]
+    },
+    {
+      "files": "src/data/gaokao/*.json",
+      "why": "catalog.json（目录结构）/ pep-bundle.json（打包课本元数据），非朗读文本源",
+      "consumers": [
+        "src/lib/gaokaoHub/courseData.ts"
+      ]
+    },
+    {
+      "files": "src/data/gaokao/README.md",
+      "why": "说明文档，非内容",
+      "assertUnreferenced": true
+    }
+  ],
+  "artifacts": [],
+  "dbZeroPlaybackNote": "junior_* 表里的高中行还有：junior_reading 636、junior_cloze 636、junior_grammar_points 318、junior_writing_prompts 106 —— 这些表的高中侧消费页面（GaokaoExerciseBoard / GaokaoGrammarBoard / GaokaoWritingBoard）grep 播放 API 零命中，故不建 source。将来任一页面加了朗读按钮，必须回来补。",
+  "gaokaoTablesNote": "33 张 gaokao_* 表实测 32 张 0 行、gaokao_exam_calendar 5 行（考试日历，无朗读文本），因此高中内容全部走 junior_* 表与 JSON，本映射表不涉及 gaokao_* 表。",
+  "deferredSourcesNote": "senior-course-dialogues-json 已从 sources 移出：三份课程 JSON 共 152 组 dialogues，但句型关读的是组件常量 SENTENCE_PATTERNS，全仓 grep 未见对 gaokao 侧 unit.dialogues 的读取 → 按零播放处理。picker seniorCourseDialogues 已实现并保留，哪天真接上播放点，把这个 source 加回 sources 即可。"
+}

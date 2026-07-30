@@ -22,10 +22,12 @@ name: audio-precheck
 on:
   pull_request:
     paths:
-      - 'src/data/**'
+      - 'src/data/**'   # 含 src/data/gaokao/** 与 src/data/gaokaoHub/**（senior 的 dataRoots）
       # junior 句型关的 4 组句型写死在这个组件里（junior.json 的 extraFiles）。
       # 它不在 src/data 下，不列出来就等于"改那 7 条文本可以绕过闸门"。
       - 'src/pages/juniorHub/JuniorHubStagePlay.tsx'
+      # senior 句型关的文本同样写死在组件里（senior.json 的 extraFiles）
+      - 'src/pages/gaokaoHub/GaokaoHubStagePlay.tsx'
       # 映射表/抽取逻辑本身改了也要重跑：档位改一个数，缺口集合就变了。
       - 'scripts/audio/audio-sources/*.json'
       - 'scripts/audio/pickers.mjs'
@@ -65,6 +67,13 @@ jobs:
             --section junior \
             --base "origin/${{ github.base_ref }}"
 
+      # senior 与 junior 同：表源（junior_vocab 的高中行）在 PR 闸里跳过并打印，
+      # 这一步同样零凭据。
+      - name: senior —— 只检查本 PR 改动到的内容文件
+        if: always()
+        run: |
+          node scripts/audio/precheck-changed.mjs             --section senior             --base "origin/${{ github.base_ref }}"
+
       - name: 上传缺口清单（便于本地直接喂给 backfill）
         if: failure()
         uses: actions/upload-artifact@v4
@@ -73,4 +82,5 @@ jobs:
           path: |
             data/audio-audit/precheck_primary_list.csv
             data/audio-audit/precheck_junior_list.csv
+            data/audio-audit/precheck_senior_list.csv
           if-no-files-found: ignore

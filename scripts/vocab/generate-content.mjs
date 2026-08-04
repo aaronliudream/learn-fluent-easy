@@ -81,6 +81,26 @@ async function restPaged(pathname, params, page = 1000) {
   }
 }
 
+/** 试跑用:直接从 CSV 取词,不查库。
+ *  用途是**放量全库前先验难度档产出质量** —— B2/C1 的词还没灌进 DB,
+ *  查库拿不到,但 prompt 质量必须在灌库前就验过。
+ *  用法: --from-csv --tier=B2 --limit=10   (配 --no-emit,只看不出 SQL)
+ *  ⚠️ 这条路径拿不到 word_id,所以只能配 --no-emit,不产 SQL。 */
+function fetchFromCsv(tier, limit) {
+  const csv = path.join(DATA, `${BANK || 'toefl'}.csv`);
+  if (!existsSync(csv)) throw new Error(`找不到 ${csv},先跑 ingest-toefl.mjs`);
+  const rows = readFileSync(csv, 'utf8').trim().split(/\r?\n/).slice(1).map(l => {
+    const [headword, pos, freq_rank] = l.split(',');
+    return { id: null, headword, pos, freq_rank: freq_rank ? Number(freq_rank) : null };
+  });
+  const picked = rows.filter(r => r.freq_rank && cefrFor(r.freq_rank).level === tier);
+  // 均匀铺开取样,别全挤在该档最前面(那样只看得到该档最简单的词)
+  const step = Math.max(1, Math.floor(picked.length / limit));
+  const out = [];
+  for (let i = 0; i < picked.length && out.length < limit; i += step) out.push(picked[i]);
+  return out;
+}
+
 /** 待办词:def_zh 为空;--bank 只圈范围,不进入生成逻辑。 */
 async function fetchPending() {
   let idFilter = null;
@@ -143,8 +163,13 @@ Produce a study card with these HARD requirements:
 
 1. ipa: American English IPA for "${word.headword}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
 2. def_zh: 中文释义. Cover the 1-2 MOST COMMON senses of the word, separated by a
-   full-width semicolon "；". If the word really only has one common sense, give just
-   that one - do NOT pad it out with a rare or contrived second sense.
+   full-width semicolon "；".
+   ⚠️ The two senses must be GENUINELY DIFFERENT meanings, not two ways of saying
+   the same thing. Listing near-synonyms is FORBIDDEN: for "participant",
+   "参与者；参加者" is WRONG (same meaning twice) - just write "参与者".
+   Good two-sense examples: "defense" -> "防御；辩护" (two distinct meanings),
+   "attorney" -> "律师；代理人". If the word has only ONE common sense,
+   give ONE sense and no semicolon. Never pad.
    不要写词性缩写, 只写释义本身.
 3. def_en: English definition, AT MOST 15 words.
 4. examples: EXACTLY 3 objects. Each anchors ONE high-frequency collocation of "${word.headword}".
@@ -232,7 +257,15 @@ async function callModel(word, cefr, failureNotes) {
 /* ── 主流程 ── */
 async function main() {
   mkdirSync(GEN, { recursive: true });
-  const resultsPath = path.join(GEN, `${BANK || 'all'}-content.json`);
+  const FROM_CSV_EARLY = process.argv.includes('--from-csv');
+  const TIER_EARLY = arg('tier', 'B2');
+  /* ⚠️ 试跑必须写到**独立缓存**。共用 <bank>-content.json 的话:
+   *   ① B2/C1 试跑词并不在 DB 里,却会被 emit 进 batch SQL,UPDATE 匹配不到、
+   *      count-validate 直接对不上;
+   *   ② 和正式跑并发时两边互相覆盖同一个文件。 */
+  const resultsPath = FROM_CSV_EARLY
+    ? path.join(GEN, `${BANK || 'all'}-trial-${TIER_EARLY}.json`)
+    : path.join(GEN, `${BANK || 'all'}-content.json`);
   const failedPath = path.join(DATA, 'failed.json');
   const inflectPath = path.join(DATA, `${BANK || 'toefl'}-inflections.json`);
 
@@ -252,7 +285,13 @@ async function main() {
     return;
   }
 
-  const pending = (await fetchPending()).filter(w => !results[w.headword.toLowerCase()]).slice(0, LIMIT);
+  const FROM_CSV = process.argv.includes('--from-csv');
+  const TIER = arg('tier', 'B2');
+  if (FROM_CSV && !NO_EMIT) throw new Error('--from-csv 是试跑通道(拿不到 word_id),必须配 --no-emit');
+
+  const source = FROM_CSV ? fetchFromCsv(TIER, LIMIT) : await fetchPending();
+  const pending = source.filter(w => !results[w.headword.toLowerCase()]).slice(0, LIMIT);
+  if (FROM_CSV) process.stdout.write(`· 试跑通道:从 CSV 取 ${TIER} 档 ${pending.length} 词(不查库、不出 SQL)\n`);
   process.stdout.write(`· 待生成 ${pending.length} 词${BANK ? `(范围 --bank=${BANK})` : '(全库)'}\n`);
   if (!pending.length) { process.stdout.write('  没有待办词。若 SQL 还没跑,先跑 batch1 灌词表。\n'); emit(results); return; }
 
@@ -434,12 +473,42 @@ function mulberry32(seed) {
   };
 }
 
+/**
+ * 抽 16 词送审 —— **不是纯随机**,要尽量铺开 scene 和词性。
+ * 纯随机抽出来很可能 12 个名词、场景全挤在 news/work,审不出覆盖问题。
+ * 做法:确定性打乱后贪心挑,每次选"能新覆盖最多 scene + 新词性"的那个词;
+ * 覆盖满了之后剩余名额按打乱顺序补齐。种子固定,复跑抽到同一批。
+ */
+function pickDiverse(list, n = 16) {
+  const rnd = mulberry32(20260803);
+  const shuffled = [...list].map(w => ({ w, k: rnd() })).sort((a, b) => a.k - b.k).map(x => x.w);
+  const posOf = w => (w.pos || '?').split('/')[0];
+
+  const picked = [];
+  const seenScene = new Set();
+  const seenPos = new Set();
+  const taken = new Set();
+
+  while (picked.length < Math.min(n, shuffled.length)) {
+    let best = null, bestScore = -1;
+    for (const w of shuffled) {
+      if (taken.has(w.headword)) continue;
+      const newScenes = new Set((w.examples || []).map(e => e.scene).filter(s => !seenScene.has(s)));
+      const score = newScenes.size * 2 + (seenPos.has(posOf(w)) ? 0 : 3);
+      if (score > bestScore) { bestScore = score; best = w; }
+    }
+    if (!best) break;
+    taken.add(best.headword);
+    picked.push(best);
+    (best.examples || []).forEach(e => seenScene.add(e.scene));
+    seenPos.add(posOf(best));
+  }
+  return { picked, seenScene, seenPos };
+}
+
 function writeSample(list) {
   const bank = BANK || 'all';
-  const rnd = mulberry32(20260803);
-  const idx = new Set();
-  while (idx.size < Math.min(16, list.length)) idx.add(Math.floor(rnd() * list.length));
-  const picked = [...idx].sort((a, b) => a - b).map(i => list[i]);
+  const { picked, seenScene, seenPos } = pickDiverse(list, 16);
 
   const body = picked.map((w, n) => `### ${n + 1}. ${w.headword}  ${w.pos ? `*${w.pos}*` : ''}
 
@@ -456,10 +525,21 @@ function writeSample(list) {
 ${w.examples.map((e, i) => `| ${i + 1} | ${e.collocation} | \`${e.scene}\` | ${e.sentence} | ${e.translation_zh} |`).join('\n')}
 `).join('\n');
 
+  const tierCount = list.reduce((m, w) => { m[w.cefr] = (m[w.cefr] || 0) + 1; return m; }, {});
+  const sceneCount = list.reduce((m, w) => { (w.examples || []).forEach(e => { m[e.scene] = (m[e.scene] || 0) + 1; }); return m; }, {});
+
   const md = `# 托福词汇内容 batch1 · 送审样本
 
-> 随机抽 ${picked.length} 词(种子固定 20260803,复跑抽到同样这批)。
+> 抽 ${picked.length} 词(种子固定 20260803,复跑抽到同样这批)。
+> **不是纯随机** —— 贪心挑成尽量铺开 scene 与词性,免得 16 个全是名词、场景全挤在 news。
+> 本批覆盖 **${seenScene.size}/10 个 scene**、**${seenPos.size} 种词性**(${[...seenPos].join(' / ')})。
 > 全量 ${list.length} 词见 \`scripts/vocab/data/generated/${bank}-content.json\`。
+
+## 全量 ${list.length} 词的分布(不只是抽样这 16 个)
+
+难度档:${Object.entries(tierCount).sort().map(([k, v]) => `${k} ${v}`).join(' · ')}
+
+场景(共 ${list.length * 3} 条例句):${SCENES.map(s => `${s} ${sceneCount[s] || 0}`).join(' · ')}
 
 ## 这批内容是怎么把住质量的
 

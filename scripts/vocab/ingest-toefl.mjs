@@ -155,6 +155,14 @@ function extractInflections(exchange, headword) {
 
 const PURE_WORD = /^[a-z][a-z'-]*$/;
 
+/** 排除名单(固化)。放在这里而不是每次手工剔 —— 否则重跑 ingest 时被剔的词会悄悄回来。 */
+function loadExcluded() {
+  const p = path.join(DATA_DIR, 'excluded-political.json');
+  if (!existsSync(p)) return new Map();
+  const j = JSON.parse(readFileSync(p, 'utf8'));
+  return new Map((j.words || []).map(w => [w.headword.toLowerCase(), w.reason]));
+}
+
 async function main() {
   const src = await ensureSource();
   process.stdout.write(`· 读取 ${src}\n`);
@@ -167,8 +175,9 @@ async function main() {
     if (col[need] === undefined) throw new Error(`ECDICT 缺列 ${need}(表头变了,脚本要改)`);
   }
 
+  const excluded = loadExcluded();
   const kept = [];
-  const skipped = { phrase: [], proper_noun: [], non_alpha: [], duplicate: [], no_freq: [] };
+  const skipped = { phrase: [], proper_noun: [], non_alpha: [], duplicate: [], no_freq: [], excluded: [] };
   const noPos = [];
   const inflections = {};
   const seen = new Map();
@@ -190,6 +199,7 @@ async function main() {
 
     const hw = raw.toLowerCase();
     if (!PURE_WORD.test(hw)) { skipped.non_alpha.push(raw); continue; }
+    if (excluded.has(hw)) { skipped.excluded.push(`${hw} (${excluded.get(hw)})`); continue; }
 
     const frq = Number(r[col.frq]) || 0;
     const bnc = Number(r[col.bnc]) || 0;

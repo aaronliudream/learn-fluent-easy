@@ -20,7 +20,7 @@
 | 指标 | 数量 |
 | --- | ---: |
 | ECDICT 中 `toefl` 打标条目 | 6974 |
-| **清洗后入库词数** | **4473** |
+| **清洗后入库词数** | **4470** |
 | 跳过 · 含空格短语 | 4 |
 | 跳过 · 专有名词(首字母大写) | 9 |
 | 跳过 · 非纯字母 | 0 |
@@ -28,58 +28,58 @@
 | 保留但 freq_rank 缺失(排序沉底) | 124 |
 | 保留但 pos 缺失 | 53 |
 
-> `vocab_banks.toefl.total_words` 目前填的是 8000,实际可用 4473。**要不要把 total_words 改成 4473?** 这个数会显示在词库中心的卡片上。
+> `vocab_banks.toefl.total_words` 目前填的是 8000,实际可用 4470。**要不要把 total_words 改成 4470?** 这个数会显示在词库中心的卡片上。
 
 ## 随机 50 词
 
 | # | headword | pos | freq_rank |
 | ---: | --- | --- | ---: |
-| 1 | grab | n./v. | 1477 |
-| 2 | senator | n. | 2769 |
-| 3 | defensive | adj./n. | 2881 |
-| 4 | nominee | n. | 4081 |
-| 5 | reside | v. | 5284 |
-| 6 | intimacy | n. | 5670 |
-| 7 | recreational | adj. | 5934 |
-| 8 | stark | adj./adv. | 6659 |
-| 9 | muscular | adj. | 6864 |
-| 10 | fungus | n. | 7056 |
-| 11 | amend | v. | 7371 |
-| 12 | arthritis | n. | 7377 |
-| 13 | pivotal | adj. | 8154 |
-| 14 | bodily | adj./adv. | 8434 |
-| 15 | boredom | n. | 8671 |
-| 16 | generalization | n. | 8708 |
-| 17 | forefront | n. | 8815 |
-| 18 | mediator | n. | 9087 |
-| 19 | underwater | adj./adv. | 9111 |
-| 20 | bulky | adj. | 9495 |
-| 21 | soaring | adj. | 9645 |
-| 22 | discrete | adj. | 9847 |
-| 23 | stratum | n. | 11902 |
-| 24 | magnesium | n. | 12167 |
-| 25 | deficient | adj. | 12804 |
-| 26 | aggregate | n./adj./v. | 12841 |
-| 27 | furry | adj. | 13002 |
-| 28 | appraise | v. | 13123 |
-| 29 | impromptu | n./adj./adv. | 13281 |
-| 30 | crevice | n. | 13625 |
-| 31 | genesis | n. | 13864 |
-| 32 | unparalleled | adj. | 13944 |
-| 33 | graft | n./v. | 14077 |
-| 34 | depose | v. | 15933 |
-| 35 | antagonist | n. | 15957 |
-| 36 | baroque | n./adj. | 16149 |
-| 37 | frugal | adj. | 16538 |
-| 38 | scraping | n./adj. | 16806 |
-| 39 | choppy | adj. | 16878 |
-| 40 | enmity | n. | 17158 |
-| 41 | genial | adj. | 17323 |
-| 42 | bandanna | n. | 17577 |
+| 1 | theater | n. | 1535 |
+| 2 | testify | v. | 2790 |
+| 3 | representation | n. | 2908 |
+| 4 | extended | adj. | 4083 |
+| 5 | loom | n./v. | 5292 |
+| 6 | methodology | n. | 5679 |
+| 7 | predominantly | adv. | 5942 |
+| 8 | escort | n./v. | 6668 |
+| 9 | temporal | adj./n. | 6868 |
+| 10 | hue | n. | 7062 |
+| 11 | raft | n./v. | 7376 |
+| 12 | nutritional | adj. | 7381 |
+| 13 | anatomy | n. | 8160 |
+| 14 | vault | n./v. | 8437 |
+| 15 | mint | n./v. | 8674 |
+| 16 | shred | n./v. | 8713 |
+| 17 | prudent | adj. | 8823 |
+| 18 | displacement | n. | 9099 |
+| 19 | shun | v. | 9114 |
+| 20 | motionless | adj. | 9497 |
+| 21 | disdain | n./v. | 9653 |
+| 22 | condemnation | n. | 9852 |
+| 23 | ransom | n./v. | 11907 |
+| 24 | fable | n./v. | 12174 |
+| 25 | imbue | v. | 12805 |
+| 26 | paraphrase | n./v. | 12845 |
+| 27 | inundate | v. | 13018 |
+| 28 | vindicate | v. | 13147 |
+| 29 | unquestionably | adv. | 13286 |
+| 30 | brandish | v./n. | 13627 |
+| 31 | disband | v. | 13868 |
+| 32 | percussion | n. | 13946 |
+| 33 | ambience | n. | 14090 |
+| 34 | concise | adj. | 15935 |
+| 35 | tutorial | n./adj. | 15959 |
+| 36 | shameless | adj. | 16159 |
+| 37 | intoxicate | v. | 16545 |
+| 38 | humanistic | adj. | 16807 |
+| 39 | topsoil | n. | 16882 |
+| 40 | preservative | adj./n. | 17163 |
+| 41 | knapsack | n. | 17327 |
+| 42 | sieve | n./v. | 17578 |
 | 43 | overburden | v. | 20715 |
-| 44 | singe | v. | 21246 |
-| 45 | wren | n. | 21349 |
-| 46 | pauper | n. | 21664 |
+| 44 | impersonation | n. | 21249 |
+| 45 | venerate | v. | 21355 |
+| 46 | magnificence | n. | 21679 |
 | 47 | portraitist | n. | 25892 |
 | 48 | gyration | n. | 26430 |
 | 49 | celsius | adj. | 30514 |
@@ -90,30 +90,30 @@
 | # | headword | pos | freq_rank |
 | ---: | --- | --- | ---: |
 | 1 | defense | n. | 657 |
-| 2 | democrat | n. | 903 |
-| 3 | attorney | n. | 1069 |
-| 4 | participant | n./adj. | 1103 |
-| 5 | concerned | adj. | 1128 |
-| 6 | involved | adj. | 1174 |
-| 7 | neighbor | n./v./adj. | 1424 |
-| 8 | context | n. | 1427 |
-| 9 | voter | n. | 1452 |
-| 10 | grab | n./v. | 1477 |
-| 11 | theater | n. | 1535 |
-| 12 | regional | adj. | 1645 |
-| 13 | currently | adv. | 1700 |
-| 14 | ethnic | adj. | 1729 |
-| 15 | landscape | n./v. | 1827 |
-| 16 | regime | n. | 1848 |
-| 17 | perception | n. | 1866 |
-| 18 | opposition | n. | 1876 |
-| 19 | coverage | n. | 1877 |
-| 20 | intervention | n. | 1926 |
+| 2 | attorney | n. | 1069 |
+| 3 | participant | n./adj. | 1103 |
+| 4 | concerned | adj. | 1128 |
+| 5 | involved | adj. | 1174 |
+| 6 | neighbor | n./v./adj. | 1424 |
+| 7 | context | n. | 1427 |
+| 8 | voter | n. | 1452 |
+| 9 | grab | n./v. | 1477 |
+| 10 | theater | n. | 1535 |
+| 11 | regional | adj. | 1645 |
+| 12 | currently | adv. | 1700 |
+| 13 | ethnic | adj. | 1729 |
+| 14 | landscape | n./v. | 1827 |
+| 15 | regime | n. | 1848 |
+| 16 | perception | n. | 1866 |
+| 17 | opposition | n. | 1876 |
+| 18 | coverage | n. | 1877 |
+| 19 | intervention | n. | 1926 |
+| 20 | cite | v. | 1932 |
 
 ## 选词口径(已定:方案 D)
 
 按 `--exclude-tags=zk,gk,cet4` 剔除 **2488** 个已被中考/高考/四级覆盖的词,
-词池从 6955 收到 **4473**,再按 freq_rank 取前 200 作 batch1。
+词池从 6955 收到 **4470**,再按 freq_rank 取前 200 作 batch1。
 
 这么做的原因:ECDICT 的 `toefl` 标签含义是"托福里出现过",不是"托福难度"。
 不过滤时前 200 全是 `can / way / well / even` 这类 A1 词,给托福考生做词卡没价值。
@@ -123,4 +123,4 @@
 
 1. **词表本身**:上面 50 词是不是托福该有的样子?有没有明显不该在托福库里的?
 2. **屈折形是否算独立词条**:ECDICT 把 `abandon` / `abandoned` / `abandonment` 都打了 toefl 标,本脚本**全部保留**为独立词条(`abandoned` 有独立的形容词义"被抛弃的",托福词表通常也这么收)。如果你要按原形合并,说一声,清洗规则加一条即可。
-3. **total_words 要不要从 8000 改成 4473**(这个数会显示在词库中心的卡片上)。
+3. **total_words 要不要从 8000 改成 4470**(这个数会显示在词库中心的卡片上)。

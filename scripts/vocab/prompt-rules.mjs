@@ -17,6 +17,34 @@
  * 要语义知识),只能靠 prompt 措辞压住,所以这里用的是强措辞 + 正反例。
  * 换成本规则后重修,双义占比 100% → 32.3%。
  */
+/**
+ * 功能词(连词/介词/副词)的 collocation 与例句规格。
+ *
+ * 由来:nonetheless 的三条 collocation 被写成了整句
+ *   "nonetheless, the research shows significant results."
+ * —— 那不是搭配,是例句复制。而且例3
+ *   "Feeling exhausted, I decided to go out; nonetheless, I went for a walk."
+ * 前后没有任何转折(出门和散步是同一件事),逻辑是假的。
+ * 同批的 amid 则是正确示范:amid protests / amid uncertainty / amid chaos。
+ *
+ * 实词靠"动词+名词"式搭配,功能词没有这种搭配,只有**用法模式**,
+ * 所以单独给一套规格,按 pos 触发。
+ */
+export const FUNCTION_WORD_RULE = `⚠️ 这是一个功能词(连词/介词/副词)。功能词没有实词那种"动词+名词"搭配,
+所以 collocation 字段要给**简短的用法模式**,不是整句:
+  · 长度 2-5 个词,禁止写成完整句子,禁止带句号。
+  · 正例(amid, prep.):  "amid protests" / "amid uncertainty" / "amid chaos"
+  · 正例(nonetheless):  "..., nonetheless, ..." / "nonetheless, + 主句" / "小句; nonetheless"
+  · 反例(必须避免):     "nonetheless, the research shows significant results." ❌ 这是句子不是模式
+
+例句的逻辑必须真实成立:
+  · 转折连词(nonetheless / however / although / whereas)的例句,
+    前后两半必须**真的构成转折** —— 前半是不利/相反条件,后半是仍然发生的结果。
+  · 反例:"Feeling exhausted, I decided to go out; nonetheless, I went for a walk." ❌
+    (出门和散步是同一件事,没有任何转折,逻辑是假的)
+  · 正例:"The data contained clear errors; nonetheless, the conclusion held up." ✅
+  · 介词(amid / despite / beyond)的例句,须体现该介词真实的语义关系(伴随、让步、方位等)。`;
+
 export const DEF_ZH_RULE = `默认给 1 个义项。仅当两个义项差异大到词典会分列义项时才给 2 个,用全角分号 "；" 分隔。
 
 正例(真双义,保留两个):
@@ -54,6 +82,17 @@ of the first, you MUST output only ONE sense. Most words have only one.
      accounting    ❌ 会计是记录财务交易的过程。    ✅ 会计
    问自己:"中国学生查词典会看到的那个词是什么" —— 写那个,不要写定义。
 
+⚠️ 禁止使用这些**解释性标记词** —— 出现任何一个就说明你在写解释而不是释义,会被机器打回:
+   某物 / 某人 / 某事 / 某种 / 的行为 / 的状态 / 的人 / 的过程 / 的性质 / 的能力 /
+   的东西 / 的事物 / 的方式 / 相关的 / 有关的 / 一种 / 一组 / 一系列 / 一个 /
+   通常 / 尤其 / 特别是 / 例如 / 是指 / 指的是 / 用于
+   对照(左错右对):
+     colonial   ❌ 与殖民地相关的        ✅ 殖民的；殖民地的
+     minimize   ❌ 将某物尽可能缩小      ✅ 使最小化；尽量减少
+     survivor   ❌ 在某个事件后仍然存活的人 ✅ 幸存者
+     dealer     ❌ 买卖商品或服务的人     ✅ 经销商；商人
+     mechanism  ❌ 实现某种目标的系统或过程 ✅ 机制；机构
+
 格式硬要求(实测踩过的坑,必须遵守):
   · 每个义项 2-8 个汉字的**词典式短语**,不是句子。
   · 禁止写成解释句、禁止举例、禁止加句号。
@@ -61,3 +100,16 @@ of the first, you MUST output only ONE sense. Most words have only one.
     正例:entity -> "实体" ✅
   · 分号只能用来分隔两个义项,不能出现在解释性文字里。
 不要写词性缩写,只写释义本身。`;
+
+/**
+ * 是否功能词(触发 FUNCTION_WORD_RULE)。
+ * ⚠️ 要求**每一个词性段**都是功能类,不能只要"含 adv." 就算 ——
+ *    否则 stark(adj./adv.)、well(n./v./adj./adv./int.)这种实词
+ *    也会被套上"没有动名搭配"的规格,反而把好搭配判错。
+ *    nonetheless(conj./adv.)、amid(prep.)才是真功能词。
+ */
+const FUNCTION_POS = new Set(['conj.', 'prep.', 'adv.', 'int.', 'pron.', 'aux.', 'art.']);
+export function isFunctionWord(pos) {
+  const parts = String(pos || '').split('/').map(s => s.trim()).filter(Boolean);
+  return parts.length > 0 && parts.every(p => FUNCTION_POS.has(p));
+}

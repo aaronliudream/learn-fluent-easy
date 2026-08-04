@@ -25,6 +25,8 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnv, requireKeys } from './env.mjs';
+import { defZhShapeProblem } from './gates.mjs';
+import { DEF_ZH_RULE } from './prompt-rules.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
@@ -40,34 +42,8 @@ const ALARM_RATIO = Number(arg('alarm', '0.4'));
 
 const ENV = loadEnv(REPO);
 
-/* ── 这段强措辞是本次修复的核心,验证通过后要原样并进主生成 prompt ── */
-export const DEF_ZH_RULE = `Write the Chinese definition (def_zh) for this word.
-
-RULE - read carefully, this is the whole point of the task:
-默认给 1 个义项。仅当两个义项差异大到词典会分列义项时才给 2 个,用全角分号 "；" 分隔。
-
-正例(真双义,保留两个):
-  context  -> 上下文；背景        (语言环境 vs 事件背景,词典分列)
-  coverage -> 保险范围；报导范围   (保险 vs 新闻,两个领域)
-  defense  -> 防御；辩护          (军事 vs 法律)
-
-反例(单义,绝不许并列近义词):
-  currently     -> 目前            ✅  NOT 目前；现在        ❌
-  hypothesis    -> 假设            ✅  NOT 假设；假说        ❌
-  alliance      -> 联盟            ✅  NOT 联盟；联合        ❌
-  administrator -> 管理员          ✅  NOT 管理员；行政人员  ❌
-  fraud         -> 欺诈            ✅  NOT 欺诈；诈骗        ❌
-
-If the second candidate is merely a synonym, a rewording, or a stylistic variant
-of the first, you MUST output only ONE sense. Most words have only one.
-
-格式硬要求(实测踩过的坑,必须遵守):
-  · 每个义项 2-8 个汉字的**词典式短语**,不是句子。
-  · 禁止写成解释句、禁止举例、禁止加句号。
-  · 反例:entity -> "一个作为特定和独立单位存在的事物；法律实体、商业实体…都可视为实体。" ❌
-    正例:entity -> "实体" ✅
-  · 分号只能用来分隔两个义项,不能出现在解释性文字里。
-不要写词性缩写,只写释义本身。`;
+/* ⚠️ DEF_ZH_RULE 从 ./prompt-rules.mjs 引入,**不在本文件另存一份**。
+ * 之前这里有一份自己的副本,和生成器那份是两套 —— 改了一边忘另一边就会漂移。 */
 
 const SCHEMA = {
   type: 'object',
@@ -115,19 +91,13 @@ ${DEF_ZH_RULE}`;
   throw new Error('连续限流,放弃');
 }
 
-/** 机械校验:
- *  ① 声称单义就不许出现分号,声称双义就必须有且只有一个分号;
- *  ② 每个义项必须是短词条不是句子 —— 实测模型会写出
- *     "一个作为特定和独立单位存在的事物；法律实体…都可视为实体。" 这种解释段落,
- *     里面的分号根本不是义项分隔,必须拦掉;
- *  ③ 不许有句号(有句号就是写成句子了)。 */
+/** 机械校验 = 共用的 defZhShapeProblem(句号/长度/义项数/解释性标记词)
+ *  + 自洽性检查(声称几个义项就得有几段)。
+ *  ⚠️ 判据只此一份,放在 gates.mjs;这里不再另写一套,免得两边漂移。 */
 function shapeOk(r) {
-  const s = String(r.def_zh || '').trim();
-  if (!s) return false;
-  if (/[。.!?！？]/.test(s)) return false;
-  const parts = s.split('；');
-  if (r.sense_count === 1 ? parts.length !== 1 : parts.length !== 2) return false;
-  return parts.every(p => p.trim().length >= 1 && p.trim().length <= 12);
+  if (defZhShapeProblem(r.def_zh)) return false;
+  const parts = String(r.def_zh).split('；');
+  return r.sense_count === 1 ? parts.length === 1 : parts.length === 2;
 }
 
 async function main() {
@@ -171,7 +141,7 @@ async function main() {
    *    没查"是不是句子",于是 attorney 从「律师；代理人」被改成
    *    「在法律事务中代表他人的人。」,反而更差。第二轮 --only=double 又只挑
    *    还带分号的,这些没分号的漏网。判据与 shapeOk 一致:含句号 或 单段 >12 字。 */
-  const isMalformed = s => /[。.!?！？]/.test(s) || s.split('；').some(p => p.trim().length > 12);
+  const isMalformed = s => !!defZhShapeProblem(s);
   const queue = ONLY === 'double' ? list.filter(w => w.def_zh.includes('；'))
     : ONLY === 'malformed' ? list.filter(w => isMalformed(w.def_zh))
       : [...list];

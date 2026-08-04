@@ -39,7 +39,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER } from './gates.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
-import { DEF_ZH_RULE } from './prompt-rules.mjs';
+import { DEF_ZH_RULE, FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
@@ -161,6 +161,9 @@ function buildPrompt(word, cefr, failureNotes) {
   const retry = failureNotes?.length
     ? `\n\nYOUR PREVIOUS ATTEMPT WAS REJECTED. Fix exactly these problems:\n${failureNotes.map(f => `- ${f}`).join('\n')}\nRegenerate all three examples.`
     : '';
+  const fnRule = isFunctionWord(word.pos) ? `
+
+${FUNCTION_WORD_RULE}` : '';
   return `Word: "${word.headword}"${word.pos ? `  (part of speech: ${word.pos})` : ''}
 Frequency rank: ${word.freq_rank ?? 'unknown'} -> target sentence difficulty: ${cefr.level}. ${cefr.note}
 
@@ -200,7 +203,7 @@ ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
    - ⚠️ 三条例句用的必须都是 def_zh 里给出的义项, 不许跑到别的义项去.
      反例: def_zh "浪漫；爱情关系" 却造 "romance languages"(罗曼语族, 另一个义项) ❌
 5. NEVER use an em-dash (—) or en-dash (–) anywhere in any field. Use commas or periods.
-6. Difficulty is set by the word's own frequency (${cefr.level}), NOT by any exam.${retry}`;
+6. Difficulty is set by the word's own frequency (${cefr.level}), NOT by any exam.${fnRule}${retry}`;
 
 }
 

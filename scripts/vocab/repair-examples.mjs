@@ -20,6 +20,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SCENES, runAllGates, ngrams } from './gates.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
+import { FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
@@ -78,7 +79,9 @@ HARD requirements:
    - scene: one of ${SCENES.join(', ')}; all three DIFFERENT.
    - sentence: 8 to 16 words. The three sentences must each START WITH A DIFFERENT WORD.
    - translation_zh: 忠实翻译, 不许增译或漏译, 标点全部全角(句末"。", 停顿"，")。
-   - Never use an em-dash or en-dash anywhere.${retry}`;
+   - Never use an em-dash or en-dash anywhere.${isFunctionWord(w.pos) ? `
+
+${FUNCTION_WORD_RULE}` : ''}${retry}`;
 }
 
 async function callModel(w, problems, notes) {
@@ -118,7 +121,10 @@ async function main() {
   for (const h of report.g10) push(h.headword, `例${h.index}「${h.sentence}」义项跑偏:${h.problem}`);
   for (const h of report.g11) push(h.headword, `例${h.index} 译文不忠实:${h.problem}(原文「${h.sentence}」译文「${h.translation_zh}」)`);
 
-  const targets = [...byWord.keys()].filter(h => data[h]);
+  /* --words=a,b,c:绕过报告直接指定要修的词(定点重修用) */
+  const WORDS = arg('words', '').split(',').map(x => x.trim()).filter(Boolean);
+  for (const h of WORDS) if (!byWord.has(h)) byWord.set(h, ['(人工指定重修:见 prompt 内规格要求)']);
+  const targets = (WORDS.length ? WORDS : [...byWord.keys()]).filter(h => data[h]);
   process.stdout.write(`· 待定点重修 ${targets.length} 词(g10 ${report.g10.length} 条 + g11 ${report.g11.length} 条)\n`);
   if (DRY) { targets.forEach(h => process.stdout.write(`  ${h}: ${byWord.get(h).join(' | ')}\n`)); return; }
 

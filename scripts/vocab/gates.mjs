@@ -273,6 +273,38 @@ export function g12_defEnNotCircular(defEn, headword, table) {
   return hit ? `def_en 循环定义:释义里出现了目标词本身("${hit}")` : null;
 }
 
+/**
+ * def_zh 体裁检测 —— 判"这是词典释义还是解释句"。
+ *
+ * 由来:前两轮只查了句号和长度,漏掉一批**没有句号、长度也不超**的短解释句,
+ * 抽样 16 词里命中 7 个。这类残留靠长度判不出来,只能靠**解释性标记词**:
+ *   colonial ❌「与殖民地相关的」      ✅ 殖民的；殖民地的
+ *   minimize ❌「使某物变得最小」      ✅ 使最小化；尽量减少
+ *   survivor ❌「在灾难中存活下来的人」 ✅ 幸存者
+ * 判据:命中任一标记词即视为解释句。标记词表可继续补。
+ */
+export const EXPLANATORY_MARKERS = [
+  '某物', '某人', '某事', '某种',
+  '的行为', '的状态', '的人', '的过程', '的性质', '的能力', '的东西', '的事物', '的方式',
+  '相关的', '有关的',
+  '一种', '一组', '一系列', '一个',
+  '通常', '尤其', '特别是', '例如', '是指', '指的是', '用于',
+];
+
+/** 返回问题描述,合格返回 null。与 repair-defzh 的 shapeOk 共用同一套判据。 */
+export function defZhShapeProblem(defZh) {
+  const s = String(defZh || '').trim();
+  if (!s) return 'def_zh 为空';
+  if (/[。.!?！？]/.test(s)) return 'def_zh 写成了句子(含句号)';
+  const parts = s.split('；');
+  if (parts.length > 2) return `def_zh 有 ${parts.length} 个义项,最多 2 个`;
+  const tooLong = parts.find(p => p.trim().length > 12);
+  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字):「${tooLong.trim()}」`;
+  const marker = EXPLANATORY_MARKERS.find(m => s.includes(m));
+  if (marker) return `def_zh 是解释句不是词典释义(命中标记词「${marker}」):「${s}」`;
+  return null;
+}
+
 /** g6 同词三句相似度:任意两句 4-gram 重合 >30% 拒(防"换个场景词其余照抄")。 */
 export function g6_intraWordSimilarity(examples, threshold = 0.3) {
   const sets = examples.map(e => ngrams(e.sentence));

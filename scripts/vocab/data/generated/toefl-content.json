@@ -199,7 +199,7 @@
     "freq_rank": 1174,
     "cefr": "A2",
     "ipa": "/ɪnˈvɑlvd/",
-    "def_zh": "参与的；有关的",
+    "def_zh": "参与的；复杂的",
     "def_en": "Being part of something or connected to it.",
     "examples": [
       {
@@ -231,7 +231,7 @@
     "freq_rank": 1477,
     "cefr": "A2",
     "ipa": "/ɡræb/",
-    "def_zh": "迅速或突然地抓住某物",
+    "def_zh": "抓住",
     "def_en": "To take hold of something quickly or suddenly.",
     "examples": [
       {
@@ -361,7 +361,7 @@
     "freq_rank": 1645,
     "cefr": "B1",
     "ipa": "/ˈriː.dʒə.nəl/",
-    "def_zh": "与特定地区或地方相关的",
+    "def_zh": "地区的",
     "def_en": "Relating to a specific area or locality.",
     "examples": [
       {
@@ -745,7 +745,7 @@
     "freq_rank": 2141,
     "cefr": "B1",
     "ipa": "/ˈfʌndɪŋ/",
-    "def_zh": "提供财政支持的行为",
+    "def_zh": "资金；拨款",
     "def_en": "The act of providing financial support.",
     "examples": [
       {
@@ -1100,7 +1100,7 @@
     "freq_rank": 2408,
     "cefr": "B1",
     "ipa": "/ˈæl.aɪ/",
-    "def_zh": "支持另一个人的人或团体",
+    "def_zh": "盟友",
     "def_en": "A person or group that supports another.",
     "examples": [
       {
@@ -1389,7 +1389,7 @@
     "freq_rank": 2575,
     "cefr": "B1",
     "ipa": "/ˈdiː.lɚ/",
-    "def_zh": "买卖商品或服务的人",
+    "def_zh": "经销商",
     "def_en": "A person who buys and sells goods or services.",
     "examples": [
       {
@@ -1583,7 +1583,7 @@
     "freq_rank": 2677,
     "cefr": "B1",
     "ipa": "/ˈmɛk.ə.nɪ.zəm/",
-    "def_zh": "实现某种目标的系统或过程",
+    "def_zh": "机制；机构",
     "def_en": "A system or process for achieving something.",
     "examples": [
       {
@@ -1615,7 +1615,7 @@
     "freq_rank": 2680,
     "cefr": "B1",
     "ipa": "/ˈpɛn.əl.ti/",
-    "def_zh": "处罚；点球",
+    "def_zh": "处罚；罚款",
     "def_en": "A punishment for breaking a rule or law.",
     "examples": [
       {
@@ -1680,7 +1680,7 @@
     "freq_rank": 2689,
     "cefr": "B1",
     "ipa": "/ˌkɒn.stɪˈtjuː.ʃən.əl/",
-    "def_zh": "与国家法律体系相关的",
+    "def_zh": "宪法的",
     "def_en": "Related to a nation's legal framework or system of governance.",
     "examples": [
       {
@@ -1745,7 +1745,7 @@
     "freq_rank": 2727,
     "cefr": "B1",
     "ipa": "/kɛn/",
-    "def_zh": "某人所知道或理解的范围",
+    "def_zh": "知识范围",
     "def_en": "The range of what someone knows or understands.",
     "examples": [
       {
@@ -2195,7 +2195,7 @@
     "freq_rank": 2950,
     "cefr": "B1",
     "ipa": "/ɪnˈtaɪtld/",
-    "def_zh": "有权利或要求某物的",
+    "def_zh": "有权的",
     "def_en": "Having a right or claim to something.",
     "examples": [
       {
@@ -2388,7 +2388,7 @@
     "freq_rank": 3011,
     "cefr": "B1",
     "ipa": "/sərˈvaɪ.vər/",
-    "def_zh": "在某个事件后仍然存活的人",
+    "def_zh": "幸存者",
     "def_en": "A person remaining alive after an event.",
     "examples": [
       {
@@ -2613,7 +2613,7 @@
     "freq_rank": 3080,
     "cefr": "B1",
     "ipa": "/ˈstændɪŋ/",
-    "def_zh": "立场；站立的状态",
+    "def_zh": "地位；立场",
     "def_en": "Position of being upright or having status.",
     "examples": [
       {
@@ -2645,7 +2645,7 @@
     "freq_rank": 3118,
     "cefr": "B1",
     "ipa": "/ˈfleɪ.vɚ/",
-    "def_zh": "独特的味道或某物的特质",
+    "def_zh": "风味；特色",
     "def_en": "A distinctive taste or quality of something.",
     "examples": [
       {
@@ -2902,7 +2902,7 @@
     "freq_rank": 3196,
     "cefr": "B1",
     "ipa": "/ˌɔːr.i.enˈteɪ.ʃən/",
-    "def_zh": "使某人熟悉新环境的过程",
+    "def_zh": "方向；入职培训",
     "def_en": "The process of familiarizing someone with a new environment.",
     "examples": [
       {
@@ -2968,7 +2968,7 @@
     "freq_rank": 3200,
     "cefr": "B1",
     "ipa": "/ˈklʌs.tər/",
-    "def_zh": "一组紧密排列的相似事物",
+    "def_zh": "集群",
     "def_en": "A group of similar things positioned closely together.",
     "examples": [
       {
@@ -3225,29 +3225,30 @@
     "cefr": "B1",
     "ipa": "/ˌnʌn.ðəˈlɛs/",
     "def_zh": "尽管如此",
-    "def_en": "In spite of that; nevertheless.",
+    "def_en": "In spite of that; nevertheless; used to introduce a contrast.",
     "examples": [
       {
-        "collocation": "nonetheless, the research shows significant results.",
-        "scene": "academic",
-        "sentence": "Researchers found flaws in the data; nonetheless, the research shows significant results.",
-        "translation_zh": "研究人员发现数据存在缺陷，尽管如此，研究仍然显示出显著的结果。"
+        "collocation": "..., nonetheless, ...",
+        "scene": "news",
+        "sentence": "The economy is struggling; nonetheless, job growth continues in some sectors.",
+        "translation_zh": "经济正在挣扎，尽管如此，某些行业的就业增长仍在继续。"
       },
       {
-        "collocation": "The project was challenging; nonetheless, we met the deadline.",
-        "scene": "work",
-        "sentence": "The project was challenging; nonetheless, we met the deadline successfully.",
-        "translation_zh": "这个项目很具有挑战性，尽管如此，我们还是成功地按时完成了。"
+        "collocation": "nonetheless, + 主句",
+        "scene": "science_tech",
+        "sentence": "There were numerous challenges; nonetheless, the research team achieved their goals.",
+        "translation_zh": "面临众多挑战，尽管如此，研究团队实现了他们的目标。"
       },
       {
-        "collocation": "I was tired; nonetheless, I went for a walk.",
+        "collocation": "小句; nonetheless",
         "scene": "daily_life",
-        "sentence": "Feeling exhausted, I decided to go out; nonetheless, I went for a walk.",
-        "translation_zh": "我感到精疲力竭，尽管如此，我还是出去散步了。"
+        "sentence": "I was tired after work; nonetheless, I decided to exercise.",
+        "translation_zh": "我下班后很累，尽管如此，我决定锻炼。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "discourse": {
     "word_id": "95a1b666-382e-4a9f-8b97-692106705606",
@@ -3353,7 +3354,7 @@
     "freq_rank": 3321,
     "cefr": "B1",
     "ipa": "/kəˈloʊ.ni.əl/",
-    "def_zh": "与殖民地或殖民地相关的",
+    "def_zh": "殖民的；殖民地的",
     "def_en": "Relating to a colony or colonies.",
     "examples": [
       {
@@ -3385,7 +3386,7 @@
     "freq_rank": 3364,
     "cefr": "B1",
     "ipa": "/drəˈmæ.tɪ.kli/",
-    "def_zh": "以非常突然或极端的方式",
+    "def_zh": "显著地",
     "def_en": "In a way that is very sudden or extreme.",
     "examples": [
       {
@@ -3738,7 +3739,7 @@
     "freq_rank": 3418,
     "cefr": "B1",
     "ipa": "/ˈkaʊn.səl/",
-    "def_zh": "建议；律师",
+    "def_zh": "建议；法律顾问",
     "def_en": "Advice or guidance, especially in legal matters.",
     "examples": [
       {
@@ -3835,7 +3836,7 @@
     "freq_rank": 3510,
     "cefr": "B1",
     "ipa": "/ədˈmɪnɪstrətɪv/",
-    "def_zh": "与活动的组织和管理相关的",
+    "def_zh": "行政的",
     "def_en": "Related to the organization and management of activities.",
     "examples": [
       {
@@ -3995,7 +3996,7 @@
     "freq_rank": 3541,
     "cefr": "B1",
     "ipa": "/ˈsiː.mɪŋ.li/",
-    "def_zh": "看似地",
+    "def_zh": "表面上；看似",
     "def_en": "In appearance but not necessarily in reality.",
     "examples": [
       {
@@ -4124,7 +4125,7 @@
     "freq_rank": 3554,
     "cefr": "B1",
     "ipa": "/əˈreɪ/",
-    "def_zh": "一系列；阵列",
+    "def_zh": "阵列；大批",
     "def_en": "A collection of items arranged in a systematic way.",
     "examples": [
       {
@@ -5023,7 +5024,7 @@
     "freq_rank": 3706,
     "cefr": "B1",
     "ipa": "/ˈbæl.ət/",
-    "def_zh": "投票纸或投票的行为",
+    "def_zh": "选票；投票",
     "def_en": "A voting paper or the act of voting.",
     "examples": [
       {
@@ -5634,7 +5635,7 @@
     "freq_rank": 3828,
     "cefr": "B1",
     "ipa": "/ˌrɛzɪˈdɛnʃəl/",
-    "def_zh": "与住房或居住地相关的",
+    "def_zh": "住宅的",
     "def_en": "Relating to housing or residences.",
     "examples": [
       {
@@ -6210,7 +6211,7 @@
     "freq_rank": 3941,
     "cefr": "B1",
     "ipa": "/ˈmɪn.ɪ.maɪz/",
-    "def_zh": "将某物尽可能缩小",
+    "def_zh": "使最小化；尽量减少",
     "def_en": "To make something as small as possible.",
     "examples": [
       {

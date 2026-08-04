@@ -150,6 +150,156 @@
       "headword": "discourse",
       "old": "正式的讨论或对话",
       "next": "话语；论述"
+    },
+    {
+      "headword": "involved",
+      "old": "参与的；有关的",
+      "next": "参与的；复杂的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "grab",
+      "old": "迅速或突然地抓住某物",
+      "next": "抓住；攫取",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "regional",
+      "old": "与特定地区或地方相关的",
+      "next": "地区的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "funding",
+      "old": "提供财政支持的行为",
+      "next": "资金；拨款",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "dealer",
+      "old": "买卖商品或服务的人",
+      "next": "经销商；商人",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "mechanism",
+      "old": "实现某种目标的系统或过程",
+      "next": "机制；机构",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "ken",
+      "old": "某人所知道或理解的范围",
+      "next": "知识范围",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "entitled",
+      "old": "有权利或要求某物的",
+      "next": "有权的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "standing",
+      "old": "立场；站立的状态",
+      "next": "地位；立场",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "flavor",
+      "old": "独特的味道或某物的特质",
+      "next": "风味；特色",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "orientation",
+      "old": "使某人熟悉新环境的过程",
+      "next": "方向；入职培训",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "cluster",
+      "old": "一组紧密排列的相似事物",
+      "next": "集群；簇",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "colonial",
+      "old": "与殖民地或殖民地相关的",
+      "next": "殖民的；殖民地的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "dramatically",
+      "old": "以非常突然或极端的方式",
+      "next": "显著地",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "administrative",
+      "old": "与活动的组织和管理相关的",
+      "next": "行政的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "array",
+      "old": "一系列；阵列",
+      "next": "阵列；大批",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "ballot",
+      "old": "投票纸或投票的行为",
+      "next": "选票；投票",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "residential",
+      "old": "与住房或居住地相关的",
+      "next": "住宅的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "minimize",
+      "old": "将某物尽可能缩小",
+      "next": "使最小化；尽量减少",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "penalty",
+      "old": "处罚；点球",
+      "next": "处罚；罚款",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "counsel",
+      "old": "建议；律师",
+      "next": "建议；法律顾问",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "seemingly",
+      "old": "看似地",
+      "next": "表面上；看似",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "grab",
+      "old": "抓住；攫取",
+      "next": "抓住",
+      "round": "第三轮人工-自查降单义"
+    },
+    {
+      "headword": "dealer",
+      "old": "经销商；商人",
+      "next": "经销商",
+      "round": "第三轮人工-自查降单义"
+    },
+    {
+      "headword": "cluster",
+      "old": "集群；簇",
+      "next": "集群",
+      "round": "第三轮人工-自查降单义"
     }
   ]
 }

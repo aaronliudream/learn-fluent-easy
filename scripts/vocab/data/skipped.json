@@ -13,14 +13,14 @@
   ],
   "excluded_by_tag": 2488,
   "tagged_rows": 6974,
-  "kept": 4470,
+  "kept": 4472,
   "counts": {
     "phrase": 4,
     "proper_noun": 9,
     "non_alpha": 0,
     "duplicate": 0,
     "no_freq": 124,
-    "excluded": 3,
+    "excluded": 1,
     "no_pos": 53
   },
   "phrase": [
@@ -169,8 +169,6 @@
     "well-being"
   ],
   "excluded": [
-    "congressional (scope: 美国政体专名,非通用词汇)",
-    "congressman (scope: 美国政体专名,非通用词汇)",
     "democrat (quality: 构词陷阱高出错率)"
   ],
   "no_pos": [

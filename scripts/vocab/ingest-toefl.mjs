@@ -155,9 +155,10 @@ function extractInflections(exchange, headword) {
 
 const PURE_WORD = /^[a-z][a-z'-]*$/;
 
-/** 排除名单(固化)。放在这里而不是每次手工剔 —— 否则重跑 ingest 时被剔的词会悄悄回来。 */
+/** 排除名单(固化)。放在这里而不是每次手工剔 —— 否则重跑 ingest 时被剔的词会悄悄回来。
+ *  ⚠️ 剔词标准只认**内容质量实测**,不认话题范围(见文件里的 _criterion)。 */
 function loadExcluded() {
-  const p = path.join(DATA_DIR, 'excluded-political.json');
+  const p = path.join(DATA_DIR, 'excluded-words.json');
   if (!existsSync(p)) return new Map();
   const j = JSON.parse(readFileSync(p, 'utf8'));
   return new Map((j.words || []).map(w => [w.headword.toLowerCase(), w.reason]));

@@ -1,4 +1,26 @@
-# 托福词表 · 政治类排除清单(送审)
+# 托福词表 · 政治类排除清单(**已裁决,本文留档**)
+
+> ## ⚠️ 最终裁决(2026-08-03,以此为准,下文 A/B/C 分档已作废)
+>
+> **只剔 `democrat`。** `congressional` / `congressman` / `senator` / `impeach` /
+> `partisan` / `feminist` **全部保留**,`congressional` 已出补插 SQL 放回 DB。
+>
+> **理由(Aaron 定的口径)**:剔词标准**只认内容质量实测,不认话题范围**。
+> 我下文按「美国政体专名」这个**范围**理由剔 `congressional` / `congressman` 是错的 ——
+> 照那个口径推下去,`senator` / `presidency` / `amendment` 全都该剔,
+> 而它们都是托福阅读的正经高频词,口径就守不住了。
+>
+> 要剔一个词,必须拿出**生成产出反复出错**的实测证据。`democrat` 有(两轮都产出
+> Democrat Party / democrat voters 这类错误英语),所以只有它被剔。
+>
+> 排除名单固化在 `scripts/vocab/data/excluded-words.json`(原名 excluded-political.json,
+> 已改名 —— 剔除依据不是话题,文件名不该叫 political)。
+
+---
+
+## 以下为送审时的原始分析,仅作留档,分档结论已被上面的裁决覆盖
+
+
 
 > 起因:试跑时 `democrat` 生成出 `Democrat Party` / `Democrat candidate` —— 这在英语里
 > 是**错误说法**(正确是 Democratic Party / Democratic candidate),且"Democrat Party"

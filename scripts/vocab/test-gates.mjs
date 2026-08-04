@@ -104,6 +104,17 @@ ok('含目标词放行', g7_collocationContainsWord([col('defense strategy'), co
 ok('同义词冒充搭配被拦(attorney→lawyer)', g7_collocationContainsWord([col('lawyer')], 'attorney', {}) !== null);
 ok('连字符搭配 self-defense 算含', g7_collocationContainsWord([col('self-defense')], 'defense', {}) === null);
 ok('屈折形搭配 participants in a study 算含', g7_collocationContainsWord([col('participants in a study')], 'participant', {}) === null);
+// ↓ 2026-08-03 全量跑实战踩到:inflationary 是 inflation 的派生形容词,被误判成同义词
+ok('派生形搭配 inflationary pressures 算含 inflation',
+  g7_collocationContainsWord([col('inflationary pressures')], 'inflation', {}) === null);
+ok('派生形 governmental 算含 government',
+  g7_collocationContainsWord([col('governmental agency')], 'government', {}) === null);
+ok('shipwright 不算含 wright(后缀不是派生,是另一个词)',
+  g7_collocationContainsWord([col('shipwright')], 'wright', {}) !== null);
+ok('派生形句子 inflationary 也让 g1 放行',
+  g1_targetPresent('Inflationary pressures forced many companies to raise their prices.', 'inflation', {}) === null);
+ok('短词不因前缀过度放行(band 不算命中 bandit)',
+  g1_targetPresent('The bandit escaped into the hills before dawn broke.', 'band', {}) !== null);
 ok('介词搭配 concerned about 算含', g7_collocationContainsWord([col('concerned about')], 'concerned', {}) === null);
 
 /* ── g8 中文标点 ── */

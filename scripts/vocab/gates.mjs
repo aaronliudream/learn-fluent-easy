@@ -92,10 +92,30 @@ function targetTokens(sentence) {
     .map(t => t.replace(/'s$/, ''));
 }
 
-/** g1 目标词存在:句中出现 headword 或其屈折形。 */
+/**
+ * 词形命中判定(g1 与 g7 共用)。
+ *
+ * 除了屈折形表和后缀规则,还放行**派生形**:token 以 headword 打头、
+ * 且多出来的尾巴不超过 4 个字母。
+ * ⚠️ 这条是补 2026-08-03 实战漏洞:inflation 的搭配 "inflationary pressures"
+ *    被 g7 判成"同义词不是搭配"——但 inflationary 就是 inflation 的派生形容词,
+ *    属于误杀。屈折表和 -s/-ed/-ing 那套后缀规则覆盖不到 -ary/-al/-ous 这类派生后缀。
+ * 限定 headword 至少 5 个字母,避免短词过度放行(band → bandit 这种)。
+ */
+function matchesForm(token, headword, forms) {
+  if (forms.has(token)) return true;
+  if (headword.length >= 5 && token.length > headword.length && token.startsWith(headword)) {
+    const tail = token.slice(headword.length);
+    if (tail.length <= 4 && /^[a-z]+$/.test(tail)) return true;
+  }
+  return false;
+}
+
+/** g1 目标词存在:句中出现 headword 或其屈折形/派生形。 */
 export function g1_targetPresent(sentence, headword, table) {
-  const forms = inflectionsOf(headword, table);
-  const hit = targetTokens(sentence).some(t => forms.has(t));
+  const hw = headword.toLowerCase();
+  const forms = inflectionsOf(hw, table);
+  const hit = targetTokens(sentence).some(t => matchesForm(t, hw, forms));
   return hit ? null : `g1 目标词缺席:句中找不到 "${headword}" 或其屈折形`;
 }
 
@@ -148,12 +168,13 @@ export function g5_mutualExclusive(examples) {
  *  那不是搭配,例句里也就无从体现用法。
  *  `self-defense`、`concerned about`、`participants in a study` 都能过。 */
 export function g7_collocationContainsWord(examples, headword, table) {
-  const forms = inflectionsOf(headword, table);
+  const hw = headword.toLowerCase();
+  const forms = inflectionsOf(hw, table);
   for (let i = 0; i < examples.length; i++) {
     const c = String(examples[i].collocation || '');
     const toks = c.toLowerCase().split(/[\s\-–—/]+/)
       .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
-    if (!toks.some(t => forms.has(t))) {
+    if (!toks.some(t => matchesForm(t, hw, forms))) {
       return `g7 第${i + 1}条搭配 "${c}" 里没有目标词 "${headword}",是同义词不是搭配`;
     }
   }

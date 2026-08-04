@@ -1,0 +1,14 @@
+{
+  "_note": "词表排除名单。ingest-toefl.mjs 每次重跑自动生效,被剔的词记入 skipped.json 的 excluded 段。",
+  "_criterion": "⚠️ 剔词标准**只认内容质量实测**,不认话题范围。曾按「美国政体专名」的范围理由剔过 congressional / congressman,已撤销并放回词池 —— 那个口径守不住:照它推下去 senator / presidency / amendment 全都该剔,而它们都是托福阅读的正经高频词。要剔一个词,必须拿出「生成产出反复出错」的实测证据。",
+  "_reviewed": "2026-08-03 Aaron 最终裁决:只剔 democrat。congressional / congressman / senator / impeach / partisan / feminist 全部保留。",
+  "words": [
+    {
+      "headword": "democrat",
+      "reason": "quality: 构词陷阱高出错率",
+      "detail": "两轮独立生成都产出错误英语:第一轮 'Democrat Party' / 'Democrat candidate',第二轮 'democrat voters'。正确构词是 Democratic Party / Democratic voters —— democrat(名词)与 democratic(形容词)的派生关系是高频出错点,模型稳定踩坑,且 g7 拦不住(搭配确实含 'democrat')。属于机器闸门无法兜底的构词陷阱,故剔除。",
+      "evidence": "REVIEWAA/vocab_toefl_political_exclusion.md",
+      "decided_at": "2026-08-03"
+    }
+  ]
+}

@@ -42,6 +42,8 @@ export type LibrarySegmentInfo = {
   dueToday: number;
   hasReading: boolean;
   hasReviewTrace: boolean;
+  /** 最近收藏的至多 3 个词(入口卡满态副标题用)。listLibraryFavorites 已按 created_at 倒序,取前 3,零额外请求。 */
+  recentTerms: string[];
 };
 
 let cached: LibrarySegmentInfo | null = null;
@@ -97,7 +99,15 @@ export async function getLibrarySegment(favs?: LibraryFavorite[]): Promise<Libra
     const segment: LibrarySegment =
       favTotal === 0 ? (hasReading ? "b" : "a") : hasReviewTrace ? "d" : "c";
 
-    const info: LibrarySegmentInfo = { segment, favTotal, dueToday, hasReading, hasReviewTrace };
+    const recentTerms = list.slice(0, 3).map((f) => f.term);
+    const info: LibrarySegmentInfo = {
+      segment,
+      favTotal,
+      dueToday,
+      hasReading,
+      hasReviewTrace,
+      recentTerms,
+    };
     cached = info;
     return info;
   })();

@@ -5,7 +5,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpen, BookMarked, Lock } from "lucide-react";
+import { ArrowLeft, BookOpen, BookMarked, Lock } from "lucide-react";
 import { T } from "@/i18n/T";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -60,24 +60,26 @@ export default function LibraryHome() {
   // 入口曝光埋点等它算完再报 —— 报的是"看到时是哪类用户 + 多少词待复习",半成品数据没有分析价值。
   const [seg, setSeg] = useState<LibrarySegmentInfo | null>(null);
 
-  // 卡片三态(口径 = Aaron 2026-07-25 裁决 §四):
-  //  · 空状态(收藏 0)          → 引导句 + 无红点
-  //  · 今日待复习 M ≥ 一批       → 红点 = 一批的量,副文案「今天先测 20 个 · 共 M 个待复习」
-  //  · 0 < M < 一批             → 红点 = M,副文案「今天有 M 个词要复习」
-  //  · M = 0 但有收藏           → 无红点,副文案「今天没有要复习的」
-  // seg 未加载(null)时按"有词但没数出来"渲染,不闪引导句。
+  // 卡片三态,各有唯一职责:教会 → 召回 → 陪伴。任何时候只说一句最有用的话。
+  //  ① 收藏 0        → 居中 + 微光:「读书时点单词，收藏存进词库」(教会)
+  //  ② ≥1 且今日有待复习 → 左对齐 + 红点:「今天有 N 个词该复习了」(召回 —— 行动号召优先级高于陈列)
+  //  ③ ≥1 且今日无待复习 → 左对齐、安静:「最近收藏 …」+ 右侧「N 词」(陪伴)
+  // ③ 才是"没什么要做"时的状态,那时陈列最近收的词正好,不占用任何行动位。
+  // seg 未加载(null)时按 ③ 的骨架渲染,不闪空态引导句(否则老用户每次进来先看见"还没有收藏的词")。
   const emptyState = seg?.favTotal === 0;
   const due = seg?.dueToday ?? 0;
+  // 红点沿用旧口径:min(今日待复习, 一批) —— 红点是"这一轮要做的量",不是总量。
   const badge = seg && !emptyState ? Math.min(due, REVIEW_BATCH_SIZE) : 0;
+  const hasDue = badge > 0;
   const subtitle = !seg
     ? "读书点词 → 收藏 → 复习测试"
     : emptyState
       ? "还没有收藏的词"
-      : due === 0
-        ? `共 ${seg.favTotal} 个词 · 今天没有要复习的`
-        : due >= REVIEW_BATCH_SIZE
-          ? `今天先测 ${REVIEW_BATCH_SIZE} 个 · 共 ${due} 个待复习`
-          : `今天有 ${due} 个词要复习`;
+      : hasDue
+        ? `今天有 ${due} 个词该复习了`
+        : seg.recentTerms.length > 0
+          ? `最近收藏 ${seg.recentTerms.join(" · ")}`
+          : "读书点词 → 收藏 → 复习测试";
 
   useEffect(() => {
     let alive = true;
@@ -153,38 +155,73 @@ export default function LibraryHome() {
         </p>
       </div>
 
-      {/* 我的词库入口:功能卡片(白底细边框),不是满宽饱和渐变 ——
-          渐变大色块长得像广告位,用户会自动跳过。红点代表"这一轮要做的量"(封顶 = 一批),
-          总量放副文案:红点是行动号召,总量是信息,不该用大数字制造压力。 */}
+      {/* 我的词库入口:功能卡片(白底细边框),不是满宽饱和渐变 —— 渐变大色块长得像广告位,用户会自动跳过。
+          字重一律 500 不用 700:中文没有真正的粗体字面,700 靠伪粗描边,小字号下会糊。
+          字体沿用系统栈,不引中文网页字体(2-5MB,首屏代价换不来这点观感)。 */}
       <Link
         to="/library/vocab"
         onClick={() => {
           if (seg) trackVocabEntryClick(seg); // 不 await、不挡跳转;分段没算出来就不报,不猜
         }}
-        className="group mt-5 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition hover:border-sky-300 hover:shadow-md active:scale-[0.995] dark:border-slate-700 dark:bg-slate-900"
+        className={cn(
+          "group relative mt-5 block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:border-sky-300 hover:shadow-md active:scale-[0.995] dark:border-slate-700 dark:bg-slate-900",
+          emptyState ? "px-4 py-[26px] text-center" : "px-4 py-3",
+        )}
       >
-        <span className="relative shrink-0">
-          <span className="grid size-[38px] place-items-center rounded-lg bg-sky-50 text-sky-600 dark:bg-sky-950 dark:text-sky-300">
-            <BookMarked className="size-5" />
-          </span>
-          {badge > 0 && (
-            <span
-              className="absolute -right-1.5 -top-1.5 grid min-w-[18px] place-items-center rounded-full bg-rose-500 px-1 text-[11px] font-bold leading-[18px] text-white shadow-sm"
-              aria-label={`${badge} 个词待复习`}
-            >
-              {badge}
+        {/* 空态微光:浅色高光自左向右扫过,3s 一轮,峰值 0.16。纯 CSS(无 JS 计时器),
+            触发条件就是"收藏数为 0",不落 localStorage、不记是否引导过 —— 收藏第一个词后它自然消失。
+            reduced-motion 下整块不渲染。不用晃动/抖动:那是错误态语义,且儿童产品里持续抖动干扰阅读。 */}
+        {emptyState && (
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-sky-300/[0.16] to-transparent motion-safe:animate-[vocabSheen_3s_ease-in-out_infinite] motion-reduce:hidden"
+          />
+        )}
+
+        {emptyState ? (
+          // 空态:整卡居中,图标独占一行
+          <span className="relative flex flex-col items-center gap-2">
+            <span className="grid size-[42px] place-items-center rounded-xl bg-sky-50 text-sky-600 dark:bg-sky-950 dark:text-sky-300">
+              <BookMarked className="size-[22px]" />
             </span>
-          )}
-        </span>
-        <span className="min-w-0 flex-1 leading-tight">
-          <span className="block text-[15px] font-bold text-slate-800 dark:text-slate-100">
-            <T>{emptyState ? "读书时点单词，自动存进词库" : "我的词库"}</T>
+            <span className="block text-[16px] font-medium tracking-[0.04em] text-slate-800 dark:text-slate-100">
+              <T>读书时点单词，收藏存进词库</T>
+            </span>
+            <span className="block text-[13px] tracking-[0.06em] text-muted-foreground">
+              <T>{subtitle}</T>
+            </span>
           </span>
-          <span className="mt-0.5 block truncate text-[12px] text-slate-500 dark:text-slate-400">
-            <T>{subtitle}</T>
+        ) : (
+          // ②③ 共用左对齐横向行:差别只在红点出不出、副标题说什么。右侧计数恒为收藏总数。
+          <span className="flex items-center gap-3">
+            <span className="relative shrink-0">
+              <span className="grid size-[38px] place-items-center rounded-lg bg-sky-50 text-sky-600 dark:bg-sky-950 dark:text-sky-300">
+                <BookMarked className="size-5" />
+              </span>
+              {hasDue && (
+                <span
+                  className="absolute -right-1.5 -top-1.5 grid min-w-[18px] place-items-center rounded-full bg-rose-500 px-1 text-[11px] font-medium leading-[18px] text-white shadow-sm"
+                  aria-label={`${due} 个词待复习`}
+                >
+                  {badge}
+                </span>
+              )}
+            </span>
+            <span className="min-w-0 flex-1 leading-tight">
+              <span className="block text-[16px] font-medium tracking-[0.04em] text-slate-800 dark:text-slate-100">
+                <T>我的词库</T>
+              </span>
+              <span className="mt-0.5 block truncate text-[13px] tracking-[0.06em] text-muted-foreground">
+                <T>{subtitle}</T>
+              </span>
+            </span>
+            {seg && seg.favTotal > 0 && (
+              <span className="shrink-0 whitespace-nowrap text-[20px] font-medium tabular-nums tracking-[0.02em] text-sky-600 dark:text-sky-300">
+                {seg.favTotal} <span className="text-[13px] text-muted-foreground">词</span>
+              </span>
+            )}
           </span>
-        </span>
-        <ArrowRight className="size-4 shrink-0 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-sky-500" />
+        )}
       </Link>
 
       {/* 年龄段筛选 */}

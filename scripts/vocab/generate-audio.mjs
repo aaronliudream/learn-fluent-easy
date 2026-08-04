@@ -218,7 +218,7 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words    WHERE audio_url IS NOT NULL) AS word_audio,
        (SELECT count(*) FROM vocab_examples WHERE audio_url IS NOT NULL) AS example_audio;
 
--- ── count-validate:三行都必须是 t,否则 ROLLBACK ──
+-- ── count-validate:五行都必须是 t,否则 ROLLBACK ──
 SELECT 'word_audio = ${wordRows.length}' AS expect,
        (SELECT count(*) FROM vocab_words WHERE audio_url IS NOT NULL) = ${wordRows.length} AS ok
 UNION ALL
@@ -231,6 +231,24 @@ SELECT 'no word left without audio (in ${BANK})',
            JOIN vocab_word_banks wb ON wb.word_id = w.id
            JOIN vocab_banks b ON b.id = wb.bank_id AND b.code = '${BANK}'
           WHERE w.def_zh IS NOT NULL AND w.audio_url IS NULL
+       )
+UNION ALL
+-- 例句侧的完整性,与上面词侧对称。少了这条,例句漏配也能一路绿灯过去。
+SELECT 'no example left without audio (in ${BANK})',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_examples e
+           JOIN vocab_words w ON w.id = e.word_id
+           JOIN vocab_word_banks wb ON wb.word_id = w.id
+           JOIN vocab_banks b ON b.id = wb.bank_id AND b.code = '${BANK}'
+          WHERE e.audio_url IS NULL
+       )
+UNION ALL
+-- 全部指向 CDN 且是内容寻址路径,防止回填进半成品/空串。
+SELECT 'every audio_url is a well-formed CDN url',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_examples
+          WHERE audio_url IS NOT NULL
+            AND audio_url !~ '^https://audio\\.bigmooneducation\\.com/[0-9a-f]{2}/[0-9a-f]{64}\\.mp3$'
        );
 
 COMMIT;

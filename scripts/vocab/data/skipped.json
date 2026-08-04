@@ -6,16 +6,20 @@
     "file": "ecdict.csv"
   },
   "bank": "toefl",
-  "exclude_tags": [],
-  "excluded_by_tag": 0,
+  "exclude_tags": [
+    "zk",
+    "gk",
+    "cet4"
+  ],
+  "excluded_by_tag": 2488,
   "tagged_rows": 6974,
-  "kept": 6955,
+  "kept": 4473,
   "counts": {
     "phrase": 4,
-    "proper_noun": 15,
+    "proper_noun": 9,
     "non_alpha": 0,
     "duplicate": 0,
-    "no_freq": 127,
+    "no_freq": 124,
     "no_pos": 53
   },
   "phrase": [
@@ -25,17 +29,11 @@
     "space shuttle"
   ],
   "proper_noun": [
-    "Antarctica",
-    "Christian",
-    "Conservative",
-    "CORE",
     "Cuban",
     "Hispanic",
     "Jupiter",
     "Maxim",
     "Mesozoic",
-    "Pole",
-    "Polish",
     "SAC",
     "Scotch",
     "Titanic",
@@ -61,7 +59,6 @@
     "contemn",
     "crossbones",
     "crossbreeding",
-    "customs",
     "demagnetize",
     "detraction",
     "discompose",
@@ -108,7 +105,6 @@
     "long-standing",
     "manful",
     "measures",
-    "mechanics",
     "midair",
     "mincing",
     "multistory",
@@ -164,7 +160,6 @@
     "tumid",
     "ultrasonics",
     "unscrupulously",
-    "upside-down",
     "veining",
     "vitalist",
     "warrantable",

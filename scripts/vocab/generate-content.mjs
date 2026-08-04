@@ -310,7 +310,7 @@ function writeSql(list) {
   const wordRows = list.map(w => `  (${q(w.headword.toLowerCase())}, ${q(w.ipa)}, ${q(w.def_zh)}, ${q(w.def_en)})`).join(',\n');
   const exRows = list.flatMap(w =>
     w.examples.map((ex, i) =>
-      `  (${q(w.headword.toLowerCase())}, ${i + 1}, ${q(ex.collocation)}, ${q(ex.sentence)}, ${q(ex.translation_zh)})`)
+      `  (${q(w.headword.toLowerCase())}, ${i + 1}, ${q(ex.collocation)}, ${q(ex.sentence)}, ${q(ex.translation_zh)}, ${q(ex.scene)})`)
   ).join(',\n');
   const exCount = list.reduce((n, w) => n + w.examples.length, 0);
 
@@ -323,10 +323,17 @@ function writeSql(list) {
 --       vocab_examples 走 ON CONFLICT (word_id, sort_order)(索引 vocab_examples_word_id_sort_order_key)。
 --       重复跑只会覆盖同一批内容,不产生重复行。
 --
--- 注:scene(academic/news/daily_life/...)只用于生成期的 g5/g6 闸门判定,
---     vocab_examples 表没有 scene 列,故不入库。要留痕的话得先加列。
+-- scene(academic/news/daily_life/... 共 10 类)既用于生成期的 g5/g6 闸门判定,
+-- 也一并入库,将来可按场景筛例句。
 
 BEGIN;
+
+-- ⚠️ 前置:scene 列。
+-- 2026-08-03 实测 information_schema 里 vocab_examples 还**没有**这一列
+-- (当时 public 库内唯一的 scene 列在 american_lessons 上)。
+-- 这句是幂等的:你要是已经加过,它就是 no-op;没加过,它替你补上。
+-- 不加这列,下面的 INSERT 会直接报 column "scene" does not exist。
+ALTER TABLE vocab_examples ADD COLUMN IF NOT EXISTS scene text;
 
 SELECT 'BEFORE' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
@@ -344,22 +351,23 @@ ${wordRows}
  WHERE lower(w.headword) = v.headword;
 
 -- ② 例句
-INSERT INTO vocab_examples (word_id, sort_order, collocation, sentence, translation_zh)
-SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh
+INSERT INTO vocab_examples (word_id, sort_order, collocation, sentence, translation_zh, scene)
+SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   FROM (VALUES
 ${exRows}
-  ) AS v(headword, sort_order, collocation, sentence, translation_zh)
+  ) AS v(headword, sort_order, collocation, sentence, translation_zh, scene)
   JOIN vocab_words w ON lower(w.headword) = v.headword
 ON CONFLICT (word_id, sort_order) DO UPDATE
   SET collocation    = EXCLUDED.collocation,
       sentence       = EXCLUDED.sentence,
-      translation_zh = EXCLUDED.translation_zh;
+      translation_zh = EXCLUDED.translation_zh,
+      scene          = EXCLUDED.scene;
 
 SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
 
--- ── count-validate:三行都必须是 t,否则 ROLLBACK ──
+-- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
 SELECT 'words_with_def = ${list.length}' AS expect,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = ${list.length} AS ok
 UNION ALL
@@ -372,6 +380,13 @@ SELECT 'every word with a definition has exactly 3 examples',
            FROM vocab_words w
           WHERE w.def_zh IS NOT NULL
             AND (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3
+       )
+UNION ALL
+SELECT 'every example has a scene from the 10-value enum',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_examples
+          WHERE scene IS NULL
+             OR scene NOT IN (${SCENES.map(s => `'${s}'`).join(', ')})
        );
 
 COMMIT;
@@ -433,8 +448,7 @@ ${w.examples.map((e, i) => `| ${i + 1} | ${e.collocation} | \`${e.scene}\` | ${e
 
 场景枚举固定 10 个:\`${SCENES.join('`, `')}\`。
 
-> ⚠️ \`scene\` 只服务于 g5/g6 判定,**没有入库** —— \`vocab_examples\` 表没有 scene 列。
-> 要把场景留在库里(将来按场景筛例句)得先加列,你说要不要加。
+\`scene\` 既服务于 g5/g6 判定,也**随例句一并入库**(\`vocab_examples.scene\`),将来可按场景筛例句。
 
 ## 请重点看这几点
 

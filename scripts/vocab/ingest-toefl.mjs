@@ -302,14 +302,23 @@ ${picked.map((w, i) => `| ${i + 1} | ${w.headword} | ${w.pos || '—'} | ${w.fre
 | ---: | --- | --- | ---: |
 ${kept.slice(0, 20).map((w, i) => `| ${i + 1} | ${w.headword} | ${w.pos || '—'} | ${w.freq_rank} |`).join('\n')}
 
-${EXCLUDE_TAGS.size ? `> 本次已按 \`--exclude-tags=${[...EXCLUDE_TAGS].join(',')}\` 剔除 ${excludedByTag} 词。\n` : buildTagComparison(kept)}
+${EXCLUDE_TAGS.size
+      ? `## 选词口径(已定:方案 D)
 
-## 请 Aaron 确认四件事
+按 \`--exclude-tags=${[...EXCLUDE_TAGS].join(',')}\` 剔除 **${excludedByTag}** 个已被中考/高考/四级覆盖的词,
+词池从 6955 收到 **${kept.length}**,再按 freq_rank 取前 200 作 batch1。
 
-1. **⚠️ 首批取哪 200 词**(见上面的对比表,这条最要紧)。
-2. **词表本身**:上面 50 词是不是托福该有的样子?有没有明显不该在托福库里的?
-3. **屈折形是否算独立词条**:ECDICT 把 \`abandon\` / \`abandoned\` / \`abandonment\` 都打了 toefl 标,本脚本**全部保留**为独立词条(\`abandoned\` 有独立的形容词义"被抛弃的",托福词表通常也这么收)。如果你要按原形合并,说一声,清洗规则加一条即可。
-4. **total_words 要不要从 8000 改成 ${kept.length}**。
+这么做的原因:ECDICT 的 \`toefl\` 标签含义是"托福里出现过",不是"托福难度"。
+不过滤时前 200 全是 \`can / way / well / even\` 这类 A1 词,给托福考生做词卡没价值。
+`
+      : buildTagComparison(kept)}
+
+## 请 Aaron 确认${EXCLUDE_TAGS.size ? '三' : '四'}件事
+
+${EXCLUDE_TAGS.size ? '' : `1. **⚠️ 首批取哪 200 词**(见上面的对比表,这条最要紧)。
+`}1. **词表本身**:上面 50 词是不是托福该有的样子?有没有明显不该在托福库里的?
+2. **屈折形是否算独立词条**:ECDICT 把 \`abandon\` / \`abandoned\` / \`abandonment\` 都打了 toefl 标,本脚本**全部保留**为独立词条(\`abandoned\` 有独立的形容词义"被抛弃的",托福词表通常也这么收)。如果你要按原形合并,说一声,清洗规则加一条即可。
+3. **total_words 要不要从 8000 改成 ${kept.length}**(这个数会显示在词库中心的卡片上)。
 `;
   const out = path.join(REPO, 'REVIEWAA', 'vocab_toefl_wordlist_sample.md');
   mkdirSync(path.dirname(out), { recursive: true });

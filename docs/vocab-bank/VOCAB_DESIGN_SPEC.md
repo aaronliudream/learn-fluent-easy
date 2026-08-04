@@ -349,9 +349,16 @@ guest 期的每次作答同存 `localStorage`,key = `vocab_guest_records`,每条
 - 例句长度 **8–16 词**,不会出现超长句撑破卡片。
 - 全站例句**不含 em-dash / en-dash**,排版不必处理破折号换行。
 - `def_en` **不超过 15 词**,单行到两行可容纳。
-- 例句的 `scene`(academic / news / daily_life 等 10 类)**只存在于生成期**,
-  `vocab_examples` 表**没有 scene 列**,前端拿不到,别按场景做筛选 UI。
-  要做得先加列 + 回填。
-- 词音频与例句音频都走内容寻址 CDN(`<hash 前两位>/<hash>.mp3`),
-  **没有 `vocab/` 前缀** —— tts edge 是全站共用的内容寻址存储,
-  同一句话在哪个板块都是同一个文件。
+- 例句带 `scene`(academic / news / daily_life 等 10 类,见下),存在
+  `vocab_examples.scene`,前端可据此做场景筛选。取值一定在这 10 个里:
+
+  ```
+  academic · news · daily_life · work · science_tech
+  health · environment · education · travel · culture
+  ```
+
+  同一个词的三条例句 scene **必然互不相同**(g5 闸门保证),所以"按场景筛"
+  不会出现某个词的三条全落同一格。
+- 词音频与例句音频都走内容寻址 CDN(`<hash 前两位>/<hash>.mp3`),**无业务前缀**。
+  这是 tts edge 全站共用的存储约定(`supabase/functions/tts/index.ts:333`),
+  好处是同一句话在哪个板块都命中同一个文件,只存一份、只花一次 TTS 钱。

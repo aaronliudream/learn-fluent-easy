@@ -9,7 +9,9 @@
 import {
   SCENES, words, ngrams, overlapRatio, symmetricOverlap, inflectionsOf,
   g1_targetPresent, g2_length, g3_noEmDash, g4_globalDedup,
-  g5_mutualExclusive, g6_intraWordSimilarity, runAllGates,
+  g5_mutualExclusive, g6_intraWordSimilarity,
+  g7_collocationContainsWord, g8_zhPunctuation, g9_distinctOpeners,
+  runAllGates,
 } from './gates.mjs';
 
 let pass = 0, fail = 0;
@@ -95,6 +97,35 @@ ok('偷懒句(只换主语)被拦下', g6_intraWordSimilarity(lazy) !== null);
 ok('三句真的不同放行', g6_intraWordSimilarity(diverse) === null);
 ok('symmetricOverlap 自反 = 1', symmetricOverlap(ngrams(base), ngrams(base)) === 1);
 
+/* ── g7 搭配必须含目标词 ── */
+process.stdout.write('g7 搭配必须真是搭配\n');
+const col = c => ({ collocation: c, scene: 'news', sentence: 'x', translation_zh: 'x。' });
+ok('含目标词放行', g7_collocationContainsWord([col('defense strategy'), col('national defense'), col('self-defense')], 'defense', {}) === null);
+ok('同义词冒充搭配被拦(attorney→lawyer)', g7_collocationContainsWord([col('lawyer')], 'attorney', {}) !== null);
+ok('连字符搭配 self-defense 算含', g7_collocationContainsWord([col('self-defense')], 'defense', {}) === null);
+ok('屈折形搭配 participants in a study 算含', g7_collocationContainsWord([col('participants in a study')], 'participant', {}) === null);
+ok('介词搭配 concerned about 算含', g7_collocationContainsWord([col('concerned about')], 'concerned', {}) === null);
+
+/* ── g8 中文标点 ── */
+process.stdout.write('g8 中文译文标点\n');
+const tr = t => ({ collocation: 'c', scene: 'news', sentence: 'x', translation_zh: t });
+ok('全角句号放行', g8_zhPunctuation([tr('这是一个句子。')]) === null);
+ok('全角问号/叹号放行', g8_zhPunctuation([tr('真的吗？'), tr('太好了！')]) === null);
+ok('半角句号收尾被拦', g8_zhPunctuation([tr('律师工作很长时间.')]) !== null);
+ok('无句末标点被拦', g8_zhPunctuation([tr('这是一个句子')]) !== null);
+ok('中文里混半角逗号被拦', g8_zhPunctuation([tr('他来了,她走了。')]) !== null);
+ok('数字小数点不误伤', g8_zhPunctuation([tr('增长了 3.14 个百分点。')]) === null);
+ok('译文为空被拦', g8_zhPunctuation([tr('  ')]) !== null);
+
+/* ── g9 首词互异 ── */
+process.stdout.write('g9 三句首词互异\n');
+const sen = s => ({ collocation: 'c', scene: 'news', sentence: s, translation_zh: 'x。' });
+ok('首词全异放行', g9_distinctOpeners([sen('Many citizens are worried'), sen('Concerned parents attend'), sen('She learned quickly')]) === null);
+ok('试跑实例:两句都以 Concerned 开头被拦',
+  g9_distinctOpeners([sen('Many citizens are concerned about pollution'), sen('Concerned parents often attend school meetings'), sen('Concerned citizens organized a rally')]) !== null);
+ok('三句都以 The 开头被拦', g9_distinctOpeners([sen('The city fell'), sen('The team won'), sen('The dog ran')]) !== null);
+ok('大小写不同仍算同形', g9_distinctOpeners([sen('The city fell'), sen('the team won'), sen('A dog ran')]) !== null);
+
 /* ── runAllGates 端到端 ── */
 process.stdout.write('runAllGates 端到端\n');
 const goodWord = { headword: 'abandon', freq_rank: 2182 };
@@ -103,7 +134,7 @@ const goodPayload = {
   examples: [
     { collocation: 'abandon a plan', scene: 'news', sentence: 'The city abandoned its plan to widen the busy road', translation_zh: '该市放弃了拓宽这条繁忙道路的计划。' },
     { collocation: 'abandon a child', scene: 'health', sentence: 'Nobody should abandon a child in such freezing winter weather', translation_zh: '任何人都不该在如此严寒的冬天遗弃孩子。' },
-    { collocation: 'abandon ship', scene: 'travel', sentence: 'Sailors abandoned ship minutes before the hull broke apart', translation_zh: '船体断裂前几分钟,水手们弃船而逃。' },
+    { collocation: 'abandon ship', scene: 'travel', sentence: 'Sailors abandoned ship minutes before the hull broke apart', translation_zh: '船体断裂前几分钟，水手们弃船而逃。' },
   ],
 };
 ok('干净样本零失败', runAllGates(goodWord, goodPayload, [], {}).length === 0,

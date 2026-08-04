@@ -143,6 +143,60 @@ export function g5_mutualExclusive(examples) {
   return null;
 }
 
+/** g7 搭配必须真是搭配:collocation 里要含目标词或其屈折形。
+ *  拦的是"拿同义词冒充搭配" —— 试跑时 attorney 的搭配写成了 `lawyer`,
+ *  那不是搭配,例句里也就无从体现用法。
+ *  `self-defense`、`concerned about`、`participants in a study` 都能过。 */
+export function g7_collocationContainsWord(examples, headword, table) {
+  const forms = inflectionsOf(headword, table);
+  for (let i = 0; i < examples.length; i++) {
+    const c = String(examples[i].collocation || '');
+    const toks = c.toLowerCase().split(/[\s\-–—/]+/)
+      .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
+    if (!toks.some(t => forms.has(t))) {
+      return `g7 第${i + 1}条搭配 "${c}" 里没有目标词 "${headword}",是同义词不是搭配`;
+    }
+  }
+  return null;
+}
+
+/** g8 中文译文标点规范:必须全角句末,且中文字符后不许跟半角标点。
+ *  试跑实测 attorney 三条译文全用半角 `.` 收尾(12 全角 / 3 半角混排)。
+ *  只在**中文字符紧跟**半角标点时判违规,所以 "3.14"、"U.S." 不会误伤。 */
+const CJK_THEN_HALF = /[一-鿿][,.!?;:]/;
+export function g8_zhPunctuation(examples) {
+  for (let i = 0; i < examples.length; i++) {
+    const t = String(examples[i].translation_zh || '').trim();
+    if (!t) return `g8 第${i + 1}条译文为空`;
+    if (!/[。！？]$/.test(t)) {
+      return `g8 第${i + 1}条译文句末不是全角句号:"…${t.slice(-8)}"`;
+    }
+    if (CJK_THEN_HALF.test(t)) {
+      return `g8 第${i + 1}条译文中文里混了半角标点:"${t.slice(0, 24)}"`;
+    }
+  }
+  return null;
+}
+
+/** g9 三句首词互异 —— 防同一个句式模子套三遍。
+ *  ⚠️ 原方案是"开头两个词不得同形",但实测拦不住:
+ *     "Concerned parents often…" vs "Concerned citizens organized…"
+ *     两句的双词前缀是不同的("concerned parents" ≠ "concerned citizens"),
+ *     真正雷同的是**首词**。所以收紧成首词两两互异。
+ *  这条同时天然覆盖了 prompt 里"不能三句都以 The/A 开头"。 */
+export function g9_distinctOpeners(examples) {
+  const firsts = examples.map(e =>
+    String(e.sentence || '').trim().split(/\s+/)[0]?.toLowerCase().replace(/[^a-z']/g, '') || '');
+  for (let i = 0; i < firsts.length; i++) {
+    for (let j = i + 1; j < firsts.length; j++) {
+      if (firsts[i] && firsts[i] === firsts[j]) {
+        return `g9 第${i + 1}句与第${j + 1}句首词相同("${firsts[i]}"),句式雷同`;
+      }
+    }
+  }
+  return null;
+}
+
 /** g6 同词三句相似度:任意两句 4-gram 重合 >30% 拒(防"换个场景词其余照抄")。 */
 export function g6_intraWordSimilarity(examples, threshold = 0.3) {
   const sets = examples.map(e => ngrams(e.sentence));
@@ -186,6 +240,11 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable) {
       const g6 = g6_intraWordSimilarity(examples);
       if (g6) fails.push(g6);
     }
+    for (const c of [
+      g7_collocationContainsWord(examples, word.headword, inflectTable),
+      g8_zhPunctuation(examples),
+      g9_distinctOpeners(examples),
+    ]) if (c) fails.push(c);
   }
 
   // def_en 15 词内(不是闸门编号内的,但同属硬约束,一并卡)

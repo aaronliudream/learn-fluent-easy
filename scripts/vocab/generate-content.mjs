@@ -115,12 +115,16 @@ async function fetchPending() {
   return rows;
 }
 
-/* ── 难度分层:按词自身频率,与词库无关 ── */
+/* ── 难度分层:按词自身频率,与词库无关 ──
+ * ⚠️ 阈值按**方案 D 词池的实际分布**重标(2026-08-03)。
+ *   老阈值(2000/6000/15000)是照未过滤的 6955 词池定的,套到 D 池上严重偏斜:
+ *   batch1 200 词会算出 A2 22 / B1 178 / B2 0 / C1 0 —— 首批例句几乎全是 B1。
+ *   新阈值 1500/4000/10000 下,D 池 4473 词分布才拉得开。 */
 function cefrFor(freqRank) {
   const r = freqRank ?? Number.MAX_SAFE_INTEGER;
-  if (r <= 2000) return { level: 'A2', note: '高频常用词:句子要短、结构简单、日常语域' };
-  if (r <= 6000) return { level: 'B1', note: '中频词:一般复杂度,可用从句但别套叠' };
-  if (r <= 15000) return { level: 'B2', note: '偏学术词:可用较正式的措辞与抽象主语' };
+  if (r <= 1500) return { level: 'A2', note: '高频常用词:句子要短、结构简单、日常语域' };
+  if (r <= 4000) return { level: 'B1', note: '中频词:一般复杂度,可用从句但别套叠' };
+  if (r <= 10000) return { level: 'B2', note: '偏学术词:可用较正式的措辞与抽象主语' };
   return { level: 'C1', note: '低频学术词:正式语域,允许名词化与复杂搭配' };
 }
 
@@ -138,7 +142,10 @@ Frequency rank: ${word.freq_rank ?? 'unknown'} -> target sentence difficulty: ${
 Produce a study card with these HARD requirements:
 
 1. ipa: American English IPA for "${word.headword}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
-2. def_zh: 中文释义, concise, matches the word's most common sense. 不要写词性缩写, 只写释义本身.
+2. def_zh: 中文释义. Cover the 1-2 MOST COMMON senses of the word, separated by a
+   full-width semicolon "；". If the word really only has one common sense, give just
+   that one - do NOT pad it out with a rare or contrived second sense.
+   不要写词性缩写, 只写释义本身.
 3. def_en: English definition, AT MOST 15 words.
 4. examples: EXACTLY 3 objects. Each anchors ONE high-frequency collocation of "${word.headword}".
    - Order the three by collocation frequency: examples[0] uses the MOST frequent collocation, examples[2] the least.
@@ -152,7 +159,12 @@ Produce a study card with these HARD requirements:
      (e.g. not all three a person, not all three an abstract noun).
    - Do NOT reuse wording across the three sentences. Each must be independently written,
      not one template with the scene word swapped.
-   - translation_zh: 该句的中文翻译, 自然流畅.
+   - The three sentences must each START WITH A DIFFERENT WORD.
+   - collocation MUST contain "${word.headword}" itself (or an inflected form of it).
+     A synonym is NOT a collocation: for "attorney", "lawyer" is wrong,
+     "defense attorney" is right.
+   - translation_zh: 该句的中文翻译, 自然流畅. 标点必须全部用全角
+     (句末用 "。", 句中停顿用 "，"), 中文里绝对不要出现半角的 , . ! ? 。
 5. NEVER use an em-dash (—) or en-dash (–) anywhere in any field. Use commas or periods.
 6. Difficulty is set by the word's own frequency (${cefr.level}), NOT by any exam.${retry}`;
 

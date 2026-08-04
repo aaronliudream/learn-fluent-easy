@@ -1,0 +1,322 @@
+{
+  "kerosene": {
+    "word_id": null,
+    "headword": "kerosene",
+    "pos": "n.",
+    "freq_rank": 13503,
+    "cefr": "C1",
+    "ipa": "/ˈkɛr.ə.siːn/",
+    "def_zh": "煤油",
+    "def_en": "A flammable hydrocarbon liquid used as fuel or solvent.",
+    "examples": [
+      {
+        "collocation": "kerosene lamps",
+        "scene": "daily_life",
+        "sentence": "Many households still use kerosene lamps for lighting at night.",
+        "translation_zh": "许多家庭晚上仍然使用煤油灯照明。"
+      },
+      {
+        "collocation": "kerosene heaters",
+        "scene": "work",
+        "sentence": "Kerosene heaters are often employed in buildings without central heating.",
+        "translation_zh": "煤油加热器常用于没有中央供暖的建筑内。"
+      },
+      {
+        "collocation": "kerosene storage",
+        "scene": "environment",
+        "sentence": "Proper kerosene storage is crucial to prevent environmental contamination.",
+        "translation_zh": "妥善存放煤油对防止环境污染至关重要。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "wane": {
+    "word_id": null,
+    "headword": "wane",
+    "pos": "n./v.",
+    "freq_rank": 10009,
+    "cefr": "C1",
+    "ipa": "/weɪn/",
+    "def_zh": "减少；减弱",
+    "def_en": "To decrease in size, amount, or intensity.",
+    "examples": [
+      {
+        "collocation": "powers wane",
+        "scene": "news",
+        "sentence": "As public interest grows, the powers wane slowly over time.",
+        "translation_zh": "随着公众兴趣的增长，权力逐渐减弱。"
+      },
+      {
+        "collocation": "influence wanes",
+        "scene": "academic",
+        "sentence": "The influence of traditional media wanes as digital platforms rise.",
+        "translation_zh": "随着数字平台的兴起，传统媒体的影响力逐渐减弱。"
+      },
+      {
+        "collocation": "moon wane",
+        "scene": "science_tech",
+        "sentence": "During the lunar cycle, the moon wanes after the full moon phase.",
+        "translation_zh": "在月相周期中，满月过后，月亮会逐渐变小。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "construe": {
+    "word_id": null,
+    "headword": "construe",
+    "pos": "v./n.",
+    "freq_rank": 11000,
+    "cefr": "C1",
+    "ipa": "/kənˈstruː/",
+    "def_zh": "解释；理解",
+    "def_en": "To interpret or understand the meaning of something.",
+    "examples": [
+      {
+        "collocation": "construe the implications",
+        "scene": "academic",
+        "sentence": "Researchers often construe the implications of their findings carefully.",
+        "translation_zh": "研究人员通常会仔细解释他们发现的含义。"
+      },
+      {
+        "collocation": "construe a statement",
+        "scene": "news",
+        "sentence": "Journalists must construe a statement from officials accurately.",
+        "translation_zh": "记者必须准确解读官员的声明。"
+      },
+      {
+        "collocation": "construe the law",
+        "scene": "work",
+        "sentence": "Lawyers regularly construe the law to benefit their clients.",
+        "translation_zh": "律师们经常解释法律以使客户受益。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "fable": {
+    "word_id": null,
+    "headword": "fable",
+    "pos": "n./v.",
+    "freq_rank": 12174,
+    "cefr": "C1",
+    "ipa": "/ˈfeɪ.bəl/",
+    "def_zh": "寓言",
+    "def_en": "A short story typically with a moral lesson.",
+    "examples": [
+      {
+        "collocation": "classic fable",
+        "scene": "education",
+        "sentence": "Educators often use classic fables to teach moral lessons to students.",
+        "translation_zh": "教育工作者常常使用经典寓言来教导学生道德课程。"
+      },
+      {
+        "collocation": "modern fable",
+        "scene": "culture",
+        "sentence": "Many modern fables address contemporary social issues in creative ways.",
+        "translation_zh": "许多现代寓言以创造性的方式探讨当代社会问题。"
+      },
+      {
+        "collocation": "fable about animals",
+        "scene": "daily_life",
+        "sentence": "She read a fable about animals that emphasized the importance of teamwork.",
+        "translation_zh": "她读了一则关于动物的寓言，强调了团队合作的重要性。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "snippet": {
+    "word_id": null,
+    "headword": "snippet",
+    "pos": "n.",
+    "freq_rank": 16367,
+    "cefr": "C1",
+    "ipa": "/ˈsnɪp.ɪt/",
+    "def_zh": "片段",
+    "def_en": "A small portion or extract from something larger.",
+    "examples": [
+      {
+        "collocation": "news snippet",
+        "scene": "news",
+        "sentence": "Journalists often share a news snippet on social media.",
+        "translation_zh": "记者经常在社交媒体上分享新闻片段。"
+      },
+      {
+        "collocation": "video snippet",
+        "scene": "culture",
+        "sentence": "I watched a video snippet that summarized the event.",
+        "translation_zh": "我看了一个总结事件的视频片段。"
+      },
+      {
+        "collocation": "code snippet",
+        "scene": "science_tech",
+        "sentence": "Developers frequently use a code snippet to demonstrate functions.",
+        "translation_zh": "开发者经常使用代码片段来演示功能。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "regenerate": {
+    "word_id": null,
+    "headword": "regenerate",
+    "pos": "v./adj.",
+    "freq_rank": 14883,
+    "cefr": "C1",
+    "ipa": "/rɪˈdʒɛn.ə.reɪt/",
+    "def_zh": "再生；重建",
+    "def_en": "To create anew or restore to a former state.",
+    "examples": [
+      {
+        "collocation": "regenerate cells",
+        "scene": "health",
+        "sentence": "Scientists are studying how to regenerate cells for better healing.",
+        "translation_zh": "科学家正在研究如何再生细胞以促进愈合。"
+      },
+      {
+        "collocation": "regenerate energy",
+        "scene": "science_tech",
+        "sentence": "Innovative technologies can help us regenerate energy from waste materials.",
+        "translation_zh": "创新技术可以帮助我们从废物中再生能源。"
+      },
+      {
+        "collocation": "regenerate communities",
+        "scene": "culture",
+        "sentence": "Local initiatives aim to regenerate communities through art and education.",
+        "translation_zh": "地方倡议旨在通过艺术和教育重建社区。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "decadence": {
+    "word_id": null,
+    "headword": "decadence",
+    "pos": "n.",
+    "freq_rank": 17922,
+    "cefr": "C1",
+    "ipa": "/ˈdɛk.ə.dəns/",
+    "def_zh": "堕落；衰退",
+    "def_en": "The state of moral or cultural decline.",
+    "examples": [
+      {
+        "collocation": "moral decadence",
+        "scene": "culture",
+        "sentence": "Many people believe that moral decadence is on the rise today.",
+        "translation_zh": "许多人认为道德堕落在当今正逐渐上升。"
+      },
+      {
+        "collocation": "social decadence",
+        "scene": "news",
+        "sentence": "Experts warn that social decadence can lead to serious consequences for society.",
+        "translation_zh": "专家警告说，社会堕落可能会给社会带来严重后果。"
+      },
+      {
+        "collocation": "economic decadence",
+        "scene": "academic",
+        "sentence": "The study examines the roots of economic decadence in developing nations.",
+        "translation_zh": "该研究探讨了发展中国家经济衰退的根源。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "serrated": {
+    "word_id": null,
+    "headword": "serrated",
+    "pos": "adj.",
+    "freq_rank": 20378,
+    "cefr": "C1",
+    "ipa": "/səˈreɪ.tɪd/",
+    "def_zh": "锯齿状的",
+    "def_en": "Having a jagged edge or surface.",
+    "examples": [
+      {
+        "collocation": "serrated knife",
+        "scene": "daily_life",
+        "sentence": "Cooks often prefer using serrated knives for cutting bread easily.",
+        "translation_zh": "厨师们常常更喜欢使用锯齿刀来轻松切割面包。"
+      },
+      {
+        "collocation": "serrated edges",
+        "scene": "science_tech",
+        "sentence": "The design features serrated edges to enhance cutting efficiency in tools.",
+        "translation_zh": "该设计具有锯齿状边缘，以提高工具的切割效率。"
+      },
+      {
+        "collocation": "serrated leaves",
+        "scene": "environment",
+        "sentence": "Certain plants have serrated leaves that help reduce water loss.",
+        "translation_zh": "某些植物具有锯齿状的叶子，帮助减少水分流失。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "eventful": {
+    "word_id": null,
+    "headword": "eventful",
+    "pos": "adj.",
+    "freq_rank": 23564,
+    "cefr": "C1",
+    "ipa": "/ɪˈvɛntfəl/",
+    "def_zh": "充满事件的；多事的",
+    "def_en": "Full of events; marked by significant occurrences.",
+    "examples": [
+      {
+        "collocation": "eventful year",
+        "scene": "news",
+        "sentence": "This year has been particularly eventful for political changes.",
+        "translation_zh": "这一年对政治变革来说尤为多事。"
+      },
+      {
+        "collocation": "eventful journey",
+        "scene": "travel",
+        "sentence": "Her trip was filled with eventful experiences and unforgettable moments.",
+        "translation_zh": "她的旅行充满了多事的经历和难忘的时刻。"
+      },
+      {
+        "collocation": "eventful life",
+        "scene": "daily_life",
+        "sentence": "Many people lead eventful lives filled with adventure and challenges.",
+        "translation_zh": "许多人过着充满冒险和挑战的多事生活。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "egress": {
+    "word_id": null,
+    "headword": "egress",
+    "pos": "n./v.",
+    "freq_rank": 29282,
+    "cefr": "C1",
+    "ipa": "/ˈiː.ɡrɛs/",
+    "def_zh": "出口；退场",
+    "def_en": "The act of going out or leaving a place.",
+    "examples": [
+      {
+        "collocation": "emergency egress",
+        "scene": "work",
+        "sentence": "Workers need clear paths for emergency egress during drills.",
+        "translation_zh": "在演习期间，工人需要清晰的紧急出口通道。"
+      },
+      {
+        "collocation": "secondary egress",
+        "scene": "science_tech",
+        "sentence": "Designers must include a secondary egress in the building plans.",
+        "translation_zh": "设计师必须在建筑计划中包含第二出口。"
+      },
+      {
+        "collocation": "safe egress",
+        "scene": "education",
+        "sentence": "Students must ensure safe egress from the classroom in case of emergencies.",
+        "translation_zh": "学生们必须确保在紧急情况下安全离开教室。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  }
+}

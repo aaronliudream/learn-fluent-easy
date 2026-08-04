@@ -1,0 +1,322 @@
+{
+  "authorize": {
+    "word_id": null,
+    "headword": "authorize",
+    "pos": "v.",
+    "freq_rank": 4767,
+    "cefr": "B2",
+    "ipa": "/ˈɔː.θə.raɪz/",
+    "def_zh": "授权",
+    "def_en": "Give official permission or approval to do something.",
+    "examples": [
+      {
+        "collocation": "authorize access",
+        "scene": "work",
+        "sentence": "Only the manager can authorize access to the confidential files.",
+        "translation_zh": "只有经理能授权访问这些机密文件。"
+      },
+      {
+        "collocation": "authorize funding",
+        "scene": "academic",
+        "sentence": "The board will authorize funding for the new research project next month.",
+        "translation_zh": "董事会将于下月授权新研究项目的资金。"
+      },
+      {
+        "collocation": "authorize transactions",
+        "scene": "daily_life",
+        "sentence": "You must authorize transactions before they can be processed on your account.",
+        "translation_zh": "您必须授权交易才能在您的账户上处理。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "reassure": {
+    "word_id": null,
+    "headword": "reassure",
+    "pos": "v.",
+    "freq_rank": 5411,
+    "cefr": "B2",
+    "ipa": "/ˌriːəˈʃʊr/",
+    "def_zh": "安慰；放心",
+    "def_en": "To remove someone's doubts or fears.",
+    "examples": [
+      {
+        "collocation": "reassure the public",
+        "scene": "news",
+        "sentence": "Officials reassure the public about safety during the event.",
+        "translation_zh": "官员向公众保证活动期间的安全。"
+      },
+      {
+        "collocation": "reassure patients",
+        "scene": "health",
+        "sentence": "Doctors often reassure patients before performing major surgeries.",
+        "translation_zh": "医生经常在进行重大手术前安慰患者。"
+      },
+      {
+        "collocation": "reassure employees",
+        "scene": "work",
+        "sentence": "Managers need to reassure employees during times of uncertainty.",
+        "translation_zh": "管理者在不确定时期需要安慰员工。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "outrageous": {
+    "word_id": null,
+    "headword": "outrageous",
+    "pos": "adj.",
+    "freq_rank": 6077,
+    "cefr": "B2",
+    "ipa": "/aʊtˈreɪ.dʒəs/",
+    "def_zh": "令人愤怒的；可耻的",
+    "def_en": "Extremely shocking or bad; outrageous behavior is unacceptable.",
+    "examples": [
+      {
+        "collocation": "outrageous act",
+        "scene": "news",
+        "sentence": "Many citizens condemned the outrageous act of police brutality.",
+        "translation_zh": "许多市民谴责这一令人愤怒的警察暴行。"
+      },
+      {
+        "collocation": "outrageous price",
+        "scene": "daily_life",
+        "sentence": "They considered the concert tickets' outrageous price a major downside.",
+        "translation_zh": "他们认为音乐会票价过高是一个主要缺点。"
+      },
+      {
+        "collocation": "outrageous claim",
+        "scene": "academic",
+        "sentence": "The researcher faced backlash due to her outrageous claim about the findings.",
+        "translation_zh": "这位研究人员因其对研究结果的令人愤怒的说法而面临反对。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "romance": {
+    "word_id": null,
+    "headword": "romance",
+    "pos": "n./v.",
+    "freq_rank": 4016,
+    "cefr": "B2",
+    "ipa": "/roʊˈmæns/",
+    "def_zh": "浪漫；爱情关系",
+    "def_en": "A feeling of excitement and mystery associated with love.",
+    "examples": [
+      {
+        "collocation": "romance novels",
+        "scene": "culture",
+        "sentence": "Many readers enjoy romance novels that depict deep emotional connections.",
+        "translation_zh": "许多读者喜欢描绘深厚情感联系的爱情小说。"
+      },
+      {
+        "collocation": "romance story",
+        "scene": "daily_life",
+        "sentence": "She often shares a romance story that captivates her audience during gatherings.",
+        "translation_zh": "她在聚会上常常分享一个吸引听众的浪漫故事。"
+      },
+      {
+        "collocation": "romance language",
+        "scene": "education",
+        "sentence": "French and Spanish are both examples of romance languages derived from Latin.",
+        "translation_zh": "法语和西班牙语都是源自拉丁语的罗曼语言例子。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "stark": {
+    "word_id": null,
+    "headword": "stark",
+    "pos": "adj./adv.",
+    "freq_rank": 6659,
+    "cefr": "B2",
+    "ipa": "/stɑrk/",
+    "def_zh": "明显的；鲜明的",
+    "def_en": "Very different or extreme in a way that is clear.",
+    "examples": [
+      {
+        "collocation": "stark contrast",
+        "scene": "news",
+        "sentence": "The report shows a stark contrast between the two regions' economies.",
+        "translation_zh": "该报告显示了两个地区经济之间明显的差异。"
+      },
+      {
+        "collocation": "stark reality",
+        "scene": "daily_life",
+        "sentence": "Living on a limited budget presents a stark reality for many families.",
+        "translation_zh": "有限预算的生活对许多家庭来说是一种明显的现实。"
+      },
+      {
+        "collocation": "stark choice",
+        "scene": "education",
+        "sentence": "Students faced a stark choice between pursuing their passion or financial security.",
+        "translation_zh": "学生们面临着追求激情或经济安全的明显选择。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "degradation": {
+    "word_id": null,
+    "headword": "degradation",
+    "pos": "n.",
+    "freq_rank": 7764,
+    "cefr": "B2",
+    "ipa": "/ˌdɛɡrəˈdeɪʃən/",
+    "def_zh": "退化；降解",
+    "def_en": "The process of deteriorating or being degraded.",
+    "examples": [
+      {
+        "collocation": "environmental degradation",
+        "scene": "environment",
+        "sentence": "Environmental degradation poses significant challenges to global ecosystems.",
+        "translation_zh": "环境退化对全球生态系统构成重大挑战。"
+      },
+      {
+        "collocation": "social degradation",
+        "scene": "academic",
+        "sentence": "Social degradation can lead to increased crime rates in urban areas.",
+        "translation_zh": "社会退化可能导致城市地区犯罪率上升。"
+      },
+      {
+        "collocation": "degradation of materials",
+        "scene": "science_tech",
+        "sentence": "The degradation of materials affects the longevity of engineering structures.",
+        "translation_zh": "材料的降解影响工程结构的耐久性。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "disposition": {
+    "word_id": null,
+    "headword": "disposition",
+    "pos": "n.",
+    "freq_rank": 7219,
+    "cefr": "B2",
+    "ipa": "/ˌdɪs.pəˈzɪʃ.ən/",
+    "def_zh": "性情；倾向",
+    "def_en": "A person's inherent qualities of mind and character.",
+    "examples": [
+      {
+        "collocation": "disposition towards others",
+        "scene": "daily_life",
+        "sentence": "People usually have a positive disposition towards others they trust.",
+        "translation_zh": "人们通常对他们信任的他人有积极的性情。"
+      },
+      {
+        "collocation": "disposition of assets",
+        "scene": "work",
+        "sentence": "The company discussed the disposition of assets during the meeting.",
+        "translation_zh": "公司在会议上讨论了资产的处置。"
+      },
+      {
+        "collocation": "disposition to learn",
+        "scene": "education",
+        "sentence": "Children's disposition to learn can greatly affect their academic success.",
+        "translation_zh": "孩子们的学习倾向会极大地影响他们的学业成功。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "packed": {
+    "word_id": null,
+    "headword": "packed",
+    "pos": "adj.",
+    "freq_rank": 8324,
+    "cefr": "B2",
+    "ipa": "/pækt/",
+    "def_zh": "被塞满的；拥挤的",
+    "def_en": "Filled tightly; containing a large number of items.",
+    "examples": [
+      {
+        "collocation": "packed schedule",
+        "scene": "work",
+        "sentence": "They have a packed schedule for the upcoming conference.",
+        "translation_zh": "他们的日程安排在即将举行的会议上非常紧凑。"
+      },
+      {
+        "collocation": "packed audience",
+        "scene": "culture",
+        "sentence": "A packed audience attended the concert last night.",
+        "translation_zh": "昨晚，观众席座无虚席，演唱会非常成功。"
+      },
+      {
+        "collocation": "packed suitcase",
+        "scene": "travel",
+        "sentence": "She realized her packed suitcase was over the weight limit.",
+        "translation_zh": "她意识到她的行李箱已经超重了。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "overlap": {
+    "word_id": null,
+    "headword": "overlap",
+    "pos": "n./v.",
+    "freq_rank": 8870,
+    "cefr": "B2",
+    "ipa": "/ˈoʊ.vɚ.læp/",
+    "def_zh": "重叠",
+    "def_en": "To have part of one thing covering part of another.",
+    "examples": [
+      {
+        "collocation": "overlap in studies",
+        "scene": "academic",
+        "sentence": "Students should identify areas where their research overlaps in studies.",
+        "translation_zh": "学生应确定他们研究中重叠的领域。"
+      },
+      {
+        "collocation": "overlap of responsibilities",
+        "scene": "work",
+        "sentence": "The overlap of responsibilities can lead to confusion among team members.",
+        "translation_zh": "职责的重叠可能会导致团队成员之间的混淆。"
+      },
+      {
+        "collocation": "overlap between cultures",
+        "scene": "culture",
+        "sentence": "There is often an overlap between cultures that enriches both communities.",
+        "translation_zh": "不同文化之间往往有重叠，这丰富了双方的社区。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "rearrange": {
+    "word_id": null,
+    "headword": "rearrange",
+    "pos": "v.",
+    "freq_rank": 9441,
+    "cefr": "B2",
+    "ipa": "/ˌriːəˈreɪndʒ/",
+    "def_zh": "重新安排",
+    "def_en": "To change the arrangement or order of something.",
+    "examples": [
+      {
+        "collocation": "rearrange the schedule",
+        "scene": "work",
+        "sentence": "We need to rearrange the schedule to accommodate the new project.",
+        "translation_zh": "我们需要重新安排日程以适应新项目。"
+      },
+      {
+        "collocation": "rearrange the furniture",
+        "scene": "daily_life",
+        "sentence": "She decided to rearrange the furniture for a fresh look.",
+        "translation_zh": "她决定重新安排家具以获得新外观。"
+      },
+      {
+        "collocation": "rearrange the data",
+        "scene": "science_tech",
+        "sentence": "Researchers often rearrange the data to reveal hidden patterns.",
+        "translation_zh": "研究人员经常重新整理数据以揭示隐藏的模式。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  }
+}

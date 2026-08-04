@@ -10,7 +10,7 @@
 
 难度档:A2 9 · B1 189
 
-场景(共 594 条例句):academic 30 · news 91 · daily_life 101 · work 120 · science_tech 52 · health 34 · environment 11 · education 81 · travel 4 · culture 70
+场景(共 594 条例句):academic 28 · news 92 · daily_life 99 · work 120 · science_tech 52 · health 33 · environment 13 · education 81 · travel 4 · culture 72
 
 ## 这批内容是怎么把住质量的
 
@@ -126,7 +126,7 @@
 | | |
 | --- | --- |
 | 音标 | /əˈmɪd/ |
-| 中文释义 | 在……中间；在……之中 |
+| 中文释义 | 在……中间 |
 | 英文释义 | In the middle of; during something. |
 | freq_rank | 3825 |
 | 难度档 | B1 |
@@ -190,16 +190,16 @@
 | | |
 | --- | --- |
 | 音标 | /ˈpɛn.əl.ti/ |
-| 中文释义 | 因违反规定而受到的惩罚或不利后果 |
-| 英文释义 | A punishment or disadvantage for an offense or violation. |
+| 中文释义 | 处罚；点球 |
+| 英文释义 | A punishment for breaking a rule or law. |
 | freq_rank | 2680 |
 | 难度档 | B1 |
 
 | # | 搭配 | 场景 | 例句 | 译文 |
 | ---: | --- | --- | --- | --- |
-| 1 | penalties for breaking the rules | `work` | Companies face severe penalties for breaking the rules. | 公司因违反规定而面临严厉的惩罚。 |
-| 2 | a penalty fee for late payment | `daily_life` | You will incur a penalty fee for late payment of the bill. | 如果账单逾期付款，您将产生罚款。 |
-| 3 | penalty points on your license | `academic` | Students can receive penalty points on their license for academic dishonesty. | 学生因学术不诚实可以在他们的执照上获得罚分。 |
+| 1 | face a penalty | `news` | Companies that violate safety regulations may face a penalty. | 违反安全法规的公司可能面临处罚。 |
+| 2 | incur a penalty | `work` | Employees who arrive late may incur a penalty in their pay. | 迟到的员工可能会在工资中产生处罚。 |
+| 3 | receive a penalty | `education` | Students who cheat on exams will receive a penalty from the school. | 在考试中作弊的学生将受到学校的处罚。 |
 
 ### 11. sanction  *n./v.*
 
@@ -207,30 +207,30 @@
 | --- | --- |
 | 音标 | /ˈsæŋkʃən/ |
 | 中文释义 | 制裁；许可 |
-| 英文释义 | A penalty or approval for an action. |
+| 英文释义 | A penalty or approval for an action or behavior. |
 | freq_rank | 3217 |
 | 难度档 | B1 |
 
 | # | 搭配 | 场景 | 例句 | 译文 |
 | ---: | --- | --- | --- | --- |
-| 1 | impose sanctions | `news` | The government decided to impose sanctions on the country. | 政府决定对该国实施制裁。 |
-| 2 | economic sanctions | `work` | Many companies avoid doing business with nations under economic sanctions. | 许多公司避免与受经济制裁的国家做生意。 |
-| 3 | sanction for use | `education` | Students must obtain a sanction for use before accessing the resources. | 学生在使用资源之前必须获得使用许可。 |
+| 1 | economic sanctions | `news` | Many countries imposed economic sanctions on the regime for its actions. | 许多国家因该政权的行为对其实施了经济制裁。 |
+| 2 | government sanctions | `work` | The company must comply with government sanctions to operate in the region. | 该公司必须遵守政府的制裁以在该地区运营。 |
+| 3 | international sanctions | `culture` | International sanctions were placed on the nation due to human rights violations. | 由于侵犯人权，该国受到国际制裁。 |
 
 ### 12. coalition  *n.*
 
 | | |
 | --- | --- |
 | 音标 | /koʊ.əˈlɪʃ.ən/ |
-| 中文释义 | 为特定目的或目标而形成的团体 |
+| 中文释义 | 联盟 |
 | 英文释义 | A group formed for a specific purpose or goal. |
 | freq_rank | 2241 |
 | 难度档 | B1 |
 
 | # | 搭配 | 场景 | 例句 | 译文 |
 | ---: | --- | --- | --- | --- |
-| 1 | coalition government | `news` | Several parties formed a coalition government after the elections. | 几个月前的选举后，几个政党组成了联合政府。 |
-| 2 | international coalition | `work` | The international coalition addressed climate change through collaborative efforts. | 国际联盟通过合作努力应对气候变化。 |
+| 1 | broad coalition | `news` | Many organizations are joining a broad coalition to combat climate change. | 许多组织正在加入一个广泛的联盟来应对气候变化。 |
+| 2 | political coalition | `work` | The political coalition aims to address key economic issues facing the country. | 该政治联盟旨在解决国家面临的主要经济问题。 |
 | 3 | coalition of support | `culture` | Artists often seek a coalition of support from local communities for their projects. | 艺术家们通常希望从当地社区获得对其项目的支持联盟。 |
 
 ### 13. contractor  *n.*
@@ -238,7 +238,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈkɒn.træk.tər/ |
-| 中文释义 | 根据合同提供服务的个人或公司。 |
+| 中文释义 | 承包商 |
 | 英文释义 | A person or company that provides services under a contract. |
 | freq_rank | 3745 |
 | 难度档 | B1 |
@@ -254,7 +254,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈhɔːl.weɪ/ |
-| 中文释义 | 建筑内部的长而狭窄的通道。 |
+| 中文释义 | 走廊 |
 | 英文释义 | A long narrow passage inside a building. |
 | freq_rank | 3559 |
 | 难度档 | B1 |

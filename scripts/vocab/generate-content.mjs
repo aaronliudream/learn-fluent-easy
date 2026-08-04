@@ -37,7 +37,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SCENES, runAllGates, ngrams } from './gates.mjs';
+import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER } from './gates.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
 import { DEF_ZH_RULE } from './prompt-rules.mjs';
 
@@ -170,12 +170,18 @@ Produce a study card with these HARD requirements:
 2. def_zh: 中文释义.
 ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
 3. def_en: English definition, AT MOST 15 words.
+   ⚠️ NEVER use "${word.headword}" (or any inflected/derived form of it) inside def_en.
+   A definition that contains the word being defined teaches nothing.
+   Bad:  outrageous -> "Extremely shocking or bad; outrageous behavior is unacceptable." ❌
+   Good: outrageous -> "Extremely shocking, offensive, or unacceptable." ✅
 4. examples: EXACTLY 3 objects. Each anchors ONE high-frequency collocation of "${word.headword}".
    - Order the three by collocation frequency: examples[0] uses the MOST frequent collocation, examples[2] the least.
    - The three collocations MUST be different from one another.
    - scene MUST be one of: ${SCENES.join(', ')}.
    - The three scenes MUST all be different from one another.
-   - sentence: between 8 and 16 words. "${word.headword}" must appear in a natural inflected
+   - sentence: between ${LENGTH_BY_TIER[cefr.level]?.[0] ?? 8} and ${LENGTH_BY_TIER[cefr.level]?.[1] ?? 16} words
+     (this range is set by the ${cefr.level} difficulty tier - harder words get longer,
+     more complex sentences). "${word.headword}" must appear in a natural inflected
      form (plural / tense / comparative as the sentence requires) - do not force the bare form.
    - The three sentences must NOT share sentence structure: they must not all start with
      "The" or "A", and their subjects must not all be the same kind of entity
@@ -188,6 +194,11 @@ ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
      "defense attorney" is right.
    - translation_zh: 该句的中文翻译, 自然流畅. 标点必须全部用全角
      (句末用 "。", 句中停顿用 "，"), 中文里绝对不要出现半角的 , . ! ? 。
+     ⚠️ 忠实翻译: 不许增译(加英文里没有的内容), 也不许漏译.
+     反例: EN "A packed audience attended the concert last night."
+           ZH "昨晚，观众席座无虚席，演唱会非常成功。" ❌ ("演唱会非常成功" 英文里没有)
+   - ⚠️ 三条例句用的必须都是 def_zh 里给出的义项, 不许跑到别的义项去.
+     反例: def_zh "浪漫；爱情关系" 却造 "romance languages"(罗曼语族, 另一个义项) ❌
 5. NEVER use an em-dash (—) or en-dash (–) anywhere in any field. Use commas or periods.
 6. Difficulty is set by the word's own frequency (${cefr.level}), NOT by any exam.${retry}`;
 
@@ -318,7 +329,9 @@ async function main() {
           process.stdout.write(`  ✗ ${word.headword} 第${attempt}次 API 失败:${e.message}\n`);
           continue;
         }
-        const fails = runAllGates(word, payload, corpus, inflectTable);
+        // useTierLength:新生成走按档句长(A2 8-12 / B1 8-14 / B2 10-16 / C1 12-20)
+        // ⚠️ cefr 要挂在**第一个参数**上 —— runAllGates 读的是 word.cefr,不是 payload.cefr
+        const fails = runAllGates({ ...word, cefr: cefr.level }, payload, corpus, inflectTable, { useTierLength: true });
         if (!fails.length) {
           results[word.headword.toLowerCase()] = {
             word_id: word.id, headword: word.headword, pos: word.pos,

@@ -119,10 +119,20 @@ export function g1_targetPresent(sentence, headword, table) {
   return hit ? null : `g1 目标词缺席:句中找不到 "${headword}" 或其屈折形`;
 }
 
-/** g2 长度 8-16 词。 */
-export function g2_length(sentence) {
+/** 按难度档的句长区间。
+ *  由来:统一 8-16 时实测三档语言复杂度几乎没差别 ——
+ *  平均词数 10.0 / 10.3 / 10.1,长词占比反而 29.3% → 25.5% 递减。
+ *  长度约束把句法复杂度压平了,分档等于只是个标签,故按档放开。
+ *  ⚠️ 只对**新生成**生效;回溯复检存量内容时仍用 [8,16],
+ *     否则会把已验收的句子全判成不合格。 */
+export const LENGTH_BY_TIER = { A2: [8, 12], B1: [8, 14], B2: [10, 16], C1: [12, 20] };
+export const LEGACY_LENGTH = [8, 16];
+
+/** g2 句长。range 不传则用统一的 8-16(存量口径)。 */
+export function g2_length(sentence, range = LEGACY_LENGTH) {
+  const [lo, hi] = range;
   const n = words(sentence).length;
-  return (n >= 8 && n <= 16) ? null : `g2 长度 ${n} 词,超出 8-16`;
+  return (n >= lo && n <= hi) ? null : `g2 长度 ${n} 词,超出 ${lo}-${hi}`;
 }
 
 /** g3 em-dash 扫描(例句/译文/释义全扫,不只例句)。 */
@@ -218,6 +228,51 @@ export function g9_distinctOpeners(examples) {
   return null;
 }
 
+/**
+ * ⚠️⚠️ 长度比版本的 g11 —— **实测失败,已从 runAllGates 摘除,不要再接回去**。
+ *
+ * 原想用"中文字数 / 英文词数"当零成本代理指标判增译。198 词回溯实测结果是
+ * **两个方向都不成立**:
+ *   · 假阳性:incredible「许多艺术家拥有令人难以置信的才能,激励着他人。」比值 2.63 被判增译,
+ *     但它是忠实翻译 —— 中文只是把 incredible 译得长。
+ *   · 假阴性:真正的增译 packed「昨晚,观众席座无虚席,**演唱会非常成功**」
+ *     (后半句英文里没有)比值只有 2.00,稳稳低于阈值,照样放行。
+ * 命中 2 个全是假阳性,真样本 0 个。这种闸门比没有更糟 —— 它给人"已经查过"的错觉。
+ *
+ * 真正的 g11 改由 verify-content.mjs 的校验调用做(与 g10 合并进同一次调用,
+ * 边际成本为零)。此函数仅保留供回溯诊断参考,不参与放行判定。
+ */
+export function g11_lengthRatioDiagnostic(examples, maxRatio = 2.6, minRatio = 0.8) {
+  for (let i = 0; i < examples.length; i++) {
+    const en = words(examples[i].sentence).length;
+    const zh = String(examples[i].translation_zh || '').replace(/[^一-鿿]/g, '').length;
+    if (!en) continue;
+    const r = zh / en;
+    if (r > maxRatio) {
+      return `g11 第${i + 1}条译文疑似增译:${en} 个英文词译出 ${zh} 个汉字(比值 ${r.toFixed(2)} > ${maxRatio})`;
+    }
+    if (r < minRatio) {
+      return `g11 第${i + 1}条译文疑似漏译:${en} 个英文词只译出 ${zh} 个汉字(比值 ${r.toFixed(2)} < ${minRatio})`;
+    }
+  }
+  return null;
+}
+
+/**
+ * def_en 禁循环定义:英文释义里不许出现目标词本身或其屈折/派生形。
+ * 实测捕获:outrageous 的 def_en 是
+ *   "Extremely shocking or bad; outrageous behavior is unacceptable."
+ * 拿 outrageous 解释 outrageous,对学习者零信息量。纯机械判定,零成本。
+ */
+export function g12_defEnNotCircular(defEn, headword, table) {
+  const hw = String(headword).toLowerCase();
+  const forms = inflectionsOf(hw, table);
+  const toks = String(defEn || '').toLowerCase().split(/[\s\-–—/]+/)
+    .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
+  const hit = toks.find(t => matchesForm(t, hw, forms));
+  return hit ? `def_en 循环定义:释义里出现了目标词本身("${hit}")` : null;
+}
+
 /** g6 同词三句相似度:任意两句 4-gram 重合 >30% 拒(防"换个场景词其余照抄")。 */
 export function g6_intraWordSimilarity(examples, threshold = 0.3) {
   const sets = examples.map(e => ngrams(e.sentence));
@@ -236,9 +291,14 @@ export function g6_intraWordSimilarity(examples, threshold = 0.3) {
  * 跑全部六道闸门。返回失败原因数组(空数组 = 全过)。
  * corpusNgramSets: 已接受句子的 4-gram 集合数组(全局语料)。
  */
-export function runAllGates(word, payload, corpusNgramSets, inflectTable) {
+export function runAllGates(word, payload, corpusNgramSets, inflectTable, opts = {}) {
   const fails = [];
   const examples = payload?.examples;
+  /* 句长区间:新生成传 useTierLength=true 走按档区间;
+   * 回溯复检存量内容不传,沿用 8-16,免得把已验收的句子全判废。 */
+  const range = opts.useTierLength && LENGTH_BY_TIER[word?.cefr]
+    ? LENGTH_BY_TIER[word.cefr]
+    : LEGACY_LENGTH;
 
   const g5 = g5_mutualExclusive(examples);
   if (g5) fails.push(g5);
@@ -250,7 +310,7 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable) {
       const tag = `例${i + 1}`;
       const checks = [
         g1_targetPresent(ex.sentence, word.headword, inflectTable),
-        g2_length(ex.sentence),
+        g2_length(ex.sentence, range),
         g3_noEmDash(ex.sentence, ex.translation_zh, payload.def_en, payload.def_zh),
         g4_globalDedup(ex.sentence, running),
       ];
@@ -265,6 +325,7 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable) {
       g7_collocationContainsWord(examples, word.headword, inflectTable),
       g8_zhPunctuation(examples),
       g9_distinctOpeners(examples),
+      // g11 不在这里 —— 长度比版本实测假阳/假阴双失败,真正的 g11 在 verify-content.mjs
     ]) if (c) fails.push(c);
   }
 
@@ -272,5 +333,7 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable) {
   if (payload?.def_en && words(payload.def_en).length > 15) {
     fails.push(`def_en ${words(payload.def_en).length} 词,超过 15`);
   }
+  const circular = g12_defEnNotCircular(payload?.def_en, word.headword, inflectTable);
+  if (circular) fails.push(circular);
   return fails;
 }

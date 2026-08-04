@@ -166,7 +166,15 @@ async function main() {
   const changes = [];
   // --only=double:只重修当前仍是双义的词(第二轮定点清理用,不重烧已经改好的)
   const ONLY = arg('only', '');
-  const queue = ONLY === 'double' ? list.filter(w => w.def_zh.includes('；')) : [...list];
+  /* malformed:释义被写成了解释句而不是词典式短语。
+   * ⚠️ 这批是本脚本第一轮自己搞出来的回归 —— 第一轮的 shapeOk 只查分号个数,
+   *    没查"是不是句子",于是 attorney 从「律师；代理人」被改成
+   *    「在法律事务中代表他人的人。」,反而更差。第二轮 --only=double 又只挑
+   *    还带分号的,这些没分号的漏网。判据与 shapeOk 一致:含句号 或 单段 >12 字。 */
+  const isMalformed = s => /[。.!?！？]/.test(s) || s.split('；').some(p => p.trim().length > 12);
+  const queue = ONLY === 'double' ? list.filter(w => w.def_zh.includes('；'))
+    : ONLY === 'malformed' ? list.filter(w => isMalformed(w.def_zh))
+      : [...list];
   if (ONLY) process.stdout.write(`· --only=${ONLY}:本轮只处理 ${queue.length} 词\n`);
   let done = 0;
   await Promise.all(Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {

@@ -38,7 +38,7 @@
     "freq_rank": 1069,
     "cefr": "A2",
     "ipa": "/əˈtɜr.ni/",
-    "def_zh": "在法律事务中代表他人的人。",
+    "def_zh": "律师",
     "def_en": "A person who represents others in legal matters.",
     "examples": [
       {
@@ -135,29 +135,30 @@
     "cefr": "A2",
     "ipa": "/ˈkɒn.tɛkst/",
     "def_zh": "上下文",
-    "def_en": "The circumstances or situations in which something occurs.",
+    "def_en": "The circumstances or setting surrounding an event or idea.",
     "examples": [
       {
-        "collocation": "in context",
+        "collocation": "cultural context",
+        "scene": "culture",
+        "sentence": "Understanding cultural context is vital for appreciating different traditions.",
+        "translation_zh": "理解文化上下文对欣赏不同的传统至关重要。"
+      },
+      {
+        "collocation": "historical context",
         "scene": "education",
-        "sentence": "Teachers explain words better when they are used in context.",
-        "translation_zh": "老师在上下文中解释单词时会更好。"
+        "sentence": "Teachers often provide historical context to enhance student understanding of events.",
+        "translation_zh": "教师常常提供历史上下文以增强学生对事件的理解。"
       },
       {
         "collocation": "social context",
         "scene": "daily_life",
-        "sentence": "Understanding social context helps us communicate effectively with others.",
-        "translation_zh": "理解社会背景有助于我们与他人有效沟通。"
-      },
-      {
-        "collocation": "historical context",
-        "scene": "culture",
-        "sentence": "The novel is set in historical context to highlight its themes.",
-        "translation_zh": "这部小说的背景设定在历史背景中，以突出其主题。"
+        "sentence": "Analyzing social context can improve our interactions with various communities.",
+        "translation_zh": "分析社会上下文可以改善我们与不同社区的互动。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "voter": {
     "word_id": "bc7c85ae-130d-4b71-81de-d525621dd40a",
@@ -166,7 +167,7 @@
     "freq_rank": 1452,
     "cefr": "A2",
     "ipa": "/ˈvoʊ.tɚ/",
-    "def_zh": "在选举中投票的人。",
+    "def_zh": "投票者",
     "def_en": "A person who votes in elections.",
     "examples": [
       {
@@ -262,20 +263,20 @@
     "freq_rank": 1535,
     "cefr": "B1",
     "ipa": "/ˈθiː.ə.tər/",
-    "def_zh": "一个举办戏剧和表演的地方。",
-    "def_en": "A place where plays and performances are held.",
+    "def_zh": "剧院",
+    "def_en": "A building for performances, such as plays or movies.",
     "examples": [
       {
-        "collocation": "theater production",
+        "collocation": "theater performance",
         "scene": "culture",
-        "sentence": "Many new theater productions are being showcased this summer.",
-        "translation_zh": "许多新的剧院制作将在这个夏天展出。"
+        "sentence": "Many people attended the theater performance last weekend.",
+        "translation_zh": "上周末，很多人参加了剧院演出。"
       },
       {
-        "collocation": "theater performance",
-        "scene": "education",
-        "sentence": "Students often attend a theater performance to enhance their learning experience.",
-        "translation_zh": "学生们经常参加戏剧表演来增强他们的学习体验。"
+        "collocation": "community theater",
+        "scene": "daily_life",
+        "sentence": "Community theater provides opportunities for local artists to showcase their talents.",
+        "translation_zh": "社区剧院为当地艺术家提供展示才华的机会。"
       },
       {
         "collocation": "theater critic",
@@ -285,7 +286,8 @@
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "neighbor": {
     "word_id": "57a6a02f-2b74-45c6-99bd-6dd7efaf1578",
@@ -295,29 +297,30 @@
     "cefr": "A2",
     "ipa": "/ˈneɪ.bər/",
     "def_zh": "邻居；邻国",
-    "def_en": "A person living near another.",
+    "def_en": "A person living near another; a country adjacent to another.",
     "examples": [
       {
-        "collocation": "next door neighbor",
+        "collocation": "next-door neighbor",
         "scene": "daily_life",
-        "sentence": "Our next door neighbor has a lovely garden with flowers.",
-        "translation_zh": "我们隔壁的邻居有一个漂亮的花园，种满了花。"
+        "sentence": "My next-door neighbor often helps me with home repairs.",
+        "translation_zh": "我家隔壁的邻居经常帮助我修理房子。"
       },
       {
-        "collocation": "friendly neighbor",
+        "collocation": "friendly neighbors",
         "scene": "culture",
-        "sentence": "She is known as a friendly neighbor who helps everyone.",
-        "translation_zh": "她被称为一个友好的邻居，总是帮助大家。"
+        "sentence": "Friendly neighbors can create a strong sense of community in urban areas.",
+        "translation_zh": "友好的邻居可以在城市地区创造强烈的社区感。"
       },
       {
-        "collocation": "neighboring countries",
+        "collocation": "bordering neighbors",
         "scene": "news",
-        "sentence": "Many neighboring countries are cooperating on environmental issues.",
-        "translation_zh": "许多邻国在环境问题上进行合作。"
+        "sentence": "Bordering neighbors must collaborate to address cross-border issues effectively.",
+        "translation_zh": "邻国必须合作，有效解决跨境问题。"
       }
     ],
     "_attempts": 2,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "currently": {
     "word_id": "b0f2d11a-753d-4af9-9cca-7ab9d3240470",
@@ -422,7 +425,7 @@
     "freq_rank": 1729,
     "cefr": "B1",
     "ipa": "/ˈɛθ.nɪk/",
-    "def_zh": "与特定种族或文化群体相关的",
+    "def_zh": "民族的",
     "def_en": "Relating to a particular race or cultural group.",
     "examples": [
       {
@@ -550,7 +553,7 @@
     "freq_rank": 1926,
     "cefr": "B1",
     "ipa": "/ˌɪn.tərˈvɛn.ʃən/",
-    "def_zh": "干预，介入某种情况以改变其结果的行为。",
+    "def_zh": "干预",
     "def_en": "The act of becoming involved in a situation to change it.",
     "examples": [
       {
@@ -646,7 +649,7 @@
     "freq_rank": 2094,
     "cefr": "B1",
     "ipa": "/ˈæs.ɛt/",
-    "def_zh": "有用或有价值的事物、人物或品质。",
+    "def_zh": "资产",
     "def_en": "A useful or valuable thing, person, or quality.",
     "examples": [
       {
@@ -710,7 +713,7 @@
     "freq_rank": 1974,
     "cefr": "B1",
     "ipa": "/ˈsɛk.tər/",
-    "def_zh": "某事物的一个独特部分或分区",
+    "def_zh": "部门；行业",
     "def_en": "A distinct part or division of something.",
     "examples": [
       {
@@ -775,29 +778,30 @@
     "cefr": "B1",
     "ipa": "/prəˈsiː.dɪŋ/",
     "def_zh": "正在进行的事件或行动",
-    "def_en": "An event or action that is happening or ongoing.",
+    "def_en": "An event or action that is currently taking place.",
     "examples": [
       {
-        "collocation": "legal proceedings",
+        "collocation": "legal proceeding",
+        "scene": "news",
+        "sentence": "Legal proceedings against the company are ongoing and will conclude next month.",
+        "translation_zh": "对该公司的法律程序正在进行中，将于下个月结束。"
+      },
+      {
+        "collocation": "court proceeding",
         "scene": "work",
-        "sentence": "Legal proceedings can take a long time to resolve.",
-        "translation_zh": "法律诉讼可能需要很长时间才能解决。"
+        "sentence": "Court proceedings related to the case are expected to resume next week.",
+        "translation_zh": "与此案相关的法庭程序预计下周将恢复进行。"
       },
       {
-        "collocation": "proceedings of the conference",
-        "scene": "academic",
-        "sentence": "The proceedings of the conference will be published next month.",
-        "translation_zh": "会议的论文集将在下个月出版。"
-      },
-      {
-        "collocation": "proceedings in a meeting",
-        "scene": "daily_life",
-        "sentence": "During the meeting, the proceedings were properly recorded.",
-        "translation_zh": "在会议期间，相关程序被妥善记录。"
+        "collocation": "academic proceeding",
+        "scene": "education",
+        "sentence": "Academic proceedings for the conference will start early in the morning.",
+        "translation_zh": "会议的学术程序将在早晨开始进行。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "remaining": {
     "word_id": "77a6d7d3-bcee-4a19-b0c4-56dae26a00c3",
@@ -838,30 +842,31 @@
     "freq_rank": 2159,
     "cefr": "B1",
     "ipa": "/tʃɪp/",
-    "def_zh": "小块材料或电子元件；在某些情况下指共同出资或参与",
-    "def_en": "A small piece of material or an electronic component.",
+    "def_zh": "碎片；芯片",
+    "def_en": "A small piece broken off from a larger object or a microprocessor component.",
     "examples": [
       {
         "collocation": "computer chip",
         "scene": "science_tech",
-        "sentence": "New computer chips will improve the performance of devices significantly.",
-        "translation_zh": "新的计算机芯片将显著提高设备的性能。"
+        "sentence": "The computer chip is essential for modern technology.",
+        "translation_zh": "这款计算机芯片对现代科技至关重要。"
       },
       {
-        "collocation": "potato chips",
+        "collocation": "ceramic chip",
         "scene": "daily_life",
-        "sentence": "She bought a bag of potato chips for the party snacks.",
-        "translation_zh": "她买了一袋薯片作为派对小吃。"
+        "sentence": "She found a ceramic chip on the kitchen floor.",
+        "translation_zh": "她在厨房地板上发现了一个陶瓷碎片。"
       },
       {
-        "collocation": "chip in",
-        "scene": "work",
-        "sentence": "Everyone should chip in to help with the project costs.",
-        "translation_zh": "每个人都应该出力帮助项目费用。"
+        "collocation": "wood chip",
+        "scene": "environment",
+        "sentence": "Wood chip mulch helps retain soil moisture in gardens.",
+        "translation_zh": "木屑覆盖物有助于保持花园土壤的湿度。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "coalition": {
     "word_id": "34b2fa3a-bfe8-426c-8601-ba792bf98d28",
@@ -870,20 +875,20 @@
     "freq_rank": 2241,
     "cefr": "B1",
     "ipa": "/koʊ.əˈlɪʃ.ən/",
-    "def_zh": "为特定目的或目标而形成的团体",
+    "def_zh": "联盟",
     "def_en": "A group formed for a specific purpose or goal.",
     "examples": [
       {
-        "collocation": "coalition government",
+        "collocation": "broad coalition",
         "scene": "news",
-        "sentence": "Several parties formed a coalition government after the elections.",
-        "translation_zh": "几个月前的选举后，几个政党组成了联合政府。"
+        "sentence": "Many organizations are joining a broad coalition to combat climate change.",
+        "translation_zh": "许多组织正在加入一个广泛的联盟来应对气候变化。"
       },
       {
-        "collocation": "international coalition",
+        "collocation": "political coalition",
         "scene": "work",
-        "sentence": "The international coalition addressed climate change through collaborative efforts.",
-        "translation_zh": "国际联盟通过合作努力应对气候变化。"
+        "sentence": "The political coalition aims to address key economic issues facing the country.",
+        "translation_zh": "该政治联盟旨在解决国家面临的主要经济问题。"
       },
       {
         "collocation": "coalition of support",
@@ -893,7 +898,8 @@
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "transition": {
     "word_id": "efdc4fc9-a584-4a2c-a0cc-ba25389ac59b",
@@ -966,7 +972,7 @@
     "freq_rank": 2142,
     "cefr": "B1",
     "ipa": "/ˈθɛrəpi/",
-    "def_zh": "治疗，尤其是针对身体或心理健康问题的治疗。",
+    "def_zh": "治疗",
     "def_en": "A treatment for physical or mental health issues.",
     "examples": [
       {
@@ -998,7 +1004,7 @@
     "freq_rank": 2326,
     "cefr": "B1",
     "ipa": "/ˈtʃæm.pi.ən.ʃɪp/",
-    "def_zh": "一系列比赛，用于决定冠军。",
+    "def_zh": "锦标赛",
     "def_en": "A series of contests to determine a champion.",
     "examples": [
       {
@@ -1126,7 +1132,7 @@
     "freq_rank": 2442,
     "cefr": "B1",
     "ipa": "/rɪˈtaɪərmənt/",
-    "def_zh": "退休，指离开工作岗位并停止工作的行为。",
+    "def_zh": "退休",
     "def_en": "The action of leaving one's job and ceasing to work.",
     "examples": [
       {
@@ -1158,7 +1164,7 @@
     "freq_rank": 2415,
     "cefr": "B1",
     "ipa": "/kənˈfrʌnt/",
-    "def_zh": "面对某人或某事，以挑战的方式应对。",
+    "def_zh": "面对；对抗",
     "def_en": "To face someone or something in a challenging way.",
     "examples": [
       {
@@ -1350,30 +1356,31 @@
     "freq_rank": 2594,
     "cefr": "B1",
     "ipa": "/ˈfaɪ.bɚ/",
-    "def_zh": "一种线状结构或有助于消化的膳食材料。",
-    "def_en": "A threadlike structure or dietary material that aids digestion.",
+    "def_zh": "纤维",
+    "def_en": "A thread-like component found in various materials, especially in foods.",
     "examples": [
       {
         "collocation": "dietary fiber",
         "scene": "health",
-        "sentence": "Eating more dietary fiber can improve your digestive health.",
-        "translation_zh": "增加膳食纤维的摄入可以改善你的消化健康。"
+        "sentence": "Eating fruits and vegetables increases your intake of dietary fiber.",
+        "translation_zh": "吃水果和蔬菜可以增加你的膳食纤维摄入。"
       },
       {
-        "collocation": "fiber optic",
+        "collocation": "natural fibers",
         "scene": "science_tech",
-        "sentence": "Fiber optic technology enables fast internet connections in homes and businesses.",
-        "translation_zh": "光纤技术使家庭和企业能够实现快速的互联网连接。"
+        "sentence": "Natural fibers like cotton are biodegradable and environmentally friendly.",
+        "translation_zh": "棉花等天然纤维是可生物降解的且对环境友好。"
       },
       {
-        "collocation": "fiber content",
+        "collocation": "synthetic fiber",
         "scene": "daily_life",
-        "sentence": "The fiber content in fruits and vegetables is essential for a balanced diet.",
-        "translation_zh": "水果和蔬菜中的纤维含量对均衡饮食至关重要。"
+        "sentence": "Many clothing items are made from synthetic fiber for durability.",
+        "translation_zh": "许多衣物是用合成纤维制作的，以提高耐用性。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "dealer": {
     "word_id": "1686af71-7436-415a-bbb5-61602bebedbb",
@@ -1388,24 +1395,25 @@
       {
         "collocation": "car dealer",
         "scene": "daily_life",
-        "sentence": "Many people visit the car dealer to find a new vehicle.",
-        "translation_zh": "许多人去汽车经销商那里寻找新车。"
+        "sentence": "Many people rely on a car dealer for reliable transportation options.",
+        "translation_zh": "许多人依赖汽车经销商提供可靠的交通选择。"
+      },
+      {
+        "collocation": "real estate dealer",
+        "scene": "work",
+        "sentence": "A successful real estate dealer understands market trends and client needs.",
+        "translation_zh": "成功的房地产经纪人了解市场趋势和客户需求。"
       },
       {
         "collocation": "art dealer",
         "scene": "culture",
-        "sentence": "She works as an art dealer, showcasing various famous artists' works.",
-        "translation_zh": "她是一名艺术经销商，展示各种著名艺术家的作品。"
-      },
-      {
-        "collocation": "drug dealer",
-        "scene": "news",
-        "sentence": "The police arrested several drug dealers in the recent operation.",
-        "translation_zh": "警方在最近的行动中逮捕了几名毒贩。"
+        "sentence": "An art dealer connects artists with collectors and promotes their work.",
+        "translation_zh": "艺术经销商将艺术家与收藏家联系，推广他们的作品。"
       }
     ],
     "_attempts": 2,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "lawsuit": {
     "word_id": "656a62a4-ef3f-433e-95bc-3f125fc3a49d",
@@ -1478,7 +1486,7 @@
     "freq_rank": 2661,
     "cefr": "B1",
     "ipa": "/ˈtɛs.tə.moʊ.ni/",
-    "def_zh": "在法庭上作为证据所作的正式陈述。",
+    "def_zh": "证词",
     "def_en": "A formal statement made as evidence in court.",
     "examples": [
       {
@@ -1510,30 +1518,31 @@
     "freq_rank": 2676,
     "cefr": "B1",
     "ipa": "/ˈproʊ.faɪl/",
-    "def_zh": "轮廓或摘要，通常指某人或某事的基本信息或特征。",
-    "def_en": "An outline or summary of someone or something.",
+    "def_zh": "简介；轮廓",
+    "def_en": "A description or summary of someone's personal details or characteristics.",
     "examples": [
       {
-        "collocation": "social media profile",
+        "collocation": "online profile",
         "scene": "daily_life",
-        "sentence": "She updated her social media profile to attract more followers.",
-        "translation_zh": "她更新了自己的社交媒体侧面，以吸引更多的粉丝。"
+        "sentence": "Many people create an online profile to showcase their interests.",
+        "translation_zh": "许多人创建在线个人资料以展示他们的兴趣。"
+      },
+      {
+        "collocation": "user profile",
+        "scene": "work",
+        "sentence": "The user profile contains essential information about employee skills and experiences.",
+        "translation_zh": "用户个人资料包含有关员工技能和经验的基本信息。"
       },
       {
         "collocation": "detailed profile",
-        "scene": "work",
-        "sentence": "The manager requested a detailed profile of each employee's performance.",
-        "translation_zh": "经理要求提供每位员工表现的详细简介。"
-      },
-      {
-        "collocation": "criminal profile",
-        "scene": "news",
-        "sentence": "Police created a criminal profile to help catch the suspect.",
-        "translation_zh": "警方制作了犯罪嫌疑人的简介，以帮助抓捕嫌疑人。"
+        "scene": "education",
+        "sentence": "A detailed profile of the student helps teachers understand their learning needs.",
+        "translation_zh": "学生的详细个人资料帮助教师了解他们的学习需求。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "cooperation": {
     "word_id": "ff320b13-3405-41e9-8ab2-925b927b1db2",
@@ -1542,7 +1551,7 @@
     "freq_rank": 2668,
     "cefr": "B1",
     "ipa": "/koʊˈɑː.pə.reɪ.ʃən/",
-    "def_zh": "合作，共同为实现某一目标而进行的工作。",
+    "def_zh": "合作",
     "def_en": "The act of working together for a common goal.",
     "examples": [
       {
@@ -1606,30 +1615,31 @@
     "freq_rank": 2680,
     "cefr": "B1",
     "ipa": "/ˈpɛn.əl.ti/",
-    "def_zh": "因违反规定而受到的惩罚或不利后果",
-    "def_en": "A punishment or disadvantage for an offense or violation.",
+    "def_zh": "处罚；点球",
+    "def_en": "A punishment for breaking a rule or law.",
     "examples": [
       {
-        "collocation": "penalties for breaking the rules",
+        "collocation": "face a penalty",
+        "scene": "news",
+        "sentence": "Companies that violate safety regulations may face a penalty.",
+        "translation_zh": "违反安全法规的公司可能面临处罚。"
+      },
+      {
+        "collocation": "incur a penalty",
         "scene": "work",
-        "sentence": "Companies face severe penalties for breaking the rules.",
-        "translation_zh": "公司因违反规定而面临严厉的惩罚。"
+        "sentence": "Employees who arrive late may incur a penalty in their pay.",
+        "translation_zh": "迟到的员工可能会在工资中产生处罚。"
       },
       {
-        "collocation": "a penalty fee for late payment",
-        "scene": "daily_life",
-        "sentence": "You will incur a penalty fee for late payment of the bill.",
-        "translation_zh": "如果账单逾期付款，您将产生罚款。"
-      },
-      {
-        "collocation": "penalty points on your license",
-        "scene": "academic",
-        "sentence": "Students can receive penalty points on their license for academic dishonesty.",
-        "translation_zh": "学生因学术不诚实可以在他们的执照上获得罚分。"
+        "collocation": "receive a penalty",
+        "scene": "education",
+        "sentence": "Students who cheat on exams will receive a penalty from the school.",
+        "translation_zh": "在考试中作弊的学生将受到学校的处罚。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "infection": {
     "word_id": "29de0d86-d4c6-40d9-b3a1-6859174fa91a",
@@ -1638,7 +1648,7 @@
     "freq_rank": 2692,
     "cefr": "B1",
     "ipa": "/ɪnˈfɛkʃən/",
-    "def_zh": "由微生物侵入身体引起的疾病。",
+    "def_zh": "感染",
     "def_en": "A disease caused by microorganisms invading the body.",
     "examples": [
       {
@@ -1670,30 +1680,31 @@
     "freq_rank": 2689,
     "cefr": "B1",
     "ipa": "/ˌkɒn.stɪˈtjuː.ʃən.əl/",
-    "def_zh": "与治理国家的法律体系相关的",
-    "def_en": "Relating to the system of laws governing a state.",
+    "def_zh": "与国家法律体系相关的",
+    "def_en": "Related to a nation's legal framework or system of governance.",
     "examples": [
+      {
+        "collocation": "constitutional law",
+        "scene": "education",
+        "sentence": "Many universities offer courses on constitutional law to help students understand governance.",
+        "translation_zh": "许多大学提供宪法法课程，以帮助学生理解治理。"
+      },
       {
         "collocation": "constitutional rights",
         "scene": "news",
-        "sentence": "Citizens are entitled to constitutional rights in a democracy.",
-        "translation_zh": "公民在民主国家享有宪法权利。"
+        "sentence": "Citizens protested for their constitutional rights during the recent demonstrations.",
+        "translation_zh": "公民在最近的示威中抗议他们的宪法权利。"
       },
       {
-        "collocation": "constitutional law",
-        "scene": "academic",
-        "sentence": "Many students study constitutional law to understand legal frameworks.",
-        "translation_zh": "许多学生学习宪法法，以理解法律框架。"
-      },
-      {
-        "collocation": "constitutional amendment",
+        "collocation": "constitutional amendments",
         "scene": "work",
-        "sentence": "The team proposed a constitutional amendment to enhance individual freedoms.",
-        "translation_zh": "团队提出了一项宪法修正案，以增强个人自由。"
+        "sentence": "Lawyers discussed the implications of recent constitutional amendments on policy making.",
+        "translation_zh": "律师们讨论了最近宪法修正案对政策制定的影响。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "incentive": {
     "word_id": "d85b4d00-fead-458a-85a2-eaf904629c23",
@@ -1766,7 +1777,7 @@
     "freq_rank": 2735,
     "cefr": "B1",
     "ipa": "/ɪˈliːt/",
-    "def_zh": "精英，指具有优越地位或权力的特定群体。",
+    "def_zh": "精英",
     "def_en": "A select group with superior status or power.",
     "examples": [
       {
@@ -1830,7 +1841,7 @@
     "freq_rank": 2784,
     "cefr": "B1",
     "ipa": "/əˈwɛr.nəs/",
-    "def_zh": "对某种情况或事实的知识或感知",
+    "def_zh": "意识",
     "def_en": "Knowledge or perception of a situation or fact.",
     "examples": [
       {
@@ -1862,30 +1873,31 @@
     "freq_rank": 2790,
     "cefr": "B1",
     "ipa": "/ˈtɛstəˌfaɪ/",
-    "def_zh": "在法律场合中作出真实陈述，尤其是在法庭上。",
-    "def_en": "To make a statement of truth, especially in a legal setting.",
+    "def_zh": "作证",
+    "def_en": "To provide evidence or bear witness in a legal context.",
     "examples": [
       {
         "collocation": "testify in court",
-        "scene": "work",
-        "sentence": "Witnesses will testify in court about what they saw.",
-        "translation_zh": "证人将会在法庭上作证他们所看到的事情。"
+        "scene": "news",
+        "sentence": "Witnesses will testify in court regarding the events that took place.",
+        "translation_zh": "证人将在法庭上作证，说明发生的事件。"
       },
       {
-        "collocation": "testify to the truth",
-        "scene": "news",
-        "sentence": "Experts testify to the truth of the findings in the report.",
-        "translation_zh": "专家表明报告中的发现是真实的。"
+        "collocation": "testify about the facts",
+        "scene": "education",
+        "sentence": "Students are required to testify about the facts during the mock trial.",
+        "translation_zh": "学生们需要在模拟法庭上作证，说明事实。"
       },
       {
         "collocation": "testify under oath",
-        "scene": "education",
-        "sentence": "Students may be asked to testify under oath during mock trials.",
-        "translation_zh": "学生在模拟法庭上可能会被要求宣誓作证。"
+        "scene": "work",
+        "sentence": "Employees may testify under oath about their experiences during the investigation.",
+        "translation_zh": "员工们可能需要在调查期间作证，说明他们的经历。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "founder": {
     "word_id": "9e5e3b51-b81a-48f9-9a23-3fd93b859f46",
@@ -1898,26 +1910,27 @@
     "def_en": "A person who establishes an organization or institution.",
     "examples": [
       {
-        "collocation": "founder of the company",
+        "collocation": "company founder",
         "scene": "work",
-        "sentence": "Many believe the founder of the company is a visionary leader.",
-        "translation_zh": "许多人认为该公司的创始人是一个有远见的领导者。"
+        "sentence": "Many startups are led by a passionate company founder.",
+        "translation_zh": "许多初创企业由一位充满激情的公司创始人领导。"
       },
       {
-        "collocation": "founder member",
+        "collocation": "nonprofit founder",
         "scene": "culture",
-        "sentence": "As a founder member, she played a crucial role in the group.",
-        "translation_zh": "作为创始成员，她在小组中发挥了重要作用。"
+        "sentence": "She became a well-known nonprofit founder advocating for education reform.",
+        "translation_zh": "她成为了一位著名的非营利组织创始人，倡导教育改革。"
       },
       {
-        "collocation": "founder effect",
-        "scene": "science_tech",
-        "sentence": "The founder effect can significantly impact genetic diversity in populations.",
-        "translation_zh": "创始人效应可能对种群的遗传多样性产生显著影响。"
+        "collocation": "founder's legacy",
+        "scene": "education",
+        "sentence": "The founder's legacy continues to inspire students at the university.",
+        "translation_zh": "创始人的遗产继续激励着大学里的学生。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "assault": {
     "word_id": "af06fdac-7019-4334-96f4-dac2af19cb75",
@@ -2150,7 +2163,7 @@
     "freq_rank": 2915,
     "cefr": "B1",
     "ipa": "/ɪˈmɪʃ.ən/",
-    "def_zh": "释放到空气或环境中的物质。",
+    "def_zh": "排放物",
     "def_en": "A substance released into the air or environment.",
     "examples": [
       {
@@ -2186,26 +2199,27 @@
     "def_en": "Having a right or claim to something.",
     "examples": [
       {
-        "collocation": "entitled to",
+        "collocation": "entitled to benefits",
         "scene": "work",
-        "sentence": "Employees are entitled to receive paid time off for vacations.",
-        "translation_zh": "员工有权获得带薪休假。"
+        "sentence": "Employees are entitled to benefits after one year of service.",
+        "translation_zh": "员工在服务满一年后有权利获得福利。"
       },
       {
-        "collocation": "entitled people",
-        "scene": "daily_life",
-        "sentence": "Some entitled people believe they deserve special treatment in public.",
-        "translation_zh": "一些有特权的人认为他们在公共场合应得到特别待遇。"
+        "collocation": "entitled to compensation",
+        "scene": "news",
+        "sentence": "The workers are entitled to compensation for their overtime hours.",
+        "translation_zh": "工人有权利获得加班费。"
       },
       {
-        "collocation": "entitled benefits",
-        "scene": "education",
-        "sentence": "Students are entitled benefits if they qualify for financial aid programs.",
-        "translation_zh": "学生如果符合经济援助计划条件，便可以享受相关福利。"
+        "collocation": "entitled to vote",
+        "scene": "culture",
+        "sentence": "Citizens are entitled to vote in the upcoming elections.",
+        "translation_zh": "公民有权利在即将举行的选举中投票。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "vulnerable": {
     "word_id": "bb943577-32bd-4f82-9e2d-7e865f3f223c",
@@ -2246,7 +2260,7 @@
     "freq_rank": 2960,
     "cefr": "B1",
     "ipa": "/səˈlɛb.ər.ɪ.ti/",
-    "def_zh": "名人，通常指在娱乐或体育领域内的著名人物。",
+    "def_zh": "名人",
     "def_en": "A famous person, often in entertainment or sports.",
     "examples": [
       {
@@ -2342,7 +2356,7 @@
     "freq_rank": 2973,
     "cefr": "B1",
     "ipa": "/ˈkaʊn.sə.lər/",
-    "def_zh": "受过培训，能够就个人、社会或心理问题提供指导的人。",
+    "def_zh": "顾问",
     "def_en": "A person trained to give guidance on personal, social, or psychological issues.",
     "examples": [
       {
@@ -2406,7 +2420,7 @@
     "freq_rank": 3014,
     "cefr": "B1",
     "ipa": "/saɪˈkɒl.ə.dʒɪst/",
-    "def_zh": "心理学家，研究心理过程和行为的专业人士。",
+    "def_zh": "心理学家",
     "def_en": "A professional who studies mental processes and behavior.",
     "examples": [
       {
@@ -2439,29 +2453,30 @@
     "cefr": "B1",
     "ipa": "/ɪnˈkrɛd.ə.bəl/",
     "def_zh": "难以置信的；令人惊讶的",
-    "def_en": "Difficult to believe; amazing or extraordinary.",
+    "def_en": "Difficult to believe; astonishing or remarkable in nature.",
     "examples": [
       {
-        "collocation": "incredible experience",
+        "collocation": "incredible journey",
         "scene": "travel",
-        "sentence": "Traveling to Japan was an incredible experience for me.",
-        "translation_zh": "去日本旅行对我来说是一次难以置信的经历。"
+        "sentence": "She shared her incredible journey through the Amazon rainforest.",
+        "translation_zh": "她分享了她在亚马逊雨林中的难以置信的旅程。"
       },
       {
-        "collocation": "incredible speed",
-        "scene": "science_tech",
-        "sentence": "The car can reach incredible speeds on the racetrack.",
-        "translation_zh": "这辆车在赛道上可以达到难以置信的速度。"
-      },
-      {
-        "collocation": "incredible talent",
+        "collocation": "incredible story",
         "scene": "culture",
-        "sentence": "Many artists possess incredible talent that inspires others.",
-        "translation_zh": "许多艺术家拥有令人难以置信的才能，激励着他人。"
+        "sentence": "An incredible story unfolded during the festival, captivating everyone present.",
+        "translation_zh": "在节日期间发生了一个令人难以置信的故事，吸引了在场的每一个人。"
+      },
+      {
+        "collocation": "incredible achievement",
+        "scene": "education",
+        "sentence": "His incredible achievement in science earned him a prestigious award.",
+        "translation_zh": "他在科学领域的难以置信的成就为他赢得了一个著名奖项。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "galaxy": {
     "word_id": "727c5d33-e8fb-4b7d-b708-f6ecf01cab1e",
@@ -2470,7 +2485,7 @@
     "freq_rank": 3016,
     "cefr": "B1",
     "ipa": "/ˈɡæləksi/",
-    "def_zh": "一个由恒星、气体和尘埃组成的大型宇宙系统。",
+    "def_zh": "星系",
     "def_en": "A large system of stars, gas, and dust in space.",
     "examples": [
       {
@@ -2502,7 +2517,7 @@
     "freq_rank": 3050,
     "cefr": "B1",
     "ipa": "/mɔl/",
-    "def_zh": "大型零售综合体，内有各种商店和服务。",
+    "def_zh": "大型购物中心",
     "def_en": "A large retail complex with various shops and services.",
     "examples": [
       {
@@ -2566,7 +2581,7 @@
     "freq_rank": 3076,
     "cefr": "B1",
     "ipa": "/mɪθ/",
-    "def_zh": "传统故事或没有根据的信念。",
+    "def_zh": "神话；误解",
     "def_en": "A traditional story or an unfounded belief.",
     "examples": [
       {
@@ -2662,7 +2677,7 @@
     "freq_rank": 3137,
     "cefr": "B1",
     "ipa": "/suː/",
-    "def_zh": "在法庭上对某人提起法律诉讼。",
+    "def_zh": "起诉",
     "def_en": "To bring a legal action against someone in court.",
     "examples": [
       {
@@ -2822,30 +2837,31 @@
     "freq_rank": 3175,
     "cefr": "B1",
     "ipa": "/ˈhɛrɪtɪdʒ/",
-    "def_zh": "遗产，特别是文化或历史方面的继承物。",
-    "def_en": "Something inherited, especially cultural or historical.",
+    "def_zh": "遗产",
+    "def_en": "Valued traditions or properties passed down through generations.",
     "examples": [
       {
         "collocation": "cultural heritage",
         "scene": "culture",
-        "sentence": "Many countries celebrate their cultural heritage through festivals and events.",
-        "translation_zh": "许多国家通过节日和活动庆祝他们的文化遗产。"
+        "sentence": "Cultural heritage plays a vital role in shaping a community's identity.",
+        "translation_zh": "文化遗产在塑造一个社区的身份中起着至关重要的作用。"
       },
       {
-        "collocation": "heritage site",
+        "collocation": "world heritage",
         "scene": "travel",
-        "sentence": "The ancient city was designated as a UNESCO heritage site for its architecture.",
-        "translation_zh": "这座古城因其建筑而被认定为联合国教科文组织的遗产网站。"
+        "sentence": "The Great Wall is recognized as a world heritage site by UNESCO.",
+        "translation_zh": "长城被联合国教科文组织认定为世界遗产。"
       },
       {
-        "collocation": "heritage conservation",
+        "collocation": "natural heritage",
         "scene": "environment",
-        "sentence": "Local organizations are working on heritage conservation to protect historical landmarks.",
-        "translation_zh": "当地组织正在进行遗产保护，以保护历史地标。"
+        "sentence": "Protecting natural heritage is essential for future generations' well-being.",
+        "translation_zh": "保护自然遗产对未来几代人的福祉至关重要。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "legacy": {
     "word_id": "2637c0d2-dbcb-48f4-89d2-b963c12b47cd",
@@ -2887,29 +2903,30 @@
     "cefr": "B1",
     "ipa": "/ˌɔːr.i.enˈteɪ.ʃən/",
     "def_zh": "使某人熟悉新环境的过程",
-    "def_en": "A process of familiarizing someone with a new situation.",
+    "def_en": "The process of familiarizing someone with a new environment.",
     "examples": [
       {
         "collocation": "orientation program",
         "scene": "education",
         "sentence": "Many universities offer an orientation program for incoming students.",
-        "translation_zh": "许多大学为新生提供方向培训课程。"
+        "translation_zh": "许多大学为新生提供迎新培训课程。"
       },
       {
         "collocation": "cultural orientation",
         "scene": "culture",
-        "sentence": "Cultural orientation is essential for understanding local customs.",
-        "translation_zh": "文化方向培训对于理解当地习俗至关重要。"
+        "sentence": "Participating in cultural orientation helps newcomers understand local customs better.",
+        "translation_zh": "参与文化适应帮助新来者更好地理解当地习俗。"
       },
       {
         "collocation": "orientation meeting",
         "scene": "work",
-        "sentence": "We scheduled an orientation meeting to introduce the new employees.",
-        "translation_zh": "我们安排了一次方向会议，介绍新员工。"
+        "sentence": "We held an orientation meeting to help new employees adjust smoothly.",
+        "translation_zh": "我们召开了一次迎新会议，以帮助新员工顺利适应。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "sanction": {
     "word_id": "b33cee5d-3612-406a-9465-a0931da24989",
@@ -2919,29 +2936,30 @@
     "cefr": "B1",
     "ipa": "/ˈsæŋkʃən/",
     "def_zh": "制裁；许可",
-    "def_en": "A penalty or approval for an action.",
+    "def_en": "A penalty or approval for an action or behavior.",
     "examples": [
       {
-        "collocation": "impose sanctions",
-        "scene": "news",
-        "sentence": "The government decided to impose sanctions on the country.",
-        "translation_zh": "政府决定对该国实施制裁。"
-      },
-      {
         "collocation": "economic sanctions",
-        "scene": "work",
-        "sentence": "Many companies avoid doing business with nations under economic sanctions.",
-        "translation_zh": "许多公司避免与受经济制裁的国家做生意。"
+        "scene": "news",
+        "sentence": "Many countries imposed economic sanctions on the regime for its actions.",
+        "translation_zh": "许多国家因该政权的行为对其实施了经济制裁。"
       },
       {
-        "collocation": "sanction for use",
-        "scene": "education",
-        "sentence": "Students must obtain a sanction for use before accessing the resources.",
-        "translation_zh": "学生在使用资源之前必须获得使用许可。"
+        "collocation": "government sanctions",
+        "scene": "work",
+        "sentence": "The company must comply with government sanctions to operate in the region.",
+        "translation_zh": "该公司必须遵守政府的制裁以在该地区运营。"
+      },
+      {
+        "collocation": "international sanctions",
+        "scene": "culture",
+        "sentence": "International sanctions were placed on the nation due to human rights violations.",
+        "translation_zh": "由于侵犯人权，该国受到国际制裁。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "cluster": {
     "word_id": "bb592895-1d73-43e4-9eac-6a76ebcec1f6",
@@ -2950,7 +2968,7 @@
     "freq_rank": 3200,
     "cefr": "B1",
     "ipa": "/ˈklʌs.tər/",
-    "def_zh": "一组相似的事物紧密排列在一起。",
+    "def_zh": "一组紧密排列的相似事物",
     "def_en": "A group of similar things positioned closely together.",
     "examples": [
       {
@@ -3014,7 +3032,7 @@
     "freq_rank": 3221,
     "cefr": "B1",
     "ipa": "/ˈhæb.ɪ.tæt/",
-    "def_zh": "动物或植物的自然栖息地。",
+    "def_zh": "栖息地",
     "def_en": "The natural home of an animal or plant.",
     "examples": [
       {
@@ -3046,7 +3064,7 @@
     "freq_rank": 3231,
     "cefr": "B1",
     "ipa": "/ˈɛθ.ɪks/",
-    "def_zh": "道德原则，指导行为和决策。",
+    "def_zh": "伦理",
     "def_en": "Moral principles that govern behavior and decision-making.",
     "examples": [
       {
@@ -3110,7 +3128,7 @@
     "freq_rank": 3239,
     "cefr": "B1",
     "ipa": "/ɑdz/",
-    "def_zh": "发生某事的可能性或概率。",
+    "def_zh": "可能性",
     "def_en": "The likelihood or probability of something happening.",
     "examples": [
       {
@@ -3142,7 +3160,7 @@
     "freq_rank": 3263,
     "cefr": "B1",
     "ipa": "/pɔːrˈtreɪ/",
-    "def_zh": "以特定方式表现或描绘某人或某物。",
+    "def_zh": "描绘",
     "def_en": "To represent or depict someone or something in a specific way.",
     "examples": [
       {
@@ -3238,30 +3256,31 @@
     "freq_rank": 3253,
     "cefr": "B1",
     "ipa": "/ˈdɪs.kɔːrs/",
-    "def_zh": "正式的讨论或对话",
-    "def_en": "A formal discussion or conversation.",
+    "def_zh": "话语；论述",
+    "def_en": "Formal communication or conversation on a particular topic.",
     "examples": [
-      {
-        "collocation": "academic discourse",
-        "scene": "education",
-        "sentence": "Students will engage in academic discourse during their group projects.",
-        "translation_zh": "学生在小组项目中会参与学术话语的交流。"
-      },
       {
         "collocation": "public discourse",
         "scene": "culture",
-        "sentence": "Public discourse often shapes societal views and opinions on issues.",
-        "translation_zh": "公共话语经常影响社会对问题的看法和观点。"
+        "sentence": "Public discourse shapes societal values and influences community engagement.",
+        "translation_zh": "公共话语塑造社会价值观，影响社区参与。"
       },
       {
-        "collocation": "discourse analysis",
-        "scene": "science_tech",
-        "sentence": "Discourse analysis helps researchers understand communication patterns in texts.",
-        "translation_zh": "话语分析帮助研究人员理解文本中的沟通模式。"
+        "collocation": "scholarly discourse",
+        "scene": "academic",
+        "sentence": "Scholarly discourse fosters critical thinking and advances knowledge in various fields.",
+        "translation_zh": "学术话语促进批判性思维，推动各领域知识的进步。"
+      },
+      {
+        "collocation": "political discourse",
+        "scene": "news",
+        "sentence": "Political discourse often reflects the prevailing attitudes and beliefs of society.",
+        "translation_zh": "政治话语常常反映社会的主流态度和信仰。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "fitness": {
     "word_id": "0e688f28-fd28-47aa-8f34-1e581ea43328",
@@ -3270,7 +3289,7 @@
     "freq_rank": 3357,
     "cefr": "B1",
     "ipa": "/ˈfɪt.nəs/",
-    "def_zh": "身体健康的状态或适合的状态",
+    "def_zh": "健康；适合",
     "def_en": "The state of being physically healthy or suitable.",
     "examples": [
       {
@@ -3302,7 +3321,7 @@
     "freq_rank": 3344,
     "cefr": "B1",
     "ipa": "/ˈkɒɡ.nɪ.tɪv/",
-    "def_zh": "认知的，与感知、记忆和推理等心理过程相关的",
+    "def_zh": "认知的",
     "def_en": "Relating to mental processes of perception, memory, and reasoning.",
     "examples": [
       {
@@ -3462,7 +3481,7 @@
     "freq_rank": 3387,
     "cefr": "B1",
     "ipa": "/nɔrm/",
-    "def_zh": "标准或模式，被视为典型。",
+    "def_zh": "规范",
     "def_en": "A standard or pattern regarded as typical.",
     "examples": [
       {
@@ -3526,7 +3545,7 @@
     "freq_rank": 3399,
     "cefr": "B1",
     "ipa": "/ˈkaʊn.səl.ɪŋ/",
-    "def_zh": "专业提供的指导或建议，尤其是在心理健康等领域。",
+    "def_zh": "心理咨询",
     "def_en": "Guidance or advice given, especially in a professional context.",
     "examples": [
       {
@@ -3623,7 +3642,7 @@
     "cefr": "B1",
     "ipa": "/ˈsʌt.əl/",
     "def_zh": "微妙的；细微的",
-    "def_en": "Not immediately obvious or noticeable; subtle differences.",
+    "def_en": "Not immediately obvious; requiring close attention to notice.",
     "examples": [
       {
         "collocation": "subtle differences",
@@ -3686,30 +3705,31 @@
     "freq_rank": 3464,
     "cefr": "B1",
     "ipa": "/ɪnˈtɛɡrɪti/",
-    "def_zh": "诚实和拥有强烈道德原则的品质",
+    "def_zh": "正直；完整性",
     "def_en": "The quality of being honest and having strong moral principles.",
     "examples": [
       {
-        "collocation": "integrity of data",
-        "scene": "science_tech",
-        "sentence": "Scientists must ensure the integrity of data collected during experiments.",
-        "translation_zh": "科学家必须确保实验中收集数据的完整性。"
+        "collocation": "academic integrity",
+        "scene": "academic",
+        "sentence": "Students must uphold academic integrity in all their assignments.",
+        "translation_zh": "学生必须在所有作业中维护学术正直。"
       },
       {
         "collocation": "personal integrity",
-        "scene": "work",
-        "sentence": "Many employers value personal integrity when evaluating potential candidates.",
-        "translation_zh": "许多雇主在评估潜在候选人时重视个人的正直。"
+        "scene": "daily_life",
+        "sentence": "She is admired for her personal integrity and honesty in every situation.",
+        "translation_zh": "她因在每种情况下的个人正直和诚实而受到钦佩。"
       },
       {
-        "collocation": "integrity in leadership",
-        "scene": "education",
-        "sentence": "Demonstrating integrity in leadership sets a positive example for students.",
-        "translation_zh": "在领导中展现正直为学生树立了积极的榜样。"
+        "collocation": "professional integrity",
+        "scene": "work",
+        "sentence": "Employers value professional integrity when assessing potential candidates.",
+        "translation_zh": "雇主在评估潜在候选人时重视职业正直。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "counsel": {
     "word_id": "271d0d9e-0248-4db8-a6be-cf79da2d6f1a",
@@ -3718,7 +3738,7 @@
     "freq_rank": 3418,
     "cefr": "B1",
     "ipa": "/ˈkaʊn.səl/",
-    "def_zh": "建议或指导，尤其是在法律事务中。",
+    "def_zh": "建议；律师",
     "def_en": "Advice or guidance, especially in legal matters.",
     "examples": [
       {
@@ -3751,29 +3771,30 @@
     "cefr": "B1",
     "ipa": "/ˈpɪtʃər/",
     "def_zh": "壶；投手",
-    "def_en": "A container for pouring liquids; a baseball player who throws the ball.",
+    "def_en": "A container for liquids, often with a spout.",
     "examples": [
       {
-        "collocation": "pitcher of water",
+        "collocation": "a glass pitcher",
         "scene": "daily_life",
-        "sentence": "She filled the pitcher with water for dinner.",
-        "translation_zh": "她为晚餐装满了水壶。"
+        "sentence": "She poured lemonade from a glass pitcher into the cups.",
+        "translation_zh": "她把柠檬水从玻璃壶倒进杯子里。"
       },
       {
-        "collocation": "pitcher plant",
-        "scene": "science_tech",
-        "sentence": "The pitcher plant traps insects to obtain nutrients.",
-        "translation_zh": "捕蝇草通过捕捉昆虫来获取养分。"
+        "collocation": "the pitcher position",
+        "scene": "work",
+        "sentence": "In baseball, the pitcher position is crucial for the team's success.",
+        "translation_zh": "在棒球中，投手位置对球队的成功至关重要。"
       },
       {
-        "collocation": "pitcher of juice",
+        "collocation": "ceramic pitcher",
         "scene": "culture",
-        "sentence": "During the party, we served a pitcher of juice to guests.",
-        "translation_zh": "在聚会上，我们给客人们提供了一壶果汁。"
+        "sentence": "The museum displayed a beautiful ceramic pitcher from ancient times.",
+        "translation_zh": "博物馆展出了一个来自古代的美丽陶壶。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "rumor": {
     "word_id": "e5147ce7-44ac-4dff-a7d5-195ebd7ac153",
@@ -3878,7 +3899,7 @@
     "freq_rank": 3516,
     "cefr": "B1",
     "ipa": "/ˌæl.ɪˈɡeɪ.ʃən/",
-    "def_zh": "指控某人做了非法或错误的事情。",
+    "def_zh": "指控",
     "def_en": "A claim that someone has done something illegal or wrong.",
     "examples": [
       {
@@ -3974,7 +3995,7 @@
     "freq_rank": 3541,
     "cefr": "B1",
     "ipa": "/ˈsiː.mɪŋ.li/",
-    "def_zh": "表面上看起来的，但不一定是实际情况。",
+    "def_zh": "看似地",
     "def_en": "In appearance but not necessarily in reality.",
     "examples": [
       {
@@ -4006,7 +4027,7 @@
     "freq_rank": 3543,
     "cefr": "B1",
     "ipa": "/ɪˈfɛktɪv.nəs/",
-    "def_zh": "某事成功产生预期结果的程度。",
+    "def_zh": "有效性",
     "def_en": "The degree to which something is successful in producing a desired result.",
     "examples": [
       {
@@ -4038,7 +4059,7 @@
     "freq_rank": 3550,
     "cefr": "B1",
     "ipa": "/ɪnˈspɛk.tər/",
-    "def_zh": "检查员，特别是负责检查某物的质量或合规性的人。",
+    "def_zh": "检查员",
     "def_en": "A person who inspects something, especially for quality or compliance.",
     "examples": [
       {
@@ -4071,29 +4092,30 @@
     "cefr": "B1",
     "ipa": "/kənˈtɛnd/",
     "def_zh": "主张；竞争",
-    "def_en": "To assert something as a position or to compete.",
+    "def_en": "To assert or argue a point against opposition.",
     "examples": [
       {
         "collocation": "contend that",
         "scene": "academic",
-        "sentence": "Researchers contend that climate change is a major threat.",
-        "translation_zh": "研究人员主张气候变化是一个重大威胁。"
+        "sentence": "Many researchers contend that climate change is accelerating rapidly.",
+        "translation_zh": "许多研究人员主张气候变化正在迅速加速。"
       },
       {
         "collocation": "contend for",
-        "scene": "news",
-        "sentence": "Several teams contend for the championship title this season.",
-        "translation_zh": "本赛季有几支球队争夺冠军头衔。"
+        "scene": "work",
+        "sentence": "Several teams will contend for the championship title this year.",
+        "translation_zh": "今年几支队伍将竞争冠军头衔。"
       },
       {
         "collocation": "contend against",
-        "scene": "work",
-        "sentence": "Employees often contend against unfair labor practices in their workplace.",
-        "translation_zh": "员工们常常对工作场所的不公正劳动行为进行抗争。"
+        "scene": "news",
+        "sentence": "Activists will contend against proposed legislation limiting civil rights.",
+        "translation_zh": "活动人士将主张反对限制公民权利的提案。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "array": {
     "word_id": "904aed38-3b55-41dd-8fdc-e9fa29ed0761",
@@ -4102,30 +4124,31 @@
     "freq_rank": 3554,
     "cefr": "B1",
     "ipa": "/əˈreɪ/",
-    "def_zh": "一组或一系列的项目或数据。",
-    "def_en": "A collection or arrangement of items or data.",
+    "def_zh": "一系列；阵列",
+    "def_en": "A collection of items arranged in a systematic way.",
     "examples": [
       {
+        "collocation": "wide array of",
+        "scene": "culture",
+        "sentence": "Many museums showcase a wide array of historical artifacts.",
+        "translation_zh": "许多博物馆展示了大量历史文物。"
+      },
+      {
         "collocation": "array of options",
-        "scene": "education",
-        "sentence": "Students have a wide array of options for their elective courses.",
-        "translation_zh": "学生们有广泛的选修课程可供选择。"
-      },
-      {
-        "collocation": "array of symptoms",
-        "scene": "health",
-        "sentence": "An array of symptoms can indicate different medical conditions.",
-        "translation_zh": "一系列症状可能表明不同的医疗状况。"
-      },
-      {
-        "collocation": "array of colors",
         "scene": "daily_life",
-        "sentence": "Art supplies store offers an array of colors for painting.",
-        "translation_zh": "艺术用品商店提供各种各样的绘画颜色。"
+        "sentence": "You can find an array of options at the local market.",
+        "translation_zh": "你可以在当地市场找到一系列选择。"
+      },
+      {
+        "collocation": "array of data",
+        "scene": "science_tech",
+        "sentence": "Researchers analyzed an array of data to draw their conclusions.",
+        "translation_zh": "研究人员分析了一系列数据以得出结论。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "fraud": {
     "word_id": "e6fce06c-331f-4469-b5bf-8cc8a9be242e",
@@ -4166,30 +4189,31 @@
     "freq_rank": 3565,
     "cefr": "B1",
     "ipa": "/ˈmɒn.stər/",
-    "def_zh": "可怕的生物或非常令人不快的人",
-    "def_en": "A frightening creature or a very unpleasant person.",
+    "def_zh": "怪物",
+    "def_en": "A frightening creature often depicted in folklore and fiction.",
     "examples": [
       {
-        "collocation": "monster movie",
+        "collocation": "the monster",
         "scene": "culture",
-        "sentence": "Many people enjoy watching monster movies during Halloween.",
-        "translation_zh": "许多人在万圣节期间喜欢观看怪物电影。"
+        "sentence": "The film featured a terrifying monster that haunted the main characters.",
+        "translation_zh": "这部电影中有一个可怕的怪物，困扰着主要角色。"
       },
       {
-        "collocation": "monster truck",
+        "collocation": "monsters exist",
+        "scene": "science_tech",
+        "sentence": "Scientists study whether monsters exist in unexplored territories of the ocean.",
+        "translation_zh": "科学家研究在海洋未探测的领域中是否存在怪物。"
+      },
+      {
+        "collocation": "a monster appeared",
         "scene": "daily_life",
-        "sentence": "My brother loves to drive his monster truck on weekends.",
-        "translation_zh": "我哥哥喜欢在周末开他的怪物卡车。"
-      },
-      {
-        "collocation": "monster of a problem",
-        "scene": "work",
-        "sentence": "We are facing a monster of a problem with this project.",
-        "translation_zh": "我们在这个项目上面临一个巨大的问题。"
+        "sentence": "During the Halloween party, a monster appeared in the haunted house attraction.",
+        "translation_zh": "在万圣节派对上，一个怪物出现在鬼屋游乐设施中。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "rip": {
     "word_id": "8a89c7cb-d863-408c-a7b4-6346135f0a83",
@@ -4199,29 +4223,30 @@
     "cefr": "B1",
     "ipa": "/rɪp/",
     "def_zh": "撕裂；裂缝",
-    "def_en": "To tear something apart or create a hole.",
+    "def_en": "To tear apart or create a tear in something.",
     "examples": [
       {
         "collocation": "rip apart",
         "scene": "daily_life",
-        "sentence": "Children often rip apart their toys when they are bored.",
-        "translation_zh": "孩子们常常在无聊时撕裂他们的玩具。"
+        "sentence": "Children often rip apart their toys during playtime.",
+        "translation_zh": "孩子们在玩耍时经常撕裂他们的玩具。"
       },
       {
         "collocation": "rip open",
-        "scene": "work",
-        "sentence": "He accidentally ripped open the box while unpacking it.",
-        "translation_zh": "他在拆包时不小心撕开了箱子。"
+        "scene": "science_tech",
+        "sentence": "Researchers had to rip open the packaging to access the samples.",
+        "translation_zh": "研究人员不得不撕开包装以获取样本。"
       },
       {
-        "collocation": "rip off",
-        "scene": "news",
-        "sentence": "Many tourists feel ripped off by high prices in tourist areas.",
-        "translation_zh": "许多游客觉得在旅游区被高价坑了。"
+        "collocation": "rip at",
+        "scene": "environment",
+        "sentence": "Strong winds can rip at trees, causing severe damage.",
+        "translation_zh": "强风可以撕裂树木，造成严重损害。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "facilitate": {
     "word_id": "37922ef6-f9b4-4b88-be3d-710e64df8679",
@@ -4230,7 +4255,7 @@
     "freq_rank": 3568,
     "cefr": "B1",
     "ipa": "/fəˈsɪl.ɪ.teɪt/",
-    "def_zh": "使行动或过程更容易或更可实现",
+    "def_zh": "促进",
     "def_en": "To make an action or process easier or more achievable.",
     "examples": [
       {
@@ -4262,7 +4287,7 @@
     "freq_rank": 3576,
     "cefr": "B1",
     "ipa": "/rɪˈsɛʃ.ən/",
-    "def_zh": "经济活动的显著下降。",
+    "def_zh": "经济衰退",
     "def_en": "A significant decline in economic activity.",
     "examples": [
       {
@@ -4358,7 +4383,7 @@
     "freq_rank": 3559,
     "cefr": "B1",
     "ipa": "/ˈhɔːl.weɪ/",
-    "def_zh": "建筑内部的长而狭窄的通道。",
+    "def_zh": "走廊",
     "def_en": "A long narrow passage inside a building.",
     "examples": [
       {
@@ -4390,7 +4415,7 @@
     "freq_rank": 3594,
     "cefr": "B1",
     "ipa": "/ˌdaɪ.əɡˈnoʊ.sɪs/",
-    "def_zh": "对疾病或病症的结论，基于检查结果。",
+    "def_zh": "诊断",
     "def_en": "A conclusion about a disease or condition based on examination.",
     "examples": [
       {
@@ -4422,7 +4447,7 @@
     "freq_rank": 3607,
     "cefr": "B1",
     "ipa": "/ˈwɔːr.i.ər/",
-    "def_zh": "参与或经历战争的人。",
+    "def_zh": "战士",
     "def_en": "A person engaged in or experienced in warfare.",
     "examples": [
       {
@@ -4454,8 +4479,8 @@
     "freq_rank": 3609,
     "cefr": "B1",
     "ipa": "/ˈɡræf.ɪks/",
-    "def_zh": "使用计算机或图形工具创建的视觉图像或设计。",
-    "def_en": "Visual images or designs created using computers or graphics tools.",
+    "def_zh": "图形",
+    "def_en": "Visual images or designs produced with computers or design software.",
     "examples": [
       {
         "collocation": "computer graphics",
@@ -4486,7 +4511,7 @@
     "freq_rank": 3608,
     "cefr": "B1",
     "ipa": "/prɪˈdɪk.ʃən/",
-    "def_zh": "对未来将要发生的事情的陈述。",
+    "def_zh": "预测",
     "def_en": "A statement about what will happen in the future.",
     "examples": [
       {
@@ -4614,7 +4639,7 @@
     "freq_rank": 3657,
     "cefr": "B1",
     "ipa": "/ˌɪn.əˈveɪ.ʃən/",
-    "def_zh": "创新，指新思想或新产品的创造。",
+    "def_zh": "创新",
     "def_en": "The creation of new ideas or products.",
     "examples": [
       {
@@ -4646,7 +4671,7 @@
     "freq_rank": 3644,
     "cefr": "B1",
     "ipa": "/ˌaɪ.diˈɒl.ə.dʒi/",
-    "def_zh": "一套指导个人或团体的信念或理想。",
+    "def_zh": "意识形态",
     "def_en": "A set of beliefs or ideals guiding an individual or group.",
     "examples": [
       {
@@ -4806,7 +4831,7 @@
     "freq_rank": 3667,
     "cefr": "B1",
     "ipa": "/əˈmɛndmənt/",
-    "def_zh": "对法律文件或法律的修改或补充。",
+    "def_zh": "修正案",
     "def_en": "A change or addition to a legal document or law.",
     "examples": [
       {
@@ -4870,7 +4895,7 @@
     "freq_rank": 3697,
     "cefr": "B1",
     "ipa": "/ˌʌn.dərˈmaɪn/",
-    "def_zh": "逐渐或秘密地削弱或损害某事物",
+    "def_zh": "削弱",
     "def_en": "To weaken or damage something gradually or secretly.",
     "examples": [
       {
@@ -5030,7 +5055,7 @@
     "freq_rank": 3713,
     "cefr": "B1",
     "ipa": "/ˈrɛt.ər.ɪk/",
-    "def_zh": "修辞，指有效或有说服力的演讲或写作艺术。",
+    "def_zh": "修辞艺术",
     "def_en": "The art of effective or persuasive speaking or writing.",
     "examples": [
       {
@@ -5098,26 +5123,27 @@
     "def_en": "Having a strong belief or certainty about something.",
     "examples": [
       {
-        "collocation": "convinced that",
-        "scene": "academic",
-        "sentence": "Researchers are convinced that their findings will change education forever.",
-        "translation_zh": "研究人员坚信他们的发现将永远改变教育。"
+        "collocation": "fully convinced",
+        "scene": "science_tech",
+        "sentence": "Researchers are fully convinced that their findings will change the industry.",
+        "translation_zh": "研究人员确信他们的发现会改变行业。"
       },
       {
-        "collocation": "convinced me",
+        "collocation": "truly convinced",
+        "scene": "work",
+        "sentence": "She is truly convinced that teamwork leads to better results.",
+        "translation_zh": "她确信团队合作会带来更好的结果。"
+      },
+      {
+        "collocation": "absolutely convinced",
         "scene": "daily_life",
-        "sentence": "My friend convinced me to try the new restaurant in town.",
-        "translation_zh": "我的朋友说服我去尝试镇上的新餐厅。"
-      },
-      {
-        "collocation": "convinced of",
-        "scene": "news",
-        "sentence": "The politician was convinced of the need for urgent reforms.",
-        "translation_zh": "这位政治家坚信迫切需要进行改革。"
+        "sentence": "I am absolutely convinced that this new restaurant will be a hit.",
+        "translation_zh": "我确信这家新餐厅会大受欢迎。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "profound": {
     "word_id": "40bed29f-2bf4-4d63-8f5b-a8dd016b1f47",
@@ -5222,7 +5248,7 @@
     "freq_rank": 3743,
     "cefr": "B1",
     "ipa": "/kəˈrʌp.ʃən/",
-    "def_zh": "腐败，指掌权者或权威人士的不诚实行为。",
+    "def_zh": "腐败",
     "def_en": "Dishonest behavior by those in power or authority.",
     "examples": [
       {
@@ -5254,7 +5280,7 @@
     "freq_rank": 3746,
     "cefr": "B1",
     "ipa": "/ˈdɒk.trɪn/",
-    "def_zh": "一组由某个团体持有和教授的信念或原则。",
+    "def_zh": "教义",
     "def_en": "A set of beliefs held and taught by a group.",
     "examples": [
       {
@@ -5287,29 +5313,30 @@
     "cefr": "B1",
     "ipa": "/ˈmiː.nɪŋ.fəl/",
     "def_zh": "有意义的；重要的",
-    "def_en": "Having significance or importance in context.",
+    "def_en": "Having significance or value in a particular context or situation.",
     "examples": [
       {
-        "collocation": "meaningful conversation",
+        "collocation": "a meaningful conversation",
         "scene": "daily_life",
-        "sentence": "Many people seek meaningful conversations to connect with others.",
-        "translation_zh": "许多人寻求有意义的对话以与他人建立联系。"
+        "sentence": "A meaningful conversation can strengthen relationships and improve understanding.",
+        "translation_zh": "一次有意义的谈话可以加强关系并改善理解。"
       },
       {
-        "collocation": "meaningful impact",
+        "collocation": "meaningful contributions",
         "scene": "work",
-        "sentence": "Her project had a meaningful impact on the team's performance.",
-        "translation_zh": "她的项目对团队的表现产生了重要影响。"
+        "sentence": "Employees are encouraged to make meaningful contributions to the company's goals.",
+        "translation_zh": "鼓励员工对公司的目标做出有意义的贡献。"
       },
       {
-        "collocation": "meaningful experience",
+        "collocation": "meaningful learning experience",
         "scene": "education",
-        "sentence": "Students often remember meaningful experiences throughout their learning journey.",
-        "translation_zh": "学生们常常记得在学习过程中有意义的经历。"
+        "sentence": "Teachers strive to provide students with a meaningful learning experience.",
+        "translation_zh": "教师努力为学生提供有意义的学习经历。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "complexity": {
     "word_id": "342a3dbb-0118-49c2-b645-ae2c828811ad",
@@ -5382,7 +5409,7 @@
     "freq_rank": 3745,
     "cefr": "B1",
     "ipa": "/ˈkɒn.træk.tər/",
-    "def_zh": "根据合同提供服务的个人或公司。",
+    "def_zh": "承包商",
     "def_en": "A person or company that provides services under a contract.",
     "examples": [
       {
@@ -5414,7 +5441,7 @@
     "freq_rank": 3796,
     "cefr": "B1",
     "ipa": "/ˌkɒmpənˈseɪʃən/",
-    "def_zh": "补偿；赔偿",
+    "def_zh": "补偿；薪酬",
     "def_en": "Something given to make up for loss or injury.",
     "examples": [
       {
@@ -5446,7 +5473,7 @@
     "freq_rank": 3783,
     "cefr": "B1",
     "ipa": "/ˈsoʊ.di.əm/",
-    "def_zh": "一种化学元素，对人类健康至关重要。",
+    "def_zh": "钠元素",
     "def_en": "A chemical element, essential for human health.",
     "examples": [
       {
@@ -5510,7 +5537,7 @@
     "freq_rank": 3799,
     "cefr": "B1",
     "ipa": "/ˈdɛdɪˌkeɪt/",
-    "def_zh": "致力于某项任务或目的，付出努力。",
+    "def_zh": "致力于",
     "def_en": "To commit to a task or purpose with effort.",
     "examples": [
       {
@@ -5542,30 +5569,31 @@
     "freq_rank": 3816,
     "cefr": "B1",
     "ipa": "/ˈkaʊntərˌpɑrt/",
-    "def_zh": "与另一事物具有相似功能的人或事物",
-    "def_en": "A person or thing that has a similar function to another.",
+    "def_zh": "对应物",
+    "def_en": "A person or thing that has a similar function or role.",
     "examples": [
-      {
-        "collocation": "business counterpart",
-        "scene": "work",
-        "sentence": "The company met with its business counterparts to discuss the merger.",
-        "translation_zh": "公司与其商业伙伴会面，讨论合并事宜。"
-      },
       {
         "collocation": "political counterpart",
         "scene": "news",
-        "sentence": "She held talks with her political counterparts to address the issue.",
-        "translation_zh": "她与政治对手进行了会谈，以解决这一问题。"
+        "sentence": "Leaders met with their political counterparts to discuss global issues.",
+        "translation_zh": "各国领导人与他们的政治对应者会面，讨论全球问题。"
       },
       {
-        "collocation": "cultural counterpart",
-        "scene": "culture",
-        "sentence": "Each culture has its own counterpart for traditional celebrations.",
-        "translation_zh": "每种文化都有自己传统庆祝活动的对应物。"
+        "collocation": "business counterpart",
+        "scene": "work",
+        "sentence": "She negotiated with her business counterpart to finalize the agreement.",
+        "translation_zh": "她与她的商业对应者洽谈，以确定协议。"
+      },
+      {
+        "collocation": "scientific counterpart",
+        "scene": "science_tech",
+        "sentence": "The study compares these findings with their scientific counterparts in other regions.",
+        "translation_zh": "这项研究将这些发现与其他地区的科学对应物进行了比较。"
       }
     ],
     "_attempts": 1,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "amid": {
     "word_id": "c9d7f9ff-22b2-4902-a227-aaa55589a163",
@@ -5574,7 +5602,7 @@
     "freq_rank": 3825,
     "cefr": "B1",
     "ipa": "/əˈmɪd/",
-    "def_zh": "在……中间；在……之中",
+    "def_zh": "在……中间",
     "def_en": "In the middle of; during something.",
     "examples": [
       {
@@ -5638,7 +5666,7 @@
     "freq_rank": 3831,
     "cefr": "B1",
     "ipa": "/ˌkɑːr.boʊˈhaɪ.dreɪt/",
-    "def_zh": "一种为身体提供能量的营养素。",
+    "def_zh": "碳水化合物",
     "def_en": "A type of nutrient providing energy for the body.",
     "examples": [
       {
@@ -5734,7 +5762,7 @@
     "freq_rank": 3847,
     "cefr": "B1",
     "ipa": "/ˈdoʊ.nər/",
-    "def_zh": "捐赠者，尤其是指捐赠器官或金钱的人。",
+    "def_zh": "捐赠者",
     "def_en": "A person who donates something, especially organs or money.",
     "examples": [
       {
@@ -5766,7 +5794,7 @@
     "freq_rank": 3893,
     "cefr": "B1",
     "ipa": "/ˈspek.trəm/",
-    "def_zh": "一系列不同的事物、想法或品质。",
+    "def_zh": "光谱；范围",
     "def_en": "A range of different things, ideas, or qualities.",
     "examples": [
       {
@@ -5798,7 +5826,7 @@
     "freq_rank": 3898,
     "cefr": "B1",
     "ipa": "/ˌɛkspərˈtiːz/",
-    "def_zh": "专业知识或技能，通常在特定领域内。",
+    "def_zh": "专业知识",
     "def_en": "Specialized knowledge or skill in a particular area.",
     "examples": [
       {
@@ -5862,7 +5890,7 @@
     "freq_rank": 3921,
     "cefr": "B1",
     "ipa": "/əˈkaʊn.tɪŋ/",
-    "def_zh": "会计是记录财务交易的过程。",
+    "def_zh": "会计",
     "def_en": "The process of recording financial transactions.",
     "examples": [
       {
@@ -5958,7 +5986,7 @@
     "freq_rank": 3927,
     "cefr": "B1",
     "ipa": "/ˈmɛt.ə.fɔr/",
-    "def_zh": "隐喻，一种将两个不同事物进行比较的修辞手法。",
+    "def_zh": "隐喻",
     "def_en": "A figure of speech comparing two unlike things.",
     "examples": [
       {
@@ -6054,7 +6082,7 @@
     "freq_rank": 3939,
     "cefr": "B1",
     "ipa": "/ˈrɛɡ.jə.lə.tɔːr.i/",
-    "def_zh": "与控制某事的规则或法律相关的",
+    "def_zh": "监管的",
     "def_en": "Relating to rules or laws that control something.",
     "examples": [
       {
@@ -6246,7 +6274,7 @@
     "freq_rank": 3197,
     "cefr": "B1",
     "ipa": "/ɪnˈfleɪ.ʃən/",
-    "def_zh": "通货膨胀，指物价普遍上涨和购买力下降的现象。",
+    "def_zh": "通货膨胀",
     "def_en": "A general increase in prices and fall in the purchasing value.",
     "examples": [
       {
@@ -6278,30 +6306,31 @@
     "freq_rank": 2715,
     "cefr": "B1",
     "ipa": "/ɪˈnɪʃ.ə.li/",
-    "def_zh": "最初；起初",
-    "def_en": "At first; at the beginning of something.",
+    "def_zh": "最初",
+    "def_en": "At the beginning or outset of a situation or event.",
     "examples": [
-      {
-        "collocation": "initially planned",
-        "scene": "work",
-        "sentence": "We initially planned to complete the project by next month.",
-        "translation_zh": "我们最初计划下个月完成这个项目。"
-      },
       {
         "collocation": "initially thought",
         "scene": "education",
-        "sentence": "Students initially thought the exam would be easy, but it was difficult.",
-        "translation_zh": "学生们起初认为考试很简单，但实际上很难。"
+        "sentence": "Students initially thought the project would be easy, but it proved challenging.",
+        "translation_zh": "学生们最初认为这个项目会很简单，但实际上很有挑战性。"
       },
       {
-        "collocation": "initially struggled",
-        "scene": "daily_life",
-        "sentence": "She initially struggled with the new recipe but eventually succeeded.",
-        "translation_zh": "她最初对这个新食谱感到困难，但最终成功了。"
+        "collocation": "initially planned",
+        "scene": "work",
+        "sentence": "The team initially planned to complete the assignment by Friday, but delays occurred.",
+        "translation_zh": "团队最初计划在星期五之前完成这个任务，但出现了延误。"
+      },
+      {
+        "collocation": "initially believed",
+        "scene": "news",
+        "sentence": "Experts initially believed the storm would weaken, but it intensified unexpectedly.",
+        "translation_zh": "专家们最初相信风暴会减弱，但它意外地增强了。"
       }
     ],
     "_attempts": 2,
-    "_model": "gpt-4o-mini"
+    "_model": "gpt-4o-mini",
+    "_repaired": "g10/g11"
   },
   "congressional": {
     "word_id": "8fe181e6-ceec-4848-9ea4-8c1b454ffce8",
@@ -6310,7 +6339,7 @@
     "freq_rank": 2309,
     "cefr": "B1",
     "ipa": "/kənˈɡrɛʃ.ən.əl/",
-    "def_zh": "与立法机构相关，特别是与美国国会相关的",
+    "def_zh": "国会的",
     "def_en": "Relating to a legislative assembly, especially the U.S. Congress.",
     "examples": [
       {

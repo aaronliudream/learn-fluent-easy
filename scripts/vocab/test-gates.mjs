@@ -1,6 +1,9 @@
 /**
- * 六道闸门的离线单测 —— 不调 API,不连库,纯 fixture。
- * 每道闸门至少一个"该放行"和一个"该拦下"的用例。
+ * 机器闸门的离线单测 —— 不调 API,不连库,纯 fixture。
+ * 覆盖 g1-g9 + 按档句长 + def_en 禁循环定义。
+ * (g10 义项一致 / g11 译文忠实是语义判定,要调用模型,在 verify-content.mjs,不在这里。)
+ * 每道闸门至少一个"该放行"和一个"该拦下"的用例;
+ * 实战踩到过的坑一律补成回归用例,注明日期与出处。
  *
  *   node scripts/vocab/test-gates.mjs
  *
@@ -11,6 +14,7 @@ import {
   g1_targetPresent, g2_length, g3_noEmDash, g4_globalDedup,
   g5_mutualExclusive, g6_intraWordSimilarity,
   g7_collocationContainsWord, g8_zhPunctuation, g9_distinctOpeners,
+  g12_defEnNotCircular, LENGTH_BY_TIER,
   runAllGates,
 } from './gates.mjs';
 
@@ -136,6 +140,29 @@ ok('试跑实例:两句都以 Concerned 开头被拦',
   g9_distinctOpeners([sen('Many citizens are concerned about pollution'), sen('Concerned parents often attend school meetings'), sen('Concerned citizens organized a rally')]) !== null);
 ok('三句都以 The 开头被拦', g9_distinctOpeners([sen('The city fell'), sen('The team won'), sen('The dog ran')]) !== null);
 ok('大小写不同仍算同形', g9_distinctOpeners([sen('The city fell'), sen('the team won'), sen('A dog ran')]) !== null);
+
+/* ── 按档句长 ── */
+process.stdout.write('g2 按档句长\n');
+const s10 = 'One two three four five six seven eight nine ten';
+const s18 = 'One two three four five six seven eight nine ten a b c d e f g h';
+ok('默认仍是 8-16(存量口径)', g2_length(s10) === null);
+ok('A2 上限 12:10 词放行', g2_length(s10, LENGTH_BY_TIER.A2) === null);
+ok('A2 上限 12:14 词拦下', g2_length('a b c d e f g h i j k l m n', LENGTH_BY_TIER.A2) !== null);
+ok('C1 下限 12:10 词拦下', g2_length(s10, LENGTH_BY_TIER.C1) !== null);
+ok('C1 上限 20:18 词放行', g2_length(s18, LENGTH_BY_TIER.C1) === null);
+ok('四档区间就是裁决值',
+  JSON.stringify(LENGTH_BY_TIER) === JSON.stringify({ A2: [8, 12], B1: [8, 14], B2: [10, 16], C1: [12, 20] }),
+  JSON.stringify(LENGTH_BY_TIER));
+
+/* ── def_en 循环定义 ── */
+process.stdout.write('def_en 禁循环定义\n');
+ok('干净释义放行', g12_defEnNotCircular('Extremely shocking, offensive, or unacceptable.', 'outrageous', {}) === null);
+ok('实测样例 outrageous 被拦',
+  g12_defEnNotCircular('Extremely shocking or bad; outrageous behavior is unacceptable.', 'outrageous', {}) !== null);
+ok('实测样例 graphics 被拦',
+  g12_defEnNotCircular('Visual images or designs created using computers or graphics tools.', 'graphics', {}) !== null);
+ok('屈折形也算循环', g12_defEnNotCircular('A person who abandons things.', 'abandon', {}) !== null);
+ok('不误伤含相似前缀的短词', g12_defEnNotCircular('A group of musicians playing together.', 'band', {}) === null);
 
 /* ── runAllGates 端到端 ── */
 process.stdout.write('runAllGates 端到端\n');

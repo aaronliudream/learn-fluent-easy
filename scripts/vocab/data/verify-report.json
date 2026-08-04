@@ -1,0 +1,28 @@
+{
+  "checked": 198,
+  "g10": [],
+  "g11": [
+    {
+      "headword": "coalition",
+      "index": 3,
+      "sentence": "Artists often seek a coalition of support from local communities for their projects.",
+      "translation_zh": "艺术家们通常希望从当地社区获得对其项目的支持联盟。",
+      "problem": "缺少\"支持\"这个词"
+    },
+    {
+      "headword": "contend",
+      "index": 3,
+      "sentence": "Activists will contend against proposed legislation limiting civil rights.",
+      "translation_zh": "活动人士将主张反对限制公民权利的提案。",
+      "problem": "缺少了\"提案\"这个词"
+    },
+    {
+      "headword": "diminish",
+      "index": 3,
+      "sentence": "Management's actions may diminish the value of our hard work.",
+      "translation_zh": "管理层的行为可能会贬低我们辛苦工作的价值。",
+      "problem": "翻译中缺少了“可能”这个词"
+    }
+  ],
+  "at": "verify-content"
+}

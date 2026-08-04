@@ -79,11 +79,23 @@ export function inflectionsOf(headword, table = {}) {
 
 /* ── 逐句闸门 ───────────────────────────────────────────── */
 
+/** g1 专用分词:**先按连字符/斜杠切开再剥非字母**。
+ *  ⚠️ 不能复用 normTokens —— 它直接把 '-' 当噪声剥掉,
+ *     "self-defense" 会被粘成 "selfdefense",于是 defense 这种词
+ *     三次生成全被误判成"目标词缺席"(2026-08-03 试跑实际踩到)。
+ *     连字符复合词里出现目标词是**合法用法**,必须算命中。 */
+function targetTokens(sentence) {
+  return String(sentence).toLowerCase()
+    .split(/[\s\-–—/]+/)
+    .map(t => t.replace(/[^a-z']/g, ''))
+    .filter(Boolean)
+    .map(t => t.replace(/'s$/, ''));
+}
+
 /** g1 目标词存在:句中出现 headword 或其屈折形。 */
 export function g1_targetPresent(sentence, headword, table) {
   const forms = inflectionsOf(headword, table);
-  const toks = normTokens(sentence).map(t => t.replace(/'s$/, ''));
-  const hit = toks.some(t => forms.has(t));
+  const hit = targetTokens(sentence).some(t => forms.has(t));
   return hit ? null : `g1 目标词缺席:句中找不到 "${headword}" 或其屈折形`;
 }
 

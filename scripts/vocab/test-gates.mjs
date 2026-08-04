@@ -31,6 +31,15 @@ ok('缺席被拦下', g1_targetPresent('The council rejected the proposal withou
 ok('不被子串误判(band 不算 abandon)',
   g1_targetPresent('The band played loudly for almost three whole hours.', 'abandon', {}) !== null);
 ok('所有格 word\'s 也算命中', g1_targetPresent('The system\'s design impressed every single reviewer today.', 'system', {}) === null);
+// ↓ 2026-08-03 试跑 defense 实际踩到:连字符复合词被粘成一个词,合法用法被误杀
+ok('连字符复合词 self-defense 算命中 defense',
+  g1_targetPresent('She claimed her actions were justified as self-defense during the trial.', 'defense', {}) === null);
+ok('连字符复合词 well-being 算命中 being',
+  g1_targetPresent('The programme measures student well-being across twelve different schools.', 'being', {}) === null);
+ok('斜杠分隔 and/or 也切得开',
+  g1_targetPresent('Applicants may submit transcripts and/or letters before the stated deadline.', 'or', {}) === null);
+ok('连字符切开后仍不误判(band 不算 abandon)',
+  g1_targetPresent('The brass-band concert lasted almost three whole hours downtown.', 'abandon', {}) !== null);
 
 /* ── g2 长度 ── */
 process.stdout.write('g2 长度 8-16 词\n');

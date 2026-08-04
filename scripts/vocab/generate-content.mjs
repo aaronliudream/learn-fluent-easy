@@ -49,6 +49,12 @@ const CONCURRENCY = Number(arg('concurrency', '4'));
 const MAX_ATTEMPTS = 3;
 const DRY = process.argv.includes('--dry-run');
 const EMIT_ONLY = process.argv.includes('--emit-sql');
+/* --no-emit:只生成、只落 JSON,不出 SQL 也不出送审件。
+ * 用于小批试跑(先让 Aaron 看产出质量,确认 prompt 合格再放全量)。
+ * ⚠️ 试跑的词照样进 data/generated/<bank>-content.json,
+ *    全量跑时 pending 过滤会跳过它们**不重复烧 token**,
+ *    但 emit() 是把整个 JSON 全量输出的,所以这几个词照常出现在最终 SQL 里,不会漏。 */
+const NO_EMIT = process.argv.includes('--no-emit');
 
 /* ── env ── */
 const ENV = loadEnv(REPO);
@@ -253,7 +259,7 @@ async function main() {
     while (queue.length) {
       const word = queue.shift();
       const cefr = cefrFor(word.freq_rank);
-      let notes = null, saved = false;
+      let notes = null, saved = false, lastRejected = null;
       for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
         let payload;
         try {
@@ -277,10 +283,16 @@ async function main() {
           break;
         }
         notes = fails;
+        lastRejected = payload;              // 留证:失败时能直接看模型到底写了什么
         process.stdout.write(`  ↻ ${word.headword} 第${attempt}次被闸门拦下:${fails[0]}\n`);
       }
       if (!saved) {
-        failed[word.headword.toLowerCase()] = { headword: word.headword, freq_rank: word.freq_rank, reasons: notes, at: 'gate' };
+        // ⚠️ 一定要把被拒的原文存下来。只存原因的话,排查时还得再烧一次 API
+        //    才知道模型写了啥(2026-08-03 试跑 defense 就是这么绕了一圈)。
+        failed[word.headword.toLowerCase()] = {
+          headword: word.headword, freq_rank: word.freq_rank,
+          reasons: notes, at: 'gate', rejected_payload: lastRejected,
+        };
         ko++;
         process.stdout.write(`  ✗✗ ${word.headword} 三次未过闸,记入 failed.json\n`);
       }
@@ -296,6 +308,10 @@ async function main() {
 
 /* ── 产出 SQL + 送审样本 ── */
 function emit(results) {
+  if (NO_EMIT) {
+    process.stdout.write(`· --no-emit:跳过 SQL 与送审件(累计已生成 ${Object.keys(results).length} 词,全在 JSON 里)\n`);
+    return;
+  }
   const list = Object.values(results);
   if (!list.length) { process.stdout.write('· 无内容可出 SQL\n'); return; }
   writeSql(list);

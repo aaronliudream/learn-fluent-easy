@@ -9,10 +9,14 @@
  * 每词一次 gpt-4o-mini 调用,输出:
  *   { ipa, def_zh, def_en, examples: [3 × { collocation, scene, sentence, translation_zh }] }
  *
- * 六道机器闸门在 ./gates.mjs(独立模块,可离线单测:node scripts/vocab/test-gates.mjs)
- *   g1 目标词存在   g2 长度 8-16   g3 em-dash
- *   g4 全局 4-gram 去重 >50% 拒     g5 三句 scene/collocation 互斥
+ * 九道机器闸门在 ./gates.mjs(独立模块,可离线单测:node scripts/vocab/test-gates.mjs)
+ *   g1 目标词存在(认屈折形+派生形)  g2 长度 8-16   g3 em-dash
+ *   g4 全局 4-gram 去重 >50% 拒       g5 三句 scene/collocation 互斥
  *   g6 同词三句两两 4-gram 重合 >30% 拒
+ *   g7 collocation 必须含目标词(拦同义词冒充搭配)
+ *   g8 中文译文标点全角          g9 三句首词互异
+ *
+ * def_zh 的义项规则在 ./prompt-rules.mjs(与 repair-defzh.mjs 共用,避免两份漂移)。
  * 任一失败 → 整词重生成,最多 3 次;仍失败记入 data/failed.json。
  * 重试时把**具体失败原因回喂给模型**,不做无信息的盲重试。
  *
@@ -35,6 +39,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SCENES, runAllGates, ngrams } from './gates.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
+import { DEF_ZH_RULE } from './prompt-rules.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
@@ -162,15 +167,8 @@ Frequency rank: ${word.freq_rank ?? 'unknown'} -> target sentence difficulty: ${
 Produce a study card with these HARD requirements:
 
 1. ipa: American English IPA for "${word.headword}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
-2. def_zh: 中文释义. Cover the 1-2 MOST COMMON senses of the word, separated by a
-   full-width semicolon "；".
-   ⚠️ The two senses must be GENUINELY DIFFERENT meanings, not two ways of saying
-   the same thing. Listing near-synonyms is FORBIDDEN: for "participant",
-   "参与者；参加者" is WRONG (same meaning twice) - just write "参与者".
-   Good two-sense examples: "defense" -> "防御；辩护" (two distinct meanings),
-   "attorney" -> "律师；代理人". If the word has only ONE common sense,
-   give ONE sense and no semicolon. Never pad.
-   不要写词性缩写, 只写释义本身.
+2. def_zh: 中文释义.
+${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
 3. def_en: English definition, AT MOST 15 words.
 4. examples: EXACTLY 3 objects. Each anchors ONE high-frequency collocation of "${word.headword}".
    - Order the three by collocation frequency: examples[0] uses the MOST frequent collocation, examples[2] the least.

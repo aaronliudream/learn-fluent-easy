@@ -46,7 +46,7 @@
 | | |
 | --- | --- |
 | 音标 | /nɪˌɡoʊ.ʃiˈeɪ.ʃən/ |
-| 中文释义 | 谈判；协商 |
+| 中文释义 | 谈判 |
 | 英文释义 | The process of discussing terms to reach an agreement. |
 | freq_rank | 2259 |
 | 难度档 | B1 |
@@ -62,7 +62,7 @@
 | | |
 | --- | --- |
 | 音标 | /kəˈloʊ.ni.əl/ |
-| 中文释义 | 殖民的；与殖民地有关的 |
+| 中文释义 | 与殖民地或殖民地相关的 |
 | 英文释义 | Relating to a colony or colonies. |
 | freq_rank | 3321 |
 | 难度档 | B1 |
@@ -94,7 +94,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈmɪn.ɪ.maɪz/ |
-| 中文释义 | 减少；使最小化 |
+| 中文释义 | 将某物尽可能缩小 |
 | 英文释义 | To make something as small as possible. |
 | freq_rank | 3941 |
 | 难度档 | B1 |
@@ -110,7 +110,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈfʌndɪŋ/ |
-| 中文释义 | 资金；资助 |
+| 中文释义 | 提供财政支持的行为 |
 | 英文释义 | The act of providing financial support. |
 | freq_rank | 2141 |
 | 难度档 | B1 |
@@ -142,7 +142,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˌnʌn.ðəˈlɛs/ |
-| 中文释义 | 尽管如此；然而 |
+| 中文释义 | 尽管如此 |
 | 英文释义 | In spite of that; nevertheless. |
 | freq_rank | 3298 |
 | 难度档 | B1 |
@@ -158,7 +158,7 @@
 | | |
 | --- | --- |
 | 音标 | /kəmˈplɛks.ɪ.ti/ |
-| 中文释义 | 复杂性；合成物 |
+| 中文释义 | 复杂性 |
 | 英文释义 | The state of being intricate or complicated. |
 | freq_rank | 3757 |
 | 难度档 | B1 |
@@ -174,7 +174,7 @@
 | | |
 | --- | --- |
 | 音标 | /ɡræb/ |
-| 中文释义 | 抓住；匆忙获取 |
+| 中文释义 | 迅速或突然地抓住某物 |
 | 英文释义 | To take hold of something quickly or suddenly. |
 | freq_rank | 1477 |
 | 难度档 | A2 |
@@ -190,7 +190,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈpɛn.əl.ti/ |
-| 中文释义 | 惩罚；损失 |
+| 中文释义 | 因违反规定而受到的惩罚或不利后果 |
 | 英文释义 | A punishment or disadvantage for an offense or violation. |
 | freq_rank | 2680 |
 | 难度档 | B1 |
@@ -222,7 +222,7 @@
 | | |
 | --- | --- |
 | 音标 | /koʊ.əˈlɪʃ.ən/ |
-| 中文释义 | 联盟；联合 |
+| 中文释义 | 为特定目的或目标而形成的团体 |
 | 英文释义 | A group formed for a specific purpose or goal. |
 | freq_rank | 2241 |
 | 难度档 | B1 |
@@ -238,7 +238,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈkɒn.træk.tər/ |
-| 中文释义 | 承包商；合同人 |
+| 中文释义 | 根据合同提供服务的个人或公司。 |
 | 英文释义 | A person or company that provides services under a contract. |
 | freq_rank | 3745 |
 | 难度档 | B1 |
@@ -254,7 +254,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈhɔːl.weɪ/ |
-| 中文释义 | 走廊；通道 |
+| 中文释义 | 建筑内部的长而狭窄的通道。 |
 | 英文释义 | A long narrow passage inside a building. |
 | freq_rank | 3559 |
 | 难度档 | B1 |
@@ -270,7 +270,7 @@
 | | |
 | --- | --- |
 | 音标 | /sərˈvaɪ.vər/ |
-| 中文释义 | 幸存者；生还者 |
+| 中文释义 | 在某个事件后仍然存活的人 |
 | 英文释义 | A person remaining alive after an event. |
 | freq_rank | 3011 |
 | 难度档 | B1 |
@@ -286,7 +286,7 @@
 | | |
 | --- | --- |
 | 音标 | /ˈfleɪ.vɚ/ |
-| 中文释义 | 风味；特色 |
+| 中文释义 | 独特的味道或某物的特质 |
 | 英文释义 | A distinctive taste or quality of something. |
 | freq_rank | 3118 |
 | 难度档 | B1 |

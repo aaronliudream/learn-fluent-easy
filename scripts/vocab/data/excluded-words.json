@@ -1,8 +1,15 @@
 {
   "_note": "词表排除名单。ingest-toefl.mjs 每次重跑自动生效,被剔的词记入 skipped.json 的 excluded 段。",
   "_criterion": "⚠️ 剔词标准**只认内容质量实测**,不认话题范围。曾按「美国政体专名」的范围理由剔过 congressional / congressman,已撤销并放回词池 —— 那个口径守不住:照它推下去 senator / presidency / amendment 全都该剔,而它们都是托福阅读的正经高频词。要剔一个词,必须拿出「生成产出反复出错」的实测证据。",
-  "_reviewed": "2026-08-03 Aaron 最终裁决:只剔 democrat。congressional / congressman / senator / impeach / partisan / feminist 全部保留。",
+  "_reviewed": "2026-08-03 Aaron 最终裁决:剔 democrat 与 wright(两者都是质量实测证据)。congressional / congressman / senator / impeach / partisan / feminist 全部保留。",
   "words": [
+    {
+      "headword": "wright",
+      "reason": "quality: 黏着词素,无独立用法,两轮6次全失败",
+      "detail": "wright 在现代英语里是黏着词素,只存在于复合词(playwright / shipwright / wheelwright)和姓氏 Wright 中,没有独立用法。两轮共 6 次生成全部失败,每次产出的都是同一批东西:'The Wright brothers…' (专名) / 'playwright' / 'shipwright'。g7 拦下 playwright 是正确的——playwright 是另一个词,不是 wright 的搭配。这个词做不出合格词卡,ECDICT 给它打 toefl 标本身就可疑。质量口径的标准案例。",
+      "evidence": "scripts/vocab/data/failed.json(两轮 rejected_payload)",
+      "decided_at": "2026-08-03"
+    },
     {
       "headword": "democrat",
       "reason": "quality: 构词陷阱高出错率",

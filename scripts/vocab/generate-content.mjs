@@ -395,11 +395,8 @@ function writeSql(list) {
 
 BEGIN;
 
--- ⚠️ 前置:scene 列。
--- 2026-08-03 实测 information_schema 里 vocab_examples 还**没有**这一列
--- (当时 public 库内唯一的 scene 列在 american_lessons 上)。
--- 这句是幂等的:你要是已经加过,它就是 no-op;没加过,它替你补上。
--- 不加这列,下面的 INSERT 会直接报 column "scene" does not exist。
+-- scene 列的安全网。2026-08-03 出这份 SQL 时已实测确认 vocab_examples.scene
+-- 存在(text, nullable),所以这句就是个 no-op,留着是防回滚/换环境时缺列。
 ALTER TABLE vocab_examples ADD COLUMN IF NOT EXISTS scene text;
 
 SELECT 'BEFORE' AS stage,
@@ -532,7 +529,8 @@ ${w.examples.map((e, i) => `| ${i + 1} | ${e.collocation} | \`${e.scene}\` | ${e
 
 > 抽 ${picked.length} 词(种子固定 20260803,复跑抽到同样这批)。
 > **不是纯随机** —— 贪心挑成尽量铺开 scene 与词性,免得 16 个全是名词、场景全挤在 news。
-> 本批覆盖 **${seenScene.size}/10 个 scene**、**${seenPos.size} 种词性**(${[...seenPos].join(' / ')})。
+> 本批覆盖 **${seenScene.size}/10 个 scene**、**${seenPos.size} 种词性**(${[...seenPos].map(p => p === '?' ? '词性缺失' : p).join(' / ')})。
+> (\`词性缺失\` = ECDICT 的 translation 里没有词性前缀,全库 53 个词属于这种,\`pos\` 为空。)
 > 全量 ${list.length} 词见 \`scripts/vocab/data/generated/${bank}-content.json\`。
 
 ## 全量 ${list.length} 词的分布(不只是抽样这 16 个)
@@ -543,16 +541,19 @@ ${w.examples.map((e, i) => `| ${i + 1} | ${e.collocation} | \`${e.scene}\` | ${e
 
 ## 这批内容是怎么把住质量的
 
-六道**机器**闸门,任一不过就整词重生成(最多 3 次),仍不过记入 \`scripts/vocab/data/failed.json\`:
+**九道**机器闸门,任一不过就整词重生成(最多 3 次),仍不过记入 \`scripts/vocab/data/failed.json\`:
 
 | 闸门 | 判据 | 拦的是什么 |
 | --- | --- | --- |
-| g1 | 句中含 headword 或其屈折形 | 例句根本没用上目标词 |
+| g1 | 句中含 headword 或其屈折形/派生形 | 例句根本没用上目标词 |
 | g2 | 例句 8-16 词 | 太短没语境 / 太长读不动 |
 | g3 | 全字段扫 em-dash / en-dash | 破折号(中文排版里很丑) |
 | g4 | 与**历史全部**已生成句 4-gram 重合 >50% | 跨词、跨批次的套话复读 |
 | g5 | 三句 scene 互不相同且在枚举内;三句 collocation 互不相同 | 三句其实在讲同一个用法 |
 | g6 | 同词任意两句 4-gram 重合 >30% | "换个场景词、其余照抄"的偷懒句 |
+| g7 | collocation 必须含目标词或其屈折/派生形 | 拿同义词冒充搭配(attorney→"lawyer") |
+| g8 | 译文句末须全角句号;中文后不许跟半角标点 | 中英标点混排 |
+| g9 | 三句首词两两不同 | 同一个句式模子套三遍 |
 
 场景枚举固定 10 个:\`${SCENES.join('`, `')}\`。
 

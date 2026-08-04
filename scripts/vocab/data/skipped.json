@@ -13,14 +13,14 @@
   ],
   "excluded_by_tag": 2488,
   "tagged_rows": 6974,
-  "kept": 4472,
+  "kept": 4471,
   "counts": {
     "phrase": 4,
     "proper_noun": 9,
     "non_alpha": 0,
     "duplicate": 0,
     "no_freq": 124,
-    "excluded": 1,
+    "excluded": 2,
     "no_pos": 53
   },
   "phrase": [
@@ -169,7 +169,8 @@
     "well-being"
   ],
   "excluded": [
-    "democrat (quality: 构词陷阱高出错率)"
+    "democrat (quality: 构词陷阱高出错率)",
+    "wright (quality: 黏着词素,无独立用法,两轮6次全失败)"
   ],
   "no_pos": [
     "accelerating",

@@ -59,6 +59,51 @@ export type BankProgress = {
   total: number;
 };
 
+/** 掌握度原始行(成长图/仪表盘共用)。 */
+export type MasteryRow = {
+  word_id: string;
+  mastery_level: number;
+  correct_days: number;
+  last_correct_date: string | null;
+  modes_correct: string[] | null;
+  tested_count: number;
+};
+
+/**
+ * 掌握判定 —— spec 第 7.4 节三条**同时**成立。
+ * ⚠️ 全板块只此一处实现,仪表盘/成长图/PR-2 的写入侧都引它。
+ *    各写一套必然出现"仪表盘说掌握了、复习队列还在推"这种鬼故事。
+ */
+export function isMasteredRow(r: Pick<MasteryRow, "mastery_level" | "correct_days" | "modes_correct">): boolean {
+  const modes = new Set((r.modes_correct || []).filter(Boolean));
+  return (r.mastery_level ?? 0) >= 4 && (r.correct_days ?? 0) >= 4 && modes.size >= 2;
+}
+
+/** 当前用户的掌握度行。wordIds 传了就只取那些词(词库页用),不传取全部(中心页用)。 */
+export async function listMasteryRows(wordIds?: string[]): Promise<MasteryRow[]> {
+  const uid = await currentUserId();
+  if (!uid) return [];
+  const cols = "word_id,mastery_level,correct_days,last_correct_date,modes_correct,tested_count";
+  const out: MasteryRow[] = [];
+  if (wordIds && wordIds.length) {
+    for (let i = 0; i < wordIds.length; i += 200) {
+      const { data, error } = await db.from("user_vocab_mastery").select(cols)
+        .eq("user_id", uid).in("word_id", wordIds.slice(i, i + 200));
+      if (error) throw error;
+      out.push(...((data || []) as MasteryRow[]));
+    }
+    return out;
+  }
+  for (let from = 0; ; from += PAGE) {
+    const { data, error } = await db.from("user_vocab_mastery").select(cols)
+      .eq("user_id", uid).range(from, from + PAGE - 1);
+    if (error) throw error;
+    const rows = (data || []) as MasteryRow[];
+    out.push(...rows);
+    if (rows.length < PAGE) return out;
+  }
+}
+
 export async function currentUserId(): Promise<string | null> {
   const { data } = await supabase.auth.getUser();
   return data?.user?.id ?? null;

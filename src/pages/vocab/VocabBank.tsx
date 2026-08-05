@@ -193,11 +193,28 @@ function WordList({ words, color }: { words: VocabWord[]; color: string }) {
     return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onResize); };
   }, []);
 
-  // 展开区渲染完再量高度,拿到真实值后总高度才准
+  /* 展开区高度必须**持续跟踪**,不能只量一次。
+   * 2026-08-04 真机 bug:例句是异步拉的,useLayoutEffect 那一刻量到的是
+   * "加载例句…"占位的高度;例句到位后面板变高,而 openH 还是旧值,
+   * 于是下面几行按旧偏移绝对定位 → 直接被展开内容压穿(incredible 的例句
+   * 叠在 mall/conviction/myth 上)。改用 ResizeObserver 跟高度走。 */
   useLayoutEffect(() => {
     if (openIdx === null) { setOpenH(0); return; }
-    const h = panelRef.current?.offsetHeight ?? 0;
-    setOpenH(h);
+    const el = panelRef.current;
+    if (!el) return;
+    const measure = () => setOpenH(el.offsetHeight);
+    measure();
+    let ro: ResizeObserver | null = null;
+    try {
+      ro = new ResizeObserver(measure);
+      ro.observe(el);
+    } catch {
+      /* 老浏览器没有 ResizeObserver:退化成"下一帧再量一次",
+       * 至少能接住异步内容那一次高度变化。 */
+      const t = window.setTimeout(measure, 300);
+      return () => window.clearTimeout(t);
+    }
+    return () => ro?.disconnect();
   }, [openIdx, words]);
 
   const listRef = useRef<HTMLDivElement | null>(null);
@@ -211,7 +228,6 @@ function WordList({ words, color }: { words: VocabWord[]; color: string }) {
     [openIdx, openH],
   );
 
-  const total = words.length * ROW_H + openH;
   const startRaw = openIdx !== null && relTop > offsetFor(openIdx + 1)
     ? Math.floor((relTop - openH) / ROW_H)
     : Math.floor(relTop / ROW_H);
@@ -219,30 +235,37 @@ function WordList({ words, color }: { words: VocabWord[]; color: string }) {
   const end = Math.min(words.length, start + Math.ceil(viewH / ROW_H) + OVERSCAN * 2);
   const slice = words.slice(start, end);
 
+  /* ⚠️ 不用绝对定位排行。
+   * 之前每行 position:absolute + top=offsetFor(i),行高全靠算 ——
+   * 展开面板的高度只要有一帧不准(例句异步到位、字体回退换行、窗口变窄重排),
+   * 下面的行就会被压穿。真机上 incredible 展开后就叠在 mall/conviction/myth 上了。
+   * 改成"顶部占位 + 正常流 + 底部占位":展开面板自然把后续行推下去,
+   * **结构上不可能重叠**,与高度测量准不准无关。
+   * openH 现在只影响"该渲染哪一段"(算错顶多多渲染几行),不再影响排版。 */
   return (
     <div ref={listRef} className="overflow-hidden rounded-2xl border border-black/[0.08] bg-white">
-      <div style={{ height: total, position: "relative" }}>
-        {slice.map((w, k) => {
-          const i = start + k;
-          const isOpen = openIdx === i;
-          return (
-            <div key={w.id} style={{ position: "absolute", top: offsetFor(i), left: 0, right: 0 }}>
-              <Row
-                word={w}
-                open={isOpen}
-                first={i === 0}
-                color={color}
-                onToggle={() => setOpenIdx(isOpen ? null : i)}
-              />
-              {isOpen && (
-                <div ref={panelRef}>
-                  <ExamplePanel word={w} />
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+      <div style={{ height: start * ROW_H }} aria-hidden />
+      {slice.map((w, k) => {
+        const i = start + k;
+        const isOpen = openIdx === i;
+        return (
+          <div key={w.id}>
+            <Row
+              word={w}
+              open={isOpen}
+              first={i === 0}
+              color={color}
+              onToggle={() => setOpenIdx(isOpen ? null : i)}
+            />
+            {isOpen && (
+              <div ref={panelRef}>
+                <ExamplePanel word={w} />
+              </div>
+            )}
+          </div>
+        );
+      })}
+      <div style={{ height: Math.max(0, (words.length - end) * ROW_H) }} aria-hidden />
     </div>
   );
 }

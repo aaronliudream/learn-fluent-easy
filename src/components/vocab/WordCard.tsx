@@ -14,6 +14,7 @@ import { Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FONT_SERIF } from "@/lib/vocab/theme";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
+import { highlightSegments, HILITE } from "@/lib/vocab/highlight";
 import type { VocabWord, VocabExample } from "@/lib/vocab/data";
 
 type Props = {
@@ -126,7 +127,13 @@ export default function WordCard({ word, examples, hideExamples, defMode = "zh",
                       ex.audio_url ? (isPlaying ? "text-slate-900" : "text-slate-400") : "text-slate-200",
                     )}
                   />
-                  <span className="text-[17px] leading-relaxed text-slate-800">{ex.sentence}</span>
+                  <span className="text-[17px] leading-relaxed text-slate-800">
+                    {highlightSegments(ex.sentence, word.headword).map((s, si) =>
+                      s.hit
+                        ? <b key={si} style={{ color: HILITE, fontWeight: 700 }}>{s.text}</b>
+                        : <span key={si}>{s.text}</span>,
+                    )}
+                  </span>
                 </button>
                 <p className="mt-1 pl-6 text-[14px] leading-relaxed text-slate-500">{ex.translation_zh}</p>
               </div>

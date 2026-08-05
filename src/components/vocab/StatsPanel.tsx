@@ -11,6 +11,7 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { FONT_STAT, readStatsView, writeStatsView, type StatsView } from "@/lib/vocab/theme";
+import VocabGrowth from "@/components/vocab/VocabGrowth";
 
 function prefersReduced(): boolean {
   try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch { return false; }
@@ -47,9 +48,11 @@ type Props = {
   color?: string;
   /** 未登录 / 无数据时的引导文案 */
   emptyHint?: string;
+  /** 成长图的统计范围:传了就只统计这些词(词库页),不传统计全部(中心页)。 */
+  growthWordIds?: string[];
 };
 
-export default function StatsPanel({ mastered, learning, untouched, color = "#0F172A", emptyHint }: Props) {
+export default function StatsPanel({ mastered, learning, untouched, color = "#0F172A", emptyHint, growthWordIds }: Props) {
   const [view, setView] = useState<StatsView>("ring");
   const [shown, setShown] = useState(false);
   const boxRef = useRef<HTMLDivElement | null>(null);
@@ -131,33 +134,15 @@ export default function StatsPanel({ mastered, learning, untouched, color = "#0F
           </div>
         </div>
       ) : (
-        <div className="space-y-3">
-          {[
-            { label: "已掌握", v: mastered, c: color },
-            { label: "学习中", v: learning, c: "#94A3B8" },
-            { label: "未开始", v: untouched, c: "#E2E8F0" },
-          ].map(row => (
-            <div key={row.label}>
-              <div className="mb-1 flex items-baseline justify-between text-[12px] text-slate-500">
-                <span>{row.label}</span>
-                <span style={{ fontVariantNumeric: "tabular-nums" }} className="font-medium text-slate-700">{row.v}</span>
-              </div>
-              <div className="h-2.5 overflow-hidden rounded-full bg-slate-100">
-                <div
-                  className="h-full rounded-full"
-                  style={{
-                    width: shown ? `${total > 0 ? (row.v / total) * 100 : 0}%` : "0%",
-                    background: row.c,
-                    transition: prefersReduced() ? undefined : "width 600ms cubic-bezier(0.22, 1, 0.36, 1)",
-                  }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        /* 柱状 = **按日成长图**(竖向三色柱 + 日期轴 + 时间档),不是横向存量条。
+         * 横向存量条只是把圆环的信息换个方向再说一遍,对用户零增量;
+         * 成长图回答的是另一个问题:"我这几天到底在往前走吗"。
+         * 视觉与 /library/vocab 的「词汇成长」同源(共用 GrowthChart)。 */
+        <VocabGrowth wordIds={growthWordIds} />
       )}
 
-      {isEmpty && emptyHint && (
+      {/* 空态提示只在圆环视图给;柱状视图的空态由成长图自己画坐标轴 + 文案 */}
+      {view === "ring" && isEmpty && emptyHint && (
         <p className="mt-4 rounded-xl bg-slate-50 px-3 py-2.5 text-[13px] leading-relaxed text-slate-500">
           {emptyHint}
         </p>

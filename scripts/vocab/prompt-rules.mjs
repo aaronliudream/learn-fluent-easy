@@ -93,6 +93,12 @@ of the first, you MUST output only ONE sense. Most words have only one.
      dealer     ❌ 买卖商品或服务的人     ✅ 经销商；商人
      mechanism  ❌ 实现某种目标的系统或过程 ✅ 机制；机构
 
+⚠️ **中文释义里绝不允许出现英文字母。**
+   想不出中文对应词就给最接近的中文,**不要把原词或屈折形抄进来充数**。
+   实测反例:inappropriate → 「不当的， inappropriate 的」❌(应为「不当的」)
+             resemblance   → 「相似；相 resemblance」❌(应为「相似；相像」)
+             stagger       → 「摇晃； staggered 也指错开」❌(应为「摇晃；错开」)
+
 格式硬要求(实测踩过的坑,必须遵守):
   · 每个义项 2-8 个汉字的**词典式短语**,不是句子。
   · 禁止写成解释句、禁止举例、禁止加句号。

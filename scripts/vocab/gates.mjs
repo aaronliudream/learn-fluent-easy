@@ -85,11 +85,21 @@ export function inflectionsOf(headword, table = {}) {
  *     三次生成全被误判成"目标词缺席"(2026-08-03 试跑实际踩到)。
  *     连字符复合词里出现目标词是**合法用法**,必须算命中。 */
 function targetTokens(sentence) {
-  return String(sentence).toLowerCase()
-    .split(/[\s\-–—/]+/)
+  const s = String(sentence).toLowerCase();
+  // ① 按连字符/斜杠切开:让 "self-defense" 里的 defense 命中 defense
+  const split = s.split(/[\s\-–—/]+/)
     .map(t => t.replace(/[^a-z']/g, ''))
     .filter(Boolean)
     .map(t => t.replace(/'s$/, ''));
+  /* ② 只按空白切、**保留连字符**:让 "well-being" 整体命中 headword "well-being"。
+   * ⚠️ 只有 ① 会漏掉带连字符的 headword —— 句子里的 well-being 被切成 well+being,
+   *    永远匹配不上 "well-being" 本身。全池 18 个连字符词曾因此 100% 生成失败。
+   *    两套 token 都要,缺一不可:①管"复合词里含目标词",②管"目标词本身是复合词"。 */
+  const whole = s.split(/\s+/)
+    .map(t => t.replace(/^[^a-z]+|[^a-z]+$/g, ''))   // 只剥两端标点,中间连字符留着
+    .filter(Boolean)
+    .map(t => t.replace(/'s$/, ''));
+  return [...split, ...whole];
 }
 
 /**
@@ -187,8 +197,9 @@ export function g7_collocationContainsWord(examples, headword, table) {
   const forms = inflectionsOf(hw, table);
   for (let i = 0; i < examples.length; i++) {
     const c = String(examples[i].collocation || '');
-    const toks = c.toLowerCase().split(/[\s\-–—/]+/)
-      .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
+    // 与 g1 共用同一套分词(含"保留连字符"的那一路),否则 well-being 这类
+    // headword 的搭配「student well-being」会被判成"不含目标词"。
+    const toks = targetTokens(c);
     if (!toks.some(t => matchesForm(t, hw, forms))) {
       return `g7 第${i + 1}条搭配 "${c}" 里没有目标词 "${headword}",是同义词不是搭配`;
     }
@@ -305,8 +316,20 @@ export function defZhShapeProblem(defZh) {
   if (parts.length > 2) return `def_zh 有 ${parts.length} 个义项,最多 2 个`;
   const tooLong = parts.find(p => p.trim().length > 12);
   if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字):「${tooLong.trim()}」`;
-  const marker = EXPLANATORY_MARKERS.find(m => s.includes(m));
+  /* 标记词只在**长片段**里才说明是解释句。
+   * ⚠️ 短义项本身就等于标记词是合法的:notably「显著地；尤其」、customarily「通常；一般」——
+   *    「尤其」「通常」正是这些副词的标准释义。不加这条长度前提会把它们全判成解释句(实测误报)。
+   *    判据:逐个义项看,只有该义项**超过 4 字**且含标记词,才算解释句。 */
+  const marker = parts
+    .map(p => p.trim())
+    .filter(p => p.length > 4)
+    .flatMap(p => EXPLANATORY_MARKERS.filter(m => p.includes(m)))[0];
   if (marker) return `def_zh 是解释句不是词典释义(命中标记词「${marker}」):「${s}」`;
+  /* 中文释义里混英文 = 模型没想出中文对应词,直接把原词/屈折形抄进来充数。
+   * 实测样例:inappropriate「不当的， inappropriate 的」、resemblance「相似；相 resemblance」、
+   * stagger「摇晃； staggered 也指错开」—— 对中国学习者零信息量。
+   * 放量 4471 词时这类占 def_zh 不合格的一部分,机械可查,不该漏。 */
+  if (/[A-Za-z]/.test(s)) return `def_zh 里混入英文字母:「${s}」`;
   return null;
 }
 

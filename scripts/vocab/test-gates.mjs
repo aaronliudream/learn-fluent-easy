@@ -46,6 +46,16 @@ ok('斜杠分隔 and/or 也切得开',
   g1_targetPresent('Applicants may submit transcripts and/or letters before the stated deadline.', 'or', {}) === null);
 ok('连字符切开后仍不误判(band 不算 abandon)',
   g1_targetPresent('The brass-band concert lasted almost three whole hours downtown.', 'abandon', {}) !== null);
+// ↓ 2026-08-05 放量实战:headword 自身带连字符时,只按连字符切句子会永远匹配不上
+//   (全池 18 个连字符词 100% 生成失败)。两套 token 缺一不可。
+ok('headword 本身带连字符:well-being 能命中',
+  g1_targetPresent('The programme measures student well-being across twelve different schools.', 'well-being', {}) === null);
+ok('headword 本身带连字符:time-consuming 能命中',
+  g1_targetPresent('Manual data entry proved time-consuming for the whole research team.', 'time-consuming', {}) === null);
+ok('连字符 headword 句中缺席仍拦下',
+  g1_targetPresent('The team finished the survey without any major delay today.', 'well-being', {}) !== null);
+ok('g7 也认连字符 headword 的搭配',
+  g7_collocationContainsWord([{ collocation: 'student well-being', scene: 'news', sentence: 'x', translation_zh: 'x。' }], 'well-being', {}) === null);
 
 /* ── g2 长度 ── */
 process.stdout.write('g2 长度 8-16 词\n');

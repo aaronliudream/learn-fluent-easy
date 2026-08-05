@@ -85,7 +85,9 @@ export function inflectionsOf(headword, table = {}) {
  *     三次生成全被误判成"目标词缺席"(2026-08-03 试跑实际踩到)。
  *     连字符复合词里出现目标词是**合法用法**,必须算命中。 */
 function targetTokens(sentence) {
-  const s = String(sentence).toLowerCase();
+  // 弯引号归一:实测 layman’s terms 里的 ’ 不是 ',尾部 's 剥不掉,
+  // token 停在 "layman’s" 上,g13 认不出它就是 headword 本身。
+  const s = String(sentence).toLowerCase().replace(/[’‘]/g, "'");
   // ① 按连字符/斜杠切开:让 "self-defense" 里的 defense 命中 defense
   const split = s.split(/[\s\-–—/]+/)
     .map(t => t.replace(/[^a-z']/g, ''))
@@ -202,6 +204,64 @@ export function g7_collocationContainsWord(examples, headword, table) {
     const toks = targetTokens(c);
     if (!toks.some(t => matchesForm(t, hw, forms))) {
       return `g7 第${i + 1}条搭配 "${c}" 里没有目标词 "${headword}",是同义词不是搭配`;
+    }
+  }
+  return null;
+}
+
+/* ── g13 搭配不得同根同义反复 ──────────────────────────────────────────
+ * 由来:Aaron 真机审 16 词抽样时抓到 melodious 的搭配写成 "melodious melodies"
+ * —— g7 只要求"搭配里含目标词",这条**过得了 g7**,但它是同义反复:
+ * 学生看不到这个词跟别的词怎么搭,只看到它跟自己搭。
+ *
+ * 判据:搭配里除了目标词本身(及其屈折/派生形)之外,不许再出现**同根**的另一个词。
+ * 同根 = 该 token 以 headword 的词干打头。
+ *
+ * ⚠️ 为什么用"剥后缀求词干"而不是"最长公共前缀":
+ *    公共前缀会被 inter- / trans- / pre- / con- 这类**共享前缀**骗到 ——
+ *    international vs interest 公共前缀 "inter" 有 5 位,会误判成同根。
+ *    剥后缀是从词尾还原词根,不吃这个亏(international -> internation,
+ *    interest 不以它打头)。
+ * ⚠️ 词干短于 5 位就整条跳过。read(4 位)会把 ready 误判成同根,
+ *    宁可漏判也不误杀 —— 这个闸门只在证据确凿时才拦。
+ */
+const DERIV_SUFFIXES = [
+  'ization', 'isation', 'ication', 'ousness', 'iveness', 'ability', 'ibility',
+  'ational', 'ically', 'iously', 'ously', 'ation', 'ition', 'ement', 'ities',
+  'ility', 'ively', 'ative', 'itive', 'ious', 'eous', 'uous', 'ness', 'ment',
+  'tion', 'sion', 'ance', 'ence', 'ancy', 'ency', 'ical', 'able', 'ible',
+  'ship', 'hood', 'ings', 'ers', 'ing', 'ist', 'ism', 'ity', 'ify', 'ize',
+  'ise', 'ate', 'ary', 'ory', 'ive', 'ial', 'ual', 'ous', 'ful', 'age',
+  'ies', 'ied', 'al', 'ic', 'ly', 'er', 'or', 'ed', 'es', 'y', 's',
+];
+export function stemOf(word) {
+  const w = String(word).toLowerCase().replace(/[^a-z]/g, '');
+  for (const suf of DERIV_SUFFIXES) {
+    if (w.length - suf.length >= 5 && w.endsWith(suf)) return w.slice(0, w.length - suf.length);
+  }
+  return w;
+}
+export function g13_collocationNotSameRoot(examples, headword, table) {
+  const hw = headword.toLowerCase();
+  const forms = inflectionsOf(hw, table);
+  const stem = stemOf(hw);
+  if (stem.length < 5) return null;                 // 词干太短,证据不足,不拦
+  for (let i = 0; i < examples.length; i++) {
+    const c = String(examples[i].collocation || '');
+    /* ⚠️ 只用"按连字符切开"那一路分词,不用 targetTokens 的保留连字符那一路。
+     * 实测:nutrient-rich foods / tamper-proof packaging / starch-based products
+     * 这些都是好搭配,但整体 token "nutrient-rich" 既不算 headword 的屈折形
+     * (尾巴带连字符、超 4 位),又以词干打头 —— 会被误判成同根同义反复。
+     * 拆开后 "nutrient" 命中 headword 被跳过、"rich" 无关,才是对的口径。
+     * 12 条初扫里 9 条是这个误报。 */
+    const toks = String(c).toLowerCase().replace(/[’‘]/g, "'")
+      .split(/[\s\-–—/]+/).map(t => t.replace(/[^a-z']/g, '').replace(/'s$/, '')).filter(Boolean);
+    for (const t of new Set(toks)) {
+      if (t.length < 4) continue;
+      if (matchesForm(t, hw, forms)) continue;      // 这就是 g7 要求的目标词本身
+      if (t.startsWith(stem)) {
+        return `g13 第${i + 1}条搭配 "${c}" 里的 "${t}" 与目标词 "${headword}" 同根,是同义反复不是搭配`;
+      }
     }
   }
   return null;
@@ -383,6 +443,7 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable, opts =
     }
     for (const c of [
       g7_collocationContainsWord(examples, word.headword, inflectTable),
+      g13_collocationNotSameRoot(examples, word.headword, inflectTable),
       g8_zhPunctuation(examples),
       g9_distinctOpeners(examples),
       // g11 不在这里 —— 长度比版本实测假阳/假阴双失败,真正的 g11 在 verify-content.mjs

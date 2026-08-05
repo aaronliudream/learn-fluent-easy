@@ -27720,10 +27720,10 @@
     "def_en": "Resistance to infection or disease caused by specific antibodies.",
     "examples": [
       {
-        "collocation": "immune system immunity",
+        "collocation": "build immunity",
         "scene": "health",
-        "sentence": "A strong immune system provides better immunity against various infections.",
-        "translation_zh": "强大的免疫系统能提供更好的免疫力以抵抗各种感染。"
+        "sentence": "Regular exposure to mild germs helps children build immunity against common infections.",
+        "translation_zh": "经常接触轻微病菌有助于儿童建立对常见感染的免疫力。"
       },
       {
         "collocation": "herd immunity",
@@ -80276,10 +80276,10 @@
         "translation_zh": "在会议期间，一位直言不讳的持不同政见者对提议立法的影响表示担忧。"
       },
       {
-        "collocation": "dissenting dissenter",
+        "collocation": "a lone dissenter",
         "scene": "culture",
-        "sentence": "The film featured a dissenting dissenter who challenged societal norms through his art.",
-        "translation_zh": "这部电影展示了一位通过艺术挑战社会规范的持不同政见者。"
+        "sentence": "The film portrays a lone dissenter who challenged societal norms through his bold art.",
+        "translation_zh": "这部影片刻画了一位通过大胆艺术挑战社会规范的孤立持不同政见者。"
       }
     ],
     "_attempts": 1,
@@ -122676,10 +122676,10 @@
         "translation_zh": "她以悦耳的嗓音歌唱，吸引了在场的每一个人。"
       },
       {
-        "collocation": "melodious melodies",
+        "collocation": "a melodious tune",
         "scene": "education",
-        "sentence": "The class listened to melodious melodies that helped them relax during study time.",
-        "translation_zh": "班级在学习期间听着悦耳的旋律，帮助他们放松。"
+        "sentence": "The teacher played a melodious tune to help students relax before the difficult exam.",
+        "translation_zh": "老师播放了一段悦耳的曲子，帮助学生在考试前放松。"
       }
     ],
     "_attempts": 1,
@@ -122788,26 +122788,26 @@
     "freq_rank": 24319,
     "cefr": "C1",
     "ipa": "/ˈsɔːt.wʊd/",
-    "def_zh": "软木",
+    "def_zh": "软材；针叶材",
     "def_en": "Wood from coniferous trees, used in construction and furniture.",
     "examples": [
       {
         "collocation": "softwood lumber",
         "scene": "work",
         "sentence": "Construction companies frequently use softwood lumber for building residential homes.",
-        "translation_zh": "建筑公司经常使用软木木材来建造住宅。"
+        "translation_zh": "建筑公司经常使用针叶材木料来建造住宅。"
       },
       {
         "collocation": "softwood species",
         "scene": "science_tech",
         "sentence": "Researchers have identified several softwood species suitable for sustainable forestry practices.",
-        "translation_zh": "研究人员已确定几种适合可持续林业实践的软木树种。"
+        "translation_zh": "研究人员已确定几种适合可持续林业实践的针叶树种。"
       },
       {
         "collocation": "softwood products",
         "scene": "daily_life",
         "sentence": "You can find various softwood products like furniture and flooring in local stores.",
-        "translation_zh": "你可以在当地商店找到各种软木产品，如家具和地板。"
+        "translation_zh": "你可以在当地商店找到各种针叶材制品，如家具和地板。"
       }
     ],
     "_attempts": 1,

@@ -1,0 +1,305 @@
+{
+  "_note": "人工改写的 def_zh(模型三次形状校验不过的那批),需 Aaron 复核",
+  "words": [
+    {
+      "headword": "ethnic",
+      "old": "与特定种族或文化群体相关的",
+      "next": "民族的"
+    },
+    {
+      "headword": "sector",
+      "old": "某事物的一个独特部分或分区",
+      "next": "部门；行业"
+    },
+    {
+      "headword": "chip",
+      "old": "小块材料或电子元件；在某些情况下指共同出资或参与",
+      "next": "碎片；芯片"
+    },
+    {
+      "headword": "therapy",
+      "old": "治疗，尤其是针对身体或心理健康问题的治疗。",
+      "next": "治疗"
+    },
+    {
+      "headword": "confront",
+      "old": "面对某人或某事，以挑战的方式应对。",
+      "next": "面对；对抗"
+    },
+    {
+      "headword": "fiber",
+      "old": "一种线状结构或有助于消化的膳食材料。",
+      "next": "纤维"
+    },
+    {
+      "headword": "profile",
+      "old": "轮廓或摘要，通常指某人或某事的基本信息或特征。",
+      "next": "简介；轮廓"
+    },
+    {
+      "headword": "penalty",
+      "old": "因违反规定而受到的惩罚或不利后果",
+      "next": "处罚；点球"
+    },
+    {
+      "headword": "elite",
+      "old": "精英，指具有优越地位或权力的特定群体。",
+      "next": "精英"
+    },
+    {
+      "headword": "awareness",
+      "old": "对某种情况或事实的知识或感知",
+      "next": "意识"
+    },
+    {
+      "headword": "myth",
+      "old": "传统故事或没有根据的信念。",
+      "next": "神话；误解"
+    },
+    {
+      "headword": "heritage",
+      "old": "遗产，特别是文化或历史方面的继承物。",
+      "next": "遗产"
+    },
+    {
+      "headword": "odds",
+      "old": "发生某事的可能性或概率。",
+      "next": "可能性"
+    },
+    {
+      "headword": "portray",
+      "old": "以特定方式表现或描绘某人或某物。",
+      "next": "描绘"
+    },
+    {
+      "headword": "fitness",
+      "old": "身体健康的状态或适合的状态",
+      "next": "健康；适合"
+    },
+    {
+      "headword": "norm",
+      "old": "标准或模式，被视为典型。",
+      "next": "规范"
+    },
+    {
+      "headword": "counseling",
+      "old": "专业提供的指导或建议，尤其是在心理健康等领域。",
+      "next": "心理咨询"
+    },
+    {
+      "headword": "integrity",
+      "old": "诚实和拥有强烈道德原则的品质",
+      "next": "正直；完整性"
+    },
+    {
+      "headword": "counsel",
+      "old": "建议或指导，尤其是在法律事务中。",
+      "next": "建议；律师"
+    },
+    {
+      "headword": "allegation",
+      "old": "指控某人做了非法或错误的事情。",
+      "next": "指控"
+    },
+    {
+      "headword": "seemingly",
+      "old": "表面上看起来的，但不一定是实际情况。",
+      "next": "看似地"
+    },
+    {
+      "headword": "array",
+      "old": "一组或一系列的项目或数据。",
+      "next": "一系列；阵列"
+    },
+    {
+      "headword": "monster",
+      "old": "可怕的生物或非常令人不快的人",
+      "next": "怪物"
+    },
+    {
+      "headword": "graphics",
+      "old": "使用计算机或图形工具创建的视觉图像或设计。",
+      "next": "图形"
+    },
+    {
+      "headword": "undermine",
+      "old": "逐渐或秘密地削弱或损害某事物",
+      "next": "削弱"
+    },
+    {
+      "headword": "dedicate",
+      "old": "致力于某项任务或目的，付出努力。",
+      "next": "致力于"
+    },
+    {
+      "headword": "spectrum",
+      "old": "一系列不同的事物、想法或品质。",
+      "next": "光谱；范围"
+    },
+    {
+      "headword": "expertise",
+      "old": "专业知识或技能，通常在特定领域内。",
+      "next": "专业知识"
+    },
+    {
+      "headword": "regulatory",
+      "old": "与控制某事的规则或法律相关的",
+      "next": "监管的"
+    },
+    {
+      "headword": "discourse",
+      "old": "正式的讨论或对话",
+      "next": "话语；论述"
+    },
+    {
+      "headword": "involved",
+      "old": "参与的；有关的",
+      "next": "参与的；复杂的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "grab",
+      "old": "迅速或突然地抓住某物",
+      "next": "抓住；攫取",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "regional",
+      "old": "与特定地区或地方相关的",
+      "next": "地区的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "funding",
+      "old": "提供财政支持的行为",
+      "next": "资金；拨款",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "dealer",
+      "old": "买卖商品或服务的人",
+      "next": "经销商；商人",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "mechanism",
+      "old": "实现某种目标的系统或过程",
+      "next": "机制；机构",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "ken",
+      "old": "某人所知道或理解的范围",
+      "next": "知识范围",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "entitled",
+      "old": "有权利或要求某物的",
+      "next": "有权的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "standing",
+      "old": "立场；站立的状态",
+      "next": "地位；立场",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "flavor",
+      "old": "独特的味道或某物的特质",
+      "next": "风味；特色",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "orientation",
+      "old": "使某人熟悉新环境的过程",
+      "next": "方向；入职培训",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "cluster",
+      "old": "一组紧密排列的相似事物",
+      "next": "集群；簇",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "colonial",
+      "old": "与殖民地或殖民地相关的",
+      "next": "殖民的；殖民地的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "dramatically",
+      "old": "以非常突然或极端的方式",
+      "next": "显著地",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "administrative",
+      "old": "与活动的组织和管理相关的",
+      "next": "行政的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "array",
+      "old": "一系列；阵列",
+      "next": "阵列；大批",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "ballot",
+      "old": "投票纸或投票的行为",
+      "next": "选票；投票",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "residential",
+      "old": "与住房或居住地相关的",
+      "next": "住宅的",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "minimize",
+      "old": "将某物尽可能缩小",
+      "next": "使最小化；尽量减少",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "penalty",
+      "old": "处罚；点球",
+      "next": "处罚；罚款",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "counsel",
+      "old": "建议；律师",
+      "next": "建议；法律顾问",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "seemingly",
+      "old": "看似地",
+      "next": "表面上；看似",
+      "round": "第三轮人工"
+    },
+    {
+      "headword": "grab",
+      "old": "抓住；攫取",
+      "next": "抓住",
+      "round": "第三轮人工-自查降单义"
+    },
+    {
+      "headword": "dealer",
+      "old": "经销商；商人",
+      "next": "经销商",
+      "round": "第三轮人工-自查降单义"
+    },
+    {
+      "headword": "cluster",
+      "old": "集群；簇",
+      "next": "集群",
+      "round": "第三轮人工-自查降单义"
+    }
+  ]
+}

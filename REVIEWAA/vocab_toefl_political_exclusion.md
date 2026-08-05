@@ -1,0 +1,84 @@
+# 托福词表 · 政治类排除清单(**已裁决,本文留档**)
+
+> ## ⚠️ 最终裁决(2026-08-03,以此为准,下文 A/B/C 分档已作废)
+>
+> **只剔 `democrat`。** `congressional` / `congressman` / `senator` / `impeach` /
+> `partisan` / `feminist` **全部保留**,`congressional` 已出补插 SQL 放回 DB。
+>
+> **理由(Aaron 定的口径)**:剔词标准**只认内容质量实测,不认话题范围**。
+> 我下文按「美国政体专名」这个**范围**理由剔 `congressional` / `congressman` 是错的 ——
+> 照那个口径推下去,`senator` / `presidency` / `amendment` 全都该剔,
+> 而它们都是托福阅读的正经高频词,口径就守不住了。
+>
+> 要剔一个词,必须拿出**生成产出反复出错**的实测证据。`democrat` 有(两轮都产出
+> Democrat Party / democrat voters 这类错误英语),所以只有它被剔。
+>
+> 排除名单固化在 `scripts/vocab/data/excluded-words.json`(原名 excluded-political.json,
+> 已改名 —— 剔除依据不是话题,文件名不该叫 political)。
+
+---
+
+## 以下为送审时的原始分析,仅作留档,分档结论已被上面的裁决覆盖
+
+
+
+> 起因:试跑时 `democrat` 生成出 `Democrat Party` / `Democrat candidate` —— 这在英语里
+> 是**错误说法**(正确是 Democratic Party / Democratic candidate),且"Democrat Party"
+> 本身是带贬义的党争用语,不该进教材。
+>
+> **口径(按 Aaron 裁决)**:只剔「**美国政体专名 + 争议性政治用语**」(democrat/republican 类),
+> **不扩大**到一般时政学术词。`policy` / `government` / `election` 这类一律保留。
+>
+> ⚠️ **本清单未执行**。词表(`scripts/vocab/data/toefl.csv`)一个字没改,等你审过再动。
+
+## 扫描范围
+
+在 D 池 4473 词里按 56 个政治类关键词探测,命中 16 个。逐个按上面的口径归类如下。
+
+---
+
+## A. 建议剔除(3 个)
+
+| 词 | 表中位次 | 是否首批 | 理由 |
+| --- | ---: | --- | --- |
+| `democrat` | 第 2 | ★首批 | 美国政党成员专名。实测已生成错误英语 `Democrat Party`。中文只能译"民主党成员",对中国考生无学习价值。 |
+| `congressional` | 第 33 | ★首批 | 美国国会的专属形容词,离开美国政体语境几乎不用。 |
+| `congressman` | 第 504 | | 美国众议员专称。另有性别形式问题(`congresswoman` 不在表里),教材里给单一男性形更不妥。 |
+
+剔除后词池 4473 → **4470**,首批 200 词需从第 201 位递补 2 个(`democrat`、`congressional` 都在首批内)。
+
+---
+
+## B. 提请你裁决(4 个)—— 我拿不准,倾向括号里的意见
+
+| 词 | 表中位次 | 是否首批 | 两面 |
+| --- | ---: | --- | --- |
+| `senator` | 第 60 | ★首批 | 参议员并非美国独有(法、意、巴西都有参议院),但 COCA 语料里几乎全是美国语境。**(倾向保留** —— 它更像 governor/mayor 这类通用政体角色词,而 governor/mayor 都不在剔除范围**)** |
+| `impeach` | 第 2581 | | 弹劾是通用法政程序(韩国、巴西都用),但英语语料里高度绑定美国政治事件。**(倾向保留)** |
+| `partisan` | 第 700 | | "党派之争的",本身是**贬义的争议性用语**,但也是正经学术词(partisan politics)。**(倾向保留,但它最接近你说的"争议性政治用语",你定)** |
+| `feminist` | 第 336 | ★首批 | 是争议性社会议题词,但**不属于美国政体专名**。按"不扩大"的口径应当保留。**(倾向保留)** |
+
+---
+
+## C. 明确保留(9 个)—— 属于一般时政/学术词,按口径不剔
+
+`presidency`(第118·首批) · `veto`(第986) · `amendment`(第156·首批) · `constitutional`(第54·首批) ·
+`ballot`(第162·首批) · `lobby`(第167·首批) · `ideology`(第150·首批) · `ideological`(第243) · `patriot`(第1890)
+
+说明几个容易犹豫的:
+- `amendment` / `constitutional`:任何国家都有宪法修正案,是通用法政词汇,不是美国专名。
+- `lobby`:高频义还有"大堂/门厅",本来就不是纯政治词。
+- `presidency` / `veto` / `ballot`:通用政体词汇,托福阅读高频。
+- `patriot`:通用词(爱国者),不构成党派立场。
+
+> 另:`republican` / `democratic` / `gop` / `caucus` / `filibuster` / `abortion` / `racism` 等
+> **本来就不在 D 池里**,无需处理。
+
+---
+
+## 请你回三件事
+
+1. **A 组 3 个是否照剔**(剔完首批从第 201 位递补 2 个)。
+2. **B 组 4 个逐个定**:剔 / 留。
+3. 剔除规则要不要**固化进摄取脚本**(加一份 `data/excluded-political.json`,以后每次重跑词表自动生效),还是这次一次性手工剔掉就算。
+   我建议固化 —— 否则哪天重跑 ingest,这几个词会悄悄回来。

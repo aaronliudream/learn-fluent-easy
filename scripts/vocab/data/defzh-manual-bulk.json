@@ -1,0 +1,190 @@
+{
+  "_note": "放量后 def_zh 体裁不合格的人工改写,待 Aaron 复核",
+  "words": [
+    {
+      "headword": "brutal",
+      "before": "残忍的； brutal",
+      "after": "残忍的；野蛮的"
+    },
+    {
+      "headword": "epidemic",
+      "before": "流行病；盛行的事物",
+      "after": "流行病；盛行"
+    },
+    {
+      "headword": "tilt",
+      "before": "倾斜；倾斜的状态",
+      "after": "倾斜；倾向"
+    },
+    {
+      "headword": "outbreak",
+      "before": "突然发生的（尤指疾病、战争等）",
+      "after": "爆发"
+    },
+    {
+      "headword": "underscore",
+      "before": "强调； underscore",
+      "after": "强调；下划线"
+    },
+    {
+      "headword": "decorative",
+      "before": "装饰的； decorative的",
+      "after": "装饰性的"
+    },
+    {
+      "headword": "resemblance",
+      "before": "相似；相 resemblance",
+      "after": "相似"
+    },
+    {
+      "headword": "stagger",
+      "before": "摇晃； staggered 也指错开",
+      "after": "摇晃；错开"
+    },
+    {
+      "headword": "marvel",
+      "before": "奇迹；令人惊奇的事物",
+      "after": "奇迹；惊叹"
+    },
+    {
+      "headword": "jeopardy",
+      "before": "危险； peril",
+      "after": "危险"
+    },
+    {
+      "headword": "commonplace",
+      "before": "平常的事物；普通的事物",
+      "after": "平常的；老生常谈"
+    },
+    {
+      "headword": "salvage",
+      "before": "抢救； salvage",
+      "after": "抢救；打捞"
+    },
+    {
+      "headword": "enclosure",
+      "before": "围 enclosure；封闭空间",
+      "after": "围场；附件"
+    },
+    {
+      "headword": "slug",
+      "before": "慢动作的人；懒惰者",
+      "after": "蛞蝓；懒人"
+    },
+    {
+      "headword": "illiterate",
+      "before": "文盲；不识字的人",
+      "after": "文盲的"
+    },
+    {
+      "headword": "maverick",
+      "before": "特立独行的人",
+      "after": "特立独行者"
+    },
+    {
+      "headword": "complimentary",
+      "before": "赞美的； complimentary",
+      "after": "赞美的；赠送的"
+    },
+    {
+      "headword": "repertory",
+      "before": " repertory",
+      "after": "保留剧目；仓库"
+    },
+    {
+      "headword": "enigma",
+      "before": "谜；难以理解的事物",
+      "after": "谜"
+    },
+    {
+      "headword": "barbarian",
+      "before": "野蛮人；未开化的人",
+      "after": "野蛮人"
+    },
+    {
+      "headword": "consequent",
+      "before": "结果；随之而来的事物",
+      "after": "随之而来的"
+    },
+    {
+      "headword": "travesty",
+      "before": "荒谬的模仿；可笑的事物",
+      "after": "拙劣模仿；歪曲"
+    },
+    {
+      "headword": "adornment",
+      "before": "装饰； adornment 也指装饰品",
+      "after": "装饰；饰品"
+    },
+    {
+      "headword": "nonconformist",
+      "before": "不墨守成规的人；不从众者",
+      "after": "不从众者"
+    },
+    {
+      "headword": "stipulate",
+      "before": "规定； stipulate ；约定",
+      "after": "规定；约定"
+    },
+    {
+      "headword": "softwood",
+      "before": "软木",
+      "after": "软材；针叶材",
+      "reason": "Aaron 指出:软木=cork,与 softwood 不是一回事"
+    },
+    {
+      "headword": "softwood",
+      "before": "软材；针叶材",
+      "after": "软材；针叶材",
+      "reason": "Aaron 指出:软木=cork,与 softwood 不是一回事"
+    },
+    {
+      "headword": "honor",
+      "before": "尊敬或对成就或品质的认可",
+      "after": "荣誉；尊敬",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "proceeding",
+      "before": "正在进行的事件或行动",
+      "after": "诉讼程序；进程",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "diagnose",
+      "before": "通过检查来识别疾病或问题",
+      "after": "诊断",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "precede",
+      "before": "在时间或顺序上先于",
+      "after": "先于；居先",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "codify",
+      "before": "法典化；将法规或规则编纂成册",
+      "after": "编纂；法典化",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "baste",
+      "before": "给食物涂抹汁液或脂肪",
+      "after": "涂油汁；粗缝",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "covetous",
+      "before": "贪婪的；渴望拥有他人之物的",
+      "after": "贪婪的；觊觎的",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "equivocate",
+      "before": "模棱两可，含糊其辞",
+      "after": "模棱两可；含糊其辞",
+      "reason": "义项超 8 字,是解释句不是释义"
+    }
+  ]
+}

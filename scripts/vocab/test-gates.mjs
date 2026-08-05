@@ -14,7 +14,7 @@ import {
   g1_targetPresent, g2_length, g3_noEmDash, g4_globalDedup,
   g5_mutualExclusive, g6_intraWordSimilarity,
   g7_collocationContainsWord, g8_zhPunctuation, g9_distinctOpeners,
-  g12_defEnNotCircular, LENGTH_BY_TIER,
+  g12_defEnNotCircular, g13_collocationNotSameRoot, stemOf, LENGTH_BY_TIER,
   runAllGates,
 } from './gates.mjs';
 
@@ -46,6 +46,16 @@ ok('斜杠分隔 and/or 也切得开',
   g1_targetPresent('Applicants may submit transcripts and/or letters before the stated deadline.', 'or', {}) === null);
 ok('连字符切开后仍不误判(band 不算 abandon)',
   g1_targetPresent('The brass-band concert lasted almost three whole hours downtown.', 'abandon', {}) !== null);
+// ↓ 2026-08-05 放量实战:headword 自身带连字符时,只按连字符切句子会永远匹配不上
+//   (全池 18 个连字符词 100% 生成失败)。两套 token 缺一不可。
+ok('headword 本身带连字符:well-being 能命中',
+  g1_targetPresent('The programme measures student well-being across twelve different schools.', 'well-being', {}) === null);
+ok('headword 本身带连字符:time-consuming 能命中',
+  g1_targetPresent('Manual data entry proved time-consuming for the whole research team.', 'time-consuming', {}) === null);
+ok('连字符 headword 句中缺席仍拦下',
+  g1_targetPresent('The team finished the survey without any major delay today.', 'well-being', {}) !== null);
+ok('g7 也认连字符 headword 的搭配',
+  g7_collocationContainsWord([{ collocation: 'student well-being', scene: 'news', sentence: 'x', translation_zh: 'x。' }], 'well-being', {}) === null);
 
 /* ── g2 长度 ── */
 process.stdout.write('g2 长度 8-16 词\n');
@@ -191,6 +201,25 @@ ok('脏样本被拦下', badFails.length > 0);
 ok('脏样本报出 g5 scene 重复', badFails.some(f => f.includes('g5')));
 ok('脏样本报出 g2 长度', badFails.some(f => f.includes('g2')));
 ok('脏样本报出 def_en 超 15 词', badFails.some(f => f.includes('def_en')));
+
+/* ── g13 同根搭配(2026-08-05 Aaron 审 16 词抽样抓到 melodious melodies)── */
+const coll = c => [{ collocation: c, scene: 'news', sentence: 'x', translation_zh: 'x。' }];
+ok('g13 拦下 melodious melodies(同根同义反复)',
+  !!g13_collocationNotSameRoot(coll('melodious melodies'), 'melodious', {}));
+ok('g13 拦下 conservation conserve',
+  !!g13_collocationNotSameRoot(coll('conservation to conserve'), 'conservation', {}));
+ok('g13 放行正常搭配 melodious voice',
+  g13_collocationNotSameRoot(coll('a melodious voice'), 'melodious', {}) === null);
+// 共享前缀不是同根 —— 最长公共前缀法会在这两条上误判,剥后缀法不会
+ok('g13 不把 international / interest 当同根',
+  g13_collocationNotSameRoot(coll('international interest'), 'international', {}) === null);
+ok('g13 不把 transport / transfer 当同根',
+  g13_collocationNotSameRoot(coll('transport and transfer'), 'transport', {}) === null);
+// 屈折形/派生形是 g7 要求的目标词本身,不算"另一个同根词"
+ok('g13 放行 headword 的屈折形',
+  g13_collocationNotSameRoot(coll('abandoned the abandon'), 'abandon', {}) === null);
+ok('stemOf 剥派生后缀', stemOf('melodious') === 'melod', `实际 ${stemOf('melodious')}`);
+ok('stemOf 不剥到 5 位以下', stemOf('acting') === 'acting', `实际 ${stemOf('acting')}`);
 
 ok('SCENES 恰好 10 个', SCENES.length === 10, `实际 ${SCENES.length}`);
 ok('inflectionsOf 含原形', inflectionsOf('abandon', {}).has('abandon'));

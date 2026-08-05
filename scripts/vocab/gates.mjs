@@ -85,11 +85,23 @@ export function inflectionsOf(headword, table = {}) {
  *     三次生成全被误判成"目标词缺席"(2026-08-03 试跑实际踩到)。
  *     连字符复合词里出现目标词是**合法用法**,必须算命中。 */
 function targetTokens(sentence) {
-  return String(sentence).toLowerCase()
-    .split(/[\s\-–—/]+/)
+  // 弯引号归一:实测 layman’s terms 里的 ’ 不是 ',尾部 's 剥不掉,
+  // token 停在 "layman’s" 上,g13 认不出它就是 headword 本身。
+  const s = String(sentence).toLowerCase().replace(/[’‘]/g, "'");
+  // ① 按连字符/斜杠切开:让 "self-defense" 里的 defense 命中 defense
+  const split = s.split(/[\s\-–—/]+/)
     .map(t => t.replace(/[^a-z']/g, ''))
     .filter(Boolean)
     .map(t => t.replace(/'s$/, ''));
+  /* ② 只按空白切、**保留连字符**:让 "well-being" 整体命中 headword "well-being"。
+   * ⚠️ 只有 ① 会漏掉带连字符的 headword —— 句子里的 well-being 被切成 well+being,
+   *    永远匹配不上 "well-being" 本身。全池 18 个连字符词曾因此 100% 生成失败。
+   *    两套 token 都要,缺一不可:①管"复合词里含目标词",②管"目标词本身是复合词"。 */
+  const whole = s.split(/\s+/)
+    .map(t => t.replace(/^[^a-z]+|[^a-z]+$/g, ''))   // 只剥两端标点,中间连字符留着
+    .filter(Boolean)
+    .map(t => t.replace(/'s$/, ''));
+  return [...split, ...whole];
 }
 
 /**
@@ -187,10 +199,69 @@ export function g7_collocationContainsWord(examples, headword, table) {
   const forms = inflectionsOf(hw, table);
   for (let i = 0; i < examples.length; i++) {
     const c = String(examples[i].collocation || '');
-    const toks = c.toLowerCase().split(/[\s\-–—/]+/)
-      .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
+    // 与 g1 共用同一套分词(含"保留连字符"的那一路),否则 well-being 这类
+    // headword 的搭配「student well-being」会被判成"不含目标词"。
+    const toks = targetTokens(c);
     if (!toks.some(t => matchesForm(t, hw, forms))) {
       return `g7 第${i + 1}条搭配 "${c}" 里没有目标词 "${headword}",是同义词不是搭配`;
+    }
+  }
+  return null;
+}
+
+/* ── g13 搭配不得同根同义反复 ──────────────────────────────────────────
+ * 由来:Aaron 真机审 16 词抽样时抓到 melodious 的搭配写成 "melodious melodies"
+ * —— g7 只要求"搭配里含目标词",这条**过得了 g7**,但它是同义反复:
+ * 学生看不到这个词跟别的词怎么搭,只看到它跟自己搭。
+ *
+ * 判据:搭配里除了目标词本身(及其屈折/派生形)之外,不许再出现**同根**的另一个词。
+ * 同根 = 该 token 以 headword 的词干打头。
+ *
+ * ⚠️ 为什么用"剥后缀求词干"而不是"最长公共前缀":
+ *    公共前缀会被 inter- / trans- / pre- / con- 这类**共享前缀**骗到 ——
+ *    international vs interest 公共前缀 "inter" 有 5 位,会误判成同根。
+ *    剥后缀是从词尾还原词根,不吃这个亏(international -> internation,
+ *    interest 不以它打头)。
+ * ⚠️ 词干短于 5 位就整条跳过。read(4 位)会把 ready 误判成同根,
+ *    宁可漏判也不误杀 —— 这个闸门只在证据确凿时才拦。
+ */
+const DERIV_SUFFIXES = [
+  'ization', 'isation', 'ication', 'ousness', 'iveness', 'ability', 'ibility',
+  'ational', 'ically', 'iously', 'ously', 'ation', 'ition', 'ement', 'ities',
+  'ility', 'ively', 'ative', 'itive', 'ious', 'eous', 'uous', 'ness', 'ment',
+  'tion', 'sion', 'ance', 'ence', 'ancy', 'ency', 'ical', 'able', 'ible',
+  'ship', 'hood', 'ings', 'ers', 'ing', 'ist', 'ism', 'ity', 'ify', 'ize',
+  'ise', 'ate', 'ary', 'ory', 'ive', 'ial', 'ual', 'ous', 'ful', 'age',
+  'ies', 'ied', 'al', 'ic', 'ly', 'er', 'or', 'ed', 'es', 'y', 's',
+];
+export function stemOf(word) {
+  const w = String(word).toLowerCase().replace(/[^a-z]/g, '');
+  for (const suf of DERIV_SUFFIXES) {
+    if (w.length - suf.length >= 5 && w.endsWith(suf)) return w.slice(0, w.length - suf.length);
+  }
+  return w;
+}
+export function g13_collocationNotSameRoot(examples, headword, table) {
+  const hw = headword.toLowerCase();
+  const forms = inflectionsOf(hw, table);
+  const stem = stemOf(hw);
+  if (stem.length < 5) return null;                 // 词干太短,证据不足,不拦
+  for (let i = 0; i < examples.length; i++) {
+    const c = String(examples[i].collocation || '');
+    /* ⚠️ 只用"按连字符切开"那一路分词,不用 targetTokens 的保留连字符那一路。
+     * 实测:nutrient-rich foods / tamper-proof packaging / starch-based products
+     * 这些都是好搭配,但整体 token "nutrient-rich" 既不算 headword 的屈折形
+     * (尾巴带连字符、超 4 位),又以词干打头 —— 会被误判成同根同义反复。
+     * 拆开后 "nutrient" 命中 headword 被跳过、"rich" 无关,才是对的口径。
+     * 12 条初扫里 9 条是这个误报。 */
+    const toks = String(c).toLowerCase().replace(/[’‘]/g, "'")
+      .split(/[\s\-–—/]+/).map(t => t.replace(/[^a-z']/g, '').replace(/'s$/, '')).filter(Boolean);
+    for (const t of new Set(toks)) {
+      if (t.length < 4) continue;
+      if (matchesForm(t, hw, forms)) continue;      // 这就是 g7 要求的目标词本身
+      if (t.startsWith(stem)) {
+        return `g13 第${i + 1}条搭配 "${c}" 里的 "${t}" 与目标词 "${headword}" 同根,是同义反复不是搭配`;
+      }
     }
   }
   return null;
@@ -303,10 +374,27 @@ export function defZhShapeProblem(defZh) {
   if (/[。.!?！？]/.test(s)) return 'def_zh 写成了句子(含句号)';
   const parts = s.split('；');
   if (parts.length > 2) return `def_zh 有 ${parts.length} 个义项,最多 2 个`;
-  const tooLong = parts.find(p => p.trim().length > 12);
-  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字):「${tooLong.trim()}」`;
-  const marker = EXPLANATORY_MARKERS.find(m => s.includes(m));
+  /* ⚠️ 2026-08-05 收紧 12 → 8。prompt 里定的规格一直是"每义项 2-8 个汉字",
+   *    检测器却放到 12,中间这一档漏网:honor「尊敬或对成就或品质的认可」、
+   *    diagnose「通过检查来识别疾病或问题」—— 没踩任何标记词、也没句号,
+   *    照样是解释句不是释义。阈值必须跟规格同一个数,不然就是自己给自己开后门。
+   *    实测全池只有 8 个词落在 9-12 这一档(0.2%),收紧不会误伤。 */
+  const tooLong = parts.find(p => p.trim().length > 8);
+  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字,规格 2-8):「${tooLong.trim()}」`;
+  /* 标记词只在**长片段**里才说明是解释句。
+   * ⚠️ 短义项本身就等于标记词是合法的:notably「显著地；尤其」、customarily「通常；一般」——
+   *    「尤其」「通常」正是这些副词的标准释义。不加这条长度前提会把它们全判成解释句(实测误报)。
+   *    判据:逐个义项看,只有该义项**超过 4 字**且含标记词,才算解释句。 */
+  const marker = parts
+    .map(p => p.trim())
+    .filter(p => p.length > 4)
+    .flatMap(p => EXPLANATORY_MARKERS.filter(m => p.includes(m)))[0];
   if (marker) return `def_zh 是解释句不是词典释义(命中标记词「${marker}」):「${s}」`;
+  /* 中文释义里混英文 = 模型没想出中文对应词,直接把原词/屈折形抄进来充数。
+   * 实测样例:inappropriate「不当的， inappropriate 的」、resemblance「相似；相 resemblance」、
+   * stagger「摇晃； staggered 也指错开」—— 对中国学习者零信息量。
+   * 放量 4471 词时这类占 def_zh 不合格的一部分,机械可查,不该漏。 */
+  if (/[A-Za-z]/.test(s)) return `def_zh 里混入英文字母:「${s}」`;
   return null;
 }
 
@@ -360,6 +448,7 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable, opts =
     }
     for (const c of [
       g7_collocationContainsWord(examples, word.headword, inflectTable),
+      g13_collocationNotSameRoot(examples, word.headword, inflectTable),
       g8_zhPunctuation(examples),
       g9_distinctOpeners(examples),
       // g11 不在这里 —— 长度比版本实测假阳/假阴双失败,真正的 g11 在 verify-content.mjs

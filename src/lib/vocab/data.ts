@@ -205,12 +205,16 @@ export async function listExamplesFor(wordIds: string[]): Promise<Record<string,
  * ⚠️ 判定口径在这里只读不写;写入侧(PR-2 的 vocabMastery.ts)必须算出同一结果。
  *    两边不一致会出现"仪表盘说掌握了、复习队列还在推"这种鬼故事。
  */
-export async function getBankProgress(bankId: string, totalWords: number): Promise<BankProgress> {
+export async function getBankProgress(bankId: string, fallbackTotal: number): Promise<BankProgress> {
   const uid = await currentUserId();
-  if (!uid) return { mastered: 0, learning: 0, untouched: totalWords, total: totalWords };
-
   const ids = await bankWordIds(bankId);
-  if (!ids.length) return { mastered: 0, learning: 0, untouched: totalWords, total: totalWords };
+  /* ⚠️ 分母用**实际挂在这个库下的词数**,不用 vocab_banks.total_words。
+   * total_words 是规划值(托福填的 4473),而库里实际可学只有 198 ——
+   * 拿 4473 当分母,用户把全部内容学完也只显示 4%,成就感直接归零。
+   * 放量后这个 count 自然长到 4473,total_words 只留作展示参考。 */
+  const total = ids.length || fallbackTotal;
+  if (!uid) return { mastered: 0, learning: 0, untouched: total, total };
+  if (!ids.length) return { mastered: 0, learning: 0, untouched: total, total };
 
   type Row = { word_id: string; mastery_level: number; correct_days: number; modes_correct: string[] | null; tested_count: number };
   const rows: Row[] = [];
@@ -226,12 +230,29 @@ export async function getBankProgress(bankId: string, totalWords: number): Promi
 
   let mastered = 0, learning = 0;
   for (const r of rows) {
-    const modes = new Set((r.modes_correct || []).filter(Boolean));
-    if ((r.mastery_level ?? 0) >= 4 && (r.correct_days ?? 0) >= 4 && modes.size >= 2) mastered++;
+    // 掌握判定复用 isMasteredRow,不在这里另写一套(两处漂移会出鬼故事)
+    if (isMasteredRow(r)) mastered++;
     else if ((r.tested_count ?? 0) > 0) learning++;
   }
-  const total = totalWords || ids.length;
   return { mastered, learning, untouched: Math.max(0, total - mastered - learning), total };
+}
+
+/** 词表分组用的学习状态。 */
+export type WordStatus = "new" | "learning" | "mastered";
+
+/**
+ * 取一批词的学习状态,用于词表按「待学习 / 学习中 / 已掌握」分组。
+ * 未登录 → 全部 new(零数据时所有词都在"待学习"组,这是预期形态不是异常)。
+ * ⚠️ 掌握判定复用 isMasteredRow,不在这里另写一套。
+ */
+export async function getWordStatusMap(wordIds: string[]): Promise<Record<string, WordStatus>> {
+  const map: Record<string, WordStatus> = {};
+  if (!wordIds.length) return map;
+  const rows = await listMasteryRows(wordIds).catch(() => [] as MasteryRow[]);
+  for (const r of rows) {
+    map[r.word_id] = isMasteredRow(r) ? "mastered" : ((r.tested_count ?? 0) > 0 ? "learning" : "new");
+  }
+  return map;
 }
 
 /** 到期待复习词数(next_review_at <= now)。未登录返回 0。 */

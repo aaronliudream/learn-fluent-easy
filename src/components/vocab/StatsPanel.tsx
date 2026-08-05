@@ -1,12 +1,17 @@
 /**
- * 顶部统计双视图:圆环 / 柱状图,右上角滑钮切换。
+ * 顶部统计双视图:圆环 / 柱状成长图,右上角滑钮切换。
  *
  * 严格照 docs/vocab-bank/VOCAB_DESIGN_SPEC.md:
- *   · 偏好存 localStorage(key vocab_stats_view),默认圆环,读到非法值回落 ring
+ *   · 偏好存 localStorage(vocab_stats_view),默认圆环,非法值回落 ring
  *   · 动效白名单只两处在本组件:环扫出 600ms / count-up 800ms
- *   · 切换本身**无动画**;切过去之后该视图的入场动效照常放一次
- *   · 统计数字 40-56px + tabular-nums(不加等宽,count-up 过程中整行会左右抖)
- *   · 尊重 prefers-reduced-motion:命中时直接落终值
+ *   · 切换本身无动画;切过去后该视图的入场动效放一次
+ *   · 掌握大字 40-56px + tabular-nums(不等宽,count-up 过程整行会左右抖)
+ *   · 尊重 prefers-reduced-motion:命中直接落终值
+ *
+ * ⚠️ showDenominator=false 时**只显示「已掌握 N」大字,不显示 /总数**。
+ *    中心页必须这样:那里的分母是"某一个库的词数",放在全站中心页语义就是错的,
+ *    而且词库越加越多时它会变成一个劝退分母。进度感交给里程碑徽章链。
+ *    「N / 总数」这种形态只保留在各词库详情页。
  */
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -20,86 +25,81 @@ function prefersReduced(): boolean {
 /** 数字 0 → value,800ms。reduced-motion 时直接给终值。 */
 function CountUp({ value, className, style }: { value: number; className?: string; style?: React.CSSProperties }) {
   const [n, setN] = useState(() => (prefersReduced() ? value : 0));
-  const ref = useRef<number | null>(null);
+  const raf = useRef<number | null>(null);
   useEffect(() => {
     if (prefersReduced()) { setN(value); return; }
     const t0 = performance.now();
-    const from = 0;
     const step = (now: number) => {
       const p = Math.min(1, (now - t0) / 800);
-      // easeOutCubic:末尾减速,读数落定时不显得突兀
-      const e = 1 - Math.pow(1 - p, 3);
-      setN(Math.round(from + (value - from) * e));
-      if (p < 1) ref.current = requestAnimationFrame(step);
+      const e = 1 - Math.pow(1 - p, 3);      // easeOutCubic:落定时不突兀
+      setN(Math.round(value * e));
+      if (p < 1) raf.current = requestAnimationFrame(step);
     };
-    ref.current = requestAnimationFrame(step);
-    return () => { if (ref.current) cancelAnimationFrame(ref.current); };
+    raf.current = requestAnimationFrame(step);
+    return () => { if (raf.current) cancelAnimationFrame(raf.current); };
   }, [value]);
-  return (
-    <span className={className} style={{ fontVariantNumeric: "tabular-nums", ...style }}>{n}</span>
-  );
+  return <span className={className} style={{ fontVariantNumeric: "tabular-nums", ...style }}>{n}</span>;
 }
 
 type Props = {
   mastered: number;
   learning: number;
   untouched: number;
-  /** 环/柱主色(词库身份色);中心页用中性色。 */
+  /** 累计已测词数(只涨不跌)。与掌握数构成「实力 + 努力」双成就。 */
+  tested?: number;
+  /** 环/柱主色(词库身份色);中心页用中性深色。 */
   color?: string;
-  /** 未登录 / 无数据时的引导文案 */
   emptyHint?: string;
-  /** 成长图的统计范围:传了就只统计这些词(词库页),不传统计全部(中心页)。 */
+  /** 成长图统计范围:传了只统计这些词(词库页),不传统计全部(中心页)。 */
   growthWordIds?: string[];
+  /** false = 只显示「已掌握 N」,不显示 /总数(中心页)。 */
+  showDenominator?: boolean;
 };
 
-export default function StatsPanel({ mastered, learning, untouched, color = "#0F172A", emptyHint, growthWordIds }: Props) {
+export default function StatsPanel({
+  mastered, learning, untouched, tested, color = "#0F172A",
+  emptyHint, growthWordIds, showDenominator = true,
+}: Props) {
   const [view, setView] = useState<StatsView>("ring");
   const [shown, setShown] = useState(false);
   const boxRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => { setView(readStatsView()); }, []);
 
-  // 首次进入视口才放入场动效(spec:环扫出触发一次)
   useEffect(() => {
     const el = boxRef.current;
     if (!el) return;
     if (prefersReduced()) { setShown(true); return; }
     let io: IntersectionObserver | null = null;
     try {
-      io = new IntersectionObserver((es) => {
+      io = new IntersectionObserver(es => {
         if (es.some(e => e.isIntersecting)) { setShown(true); io?.disconnect(); }
       }, { threshold: 0.3 });
       io.observe(el);
-    } catch {
-      setShown(true); // 老浏览器没有 IO,直接显示终态,别让统计区空着
-    }
+    } catch { setShown(true); }
     return () => io?.disconnect();
   }, []);
 
   const total = Math.max(0, mastered + learning + untouched);
   const pct = total > 0 ? mastered / total : 0;
-  const isEmpty = total === 0 || (mastered === 0 && learning === 0);
-
+  const isEmpty = mastered === 0 && learning === 0;
   const pick = (v: StatsView) => { setView(v); writeStatsView(v); };
 
   const R = 54, C = 2 * Math.PI * R;
+  /* 空态不画纯灰圈:给一段浅身份色引导弧(12% 周长),
+   * 让空环看起来是"还没走到"而不是"坏了"。 */
+  const emptyArc = C * 0.12;
 
   return (
-    <div ref={boxRef} className="rounded-2xl border border-black/[0.08] bg-white p-5">
+    <div ref={boxRef} className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-[15px] font-semibold text-slate-900">学习进度</h2>
-        {/* 滑钮:白底细边,不用渐变 */}
+        <h2 className="text-[16px] font-semibold text-slate-900">学习进度</h2>
         <div className="flex rounded-full border border-black/[0.08] p-0.5" role="tablist" aria-label="统计视图">
           {(["ring", "bar"] as StatsView[]).map(v => (
             <button
-              key={v}
-              role="tab"
-              aria-selected={view === v}
-              onClick={() => pick(v)}
-              className={cn(
-                "rounded-full px-3 py-1 text-[12px] font-medium",
-                view === v ? "bg-slate-900 text-white" : "text-slate-500",
-              )}
+              key={v} role="tab" aria-selected={view === v} onClick={() => pick(v)}
+              className={cn("rounded-full px-3 py-1 text-[13px] font-medium",
+                view === v ? "bg-slate-900 text-white" : "text-slate-500")}
             >
               {v === "ring" ? "圆环" : "柱状"}
             </button>
@@ -110,40 +110,55 @@ export default function StatsPanel({ mastered, learning, untouched, color = "#0F
       {view === "ring" ? (
         <div className="flex items-center gap-5">
           <svg width="128" height="128" viewBox="0 0 128 128" className="shrink-0" aria-hidden>
-            <circle cx="64" cy="64" r={R} fill="none" stroke="#EEF2F6" strokeWidth="10" />
-            <circle
-              cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="10" strokeLinecap="round"
-              transform="rotate(-90 64 64)"
-              style={{
-                strokeDasharray: C,
-                strokeDashoffset: shown ? C * (1 - pct) : C,
-                transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
-              }}
-            />
+            <circle cx="64" cy="64" r={R} fill="none" stroke="#EFF1F5" strokeWidth="11" />
+            {isEmpty ? (
+              /* 空态引导弧:浅身份色,提示"从这里开始" */
+              <circle
+                cx="64" cy="64" r={R} fill="none" stroke={color} strokeOpacity={0.25} strokeWidth="11"
+                strokeLinecap="round" transform="rotate(-90 64 64)"
+                style={{ strokeDasharray: `${emptyArc} ${C}`, strokeDashoffset: 0 }}
+              />
+            ) : (
+              <circle
+                cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="11" strokeLinecap="round"
+                transform="rotate(-90 64 64)"
+                style={{
+                  strokeDasharray: C,
+                  strokeDashoffset: shown ? C * (1 - pct) : C,
+                  transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+                }}
+              />
+            )}
           </svg>
+
           <div className="min-w-0">
-            <div className="flex items-baseline gap-1">
-              <CountUp value={mastered} className="text-slate-900" style={{ fontFamily: FONT_STAT, fontSize: "clamp(40px, 12vw, 56px)", fontWeight: 700, lineHeight: 1 }} />
-              <span className="text-[13px] text-slate-400">/ {total}</span>
+            {/* 全页最大的字就是这个数 */}
+            <div className="flex items-baseline gap-1.5">
+              <CountUp
+                value={mastered}
+                className="text-slate-900"
+                style={{ fontFamily: FONT_STAT, fontSize: "clamp(44px, 13vw, 56px)", fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em" }}
+              />
+              {showDenominator && <span className="text-[14px] text-slate-400">/ {total}</span>}
             </div>
-            <div className="mt-1 text-[13px] text-slate-500">已掌握</div>
-            <div className="mt-3 space-y-1 text-[12px] text-slate-500">
-              <div>学习中 <span style={{ fontVariantNumeric: "tabular-nums" }} className="font-medium text-slate-700">{learning}</span></div>
-              <div>未开始 <span style={{ fontVariantNumeric: "tabular-nums" }} className="font-medium text-slate-700">{untouched}</span></div>
+            <div className="mt-1.5 text-[14px] font-medium text-slate-600">已掌握</div>
+            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-slate-500">
+              <span>学习中 <b className="font-semibold text-slate-800" style={{ fontVariantNumeric: "tabular-nums" }}>{learning}</b></span>
+              {typeof tested === "number"
+                ? <span>已测 <b className="font-semibold text-slate-800" style={{ fontVariantNumeric: "tabular-nums" }}>{tested}</b></span>
+                : <span>未开始 <b className="font-semibold text-slate-800" style={{ fontVariantNumeric: "tabular-nums" }}>{untouched}</b></span>}
             </div>
           </div>
         </div>
       ) : (
-        /* 柱状 = **按日成长图**(竖向三色柱 + 日期轴 + 时间档),不是横向存量条。
-         * 横向存量条只是把圆环的信息换个方向再说一遍,对用户零增量;
-         * 成长图回答的是另一个问题:"我这几天到底在往前走吗"。
-         * 视觉与 /library/vocab 的「词汇成长」同源(共用 GrowthChart)。 */
+        /* 柱状 = 按日成长图(竖向三色柱 + 日期轴 + 时间档),不是横向存量条。
+         * 横向存量条只是把圆环的信息换个方向再说一遍;成长图回答的是
+         * "我这几天到底在往前走吗"。视觉与 /library/vocab 同源(共用 GrowthChart)。 */
         <VocabGrowth wordIds={growthWordIds} />
       )}
 
-      {/* 空态提示只在圆环视图给;柱状视图的空态由成长图自己画坐标轴 + 文案 */}
       {view === "ring" && isEmpty && emptyHint && (
-        <p className="mt-4 rounded-xl bg-slate-50 px-3 py-2.5 text-[13px] leading-relaxed text-slate-500">
+        <p className="mt-4 rounded-xl bg-slate-50 px-3.5 py-3 text-[14px] leading-relaxed text-slate-500">
           {emptyHint}
         </p>
       )}

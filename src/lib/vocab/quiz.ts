@@ -31,6 +31,32 @@ export function optionText(w: VocabWord, defMode: "zh" | "en"): string {
   return (w.def_zh || "").split("；")[0].trim();
 }
 
+/**
+ * 释义的"体量":中文数字数,英文数词数。
+ * 用来让四个选项长度相近 —— 三短一长时,学生不用认识这个词也能靠排除法秒杀,
+ * 题目就失去区分度了(实测:attorney「律师」的干扰项里混进「大型购物中心」)。
+ */
+function sizeOf(text: string, defMode: "zh" | "en"): number {
+  return defMode === "en" ? text.split(/\s+/).filter(Boolean).length : [...text].length;
+}
+
+/**
+ * 中文释义的具象度粗分类。**只用后缀判**,判不出就归 unknown。
+ * 这是个启发式,不追求准确:目的只是别把「大型购物中心」这种具体场所
+ * 混进「正直」「意识」这类抽象词的选项里,反之亦然。
+ * 判不出时按 unknown 处理,优先级居中,不会因为分类不准而排除掉好干扰项。
+ */
+type Concreteness = "concrete" | "abstract" | "unknown";
+const CONCRETE_TAIL = /(人|员|师|家|者|机|器|车|场|店|厅|楼|房|馆|所|物|品|具|剂|药|币|证|书|表|卡|球|刀|灯|站|区|城|岛|山|河|食|肉|果)$/;
+const ABSTRACT_TAIL = /(性|度|力|感|观|论|义|率|化|法|制|权|策|念|识|态|系|状|况|序|情|意|想|风|德|理)$/;
+function concretenessOf(text: string, defMode: "zh" | "en"): Concreteness {
+  if (defMode === "en") return "unknown";       // 英文释义不做这个判断,规则不通用
+  const head = text.split("；")[0].trim();
+  if (CONCRETE_TAIL.test(head)) return "concrete";
+  if (ABSTRACT_TAIL.test(head)) return "abstract";
+  return "unknown";
+}
+
 /** 确定性洗牌(seed 固定则每次同序),便于复现问题。 */
 function shuffle<T>(arr: T[], seed: number): T[] {
   const a = [...arr];
@@ -63,10 +89,26 @@ export function buildQuestions(pool: VocabWord[], targets: VocabWord[], defMode:
     const fallback = usable.filter(w => w.id !== word.id && optionText(w, defMode) !== correct);
     const source = samePos.length >= 3 ? samePos : fallback;
 
+    /* 干扰项打分:**长度相近 + 具象度同类** 优先。
+     * 不做硬过滤而是打分排序 —— 硬过滤在候选不足时会直接出不了题,
+     * 打分则是"够好的排前面,不够时自动放宽",不会把题目卡死。 */
+    const size0 = sizeOf(correct, defMode);
+    const class0 = concretenessOf(correct, defMode);
+    const scored = shuffle(source, word.id.charCodeAt(0) * 31 + qi).map(w => {
+      const t = optionText(w, defMode);
+      const d = Math.abs(sizeOf(t, defMode) - size0);
+      const c = concretenessOf(t, defMode);
+      let score = 0;
+      if (d <= 3) score += 10;                  // ±3 字以内优先
+      score -= d;                               // 超出部分按差距递减
+      if (c === class0) score += 6;             // 同为具体 / 同为抽象
+      else if (c === "unknown" || class0 === "unknown") score += 3;   // 判不出的居中,不惩罚
+      return { t, score };
+    }).sort((a, b) => b.score - a.score);
+
     const picked: string[] = [];
     const seen = new Set<string>([correct]);
-    for (const w of shuffle(source, word.id.charCodeAt(0) * 31 + qi)) {
-      const t = optionText(w, defMode);
+    for (const { t } of scored) {
       if (seen.has(t)) continue;                // 选项去重:两个词释义撞了会出现两个"正确答案"
       seen.add(t); picked.push(t);
       if (picked.length === 3) break;

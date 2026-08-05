@@ -148,10 +148,14 @@ const s18 = 'One two three four five six seven eight nine ten a b c d e f g h';
 ok('默认仍是 8-16(存量口径)', g2_length(s10) === null);
 ok('A2 上限 12:10 词放行', g2_length(s10, LENGTH_BY_TIER.A2) === null);
 ok('A2 上限 12:14 词拦下', g2_length('a b c d e f g h i j k l m n', LENGTH_BY_TIER.A2) !== null);
-ok('C1 下限 12:10 词拦下', g2_length(s10, LENGTH_BY_TIER.C1) !== null);
+// 2026-08-05 放宽下限后:C1 下限 10,所以 10 词放行、9 词才拦
+ok('C1 下限 10:10 词放行', g2_length(s10, LENGTH_BY_TIER.C1) === null);
+ok('C1 下限 10:9 词拦下', g2_length('a b c d e f g h i', LENGTH_BY_TIER.C1) !== null);
+ok('B2 下限 9:9 词放行', g2_length('a b c d e f g h i', LENGTH_BY_TIER.B2) === null);
+ok('B2 下限 9:8 词拦下', g2_length('a b c d e f g h', LENGTH_BY_TIER.B2) !== null);
 ok('C1 上限 20:18 词放行', g2_length(s18, LENGTH_BY_TIER.C1) === null);
-ok('四档区间就是裁决值',
-  JSON.stringify(LENGTH_BY_TIER) === JSON.stringify({ A2: [8, 12], B1: [8, 14], B2: [10, 16], C1: [12, 20] }),
+ok('四档区间就是裁决值(B2≥9 / C1≥10)',
+  JSON.stringify(LENGTH_BY_TIER) === JSON.stringify({ A2: [8, 12], B1: [8, 14], B2: [9, 16], C1: [10, 20] }),
   JSON.stringify(LENGTH_BY_TIER));
 
 /* ── def_en 循环定义 ── */

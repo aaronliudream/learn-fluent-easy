@@ -78,3 +78,4 @@ data/audio-audit/junior_listening_items_list.csv
 data/audio-audit/junior_dialogue_gap.csv
 data/audio-audit/junior_named_gap.csv
 data/audio-audit/senior_gap.csv
+scripts/vocab/data/ecdict-index.json

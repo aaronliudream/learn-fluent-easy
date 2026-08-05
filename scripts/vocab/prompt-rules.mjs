@@ -1,3 +1,5 @@
+import { SPEC } from './spec.mjs';
+
 /**
  * 生成 prompt 里的共用硬规则。
  *
@@ -45,7 +47,7 @@ export const FUNCTION_WORD_RULE = `⚠️ 这是一个功能词(连词/介词/�
   · 正例:"The data contained clear errors; nonetheless, the conclusion held up." ✅
   · 介词(amid / despite / beyond)的例句,须体现该介词真实的语义关系(伴随、让步、方位等)。`;
 
-export const DEF_ZH_RULE = `默认给 1 个义项。仅当两个义项差异大到词典会分列义项时才给 2 个,用全角分号 "；" 分隔。
+export const DEF_ZH_RULE = `默认给 1 个义项。仅当两个义项差异大到词典会分列义项时才给 ${SPEC.defZh.maxSenses} 个,用全角分号 "${SPEC.defZh.sep}" 分隔。
 
 正例(真双义,保留两个):
   context  -> 上下文；背景        (语言环境 vs 事件背景,词典分列)
@@ -110,7 +112,7 @@ of the first, you MUST output only ONE sense. Most words have only one.
              stagger       → 「摇晃； staggered 也指错开」❌(应为「摇晃；错开」)
 
 格式硬要求(实测踩过的坑,必须遵守):
-  · 每个义项 2-8 个汉字的**词典式短语**,不是句子。
+  · 每个义项 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars} 个汉字的**词典式短语**,不是句子。
   · 禁止写成解释句、禁止举例、禁止加句号。
   · 反例:entity -> "一个作为特定和独立单位存在的事物；法律实体、商业实体…都可视为实体。" ❌
     正例:entity -> "实体" ✅

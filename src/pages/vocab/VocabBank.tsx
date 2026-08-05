@@ -12,7 +12,7 @@
  * ⚠️ 未知 bankCode 必须给"词库不存在"不能白屏(smoke 有 /vocab/__BOGUS__ 守这条)。
  */
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ChevronDown, Headphones, Layers, PenLine, Search, Sparkles, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import WordCard from "@/components/vocab/WordCard";
@@ -55,6 +55,7 @@ const GROUPS: { key: WordStatus; label: string; hint: string }[] = [
 
 export default function VocabBank() {
   const { bankCode = "" } = useParams();
+  const navigate = useNavigate();
   const [bank, setBank] = useState<VocabBank | null>(null);
   const [words, setWords] = useState<VocabWord[]>([]);
   const [statuses, setStatuses] = useState<Record<string, WordStatus>>({});
@@ -142,17 +143,19 @@ export default function VocabBank() {
           />
 
           {due > 0 && (
-            <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white px-4 py-3.5">
+            <Link to="/vocab/review"
+              className="mt-4 flex items-center justify-between rounded-2xl border border-black/[0.06] bg-white px-4 py-3.5">
               <span className="text-[14px] text-slate-600">
                 有 <b className="text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>{due}</b> 个词到复习时间
               </span>
-            </div>
+              <span className="text-[14px] font-medium" style={{ color }}>立即复习 →</span>
+            </Link>
           )}
 
           {/* ★ 全屏唯一渐变位 ★ 其它任何按钮都不许用渐变 */}
           <button
             type="button"
-            onClick={() => document.getElementById("vocab-wordlist")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            onClick={() => navigate(`/vocab/${bankCode}/quiz`)}
             className="mt-4 w-full rounded-2xl px-5 py-4 text-center text-[17px] font-semibold text-white"
             style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}
           >
@@ -163,16 +166,30 @@ export default function VocabBank() {
           <div className="mt-4 grid grid-cols-2 gap-3">
             {/* 未上线的模式卡:降透明 + 禁点,与可用卡明确区分,避免反复点无响应的卡。
                 PR-2/PR-3 点亮时去掉 opacity/pointer-events 即可。 */}
-            {MODES.map(m => (
-              <div key={m.key} aria-disabled="true"
-                className="pointer-events-none cursor-not-allowed select-none rounded-2xl border border-black/[0.06] bg-white px-4 py-4 opacity-60">
-                <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-800">
-                  <m.icon className="h-[18px] w-[18px] text-slate-400" />{m.label}
+            {MODES.map(m => {
+              // PR-2 只点亮英汉选择；其余三张 PR-3 逐个点亮（去掉 opacity/pointer-events 即可）
+              const live = m.key === "zh_choice";
+              const inner = (
+                <>
+                  <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-800">
+                    <m.icon className="h-[18px] w-[18px]" style={live ? { color } : undefined} />{m.label}
+                  </div>
+                  <div className="mt-0.5 text-[13px] text-slate-400">{m.desc}</div>
+                  <div className="mt-2 text-[12px] font-medium" style={live ? { color } : undefined}>
+                    {live ? "开始 →" : "即将开放"}
+                  </div>
+                </>
+              );
+              return live ? (
+                <Link key={m.key} to={`/vocab/${bankCode}/quiz`}
+                  className="rounded-2xl border border-black/[0.06] bg-white px-4 py-4">{inner}</Link>
+              ) : (
+                <div key={m.key} aria-disabled="true"
+                  className="pointer-events-none cursor-not-allowed select-none rounded-2xl border border-black/[0.06] bg-white px-4 py-4 opacity-60">
+                  {inner}
                 </div>
-                <div className="mt-0.5 text-[13px] text-slate-400">{m.desc}</div>
-                <div className="mt-2 text-[12px] font-medium text-slate-400">即将开放</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <h2 id="vocab-wordlist" className="mb-3 mt-7 scroll-mt-4 text-[16px] font-semibold text-slate-900">词表</h2>

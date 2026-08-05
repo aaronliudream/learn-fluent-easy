@@ -106,7 +106,7 @@ export default function VocabCenter() {
 
         <div className="mt-4 grid grid-cols-2 gap-3">
           <EntryCard icon={<AlertCircle className="h-[18px] w-[18px]" />} label="错题本" count={mistakes} hint="待清" />
-          <EntryCard icon={<CalendarClock className="h-[18px] w-[18px]" />} label="今日复习" count={due} hint="到期" />
+          <EntryCard icon={<CalendarClock className="h-[18px] w-[18px]" />} label="今日复习" count={due} hint="到期" to="/vocab/review" />
         </div>
 
         {/* 里程碑:双态徽章,达成绿 / 未达成灰,视觉分量提上来 */}
@@ -191,9 +191,9 @@ export default function VocabCenter() {
   );
 }
 
-function EntryCard({ icon, label, count, hint }: { icon: React.ReactNode; label: string; count: number; hint: string }) {
-  return (
-    <div className="rounded-2xl border border-black/[0.06] bg-white px-4 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+function EntryCard({ icon, label, count, hint, to }: { icon: React.ReactNode; label: string; count: number; hint: string; to?: string }) {
+  const body = (
+    <>
       <div className="flex items-center gap-1.5 text-[14px] font-medium text-slate-700">
         <span className="text-slate-400">{icon}</span>{label}
       </div>
@@ -202,8 +202,10 @@ function EntryCard({ icon, label, count, hint }: { icon: React.ReactNode; label:
           style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>
         <span className="text-[13px] text-slate-400">{hint}</span>
       </div>
-    </div>
+    </>
   );
+  const cls = "block rounded-2xl border border-black/[0.06] bg-white px-4 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
+  return to ? <Link to={to} className={cls}>{body}</Link> : <div className={cls}>{body}</div>;
 }
 
 function BankCard({ bank }: { bank: BankRow }) {

@@ -111,6 +111,7 @@ const LibraryVocab = lazy(() => import("./pages/library/LibraryVocab.tsx"));
 // 这里是按考试分的词库(中考/高考/四六级/雅思托福…),数据在 vocab_* 表。
 const VocabCenter = lazy(() => import("./pages/vocab/VocabCenter.tsx"));
 const VocabBank = lazy(() => import("./pages/vocab/VocabBank.tsx"));
+const VocabQuiz = lazy(() => import("./pages/vocab/VocabQuiz.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
@@ -484,6 +485,9 @@ const App = () => (
           {/* 词汇板块。:bankCode 未知时页面自己给"词库不存在",不落到 404。 */}
           <Route path="/vocab" element={<ChineseOnlyRoute><VocabCenter /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode" element={<ChineseOnlyRoute><VocabBank /></ChineseOnlyRoute>} />
+          {/* 英汉选择与今日复习共用一个组件:复习只是把要考的词换成到期队列 */}
+          <Route path="/vocab/review" element={<ChineseOnlyRoute><VocabQuiz mode="review" /></ChineseOnlyRoute>} />
+          <Route path="/vocab/:bankCode/quiz" element={<ChineseOnlyRoute><VocabQuiz /></ChineseOnlyRoute>} />
           <Route path="/junior/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />
           <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
           <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />

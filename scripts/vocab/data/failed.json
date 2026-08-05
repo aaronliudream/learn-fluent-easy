@@ -1,1 +1,69 @@
-{}
+{
+  "opposed": {
+    "headword": "opposed",
+    "freq_rank": 4175,
+    "reasons": [
+      "例3 g2 长度 9 词,超出 10-16"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/əˈpoʊzd/",
+      "def_zh": "反对的；抵制的",
+      "def_en": "In disagreement or direct opposition to something.",
+      "examples": [
+        {
+          "collocation": "opposed to the proposal",
+          "scene": "work",
+          "sentence": "Many employees are opposed to the proposal for a pay cut.",
+          "translation_zh": "许多员工反对降薪的提议。"
+        },
+        {
+          "collocation": "strongly opposed",
+          "scene": "news",
+          "sentence": "The community members are strongly opposed to the new development project.",
+          "translation_zh": "社区成员强烈反对这个新的开发项目。"
+        },
+        {
+          "collocation": "opposed views",
+          "scene": "education",
+          "sentence": "Students presented their opposed views during the debate competition.",
+          "translation_zh": "学生们在辩论比赛中表达了不同的观点。"
+        }
+      ]
+    }
+  },
+  "icon": {
+    "headword": "icon",
+    "freq_rank": 4354,
+    "reasons": [
+      "例2 g1 目标词缺席:句中找不到 \"icon\" 或其屈折形",
+      "g7 第2条搭配 \"iconic images\" 里没有目标词 \"icon\",是同义词不是搭配"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/ˈaɪ.kɒn/",
+      "def_zh": "图标；偶像",
+      "def_en": "A representative symbol or person admired for their qualities.",
+      "examples": [
+        {
+          "collocation": "cultural icon",
+          "scene": "culture",
+          "sentence": "Many consider this artist a cultural icon of our generation.",
+          "translation_zh": "许多人认为这位艺术家是我们这一代的文化偶像。"
+        },
+        {
+          "collocation": "iconic images",
+          "scene": "daily_life",
+          "sentence": "Photographers capture iconic images that define particular moments in history.",
+          "translation_zh": "摄影师捕捉到的标志性图像定义了历史中的特定时刻。"
+        },
+        {
+          "collocation": "digital icons",
+          "scene": "science_tech",
+          "sentence": "Digital icons on the computer facilitate easy navigation between applications.",
+          "translation_zh": "计算机上的数字图标便于在应用程序之间轻松导航。"
+        }
+      ]
+    }
+  }
+}

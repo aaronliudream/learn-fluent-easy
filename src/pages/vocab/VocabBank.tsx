@@ -133,14 +133,21 @@ export default function VocabBank() {
           {/* PR-2 把这个按钮接到 5 步通关流程;本 PR 先滚到词表,不做假入口。 */}
 
           <div className="mt-4 grid grid-cols-2 gap-3">
+            {/* 未上线的模式卡:整卡降透明 + 禁点态,与可用卡明确区分 ——
+                否则用户会反复点一张没反应的卡,以为页面坏了。
+                PR-2/PR-3 逐个点亮时把 opacity/pointer-events 去掉即可。 */}
             {MODES.map(m => (
-              <div key={m.key} className="rounded-2xl border border-black/[0.08] bg-white px-4 py-3.5">
+              <div
+                key={m.key}
+                aria-disabled="true"
+                className="pointer-events-none cursor-not-allowed select-none rounded-2xl border border-black/[0.08] bg-white px-4 py-3.5 opacity-60"
+              >
                 <div className="flex items-center gap-1.5 text-[14px] font-medium text-slate-800">
                   <m.icon className="h-4 w-4 text-slate-400" />
                   {m.label}
                 </div>
                 <div className="mt-0.5 text-[12px] text-slate-400">{m.desc}</div>
-                <div className="mt-2 text-[11px] text-slate-300">准备中</div>
+                <div className="mt-2 text-[11px] font-medium text-slate-400">即将开放</div>
               </div>
             ))}
           </div>

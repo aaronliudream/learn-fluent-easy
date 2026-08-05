@@ -34,6 +34,8 @@ type CourseCardData = {
   badge?: string;
   /** true = 电脑端(sm+)跨两列占整行(图书馆卡),手机端仍单列。 */
   spanFull?: boolean;
+  /** true = 标题/副文案/去学习整体提一档。全宽卡文字相对卡宽偏小,放大后更好读。 */
+  emphasis?: boolean;
 };
 
 /** 入口卡:前 4 张学段卡(桌面 2×2,行优先自然排 → 左列 小学/高中,右列 初中/美语),
@@ -100,6 +102,7 @@ const COURSE_CARDS: CourseCardData[] = [
     gradient: "linear-gradient(135deg, #1b2a4a 0%, #2f4d7a 55%, #e2600f 150%)",
     badge: "词汇",
     spanFull: true,
+    emphasis: true,
   },
 ];
 
@@ -153,18 +156,18 @@ function CourseCard({
         </div>
 
         <div className="mt-auto space-y-1.5">
-          <h3 className="text-[15px] font-bold leading-snug">
+          <h3 className={`font-bold leading-snug ${c.emphasis ? "text-[19px]" : "text-[15px]"}`}>
             <T>{c.title}</T>
           </h3>
-          <p className="text-xs leading-relaxed text-white/85">
+          <p className={`leading-relaxed text-white/85 ${c.emphasis ? "text-sm" : "text-xs"}`}>
             <T>{c.desc}</T>
           </p>
           {c.coverage && (
-            <p className="text-[11px] leading-relaxed text-white/70">
+            <p className={`leading-relaxed text-white/70 ${c.emphasis ? "text-xs" : "text-[11px]"}`}>
               <T>{c.coverage}</T>
             </p>
           )}
-          <span className="inline-block w-fit rounded-md bg-white/15 px-2 py-0.5 text-[10px] font-semibold text-white/90">
+          <span className={`inline-block w-fit rounded-md bg-white/15 px-2 py-0.5 font-semibold text-white/90 ${c.emphasis ? "text-[11px]" : "text-[10px]"}`}>
             {c.tag}
           </span>
           {soon ? (
@@ -172,8 +175,8 @@ function CourseCard({
               <T>整理中</T>
             </span>
           ) : (
-            <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#fcd98a] group-hover:gap-1.5">
-              <T>去学习</T> <ArrowRight className="size-3.5 shrink-0" />
+            <span className={`mt-1 inline-flex items-center gap-1 font-bold text-[#fcd98a] group-hover:gap-1.5 ${c.emphasis ? "text-sm" : "text-xs"}`}>
+              <T>去学习</T> <ArrowRight className={c.emphasis ? "size-4 shrink-0" : "size-3.5 shrink-0"} />
             </span>
           )}
         </div>

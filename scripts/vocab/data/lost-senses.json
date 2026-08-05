@@ -1,0 +1,1178 @@
+{
+  "scanned": 117,
+  "lost": [
+    {
+      "headword": "adoption",
+      "original": "收养；采纳",
+      "current": "收养",
+      "lost": true,
+      "domain_a": "家庭",
+      "domain_b": "商业",
+      "restored_def_zh": "收养; 采纳",
+      "verdict": "该词在商业领域也有常用义项，指的是采纳或接受某种政策、方法等。"
+    },
+    {
+      "headword": "arena",
+      "original": "竞技场；活动领域",
+      "current": "体育或公共活动的场所",
+      "lost": true,
+      "domain_a": "体育",
+      "domain_b": "政治",
+      "restored_def_zh": "体育或公共活动的场所;政治领域的活动场所",
+      "verdict": "该词在政治领域也有重要的使用，漏掉了这一常用义项。"
+    },
+    {
+      "headword": "cluster",
+      "original": "簇；群",
+      "current": "集群",
+      "lost": true,
+      "domain_a": "一般名词",
+      "domain_b": "计算机",
+      "restored_def_zh": "集群;数据集群",
+      "verdict": "该词在计算机领域也有常用义项，指数据的集群或分组。"
+    },
+    {
+      "headword": "context",
+      "original": "上下文；背景",
+      "current": "上下文",
+      "lost": true,
+      "domain_a": "语言",
+      "domain_b": "事件",
+      "restored_def_zh": "上下文(语言);背景(事件)",
+      "verdict": "该词的中文释义漏掉了背景的意思。"
+    },
+    {
+      "headword": "counseling",
+      "original": "咨询；劝告",
+      "current": "心理咨询",
+      "lost": true,
+      "domain_a": "心理健康",
+      "domain_b": "教育",
+      "restored_def_zh": "心理咨询;教育辅导",
+      "verdict": "该释义漏掉了教育领域的常用义项。"
+    },
+    {
+      "headword": "counselor",
+      "original": "顾问；辅导员",
+      "current": "顾问",
+      "lost": true,
+      "domain_a": "顾问",
+      "domain_b": "心理咨询",
+      "restored_def_zh": "顾问;心理咨询师",
+      "verdict": "该释义漏掉了心理咨询领域的常用义项。"
+    },
+    {
+      "headword": "coverage",
+      "original": "保险范围；报导范围",
+      "current": "覆盖范围",
+      "lost": true,
+      "domain_a": "新闻",
+      "domain_b": "保险",
+      "restored_def_zh": "覆盖范围;保险范围",
+      "verdict": "该词在保险和新闻领域都有常用义项，当前释义未涵盖保险范围。"
+    },
+    {
+      "headword": "dealer",
+      "original": "经销商；交易者",
+      "current": "经销商",
+      "lost": true,
+      "domain_a": "商业",
+      "domain_b": "赌博",
+      "restored_def_zh": "经销商;赌徒",
+      "verdict": "该词在汽车、房地产等领域的经销商外，还有在赌博领域的含义。"
+    },
+    {
+      "headword": "defense",
+      "original": "防御；辩护",
+      "current": "防御",
+      "lost": true,
+      "domain_a": "军事",
+      "domain_b": "法律",
+      "restored_def_zh": "防御(军事);辩护(法律)",
+      "verdict": "该词在法律领域还有辩护的意思，漏掉了一个常用义项。"
+    },
+    {
+      "headword": "doctrine",
+      "original": "学说；信条",
+      "current": "教义",
+      "lost": true,
+      "domain_a": "宗教",
+      "domain_b": "法律",
+      "restored_def_zh": "教义;法律原则",
+      "verdict": "该词在法律领域也有常用义项，指法律原则或政策。"
+    },
+    {
+      "headword": "grab",
+      "original": "抓住；匆忙获取",
+      "current": "抓住",
+      "lost": true,
+      "domain_a": "动作;行为",
+      "domain_b": "口语;日常生活",
+      "restored_def_zh": "抓住;迅速获取",
+      "verdict": "该词在口语中还有表示快速获取或占有的意思，属于不同领域的用法。"
+    },
+    {
+      "headword": "mandate",
+      "original": "命令；授权",
+      "current": "官方命令或授权行动的权利",
+      "lost": true,
+      "domain_a": "官方命令",
+      "domain_b": "法律",
+      "restored_def_zh": "官方命令或授权行动的权利;法律上对某项行为的授权",
+      "verdict": "该词在法律领域还有授权的含义，未被包含在现有释义中。"
+    },
+    {
+      "headword": "odds",
+      "original": "几率；赔率",
+      "current": "可能性",
+      "lost": true,
+      "domain_a": "概率",
+      "domain_b": "赌博",
+      "restored_def_zh": "可能性;赔率",
+      "verdict": "该词在赌博领域还有常用义项。"
+    }
+  ],
+  "ok": [
+    {
+      "headword": "accounting",
+      "original": "会计；会计学",
+      "current": "会计",
+      "lost": false,
+      "domain_a": "财务",
+      "domain_b": "无",
+      "restored_def_zh": "会计",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "administrative",
+      "original": "行政的；管理的",
+      "current": "行政的",
+      "lost": false,
+      "domain_a": "行政",
+      "domain_b": "无",
+      "restored_def_zh": "行政的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "administrator",
+      "original": "管理员；行政人员",
+      "current": "管理员",
+      "lost": false,
+      "domain_a": "管理",
+      "domain_b": "无",
+      "restored_def_zh": "管理员",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "allegation",
+      "original": "指控；指责",
+      "current": "指控",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "指控",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "alliance",
+      "original": "联盟；联合",
+      "current": "联盟",
+      "lost": false,
+      "domain_a": "政治;商业",
+      "domain_b": "无",
+      "restored_def_zh": "联盟",
+      "verdict": "当前的中文释义已涵盖主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "ally",
+      "original": "盟友；同盟者",
+      "current": "盟友",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "盟友",
+      "verdict": "该词的中文释义已涵盖其主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "amendment",
+      "original": "修正案；改正",
+      "current": "修正案",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "修正案",
+      "verdict": "该词的中文释义已涵盖其主要法律领域的含义，没有漏掉其他常用义项。"
+    },
+    {
+      "headword": "amid",
+      "original": "在……中间；在……之中",
+      "current": "在……中间",
+      "lost": false,
+      "domain_a": "位置",
+      "domain_b": "无",
+      "restored_def_zh": "在……中间",
+      "verdict": "当前的中文释义已涵盖了词义的主要用法，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "asset",
+      "original": "资产；有用的人或物",
+      "current": "资产",
+      "lost": false,
+      "domain_a": "经济",
+      "domain_b": "无",
+      "restored_def_zh": "资产",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "attorney",
+      "original": "律师；代理人",
+      "current": "律师",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "律师",
+      "verdict": "该词的中文释义已涵盖其主要法律领域的含义，没有漏掉其他常用义项。"
+    },
+    {
+      "headword": "awareness",
+      "original": "意识；认识",
+      "current": "意识",
+      "lost": false,
+      "domain_a": "心理学",
+      "domain_b": "无",
+      "restored_def_zh": "意识",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "carbohydrate",
+      "original": "碳水化合物；主要能量来源",
+      "current": "碳水化合物",
+      "lost": false,
+      "domain_a": "营养学",
+      "domain_b": "无",
+      "restored_def_zh": "碳水化合物",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "celebrity",
+      "original": "名人；知名度",
+      "current": "名人",
+      "lost": false,
+      "domain_a": "娱乐",
+      "domain_b": "无",
+      "restored_def_zh": "名人",
+      "verdict": "该释义已涵盖常用义项，未漏掉不同领域的义项。"
+    },
+    {
+      "headword": "championship",
+      "original": "锦标赛；冠军头衔",
+      "current": "锦标赛",
+      "lost": false,
+      "domain_a": "体育",
+      "domain_b": "无",
+      "restored_def_zh": "锦标赛",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "chronic",
+      "original": "慢性的；长期的",
+      "current": "慢性的",
+      "lost": false,
+      "domain_a": "医学",
+      "domain_b": "无",
+      "restored_def_zh": "慢性的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "cite",
+      "original": "引用；举例",
+      "current": "引用",
+      "lost": false,
+      "domain_a": "语言",
+      "domain_b": "无",
+      "restored_def_zh": "引用",
+      "verdict": "该词的中文释义已涵盖其主要用法，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "coalition",
+      "original": "联盟；联合",
+      "current": "联盟",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "联盟",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "cognitive",
+      "original": "认知的；认知能力",
+      "current": "认知的",
+      "lost": false,
+      "domain_a": "心理学",
+      "domain_b": "无",
+      "restored_def_zh": "认知的",
+      "verdict": "该词的中文释义已涵盖其主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "complexity",
+      "original": "复杂性；合成物",
+      "current": "复杂性",
+      "lost": false,
+      "domain_a": "一般",
+      "domain_b": "无",
+      "restored_def_zh": "复杂性",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "concerned",
+      "original": "关心的；担忧的",
+      "current": "担忧的",
+      "lost": false,
+      "domain_a": "情感",
+      "domain_b": "无",
+      "restored_def_zh": "担忧的",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "congressional",
+      "original": "国会的；议会的",
+      "current": "国会的",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "国会的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "consistently",
+      "original": "始终如一；一贯地",
+      "current": "始终如一地",
+      "lost": false,
+      "domain_a": "副词",
+      "domain_b": "无",
+      "restored_def_zh": "始终如一地",
+      "verdict": "当前的中文释义已涵盖了该词的主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "constitutional",
+      "original": "宪法的；符合宪法的",
+      "current": "宪法的",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "宪法的",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "contractor",
+      "original": "承包商；合同人",
+      "current": "承包商",
+      "lost": false,
+      "domain_a": "建筑",
+      "domain_b": "无",
+      "restored_def_zh": "承包商",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "convinced",
+      "original": "坚信的；确信的",
+      "current": "确信的",
+      "lost": false,
+      "domain_a": "心理",
+      "domain_b": "无",
+      "restored_def_zh": "确信的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "cooperation",
+      "original": "合作；配合",
+      "current": "合作",
+      "lost": false,
+      "domain_a": "社会科学",
+      "domain_b": "无",
+      "restored_def_zh": "合作",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "corruption",
+      "original": "腐败；贪污",
+      "current": "腐败",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "腐败",
+      "verdict": "该词的中文释义已涵盖其主要含义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "counterpart",
+      "original": "对应物；配对物",
+      "current": "对应物",
+      "lost": false,
+      "domain_a": "一般用法",
+      "domain_b": "无",
+      "restored_def_zh": "对应物",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "currently",
+      "original": "目前；现在",
+      "current": "目前",
+      "lost": false,
+      "domain_a": "时间",
+      "domain_b": "无",
+      "restored_def_zh": "目前",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "dedicate",
+      "original": "奉献；专注于某事",
+      "current": "致力于",
+      "lost": false,
+      "domain_a": "动词",
+      "domain_b": "无",
+      "restored_def_zh": "致力于",
+      "verdict": "当前的中文释义已涵盖了主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "diagnose",
+      "original": "诊断；确认",
+      "current": "通过检查来识别疾病或问题",
+      "lost": false,
+      "domain_a": "医学",
+      "domain_b": "无",
+      "restored_def_zh": "通过检查来识别疾病或问题",
+      "verdict": "该词的中文释义已涵盖其主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "diagnosis",
+      "original": "诊断；判定",
+      "current": "诊断",
+      "lost": false,
+      "domain_a": "医学",
+      "domain_b": "无",
+      "restored_def_zh": "诊断",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "diversity",
+      "original": "多样性；多元化",
+      "current": "多样性",
+      "lost": false,
+      "domain_a": "社会科学",
+      "domain_b": "无",
+      "restored_def_zh": "多样性",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "donor",
+      "original": "捐献者；供体",
+      "current": "捐赠者",
+      "lost": false,
+      "domain_a": "医学;慈善",
+      "domain_b": "无",
+      "restored_def_zh": "捐赠者",
+      "verdict": "该释义已涵盖主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "dramatically",
+      "original": "戏剧性地；大幅度地",
+      "current": "显著地",
+      "lost": false,
+      "domain_a": "副词",
+      "domain_b": "无",
+      "restored_def_zh": "显著地",
+      "verdict": "该词的中文释义已涵盖其主要用法，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "effectiveness",
+      "original": "有效性；效能",
+      "current": "有效性",
+      "lost": false,
+      "domain_a": "管理",
+      "domain_b": "无",
+      "restored_def_zh": "有效性",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "elite",
+      "original": "精英；上层人士",
+      "current": "精英",
+      "lost": false,
+      "domain_a": "社会",
+      "domain_b": "无",
+      "restored_def_zh": "精英",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "emission",
+      "original": "排放；发行",
+      "current": "排放物",
+      "lost": false,
+      "domain_a": "环境科学",
+      "domain_b": "无",
+      "restored_def_zh": "排放物",
+      "verdict": "当前的中文释义已涵盖主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "endorse",
+      "original": "支持；认可",
+      "current": "公开支持或赞同",
+      "lost": false,
+      "domain_a": "商业/政治",
+      "domain_b": "无",
+      "restored_def_zh": "公开支持或赞同",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "entitled",
+      "original": "有权利的；被赋予特权的",
+      "current": "有权的",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "有权的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "entity",
+      "original": "实体；存在物",
+      "current": "实体",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "实体",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "ethics",
+      "original": "伦理；道德原则",
+      "current": "伦理",
+      "lost": false,
+      "domain_a": "伦理",
+      "domain_b": "无",
+      "restored_def_zh": "伦理",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "ethnic",
+      "original": "民族的；种族的",
+      "current": "民族的",
+      "lost": false,
+      "domain_a": "文化",
+      "domain_b": "无",
+      "restored_def_zh": "民族的",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "expertise",
+      "original": "专业知识；技能",
+      "current": "专业知识",
+      "lost": false,
+      "domain_a": "教育",
+      "domain_b": "无",
+      "restored_def_zh": "专业知识",
+      "verdict": "当前的中文释义已涵盖了该词的主要含义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "exploration",
+      "original": "探索；考察",
+      "current": "探索",
+      "lost": false,
+      "domain_a": "科学",
+      "domain_b": "无",
+      "restored_def_zh": "探索",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "facilitate",
+      "original": "促进；使方便",
+      "current": "促进",
+      "lost": false,
+      "domain_a": "语言",
+      "domain_b": "无",
+      "restored_def_zh": "促进",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "fiber",
+      "original": "纤维；食物中的膳食纤维",
+      "current": "纤维",
+      "lost": false,
+      "domain_a": "食品",
+      "domain_b": "无",
+      "restored_def_zh": "纤维",
+      "verdict": "当前的中文释义已涵盖主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "founder",
+      "original": "创始人；创立者",
+      "current": "创始人",
+      "lost": false,
+      "domain_a": "商业",
+      "domain_b": "无",
+      "restored_def_zh": "创始人",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "fraud",
+      "original": "欺诈；诈骗",
+      "current": "欺诈",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "欺诈",
+      "verdict": "该释义已涵盖主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "frustration",
+      "original": "挫折；愤怒",
+      "current": "挫折感",
+      "lost": false,
+      "domain_a": "情感",
+      "domain_b": "无",
+      "restored_def_zh": "挫折感",
+      "verdict": "当前的中文释义已涵盖主要含义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "galaxy",
+      "original": "星系；宇宙的广阔空间",
+      "current": "星系",
+      "lost": false,
+      "domain_a": "天文学",
+      "domain_b": "无",
+      "restored_def_zh": "星系",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "graphics",
+      "original": "图形；平面设计",
+      "current": "图形",
+      "lost": false,
+      "domain_a": "计算机图形学",
+      "domain_b": "无",
+      "restored_def_zh": "图形",
+      "verdict": "当前的中文释义已涵盖主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "habitat",
+      "original": "栖息地；生境",
+      "current": "栖息地",
+      "lost": false,
+      "domain_a": "生态学",
+      "domain_b": "无",
+      "restored_def_zh": "栖息地",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "hallway",
+      "original": "走廊；通道",
+      "current": "走廊",
+      "lost": false,
+      "domain_a": "建筑",
+      "domain_b": "无",
+      "restored_def_zh": "走廊",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "heritage",
+      "original": "遗产；文化遗产",
+      "current": "遗产",
+      "lost": false,
+      "domain_a": "文化",
+      "domain_b": "无",
+      "restored_def_zh": "遗产",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "honor",
+      "original": "荣誉；尊敬",
+      "current": "尊敬或对成就或品质的认可",
+      "lost": false,
+      "domain_a": "尊重与认可",
+      "domain_b": "无",
+      "restored_def_zh": "尊敬或对成就或品质的认可",
+      "verdict": "该词的中文释义已涵盖其主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "hypothesis",
+      "original": "假设；假说",
+      "current": "假设",
+      "lost": false,
+      "domain_a": "科学",
+      "domain_b": "无",
+      "restored_def_zh": "假设",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "ideology",
+      "original": "思想体系；意识形态",
+      "current": "意识形态",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "意识形态",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "infection",
+      "original": "感染；传染病",
+      "current": "感染",
+      "lost": false,
+      "domain_a": "医学",
+      "domain_b": "无",
+      "restored_def_zh": "感染",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "inflation",
+      "original": "通货膨胀；膨胀",
+      "current": "通货膨胀",
+      "lost": false,
+      "domain_a": "经济",
+      "domain_b": "无",
+      "restored_def_zh": "通货膨胀",
+      "verdict": "该词的中文释义已涵盖其主要含义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "initially",
+      "original": "最初；起初",
+      "current": "最初",
+      "lost": false,
+      "domain_a": "时间",
+      "domain_b": "无",
+      "restored_def_zh": "最初",
+      "verdict": "当前的中文释义已涵盖该词的主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "innovation",
+      "original": "创新；革新",
+      "current": "创新",
+      "lost": false,
+      "domain_a": "商业",
+      "domain_b": "无",
+      "restored_def_zh": "创新",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "inspector",
+      "original": "检查员；视察者",
+      "current": "检查员",
+      "lost": false,
+      "domain_a": "职业",
+      "domain_b": "无",
+      "restored_def_zh": "检查员",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "intervention",
+      "original": "干预；插手",
+      "current": "干预",
+      "lost": false,
+      "domain_a": "社会科学",
+      "domain_b": "无",
+      "restored_def_zh": "干预",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "ken",
+      "original": "知识范围；视野",
+      "current": "知识范围",
+      "lost": false,
+      "domain_a": "知识",
+      "domain_b": "无",
+      "restored_def_zh": "知识范围",
+      "verdict": "当前的中文释义已涵盖了该词的主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "lawsuit",
+      "original": "诉讼；法律案件",
+      "current": "诉讼",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "诉讼",
+      "verdict": "该词的中文释义已涵盖其主要法律领域的含义，没有漏掉其他常用义项。"
+    },
+    {
+      "headword": "mall",
+      "original": "购物中心；广场",
+      "current": "大型购物中心",
+      "lost": false,
+      "domain_a": "商业",
+      "domain_b": "无",
+      "restored_def_zh": "大型购物中心",
+      "verdict": "该释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "metaphor",
+      "original": "隐喻；比喻",
+      "current": "隐喻",
+      "lost": false,
+      "domain_a": "语言",
+      "domain_b": "无",
+      "restored_def_zh": "隐喻",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "monster",
+      "original": "怪物；可怕的人或事物",
+      "current": "怪物",
+      "lost": false,
+      "domain_a": "生物",
+      "domain_b": "无",
+      "restored_def_zh": "怪物",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "negotiation",
+      "original": "谈判；协商",
+      "current": "谈判",
+      "lost": false,
+      "domain_a": "商业",
+      "domain_b": "无",
+      "restored_def_zh": "谈判",
+      "verdict": "该释义已涵盖主要意义，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "nonetheless",
+      "original": "尽管如此；然而",
+      "current": "尽管如此",
+      "lost": false,
+      "domain_a": "连接词",
+      "domain_b": "无",
+      "restored_def_zh": "尽管如此",
+      "verdict": "该词的中文释义已涵盖其主要用法，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "norm",
+      "original": "常态；规范",
+      "current": "规范",
+      "lost": false,
+      "domain_a": "社会科学",
+      "domain_b": "无",
+      "restored_def_zh": "规范",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "participant",
+      "original": "参与者；参加者",
+      "current": "参与者",
+      "lost": false,
+      "domain_a": "社会科学",
+      "domain_b": "无",
+      "restored_def_zh": "参与者",
+      "verdict": "该词的中文释义已涵盖其主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "perception",
+      "original": "知觉；看法",
+      "current": "感知能力",
+      "lost": false,
+      "domain_a": "心理学",
+      "domain_b": "无",
+      "restored_def_zh": "感知能力",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "portray",
+      "original": "描绘；表现",
+      "current": "描绘",
+      "lost": false,
+      "domain_a": "艺术",
+      "domain_b": "无",
+      "restored_def_zh": "描绘",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "prediction",
+      "original": "预测；预言",
+      "current": "预测",
+      "lost": false,
+      "domain_a": "经济;气象;研究",
+      "domain_b": "无",
+      "restored_def_zh": "预测",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "presidency",
+      "original": "总统任期；总统职位",
+      "current": "总统职务或任期",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "总统职务或任期",
+      "verdict": "该释义已涵盖主要意义，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "proceeding",
+      "original": "进行；诉讼",
+      "current": "正在进行的事件或行动",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "正在进行的事件或行动",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "psychologist",
+      "original": "心理学家；心理治疗师",
+      "current": "心理学家",
+      "lost": false,
+      "domain_a": "心理学",
+      "domain_b": "无",
+      "restored_def_zh": "心理学家",
+      "verdict": "该释义已涵盖心理学领域的主要含义，没有漏掉常用义项。"
+    },
+    {
+      "headword": "recession",
+      "original": "经济衰退；后退",
+      "current": "经济衰退",
+      "lost": false,
+      "domain_a": "经济",
+      "domain_b": "无",
+      "restored_def_zh": "经济衰退",
+      "verdict": "该词的中文释义已涵盖其主要经济领域的含义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "recipient",
+      "original": "接受者；收件人",
+      "current": "接受者",
+      "lost": false,
+      "domain_a": "一般",
+      "domain_b": "无",
+      "restored_def_zh": "接受者",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "regional",
+      "original": "地区的；区域的",
+      "current": "地区的",
+      "lost": false,
+      "domain_a": "地理",
+      "domain_b": "无",
+      "restored_def_zh": "地区的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "regulatory",
+      "original": "监管的；规则的",
+      "current": "监管的",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "监管的",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "remaining",
+      "original": "剩余的；残留的",
+      "current": "剩余的",
+      "lost": false,
+      "domain_a": "一般",
+      "domain_b": "无",
+      "restored_def_zh": "剩余的",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "residential",
+      "original": "居民的；住宅的",
+      "current": "住宅的",
+      "lost": false,
+      "domain_a": "建筑",
+      "domain_b": "无",
+      "restored_def_zh": "住宅的",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "retirement",
+      "original": "退休；退休金",
+      "current": "退休",
+      "lost": false,
+      "domain_a": "职业",
+      "domain_b": "无",
+      "restored_def_zh": "退休",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "rhetoric",
+      "original": "修辞；花言巧语",
+      "current": "修辞艺术",
+      "lost": false,
+      "domain_a": "语言艺术",
+      "domain_b": "无",
+      "restored_def_zh": "修辞艺术",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "senator",
+      "original": "参议员；立法者",
+      "current": "立法机构的成员",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "立法机构的成员",
+      "verdict": "该释义已涵盖主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "sodium",
+      "original": "钠；一种化学元素",
+      "current": "钠元素",
+      "lost": false,
+      "domain_a": "化学",
+      "domain_b": "无",
+      "restored_def_zh": "钠元素",
+      "verdict": "当前的中文释义已涵盖了主要的常用义项，没有漏掉不同领域的义项。"
+    },
+    {
+      "headword": "spouse",
+      "original": "配偶；伴侣",
+      "current": "配偶",
+      "lost": false,
+      "domain_a": "婚姻",
+      "domain_b": "无",
+      "restored_def_zh": "配偶",
+      "verdict": "该词的中文释义已涵盖其主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "sue",
+      "original": "起诉；控告",
+      "current": "起诉",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "起诉",
+      "verdict": "该释义已涵盖主要法律领域的用法，没有遗漏其他常用义项。"
+    },
+    {
+      "headword": "supervisor",
+      "original": "监督者；管理者",
+      "current": "监督者",
+      "lost": false,
+      "domain_a": "管理",
+      "domain_b": "无",
+      "restored_def_zh": "监督者",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "survivor",
+      "original": "幸存者；生还者",
+      "current": "幸存者",
+      "lost": false,
+      "domain_a": "生存/灾难",
+      "domain_b": "无",
+      "restored_def_zh": "幸存者",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "testify",
+      "original": "作证；表明",
+      "current": "作证",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "作证",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "testimony",
+      "original": "证词；口述证明",
+      "current": "证词",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "证词",
+      "verdict": "该词的中文释义已涵盖其主要法律领域的含义，没有漏掉其他常用义项。"
+    },
+    {
+      "headword": "theater",
+      "original": "剧院；戏剧",
+      "current": "剧院",
+      "lost": false,
+      "domain_a": "表演艺术",
+      "domain_b": "无",
+      "restored_def_zh": "剧院",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "therapy",
+      "original": "治疗；心理治疗",
+      "current": "治疗",
+      "lost": false,
+      "domain_a": "医学",
+      "domain_b": "无",
+      "restored_def_zh": "治疗",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "traditionally",
+      "original": "传统上；按习俗",
+      "current": "传统上",
+      "lost": false,
+      "domain_a": "文化",
+      "domain_b": "无",
+      "restored_def_zh": "传统上",
+      "verdict": "当前的中文释义已涵盖主要义项，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "transaction",
+      "original": "交易；事务",
+      "current": "交易",
+      "lost": false,
+      "domain_a": "商业",
+      "domain_b": "无",
+      "restored_def_zh": "交易",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "transition",
+      "original": "转变；过渡",
+      "current": "过渡",
+      "lost": false,
+      "domain_a": "一般",
+      "domain_b": "无",
+      "restored_def_zh": "过渡",
+      "verdict": "当前的中文释义已涵盖主要义项，未漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "undermine",
+      "original": "削弱；破坏",
+      "current": "削弱",
+      "lost": false,
+      "domain_a": "一般",
+      "domain_b": "无",
+      "restored_def_zh": "削弱",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "violation",
+      "original": "违反；侵害",
+      "current": "违反",
+      "lost": false,
+      "domain_a": "法律",
+      "domain_b": "无",
+      "restored_def_zh": "违反",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "voter",
+      "original": "选民；投票人",
+      "current": "投票者",
+      "lost": false,
+      "domain_a": "政治",
+      "domain_b": "无",
+      "restored_def_zh": "投票者",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    },
+    {
+      "headword": "warrior",
+      "original": "战士；勇士",
+      "current": "战士",
+      "lost": false,
+      "domain_a": "军事",
+      "domain_b": "无",
+      "restored_def_zh": "战士",
+      "verdict": "该词的中文释义已涵盖其主要意义，没有漏掉不同领域的常用义项。"
+    }
+  ],
+  "failed": []
+}

@@ -90,6 +90,8 @@ const COURSE_CARDS: CourseCardData[] = [
     image: "/library-hall.jpg",
     badge: "图书馆",
     spanFull: true,
+    // 两张全宽卡统一放大：它们并排在网格下方，字号不一致会很明显。
+    emphasis: true,
   },
   {
     // 词汇入口(/vocab)。按考试分的词库,与图书馆的"收藏生词"不是一回事。

@@ -27,6 +27,17 @@ import {
 const ROW_H = 68;        // 折叠行高(px),与下面样式里的 h-[68px] 必须一致
 const OVERSCAN = 6;      // 视口上下各多渲染几行,滚动时不露白
 
+/**
+ * 各词库的精简口径定位文案 —— 把词表过滤做成卖点，而不是让用户以为词少。
+ *
+ * ⚠️ 文案里不写数字：词数只活在 DB 里，写死必然长歪（qa:cards 铁律）。
+ * ⚠️ 每个库上线时按它自己的过滤逻辑补一条；没有对应条目就不渲染这行，
+ *    不要给未过滤的库套一句不成立的话。toefl 的口径来自 ingest 的 --exclude-tags=zk,gk,cet4。
+ */
+const BANK_POSITIONING: Record<string, string> = {
+  toefl: "已剔除中考/高考/四级重复词，只学托福真正的增量词汇",
+};
+
 const MODES = [
   { key: "zh_choice", label: "英汉选择", icon: Layers, desc: "看词选义" },
   { key: "match", label: "词汇配对", icon: Sparkles, desc: "翻牌配对" },
@@ -94,9 +105,17 @@ export default function VocabBank() {
       <h1 className="mb-1 text-[22px] font-bold text-slate-900">
         {bank?.name_zh ?? (state === "loading" ? "加载中" : "词库")}
       </h1>
-      <p className="mb-5 text-[13px] text-slate-500" style={{ fontVariantNumeric: "tabular-nums" }}>
-        {state === "ok" ? `${words.length} 词可学` : " "}
+      <p className="text-[13px] text-slate-500" style={{ fontVariantNumeric: "tabular-nums" }}>
+        {state === "ok" ? `${words.length} 词可学` : " "}
       </p>
+      {/* 定位文案：次要信息，12px + 更浅的灰，不与上面的词数、下面的主数字抢视线 */}
+      {state === "ok" && BANK_POSITIONING[bankCode] ? (
+        <p className="mb-5 mt-1 text-[12px] leading-relaxed text-slate-400">
+          {BANK_POSITIONING[bankCode]}
+        </p>
+      ) : (
+        <div className="mb-5" />
+      )}
 
       {state === "error" ? (
         <div className="rounded-2xl border border-black/[0.08] bg-white p-6 text-center">

@@ -112,6 +112,9 @@ const LibraryVocab = lazy(() => import("./pages/library/LibraryVocab.tsx"));
 const VocabCenter = lazy(() => import("./pages/vocab/VocabCenter.tsx"));
 const VocabBank = lazy(() => import("./pages/vocab/VocabBank.tsx"));
 const VocabQuiz = lazy(() => import("./pages/vocab/VocabQuiz.tsx"));
+const VocabMatch = lazy(() => import("./pages/vocab/VocabMatch.tsx"));
+const VocabListen = lazy(() => import("./pages/vocab/VocabListen.tsx"));
+const VocabSpell = lazy(() => import("./pages/vocab/VocabSpell.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
@@ -488,6 +491,9 @@ const App = () => (
           {/* 英汉选择与今日复习共用一个组件:复习只是把要考的词换成到期队列 */}
           <Route path="/vocab/review" element={<ChineseOnlyRoute><VocabQuiz mode="review" /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode/quiz" element={<ChineseOnlyRoute><VocabQuiz /></ChineseOnlyRoute>} />
+          <Route path="/vocab/:bankCode/match" element={<ChineseOnlyRoute><VocabMatch /></ChineseOnlyRoute>} />
+          <Route path="/vocab/:bankCode/listen" element={<ChineseOnlyRoute><VocabListen /></ChineseOnlyRoute>} />
+          <Route path="/vocab/:bankCode/spell" element={<ChineseOnlyRoute><VocabSpell /></ChineseOnlyRoute>} />
           <Route path="/junior/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />
           <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
           <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />

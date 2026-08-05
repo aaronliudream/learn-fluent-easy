@@ -374,8 +374,13 @@ export function defZhShapeProblem(defZh) {
   if (/[。.!?！？]/.test(s)) return 'def_zh 写成了句子(含句号)';
   const parts = s.split('；');
   if (parts.length > 2) return `def_zh 有 ${parts.length} 个义项,最多 2 个`;
-  const tooLong = parts.find(p => p.trim().length > 12);
-  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字):「${tooLong.trim()}」`;
+  /* ⚠️ 2026-08-05 收紧 12 → 8。prompt 里定的规格一直是"每义项 2-8 个汉字",
+   *    检测器却放到 12,中间这一档漏网:honor「尊敬或对成就或品质的认可」、
+   *    diagnose「通过检查来识别疾病或问题」—— 没踩任何标记词、也没句号,
+   *    照样是解释句不是释义。阈值必须跟规格同一个数,不然就是自己给自己开后门。
+   *    实测全池只有 8 个词落在 9-12 这一档(0.2%),收紧不会误伤。 */
+  const tooLong = parts.find(p => p.trim().length > 8);
+  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字,规格 2-8):「${tooLong.trim()}」`;
   /* 标记词只在**长片段**里才说明是解释句。
    * ⚠️ 短义项本身就等于标记词是合法的:notably「显著地；尤其」、customarily「通常；一般」——
    *    「尤其」「通常」正是这些副词的标准释义。不加这条长度前提会把它们全判成解释句(实测误报)。

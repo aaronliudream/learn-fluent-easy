@@ -131,6 +131,60 @@
       "before": "软木",
       "after": "软材；针叶材",
       "reason": "Aaron 指出:软木=cork,与 softwood 不是一回事"
+    },
+    {
+      "headword": "softwood",
+      "before": "软材；针叶材",
+      "after": "软材；针叶材",
+      "reason": "Aaron 指出:软木=cork,与 softwood 不是一回事"
+    },
+    {
+      "headword": "honor",
+      "before": "尊敬或对成就或品质的认可",
+      "after": "荣誉；尊敬",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "proceeding",
+      "before": "正在进行的事件或行动",
+      "after": "诉讼程序；进程",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "diagnose",
+      "before": "通过检查来识别疾病或问题",
+      "after": "诊断",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "precede",
+      "before": "在时间或顺序上先于",
+      "after": "先于；居先",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "codify",
+      "before": "法典化；将法规或规则编纂成册",
+      "after": "编纂；法典化",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "baste",
+      "before": "给食物涂抹汁液或脂肪",
+      "after": "涂油汁；粗缝",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "covetous",
+      "before": "贪婪的；渴望拥有他人之物的",
+      "after": "贪婪的；觊觎的",
+      "reason": "义项超 8 字,是解释句不是释义"
+    },
+    {
+      "headword": "equivocate",
+      "before": "模棱两可，含糊其辞",
+      "after": "模棱两可；含糊其辞",
+      "reason": "义项超 8 字,是解释句不是释义"
     }
   ]
 }

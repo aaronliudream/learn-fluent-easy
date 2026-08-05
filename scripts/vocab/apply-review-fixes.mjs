@@ -51,6 +51,20 @@ const G13_FIX = [
   },
 ];
 
+
+/* ③ 体裁阈值从 12 收紧到 8(规格本来就是 2-8 字)后新暴露的 8 条。
+ *    全是"没踩标记词也没句号,但确实是解释句"的漏网型,人工按词典体裁定稿。 */
+const LONG_FIX = [
+  { headword: 'honor',      after: '荣誉；尊敬' },
+  { headword: 'proceeding', after: '诉讼程序；进程' },
+  { headword: 'diagnose',   after: '诊断' },
+  { headword: 'precede',    after: '先于；居先' },
+  { headword: 'codify',     after: '编纂；法典化' },
+  { headword: 'baste',      after: '涂油汁；粗缝' },
+  { headword: 'covetous',   after: '贪婪的；觊觎的' },
+  { headword: 'equivocate', after: '模棱两可；含糊其辞' },
+];
+
 const data = JSON.parse(readFileSync(CONTENT, 'utf8'));
 const find = hw => data[hw] || Object.values(data).find(w => w.headword === hw);
 const diffs = [];
@@ -63,6 +77,12 @@ for (const f of DEF_FIX) {
     diffs.push({ headword: f.headword, field: `例${i + 1}.translation_zh`, before: w.examples[i].translation_zh, after: t, reason: '同一误译的传播' });
     w.examples[i].translation_zh = t;
   });
+}
+
+for (const f of LONG_FIX) {
+  const w = find(f.headword);
+  diffs.push({ headword: f.headword, field: 'def_zh', before: w.def_zh, after: f.after, reason: '义项超 8 字,是解释句不是释义' });
+  w.def_zh = f.after;
 }
 
 for (const f of G13_FIX) {
@@ -80,7 +100,7 @@ for (const f of G13_FIX) {
 
 /* 验收:改完的词重跑全部闸门(按档句长口径,与生成期一致),
  * 且 g4 全局去重要拿**其余 4468 词**当比对面 —— 只测自己等于没测。 */
-const touched = new Set([...DEF_FIX, ...G13_FIX].map(f => f.headword));
+const touched = new Set([...DEF_FIX, ...LONG_FIX, ...G13_FIX].map(f => f.headword));
 const corpus = [];
 for (const w of Object.values(data)) {
   if (touched.has(w.headword)) continue;

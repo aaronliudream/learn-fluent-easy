@@ -66,7 +66,11 @@ CREATE INDEX IF NOT EXISTS vcm_group_idx ON public.vocab_confusion_members (grou
 
 -- ═══════════════════════════════════════════════════════════════
 -- D 段:词块
--- ⚠️⚠️ 本段 schema 是**按 PR-8 第 8 项的前端描述反推的**,D 段原始规格我这边没收到全文。
+-- ✅ 2026-08-05 Aaron 裁决:反推版补 type / scene 两列后通过。
+--    example_en / example_zh / example_audio_url 命名批准;freq_rank 替代 freq_tier 批准
+--    (tier1 = rank <= 100);def_en 省略批准。
+--    生成规格:300-500 条,每条 1 例句走九闸门,tier1 的 100 条先行全量审,其余分批。
+-- 以下是当初反推时的记录,留档:
 --      前端要的是:词库页「词块」tab + chunk 卡(大字词块 / 释义 / 例句 / 朗读),
 --      另外「听音辨义短语模式」与「自动浏览」要接这张表。
 --      据此给了:chunk 文本、中译、一条例句(英+中)、词块音频、例句音频、频率序。
@@ -76,6 +80,8 @@ CREATE INDEX IF NOT EXISTS vcm_group_idx ON public.vocab_confusion_members (grou
 CREATE TABLE IF NOT EXISTS public.vocab_chunks (
   id                uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   chunk             text NOT NULL,          -- 词块本体,如 "take into account"
+  type              text NOT NULL,          -- phrasal_verb / frame / connector / collocation_ext
+  scene             text,                   -- 与 vocab_examples 同的 10 值枚举(闸门层校验,不焊 DB)
   translation_zh    text NOT NULL,          -- 词块中译
   example_en        text,                   -- 一条例句(chunk 卡上展示)
   example_zh        text,
@@ -85,6 +91,29 @@ CREATE TABLE IF NOT EXISTS public.vocab_chunks (
   created_at        timestamptz NOT NULL DEFAULT now(),
   updated_at        timestamptz NOT NULL DEFAULT now()
 );
+
+-- 幂等补列:表若已存在于早前的部分执行,上面的 CREATE TABLE IF NOT EXISTS 会整个跳过,
+-- 那两列就补不上了。所以这里再补一次。
+-- ⚠️ type 是 NOT NULL,但 ADD COLUMN 不能直接带 NOT NULL(表里若已有行会报错),
+--    所以走"先加可空列 → 回填 → 再 SET NOT NULL"。现在 0 行,回填是空跑。
+ALTER TABLE public.vocab_chunks ADD COLUMN IF NOT EXISTS type  text;
+ALTER TABLE public.vocab_chunks ADD COLUMN IF NOT EXISTS scene text;
+UPDATE public.vocab_chunks SET type = 'collocation_ext' WHERE type IS NULL;
+ALTER TABLE public.vocab_chunks ALTER COLUMN type SET NOT NULL;
+
+-- type 的取值约束焊在 DB 上(四值枚举是定死的分类,不是会漂的文案);
+-- scene 按裁决不焊,留在闸门层。
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint
+     WHERE conrelid = 'public.vocab_chunks'::regclass AND conname = 'vocab_chunks_type_chk'
+  ) THEN
+    ALTER TABLE public.vocab_chunks
+      ADD CONSTRAINT vocab_chunks_type_chk
+      CHECK (type IN ('phrasal_verb','frame','connector','collocation_ext'));
+  END IF;
+END $$;
 
 -- 同一个词块只存一份(大小写不敏感),重跑生成走 upsert。
 CREATE UNIQUE INDEX IF NOT EXISTS vocab_chunks_chunk_uq ON public.vocab_chunks (lower(chunk));
@@ -171,6 +200,16 @@ UNION ALL
 SELECT '四张新表各有一条只读策略(开了 RLS 没策略=谁都读不到)',
        (SELECT count(*) FROM pg_policies WHERE schemaname='public'
          AND tablename IN ('vocab_confusion_groups','vocab_confusion_members','vocab_chunks','vocab_chunk_banks')) = 4
+UNION ALL
+SELECT 'D 段 vocab_chunks.type 存在且 NOT NULL,CHECK 约束已建',
+       (SELECT is_nullable FROM information_schema.columns
+         WHERE table_schema='public' AND table_name='vocab_chunks' AND column_name='type') = 'NO'
+       AND EXISTS (SELECT 1 FROM pg_constraint
+                    WHERE conrelid='public.vocab_chunks'::regclass AND conname='vocab_chunks_type_chk')
+UNION ALL
+SELECT 'D 段 vocab_chunks.scene 列存在',
+       EXISTS (SELECT 1 FROM information_schema.columns
+                WHERE table_schema='public' AND table_name='vocab_chunks' AND column_name='scene')
 UNION ALL
 SELECT '词块唯一索引已建(lower(chunk))',
        EXISTS (SELECT 1 FROM pg_indexes WHERE schemaname='public' AND indexname='vocab_chunks_chunk_uq')

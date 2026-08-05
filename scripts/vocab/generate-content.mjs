@@ -98,7 +98,11 @@ function fetchFromCsv(tier, limit) {
     const [headword, pos, freq_rank] = l.split(',');
     return { id: null, headword, pos, freq_rank: freq_rank ? Number(freq_rank) : null };
   });
-  const picked = rows.filter(r => r.freq_rank && cefrFor(r.freq_rank).level === tier);
+  // tier='all' 专供放量:不按难度档筛,全池都要,按 freq_rank 顺序取
+  const picked = tier === "all"
+    ? rows
+    : rows.filter(r => r.freq_rank && cefrFor(r.freq_rank).level === tier);
+  if (tier === "all") return picked.slice(0, limit);
   // 均匀铺开取样,别全挤在该档最前面(那样只看得到该档最简单的词)
   const step = Math.max(1, Math.floor(picked.length / limit));
   const out = [];
@@ -275,8 +279,11 @@ async function main() {
    *   ① B2/C1 试跑词并不在 DB 里,却会被 emit 进 batch SQL,UPDATE 匹配不到、
    *      count-validate 直接对不上;
    *   ② 和正式跑并发时两边互相覆盖同一个文件。 */
-  const resultsPath = FROM_CSV_EARLY
-    ? path.join(GEN, `${BANK || 'all'}-trial-${TIER_EARLY}.json`)
+  /* 放量通道(--allow-emit-from-csv)要与已有的 198 词合并出总 SQL,所以走**主缓存**;
+   * 试跑通道仍走独立缓存。 */
+  const ALLOW_EMIT_CSV_EARLY = process.argv.includes('--allow-emit-from-csv');
+  const resultsPath = (FROM_CSV_EARLY && !ALLOW_EMIT_CSV_EARLY)
+    ? path.join(GEN, `${BANK || 'all'}-trial-${TIER_EARLY}.json`)   // 试跑独立缓存,不污染正式数据
     : path.join(GEN, `${BANK || 'all'}-content.json`);
   const failedPath = path.join(DATA, 'failed.json');
   const inflectPath = path.join(DATA, `${BANK || 'toefl'}-inflections.json`);
@@ -299,7 +306,12 @@ async function main() {
 
   const FROM_CSV = process.argv.includes('--from-csv');
   const TIER = arg('tier', 'B2');
-  if (FROM_CSV && !NO_EMIT) throw new Error('--from-csv 是试跑通道(拿不到 word_id),必须配 --no-emit');
+  /* 放量通道:--allow-emit-from-csv 显式开启后,from-csv 也可以出 SQL。
+   * 之所以安全:content SQL 是按 lower(headword) 匹配的,**不需要 word_id**。
+   * 前提是词本体已经在库里 —— 所以清单里把灌词 SQL 排在内容 SQL 之前。
+   * 不开这个开关时仍然强制 --no-emit,防止试跑误出 SQL。 */
+  const ALLOW_EMIT_CSV = process.argv.includes('--allow-emit-from-csv');
+  if (FROM_CSV && !NO_EMIT && !ALLOW_EMIT_CSV) throw new Error('--from-csv 默认是试跑通道,要出 SQL 请显式加 --allow-emit-from-csv');
 
   const source = FROM_CSV ? fetchFromCsv(TIER, LIMIT) : await fetchPending();
   const pending = source.filter(w => !results[w.headword.toLowerCase()]).slice(0, LIMIT);

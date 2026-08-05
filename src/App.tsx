@@ -106,6 +106,11 @@ const LibraryHome = lazy(() => import("./pages/library/LibraryHome.tsx"));
 const LibraryBook = lazy(() => import("./pages/library/LibraryBook.tsx"));
 const LibraryReader = lazy(() => import("./pages/library/LibraryReader.tsx"));
 const LibraryVocab = lazy(() => import("./pages/library/LibraryVocab.tsx"));
+
+// 词汇板块(/vocab)· 独立顶层 section,与 /library 的收藏词库(LibraryVocab)是两回事:
+// 这里是按考试分的词库(中考/高考/四六级/雅思托福…),数据在 vocab_* 表。
+const VocabCenter = lazy(() => import("./pages/vocab/VocabCenter.tsx"));
+const VocabBank = lazy(() => import("./pages/vocab/VocabBank.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
@@ -475,6 +480,10 @@ const App = () => (
           <Route path="/library/vocab" element={<ChineseOnlyRoute><LibraryVocab /></ChineseOnlyRoute>} />
           <Route path="/library/:bookKey" element={<ChineseOnlyRoute><LibraryBook /></ChineseOnlyRoute>} />
           <Route path="/library/:bookKey/read" element={<ChineseOnlyRoute><LibraryReader /></ChineseOnlyRoute>} />
+
+          {/* 词汇板块。:bankCode 未知时页面自己给"词库不存在",不落到 404。 */}
+          <Route path="/vocab" element={<ChineseOnlyRoute><VocabCenter /></ChineseOnlyRoute>} />
+          <Route path="/vocab/:bankCode" element={<ChineseOnlyRoute><VocabBank /></ChineseOnlyRoute>} />
           <Route path="/junior/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />
           <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
           <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />

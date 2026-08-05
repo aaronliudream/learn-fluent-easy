@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
-import { ArrowRight, Backpack, BookOpen, GraduationCap, Library, Sparkles } from "lucide-react";
+import { ArrowRight, Backpack, BookOpen, GraduationCap, Library, Sparkles, SpellCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
 import {
@@ -87,6 +87,18 @@ const COURSE_CARDS: CourseCardData[] = [
     tag: "全学段",
     image: "/library-hall.jpg",
     badge: "图书馆",
+    spanFull: true,
+  },
+  {
+    // 词汇入口(/vocab)。按考试分的词库,与图书馆的"收藏生词"不是一回事。
+    // ⚠️ 文案里不写词数/库数 —— 那些数字只活在 DB 里,写死必然长歪(见 qa:cards 的铁律)。
+    to: "/vocab",
+    icon: SpellCheck,
+    title: "考试词汇",
+    desc: "中考到托福 · 例句带发音",
+    tag: "全学段",
+    gradient: "linear-gradient(135deg, #1b2a4a 0%, #2f4d7a 55%, #e2600f 150%)",
+    badge: "词汇",
     spanFull: true,
   },
 ];

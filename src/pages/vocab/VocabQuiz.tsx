@@ -175,7 +175,8 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
 
             {picked !== null && (
               <Feedback word={q.word} correct={picked === q.answerIndex} onNext={next}
-                lastOne={idx + 1 >= questions.length} />
+                lastOne={idx + 1 >= questions.length}
+                correctAnswer={picked === q.answerIndex ? undefined : q.options[q.answerIndex]} />
             )}
           </>
         )}

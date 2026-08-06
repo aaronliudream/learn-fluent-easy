@@ -50,6 +50,33 @@ const CACHE_FILE = `${BANK}-confusion.json`;
 const MAX_TITLE = 6, MAX_FEEL = 10, MAX_HINT = 20;
 const primaryPos = w => String(w.pos || '').split('/')[0].trim();
 
+/**
+ * 英美拼写变体判定(c7)。
+ *
+ * ⚠️ 由来:Aaron 审 C 段时抓到「endeavor / endeavour」被圈进同一辨析组 ——
+ *    但那是**同一个词的两种拼法**,不是两个词。辨析卡的前提是"这几个词不一样",
+ *    拼写变体放进去,学生会以为它们有语义区别,而它们没有。
+ *    这比漏掉一组更坏:它教了一个不存在的差别。
+ *
+ * 覆盖常见的六类对应:
+ *   -our/-or(colour/color)  -ise/-ize(realise/realize)
+ *   -re/-er(centre/center)  -ce/-se(defence/defense)
+ *   -ogue/-og(catalogue/catalog)  双写 l(travelled/traveled)
+ */
+export function sameSpellingVariant(a, b) {
+  const x = String(a).toLowerCase(), y = String(b).toLowerCase();
+  if (x === y) return true;
+  const norm = s => s
+    .replace(/our\b/g, 'or')
+    .replace(/ise\b/g, 'ize').replace(/isation\b/g, 'ization')
+    .replace(/([bcdfghjklmnpqrstvwxz])re\b/g, '$1er')
+    .replace(/ence\b/g, 'ense').replace(/ce\b/g, 'se')
+    .replace(/ogue\b/g, 'og')
+    .replace(/ll(ed|ing|er|or)\b/g, 'l$1')
+    .replace(/ae|oe/g, 'e');
+  return norm(x) === norm(y);
+}
+
 /** 组来源:第一义项完全相同的簇,2-5 词,且**主词性一致**。 */
 export function buildClusters(words) {
   const by = new Map();
@@ -69,8 +96,15 @@ export function buildClusters(words) {
       byPos.get(p).push(w);
     }
     for (const [pos, group] of byPos) {
-      if (group.length < 2 || group.length > 5) continue;
-      out.push({ group_key: `${BANK}:${sense}:${pos}`, sense, pos, members: group });
+      /* c7:同组内**拼写变体只留一个**(留先出现的,通常是美式)。
+       * endeavor/endeavour 不是两个词,放进辨析卡等于教一个不存在的差别。 */
+      const kept = [];
+      for (const w of group) {
+        if (kept.some(k => sameSpellingVariant(k.headword, w.headword))) continue;
+        kept.push(w);
+      }
+      if (kept.length < 2 || kept.length > 5) continue;
+      out.push({ group_key: `${BANK}:${sense}:${pos}`, sense, pos, members: kept });
     }
   }
   return out.sort((a, b) => b.members.length - a.members.length);

@@ -369,12 +369,31 @@ SELECT 'AFTER' AS stage,
   FROM vocab_words WHERE def_zh IS NOT NULL;
 
 -- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
-SELECT '本批 ${changed.length} 词都已是新值' AS expect,
-       (SELECT count(*) FROM vocab_words WHERE lower(headword) IN (${changed.map(t => q(t.headword.toLowerCase())).join(', ')})
-         AND def_zh LIKE '%${SPEC.defZh.sep}%') = ${changed.length} AS ok
+/* ⚠️ 这一条原来写的是「count(... AND def_zh LIKE '%；%') = N」,实测报 false。
+ *    不是数据错,是**判据错**:monochrome 的裁决新值是「单色」,单义、没有分号,
+ *    于是"含分号的条数"必然比"本批条数"少 1。
+ *    改成**逐词比对实际值**:把期望值当 VALUES join 回去,一个字都不许差。
+ *    计数式判据在"本批内部有例外"时天然失效,逐值比对才是真判据。 */
+SELECT '本批 ${changed.length} 词逐词与裁决一致' AS expect,
+       NOT EXISTS (
+         SELECT 1
+           FROM (VALUES
+${changed.map(t => `             (${q(t.headword.toLowerCase())}, ${q(cache[t.headword].def_zh)})`).join(',\n')}
+           ) AS v(headword, def_zh)
+           JOIN vocab_words w ON lower(w.headword) = v.headword
+          WHERE w.def_zh IS DISTINCT FROM v.def_zh
+       ) AS ok
 UNION ALL
-SELECT '总词数没变(4471)',
-       (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 4471
+/* ⚠️ 原来硬编码 4471,实测报 false —— fagot 已被 vocab_toefl_remove_fagot.sql
+ *    移除(def_zh 置 NULL),基准变成 4470,而我忘了同步。
+ *    改成**不依赖绝对数**:只断言本批没有把任何词的 def_zh 弄丢。
+ *    绝对数会随别的 SQL 变动而失效,这种耦合迟早再咬一次。 */
+SELECT '本批没有把任何词的 def_zh 弄丢',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_words
+          WHERE lower(headword) IN (${changed.map(t => q(t.headword.toLowerCase())).join(', ')})
+            AND def_zh IS NULL
+       )
 UNION ALL
 SELECT '没有义项超 ${SPEC.defZh.maxChars} 字',
        NOT EXISTS (

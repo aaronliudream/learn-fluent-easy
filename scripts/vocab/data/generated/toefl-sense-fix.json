@@ -1556,10 +1556,45 @@
     "reason": "名词义与动词义不同",
     "quoted": "超重"
   },
+  "mortar": {
+    "skip": false,
+    "def_zh": "砂浆；研钵",
+    "reason": "常用工具义,与建筑相关",
+    "quoted": "臼，研钵，灰泥"
+  },
+  "slumber": {
+    "skip": false,
+    "def_zh": "酣睡；深度睡眠",
+    "reason": "\"睡眠\"是常用义,与\"酣睡\"不同",
+    "quoted": "睡眠"
+  },
+  "squall": {
+    "skip": false,
+    "def_zh": "狂风；飑与喊叫",
+    "reason": "\"飑，喊叫\"是常用义,考试可能涉及。",
+    "quoted": "飑，喊叫"
+  },
+  "slander": {
+    "skip": true,
+    "def_zh": "",
+    "reason": "\"中伤\"与\"诽谤\"是同义堆砌。"
+  },
+  "erudite": {
+    "skip": false,
+    "def_zh": "博学的；博学之人",
+    "reason": "名词义与形容词义不同",
+    "quoted": "博学者"
+  },
+  "defrost": {
+    "skip": false,
+    "def_zh": "解冻；除霜",
+    "reason": "除霜是常用义,与解冻不同",
+    "quoted": "除霜"
+  },
   "famish": {
     "skip": true,
     "def_zh": "",
-    "reason": "动词义与已有义重复"
+    "reason": "动词义与名词义相同,不需补充"
   },
   "fagot": {
     "skip": false,
@@ -1567,28 +1602,28 @@
     "reason": "常用义,与第一义不同",
     "quoted": "柴把，束薪"
   },
+  "intestine": {
+    "skip": false,
+    "def_zh": "肠；内部的，国内的",
+    "reason": "有常用的形容词义,如国内事务。",
+    "quoted": "内部的，国内的"
+  },
   "tributary": {
     "skip": false,
     "def_zh": "支流；纳贡者",
-    "reason": "纳贡者是完全不同的义",
+    "reason": "表示从属关系的义项,与支流不同。",
     "quoted": "纳贡者"
   },
-  "intestine": {
+  "fowl": {
     "skip": false,
-    "def_zh": "肠；内部的",
-    "reason": "有完全不同的形容词义",
-    "quoted": "内部的，国内的"
+    "def_zh": "家禽；飞禽",
+    "reason": "\"鸟，飞禽\"是常用义,与\"家禽\"不同。",
+    "quoted": "鸟，飞禽"
   },
   "indent": {
     "skip": false,
     "def_zh": "缩进；凹痕",
     "reason": "常用义,考试可能涉及",
     "quoted": "凹痕"
-  },
-  "fowl": {
-    "skip": false,
-    "def_zh": "家禽；飞禽",
-    "reason": "\"鸟，飞禽\"是常用义,需补充。",
-    "quoted": "鸟，飞禽"
   }
 }

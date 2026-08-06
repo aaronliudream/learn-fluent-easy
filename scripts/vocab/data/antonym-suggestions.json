@@ -1,0 +1,23 @@
+{
+  "_note": "反义词候选的常设清单 —— 攒批处理,不设专项(Aaron 2026-08-05 定)。",
+  "_why": "synthesize→analyze 这类是**语义对立**,形态排查查不到(两个词长得毫无关系)。零星发现的先记在这里,攒够一批再统一过闸入库。",
+  "_flow": "发现 → 记这里(status=pending)→ 攒批时过 b1-b6 → 合格的搬进 antonyms-manual.json 并置 status=merged",
+  "candidates": [
+    {
+      "headword": "synthesize",
+      "antonyms": [
+        "analyze"
+      ],
+      "status": "merged",
+      "note": "Aaron 送审件抓到,已在 manual 清单"
+    },
+    {
+      "headword": "microscopic",
+      "antonyms": [
+        "macroscopic"
+      ],
+      "status": "merged",
+      "note": "Aaron 送审件抓到,已在 manual 清单"
+    }
+  ]
+}

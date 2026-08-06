@@ -83,59 +83,103 @@ export function gateSenseFix(word, out, ecdictGlosses) {
   if (parts[1] && !backedByDict(parts[1], ecdictGlosses)) {
     fails.push(`s2 第二义「${parts[1]}」在 ECDICT 义项里找不到依据,不许发明`);
   }
-  // 两义不得互为子串(那是同义堆砌的最明显形态)
-  if (parts[1] && (core(parts[0]).includes(core(parts[1])) || core(parts[1]).includes(core(parts[0])))) {
-    fails.push(`s2 两个义项互为子串:「${parts[0]}」/「${parts[1]}」,是同义堆砌`);
+  /* 两义几乎等同 = 同义堆砌。
+   * ⚠️ 判据不能只看"是不是子串" —— chronic 的「慢性的」(adj) 和「慢性病患者」(n)
+   *    是词典分列的两个真义,只是碰巧共享"慢性"两字,子串法会误杀。
+   *    加长度比:短的要占长的 70% 以上才算"几乎是同一个词"。
+   *    慢性 vs 慢性病患者 = 2/5 = 40% → 放行;推 vs 猛推 = 1/2 = 50%… 仍放行,
+   *    这一类只能靠人眼,机器闸门在这里只做**最明显**的那一档。 */
+  if (parts[1]) {
+    const a = core(parts[0]), b = core(parts[1]);
+    const [short, long] = a.length <= b.length ? [a, b] : [b, a];
+    if (short.length >= 2 && long.includes(short) && short.length / long.length >= 0.7) {
+      fails.push(`s2 两个义项几乎等同:「${parts[0]}」/「${parts[1]}」,是同义堆砌`);
+    }
   }
   return fails;
 }
 
+const PICK_MODEL = arg('pick-model', 'gpt-4o');     // 第一步是词汇学判断,值得用强模型
+const WRITE_MODEL = arg('write-model', 'gpt-4o-mini'); // 第二步只是润色,mini 够用
+
 const SYSTEM = `You are a Chinese-English lexicographer. Answer only with the required JSON.
 You may only choose senses that appear in the provided dictionary entry. Never invent a sense.`;
 
-const SCHEMA = {
+/* 第一步「选」:只做判断,并且**必须原样引用** ECDICT 里的某一条义项 ——
+ * 引用可以机械校验(引文必须在给定条目里逐字找得到),这就把"发明义项"这条路堵死了。
+ * ⚠️ 选和写拆开是因为一次性完成时模型两头都做不好:
+ *    实测它一边把 participant 的噪声词性「有份的」填进去,
+ *    一边把真该补"沉没"的 founder 判成了 skip —— 判断被润色任务挤掉了。 */
+const PICK_SCHEMA = {
   type: 'object', additionalProperties: false,
-  required: ['skip', 'def_zh', 'reason'],
+  required: ['has_second', 'quoted_gloss', 'why'],
   properties: {
-    skip: { type: 'boolean', description: '词典里没有值得教给学生的第二义时为 true' },
-    def_zh: { type: 'string', description: 'skip 为 true 时给空串;否则给「原第一义；新第二义」' },
-    reason: { type: 'string', description: '一句话说明为什么这样选(中文,≤30 字)' },
+    has_second: { type: 'boolean', description: '有值得教给中国学生的第二义时为 true' },
+    quoted_gloss: { type: 'string', description: 'has_second 为 true 时,从词典条目里**原样抄**一个中文说法;否则空串' },
+    why: { type: 'string', description: '一句话理由,≤30 字' },
   },
 };
+const WRITE_SCHEMA = {
+  type: 'object', additionalProperties: false,
+  required: ['sense'],
+  properties: { sense: { type: 'string', description: '润色后的词典式短语' } },
+};
 
-function buildPrompt(w, glossesText, notes) {
+/* 第一步「选」的 prompt。反例全部取自 2026-08-05 单步版试跑的**真实产出** ——
+ * 那一轮 12 词里只有 1-2 条能用,而且错法很有规律:
+ * 该跳的填(participant/recipient/interact),该填的跳(founder)。
+ * 拿真实失败当反例,比我编几个"典型错误"有效得多。 */
+function buildPickPrompt(w, glossesText, notes) {
   const first = String(w.def_zh).split(SPEC.defZh.sep)[0].trim();
   return `目标词:${w.headword}${w.pos ? `  (${w.pos})` : ''}
-我们现在的中文释义:${w.def_zh}
+我们已有的中文释义(第一义,不动):${first}
 ECDICT 词典条目(按词性分列):
 ${glossesText}
 
-任务:判断这个词是否有**第二个值得教给中国学生的常用义**,如果有就补上。
+只回答一个问题:**除了「${first}」,这个词还有没有第二个值得教给中国 TOEFL 考生的常用义?**
 
-⚠️ 铁律一:**第一义项「${first}」必须原样保留,一个字都不许改。**
-   例句是锚定第一义项写的,本轮不重新生成例句 —— 改了第一义,例句就对不上了。
-   输出格式必须是:${first}${SPEC.defZh.sep}<新的第二义>
+有 → has_second = true,并把词典条目里对应的那个中文说法**逐字原样抄**进 quoted_gloss。
+没有 → has_second = false,quoted_gloss 给空串。**这同样是正确答案,不是失败。**
 
-⚠️ 铁律二:**第二义只能从上面 ECDICT 条目里挑,不许发明。**
-   挑最常用的那一个,再润色成 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars} 字的词典式短语。
+⚠️ 判据是「**中国学生学这个词,不知道这一义会不会吃亏**」,
+   不是「词典里列了几个词性」。ECDICT 的词性标注噪声很大。
 
-⚠️ 铁律三:**没有值得教的第二义就返回 skip = true,这是正确答案,不是失败。**
-   ECDICT 的词性标注有噪声,很多"第二词性"不是该教的常用义:
-     participant  ECDICT 有 a. 有份的      -> skip(现代英语里几乎不这么用)
-     vaccine      ECDICT 有 a. 疫苗的      -> skip(只是名词的定语用法)
-     antibiotic   ECDICT 有 a. 抗生的      -> skip
-     shrimp       ECDICT 有 vi. 捕小虾     -> skip(生僻)
-   该补的样子:
-     founder  创始人 -> 创始人${SPEC.defZh.sep}沉没      (n. 创立者 / vt. 使沉没,两个真义)
-     ally     盟友   -> 盟友${SPEC.defZh.sep}结盟        (n. 同盟者 / vi. 结盟)
-     chronic  慢性的 -> 慢性的${SPEC.defZh.sep}慢性病患者 (a. 慢性的 / n. 慢性病患者)
+下面是同一批词上**真实发生过的判断错误**,请勿重蹈:
 
-   判据是"**中国学生学这个词时该不该知道这一义**",不是"标注里有几个词性"。
+【该判 false 却填了的】
+  participant  词典有 a. 有份的      ❌ 填了「有份的」—— 现代英语几乎不这么用
+  recipient    词典有 n. 容器        ❌ 填了「容器」—— 不是该教的义
+  interact     词典有 n. 幕间剧      ❌ 填了「幕间剧」—— 生僻,考试不会考
+  secular      词典有 n. 修道院外的教士 ❌ 太生僻
+  nonetheless  词典有 adv. 不过      ❌ 「不过」和「尽管如此」是同一个义的两种说法,
+                                        这叫同义堆砌,是明确要避免的
+  shove        词典有 vt. 猛推,强使  ❌ 与「推,挤」是同一个义
 
-第二义还必须:
-  · 与第一义**真的不同**,不能是近义改写(联盟 vs 联合 ❌)。
+【该判 true 却跳过了的】
+  founder   n. 创立者 / vt. 使沉没    ✅ 「沉没」是完全不同的义,必须补
+  ally      n. 同盟者 / vi. 结盟      ✅ 名词义 vs 动词义
+  prosecute vt. 起诉 / vt. 彻底进行   ✅ 法律义 vs 一般义
+
+一句话自检:**如果两个义翻译回英文会落到同一个英文解释上,那就是同义堆砌,判 false。**
+${notes?.length ? `\n上次被机器闸门拒了:\n${notes.map(n => `  · ${n}`).join('\n')}` : ''}`;
+}
+
+/** 第二步「写」:只做润色,不做判断。输入已经是选定的那条词典说法。 */
+function buildWritePrompt(w, quoted, notes) {
+  const first = String(w.def_zh).split(SPEC.defZh.sep)[0].trim();
+  return `目标词:${w.headword}
+已确定要补的第二义(取自词典,原文):${quoted}
+第一义(不动):${first}
+
+把上面那条词典说法润色成 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars} 个汉字的**词典式短语**,放进 sense。
+
+硬要求:
+  · 必须保持原意,**不许换成别的义** —— 你只是在压缩措辞,不是重新选义。
   · 不带句号、不写词性缩写、不含英文字母、不写成解释句。
-${notes?.length ? `\n上次被机器闸门拒了,原因如下,请针对性修正:\n${notes.map(n => `  · ${n}`).join('\n')}` : ''}`;
+  · 不许与第一义「${first}」互为子串或近义改写。
+  · 例:「使沉没,使摔倒,弄跛」-> 「沉没」;「慢性病患者」-> 「慢性病患者」(已合规就原样);
+       「同盟者,同盟国,助手」-> 「结盟」不行(那是动词义),应为「同盟者」压成「盟国」之类同义压缩。
+${notes?.length ? `\n上次被拒:\n${notes.map(n => `  · ${n}`).join('\n')}` : ''}`;
 }
 
 async function main() {
@@ -187,14 +231,34 @@ async function main() {
       const g = glossesOf(t);
       // ⚠️ 判据一律拿**基线值**当"原第一义",不用当前值 —— 重跑时当前值可能已被改过
       const base = { ...t.word, def_zh: baseline[t.headword] };
-      const r = await generateWithGates({
-        label: t.headword,
-        build: notes => callJson({
-          system: SYSTEM, user: buildPrompt(base, g.text, notes),
-          schemaName: 'sense_fix', schema: SCHEMA, temperature: 0.2,
-        }),
-        gate: out => gateSenseFix(base, out, g.flat),
-      });
+      /* 两步:先「选」(强模型判断 + 强制引用),再「写」(mini 润色)。
+       * quoted_gloss 必须能在词典条目里逐字找到 —— 这是机械可验的防发明闸。 */
+      const pick = await callJson({
+        system: SYSTEM, user: buildPickPrompt(base, g.text, null),
+        schemaName: 'sense_pick', schema: PICK_SCHEMA, model: PICK_MODEL, temperature: 0,
+      }).catch(() => null);
+
+      let r;
+      if (!pick) { r = { ok: false, fails: ['第一步调用失败'] }; }
+      else if (!pick.has_second) {
+        r = { ok: true, payload: { skip: true, def_zh: '', reason: pick.why } };
+      } else if (!g.text.includes(String(pick.quoted_gloss).trim()) || !String(pick.quoted_gloss).trim()) {
+        // 引文不在条目里 = 编的,直接判失败,不给它润色的机会
+        r = { ok: false, fails: [`s2 引文「${pick.quoted_gloss}」不在词典条目里,是编的`] };
+      } else {
+        r = await generateWithGates({
+          label: t.headword,
+          build: notes => callJson({
+            system: SYSTEM, user: buildWritePrompt(base, pick.quoted_gloss, notes),
+            schemaName: 'sense_write', schema: WRITE_SCHEMA, model: WRITE_MODEL, temperature: 0.2,
+          }).then(x => ({
+            skip: false,
+            def_zh: `${String(base.def_zh).split(SPEC.defZh.sep)[0].trim()}${SPEC.defZh.sep}${String(x.sense).trim()}`,
+            reason: pick.why, quoted: pick.quoted_gloss,
+          })),
+          gate: out => gateSenseFix(base, out, g.flat),
+        });
+      }
       n++;
       if (r.ok) { cache[t.headword] = r.payload; r.payload.skip ? skipped++ : ok++; }
       else { failed++; process.stdout.write(`  ✗ ${t.headword}: ${r.fails.join(' / ')}\n`); }

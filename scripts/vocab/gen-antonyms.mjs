@@ -250,7 +250,91 @@ async function main() {
   }
 
   if (NO_EMIT) return;
+  if (flag('emit-manual-patch')) return emitManualPatch(words, ecdict);
   emit(words, cache, ecdict);
+}
+
+/**
+ * 只出**人工清单**的补丁 SQL。
+ * ⚠️ 全量 SQL 已经跑过了,不能让 Aaron 重跑 103 KB 去带上后补的十几条 ——
+ *    补丁只覆盖人工清单里的词,幂等,重复跑无害。
+ */
+function emitManualPatch(words, ecdict) {
+  const manual = JSON.parse(readFileSync(path.join(DATA, 'antonyms-manual.json'), 'utf8'));
+  const byHw = new Map(words.map(w => [w.headword, w]));
+  const rows = [];
+  for (const m of manual.words) {
+    const w = byHw.get(m.headword);
+    if (!w) { process.stdout.write(`  ⚠️ "${m.headword}" 不在词池,跳过\n`); continue; }
+    const f = gateAntonyms(w, m.antonyms, ecdict);
+    if (f.length) { process.stdout.write(`  ✗ ${m.headword} 未过闸:${f.join(' / ')}\n`); process.exitCode = 1; continue; }
+    rows.push({ hw: m.headword, ant: m.antonyms, def: w.def_zh });
+  }
+  process.stdout.write(`· 人工清单 ${rows.length}/${manual.words.length} 条过闸\n`);
+  if (rows.length !== manual.words.length) { process.stdout.write('⚠️ 有条目未过闸,不出补丁\n'); return; }
+
+  const total = rows.reduce((n, r) => n + r.ant.length, 0);
+  writeSql(`vocab_${BANK}_antonyms_manual_patch.sql`, `-- 反义词 · 人工清单补丁 —— ${rows.length} 词 / ${total} 条
+-- 前置:全量 vocab_${BANK}_antonyms.sql 已跑(四条 validate 全 t)。**本补丁不要求重跑它**。
+-- 来源:① Aaron 审送审件判空栏抓到的漏网(microscopic / synthesize)
+--       ② 形态同型排查里**逐条人读确认**为真反义的那批
+--          (cite→incite / fraud→defraud / fusion→infusion 这类形态相关但非反义的误报已剔除)
+-- 每条都过了 b1-b6,人工条目不因为"是人填的"就免检。
+-- 幂等:按 lower(headword) UPDATE,重复跑无害。⚠️ 由 Aaron 执行。
+
+BEGIN;
+
+SELECT 'BEFORE' AS stage, count(*) AS words_with_antonyms FROM vocab_words WHERE antonyms IS NOT NULL;
+
+UPDATE vocab_words w
+   SET antonyms = v.antonyms, updated_at = now()
+  FROM (VALUES
+${rows.map(r => `  (${q(r.hw.toLowerCase())}, ${qArr(r.ant)})`).join(',\n')}
+  ) AS v(headword, antonyms)
+ WHERE lower(w.headword) = v.headword;
+
+SELECT 'AFTER' AS stage, count(*) AS words_with_antonyms FROM vocab_words WHERE antonyms IS NOT NULL;
+
+-- ── count-validate:三行都必须是 t,否则 ROLLBACK ──
+SELECT '本批 ${rows.length} 词都已有反义词' AS expect,
+       (SELECT count(*) FROM vocab_words
+         WHERE lower(headword) IN (${rows.map(r => q(r.hw.toLowerCase())).join(', ')})
+           AND antonyms IS NOT NULL) = ${rows.length} AS ok
+UNION ALL
+SELECT '没有词配了超过 ${SPEC.antonyms.max} 个反义词',
+       NOT EXISTS (SELECT 1 FROM vocab_words WHERE array_length(antonyms, 1) > ${SPEC.antonyms.max})
+UNION ALL
+SELECT '没有反义词等于它自己',
+       NOT EXISTS (SELECT 1 FROM vocab_words WHERE lower(headword) = ANY(SELECT lower(unnest(antonyms))));
+
+COMMIT;
+`);
+  writeReview(`vocab_${BANK}_antonyms_manual_patch.md`, `# 反义词 · 人工清单补丁 · 送审件
+
+${rows.length} 词 / ${total} 条,全部过 b1-b6。
+
+| 词 | 释义 | 反义词 | 来源 |
+| --- | --- | --- | --- |
+${rows.map(r => `| ${r.hw} | ${r.def} | **${r.ant.join(' / ')}** | ${manual.words.find(m => m.headword === r.hw).by} |`).join('\n')}
+
+## 形态排查里**没有**采纳的(误报,供你复核我剔得对不对)
+
+\`in-\` 前缀是重灾区 —— 它表"进入"和表"否定"一样常见,所以形态成对 ≠ 语义反义:
+
+| 词 | 形态候选 | 为什么不是反义 |
+| --- | --- | --- |
+| cite 引用 | incite | incite 是"煽动",与"引用"无关 |
+| fraud 欺诈 | defraud | defraud 是"诈骗"的动词,同义不是反义 |
+| tract 大片土地 | distract | distract 是"分散注意力",无关 |
+| fusion 融合 | infusion | infusion 是"注入",不是"融合"的反面 |
+| formative 形成的 | informative | informative 是"提供信息的",无关 |
+| dent 凹痕 | indent | indent 是"缩进",无关 |
+
+## ⚠️ 这一轮覆盖不到的
+
+\`synthesize → analyze\` 这类是**语义对立**,两个词形态上毫无关系,排查脚本查不到。
+零星发现的记在 \`scripts/vocab/data/antonym-suggestions.json\` 常设清单,攒批处理。
+`);
 }
 
 function emit(words, cache, ecdict) {

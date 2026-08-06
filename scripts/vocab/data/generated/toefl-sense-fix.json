@@ -66,16 +66,14 @@
     "quoted": "长期的"
   },
   "nutrient": {
-    "skip": false,
-    "def_zh": "营养物质；滋养成分",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "营养的，滋养的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两者都是指营养相关的成分。"
   },
   "stereotype": {
-    "skip": false,
-    "def_zh": "刻板印象；老套",
-    "reason": "动词义与名词义不同",
-    "quoted": "套用老套"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文不同"
   },
   "fossil": {
     "skip": false,
@@ -96,10 +94,9 @@
     "quoted": "慢性病患者"
   },
   "antibiotic": {
-    "skip": false,
-    "def_zh": "抗生素；抗生物",
-    "reason": "形容词义与名词义不同",
-    "quoted": "抗生的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是antibiotic。"
   },
   "prosecute": {
     "skip": false,
@@ -132,10 +129,9 @@
     "quoted": "使消失"
   },
   "precedent": {
-    "skip": false,
-    "def_zh": "先例；在先的",
-    "reason": "形容词义与名词义不同",
-    "quoted": "在先的，在前的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:判定调用失败,按安全方向退回单义"
   },
   "stabilize": {
     "skip": true,
@@ -143,10 +139,9 @@
     "reason": "动词义与已有义重复"
   },
   "haven": {
-    "skip": false,
-    "def_zh": "避风港；避难所",
-    "reason": "提供庇护的意义常用",
-    "quoted": "港，避难所，安息所"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指安全的地方"
   },
   "fascinate": {
     "skip": true,
@@ -160,16 +155,14 @@
     "quoted": "装甲"
   },
   "cone": {
-    "skip": false,
-    "def_zh": "圆锥；圆锥体",
-    "reason": "球果是常用义,考试可能涉及",
-    "quoted": "圆锥体，球果"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是cone"
   },
   "upgrade": {
-    "skip": false,
-    "def_zh": "升级；上坡",
-    "reason": "上坡是完全不同的义",
-    "quoted": "上坡"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:判定调用失败,按安全方向退回单义"
   },
   "valve": {
     "skip": false,
@@ -178,16 +171,14 @@
     "quoted": "活瓣"
   },
   "reservoir": {
-    "skip": false,
-    "def_zh": "水库；贮藏处",
-    "reason": "\"贮藏处\"是常用义,与\"水库\"不同,值得教。",
-    "quoted": "贮藏处"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:判定调用失败,按安全方向退回单义"
   },
   "excerpt": {
-    "skip": false,
-    "def_zh": "摘录；引用",
-    "reason": "动词义与名词义不同,值得教",
-    "quoted": "引用"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:摘录和引用有细微差别"
   },
   "census": {
     "skip": false,
@@ -196,28 +187,24 @@
     "quoted": "实施统计调查"
   },
   "nickname": {
-    "skip": false,
-    "def_zh": "绰号；取绰号",
-    "reason": "动词义与名词义不同",
-    "quoted": "给...取绰号，叫错名字"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "activate": {
-    "skip": false,
-    "def_zh": "激活；使活动",
-    "reason": "\"使活动\"是常用义,与\"激活\"不同。",
-    "quoted": "使活动"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近，难以区分。"
   },
   "entail": {
-    "skip": false,
-    "def_zh": "涉及；成为必需",
-    "reason": "该义与\"涉及\"不同,常用且重要",
-    "quoted": "使成为必需"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项有重叠"
   },
   "lethal": {
-    "skip": false,
-    "def_zh": "致命的；致死因子",
-    "reason": "名词义与形容词义不同,值得教",
-    "quoted": "致死因子"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文不同"
   },
   "roam": {
     "skip": true,
@@ -231,10 +218,9 @@
     "quoted": "放牧"
   },
   "bait": {
-    "skip": false,
-    "def_zh": "诱饵；以饵引诱",
-    "reason": "动词义与名词义不同",
-    "quoted": "以饵引诱，欺负"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项是动名词形式的转换"
   },
   "reef": {
     "skip": false,
@@ -243,28 +229,24 @@
     "quoted": "暗礁"
   },
   "foam": {
-    "skip": false,
-    "def_zh": "泡沫；起泡",
-    "reason": "动词义与名词义不同,需补充",
-    "quoted": "起泡沫"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是foam。"
   },
   "dietary": {
-    "skip": false,
-    "def_zh": "饮食的；规定饮食",
-    "reason": "名词义与形容词义不同",
-    "quoted": "规定食物"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文不同。"
   },
   "navigate": {
-    "skip": false,
-    "def_zh": "导航；航行驾驶",
-    "reason": "\"航行于，驾驶，操纵，使通过\"是不同的义",
-    "quoted": "航行于，驾驶，操纵，使通过"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "underestimate": {
-    "skip": false,
-    "def_zh": "低估；看轻",
-    "reason": "看轻与低估是不同的语义",
-    "quoted": "看轻"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:低估和看轻意思相近"
   },
   "terrace": {
     "skip": false,
@@ -320,10 +302,9 @@
     "quoted": "价格表"
   },
   "mediate": {
-    "skip": false,
-    "def_zh": "调解；调停",
-    "reason": "动词义与名词义不同,值得教",
-    "quoted": "斡旋，调停"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:调解和调停意思相近"
   },
   "inhibit": {
     "skip": false,
@@ -355,22 +336,19 @@
     "quoted": "辅助的"
   },
   "peril": {
-    "skip": false,
-    "def_zh": "危险；冒险行为",
-    "reason": "动词义与名词义不同",
-    "quoted": "冒险"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "wade": {
-    "skip": false,
-    "def_zh": "涉水而行；跋涉",
-    "reason": "跋涉是常用义,与涉水不同",
-    "quoted": "跋涉"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "fort": {
-    "skip": false,
-    "def_zh": "堡垒；军事要塞",
-    "reason": "要塞是堡垒的不同用法,值得教",
-    "quoted": "要塞"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是'fort'"
   },
   "lust": {
     "skip": false,
@@ -396,16 +374,14 @@
     "reason": "动词义与名词义是同一个概念"
   },
   "rehearse": {
-    "skip": false,
-    "def_zh": "排练；预演",
-    "reason": "预演是排练以外的常用义",
-    "quoted": "预演"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都是指排练的过程"
   },
   "heighten": {
-    "skip": false,
-    "def_zh": "增强；升高变大",
-    "reason": "动词不及物义,与增强不同,值得教。",
-    "quoted": "升高，变大"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近"
   },
   "cardiac": {
     "skip": false,
@@ -414,10 +390,9 @@
     "quoted": "(胃的)贲门的"
   },
   "sovereign": {
-    "skip": false,
-    "def_zh": "主权；元首独立国",
-    "reason": "常用义,考试可能涉及",
-    "quoted": "元首，独立国"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项不够明确区分"
   },
   "glamour": {
     "skip": false,
@@ -426,10 +401,9 @@
     "quoted": "迷惑"
   },
   "converge": {
-    "skip": false,
-    "def_zh": "汇聚；集合",
-    "reason": "动词及物用法,与不及物义不同",
-    "quoted": "使集合"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指向相同的英文解释。"
   },
   "vapor": {
     "skip": false,
@@ -443,10 +417,9 @@
     "reason": "动词义是同一个义的变体"
   },
   "asphalt": {
-    "skip": false,
-    "def_zh": "沥青；铺柏油",
-    "reason": "动词义与名词义不同",
-    "quoted": "以柏油铺"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "volcanic": {
     "skip": false,
@@ -455,28 +428,24 @@
     "quoted": "猛烈的"
   },
   "restrictive": {
-    "skip": false,
-    "def_zh": "限制性的；约束性",
-    "reason": "有不同的用法和语境",
-    "quoted": "限制的，约束的，限定的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近"
   },
   "apprentice": {
-    "skip": false,
-    "def_zh": "学徒；做学徒",
-    "reason": "动词义与名词义不同",
-    "quoted": "使做学徒"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项是同一件事的不同说法"
   },
   "smuggle": {
-    "skip": false,
-    "def_zh": "走私；偷运",
-    "reason": "\"偷运\"是\"走私\"之外的常用义",
-    "quoted": "偷运"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是'smuggle'"
   },
   "veer": {
-    "skip": false,
-    "def_zh": "偏离；转向",
-    "reason": "转向是常用义,考试可能考",
-    "quoted": "转向"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近，都是改变方向。"
   },
   "moss": {
     "skip": false,
@@ -553,16 +522,14 @@
     "reason": "动词义与名词义是同一个义"
   },
   "syllable": {
-    "skip": false,
-    "def_zh": "音节；分音节",
-    "reason": "动词义与名词义不同",
-    "quoted": "分成音节"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "fortress": {
-    "skip": false,
-    "def_zh": "堡垒；筑要塞",
-    "reason": "动词义与名词义不同,需补充",
-    "quoted": "筑要塞，以要塞防守"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项表达相同概念"
   },
   "opaque": {
     "skip": false,
@@ -571,16 +538,14 @@
     "quoted": "不传热的"
   },
   "plump": {
-    "skip": false,
-    "def_zh": "丰满；圆胖",
-    "reason": "形容词义与第一义不同,值得教",
-    "quoted": "圆胖的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:丰满和圆胖意思相近"
   },
   "reshape": {
-    "skip": false,
-    "def_zh": "重塑；整形",
-    "reason": "\"整形\"是完全不同的义,值得补充",
-    "quoted": "整形"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近"
   },
   "assimilate": {
     "skip": false,
@@ -589,10 +554,9 @@
     "quoted": "吸收"
   },
   "exempt": {
-    "skip": false,
-    "def_zh": "免除；豁免",
-    "reason": "动词义与名词义不同",
-    "quoted": "使免除，豁免"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:免除和豁免是同义词"
   },
   "ascend": {
     "skip": false,
@@ -601,10 +565,9 @@
     "quoted": "攀登"
   },
   "wed": {
-    "skip": false,
-    "def_zh": "结婚；结合",
-    "reason": "有结合的引申义,与结婚不同",
-    "quoted": "使结合"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都可翻译为 marry"
   },
   "sulfur": {
     "skip": false,
@@ -642,10 +605,9 @@
     "reason": "动词义与名词义是同一个义"
   },
   "deterrent": {
-    "skip": false,
-    "def_zh": "威慑力量；威慑手段",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "制止的，威慑的，遏制的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项表达相同概念"
   },
   "dissipate": {
     "skip": false,
@@ -678,10 +640,9 @@
     "quoted": "大量"
   },
   "serene": {
-    "skip": false,
-    "def_zh": "宁静的；沉着",
-    "reason": "沉着的与宁静的不同,值得教",
-    "quoted": "沉着的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文有差异"
   },
   "gait": {
     "skip": false,
@@ -690,10 +651,9 @@
     "quoted": "训练...的步法"
   },
   "tapestry": {
-    "skip": false,
-    "def_zh": "挂毯；挂毯装饰",
-    "reason": "动词义与名词义不同,值得教",
-    "quoted": "用挂毯装饰"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:判定调用失败,按安全方向退回单义"
   },
   "infiltrate": {
     "skip": false,
@@ -702,10 +662,9 @@
     "quoted": "渗透物"
   },
   "gleam": {
-    "skip": false,
-    "def_zh": "光辉；微光",
-    "reason": "微光是常用义,与光辉不同",
-    "quoted": "微光"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:光辉和微光有细微差别"
   },
   "scarlet": {
     "skip": false,
@@ -726,22 +685,19 @@
     "quoted": "烽火"
   },
   "edible": {
-    "skip": false,
-    "def_zh": "可食用的；食品",
-    "reason": "名词义与形容词义不同",
-    "quoted": "食品，食物"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "obstruct": {
-    "skip": false,
-    "def_zh": "阻碍；阻隔",
-    "reason": "\"阻隔\"与\"阻碍\"在语境上有区别,值得教",
-    "quoted": "阻隔"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指阻止或妨碍"
   },
   "climax": {
-    "skip": false,
-    "def_zh": "高潮；极点",
-    "reason": "极点是高潮的不同用法",
-    "quoted": "极点"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指向climax的顶点含义"
   },
   "refund": {
     "skip": false,
@@ -762,16 +718,14 @@
     "quoted": "有缺陷的人，不完全变化词"
   },
   "determinant": {
-    "skip": false,
-    "def_zh": "决定因素；决定性",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "决定性的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "cavern": {
-    "skip": false,
-    "def_zh": "洞穴；巨穴洞窟",
-    "reason": "巨穴和洞穴是不同的概念",
-    "quoted": "巨穴，洞窟，深处"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指大洞"
   },
   "dagger": {
     "skip": false,
@@ -780,16 +734,14 @@
     "quoted": "用剑刺"
   },
   "saturate": {
-    "skip": false,
-    "def_zh": "饱和；浸透充满",
-    "reason": "这些义与\"饱和\"不同,常用且重要",
-    "quoted": "使渗透，浸透，使充满"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "trample": {
-    "skip": false,
-    "def_zh": "践踏；无视",
-    "reason": "无视是践踏的引申义,值得教",
-    "quoted": "无视"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:判定调用失败,按安全方向退回单义"
   },
   "unpack": {
     "skip": true,
@@ -836,10 +788,9 @@
     "quoted": "作湿壁画于"
   },
   "camouflage": {
-    "skip": false,
-    "def_zh": "伪装；掩饰行为",
-    "reason": "动词义的\"掩饰\"与名词义不同",
-    "quoted": "掩饰"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:伪装和掩饰行为在语义上非常接近"
   },
   "crimson": {
     "skip": true,
@@ -847,22 +798,19 @@
     "reason": "动词义与名词义是同一个义"
   },
   "cove": {
-    "skip": false,
-    "def_zh": "海湾；山凹小湾",
-    "reason": "\"山凹，小湾\"是常用义,值得教。",
-    "quoted": "山凹，小湾"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指小型水域"
   },
   "fable": {
-    "skip": false,
-    "def_zh": "寓言；虚构故事",
-    "reason": "动词义与名词义不同",
-    "quoted": "虚构"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指虚构的故事。"
   },
   "illiterate": {
-    "skip": false,
-    "def_zh": "文盲的；目不识丁",
-    "reason": "形容词义与名词义不同",
-    "quoted": "目不识丁的，没受教育的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都是指不识字。"
   },
   "meditate": {
     "skip": false,
@@ -883,16 +831,14 @@
     "quoted": "装饰物，观赏植物"
   },
   "repress": {
-    "skip": false,
-    "def_zh": "压制；镇压抑制",
-    "reason": "镇压和抑制是不同的常用义",
-    "quoted": "镇压，抑制，压制"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都为repress。"
   },
   "legislate": {
-    "skip": false,
-    "def_zh": "立法；立法规定",
-    "reason": "动词及物用法,与不及物用法不同",
-    "quoted": "用立法规定"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "venom": {
     "skip": false,
@@ -957,10 +903,9 @@
     "quoted": "黄色"
   },
   "brawl": {
-    "skip": false,
-    "def_zh": "斗殴；争吵",
-    "reason": "\"争吵\"是常用义,与\"斗殴\"不同。",
-    "quoted": "争吵"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:斗殴和争吵有区别"
   },
   "effluent": {
     "skip": false,
@@ -993,16 +938,14 @@
     "quoted": "野蛮的"
   },
   "stimulant": {
-    "skip": false,
-    "def_zh": "兴奋剂；兴奋性物质",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "兴奋性的，激励的，鼓舞的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两者都是指刺激作用的物质"
   },
   "additive": {
-    "skip": false,
-    "def_zh": "添加剂；添加物",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "添加的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项是同一件事的不同说法"
   },
   "sap": {
     "skip": false,
@@ -1011,10 +954,9 @@
     "quoted": "活力"
   },
   "malfunction": {
-    "skip": false,
-    "def_zh": "故障；失灵",
-    "reason": "\"失灵\"与\"故障\"是不同的常用义",
-    "quoted": "失灵"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:\u000e4e24\u000e4e2a\u000e4e49\u000e9879\u000e5747\u000e6307\u000e673a\u000e5668\u000e6216\u000e7cfb\u000e7edf\u000e7684\u000e4e0d\u000e6b63\u000e5e38\u000e5de5\u000e4f5c\u000e3002"
   },
   "moisten": {
     "skip": true,
@@ -1050,22 +992,19 @@
     "quoted": "光彩，荣誉"
   },
   "censure": {
-    "skip": false,
-    "def_zh": "谴责；责难",
-    "reason": "名词义与动词义不同,需补充",
-    "quoted": "责难"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是censure。"
   },
   "slime": {
-    "skip": false,
-    "def_zh": "粘液；烂泥",
-    "reason": "\"烂泥\"是完全不同的义,值得补充。",
-    "quoted": "烂泥"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文不同"
   },
   "saber": {
-    "skip": false,
-    "def_zh": "军刀；马刀砍",
-    "reason": "动词义与名词义不同,需补充",
-    "quoted": "用马刀砍"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "audit": {
     "skip": false,
@@ -1086,10 +1025,9 @@
     "quoted": "使淤塞"
   },
   "crouch": {
-    "skip": false,
-    "def_zh": "蹲下；低头",
-    "reason": "与\"蹲下\"不同的动作",
-    "quoted": "低头"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文不同"
   },
   "asteroid": {
     "skip": false,
@@ -1122,10 +1060,9 @@
     "quoted": "卑鄙的人"
   },
   "interrogate": {
-    "skip": false,
-    "def_zh": "审问；质问讯问",
-    "reason": "质问和审问是不同的语境",
-    "quoted": "质问，讯问"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指询问的行为。"
   },
   "confiscate": {
     "skip": false,
@@ -1134,10 +1071,9 @@
     "quoted": "被没收的"
   },
   "prerequisite": {
-    "skip": false,
-    "def_zh": "先决条件；必要条件",
-    "reason": "形容词用法常见",
-    "quoted": "必要的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近"
   },
   "swelling": {
     "skip": false,
@@ -1185,10 +1121,9 @@
     "quoted": "疑惑"
   },
   "predominate": {
-    "skip": false,
-    "def_zh": "占主导地位；控制支配",
-    "reason": "掌握、控制与占主导地位不同,需补充",
-    "quoted": "掌握，控制，支配"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近，难以区分。"
   },
   "raven": {
     "skip": false,
@@ -1202,10 +1137,9 @@
     "reason": "其他义与\"诽谤\"同义堆砌"
   },
   "sentry": {
-    "skip": false,
-    "def_zh": "哨兵；岗哨",
-    "reason": "动词义与名词义不同",
-    "quoted": "设岗哨"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文都是'sentry'"
   },
   "domesticated": {
     "skip": false,
@@ -1253,10 +1187,9 @@
     "reason": "动词义与形容词义是同一个义"
   },
   "modulate": {
-    "skip": false,
-    "def_zh": "调节；控制",
-    "reason": "控制是常用义,与调节不同",
-    "quoted": "控制"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:调节和控制有重叠"
   },
   "sunburn": {
     "skip": false,
@@ -1270,10 +1203,9 @@
     "reason": "其他义项不常用,不影响考试"
   },
   "haggle": {
-    "skip": false,
-    "def_zh": "讨价还价；争论杀价",
-    "reason": "有不同于讨价还价的义",
-    "quoted": "争论，杀价"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项表达相同意思"
   },
   "reversible": {
     "skip": false,
@@ -1299,16 +1231,14 @@
     "reason": "其他义是同义堆砌"
   },
   "germinate": {
-    "skip": false,
-    "def_zh": "发芽；使发育",
-    "reason": "动词及物用法值得教",
-    "quoted": "使发芽，使发育"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都涉及植物生长过程。"
   },
   "blemish": {
-    "skip": false,
-    "def_zh": "瑕疵；污点",
-    "reason": "动词义与名词义不同,需补充",
-    "quoted": "弄脏，玷污，损害"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:瑕疵和污点在语境中常互换"
   },
   "exponential": {
     "skip": true,
@@ -1321,10 +1251,9 @@
     "reason": "\"辩驳\"与\"反驳\"是同义堆砌。"
   },
   "vertebrate": {
-    "skip": false,
-    "def_zh": "脊椎动物；有脊椎的",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "有椎骨的，有脊椎的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "facsimile": {
     "skip": false,
@@ -1344,10 +1273,9 @@
     "reason": "其他义与\"砍，劈\"同义堆砌"
   },
   "mammalian": {
-    "skip": false,
-    "def_zh": "哺乳类的；哺乳动物",
-    "reason": "名词义与形容词义不同,需补充",
-    "quoted": "哺乳动物的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "incubate": {
     "skip": false,
@@ -1356,10 +1284,9 @@
     "quoted": "培养"
   },
   "monochrome": {
-    "skip": false,
-    "def_zh": "单色，单色图像；黑白图像",
-    "reason": "黑白是常用义,考试可能涉及",
-    "quoted": "黑白"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:单色和黑白图像常被视为同义"
   },
   "crustacean": {
     "skip": false,
@@ -1392,10 +1319,9 @@
     "quoted": "搜索"
   },
   "azure": {
-    "skip": false,
-    "def_zh": "天蓝色；蔚蓝色",
-    "reason": "形容词义与名词义不同",
-    "quoted": "蔚蓝的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两者都是蓝色的描述"
   },
   "overcharge": {
     "skip": false,
@@ -1404,10 +1330,9 @@
     "quoted": "装载过多"
   },
   "recluse": {
-    "skip": false,
-    "def_zh": "隐居者；隐遁之人",
-    "reason": "形容词义与名词义不同,值得教",
-    "quoted": "隐遁的，偏僻的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都是指隐居的人。"
   },
   "carrion": {
     "skip": true,
@@ -1432,10 +1357,9 @@
     "quoted": "超音速的"
   },
   "transmute": {
-    "skip": false,
-    "def_zh": "转化；变形变质",
-    "reason": "变形变质是不同义",
-    "quoted": "使变形，使变质"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近，都是变化"
   },
   "prefabricated": {
     "skip": true,
@@ -1443,22 +1367,19 @@
     "reason": "动词义与形容词义是同一个义的不同词性。"
   },
   "refrigerant": {
-    "skip": false,
-    "def_zh": "制冷剂；冷却剂",
-    "reason": "冷却剂是常用义,与制冷剂不同",
-    "quoted": "冷却剂"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:制冷剂和冷却剂常被视为同义词。"
   },
   "sallow": {
-    "skip": false,
-    "def_zh": "病态苍白；灰黄色，气色差",
-    "reason": "描述肤色的常用义",
-    "quoted": "灰黄色的，土色的，气色不好的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项描述相似，均指肤色不佳。"
   },
   "cabal": {
-    "skip": false,
-    "def_zh": "阴谋集团；秘密结社",
-    "reason": "政治语境常用,需掌握",
-    "quoted": "秘密结社"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "ragtime": {
     "skip": false,
@@ -1467,10 +1388,9 @@
     "quoted": "滑稽的"
   },
   "depreciate": {
-    "skip": false,
-    "def_zh": "贬值；降价贬低",
-    "reason": "有不同于贬值的用法",
-    "quoted": "降价，贬低"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项意思相近，都是价值下降。"
   },
   "sublimate": {
     "skip": false,
@@ -1485,16 +1405,14 @@
     "quoted": "清爽的，疾行的，强烈的"
   },
   "ruffian": {
-    "skip": false,
-    "def_zh": "恶棍；凶恶残暴",
-    "reason": "形容词义与名词义不同,需补充",
-    "quoted": "凶恶的，残忍的，残暴的"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项表达相似的概念"
   },
   "obligated": {
-    "skip": false,
-    "def_zh": "有义务的；负有责任",
-    "reason": "动词义与形容词义不同,需补充",
-    "quoted": "使负有责任或义务"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "defecate": {
     "skip": false,
@@ -1503,16 +1421,14 @@
     "quoted": "除去污物，澄清，净化"
   },
   "emaciate": {
-    "skip": false,
-    "def_zh": "使消瘦；使憔悴",
-    "reason": "\"使憔悴\"与\"使消瘦\"有区别,值得教",
-    "quoted": "使憔悴"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项翻译回英文相同"
   },
   "feint": {
-    "skip": false,
-    "def_zh": "假动作；佯攻",
-    "reason": "假动作和伪装是不同的概念",
-    "quoted": "伪装，假装，假托，佯攻"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:假动作和佯攻是同一件事的不同说法"
   },
   "rawhide": {
     "skip": false,
@@ -1521,10 +1437,9 @@
     "quoted": "(用生皮鞭)抽打"
   },
   "fireproof": {
-    "skip": false,
-    "def_zh": "防火的；具耐火性",
-    "reason": "动词义与形容词义不同,值得教",
-    "quoted": "变成有耐火性"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两者都指防火性能"
   },
   "canter": {
     "skip": false,
@@ -1563,10 +1478,9 @@
     "quoted": "臼，研钵，灰泥"
   },
   "slumber": {
-    "skip": false,
-    "def_zh": "酣睡；深度睡眠",
-    "reason": "\"睡眠\"是常用义,与\"酣睡\"不同",
-    "quoted": "睡眠"
+    "skip": true,
+    "def_zh": "",
+    "reason": "复筛判定同义堆砌,退回单义:两个义项都指深度睡眠"
   },
   "squall": {
     "skip": false,

@@ -368,7 +368,7 @@ COMMIT;
 
 | 词 | 改前 | 改后 | ECDICT 依据 |
 | --- | --- | --- | --- |
-${sample.map(t => `| ${t.headword} | ${baseline[t.headword]} | **${cache[t.headword].def_zh}** | ${String(t.ecdict).slice(0, 46)} |`).join('\n')}
+${sample.map(t => `| ${t.headword} | ${baseline[t.headword]} | **${cache[t.headword].def_zh}** | ${String(t.ecdict).slice(0, 60).replace(/\|/g, '/')} |`).join('\n')}
 
 ## 二、判定"无值得教的第二义"(${skipSample.length} 词抽样)
 
@@ -376,7 +376,7 @@ ${sample.map(t => `| ${t.headword} | ${baseline[t.headword]} | **${cache[t.headw
 
 | 词 | 我们的值 | ECDICT 的第二词性 | 模型的理由 |
 | --- | --- | --- | --- |
-${skipSample.map(t => `| ${t.headword} | ${t.def_zh} | ${String(t.ecdict).split(' | ')[1] ?? ''} | ${cache[t.headword].reason} |`).join('\n')}
+${skipSample.map(t => `| ${t.headword} | ${t.def_zh} | ${String(String(t.ecdict).split(' | ')[1] ?? '').replace(/\|/g, "/")} | ${cache[t.headword].reason} |`).join('\n')}
 `);
 
   if (stale.length) {

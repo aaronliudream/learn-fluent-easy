@@ -87,10 +87,13 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
     if (r.quotaBlocked) setQuotaHit(true);
   }
 
+  const topRef = useRef<HTMLDivElement | null>(null);
   function next() {
     stopAudio();
     if (idx + 1 >= questions.length) { setDone(true); return; }
     setIdx(idx + 1); setPicked(null);
+    // 回到题面顶部 —— 上一题的反馈层把页面滚下去了,不滚回来下一题会从半截开始
+    try { topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } catch { /* 老 webview 忽略 */ }
   }
 
   return (
@@ -138,20 +141,23 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
 
         {state === "ok" && !done && q && (
           <>
+            <div ref={topRef} className="scroll-mt-3" />
             <Progress done={idx} total={questions.length} color={color} />
 
-            <div className="rounded-2xl border border-black/[0.06] bg-white px-5 py-9 text-center">
-              <h1 className="text-slate-900" style={{ fontFamily: FONT_SERIF, fontSize: "clamp(34px, 11vw, 48px)", fontWeight: 600, lineHeight: 1.15 }}>
+            {/* 手机端一屏性:大字卡 + 四个选项必须在 375×667 内放下。
+                内边距 py-9→py-5、字号上限 48→40、音标行并进大字卡下方。 */}
+            <div className="rounded-2xl border border-black/[0.06] bg-white px-5 py-5 text-center">
+              <h1 className="text-slate-900" style={{ fontFamily: FONT_SERIF, fontSize: "clamp(32px, 10vw, 40px)", fontWeight: 600, lineHeight: 1.1 }}>
                 {q.word.headword}
               </h1>
               <button type="button" onClick={() => playUrl(q.word.audio_url, `w:${q.word.id}`)}
                 disabled={!q.word.audio_url} aria-label="朗读"
-                className="mt-2 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[13px] text-slate-500">
+                className="mt-1 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[13px] text-slate-500">
                 <Volume2 className="h-4 w-4" />{q.word.ipa}
               </button>
             </div>
 
-            <div className="mt-4 space-y-2.5">
+            <div className="mt-3 space-y-2">
               {q.options.map((opt, i) => {
                 const isAnswer = i === q.answerIndex;
                 const isPicked = picked === i;
@@ -159,7 +165,9 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
                 return (
                   <button key={i} type="button" onClick={() => choose(i)} disabled={reveal}
                     className={cn(
-                      "flex w-full items-center gap-3 rounded-2xl border px-4 py-4 text-left text-[16px] transition",
+                      /* 选项:汉字提到 17px,四项等高(min-h)——
+                         等高避免长短不一时用排除法猜,也让一屏排布可预测。 */
+                      "flex min-h-[58px] w-full items-center gap-3 rounded-2xl border px-4 py-3 text-left text-[17px] leading-snug transition",
                       !reveal && "border-black/[0.08] bg-white active:bg-slate-50",
                       reveal && isAnswer && "border-emerald-300 bg-emerald-50 text-emerald-900",
                       reveal && isPicked && !isAnswer && "border-rose-300 bg-rose-50 text-rose-900",

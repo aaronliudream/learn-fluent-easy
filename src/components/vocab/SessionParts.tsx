@@ -52,8 +52,8 @@ export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; d
   return (
     <>
       {/* 大字 + 音标 + 词性:三者同屏,这是"微型词卡"的骨架 */}
-      <div className="mb-2 flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-        <span className="text-[26px] font-semibold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>
+      <div className="mb-1.5 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
+        <span className="text-[24px] font-semibold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>
           {word.headword}
         </span>
         {word.ipa && <span className="text-[14px] text-slate-500">{word.ipa}</span>}
@@ -67,10 +67,10 @@ export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; d
       </div>
 
       <div className="mb-1 text-[15px] font-medium text-slate-800">{word.def_zh}</div>
-      {word.def_en && <div className="mb-3 text-[13px] leading-relaxed text-slate-500">{word.def_en}</div>}
+      {word.def_en && <div className="mb-2 text-[13px] leading-snug text-slate-500">{word.def_en}</div>}
 
       {shown.map(ex => (
-        <div key={ex.id} className="border-t border-black/[0.06] py-3">
+        <div key={ex.id} className="border-t border-black/[0.06] py-2.5">
           {ex.collocation && <div className="mb-1 text-[12px] font-medium tracking-[0.02em] text-slate-400">{ex.collocation}</div>}
           <button type="button" onClick={() => playUrl(ex.audio_url, `e:${ex.id}`)} disabled={!ex.audio_url}
             className="flex w-full items-start gap-2 text-left">
@@ -132,8 +132,22 @@ export function Feedback({ word, correct, onNext, lastOne, correctAnswer, spelle
   word: VocabWord; correct: boolean; onNext: () => void; lastOne: boolean;
   correctAnswer?: string; spelled?: string;
 }) {
+  /* 挂载即滚进视野 —— 放在这里而不是各模式里,三个模式一次到位。
+   * ⚠️ 手机上反馈层在选项下方,不自动滚的话用户每题都要手动下滑找它,
+   *    而反馈是记忆黏合的黄金三秒,不该让用户先花两秒找它。
+   * block:"start" 让反馈层顶部对齐视口顶部,大字/音标/释义/例句1 一屏内可见。 */
+  const ref = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const t = window.setTimeout(() => {
+      try { el.scrollIntoView({ behavior: "smooth", block: "start" }); } catch { el.scrollIntoView(); }
+    }, 60);                                   // 等反馈层布局稳定再滚,否则滚到半截
+    return () => window.clearTimeout(t);
+  }, []);
+
   return (
-    <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5">
+    <div ref={ref} className="mt-3 scroll-mt-3 rounded-2xl border border-black/[0.06] bg-white p-4">
       <div className={cn("mb-3 flex items-center gap-2 text-[16px] font-semibold",
         correct ? "text-emerald-700" : "text-rose-700")}>
         {correct ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
@@ -156,7 +170,7 @@ export function Feedback({ word, correct, onNext, lastOne, correctAnswer, spelle
       <WordCardBody word={word} />
 
       <button type="button" onClick={onNext}
-        className="mt-4 w-full rounded-2xl px-5 py-3.5 text-center text-[16px] font-semibold text-white"
+        className="mt-3 w-full rounded-2xl px-5 py-3 text-center text-[16px] font-semibold text-white"
         style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
         {lastOne ? "看结果" : "下一题"}
       </button>

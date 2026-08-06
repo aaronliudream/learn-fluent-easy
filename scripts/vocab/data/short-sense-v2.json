@@ -1,0 +1,12 @@
+{
+  "_note": "短义项 v2 终裁(Aaron 2026-08-05 逐条复审)。v1 把单字堆砌升级成了双字堆砌(拉拽；拖曳型),同一把尺子:两段必须是词典分列的不同概念。",
+  "_lesson": "「改形」任务的产出同样要过「堆砌」这把尺 —— 形式修复不豁免语义审。v1 只盯着「字数够不够」,没回头问「这两段是不是同一个意思」。",
+  "keep": ["gnaw", "prod", "peck", "jug", "stalk", "strand", "strings", "hem"],
+  "fix": {
+    "tug": "拉拽", "slash": "砍劈", "wring": "拧绞", "squat": "蹲下",
+    "deity": "神祇", "ply": "层数",
+    "arc": "弧线；电弧", "batter": "猛击；面糊", "cavity": "空腔；龋洞",
+    "shaft": "轴杆；竖井", "trough": "水槽；低谷"
+  },
+  "_recovered": "后五条(arc/batter/cavity/shaft/trough)是捞回的真第二义,均 ECDICT 有据;batter 原「揉捏」是错义,cavity 原「洞穴」误导。"
+}

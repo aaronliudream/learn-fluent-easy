@@ -1,5 +1,5 @@
--- B 段 反义词 —— 1743 词 / 4277 个反义词
--- 覆盖率 1743/4427(39.4%)。
+-- B 段 反义词 —— 1745 词 / 4279 个反义词
+-- 覆盖率 1745/4427(39.4%)。
 -- ⚠️ 覆盖率低是**预期**:多数词没有反义词,空的就不写库(antonyms 保持 NULL)。
 -- 闸门 b1-b6 全过(b6 = 查 ECDICT 验真词 + 词性交叠)。
 -- 幂等:按 lower(headword) 定位 UPDATE。⚠️ 由 Aaron 执行。
@@ -541,6 +541,7 @@ UPDATE vocab_words w
   ('evade', ARRAY['confront', 'face', 'meet']::text[]),
   ('magnify', ARRAY['reduce', 'diminish', 'decrease']::text[]),
   ('sinister', ARRAY['benevolent', 'kind', 'good']::text[]),
+  ('microscopic', ARRAY['macroscopic']::text[]),
   ('deflect', ARRAY['direct', 'converge']::text[]),
   ('staggering', ARRAY['unremarkable', 'ordinary', 'insignificant']::text[]),
   ('lofty', ARRAY['humble', 'lowly', 'insignificant']::text[]),
@@ -1021,6 +1022,7 @@ UPDATE vocab_words w
   ('flashy', ARRAY['subdued', 'plain', 'simple']::text[]),
   ('devout', ARRAY['impious', 'irreligious', 'unfaithful']::text[]),
   ('accentuate', ARRAY['downplay', 'diminish', 'reduce']::text[]),
+  ('synthesize', ARRAY['analyze']::text[]),
   ('dampen', ARRAY['intensify', 'amplify', 'strengthen']::text[]),
   ('treacherous', ARRAY['trustworthy', 'reliable', 'safe']::text[]),
   ('prolific', ARRAY['unproductive', 'sterile', 'barren']::text[]),
@@ -1760,11 +1762,11 @@ UPDATE vocab_words w
 SELECT 'AFTER' AS stage, count(*) AS words_with_antonyms FROM vocab_words WHERE antonyms IS NOT NULL;
 
 -- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
-SELECT '有反义词的词 = 1743' AS expect,
-       (SELECT count(*) FROM vocab_words WHERE antonyms IS NOT NULL) = 1743 AS ok
+SELECT '有反义词的词 = 1745' AS expect,
+       (SELECT count(*) FROM vocab_words WHERE antonyms IS NOT NULL) = 1745 AS ok
 UNION ALL
-SELECT '反义词总数 = 4277',
-       (SELECT coalesce(sum(array_length(antonyms, 1)), 0) FROM vocab_words WHERE antonyms IS NOT NULL) = 4277
+SELECT '反义词总数 = 4279',
+       (SELECT coalesce(sum(array_length(antonyms, 1)), 0) FROM vocab_words WHERE antonyms IS NOT NULL) = 4279
 UNION ALL
 SELECT '没有词配了超过 3 个反义词',
        NOT EXISTS (SELECT 1 FROM vocab_words WHERE array_length(antonyms, 1) > 3)

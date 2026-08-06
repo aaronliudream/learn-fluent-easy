@@ -1,7 +1,7 @@
 # B 段 反义词 · 送审件
 
-覆盖 **1743/4427** 词(39.4%),共 4277 个反义词。
-其余 2684 词判定为**没有反义词**,不写库。
+覆盖 **1745/4427** 词(39.4%),共 4279 个反义词。
+其余 2682 词判定为**没有反义词**,不写库。
 
 机器闸门 b1-b6 全量复检 **0 不合格**(b6 查 ECDICT 761390 词索引)。
 
@@ -17,22 +17,22 @@
 | heighten | v. | 增强 | **diminish / reduce / lessen** |
 | filthy | adj. | 肮脏的 | **clean / pure / neat** |
 | bestow | v. | 赠予；赐予 | **withhold / refuse** |
-| ridicule | n./v. | 嘲笑；讽刺 | **praise / commend / applaud** |
-| smother | v./n. | 窒息；压制 | **release / liberate** |
-| literate | n./adj. | 识字的；有文化的 | **illiterate** |
-| pungent | adj. | 刺鼻的；辛辣的 | **bland / insipid / mild** |
-| deride | v. | 嘲笑 | **praise / commend / applaud** |
-| agonize | v. | 痛苦；烦恼 | **relax / calm / comfort** |
-| devout | adj. | 虔诚的 | **impious / irreligious / unfaithful** |
-| populous | adj. | 人口稠密的 | **sparse / unpopulated / desolate** |
-| frenetic | adj./n. | 狂热的；发狂的 | **calm / peaceful / tranquil** |
-| enmity | n. | 敌意 | **friendship / amity** |
-| crafty | adj. | 狡猾的；诡计多端的 | **naive / gullible** |
-| scrupulously | adv. | 一丝不苟地 | **carelessly / negligently** |
-| proscribe | v. | 禁止；排除 | **permit / allow / sanction** |
-| purified | adj. | 净化的 | **contaminated / unclean / polluted** |
-| uncouth | adj. | 笨拙的；粗鲁的 | **cultured / refined / graceful** |
-| retrograde | adj./v. | 逆行的；倒退的 | **progressive** |
+| bland | adj. | 乏味的；平淡的 | **exciting / interesting / spicy** |
+| specified | adj. | 指定的；详述的 | **unspecified** |
+| negligible | adj. | 微不足道的 | **significant / important / considerable** |
+| tranquil | adj. | 宁静的；平静的 | **chaotic / turbulent / noisy** |
+| irritable | adj. | 易怒的 | **calm / patient / easygoing** |
+| noxious | adj. | 有害的；有毒的 | **beneficial / harmless / wholesome** |
+| flashy | adj. | 华丽的；炫耀的 | **subdued / plain / simple** |
+| unbroken | adj. | 未破碎的；完整的 | **broken** |
+| inanimate | adj. | 无生命的 | **animate** |
+| inquisitive | adj. | 好奇的；爱探究的 | **uninterested / indifferent** |
+| stingy | adj. | 吝啬的 | **generous / lavish / open-handed** |
+| disagreeable | adj. | 不愉快的；令人不快的 | **agreeable / pleasant / enjoyable** |
+| annul | v. | 取消；废除 | **validate / confirm / establish** |
+| fallible | adj. | 容易犯错的；不可靠的 | **infallible / unerring** |
+| fallacious | adj. | 谬误的；错误的 | **valid / sound / truthful** |
+| venturesome | adj. | 冒险的；有冒险精神的 | **cautious / careful / timid** |
 
 ## 二、判定"没有反义词"的(16 词抽样)
 
@@ -47,13 +47,13 @@
 | remnant | n./adj. | 残余；遗迹 |
 | rancher | n. | 牧场主 |
 | intuition | n. | 直觉 |
-| microscopic | adj. | 微小的；显微镜下可见的 |
-| feeder | n. | 供给者 |
-| imbue | v. | 浸染；灌输 |
-| malfunction | n./v. | 故障 |
-| synthesize | v. | 合成，综合 |
-| interlude | n. | 插曲 |
-| portend | v. | 预示；预兆 |
-| manifold | n./adj./v. | 多种形式；多样性 |
-| cometary | adj. | 彗星的 |
-| chilli | n. | 辣椒 |
+| fume | n./v. | 烟雾；愤怒 |
+| horde | n./v. | 一大群；一群人 |
+| meander | n./v. | 蜿蜒；漫步 |
+| impunity | n. | 不受惩罚；免责 |
+| aspiring | adj. | 有志于；渴望成为 |
+| feudal | adj. | 封建的 |
+| rubbery | adj. | 橡胶的；有弹性的 |
+| auger | n. | 钻孔机 |
+| domesticate | v. | 驯化 |
+| reformism | n. | 改革主义 |

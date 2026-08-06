@@ -1,0 +1,57 @@
+{
+  "founder": {
+    "skip": true,
+    "def_zh": "",
+    "reason": ""
+  },
+  "ally": {
+    "skip": false,
+    "def_zh": "盟友；结盟",
+    "reason": "第二义项与第一义项不同，且是常用义。"
+  },
+  "participant": {
+    "skip": false,
+    "def_zh": "参与者；有份的",
+    "reason": "第二义与第一义不同，且是常用义。"
+  },
+  "sue": {
+    "skip": false,
+    "def_zh": "起诉；提出请求",
+    "reason": "第二义与第一义不同，且是常用义。"
+  },
+  "vaccine": {
+    "skip": true,
+    "def_zh": "疫苗",
+    "reason": "没有值得教的第二义"
+  },
+  "recipient": {
+    "skip": false,
+    "def_zh": "接受者；容器",
+    "reason": "第二义项‘容器’与第一义项‘接受者’不同，且常用。"
+  },
+  "nonetheless": {
+    "skip": false,
+    "def_zh": "尽管如此；不过",
+    "reason": "第二义项是常用的对比转折词，适合教给学生。"
+  },
+  "shrimp": {
+    "skip": true,
+    "def_zh": "",
+    "reason": "没有值得教的第二义"
+  },
+  "secular": {
+    "skip": false,
+    "def_zh": "世俗的；修道院外的教士",
+    "reason": "第二义项与第一义项不同，且是常用义。"
+  },
+  "interact": {
+    "skip": false,
+    "def_zh": "互动；幕间剧",
+    "reason": "第二义项是指一种特定的表演形式，适合教给学生了解不同的文化和艺术形式。"
+  },
+  "shove": {
+    "skip": false,
+    "def_zh": "推，挤；猛推，强使",
+    "reason": "第二义与第一义不同，且是常用义。"
+  }
+}

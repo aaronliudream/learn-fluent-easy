@@ -254,6 +254,25 @@ async function main() {
 }
 
 function emit(words, cache, ecdict) {
+  /* 人工定点补的反义词,合并优先级高于模型产出。
+   * ⚠️ 只在 emit 阶段合并,**不写进生成缓存** —— 写进缓存的话,
+   *    下次因闸门升级触发缓存重验时会被当成模型产出淘汰掉,人工结论就丢了。
+   * ⚠️ 人工条目照样过 b1-b6,不因为"是人填的"就免检。 */
+  const manualPath = path.join(DATA, 'antonyms-manual.json');
+  if (existsSync(manualPath)) {
+    const manual = JSON.parse(readFileSync(manualPath, 'utf8'));
+    const byHw = new Map(words.map(w => [w.headword, w]));
+    let merged = 0;
+    for (const m of manual.words) {
+      const w = byHw.get(m.headword);
+      if (!w) { process.stdout.write(`  ⚠️ 人工清单里的 "${m.headword}" 不在词池,跳过\n`); continue; }
+      const f = gateAntonyms(w, m.antonyms, ecdict);
+      if (f.length) { process.stdout.write(`  ✗ 人工条目 ${m.headword} 未过闸:${f.join(' / ')}\n`); process.exitCode = 1; continue; }
+      cache[m.headword] = m.antonyms; merged++;
+    }
+    process.stdout.write(`· 合并人工清单 ${merged}/${manual.words.length} 条\n`);
+  }
+
   const rows = words.filter(w => w.headword in cache);
   const withAnt = rows.filter(w => cache[w.headword].length > 0);
   const total = withAnt.reduce((n, w) => n + cache[w.headword].length, 0);

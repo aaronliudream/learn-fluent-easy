@@ -1,0 +1,8 @@
+{
+  "_note": "人工定点补的反义词。Aaron 审 B 段送审件时抓到的漏配,合并优先级高于模型产出。",
+  "_rule": "每条必须过 b1-b6;合并在 emit 阶段做,不进生成缓存,这样重跑生成器不会把它冲掉。",
+  "words": [
+    { "headword": "microscopic", "antonyms": ["macroscopic"], "by": "Aaron 2026-08-05 送审件判空栏漏网" },
+    { "headword": "synthesize", "antonyms": ["analyze"], "by": "Aaron 2026-08-05 送审件判空栏漏网" }
+  ]
+}

@@ -5,7 +5,7 @@ import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
   BarChart3, Heart, Settings,
-  LogIn, LogOut, Sparkles, ClipboardList, GraduationCap } from
+  LogIn, LogOut, ClipboardList, GraduationCap } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsTeacher } from "@/hooks/useIsTeacher";
@@ -76,15 +76,6 @@ export default function Me() {
             <Link to="/auth"><LogIn className="mr-1.5 size-4" /> <T>登录</T></Link>
           </Button>
         }
-      </section>
-
-      {/* Quick AI assistant hint */}
-      <section className="mt-4 flex items-center gap-3 rounded-2xl border border-primary/30 bg-primary/5 p-4">
-        <Sparkles className="size-5 shrink-0 text-primary" />
-        <div className="flex-1 text-sm">
-          <span className="font-bold"><T>小月 AI 助手</T></span>
-          <span className="ml-2 text-muted-foreground"><T>在任何学习页右下角即可呼出，随时答疑解惑。</T></span>
-        </div>
       </section>
 
       {/* Tiles */}

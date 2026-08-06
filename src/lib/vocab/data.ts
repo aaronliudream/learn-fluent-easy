@@ -67,6 +67,8 @@ export type MasteryRow = {
   last_correct_date: string | null;
   modes_correct: string[] | null;
   tested_count: number;
+  /** 第一次答对那天 —— 成长图「新学」系列的唯一数据源 */
+  first_learned_date?: string | null;
 };
 
 /**
@@ -83,7 +85,9 @@ export function isMasteredRow(r: Pick<MasteryRow, "mastery_level" | "correct_day
 export async function listMasteryRows(wordIds?: string[]): Promise<MasteryRow[]> {
   const uid = await currentUserId();
   if (!uid) return [];
-  const cols = "word_id,mastery_level,correct_days,last_correct_date,modes_correct,tested_count";
+  /* ⚠️ first_learned_date 必须取 —— 成长图的「新学」系列全靠它。
+   *    之前没 select,于是那条系列恒为 0,新用户的图永远全空。 */
+  const cols = "word_id,mastery_level,correct_days,last_correct_date,modes_correct,tested_count,first_learned_date";
   const out: MasteryRow[] = [];
   if (wordIds && wordIds.length) {
     for (let i = 0; i < wordIds.length; i += 200) {

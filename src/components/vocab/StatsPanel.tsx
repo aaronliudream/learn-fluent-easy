@@ -91,6 +91,21 @@ export default function StatsPanel({
   const isEmpty = mastered === 0 && learning === 0;
   const pick = (v: StatsView) => { setView(v); writeStatsView(v); };
 
+  /* 浅段用**向白混色**得到的真浅色,不用 opacity。
+   * ⚠️ 由来:第一版写的是 strokeOpacity={0.3}。身份色 #0C447C 是深海军蓝,
+   *    掉到 30% 之后是 rgb(178,193,209) —— **色相基本没了,就是个浅灰蓝**,
+   *    和 #EFF1F5 的轨道放一起,肉眼(和截图)读出来就是"全灰"。
+   *    环画了、数据也对,但用户看到的是没生效。
+   *    混色保住色相:同样的浅,但一眼能看出是蓝的。 */
+  const tint = (hex: string, toWhite: number) => {
+    const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
+    if (!m) return hex;
+    const n = parseInt(m[1], 16);
+    const mix = (c: number) => Math.round(c + (255 - c) * toWhite);
+    return `rgb(${mix((n >> 16) & 255)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
+  };
+  const lightColor = tint(color, 0.62);
+
   const R = 54, C = 2 * Math.PI * R;
   /* 空态不画纯灰圈:给一段浅身份色引导弧(12% 周长),
    * 让空环看起来是"还没走到"而不是"坏了"。 */
@@ -128,7 +143,7 @@ export default function StatsPanel({
               <>
                 {/* 浅段 = 已掌握 + 学习中(先画,被深段盖住前半) */}
                 <circle
-                  cx="64" cy="64" r={R} fill="none" stroke={color} strokeOpacity={0.3} strokeWidth="11"
+                  cx="64" cy="64" r={R} fill="none" stroke={lightColor} strokeWidth="11"
                   strokeLinecap="round" transform="rotate(-90 64 64)"
                   style={{
                     strokeDasharray: C,

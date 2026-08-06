@@ -46,7 +46,10 @@ export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
     const keys = axisKeys(range, today, () => {
       let earliest = today.slice(0, 7);
       for (const r of rows) {
-        if (r.last_correct_date) { const m = r.last_correct_date.slice(0, 7); if (m < earliest) earliest = m; }
+        // 轴的起点也要看 first_learned_date,否则新学的那几天会被轴排除在外
+        for (const d of [r.last_correct_date, r.first_learned_date]) {
+          if (d) { const m = d.slice(0, 7); if (m < earliest) earliest = m; }
+        }
       }
       return earliest;
     });
@@ -54,10 +57,21 @@ export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
     const map = new Map<string, { added: number; reviewed: number; mastered: number }>();
     for (const k of keys) map.set(k, { added: 0, reviewed: 0, mastered: 0 });
 
-    // 只有「掌握」有真实数据源:已掌握且有 last_correct_date 的词,记在那一天
+    /* 两条真实数据源:
+     *   新学 ← first_learned_date(第一次答对那天)
+     *   掌握 ← last_correct_date(达成掌握那天)
+     * ⚠️ 原来只填「掌握」,而掌握判定要 4 个不同日期 —— 新用户前四天
+     *    必然全 0,图整个空掉、还触发"还没有学习记录"的空态文案。
+     *    实测:64 个词跨两天作答,图仍全空。**不是没数据,是没画。**
+     * 「复习」暂时无源,等 PR-6 的 vocab_study_days 落地后接上,
+     *    到时候以 study_days 为准,不在这里另起一套(避免双写)。 */
     const weekStart = mondayOf(today);
     let wk = 0;
     for (const r of rows) {
+      if (r.first_learned_date) {
+        const ka = bucketOf(r.first_learned_date, g);
+        if (set.has(ka)) map.get(ka)!.added += 1;
+      }
       if (!isMasteredRow(r) || !r.last_correct_date) continue;
       const k = bucketOf(r.last_correct_date, g);
       if (set.has(k)) map.get(k)!.mastered += 1;
@@ -67,7 +81,7 @@ export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
   }, [rows, range, g, today]);
 
   const series: GrowthSeries[] = [
-    { key: "added", label: "新增", color: BLUE },
+    { key: "added", label: "新学", color: BLUE },
     { key: "reviewed", label: "复习", color: ORANGE },
     { key: "mastered", label: "掌握", color: GREEN },
   ];

@@ -281,6 +281,14 @@ function BankCard({ bank }: { bank: BankRow }) {
   /* 进度条同样要两段:深=已掌握,浅=学习中。
    * ⚠️ 只绑 mastered 的话,新用户前四天(掌握判定要 4 个不同日期)
    *    看到的永远是 0/4470 的空条 —— 努力必须看得见。 */
+  /* 同理:浅段用混色不用 opacity —— 深蓝掉 30% 就没色相了(见 StatsPanel 注释)。 */
+  const lightBar = (() => {
+    const m = /^#?([0-9a-f]{6})$/i.exec(color.trim());
+    if (!m) return color;
+    const n = parseInt(m[1], 16);
+    const mix = (c: number) => Math.round(c + (255 - c) * 0.62);
+    return `rgb(${mix((n >> 16) & 255)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
+  })();
   const pctReached = total > 0
     ? Math.min(100, Math.round(((bank.mastered + bank.learning) / total) * 100))
     : 0;
@@ -305,7 +313,7 @@ function BankCard({ bank }: { bank: BankRow }) {
             /* ⚠️ 最小可见宽度 3px,与成长图同口径。
                百分比宽度让"刚起步"永远看不见:64/4470 = 1%,在 6px 高的条上
                等于不存在 —— 而"让努力看得见"最需要的恰恰是起步阶段。 */
-            style={{ width: pctReached > 0 ? `max(3px, ${pctReached}%)` : 0, background: color, opacity: 0.3 }} />
+            style={{ width: pctReached > 0 ? `max(3px, ${pctReached}%)` : 0, background: lightBar }} />
           {/* 深段:已掌握(盖在浅段上) */}
           <div className="absolute inset-y-0 left-0 rounded-full"
             style={{ width: pct > 0 ? `max(3px, ${pct}%)` : 0, background: color }} />

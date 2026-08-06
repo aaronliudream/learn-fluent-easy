@@ -375,6 +375,14 @@ export function defZhShapeProblem(defZh) {
   const s = String(defZh || '').trim();
   if (!s) return 'def_zh 为空';
   if (/[。.!?！？]/.test(s)) return 'def_zh 写成了句子(含句号)';
+  /* ⚠️ 逗号/顿号当分隔符是**绕过体裁闸的后门**(2026-08-05 Aaron 查 monochrome 时暴露)。
+   *    「单色，单色图像」在闸门眼里是**一个** 7 字义项,于是:
+   *      ① ≤2 义项那条约束形同虚设(想塞几个塞几个)
+   *      ② 双义统计把它算成单义
+   *      ③ 前端 optionText 只按 '；' 切,选项里会整个显示「推，挤」
+   *    实测全池 43 条(1.0%),而且多数本身就是同义堆砌(推/挤、拖/拉、抛弃/放弃)。
+   *    分隔符只能是全角分号 —— 这是规格,闸门必须照着卡。 */
+  if (/[，,、]/.test(s)) return `def_zh 用了逗号/顿号当分隔符:「${s}」(分隔符只能是「${SPEC.defZh.sep}」)`;
   const parts = s.split(SPEC.defZh.sep);
   if (parts.length > SPEC.defZh.maxSenses) return `def_zh 有 ${parts.length} 个义项,最多 ${SPEC.defZh.maxSenses} 个`;
   /* ⚠️ 2026-08-05 收紧 12 → 8。prompt 里定的规格一直是"每义项 2-8 个汉字",

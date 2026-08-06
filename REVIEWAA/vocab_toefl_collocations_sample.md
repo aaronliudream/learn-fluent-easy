@@ -1,6 +1,6 @@
 # F 段 高频搭配 · 送审件
 
-**4415 词 / 22071 条**,每词 5 条,与例句里已有的 3 条**互补不重复**。
+**4415 词 / 22070 条**,每词 5 条,与例句里已有的 3 条**互补不重复**。
 机器闸门 f1-f7 + f9(派生形占比)全量复检 **0 不合格**。
 
 ## ⚠️ 句式单一的 3270 词(74.1%)—— 统计量,不是缺陷
@@ -30,6 +30,39 @@
 · confront:confront the truth / confront authority / confront problems / confront someone / confront a crisis
 · constantly:constantly changing / constantly monitoring / constantly striving / constantly evolving / constantly challenging
 · literally:literally speaking / literally nothing / literally a dream come true / literally in shock / literally on fire
+
+## ⚠️ 近重复的 113 词 / 428 对(2.6%)—— 统计量,不是缺陷
+
+去掉冠词/介词归一后两条搭配相等或互为子串。**同样不一定是问题**:
+`defense strategy` vs `in defense of`、`chip in` vs `chip away at` 是**不同用法**,
+只是归一后一方包含另一方;而 `heritage site` vs `cultural heritage site` 才是真重复。
+机器分不清,列出来给你看。
+
+· defense:「defense strategy」~「in defense of」、「defense mechanism」~「in defense of」、「defense budget」~「in defense of」、「defense attorney」~「in defense of」
+· opposition:「strong opposition」~「opposition to」、「opposition to」~「opposition leader」、「opposition to」~「bipartisan opposition」、「opposition to」~「fierce opposition」
+· chip:「chip away at」~「chip in」、「potato chip」~「chip in」、「chip in」~「chip off the old block」、「chip in」~「chip on your shoulder」
+· conviction:「strong conviction」~「conviction for」、「deep conviction」~「conviction for」、「conviction rate」~「conviction for」、「conviction for」~「moral conviction」
+· heritage:「heritage site」~「cultural heritage site」
+· odds:「odds on」~「odds in favor」、「odds on」~「odds of winning」、「odds on」~「even odds」、「odds on」~「high odds」
+· essence:「the essence of beauty」~「in essence」、「capture the essence」~「in essence」、「in essence」~「the essence of success」、「in essence」~「distill the essence」
+· counsel:「counsel clients」~「counsel on」、「counsel on」~「counseling services」、「counsel on」~「counseling session」、「counsel on」~「counsel a team」
+· rumor:「rumor mill」~「rumor of」、「hear a rumor」~「rumor of」、「start a rumor」~「rumor of」、「rumor about」~「rumor of」
+· convinced:「convinced of」~「convinced that」、「convinced of」~「be convinced」、「convinced of」~「convinced audience」、「convinced of」~「convinced leader」
+· metaphor:「metaphor for」~「metaphor in literature」、「metaphor for」~「metaphor of life」、「metaphor for」~「metaphor and simile」、「metaphor for」~「metaphor used」
+· haul:「haul ass」~「haul in」、「haul off」~「haul in」、「long haul」~「haul in」、「haul in」~「haul up」
+· speculation:「speculation about」~「speculation on」、「speculation on」~「speculation regarding」、「speculation on」~「speculation surrounding」、「speculation on」~「speculation over」
+· rim:「rim of a glass」~「on the rim」、「on the rim」~「rim around」、「on the rim」~「rim of a mirror」、「on the rim」~「rimmed with」
+· transit:「transit system」~「in transit」、「transit route」~「in transit」、「transit point」~「in transit」、「transit visa」~「in transit」
+· stereotype:「negative stereotypes」~「stereotype of」、「cultural stereotypes」~「stereotype of」、「stereotype of」~「break the stereotype」、「stereotype of」~「perpetuate a stereotype」
+· concession:「concession agreement」~「concession to」、「concession speech」~「concession to」、「concession to」~「concessionary terms」、「concession to」~「concession deal」
+· clutch:「clutch situation」~「in the clutch」、「in the clutch」~「clutch control」、「in the clutch」~「clutch pedal」、「in the clutch」~「clutch hitter」
+· hostility:「racial hostility」~「hostility to」、「hostility between」~「hostility to」、「hostility to」~「hostility toward」、「hostility to」~「hostility and aggression」
+· exile:「exile community」~「in exile」、「in exile」~「exile government」、「in exile」~「exile status」、「in exile」~「return from exile」
+· commentator:「broadcast commentator」~「commentator on」、「commentator on」~「color commentator」、「commentator on」~「commentator role」、「commentator on」~「commentator panel」
+· precedent:「precedent case」~「precedent for」、「precedent for」~「binding precedent」、「precedent for」~「precedent decision」、「precedent for」~「precedent value」
+· monopoly:「monopoly on」~「monopoly rights」、「monopoly on」~「monopoly pricing」、「monopoly on」~「monopoly control」、「monopoly on」~「monopoly regulations」
+· stride:「make strides」~「in stride」、「take a stride」~「in stride」、「long strides」~「in stride」、「stride past」~「in stride」
+· nickname:「unique nickname」~「nickname for」、「nickname for」~「give a nickname」、「nickname for」~「nickname as」、「nickname for」~「nickname derived from」
 
 ## 抽样 20 词
 
@@ -73,7 +106,6 @@
 | 新搭配 | 中译 |
 | --- | --- |
 | maternal care | 母亲的关怀 |
-| maternal leave | 产假 |
 | maternal bond | 母子情感 |
 | maternal lineage | 母系血统 |
 | maternal figures | 母亲形象 |

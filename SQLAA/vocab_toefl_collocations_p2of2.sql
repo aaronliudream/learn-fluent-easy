@@ -1,5 +1,5 @@
 -- F 段 高频搭配 · 第 2/2 片(本片 2207 词)
--- 全量 4415 词 / 22071 条。单文件 1285 KB 超编辑器上限,故切片。
+-- 全量 4415 词 / 22070 条。单文件 1285 KB 超编辑器上限,故切片。
 -- ⚠️ **按顺序跑 p1 → p2**。一个词的 5 条搭配都在同一片里。
 -- 与 vocab_examples 里那 3 条搭配互补不重复(f3 闸门保证)。
 -- 幂等:ON CONFLICT (word_id, collocation) 更新。⚠️ 由 Aaron 执行。
@@ -11050,8 +11050,8 @@ ON CONFLICT (word_id, collocation) DO UPDATE
 SELECT 'p2/2 AFTER' AS stage, count(*) AS collocations FROM vocab_collocations;
 
 -- ── 最后一片:总量 count-validate,四行都必须是 t,否则 ROLLBACK ──
-SELECT '搭配总数 = 22071' AS expect,
-       (SELECT count(*) FROM vocab_collocations) = 22071 AS ok
+SELECT '搭配总数 = 22070' AS expect,
+       (SELECT count(*) FROM vocab_collocations) = 22070 AS ok
 UNION ALL
 SELECT '覆盖 4415 个词',
        (SELECT count(DISTINCT word_id) FROM vocab_collocations) = 4415

@@ -231,7 +231,55 @@ async function main() {
 
 function writeSqlLegacy() { /* 单文件版已被切片取代,保留签名避免误用 */ }
 
+/**
+ * 同词内近重复搭配(roam 型)—— **统计量,不是闸门**。
+ *
+ * 由来:Aaron 审 F 段送审件时点名。判据:去掉冠词/介词归一后,
+ * 两条搭配相等或互为子串。
+ * ⚠️ 不做成闸门的理由和 f8 一样 —— 实测 113 词命中里,
+ *    `defense strategy` vs `in defense of`、`chip in` vs `chip away at`
+ *    是**不同的用法**,只是归一后一方包含另一方;
+ *    而 `heritage site` vs `cultural heritage site` 才是真重复。
+ *    机器分不清,所以列出来给人看。
+ */
+const normColl = s => String(s).toLowerCase()
+  .replace(/\b(a|an|the|to|of|in|on|for)\b/g, ' ').replace(/\s+/g, ' ').trim();
+export function nearDupPairs(list) {
+  const out = [];
+  for (let i = 0; i < list.length; i++) {
+    for (let j = i + 1; j < list.length; j++) {
+      const a = normColl(list[i].collocation), b = normColl(list[j].collocation);
+      if (a === b || a.includes(b) || b.includes(a)) out.push([list[i].collocation, list[j].collocation]);
+    }
+  }
+  return out;
+}
+
 function emit(words, cache, existingOf) {
+  /* 人工修正,优先级高于模型产出。
+   * ⚠️ 只在 emit 阶段替换、**不写进生成缓存** —— 写进缓存会被下次闸门重验淘汰。 */
+  const manualPath = path.join(DATA, 'collocations-manual.json');
+  if (existsSync(manualPath)) {
+    const manual = JSON.parse(readFileSync(manualPath, 'utf8'));
+    let done = 0;
+    for (const r of manual.remove ?? []) {
+      const list = cache[r.headword];
+      if (!list) continue;
+      const idx = list.findIndex(c => c.collocation.toLowerCase() === r.collocation.toLowerCase());
+      if (idx < 0) { process.stdout.write(`  ⚠️ ${r.headword} 里找不到「${r.collocation}」,可能已被重生成,跳过\n`); continue; }
+      list.splice(idx, 1); done++;
+    }
+    for (const r of manual.replace ?? []) {
+      const list = cache[r.headword];
+      if (!list) { process.stdout.write(`  ⚠️ 人工修正的 "${r.headword}" 不在缓存,跳过\n`); continue; }
+      const idx = list.findIndex(c => c.collocation.toLowerCase() === r.from.toLowerCase());
+      if (idx < 0) { process.stdout.write(`  ⚠️ ${r.headword} 里找不到「${r.from}」,可能已被重生成,跳过\n`); continue; }
+      list[idx] = { collocation: r.to, translation_zh: r.translation_zh ?? list[idx].translation_zh };
+      done++;
+    }
+    if (done) process.stdout.write(`· 人工修正 ${done}/${manual.replace.length} 条\n`);
+  }
+
   const rows = words.filter(w => w.headword in cache);
   // 出件前全量复检 —— 生成期过闸 ≠ 现在过闸
   const bad = rows.filter(w => gateCollocations(w, cache[w.headword], existingOf(w)).length);
@@ -343,6 +391,8 @@ COMMIT;
   const step = Math.max(1, Math.floor(rows.length / 20));
   const sample = rows.filter((_, i) => i % step === 0).slice(0, 20);
   const mono = rows.filter(w => monotonous(w, cache[w.headword]));
+  const dupWords = rows.filter(w => nearDupPairs(cache[w.headword]).length);
+  const dupPairs = dupWords.reduce((n, w) => n + nearDupPairs(cache[w.headword]).length, 0);
   writeReview(`vocab_${BANK}_collocations_sample.md`, `# F 段 高频搭配 · 送审件
 
 **${rows.length} 词 / ${total} 条**,每词 ${PER_WORD} 条,与例句里已有的 3 条**互补不重复**。
@@ -356,6 +406,15 @@ ${PER_WORD} 条搭配里目标词位置全相同。**这不一定是问题**:
 所以列出来给你看,不拦生成。
 
 ${mono.slice(0, 20).map(w => `· ${w.headword}:${cache[w.headword].map(c => c.collocation).join(' / ')}`).join('\n')}
+
+## ⚠️ 近重复的 ${dupWords.length} 词 / ${dupPairs} 对(${(dupWords.length / rows.length * 100).toFixed(1)}%)—— 统计量,不是缺陷
+
+去掉冠词/介词归一后两条搭配相等或互为子串。**同样不一定是问题**:
+\`defense strategy\` vs \`in defense of\`、\`chip in\` vs \`chip away at\` 是**不同用法**,
+只是归一后一方包含另一方;而 \`heritage site\` vs \`cultural heritage site\` 才是真重复。
+机器分不清,列出来给你看。
+
+${dupWords.slice(0, 25).map(w => `· ${w.headword}:${nearDupPairs(cache[w.headword]).map(p => `「${p[0]}」~「${p[1]}」`).join('、')}`).join('\n')}
 
 ## 抽样 ${sample.length} 词
 

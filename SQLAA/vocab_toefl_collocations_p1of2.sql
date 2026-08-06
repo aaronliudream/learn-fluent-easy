@@ -1,5 +1,5 @@
 -- F 段 高频搭配 · 第 1/2 片(本片 2208 词)
--- 全量 4415 词 / 22071 条。单文件 1285 KB 超编辑器上限,故切片。
+-- 全量 4415 词 / 22070 条。单文件 1285 KB 超编辑器上限,故切片。
 -- ⚠️ **按顺序跑 p1 → p2**。一个词的 5 条搭配都在同一片里。
 -- 与 vocab_examples 里那 3 条搭配互补不重复(f3 闸门保证)。
 -- 幂等:ON CONFLICT (word_id, collocation) 更新。⚠️ 由 Aaron 执行。
@@ -4412,10 +4412,9 @@ SELECT w.id, v.collocation, v.translation_zh, v.freq_rank
   ('interpersonal', 'interpersonal interactions', '人际互动', 4),
   ('interpersonal', 'interpersonal effectiveness', '人际效能', 5),
   ('maternal', 'maternal care', '母亲的关怀', 1),
-  ('maternal', 'maternal leave', '产假', 2),
-  ('maternal', 'maternal bond', '母子情感', 3),
-  ('maternal', 'maternal lineage', '母系血统', 4),
-  ('maternal', 'maternal figures', '母亲形象', 5),
+  ('maternal', 'maternal bond', '母子情感', 2),
+  ('maternal', 'maternal lineage', '母系血统', 3),
+  ('maternal', 'maternal figures', '母亲形象', 4),
   ('blunt', 'blunt force', '钝器伤害', 1),
   ('blunt', 'blunt truth', '直言不讳的真相', 2),
   ('blunt', 'blunt edges', '钝边', 3),

@@ -1,0 +1,7057 @@
+{
+  "toefl:服装:n.": {
+    "title_zh": "服装的类型",
+    "members": [
+      {
+        "headword": "costume",
+        "feel_zh": "特定场合服装",
+        "contrast_hint": "多用于化妆舞会"
+      },
+      {
+        "headword": "outfit",
+        "feel_zh": "成套服装",
+        "contrast_hint": "通常指日常穿搭"
+      },
+      {
+        "headword": "apparel",
+        "feel_zh": "正式服装",
+        "contrast_hint": "多用于商业和广告"
+      },
+      {
+        "headword": "attire",
+        "feel_zh": "正式场合服装",
+        "contrast_hint": "多用于正式场合"
+      },
+      {
+        "headword": "garb",
+        "feel_zh": "特殊风格服装",
+        "contrast_hint": "常指职业或民族服装"
+      }
+    ]
+  },
+  "toefl:华丽的:adj.": {
+    "title_zh": "华丽的程度",
+    "members": [
+      {
+        "headword": "gorgeous",
+        "feel_zh": "极具吸引力",
+        "contrast_hint": "外表极美，令人惊叹"
+      },
+      {
+        "headword": "flamboyant",
+        "feel_zh": "色彩艳丽",
+        "contrast_hint": "风格夸张，色彩丰富"
+      },
+      {
+        "headword": "sumptuous",
+        "feel_zh": "奢华高贵",
+        "contrast_hint": "品质豪华，常用于描述物品"
+      },
+      {
+        "headword": "flashy",
+        "feel_zh": "炫目显眼",
+        "contrast_hint": "过于耀眼，常带贬义"
+      },
+      {
+        "headword": "florid",
+        "feel_zh": "过度修饰",
+        "contrast_hint": "风格复杂，常用于语言或文体"
+      }
+    ]
+  },
+  "toefl:边缘:n.": {
+    "title_zh": "边缘的种类",
+    "members": [
+      {
+        "headword": "rim",
+        "feel_zh": "物体边缘",
+        "contrast_hint": "常指圆形物体的边缘"
+      },
+      {
+        "headword": "brink",
+        "feel_zh": "悬崖边缘",
+        "contrast_hint": "多用于危险或重大时刻"
+      },
+      {
+        "headword": "periphery",
+        "feel_zh": "外围边界",
+        "contrast_hint": "强调外围或周边区域"
+      },
+      {
+        "headword": "hem",
+        "feel_zh": "衣物边缘",
+        "contrast_hint": "特指衣物或织物的边缘"
+      },
+      {
+        "headword": "fringe",
+        "feel_zh": "非主流边缘",
+        "contrast_hint": "常用于社会或文化的边缘"
+      }
+    ]
+  },
+  "toefl:显著地:adv.": {
+    "title_zh": "显著的程度",
+    "members": [
+      {
+        "headword": "dramatically",
+        "feel_zh": "变化极大",
+        "contrast_hint": "用于描述剧烈变化"
+      },
+      {
+        "headword": "remarkably",
+        "feel_zh": "令人惊讶",
+        "contrast_hint": "用于描述异常现象"
+      },
+      {
+        "headword": "notably",
+        "feel_zh": "值得注意",
+        "contrast_hint": "用于强调重要特征"
+      },
+      {
+        "headword": "markedly",
+        "feel_zh": "明显易见",
+        "contrast_hint": "用于对比中突出"
+      },
+      {
+        "headword": "strikingly",
+        "feel_zh": "引人注目",
+        "contrast_hint": "用于视觉或感官冲击"
+      }
+    ]
+  },
+  "toefl:倾向:n.": {
+    "title_zh": "倾向的类型",
+    "members": [
+      {
+        "headword": "inclination",
+        "feel_zh": "较为中性",
+        "contrast_hint": "泛指任何倾向"
+      },
+      {
+        "headword": "affinity",
+        "feel_zh": "带有亲近感",
+        "contrast_hint": "多指自然吸引"
+      },
+      {
+        "headword": "penchant",
+        "feel_zh": "偏好强烈",
+        "contrast_hint": "常指个人爱好"
+      },
+      {
+        "headword": "propensity",
+        "feel_zh": "行为习惯",
+        "contrast_hint": "多指习性或习惯"
+      },
+      {
+        "headword": "proclivity",
+        "feel_zh": "带有贬义",
+        "contrast_hint": "常指不良倾向"
+      }
+    ]
+  },
+  "toefl:放弃:v.": {
+    "title_zh": "放弃的方式",
+    "members": [
+      {
+        "headword": "relinquish",
+        "feel_zh": "自愿放弃",
+        "contrast_hint": "多指主动放弃权利"
+      },
+      {
+        "headword": "waive",
+        "feel_zh": "正式放弃",
+        "contrast_hint": "多用于法律和权利"
+      },
+      {
+        "headword": "renounce",
+        "feel_zh": "公开声明放弃",
+        "contrast_hint": "常用于正式声明"
+      },
+      {
+        "headword": "forsake",
+        "feel_zh": "抛弃不顾",
+        "contrast_hint": "多指情感或责任"
+      },
+      {
+        "headword": "abdicate",
+        "feel_zh": "退位让权",
+        "contrast_hint": "多指放弃权力或职位"
+      }
+    ]
+  },
+  "toefl:脆弱的:adj.": {
+    "title_zh": "脆弱的程度",
+    "members": [
+      {
+        "headword": "vulnerable",
+        "feel_zh": "易受攻击",
+        "contrast_hint": "常指心理或情感上的脆弱"
+      },
+      {
+        "headword": "frail",
+        "feel_zh": "体质虚弱",
+        "contrast_hint": "多用于形容身体状况"
+      },
+      {
+        "headword": "tenuous",
+        "feel_zh": "基础不牢",
+        "contrast_hint": "强调缺乏牢固的基础或联系"
+      },
+      {
+        "headword": "flimsy",
+        "feel_zh": "结构不稳",
+        "contrast_hint": "多指物理上的不牢固"
+      }
+    ]
+  },
+  "toefl:过时的:adj.": {
+    "title_zh": "过时的状态",
+    "members": [
+      {
+        "headword": "obsolete",
+        "feel_zh": "完全废弃",
+        "contrast_hint": "不再使用或无效"
+      },
+      {
+        "headword": "dated",
+        "feel_zh": "明显陈旧",
+        "contrast_hint": "风格或外观上过时"
+      },
+      {
+        "headword": "outdated",
+        "feel_zh": "不再相关",
+        "contrast_hint": "不符合当前需求"
+      },
+      {
+        "headword": "antiquated",
+        "feel_zh": "古老过时",
+        "contrast_hint": "功能或风格上过时"
+      },
+      {
+        "headword": "outmoded",
+        "feel_zh": "不再流行",
+        "contrast_hint": "不再受欢迎或相关"
+      }
+    ]
+  },
+  "toefl:热情的:adj.": {
+    "title_zh": "热情的表达",
+    "members": [
+      {
+        "headword": "passionate",
+        "feel_zh": "情感浓烈",
+        "contrast_hint": "常用于爱情或艺术"
+      },
+      {
+        "headword": "ardent",
+        "feel_zh": "热情如火",
+        "contrast_hint": "多用于追求或支持"
+      },
+      {
+        "headword": "impassioned",
+        "feel_zh": "激动澎湃",
+        "contrast_hint": "常见于演讲或声明"
+      },
+      {
+        "headword": "fervent",
+        "feel_zh": "强烈执着",
+        "contrast_hint": "多用于信仰或愿望"
+      }
+    ]
+  },
+  "toefl:障碍:n.": {
+    "title_zh": "障碍的类型",
+    "members": [
+      {
+        "headword": "hurdle",
+        "feel_zh": "需要跨越",
+        "contrast_hint": "常指需努力克服的障碍"
+      },
+      {
+        "headword": "obstruction",
+        "feel_zh": "阻碍进程",
+        "contrast_hint": "多指人为或物理阻挡"
+      },
+      {
+        "headword": "snag",
+        "feel_zh": "意外问题",
+        "contrast_hint": "通常指小而意外的障碍"
+      },
+      {
+        "headword": "impediment",
+        "feel_zh": "妨碍行动",
+        "contrast_hint": "多用于正式场合的妨碍"
+      }
+    ]
+  },
+  "toefl:迷住:v.": {
+    "title_zh": "迷住的方式",
+    "members": [
+      {
+        "headword": "mesmerize",
+        "feel_zh": "有催眠效果",
+        "contrast_hint": "常用于形容被完全吸引"
+      },
+      {
+        "headword": "captivate",
+        "feel_zh": "吸引力强",
+        "contrast_hint": "常用于形容被深深吸引"
+      },
+      {
+        "headword": "enthrall",
+        "feel_zh": "完全占据心神",
+        "contrast_hint": "通常指无法自拔的吸引"
+      },
+      {
+        "headword": "beguile",
+        "feel_zh": "带有诱惑性",
+        "contrast_hint": "常含有欺骗或误导之意"
+      }
+    ]
+  },
+  "toefl:后代:n.": {
+    "title_zh": "后代的称谓",
+    "members": [
+      {
+        "headword": "descendant",
+        "feel_zh": "血缘关系强调",
+        "contrast_hint": "强调与祖先的直接血缘关系"
+      },
+      {
+        "headword": "offspring",
+        "feel_zh": "生物学用语感",
+        "contrast_hint": "常用于生物学或动物学语境"
+      },
+      {
+        "headword": "posterity",
+        "feel_zh": "未来世代感",
+        "contrast_hint": "多用于指代未来的所有后代"
+      },
+      {
+        "headword": "progeny",
+        "feel_zh": "正式且学术",
+        "contrast_hint": "多用于正式或学术场合"
+      }
+    ]
+  },
+  "toefl:忠诚:n.": {
+    "title_zh": "忠诚的表达",
+    "members": [
+      {
+        "headword": "allegiance",
+        "feel_zh": "正式且庄重",
+        "contrast_hint": "多用于国家或组织"
+      },
+      {
+        "headword": "fidelity",
+        "feel_zh": "情感深厚",
+        "contrast_hint": "常用于个人关系"
+      },
+      {
+        "headword": "faithfulness",
+        "feel_zh": "可靠且持久",
+        "contrast_hint": "强调长久的忠诚"
+      },
+      {
+        "headword": "fealty",
+        "feel_zh": "古典且严肃",
+        "contrast_hint": "多见于历史或文学"
+      }
+    ]
+  },
+  "toefl:嘲笑:n.": {
+    "title_zh": "嘲笑的方式",
+    "members": [
+      {
+        "headword": "mock",
+        "feel_zh": "语气较轻",
+        "contrast_hint": "多用于轻松场合"
+      },
+      {
+        "headword": "ridicule",
+        "feel_zh": "带讽刺意味",
+        "contrast_hint": "常用于公开场合"
+      },
+      {
+        "headword": "scoff",
+        "feel_zh": "轻蔑不屑",
+        "contrast_hint": "多指嗤之以鼻"
+      },
+      {
+        "headword": "jeer",
+        "feel_zh": "起哄式嘲弄",
+        "contrast_hint": "多为人群发出"
+      }
+    ]
+  },
+  "toefl:渗透:v.": {
+    "title_zh": "渗透的方式",
+    "members": [
+      {
+        "headword": "seep",
+        "feel_zh": "缓慢自然",
+        "contrast_hint": "多指液体慢慢渗出"
+      },
+      {
+        "headword": "permeate",
+        "feel_zh": "全面扩散",
+        "contrast_hint": "强调渗透到各个部分"
+      },
+      {
+        "headword": "infiltrate",
+        "feel_zh": "秘密进入",
+        "contrast_hint": "常用于隐秘或间谍活动"
+      },
+      {
+        "headword": "percolate",
+        "feel_zh": "逐渐过滤",
+        "contrast_hint": "多指通过过滤过程"
+      }
+    ]
+  },
+  "toefl:发光的:adj.": {
+    "title_zh": "发光的程度",
+    "members": [
+      {
+        "headword": "shining",
+        "feel_zh": "光亮程度高",
+        "contrast_hint": "多指反射光,如镜面"
+      },
+      {
+        "headword": "glowing",
+        "feel_zh": "温暖柔和",
+        "contrast_hint": "常用于形容温暖的光"
+      },
+      {
+        "headword": "luminous",
+        "feel_zh": "自发光",
+        "contrast_hint": "强调自身发光,如灯泡"
+      },
+      {
+        "headword": "aglow",
+        "feel_zh": "氛围感强",
+        "contrast_hint": "多用于形容环境氛围"
+      }
+    ]
+  },
+  "toefl:狂热:n.": {
+    "title_zh": "狂热的类型",
+    "members": [
+      {
+        "headword": "frenzy",
+        "feel_zh": "短暂且剧烈",
+        "contrast_hint": "常指情绪失控的状态"
+      },
+      {
+        "headword": "mania",
+        "feel_zh": "持续且偏执",
+        "contrast_hint": "多指对事物的极端迷恋"
+      },
+      {
+        "headword": "craze",
+        "feel_zh": "时尚且流行",
+        "contrast_hint": "多指短期内的流行趋势"
+      },
+      {
+        "headword": "fanaticism",
+        "feel_zh": "极端且盲目",
+        "contrast_hint": "常带有负面和危险意味"
+      }
+    ]
+  },
+  "toefl:延长:v.": {
+    "title_zh": "延长的方式",
+    "members": [
+      {
+        "headword": "prolong",
+        "feel_zh": "语气较正式",
+        "contrast_hint": "常用于时间上的延长"
+      },
+      {
+        "headword": "lengthen",
+        "feel_zh": "常用日常",
+        "contrast_hint": "适用于时间或距离"
+      },
+      {
+        "headword": "elongate",
+        "feel_zh": "形状上的拉长",
+        "contrast_hint": "多用于物体形状变化"
+      },
+      {
+        "headword": "protract",
+        "feel_zh": "语气书面",
+        "contrast_hint": "常指时间上的拖延"
+      }
+    ]
+  },
+  "toefl:一致:n.": {
+    "title_zh": "一致的形式",
+    "members": [
+      {
+        "headword": "conformity",
+        "feel_zh": "强调顺从",
+        "contrast_hint": "多指行为符合标准或规则"
+      },
+      {
+        "headword": "unanimity",
+        "feel_zh": "强调全体同意",
+        "contrast_hint": "通常用于群体意见一致"
+      },
+      {
+        "headword": "concurrence",
+        "feel_zh": "强调同时发生",
+        "contrast_hint": "常用于事件同时发生的情况"
+      },
+      {
+        "headword": "congruity",
+        "feel_zh": "强调和谐一致",
+        "contrast_hint": "多用于元素之间的协调"
+      }
+    ]
+  },
+  "toefl:煽动:v.": {
+    "title_zh": "煽动的方式",
+    "members": [
+      {
+        "headword": "incite",
+        "feel_zh": "多指暴力行为",
+        "contrast_hint": "常用于鼓动违法行为"
+      },
+      {
+        "headword": "instigate",
+        "feel_zh": "偏向挑起事件",
+        "contrast_hint": "多用于引发事件或行动"
+      },
+      {
+        "headword": "agitate",
+        "feel_zh": "侧重引起关注",
+        "contrast_hint": "多用于引发公众关注或讨论"
+      },
+      {
+        "headword": "foment",
+        "feel_zh": "书面且正式",
+        "contrast_hint": "常用于煽动不满情绪"
+      }
+    ]
+  },
+  "toefl:顶点:n.": {
+    "title_zh": "顶点的表达",
+    "members": [
+      {
+        "headword": "culmination",
+        "feel_zh": "事件的高潮",
+        "contrast_hint": "常用于描述事件的顶点"
+      },
+      {
+        "headword": "apex",
+        "feel_zh": "几何的最高点",
+        "contrast_hint": "常用于物理或抽象的最高点"
+      },
+      {
+        "headword": "zenith",
+        "feel_zh": "事业的巅峰",
+        "contrast_hint": "常用于职业或发展中的顶点"
+      },
+      {
+        "headword": "acme",
+        "feel_zh": "成就的极致",
+        "contrast_hint": "常用于描述成就的最高点"
+      }
+    ]
+  },
+  "toefl:祖先:n.": {
+    "title_zh": "祖先的称谓",
+    "members": [
+      {
+        "headword": "ancestry",
+        "feel_zh": "强调血统传承",
+        "contrast_hint": "多用于讨论家族历史"
+      },
+      {
+        "headword": "forebear",
+        "feel_zh": "较为古老庄重",
+        "contrast_hint": "常用于历史背景"
+      },
+      {
+        "headword": "progenitor",
+        "feel_zh": "有开创者意味",
+        "contrast_hint": "多指某事物的起源"
+      },
+      {
+        "headword": "forefather",
+        "feel_zh": "强调直接血缘",
+        "contrast_hint": "多用于个人家谱"
+      }
+    ]
+  },
+  "toefl:令人厌恶的:adj.": {
+    "title_zh": "令人厌恶",
+    "members": [
+      {
+        "headword": "repulsive",
+        "feel_zh": "生理厌恶感",
+        "contrast_hint": "常用于形容外观或气味"
+      },
+      {
+        "headword": "distasteful",
+        "feel_zh": "道德不适感",
+        "contrast_hint": "多指不符合道德标准"
+      },
+      {
+        "headword": "loathsome",
+        "feel_zh": "强烈憎恶感",
+        "contrast_hint": "用于极端令人反感的事物"
+      },
+      {
+        "headword": "abhorrent",
+        "feel_zh": "深层道德厌恶",
+        "contrast_hint": "常用于形容违背伦理的行为"
+      }
+    ]
+  },
+  "toefl:贪婪的:adj.": {
+    "title_zh": "贪婪的程度",
+    "members": [
+      {
+        "headword": "rapacious",
+        "feel_zh": "极度贪婪",
+        "contrast_hint": "尤指对财富或食物"
+      },
+      {
+        "headword": "acquisitive",
+        "feel_zh": "欲望强烈",
+        "contrast_hint": "偏重对财富或财产"
+      },
+      {
+        "headword": "avaricious",
+        "feel_zh": "极端贪婪",
+        "contrast_hint": "强调对物质利益"
+      },
+      {
+        "headword": "covetous",
+        "feel_zh": "觊觎他人",
+        "contrast_hint": "常指对他人之物"
+      }
+    ]
+  },
+  "toefl:激励:v.": {
+    "title_zh": "激励的方式",
+    "members": [
+      {
+        "headword": "energize",
+        "feel_zh": "充满活力",
+        "contrast_hint": "多用于激发活力和热情"
+      },
+      {
+        "headword": "galvanize",
+        "feel_zh": "刺激行动",
+        "contrast_hint": "常用于促使立即行动"
+      },
+      {
+        "headword": "actuate",
+        "feel_zh": "启动机制",
+        "contrast_hint": "多用于正式场合的推动"
+      }
+    ]
+  },
+  "toefl:表现:n.": {
+    "title_zh": "表现的方式",
+    "members": [
+      {
+        "headword": "representation",
+        "feel_zh": "最具抽象性",
+        "contrast_hint": "常用于概念或思想的表达"
+      },
+      {
+        "headword": "manifestation",
+        "feel_zh": "最具实质性",
+        "contrast_hint": "通常指具体现象或事件的显现"
+      },
+      {
+        "headword": "rendering",
+        "feel_zh": "艺术感强",
+        "contrast_hint": "多指艺术或技术上的描绘"
+      }
+    ]
+  },
+  "toefl:假设:n.": {
+    "title_zh": "假设的类型",
+    "members": [
+      {
+        "headword": "hypothesis",
+        "feel_zh": "科学语境常用",
+        "contrast_hint": "多用于科学研究中"
+      },
+      {
+        "headword": "postulate",
+        "feel_zh": "逻辑推理基础",
+        "contrast_hint": "强调作为推理前提"
+      },
+      {
+        "headword": "supposition",
+        "feel_zh": "缺乏证据支持",
+        "contrast_hint": "多用于个人猜测"
+      }
+    ]
+  },
+  "toefl:特征:n.": {
+    "title_zh": "特征的类型",
+    "members": [
+      {
+        "headword": "trait",
+        "feel_zh": "中性且广泛",
+        "contrast_hint": "泛指任何特征"
+      },
+      {
+        "headword": "hallmark",
+        "feel_zh": "标志性特征",
+        "contrast_hint": "强调显著且易识别"
+      },
+      {
+        "headword": "idiosyncrasy",
+        "feel_zh": "独特且怪异",
+        "contrast_hint": "指个人独有特征"
+      }
+    ]
+  },
+  "toefl:诽谤:n.": {
+    "title_zh": "诽谤的方式",
+    "members": [
+      {
+        "headword": "libel",
+        "feel_zh": "书面诽谤",
+        "contrast_hint": "多指书面或印刷品中"
+      },
+      {
+        "headword": "slander",
+        "feel_zh": "口头诽谤",
+        "contrast_hint": "多指口头传播的中伤"
+      },
+      {
+        "headword": "aspersion",
+        "feel_zh": "含蓄中伤",
+        "contrast_hint": "多用于隐晦的贬低"
+      },
+      {
+        "headword": "obloquy",
+        "feel_zh": "公开辱骂",
+        "contrast_hint": "多指公开场合的批评"
+      }
+    ]
+  },
+  "toefl:减少:v.": {
+    "title_zh": "减少的方式",
+    "members": [
+      {
+        "headword": "diminish",
+        "feel_zh": "带贬低意味",
+        "contrast_hint": "强调重要性或价值降低"
+      },
+      {
+        "headword": "curtail",
+        "feel_zh": "正式用语",
+        "contrast_hint": "多用于计划或活动的缩减"
+      },
+      {
+        "headword": "dwindle",
+        "feel_zh": "逐渐减少",
+        "contrast_hint": "强调数量或规模的自然减少"
+      }
+    ]
+  },
+  "toefl:撤回:v.": {
+    "title_zh": "撤回的方式",
+    "members": [
+      {
+        "headword": "revoke",
+        "feel_zh": "正式且法律用语",
+        "contrast_hint": "常用于法律或官方决定"
+      },
+      {
+        "headword": "retract",
+        "feel_zh": "语气较中性",
+        "contrast_hint": "多指收回言论或承诺"
+      },
+      {
+        "headword": "recant",
+        "feel_zh": "带有悔意",
+        "contrast_hint": "常用于公开放弃信仰或声明"
+      }
+    ]
+  },
+  "toefl:潜在的:adj.": {
+    "title_zh": "潜在的性质",
+    "members": [
+      {
+        "headword": "underlying",
+        "feel_zh": "基础且隐蔽",
+        "contrast_hint": "强调基础或根本性质"
+      },
+      {
+        "headword": "latent",
+        "feel_zh": "隐藏未显现",
+        "contrast_hint": "强调尚未显现的潜力"
+      },
+      {
+        "headword": "insidious",
+        "feel_zh": "隐伏且有害",
+        "contrast_hint": "强调潜在的危害性"
+      }
+    ]
+  },
+  "toefl:混乱:v.": {
+    "title_zh": "混乱的程度",
+    "members": [
+      {
+        "headword": "disarray",
+        "feel_zh": "正式且轻微",
+        "contrast_hint": "常用于描述外部环境的轻微混乱"
+      },
+      {
+        "headword": "muddle",
+        "feel_zh": "口语且杂乱",
+        "contrast_hint": "多指日常生活中的混乱局面"
+      },
+      {
+        "headword": "addle",
+        "feel_zh": "形容头脑混乱",
+        "contrast_hint": "强调思维不清晰或迷惑"
+      }
+    ]
+  },
+  "toefl:推测:n.": {
+    "title_zh": "推测的方式",
+    "members": [
+      {
+        "headword": "speculation",
+        "feel_zh": "较中性",
+        "contrast_hint": "常用于投资或市场分析"
+      },
+      {
+        "headword": "surmise",
+        "feel_zh": "较主观",
+        "contrast_hint": "多用于个人或非正式场合"
+      },
+      {
+        "headword": "conjecture",
+        "feel_zh": "较学术",
+        "contrast_hint": "常用于学术讨论或理论推导"
+      }
+    ]
+  },
+  "toefl:冒险的:adj.": {
+    "title_zh": "冒险的程度",
+    "members": [
+      {
+        "headword": "risky",
+        "feel_zh": "风险较高",
+        "contrast_hint": "强调可能带来的危险"
+      },
+      {
+        "headword": "adventurous",
+        "feel_zh": "积极尝试新事物",
+        "contrast_hint": "强调对新体验的渴望"
+      },
+      {
+        "headword": "venturesome",
+        "feel_zh": "勇于挑战",
+        "contrast_hint": "强调主动迎接挑战"
+      }
+    ]
+  },
+  "toefl:限制:n.": {
+    "title_zh": "限制的方式",
+    "members": [
+      {
+        "headword": "constraint",
+        "feel_zh": "正式且抽象",
+        "contrast_hint": "多用于规则或条件限制"
+      },
+      {
+        "headword": "curb",
+        "feel_zh": "轻微且具体",
+        "contrast_hint": "常指对行为的控制"
+      },
+      {
+        "headword": "confinement",
+        "feel_zh": "严厉且实体",
+        "contrast_hint": "多指身体或空间的限制"
+      }
+    ]
+  },
+  "toefl:遵守:v.": {
+    "title_zh": "遵守的方式",
+    "members": [
+      {
+        "headword": "comply",
+        "feel_zh": "被动服从",
+        "contrast_hint": "常指被动地遵从命令"
+      },
+      {
+        "headword": "conform",
+        "feel_zh": "一致性强",
+        "contrast_hint": "强调与规则标准一致"
+      },
+      {
+        "headword": "abide",
+        "feel_zh": "长久忍受",
+        "contrast_hint": "多用于遵守长期规则"
+      }
+    ]
+  },
+  "toefl:峡谷:n.": {
+    "title_zh": "峡谷的类型",
+    "members": [
+      {
+        "headword": "canyon",
+        "feel_zh": "最常见",
+        "contrast_hint": "多指美国西部大峡谷"
+      },
+      {
+        "headword": "ravine",
+        "feel_zh": "更狭窄",
+        "contrast_hint": "常用于形容小型峡谷"
+      },
+      {
+        "headword": "gorge",
+        "feel_zh": "更深邃",
+        "contrast_hint": "强调深度和险峻"
+      }
+    ]
+  },
+  "toefl:沉思:v.": {
+    "title_zh": "沉思的方式",
+    "members": [
+      {
+        "headword": "contemplate",
+        "feel_zh": "带有计划性",
+        "contrast_hint": "常用于思考未来或计划"
+      },
+      {
+        "headword": "ponder",
+        "feel_zh": "带有权衡意味",
+        "contrast_hint": "常用于做决定前的深思"
+      },
+      {
+        "headword": "ruminate",
+        "feel_zh": "带有反复性",
+        "contrast_hint": "常用于反复思考过去的事"
+      }
+    ]
+  },
+  "toefl:合并:n.": {
+    "title_zh": "合并的方式",
+    "members": [
+      {
+        "headword": "merger",
+        "feel_zh": "商业术语",
+        "contrast_hint": "多用于企业合并"
+      },
+      {
+        "headword": "incorporation",
+        "feel_zh": "法律术语",
+        "contrast_hint": "强调法律实体的形成"
+      },
+      {
+        "headword": "coalescence",
+        "feel_zh": "科学术语",
+        "contrast_hint": "常用于自然现象的融合"
+      }
+    ]
+  },
+  "toefl:合并:v.": {
+    "title_zh": "合并的方式",
+    "members": [
+      {
+        "headword": "merge",
+        "feel_zh": "常用且中性",
+        "contrast_hint": "多用于商业或技术"
+      },
+      {
+        "headword": "coalesce",
+        "feel_zh": "正式且抽象",
+        "contrast_hint": "多用于思想或群体"
+      },
+      {
+        "headword": "amalgamate",
+        "feel_zh": "正式且复杂",
+        "contrast_hint": "多用于组织或公司"
+      }
+    ]
+  },
+  "toefl:努力:n.": {
+    "title_zh": "努力的方式",
+    "members": [
+      {
+        "headword": "endeavor",
+        "feel_zh": "正式且庄重",
+        "contrast_hint": "常用于书面或正式场合"
+      },
+      {
+        "headword": "exertion",
+        "feel_zh": "强调体力或脑力",
+        "contrast_hint": "多指体力或脑力的消耗"
+      },
+      {
+        "headword": "endeavour",
+        "feel_zh": "英式拼写",
+        "contrast_hint": "与endeavor同义,拼写不同"
+      }
+    ]
+  },
+  "toefl:惊人的:adj.": {
+    "title_zh": "惊人的程度",
+    "members": [
+      {
+        "headword": "stunning",
+        "feel_zh": "视觉冲击强",
+        "contrast_hint": "多用于形容美丽外观"
+      },
+      {
+        "headword": "astonishing",
+        "feel_zh": "意料之外",
+        "contrast_hint": "强调出乎意料的惊讶"
+      },
+      {
+        "headword": "prodigious",
+        "feel_zh": "规模宏大",
+        "contrast_hint": "常用于描述巨大数量或程度"
+      }
+    ]
+  },
+  "toefl:强制的:adj.": {
+    "title_zh": "强制的程度",
+    "members": [
+      {
+        "headword": "mandatory",
+        "feel_zh": "法律规定",
+        "contrast_hint": "法律或规则要求"
+      },
+      {
+        "headword": "obligatory",
+        "feel_zh": "道德责任",
+        "contrast_hint": "道德或社会责任"
+      },
+      {
+        "headword": "forcible",
+        "feel_zh": "武力实施",
+        "contrast_hint": "通过武力或威胁"
+      }
+    ]
+  },
+  "toefl:敌意:n.": {
+    "title_zh": "敌意的程度",
+    "members": [
+      {
+        "headword": "hostility",
+        "feel_zh": "一般敌意",
+        "contrast_hint": "多指一般性的敌对情绪"
+      },
+      {
+        "headword": "animosity",
+        "feel_zh": "强烈敌意",
+        "contrast_hint": "强调强烈和持久的敌意"
+      },
+      {
+        "headword": "enmity",
+        "feel_zh": "深层敌意",
+        "contrast_hint": "通常指深层次的敌对状态"
+      }
+    ]
+  },
+  "toefl:声称:v.": {
+    "title_zh": "声称的方式",
+    "members": [
+      {
+        "headword": "allege",
+        "feel_zh": "多用于法律",
+        "contrast_hint": "多指无证据的指控"
+      },
+      {
+        "headword": "profess",
+        "feel_zh": "公开宣称",
+        "contrast_hint": "多用于公开场合表态"
+      },
+      {
+        "headword": "avouch",
+        "feel_zh": "自信保证",
+        "contrast_hint": "强调有把握的断言"
+      }
+    ]
+  },
+  "toefl:扰乱:v.": {
+    "title_zh": "扰乱的方式",
+    "members": [
+      {
+        "headword": "disorganize",
+        "feel_zh": "偏重组织混乱",
+        "contrast_hint": "常指系统或计划的混乱"
+      },
+      {
+        "headword": "perturb",
+        "feel_zh": "带有心理困扰",
+        "contrast_hint": "多指引发焦虑或不安"
+      },
+      {
+        "headword": "disarrange",
+        "feel_zh": "偏重物理打乱",
+        "contrast_hint": "常用于物品或空间的打乱"
+      }
+    ]
+  },
+  "toefl:杰出的:adj.": {
+    "title_zh": "杰出的程度",
+    "members": [
+      {
+        "headword": "distinguished",
+        "feel_zh": "庄重而正式",
+        "contrast_hint": "强调专业领域的认可"
+      },
+      {
+        "headword": "eminent",
+        "feel_zh": "显赫而尊贵",
+        "contrast_hint": "强调声望和地位"
+      },
+      {
+        "headword": "illustrious",
+        "feel_zh": "光辉而历史悠久",
+        "contrast_hint": "强调过去的成就"
+      }
+    ]
+  },
+  "toefl:渴望:v.": {
+    "title_zh": "渴望的表达",
+    "members": [
+      {
+        "headword": "crave",
+        "feel_zh": "强烈欲望",
+        "contrast_hint": "常用于具体事物，如食物"
+      },
+      {
+        "headword": "aspire",
+        "feel_zh": "追求理想",
+        "contrast_hint": "多用于职业或人生目标"
+      },
+      {
+        "headword": "yearn",
+        "feel_zh": "深切怀念",
+        "contrast_hint": "常带有情感色彩，如思乡"
+      }
+    ]
+  },
+  "toefl:谴责:v.": {
+    "title_zh": "谴责的方式",
+    "members": [
+      {
+        "headword": "denounce",
+        "feel_zh": "公开且正式",
+        "contrast_hint": "常用于政治或法律场合"
+      },
+      {
+        "headword": "deplore",
+        "feel_zh": "带有遗憾情感",
+        "contrast_hint": "常用于个人或道德层面"
+      },
+      {
+        "headword": "decry",
+        "feel_zh": "公开且强烈",
+        "contrast_hint": "多用于社会或文化批评"
+      }
+    ]
+  },
+  "toefl:愤怒:n.": {
+    "title_zh": "愤怒的强度",
+    "members": [
+      {
+        "headword": "outrage",
+        "feel_zh": "带震惊感",
+        "contrast_hint": "常因不公或不义引发"
+      },
+      {
+        "headword": "fury",
+        "feel_zh": "极端暴烈",
+        "contrast_hint": "多指失控的怒火"
+      },
+      {
+        "headword": "wrath",
+        "feel_zh": "复仇意味",
+        "contrast_hint": "常与惩罚或报复相关"
+      }
+    ]
+  },
+  "toefl:令人震惊的:adj.": {
+    "title_zh": "震惊的程度",
+    "members": [
+      {
+        "headword": "shocking",
+        "feel_zh": "令人不安",
+        "contrast_hint": "常指负面事件"
+      },
+      {
+        "headword": "staggering",
+        "feel_zh": "令人瞠目结舌",
+        "contrast_hint": "多指数量或规模"
+      },
+      {
+        "headword": "astounding",
+        "feel_zh": "令人惊叹",
+        "contrast_hint": "常用于积极或中性"
+      }
+    ]
+  },
+  "toefl:痛苦:n.": {
+    "title_zh": "痛苦的程度",
+    "members": [
+      {
+        "headword": "misery",
+        "feel_zh": "极度痛苦",
+        "contrast_hint": "多指长期的痛苦状态"
+      },
+      {
+        "headword": "anguish",
+        "feel_zh": "精神痛苦",
+        "contrast_hint": "多指心理或情感上的剧痛"
+      },
+      {
+        "headword": "affliction",
+        "feel_zh": "折磨痛苦",
+        "contrast_hint": "常指外界引起的痛苦"
+      }
+    ]
+  },
+  "toefl:可疑的:adj.": {
+    "title_zh": "可疑的程度",
+    "members": [
+      {
+        "headword": "questionable",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于学术或正式场合"
+      },
+      {
+        "headword": "dubious",
+        "feel_zh": "带有怀疑",
+        "contrast_hint": "多指个人内心的疑虑"
+      },
+      {
+        "headword": "fishy",
+        "feel_zh": "带贬义",
+        "contrast_hint": "常指不诚实或有诈"
+      }
+    ]
+  },
+  "toefl:骚动:n.": {
+    "title_zh": "骚动的类型",
+    "members": [
+      {
+        "headword": "turmoil",
+        "feel_zh": "混乱无序",
+        "contrast_hint": "强调混乱和无序"
+      },
+      {
+        "headword": "uproar",
+        "feel_zh": "喧闹声大",
+        "contrast_hint": "突出声音大和情绪激动"
+      },
+      {
+        "headword": "tumult",
+        "feel_zh": "人群嘈杂",
+        "contrast_hint": "多指人群引发的嘈杂"
+      }
+    ]
+  },
+  "toefl:残余:n.": {
+    "title_zh": "残余的形式",
+    "members": [
+      {
+        "headword": "remnant",
+        "feel_zh": "多指具体物品",
+        "contrast_hint": "常用于剩余布料等"
+      },
+      {
+        "headword": "residue",
+        "feel_zh": "强调化学或过程",
+        "contrast_hint": "多指化学反应后的残留"
+      },
+      {
+        "headword": "vestige",
+        "feel_zh": "常指历史遗迹",
+        "contrast_hint": "用于表示已消失事物的痕迹"
+      }
+    ]
+  },
+  "toefl:超越:v.": {
+    "title_zh": "超越的方式",
+    "members": [
+      {
+        "headword": "transcend",
+        "feel_zh": "哲学色彩浓厚",
+        "contrast_hint": "多用于抽象概念的超越"
+      },
+      {
+        "headword": "surpass",
+        "feel_zh": "强调比较优势",
+        "contrast_hint": "常用于具体成就或能力"
+      },
+      {
+        "headword": "outgrow",
+        "feel_zh": "成长后的超越",
+        "contrast_hint": "多指因成长而不再适合"
+      }
+    ]
+  },
+  "toefl:著名的:adj.": {
+    "title_zh": "著名的程度",
+    "members": [
+      {
+        "headword": "renowned",
+        "feel_zh": "享有盛誉",
+        "contrast_hint": "强调因成就而闻名"
+      },
+      {
+        "headword": "celebrated",
+        "feel_zh": "备受赞誉",
+        "contrast_hint": "常用于艺术或文化领域"
+      },
+      {
+        "headword": "noted",
+        "feel_zh": "特别知名",
+        "contrast_hint": "多指因某一特质而出名"
+      }
+    ]
+  },
+  "toefl:点燃:v.": {
+    "title_zh": "点燃的方式",
+    "members": [
+      {
+        "headword": "ignite",
+        "feel_zh": "较正式",
+        "contrast_hint": "常用于科学或技术场合"
+      },
+      {
+        "headword": "kindle",
+        "feel_zh": "富有诗意",
+        "contrast_hint": "多用于情感或兴趣的激发"
+      },
+      {
+        "headword": "alight",
+        "feel_zh": "生动形象",
+        "contrast_hint": "常用于描述光亮或火焰"
+      }
+    ]
+  },
+  "toefl:吸引人的:adj.": {
+    "title_zh": "吸引人的程度",
+    "members": [
+      {
+        "headword": "appealing",
+        "feel_zh": "温和吸引",
+        "contrast_hint": "多用于描述事物外观"
+      },
+      {
+        "headword": "inviting",
+        "feel_zh": "诱人靠近",
+        "contrast_hint": "常用于形容环境氛围"
+      },
+      {
+        "headword": "absorbing",
+        "feel_zh": "全神贯注",
+        "contrast_hint": "强调吸引注意力"
+      }
+    ]
+  },
+  "toefl:抑制:v.": {
+    "title_zh": "抑制的方式",
+    "members": [
+      {
+        "headword": "inhibit",
+        "feel_zh": "较正式",
+        "contrast_hint": "多用于科学或心理学"
+      },
+      {
+        "headword": "stifle",
+        "feel_zh": "带压迫感",
+        "contrast_hint": "常指情感或声音"
+      },
+      {
+        "headword": "dampen",
+        "feel_zh": "轻微削弱",
+        "contrast_hint": "常用于情绪或氛围"
+      }
+    ]
+  },
+  "toefl:原始的:adj.": {
+    "title_zh": "原始的状态",
+    "members": [
+      {
+        "headword": "pristine",
+        "feel_zh": "纯净无瑕",
+        "contrast_hint": "强调未受破坏的状态"
+      },
+      {
+        "headword": "primordial",
+        "feel_zh": "远古起源",
+        "contrast_hint": "强调时间上的久远"
+      },
+      {
+        "headword": "primal",
+        "feel_zh": "本能初始",
+        "contrast_hint": "强调最初的本质"
+      }
+    ]
+  },
+  "toefl:无情的:adj.": {
+    "title_zh": "无情的程度",
+    "members": [
+      {
+        "headword": "relentless",
+        "feel_zh": "持续不懈",
+        "contrast_hint": "强调不间断的坚持"
+      },
+      {
+        "headword": "ruthless",
+        "feel_zh": "冷酷无情",
+        "contrast_hint": "强调缺乏同情心"
+      },
+      {
+        "headword": "merciless",
+        "feel_zh": "毫不留情",
+        "contrast_hint": "强调绝对的严苛"
+      }
+    ]
+  },
+  "toefl:可怕的:adj.": {
+    "title_zh": "可怕的程度",
+    "members": [
+      {
+        "headword": "terrifying",
+        "feel_zh": "极度惊恐",
+        "contrast_hint": "强调极端恐惧感"
+      },
+      {
+        "headword": "dreadful",
+        "feel_zh": "令人痛苦",
+        "contrast_hint": "常指糟糕且恐怖的事"
+      },
+      {
+        "headword": "hideous",
+        "feel_zh": "极其丑陋",
+        "contrast_hint": "多指外观或性格丑陋"
+      }
+    ]
+  },
+  "toefl:谨慎的:adj.": {
+    "title_zh": "谨慎的程度",
+    "members": [
+      {
+        "headword": "prudent",
+        "feel_zh": "精明且前瞻",
+        "contrast_hint": "多指理智决策"
+      },
+      {
+        "headword": "discreet",
+        "feel_zh": "低调且周到",
+        "contrast_hint": "强调不引人注意"
+      },
+      {
+        "headword": "circumspect",
+        "feel_zh": "全面且慎重",
+        "contrast_hint": "考虑所有可能性"
+      }
+    ]
+  },
+  "toefl:减轻:v.": {
+    "title_zh": "减轻的程度",
+    "members": [
+      {
+        "headword": "mitigate",
+        "feel_zh": "语气较正式",
+        "contrast_hint": "常用于法律或政策"
+      },
+      {
+        "headword": "alleviate",
+        "feel_zh": "语气较温和",
+        "contrast_hint": "多用于日常生活问题"
+      },
+      {
+        "headword": "assuage",
+        "feel_zh": "带有安抚意味",
+        "contrast_hint": "常用于情感或心理"
+      }
+    ]
+  },
+  "toefl:静止的:adj.": {
+    "title_zh": "静止的状态",
+    "members": [
+      {
+        "headword": "motionless",
+        "feel_zh": "绝对静止",
+        "contrast_hint": "强调完全无动作"
+      },
+      {
+        "headword": "stationary",
+        "feel_zh": "固定不动",
+        "contrast_hint": "常指物体位置不变"
+      },
+      {
+        "headword": "quiescent",
+        "feel_zh": "暂时不活跃",
+        "contrast_hint": "多用于生物或状态"
+      }
+    ]
+  },
+  "toefl:忧虑:n.": {
+    "title_zh": "忧虑的表达",
+    "members": [
+      {
+        "headword": "apprehension",
+        "feel_zh": "预感不安",
+        "contrast_hint": "多指对未来的担忧"
+      },
+      {
+        "headword": "misgiving",
+        "feel_zh": "怀疑忧虑",
+        "contrast_hint": "多指对结果的疑虑"
+      },
+      {
+        "headword": "trepidation",
+        "feel_zh": "恐惧不安",
+        "contrast_hint": "多指对未知的恐惧"
+      }
+    ]
+  },
+  "toefl:避开:v.": {
+    "title_zh": "避开的方式",
+    "members": [
+      {
+        "headword": "evade",
+        "feel_zh": "多指逃避责任",
+        "contrast_hint": "常用于逃避问题或责任"
+      },
+      {
+        "headword": "shun",
+        "feel_zh": "有意回避",
+        "contrast_hint": "常指社交或场合的回避"
+      },
+      {
+        "headword": "eschew",
+        "feel_zh": "刻意避开",
+        "contrast_hint": "多指道德或原则上的避开"
+      }
+    ]
+  },
+  "toefl:相关的:adj.": {
+    "title_zh": "相关的程度",
+    "members": [
+      {
+        "headword": "pertinent",
+        "feel_zh": "最为贴切",
+        "contrast_hint": "强调与特定问题的直接相关"
+      },
+      {
+        "headword": "germane",
+        "feel_zh": "适当且相关",
+        "contrast_hint": "强调与主题的适当联系"
+      },
+      {
+        "headword": "correlated",
+        "feel_zh": "相互关联",
+        "contrast_hint": "强调互相之间的关系"
+      }
+    ]
+  },
+  "toefl:隔离:v.": {
+    "title_zh": "隔离的方式",
+    "members": [
+      {
+        "headword": "insulate",
+        "feel_zh": "技术性较强",
+        "contrast_hint": "多用于物理绝缘"
+      },
+      {
+        "headword": "sequester",
+        "feel_zh": "法律感较强",
+        "contrast_hint": "常指法律或环境隔离"
+      },
+      {
+        "headword": "seclude",
+        "feel_zh": "隐私性较强",
+        "contrast_hint": "强调个人隐私隔离"
+      }
+    ]
+  },
+  "toefl:热情:n.": {
+    "title_zh": "热情的程度",
+    "members": [
+      {
+        "headword": "zest",
+        "feel_zh": "充满活力",
+        "contrast_hint": "用于形容生活中的乐趣"
+      },
+      {
+        "headword": "fervor",
+        "feel_zh": "强烈而深沉",
+        "contrast_hint": "常用于宗教或政治场合"
+      },
+      {
+        "headword": "ardor",
+        "feel_zh": "热烈而专注",
+        "contrast_hint": "多指对某事的热爱与投入"
+      }
+    ]
+  },
+  "toefl:消灭:v.": {
+    "title_zh": "消灭的程度",
+    "members": [
+      {
+        "headword": "obliterate",
+        "feel_zh": "抹去的消灭",
+        "contrast_hint": "常用于抹去痕迹"
+      },
+      {
+        "headword": "annihilate",
+        "feel_zh": "彻底的毁灭",
+        "contrast_hint": "强调完全摧毁"
+      },
+      {
+        "headword": "exterminate",
+        "feel_zh": "根除的消灭",
+        "contrast_hint": "常用于消灭害虫"
+      }
+    ]
+  },
+  "toefl:滑稽的:adj.": {
+    "title_zh": "滑稽的程度",
+    "members": [
+      {
+        "headword": "hilarious",
+        "feel_zh": "极其搞笑",
+        "contrast_hint": "用于形容极度搞笑的事物"
+      },
+      {
+        "headword": "comical",
+        "feel_zh": "怪异搞笑",
+        "contrast_hint": "常用于形容奇怪又好笑的情景"
+      },
+      {
+        "headword": "jocose",
+        "feel_zh": "幽默风趣",
+        "contrast_hint": "多用于形容人的性格或行为"
+      }
+    ]
+  },
+  "toefl:暗示:n.": {
+    "title_zh": "暗示的方式",
+    "members": [
+      {
+        "headword": "allusion",
+        "feel_zh": "文学性强",
+        "contrast_hint": "常用于文学作品中"
+      },
+      {
+        "headword": "innuendo",
+        "feel_zh": "含蓄且讽刺",
+        "contrast_hint": "多用于讽刺或批评"
+      },
+      {
+        "headword": "inkling",
+        "feel_zh": "模糊且轻微",
+        "contrast_hint": "多指略知或猜测"
+      }
+    ]
+  },
+  "toefl:磨损:n.": {
+    "title_zh": "磨损的方式",
+    "members": [
+      {
+        "headword": "fray",
+        "feel_zh": "带有冲突感",
+        "contrast_hint": "多指因摩擦或争吵导致的磨损"
+      },
+      {
+        "headword": "chafe",
+        "feel_zh": "有疼痛感",
+        "contrast_hint": "多指因持续摩擦导致的皮肤疼痛"
+      },
+      {
+        "headword": "abrasion",
+        "feel_zh": "偏技术用语",
+        "contrast_hint": "多用于描述物体表面的磨损"
+      }
+    ]
+  },
+  "toefl:厌恶:v.": {
+    "title_zh": "厌恶的强度",
+    "members": [
+      {
+        "headword": "loathe",
+        "feel_zh": "极度厌烦",
+        "contrast_hint": "常用于个人情感"
+      },
+      {
+        "headword": "detest",
+        "feel_zh": "强烈反感",
+        "contrast_hint": "多用于正式场合"
+      },
+      {
+        "headword": "abhor",
+        "feel_zh": "道德厌恶",
+        "contrast_hint": "常与不道德行为搭配"
+      }
+    ]
+  },
+  "toefl:有益的:adj.": {
+    "title_zh": "有益的性质",
+    "members": [
+      {
+        "headword": "wholesome",
+        "feel_zh": "健康向上",
+        "contrast_hint": "多用于身体和道德健康"
+      },
+      {
+        "headword": "instructive",
+        "feel_zh": "启发教育",
+        "contrast_hint": "多用于教育和信息传递"
+      },
+      {
+        "headword": "salutary",
+        "feel_zh": "改善效果",
+        "contrast_hint": "多用于带来积极改变"
+      }
+    ]
+  },
+  "toefl:多余的:adj.": {
+    "title_zh": "多余的程度",
+    "members": [
+      {
+        "headword": "redundant",
+        "feel_zh": "偏正式用语",
+        "contrast_hint": "常指重复或多余信息"
+      },
+      {
+        "headword": "superfluous",
+        "feel_zh": "语气较强烈",
+        "contrast_hint": "强调完全不必要"
+      },
+      {
+        "headword": "extraneous",
+        "feel_zh": "带无关含义",
+        "contrast_hint": "多指无关或外来的事物"
+      }
+    ]
+  },
+  "toefl:喧闹:n.": {
+    "title_zh": "喧闹的类型",
+    "members": [
+      {
+        "headword": "bustle",
+        "feel_zh": "忙碌且活跃",
+        "contrast_hint": "多指繁忙活动中的喧闹"
+      },
+      {
+        "headword": "clamour",
+        "feel_zh": "嘈杂且急切",
+        "contrast_hint": "常指人群的大声要求"
+      },
+      {
+        "headword": "hubbub",
+        "feel_zh": "混乱且嘈杂",
+        "contrast_hint": "多指多人同时说话的声音"
+      }
+    ]
+  },
+  "toefl:无与伦比的:adj.": {
+    "title_zh": "无与伦比",
+    "members": [
+      {
+        "headword": "unparalleled",
+        "feel_zh": "最为正式",
+        "contrast_hint": "用于强调独一无二的地位"
+      },
+      {
+        "headword": "peerless",
+        "feel_zh": "带有赞美",
+        "contrast_hint": "常用于艺术或技能"
+      },
+      {
+        "headword": "matchless",
+        "feel_zh": "偏向实用",
+        "contrast_hint": "多用于产品或服务"
+      }
+    ]
+  },
+  "toefl:灵巧的:adj.": {
+    "title_zh": "灵巧的程度",
+    "members": [
+      {
+        "headword": "deft",
+        "feel_zh": "动作轻盈",
+        "contrast_hint": "多指手脚的灵活性"
+      },
+      {
+        "headword": "adroit",
+        "feel_zh": "处理问题巧妙",
+        "contrast_hint": "强调解决问题的能力"
+      },
+      {
+        "headword": "dexterous",
+        "feel_zh": "手指灵活",
+        "contrast_hint": "多用于手工艺或演奏"
+      }
+    ]
+  },
+  "toefl:无畏的:adj.": {
+    "title_zh": "无畏的程度",
+    "members": [
+      {
+        "headword": "intrepid",
+        "feel_zh": "冒险精神强",
+        "contrast_hint": "常用于探险或未知领域"
+      },
+      {
+        "headword": "undaunted",
+        "feel_zh": "坚持不懈",
+        "contrast_hint": "强调面对困难不退缩"
+      },
+      {
+        "headword": "dauntless",
+        "feel_zh": "决心坚定",
+        "contrast_hint": "强调面对危险的坚定态度"
+      }
+    ]
+  },
+  "toefl:贬低:v.": {
+    "title_zh": "贬低的方式",
+    "members": [
+      {
+        "headword": "belittle",
+        "feel_zh": "轻蔑而随意",
+        "contrast_hint": "多指轻描淡写某事"
+      },
+      {
+        "headword": "disparage",
+        "feel_zh": "轻视且带批评",
+        "contrast_hint": "常用于贬低成就"
+      },
+      {
+        "headword": "deprecate",
+        "feel_zh": "正式且不赞成",
+        "contrast_hint": "多用于正式场合表达不满"
+      }
+    ]
+  },
+  "toefl:预示:v.": {
+    "title_zh": "预示的方式",
+    "members": [
+      {
+        "headword": "foreshadow",
+        "feel_zh": "文学色彩浓",
+        "contrast_hint": "常用于文学作品中"
+      },
+      {
+        "headword": "portend",
+        "feel_zh": "预警意味重",
+        "contrast_hint": "多用于重大事件前"
+      },
+      {
+        "headword": "betoken",
+        "feel_zh": "古雅且正式",
+        "contrast_hint": "常用于正式场合"
+      }
+    ]
+  },
+  "toefl:偶然的:adj.": {
+    "title_zh": "偶然的性质",
+    "members": [
+      {
+        "headword": "fortuitous",
+        "feel_zh": "带有幸运色彩",
+        "contrast_hint": "常用于意外好运的场合"
+      },
+      {
+        "headword": "coincident",
+        "feel_zh": "时间上的巧合",
+        "contrast_hint": "多指事件同时发生的巧合"
+      },
+      {
+        "headword": "adventitious",
+        "feel_zh": "外来的偶然",
+        "contrast_hint": "强调非计划性和外部因素"
+      }
+    ]
+  },
+  "toefl:笨拙的:adj.": {
+    "title_zh": "笨拙的表现",
+    "members": [
+      {
+        "headword": "unwieldy",
+        "feel_zh": "体积大笨重",
+        "contrast_hint": "多指物体难以操作"
+      },
+      {
+        "headword": "gauche",
+        "feel_zh": "社交不灵活",
+        "contrast_hint": "多指社交场合不适"
+      },
+      {
+        "headword": "uncouth",
+        "feel_zh": "举止粗鲁",
+        "contrast_hint": "多指行为缺乏教养"
+      }
+    ]
+  },
+  "toefl:节俭的:adj.": {
+    "title_zh": "节俭的方式",
+    "members": [
+      {
+        "headword": "frugal",
+        "feel_zh": "朴素自然",
+        "contrast_hint": "强调节省日常开支"
+      },
+      {
+        "headword": "thrifty",
+        "feel_zh": "精打细算",
+        "contrast_hint": "注重有效利用资源"
+      },
+      {
+        "headword": "provident",
+        "feel_zh": "未雨绸缪",
+        "contrast_hint": "强调为未来做准备"
+      }
+    ]
+  },
+  "toefl:干预:v.": {
+    "title_zh": "干预的方式",
+    "members": [
+      {
+        "headword": "intervene",
+        "feel_zh": "正式且中性",
+        "contrast_hint": "多指正式场合的干预"
+      },
+      {
+        "headword": "meddle",
+        "feel_zh": "带有贬义",
+        "contrast_hint": "常指不必要的插手"
+      }
+    ]
+  },
+  "toefl:律师:n.": {
+    "title_zh": "律师类型",
+    "members": [
+      {
+        "headword": "attorney",
+        "feel_zh": "正式且广泛",
+        "contrast_hint": "多用于美国法律体系"
+      },
+      {
+        "headword": "solicitor",
+        "feel_zh": "咨询与建议",
+        "contrast_hint": "多用于英国法律体系"
+      }
+    ]
+  },
+  "toefl:极其:adv.": {
+    "title_zh": "极其的程度",
+    "members": [
+      {
+        "headword": "supremely",
+        "feel_zh": "至高无上",
+        "contrast_hint": "常用于形容极高的地位或品质"
+      },
+      {
+        "headword": "phenomenally",
+        "feel_zh": "非凡卓越",
+        "contrast_hint": "多用于形容非凡的表现或成就"
+      },
+      {
+        "headword": "surpassingly",
+        "feel_zh": "超出寻常",
+        "contrast_hint": "强调超越普通或预期的程度"
+      }
+    ]
+  },
+  "toefl:荣誉:n.": {
+    "title_zh": "荣誉的表达",
+    "members": [
+      {
+        "headword": "honor",
+        "feel_zh": "更正式庄重",
+        "contrast_hint": "常用于正式场合或文书"
+      },
+      {
+        "headword": "laurels",
+        "feel_zh": "带有象征意味",
+        "contrast_hint": "常用于比喻成就或胜利"
+      }
+    ]
+  },
+  "toefl:碎片:n.": {
+    "title_zh": "碎片的种类",
+    "members": [
+      {
+        "headword": "chip",
+        "feel_zh": "小而规则",
+        "contrast_hint": "常指小块或电子芯片"
+      },
+      {
+        "headword": "debris",
+        "feel_zh": "散乱无序",
+        "contrast_hint": "多指废墟或自然残骸"
+      }
+    ]
+  },
+  "toefl:联盟:n.": {
+    "title_zh": "结成的性质",
+    "members": [
+      {
+        "headword": "coalition",
+        "feel_zh": "临时性强",
+        "contrast_hint": "通常为特定目标而组建"
+      },
+      {
+        "headword": "alliance",
+        "feel_zh": "正式性高",
+        "contrast_hint": "常为国家或组织间的长期协议"
+      }
+    ]
+  },
+  "toefl:不断地:adv.": {
+    "title_zh": "持续的方式",
+    "members": [
+      {
+        "headword": "constantly",
+        "feel_zh": "始终如一",
+        "contrast_hint": "强调不变性和稳定性"
+      },
+      {
+        "headword": "continually",
+        "feel_zh": "反复出现",
+        "contrast_hint": "强调重复性和间歇性"
+      }
+    ]
+  },
+  "toefl:证词:n.": {
+    "title_zh": "法律证词",
+    "members": [
+      {
+        "headword": "testimony",
+        "feel_zh": "正式法律用语",
+        "contrast_hint": "多用于法庭陈述"
+      },
+      {
+        "headword": "deposition",
+        "feel_zh": "书面宣誓证言",
+        "contrast_hint": "常用于庭外证词"
+      }
+    ]
+  },
+  "toefl:意识:n.": {
+    "title_zh": "意识的层次",
+    "members": [
+      {
+        "headword": "awareness",
+        "feel_zh": "更偏感知",
+        "contrast_hint": "强调对环境或事实的感知"
+      },
+      {
+        "headword": "realization",
+        "feel_zh": "更偏理解",
+        "contrast_hint": "强调对事物的理解或领悟"
+      }
+    ]
+  },
+  "toefl:合作:n.": {
+    "title_zh": "合作的方式",
+    "members": [
+      {
+        "headword": "cooperation",
+        "feel_zh": "强调共同努力",
+        "contrast_hint": "常用于团队或组织内部"
+      },
+      {
+        "headword": "collaboration",
+        "feel_zh": "强调联合创作",
+        "contrast_hint": "多用于跨领域或跨组织"
+      }
+    ]
+  },
+  "toefl:激励:n.": {
+    "title_zh": "激励的方式",
+    "members": [
+      {
+        "headword": "incentive",
+        "feel_zh": "正向鼓励",
+        "contrast_hint": "常用于激发积极性"
+      },
+      {
+        "headword": "goad",
+        "feel_zh": "刺激促动",
+        "contrast_hint": "多指激怒或逼迫行动"
+      }
+    ]
+  },
+  "toefl:最初:adv.": {
+    "title_zh": "时间的开端",
+    "members": [
+      {
+        "headword": "originally",
+        "feel_zh": "强调原始状态",
+        "contrast_hint": "多用于描述事物的原始状态"
+      },
+      {
+        "headword": "initially",
+        "feel_zh": "强调起始阶段",
+        "contrast_hint": "多用于描述事件的起始阶段"
+      }
+    ]
+  },
+  "toefl:违反:n.": {
+    "title_zh": "违反的方式",
+    "members": [
+      {
+        "headword": "violation",
+        "feel_zh": "正式且广泛",
+        "contrast_hint": "多用于法律或规则"
+      },
+      {
+        "headword": "breach",
+        "feel_zh": "强调破坏",
+        "contrast_hint": "常指协议或合同"
+      }
+    ]
+  },
+  "toefl:持续的:adj.": {
+    "title_zh": "持续的状态",
+    "members": [
+      {
+        "headword": "ongoing",
+        "feel_zh": "动态进行中",
+        "contrast_hint": "强调事情正在进行"
+      },
+      {
+        "headword": "sustained",
+        "feel_zh": "长期不间断",
+        "contrast_hint": "强调长时间的持续"
+      }
+    ]
+  },
+  "toefl:起诉:v.": {
+    "title_zh": "法律行动",
+    "members": [
+      {
+        "headword": "sue",
+        "feel_zh": "个人化语气",
+        "contrast_hint": "常用于民事案件"
+      },
+      {
+        "headword": "prosecute",
+        "feel_zh": "正式且严肃",
+        "contrast_hint": "多用于刑事案件"
+      }
+    ]
+  },
+  "toefl:神话:n.": {
+    "title_zh": "神话的类型",
+    "members": [
+      {
+        "headword": "myth",
+        "feel_zh": "单个故事",
+        "contrast_hint": "常指单个神话故事"
+      },
+      {
+        "headword": "mythology",
+        "feel_zh": "整体体系",
+        "contrast_hint": "指一系列神话集合"
+      }
+    ]
+  },
+  "toefl:遗产:n.": {
+    "title_zh": "遗产的类型",
+    "members": [
+      {
+        "headword": "heritage",
+        "feel_zh": "文化传承",
+        "contrast_hint": "多指文化传统"
+      },
+      {
+        "headword": "legacy",
+        "feel_zh": "历史遗留",
+        "contrast_hint": "多指物质或精神遗产"
+      }
+    ]
+  },
+  "toefl:占主导地位的:adj.": {
+    "title_zh": "主导地位",
+    "members": [
+      {
+        "headword": "dominant",
+        "feel_zh": "控制力强",
+        "contrast_hint": "强调对他人的控制和影响"
+      },
+      {
+        "headword": "prevailing",
+        "feel_zh": "普遍流行",
+        "contrast_hint": "强调在某领域内的普遍性"
+      }
+    ]
+  },
+  "toefl:描绘:v.": {
+    "title_zh": "描绘的方式",
+    "members": [
+      {
+        "headword": "depict",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于艺术或文学作品"
+      },
+      {
+        "headword": "portray",
+        "feel_zh": "更具象化",
+        "contrast_hint": "多用于具体形象或角色"
+      }
+    ]
+  },
+  "toefl:伦理:n.": {
+    "title_zh": "伦理原则",
+    "members": [
+      {
+        "headword": "ethics",
+        "feel_zh": "偏重整体观念",
+        "contrast_hint": "常用于学术或职业领域"
+      },
+      {
+        "headword": "ethic",
+        "feel_zh": "偏重个人信念",
+        "contrast_hint": "多指个体或群体的道德观"
+      }
+    ]
+  },
+  "toefl:规范:n.": {
+    "title_zh": "规范的类型",
+    "members": [
+      {
+        "headword": "norm",
+        "feel_zh": "普遍接受标准",
+        "contrast_hint": "用于社会或文化标准"
+      },
+      {
+        "headword": "specification",
+        "feel_zh": "详细技术要求",
+        "contrast_hint": "用于技术或产品说明"
+      }
+    ]
+  },
+  "toefl:仪式:n.": {
+    "title_zh": "仪式的类型",
+    "members": [
+      {
+        "headword": "ritual",
+        "feel_zh": "更偏日常习俗",
+        "contrast_hint": "常用于日常惯例或习俗"
+      },
+      {
+        "headword": "rite",
+        "feel_zh": "更偏正式场合",
+        "contrast_hint": "多用于宗教或正式仪式"
+      }
+    ]
+  },
+  "toefl:正直:n.": {
+    "title_zh": "正直的品质",
+    "members": [
+      {
+        "headword": "integrity",
+        "feel_zh": "更全面",
+        "contrast_hint": "强调道德与完整性"
+      },
+      {
+        "headword": "probity",
+        "feel_zh": "更正式",
+        "contrast_hint": "多用于法律与政治"
+      }
+    ]
+  },
+  "toefl:栖息地:n.": {
+    "title_zh": "栖息地类型",
+    "members": [
+      {
+        "headword": "habitat",
+        "feel_zh": "偏正式",
+        "contrast_hint": "泛指动植物的自然环境"
+      },
+      {
+        "headword": "roost",
+        "feel_zh": "口语化",
+        "contrast_hint": "多指鸟类栖息的具体地点"
+      }
+    ]
+  },
+  "toefl:壶:n.": {
+    "title_zh": "盛液容器",
+    "members": [
+      {
+        "headword": "pitcher",
+        "feel_zh": "带嘴的壶",
+        "contrast_hint": "常用于倒饮料"
+      },
+      {
+        "headword": "jug",
+        "feel_zh": "带把的壶",
+        "contrast_hint": "多用于储存液体"
+      }
+    ]
+  },
+  "toefl:指控:n.": {
+    "title_zh": "指控的性质",
+    "members": [
+      {
+        "headword": "allegation",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于法律或正式场合"
+      },
+      {
+        "headword": "accusation",
+        "feel_zh": "情感更强烈",
+        "contrast_hint": "常用于表达愤怒或不满"
+      }
+    ]
+  },
+  "toefl:开始:n.": {
+    "title_zh": "开始的方式",
+    "members": [
+      {
+        "headword": "initiate",
+        "feel_zh": "多指主动发起",
+        "contrast_hint": "强调主动性和计划性"
+      },
+      {
+        "headword": "onset",
+        "feel_zh": "常指自然发生",
+        "contrast_hint": "多用于描述事件的自然开始"
+      }
+    ]
+  },
+  "toefl:恳求:v.": {
+    "title_zh": "请求的方式",
+    "members": [
+      {
+        "headword": "plead",
+        "feel_zh": "带有情感色彩",
+        "contrast_hint": "常用于法庭或情感场合"
+      },
+      {
+        "headword": "importune",
+        "feel_zh": "语气更为强烈",
+        "contrast_hint": "多指持续不断地请求"
+      }
+    ]
+  },
+  "toefl:表面上:adv.": {
+    "title_zh": "表面上的程度",
+    "members": [
+      {
+        "headword": "seemingly",
+        "feel_zh": "看似真实",
+        "contrast_hint": "强调表象与实际可能不同"
+      },
+      {
+        "headword": "superficially",
+        "feel_zh": "缺乏深度",
+        "contrast_hint": "强调粗略或肤浅的观察"
+      }
+    ]
+  },
+  "toefl:有效性:n.": {
+    "title_zh": "有效性的类型",
+    "members": [
+      {
+        "headword": "effectiveness",
+        "feel_zh": "结果导向",
+        "contrast_hint": "强调实现目标的程度"
+      },
+      {
+        "headword": "validity",
+        "feel_zh": "合法合规",
+        "contrast_hint": "强调符合标准或规则"
+      }
+    ]
+  },
+  "toefl:管理:v.": {
+    "title_zh": "管理的方式",
+    "members": [
+      {
+        "headword": "administer",
+        "feel_zh": "更正式",
+        "contrast_hint": "常用于医疗或法律"
+      },
+      {
+        "headword": "administrate",
+        "feel_zh": "较口语化",
+        "contrast_hint": "多用于日常事务"
+      }
+    ]
+  },
+  "toefl:引发:v.": {
+    "title_zh": "引发的方式",
+    "members": [
+      {
+        "headword": "provoke",
+        "feel_zh": "带有刺激意味",
+        "contrast_hint": "常用于引发情绪反应"
+      },
+      {
+        "headword": "beget",
+        "feel_zh": "较为正式",
+        "contrast_hint": "多用于引发结果或后果"
+      }
+    ]
+  },
+  "toefl:削弱:v.": {
+    "title_zh": "削弱的方式",
+    "members": [
+      {
+        "headword": "undermine",
+        "feel_zh": "暗中逐渐",
+        "contrast_hint": "多指隐蔽地削弱权威"
+      },
+      {
+        "headword": "debilitate",
+        "feel_zh": "明显直接",
+        "contrast_hint": "多指健康或能力的削弱"
+      }
+    ]
+  },
+  "toefl:深刻的:adj.": {
+    "title_zh": "深刻的表达",
+    "members": [
+      {
+        "headword": "profound",
+        "feel_zh": "语感更庄重",
+        "contrast_hint": "常用于形容思想或情感深度"
+      },
+      {
+        "headword": "incisive",
+        "feel_zh": "语感更犀利",
+        "contrast_hint": "常用于形容分析或评论尖锐"
+      }
+    ]
+  },
+  "toefl:配偶:n.": {
+    "title_zh": "配偶称谓",
+    "members": [
+      {
+        "headword": "spouse",
+        "feel_zh": "中性正式",
+        "contrast_hint": "一般婚姻关系用词"
+      },
+      {
+        "headword": "consort",
+        "feel_zh": "皇家专用",
+        "contrast_hint": "常用于王室或贵族"
+      }
+    ]
+  },
+  "toefl:授权:v.": {
+    "title_zh": "授权的方式",
+    "members": [
+      {
+        "headword": "authorize",
+        "feel_zh": "正式且官方",
+        "contrast_hint": "用于官方或法律场合"
+      },
+      {
+        "headword": "empower",
+        "feel_zh": "赋予能力",
+        "contrast_hint": "强调增强个人能力"
+      }
+    ]
+  },
+  "toefl:探索:n.": {
+    "title_zh": "探索的方式",
+    "members": [
+      {
+        "headword": "exploration",
+        "feel_zh": "学术且全面",
+        "contrast_hint": "多用于科学或地理研究"
+      },
+      {
+        "headword": "quest",
+        "feel_zh": "冒险且富挑战",
+        "contrast_hint": "常用于文学或游戏情境"
+      }
+    ]
+  },
+  "toefl:偏见:n.": {
+    "title_zh": "偏见的表现",
+    "members": [
+      {
+        "headword": "bias",
+        "feel_zh": "倾向性偏见",
+        "contrast_hint": "多指潜意识中的偏见"
+      },
+      {
+        "headword": "bigotry",
+        "feel_zh": "顽固性偏见",
+        "contrast_hint": "多指公开且激烈的偏见"
+      }
+    ]
+  },
+  "toefl:燃烧的:adj.": {
+    "title_zh": "燃烧的状态",
+    "members": [
+      {
+        "headword": "burning",
+        "feel_zh": "灼热感强",
+        "contrast_hint": "强调热度和火焰"
+      },
+      {
+        "headword": "ablaze",
+        "feel_zh": "光亮感强",
+        "contrast_hint": "强调光亮和色彩"
+      }
+    ]
+  },
+  "toefl:捐赠:n.": {
+    "title_zh": "捐赠的类型",
+    "members": [
+      {
+        "headword": "donation",
+        "feel_zh": "普通捐赠",
+        "contrast_hint": "多用于慈善或公益活动"
+      },
+      {
+        "headword": "endowment",
+        "feel_zh": "大额捐赠",
+        "contrast_hint": "常用于支持机构或个人"
+      }
+    ]
+  },
+  "toefl:监督:v.": {
+    "title_zh": "监督的方式",
+    "members": [
+      {
+        "headword": "oversee",
+        "feel_zh": "更偏向管理",
+        "contrast_hint": "常用于项目或活动管理"
+      },
+      {
+        "headword": "supervise",
+        "feel_zh": "更偏向指导",
+        "contrast_hint": "多用于工作或人员指导"
+      }
+    ]
+  },
+  "toefl:有毒的:adj.": {
+    "title_zh": "有毒性质",
+    "members": [
+      {
+        "headword": "toxic",
+        "feel_zh": "泛指有害",
+        "contrast_hint": "常用于化学物质"
+      },
+      {
+        "headword": "venomous",
+        "feel_zh": "注入毒液",
+        "contrast_hint": "多指动物咬伤"
+      }
+    ]
+  },
+  "toefl:彻底地:adv.": {
+    "title_zh": "彻底的程度",
+    "members": [
+      {
+        "headword": "thoroughly",
+        "feel_zh": "细致入微",
+        "contrast_hint": "强调细节和完整性"
+      },
+      {
+        "headword": "radically",
+        "feel_zh": "根本变革",
+        "contrast_hint": "强调根本性和极端性"
+      }
+    ]
+  },
+  "toefl:壮观的:adj.": {
+    "title_zh": "壮观的程度",
+    "members": [
+      {
+        "headword": "spectacular",
+        "feel_zh": "戏剧性强",
+        "contrast_hint": "多用于风景或表演"
+      },
+      {
+        "headword": "imposing",
+        "feel_zh": "威严感重",
+        "contrast_hint": "常用于建筑或人物"
+      }
+    ]
+  },
+  "toefl:迷人的:adj.": {
+    "title_zh": "迷人的方式",
+    "members": [
+      {
+        "headword": "fascinating",
+        "feel_zh": "引人入胜",
+        "contrast_hint": "强调强烈吸引力"
+      },
+      {
+        "headword": "glamorous",
+        "feel_zh": "高贵优雅",
+        "contrast_hint": "强调时尚魅力"
+      }
+    ]
+  },
+  "toefl:阴谋:n.": {
+    "title_zh": "秘密计划",
+    "members": [
+      {
+        "headword": "conspiracy",
+        "feel_zh": "更具法律意味",
+        "contrast_hint": "常用于法律或政治场合"
+      },
+      {
+        "headword": "intrigue",
+        "feel_zh": "带有神秘感",
+        "contrast_hint": "常用于文学或日常对话"
+      }
+    ]
+  },
+  "toefl:美学的:adj.": {
+    "title_zh": "美学的表达",
+    "members": [
+      {
+        "headword": "aesthetic",
+        "feel_zh": "较为通用",
+        "contrast_hint": "常用于日常与学术"
+      },
+      {
+        "headword": "aesthetical",
+        "feel_zh": "更为正式",
+        "contrast_hint": "多见于文学与艺术"
+      }
+    ]
+  },
+  "toefl:感觉:n.": {
+    "title_zh": "感知的方式",
+    "members": [
+      {
+        "headword": "sensation",
+        "feel_zh": "生理感知",
+        "contrast_hint": "偏重身体感受"
+      },
+      {
+        "headword": "felt",
+        "feel_zh": "情感体会",
+        "contrast_hint": "偏重内心感受"
+      }
+    ]
+  },
+  "toefl:灵活性:n.": {
+    "title_zh": "灵活性",
+    "members": [
+      {
+        "headword": "flexibility",
+        "feel_zh": "适应性强",
+        "contrast_hint": "强调适应变化的能力"
+      },
+      {
+        "headword": "agility",
+        "feel_zh": "动作敏捷",
+        "contrast_hint": "强调快速轻盈的移动"
+      }
+    ]
+  },
+  "toefl:培养:n.": {
+    "title_zh": "培养的方式",
+    "members": [
+      {
+        "headword": "cultivation",
+        "feel_zh": "更正式",
+        "contrast_hint": "多用于专业领域或农业"
+      },
+      {
+        "headword": "nurture",
+        "feel_zh": "更亲切",
+        "contrast_hint": "常用于个人成长或教育"
+      }
+    ]
+  },
+  "toefl:敏感性:n.": {
+    "title_zh": "敏感的性质",
+    "members": [
+      {
+        "headword": "sensitivity",
+        "feel_zh": "对外界刺激敏感",
+        "contrast_hint": "常用于描述物理或生理反应"
+      },
+      {
+        "headword": "sensibility",
+        "feel_zh": "对情感艺术敏感",
+        "contrast_hint": "常用于描述情感或审美能力"
+      }
+    ]
+  },
+  "toefl:呼吸:n.": {
+    "title_zh": "呼吸的方式",
+    "members": [
+      {
+        "headword": "breathing",
+        "feel_zh": "日常且自然",
+        "contrast_hint": "多指日常自然呼吸"
+      },
+      {
+        "headword": "respiration",
+        "feel_zh": "专业且正式",
+        "contrast_hint": "常用于医学或科学"
+      }
+    ]
+  },
+  "toefl:沮丧的:adj.": {
+    "title_zh": "沮丧的程度",
+    "members": [
+      {
+        "headword": "depressed",
+        "feel_zh": "长期且严重",
+        "contrast_hint": "多指长期情绪低落"
+      },
+      {
+        "headword": "downcast",
+        "feel_zh": "短暂且轻微",
+        "contrast_hint": "多指一时情绪低落"
+      }
+    ]
+  },
+  "toefl:地形:n.": {
+    "title_zh": "地形描述",
+    "members": [
+      {
+        "headword": "terrain",
+        "feel_zh": "偏重地面特征",
+        "contrast_hint": "多用于军事或户外活动"
+      },
+      {
+        "headword": "topography",
+        "feel_zh": "偏重地貌细节",
+        "contrast_hint": "多用于科学或工程领域"
+      }
+    ]
+  },
+  "toefl:刺激:n.": {
+    "title_zh": "刺激的形式",
+    "members": [
+      {
+        "headword": "stimulus",
+        "feel_zh": "具体且直接",
+        "contrast_hint": "多指具体事物引发的刺激"
+      },
+      {
+        "headword": "stimulation",
+        "feel_zh": "抽象且间接",
+        "contrast_hint": "强调刺激的过程或方式"
+      }
+    ]
+  },
+  "toefl:孤立的:adj.": {
+    "title_zh": "孤立的状态",
+    "members": [
+      {
+        "headword": "isolated",
+        "feel_zh": "更偏物理隔离",
+        "contrast_hint": "强调与外界无联系"
+      },
+      {
+        "headword": "insular",
+        "feel_zh": "带有狭隘之意",
+        "contrast_hint": "强调思想或文化的封闭"
+      }
+    ]
+  },
+  "toefl:商品:n.": {
+    "title_zh": "商品的类型",
+    "members": [
+      {
+        "headword": "commodity",
+        "feel_zh": "基础商品",
+        "contrast_hint": "多指原材料或大宗商品"
+      },
+      {
+        "headword": "merchandise",
+        "feel_zh": "销售产品",
+        "contrast_hint": "多指零售或展示的商品"
+      }
+    ]
+  },
+  "toefl:合格的:adj.": {
+    "title_zh": "合格的条件",
+    "members": [
+      {
+        "headword": "eligible",
+        "feel_zh": "符合资格",
+        "contrast_hint": "多用于法律或政策"
+      },
+      {
+        "headword": "qualified",
+        "feel_zh": "具备技能",
+        "contrast_hint": "多用于专业或工作"
+      }
+    ]
+  },
+  "toefl:遵守:n.": {
+    "title_zh": "遵守的方式",
+    "members": [
+      {
+        "headword": "adherence",
+        "feel_zh": "强调坚定不移",
+        "contrast_hint": "多用于规则或信念"
+      },
+      {
+        "headword": "observance",
+        "feel_zh": "带有仪式感",
+        "contrast_hint": "常用于传统或仪式"
+      }
+    ]
+  },
+  "toefl:限制:v.": {
+    "title_zh": "限制的方式",
+    "members": [
+      {
+        "headword": "constrain",
+        "feel_zh": "外部强制限制",
+        "contrast_hint": "强调外部力量的压制"
+      },
+      {
+        "headword": "circumscribe",
+        "feel_zh": "界定范围限制",
+        "contrast_hint": "强调设定明确界限"
+      }
+    ]
+  },
+  "toefl:认为:v.": {
+    "title_zh": "认为的方式",
+    "members": [
+      {
+        "headword": "deem",
+        "feel_zh": "正式且庄重",
+        "contrast_hint": "多用于正式场合或文件"
+      },
+      {
+        "headword": "reckon",
+        "feel_zh": "口语且随意",
+        "contrast_hint": "多用于日常对话或估算"
+      }
+    ]
+  },
+  "toefl:运输:n.": {
+    "title_zh": "运输方式",
+    "members": [
+      {
+        "headword": "transit",
+        "feel_zh": "偏重过程",
+        "contrast_hint": "强调运输过程本身"
+      },
+      {
+        "headword": "conveyance",
+        "feel_zh": "偏重工具",
+        "contrast_hint": "强调运输工具或手段"
+      }
+    ]
+  },
+  "toefl:主权:n.": {
+    "title_zh": "主权的表达",
+    "members": [
+      {
+        "headword": "sovereignty",
+        "feel_zh": "抽象概念",
+        "contrast_hint": "强调国家自主管辖权"
+      },
+      {
+        "headword": "sovereign",
+        "feel_zh": "具体个体",
+        "contrast_hint": "指代最高统治者或权力"
+      }
+    ]
+  },
+  "toefl:压制:v.": {
+    "title_zh": "压制的方式",
+    "members": [
+      {
+        "headword": "suppress",
+        "feel_zh": "更侧重外部控制",
+        "contrast_hint": "常用于压制信息或事实"
+      },
+      {
+        "headword": "repress",
+        "feel_zh": "更侧重内心压抑",
+        "contrast_hint": "多指压抑情感或欲望"
+      }
+    ]
+  },
+  "toefl:大厦:n.": {
+    "title_zh": "大厦的类型",
+    "members": [
+      {
+        "headword": "mansion",
+        "feel_zh": "富丽堂皇",
+        "contrast_hint": "多指豪宅或庄园"
+      },
+      {
+        "headword": "edifice",
+        "feel_zh": "宏伟壮观",
+        "contrast_hint": "多指公共建筑"
+      }
+    ]
+  },
+  "toefl:复杂:n.": {
+    "title_zh": "复杂的性质",
+    "members": [
+      {
+        "headword": "complication",
+        "feel_zh": "多指问题",
+        "contrast_hint": "常用于描述问题的复杂性"
+      },
+      {
+        "headword": "sophistication",
+        "feel_zh": "多指精致",
+        "contrast_hint": "常用于描述事物的精致复杂"
+      }
+    ]
+  },
+  "toefl:一致性:n.": {
+    "title_zh": "一致性的表达",
+    "members": [
+      {
+        "headword": "consistency",
+        "feel_zh": "强调连贯性",
+        "contrast_hint": "常指行为或标准的连贯性"
+      },
+      {
+        "headword": "uniformity",
+        "feel_zh": "强调无差异性",
+        "contrast_hint": "多指外观或形式的统一性"
+      }
+    ]
+  },
+  "toefl:拒绝:n.": {
+    "title_zh": "拒绝的方式",
+    "members": [
+      {
+        "headword": "rejection",
+        "feel_zh": "正式且直接",
+        "contrast_hint": "常用于正式场合或书面"
+      },
+      {
+        "headword": "balk",
+        "feel_zh": "犹豫且抗拒",
+        "contrast_hint": "多指心理上的拒绝或畏缩"
+      }
+    ]
+  },
+  "toefl:激增:v.": {
+    "title_zh": "数量的激增",
+    "members": [
+      {
+        "headword": "proliferate",
+        "feel_zh": "多用于生物",
+        "contrast_hint": "常用于描述生物数量激增"
+      },
+      {
+        "headword": "surging",
+        "feel_zh": "多用于情绪或能量",
+        "contrast_hint": "常用于描述情绪或能量的迅速增加"
+      }
+    ]
+  },
+  "toefl:无能:n.": {
+    "title_zh": "无能的表现",
+    "members": [
+      {
+        "headword": "inability",
+        "feel_zh": "较为中性",
+        "contrast_hint": "多指技能或能力不足"
+      },
+      {
+        "headword": "impotence",
+        "feel_zh": "语气较正式",
+        "contrast_hint": "常指权力或影响力缺失"
+      }
+    ]
+  },
+  "toefl:倾斜:n.": {
+    "title_zh": "倾斜的方式",
+    "members": [
+      {
+        "headword": "tilt",
+        "feel_zh": "轻微偏转",
+        "contrast_hint": "多用于描述物体的角度变化"
+      },
+      {
+        "headword": "slant",
+        "feel_zh": "带有偏见",
+        "contrast_hint": "常用于描述观点或看法的倾斜"
+      }
+    ]
+  },
+  "toefl:光亮的:adj.": {
+    "title_zh": "光亮的程度",
+    "members": [
+      {
+        "headword": "shiny",
+        "feel_zh": "光泽感较强",
+        "contrast_hint": "常用于描述新物品"
+      },
+      {
+        "headword": "lustrous",
+        "feel_zh": "光滑且柔和",
+        "contrast_hint": "多用于形容头发或织物"
+      }
+    ]
+  },
+  "toefl:备忘录:n.": {
+    "title_zh": "备忘录形式",
+    "members": [
+      {
+        "headword": "memo",
+        "feel_zh": "简洁随意",
+        "contrast_hint": "常用于日常工作沟通"
+      },
+      {
+        "headword": "memorandum",
+        "feel_zh": "正式严谨",
+        "contrast_hint": "多用于正式文件和报告"
+      }
+    ]
+  },
+  "toefl:震惊:v.": {
+    "title_zh": "震惊的程度",
+    "members": [
+      {
+        "headword": "stun",
+        "feel_zh": "短暂失神",
+        "contrast_hint": "常用于突然事件"
+      },
+      {
+        "headword": "appall",
+        "feel_zh": "深感恐惧",
+        "contrast_hint": "多用于道德层面"
+      }
+    ]
+  },
+  "toefl:移民:n.": {
+    "title_zh": "移民的类型",
+    "members": [
+      {
+        "headword": "migrant",
+        "feel_zh": "中性且广泛",
+        "contrast_hint": "包括短期和长期移居"
+      },
+      {
+        "headword": "emigrant",
+        "feel_zh": "离开本国",
+        "contrast_hint": "强调离开原居国"
+      }
+    ]
+  },
+  "toefl:故障:n.": {
+    "title_zh": "故障的类型",
+    "members": [
+      {
+        "headword": "breakdown",
+        "feel_zh": "崩溃感强",
+        "contrast_hint": "常指系统或关系崩溃"
+      },
+      {
+        "headword": "malfunction",
+        "feel_zh": "运作异常",
+        "contrast_hint": "多指设备或机器失灵"
+      }
+    ]
+  },
+  "toefl:誓言:n.": {
+    "title_zh": "誓言的正式度",
+    "members": [
+      {
+        "headword": "pledge",
+        "feel_zh": "正式且庄重",
+        "contrast_hint": "常用于捐赠或支持的承诺"
+      },
+      {
+        "headword": "oath",
+        "feel_zh": "庄严且神圣",
+        "contrast_hint": "常用于法律或宗教场合"
+      }
+    ]
+  },
+  "toefl:引起:v.": {
+    "title_zh": "引起的方式",
+    "members": [
+      {
+        "headword": "induce",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于科学或医学领域"
+      },
+      {
+        "headword": "engender",
+        "feel_zh": "较为中性",
+        "contrast_hint": "常用于社会或情感话题"
+      }
+    ]
+  },
+  "toefl:青少年:n.": {
+    "title_zh": "青少年的称谓",
+    "members": [
+      {
+        "headword": "juvenile",
+        "feel_zh": "偏正式用语",
+        "contrast_hint": "多用于法律或医学领域"
+      },
+      {
+        "headword": "teens",
+        "feel_zh": "口语化",
+        "contrast_hint": "常用于日常交流和媒体"
+      }
+    ]
+  },
+  "toefl:居住:v.": {
+    "title_zh": "居住的方式",
+    "members": [
+      {
+        "headword": "reside",
+        "feel_zh": "正式且中性",
+        "contrast_hint": "常用于法律或官方文件"
+      },
+      {
+        "headword": "dwell",
+        "feel_zh": "文学且古典",
+        "contrast_hint": "多用于文学作品或诗歌"
+      }
+    ]
+  },
+  "toefl:漫画:n.": {
+    "title_zh": "漫画的类型",
+    "members": [
+      {
+        "headword": "comic",
+        "feel_zh": "轻松幽默",
+        "contrast_hint": "多用于娱乐和消遣"
+      },
+      {
+        "headword": "caricature",
+        "feel_zh": "夸张讽刺",
+        "contrast_hint": "常用于讽刺人物或事件"
+      }
+    ]
+  },
+  "toefl:线:n.": {
+    "title_zh": "线的种类",
+    "members": [
+      {
+        "headword": "strand",
+        "feel_zh": "细而柔软",
+        "contrast_hint": "用于描述纤细的线或缕"
+      },
+      {
+        "headword": "strings",
+        "feel_zh": "连续且有序",
+        "contrast_hint": "常用于乐器或连接物"
+      }
+    ]
+  },
+  "toefl:孤独的:adj.": {
+    "title_zh": "孤独的感受",
+    "members": [
+      {
+        "headword": "lone",
+        "feel_zh": "独自一人",
+        "contrast_hint": "强调单独,不一定悲伤"
+      },
+      {
+        "headword": "forlorn",
+        "feel_zh": "凄凉绝望",
+        "contrast_hint": "强调被遗弃,带悲伤感"
+      }
+    ]
+  },
+  "toefl:安慰:v.": {
+    "title_zh": "安慰的方式",
+    "members": [
+      {
+        "headword": "reassure",
+        "feel_zh": "消除疑虑",
+        "contrast_hint": "多用于解除担忧"
+      },
+      {
+        "headword": "console",
+        "feel_zh": "提供支持",
+        "contrast_hint": "多用于情感支持"
+      }
+    ]
+  },
+  "toefl:尸体:n.": {
+    "title_zh": "尸体的种类",
+    "members": [
+      {
+        "headword": "corpse",
+        "feel_zh": "正式且中性",
+        "contrast_hint": "多用于人类尸体"
+      },
+      {
+        "headword": "carcass",
+        "feel_zh": "多指动物尸体",
+        "contrast_hint": "常用于动物或贬义"
+      }
+    ]
+  },
+  "toefl:渴望:n.": {
+    "title_zh": "渴望的表达",
+    "members": [
+      {
+        "headword": "aspiration",
+        "feel_zh": "更具目标性",
+        "contrast_hint": "常用于职业或人生目标"
+      },
+      {
+        "headword": "longing",
+        "feel_zh": "更具情感性",
+        "contrast_hint": "多指对过去或远方的思念"
+      }
+    ]
+  },
+  "toefl:召唤:v.": {
+    "title_zh": "召唤的方式",
+    "members": [
+      {
+        "headword": "summon",
+        "feel_zh": "正式且庄重",
+        "contrast_hint": "多用于正式场合或法律"
+      },
+      {
+        "headword": "conjure",
+        "feel_zh": "神秘且魔幻",
+        "contrast_hint": "常用于魔法或幻想情景"
+      }
+    ]
+  },
+  "toefl:强调:v.": {
+    "title_zh": "强调的方式",
+    "members": [
+      {
+        "headword": "underscore",
+        "feel_zh": "视觉上突显",
+        "contrast_hint": "常用于书面或演示"
+      },
+      {
+        "headword": "accentuate",
+        "feel_zh": "语气上突出",
+        "contrast_hint": "多用于口头或艺术"
+      }
+    ]
+  },
+  "toefl:漫步:n.": {
+    "title_zh": "漫步的方式",
+    "members": [
+      {
+        "headword": "stroll",
+        "feel_zh": "悠闲自在",
+        "contrast_hint": "更强调随意和放松"
+      },
+      {
+        "headword": "amble",
+        "feel_zh": "缓慢轻松",
+        "contrast_hint": "更强调步伐缓慢"
+      }
+    ]
+  },
+  "toefl:引人入胜的:adj.": {
+    "title_zh": "引人入胜",
+    "members": [
+      {
+        "headword": "intriguing",
+        "feel_zh": "神秘感强",
+        "contrast_hint": "常用于悬疑或未解之谜"
+      },
+      {
+        "headword": "engaging",
+        "feel_zh": "亲和力强",
+        "contrast_hint": "常用于描述人物或故事"
+      }
+    ]
+  },
+  "toefl:增强:v.": {
+    "title_zh": "增强的程度",
+    "members": [
+      {
+        "headword": "intensify",
+        "feel_zh": "力度更强",
+        "contrast_hint": "常用于情感或冲突"
+      },
+      {
+        "headword": "heighten",
+        "feel_zh": "程度渐进",
+        "contrast_hint": "多用于感知或意识"
+      }
+    ]
+  },
+  "toefl:笨蛋:n.": {
+    "title_zh": "愚蠢的程度",
+    "members": [
+      {
+        "headword": "idiot",
+        "feel_zh": "语气较轻",
+        "contrast_hint": "多用于日常口语"
+      },
+      {
+        "headword": "dunce",
+        "feel_zh": "强调学习迟钝",
+        "contrast_hint": "常用于学业场合"
+      }
+    ]
+  },
+  "toefl:谴责:n.": {
+    "title_zh": "谴责的方式",
+    "members": [
+      {
+        "headword": "condemnation",
+        "feel_zh": "正式且严厉",
+        "contrast_hint": "常用于法律或官方场合"
+      },
+      {
+        "headword": "censure",
+        "feel_zh": "公开且强烈",
+        "contrast_hint": "多用于道德或行为批评"
+      }
+    ]
+  },
+  "toefl:卓越的:adj.": {
+    "title_zh": "卓越的程度",
+    "members": [
+      {
+        "headword": "exceptional",
+        "feel_zh": "强调稀有",
+        "contrast_hint": "用于描述少见的优秀"
+      },
+      {
+        "headword": "preeminent",
+        "feel_zh": "强调首屈一指",
+        "contrast_hint": "用于描述行业领军"
+      }
+    ]
+  },
+  "toefl:提升:v.": {
+    "title_zh": "提升的方式",
+    "members": [
+      {
+        "headword": "elevate",
+        "feel_zh": "中性偏正式",
+        "contrast_hint": "用于提升职位或状态"
+      },
+      {
+        "headword": "exalt",
+        "feel_zh": "带有赞美意味",
+        "contrast_hint": "常用于提升地位或赞美"
+      }
+    ]
+  },
+  "toefl:小心的:adj.": {
+    "title_zh": "谨慎的态度",
+    "members": [
+      {
+        "headword": "wary",
+        "feel_zh": "警惕性高",
+        "contrast_hint": "常用于防范潜在危险"
+      },
+      {
+        "headword": "chary",
+        "feel_zh": "犹豫不决",
+        "contrast_hint": "多指对冒险持保留态度"
+      }
+    ]
+  },
+  "toefl:大豆:n.": {
+    "title_zh": "大豆的种类",
+    "members": [
+      {
+        "headword": "soy",
+        "feel_zh": "多用于食品",
+        "contrast_hint": "常用于指代食品或调味品"
+      },
+      {
+        "headword": "soybean",
+        "feel_zh": "强调植物学",
+        "contrast_hint": "多用于农业或科学领域"
+      }
+    ]
+  },
+  "toefl:倾向于:adj.": {
+    "title_zh": "倾向的表达",
+    "members": [
+      {
+        "headword": "prone",
+        "feel_zh": "消极倾向",
+        "contrast_hint": "常指不良习惯或影响"
+      },
+      {
+        "headword": "disposed",
+        "feel_zh": "积极意愿",
+        "contrast_hint": "常指乐于接受或参与"
+      }
+    ]
+  },
+  "toefl:南瓜:n.": {
+    "title_zh": "南瓜种类",
+    "members": [
+      {
+        "headword": "pumpkin",
+        "feel_zh": "常指橙色圆形",
+        "contrast_hint": "特指橙色大南瓜"
+      },
+      {
+        "headword": "squash",
+        "feel_zh": "泛指多种类蔬菜",
+        "contrast_hint": "指多种南瓜类蔬菜"
+      }
+    ]
+  },
+  "toefl:令人畏惧的:adj.": {
+    "title_zh": "令人畏惧",
+    "members": [
+      {
+        "headword": "formidable",
+        "feel_zh": "强大而威严",
+        "contrast_hint": "常指力量或规模的威慑"
+      },
+      {
+        "headword": "forbidding",
+        "feel_zh": "外表冷峻",
+        "contrast_hint": "多指外观或环境令人却步"
+      }
+    ]
+  },
+  "toefl:自制的:adj.": {
+    "title_zh": "自制的方式",
+    "members": [
+      {
+        "headword": "homemade",
+        "feel_zh": "家庭温馨",
+        "contrast_hint": "强调家庭制作,常用于食品"
+      },
+      {
+        "headword": "homespun",
+        "feel_zh": "朴素简单",
+        "contrast_hint": "强调质朴,常用于衣物"
+      }
+    ]
+  },
+  "toefl:不利的:adj.": {
+    "title_zh": "不利的影响",
+    "members": [
+      {
+        "headword": "adverse",
+        "feel_zh": "更正式",
+        "contrast_hint": "多用于正式场合的描述"
+      },
+      {
+        "headword": "unfavorable",
+        "feel_zh": "更口语化",
+        "contrast_hint": "常用于日常对话中"
+      }
+    ]
+  },
+  "toefl:虚构的:adj.": {
+    "title_zh": "虚构的性质",
+    "members": [
+      {
+        "headword": "fictional",
+        "feel_zh": "文学性强",
+        "contrast_hint": "多用于小说或故事"
+      },
+      {
+        "headword": "fictitious",
+        "feel_zh": "虚假性强",
+        "contrast_hint": "多用于虚构身份或信息"
+      }
+    ]
+  },
+  "toefl:军团:n.": {
+    "title_zh": "军团的类型",
+    "members": [
+      {
+        "headword": "corps",
+        "feel_zh": "正式且组织化",
+        "contrast_hint": "常指特定军队编制"
+      },
+      {
+        "headword": "legion",
+        "feel_zh": "数量庞大",
+        "contrast_hint": "泛指大规模人群或事物"
+      }
+    ]
+  },
+  "toefl:背包:n.": {
+    "title_zh": "背包种类",
+    "members": [
+      {
+        "headword": "backpack",
+        "feel_zh": "现代感强",
+        "contrast_hint": "多用于户外活动和旅行"
+      },
+      {
+        "headword": "knapsack",
+        "feel_zh": "传统感重",
+        "contrast_hint": "常用于描述旧时军用或学生用包"
+      }
+    ]
+  },
+  "toefl:疯狂的:adj.": {
+    "title_zh": "疯狂的状态",
+    "members": [
+      {
+        "headword": "insane",
+        "feel_zh": "精神失常",
+        "contrast_hint": "多指精神疾病或极端不理性"
+      },
+      {
+        "headword": "frantic",
+        "feel_zh": "极度焦虑",
+        "contrast_hint": "常指因情绪失控而疯狂"
+      }
+    ]
+  },
+  "toefl:怨恨:n.": {
+    "title_zh": "怨恨的深度",
+    "members": [
+      {
+        "headword": "grudge",
+        "feel_zh": "较轻微的怨恨",
+        "contrast_hint": "常因小事积累的不满"
+      },
+      {
+        "headword": "rancor",
+        "feel_zh": "深沉持久的怨恨",
+        "contrast_hint": "多因重大伤害而生"
+      }
+    ]
+  },
+  "toefl:争论:n.": {
+    "title_zh": "争论的性质",
+    "members": [
+      {
+        "headword": "contention",
+        "feel_zh": "正式且严肃",
+        "contrast_hint": "用于重要议题的争论"
+      },
+      {
+        "headword": "quibble",
+        "feel_zh": "轻微且琐碎",
+        "contrast_hint": "用于无关紧要的小事"
+      }
+    ]
+  },
+  "toefl:扩散:n.": {
+    "title_zh": "扩散的方式",
+    "members": [
+      {
+        "headword": "proliferation",
+        "feel_zh": "快速增长",
+        "contrast_hint": "常指技术或信息的快速扩散"
+      },
+      {
+        "headword": "diffusion",
+        "feel_zh": "广泛传播",
+        "contrast_hint": "强调逐渐扩散到更大范围"
+      }
+    ]
+  },
+  "toefl:支撑:n.": {
+    "title_zh": "支撑方式",
+    "members": [
+      {
+        "headword": "brace",
+        "feel_zh": "物理支撑",
+        "contrast_hint": "多用于实际物体的支撑"
+      },
+      {
+        "headword": "bolster",
+        "feel_zh": "增强信心",
+        "contrast_hint": "常用于抽象概念的增强"
+      }
+    ]
+  },
+  "toefl:优雅:n.": {
+    "title_zh": "优雅的表现",
+    "members": [
+      {
+        "headword": "poise",
+        "feel_zh": "沉稳的优雅",
+        "contrast_hint": "常指内在气质的优雅"
+      },
+      {
+        "headword": "elegance",
+        "feel_zh": "外在的优雅",
+        "contrast_hint": "多指外表或举止的优雅"
+      }
+    ]
+  },
+  "toefl:布道:n.": {
+    "title_zh": "宗教讲道",
+    "members": [
+      {
+        "headword": "sermon",
+        "feel_zh": "正式庄重",
+        "contrast_hint": "多用于宗教仪式"
+      },
+      {
+        "headword": "homily",
+        "feel_zh": "道德劝诫",
+        "contrast_hint": "常涉及道德教训"
+      }
+    ]
+  },
+  "toefl:严格的:adj.": {
+    "title_zh": "严格的程度",
+    "members": [
+      {
+        "headword": "rigorous",
+        "feel_zh": "彻底细致",
+        "contrast_hint": "强调全面和细节上的严格"
+      },
+      {
+        "headword": "stringent",
+        "feel_zh": "严苛紧迫",
+        "contrast_hint": "强调规则和限制的严厉"
+      }
+    ]
+  },
+  "toefl:瘟疫:n.": {
+    "title_zh": "瘟疫的类型",
+    "members": [
+      {
+        "headword": "plague",
+        "feel_zh": "历史感强",
+        "contrast_hint": "常指历史上大规模瘟疫"
+      },
+      {
+        "headword": "pestilence",
+        "feel_zh": "书面且严肃",
+        "contrast_hint": "多用于文学和正式场合"
+      }
+    ]
+  },
+  "toefl:有利可图的:adj.": {
+    "title_zh": "有利可图",
+    "members": [
+      {
+        "headword": "lucrative",
+        "feel_zh": "偏正式用语",
+        "contrast_hint": "常用于商业投资"
+      },
+      {
+        "headword": "gainful",
+        "feel_zh": "偏口语表达",
+        "contrast_hint": "常用于个人职业"
+      }
+    ]
+  },
+  "toefl:引出:v.": {
+    "title_zh": "引出的方式",
+    "members": [
+      {
+        "headword": "elicit",
+        "feel_zh": "较为直接",
+        "contrast_hint": "常用于引出具体信息"
+      },
+      {
+        "headword": "educe",
+        "feel_zh": "较为隐晦",
+        "contrast_hint": "常用于引出潜在能力"
+      }
+    ]
+  },
+  "toefl:表示:v.": {
+    "title_zh": "表示的方式",
+    "members": [
+      {
+        "headword": "signify",
+        "feel_zh": "语气较正式",
+        "contrast_hint": "常用于抽象概念"
+      },
+      {
+        "headword": "denote",
+        "feel_zh": "语气最明确",
+        "contrast_hint": "多用于具体指示"
+      }
+    ]
+  },
+  "toefl:取代:v.": {
+    "title_zh": "替代的方式",
+    "members": [
+      {
+        "headword": "displace",
+        "feel_zh": "强调位置变化",
+        "contrast_hint": "多指物理位置的替换"
+      },
+      {
+        "headword": "supplant",
+        "feel_zh": "强调权力更替",
+        "contrast_hint": "多指权力或地位的替代"
+      }
+    ]
+  },
+  "toefl:即将发生的:adj.": {
+    "title_zh": "即将发生",
+    "members": [
+      {
+        "headword": "imminent",
+        "feel_zh": "紧迫感强",
+        "contrast_hint": "常指迫在眉睫的危险"
+      },
+      {
+        "headword": "impending",
+        "feel_zh": "中性偏正式",
+        "contrast_hint": "多用于一般事件的临近"
+      }
+    ]
+  },
+  "toefl:理解:v.": {
+    "title_zh": "理解的深度",
+    "members": [
+      {
+        "headword": "comprehend",
+        "feel_zh": "全面深入",
+        "contrast_hint": "强调彻底理解，常用于复杂概念"
+      },
+      {
+        "headword": "apprehend",
+        "feel_zh": "初步领悟",
+        "contrast_hint": "强调感性理解，常用于直觉或感知"
+      }
+    ]
+  },
+  "toefl:伴随的:adj.": {
+    "title_zh": "伴随关系",
+    "members": [
+      {
+        "headword": "accompanying",
+        "feel_zh": "更常用于日常",
+        "contrast_hint": "多指人或事物的陪伴"
+      },
+      {
+        "headword": "concomitant",
+        "feel_zh": "书面且正式",
+        "contrast_hint": "常用于学术或医学场合"
+      }
+    ]
+  },
+  "toefl:温和的:adj.": {
+    "title_zh": "温和的性质",
+    "members": [
+      {
+        "headword": "benign",
+        "feel_zh": "善意且无害",
+        "contrast_hint": "多用于描述人或肿瘤"
+      },
+      {
+        "headword": "temperate",
+        "feel_zh": "气候适中",
+        "contrast_hint": "多用于描述环境或气候"
+      }
+    ]
+  },
+  "toefl:陶器:n.": {
+    "title_zh": "陶器种类",
+    "members": [
+      {
+        "headword": "pottery",
+        "feel_zh": "工艺性强",
+        "contrast_hint": "多指手工制作的陶器"
+      },
+      {
+        "headword": "earthenware",
+        "feel_zh": "质地粗糙",
+        "contrast_hint": "多指低温烧制的陶器"
+      }
+    ]
+  },
+  "toefl:绑架:v.": {
+    "title_zh": "绑架的方式",
+    "members": [
+      {
+        "headword": "kidnap",
+        "feel_zh": "更常用于新闻",
+        "contrast_hint": "常指为勒索赎金"
+      },
+      {
+        "headword": "abduct",
+        "feel_zh": "书面且正式",
+        "contrast_hint": "多用于法律或医学"
+      }
+    ]
+  },
+  "toefl:骚扰:v.": {
+    "title_zh": "骚扰的方式",
+    "members": [
+      {
+        "headword": "harass",
+        "feel_zh": "持续性强",
+        "contrast_hint": "多指长期持续的骚扰"
+      },
+      {
+        "headword": "harry",
+        "feel_zh": "侵扰性强",
+        "contrast_hint": "多指反复侵扰或烦扰"
+      }
+    ]
+  },
+  "toefl:瘫痪:n.": {
+    "title_zh": "瘫痪的程度",
+    "members": [
+      {
+        "headword": "limp",
+        "feel_zh": "无力松软",
+        "contrast_hint": "常指身体无力或物体软弱"
+      },
+      {
+        "headword": "paralysis",
+        "feel_zh": "完全失去功能",
+        "contrast_hint": "多指身体部位完全失去功能"
+      }
+    ]
+  },
+  "toefl:巩固:v.": {
+    "title_zh": "巩固的方式",
+    "members": [
+      {
+        "headword": "consolidate",
+        "feel_zh": "偏向合并",
+        "contrast_hint": "常用于公司或组织合并"
+      },
+      {
+        "headword": "solidify",
+        "feel_zh": "偏向加强",
+        "contrast_hint": "常用于抽象概念如信念"
+      }
+    ]
+  },
+  "toefl:翻新:v.": {
+    "title_zh": "翻新的方式",
+    "members": [
+      {
+        "headword": "renovate",
+        "feel_zh": "侧重结构更新",
+        "contrast_hint": "常用于建筑物翻新"
+      },
+      {
+        "headword": "refurbish",
+        "feel_zh": "侧重表面更新",
+        "contrast_hint": "多用于室内装潢"
+      }
+    ]
+  },
+  "toefl:荒凉的:adj.": {
+    "title_zh": "荒凉的程度",
+    "members": [
+      {
+        "headword": "bleak",
+        "feel_zh": "冷清且无望",
+        "contrast_hint": "多用于形容气候或前景"
+      },
+      {
+        "headword": "desolate",
+        "feel_zh": "荒无人烟",
+        "contrast_hint": "多用于形容场所或环境"
+      }
+    ]
+  },
+  "toefl:策略:n.": {
+    "title_zh": "策略的运用",
+    "members": [
+      {
+        "headword": "maneuver",
+        "feel_zh": "偏重动作",
+        "contrast_hint": "多指具体操作或战术"
+      },
+      {
+        "headword": "manoeuvre",
+        "feel_zh": "偏重计划",
+        "contrast_hint": "常用于复杂计划或策略"
+      }
+    ]
+  },
+  "toefl:派遣:v.": {
+    "title_zh": "派遣的方式",
+    "members": [
+      {
+        "headword": "dispatch",
+        "feel_zh": "正式且迅速",
+        "contrast_hint": "常用于官方或紧急场合"
+      },
+      {
+        "headword": "despatch",
+        "feel_zh": "较为书面",
+        "contrast_hint": "英国英语中更常见"
+      }
+    ]
+  },
+  "toefl:修正:v.": {
+    "title_zh": "修正的对象",
+    "members": [
+      {
+        "headword": "amend",
+        "feel_zh": "改进意味更强",
+        "contrast_hint": "常用于法律或政策文本"
+      },
+      {
+        "headword": "emend",
+        "feel_zh": "专注文本校订",
+        "contrast_hint": "多用于书籍或文稿"
+      }
+    ]
+  },
+  "toefl:军械库:n.": {
+    "title_zh": "军械库",
+    "members": [
+      {
+        "headword": "arsenal",
+        "feel_zh": "规模较大",
+        "contrast_hint": "多指大型武器库"
+      },
+      {
+        "headword": "armory",
+        "feel_zh": "地方性强",
+        "contrast_hint": "常指地方或小型军械库"
+      }
+    ]
+  },
+  "toefl:哀悼:n.": {
+    "title_zh": "哀悼的表达",
+    "members": [
+      {
+        "headword": "lament",
+        "feel_zh": "带有悲叹情感",
+        "contrast_hint": "可用于表达对失去的惋惜"
+      },
+      {
+        "headword": "mourning",
+        "feel_zh": "正式且深沉",
+        "contrast_hint": "多用于对逝者的哀悼"
+      }
+    ]
+  },
+  "toefl:堡垒:n.": {
+    "title_zh": "防御建筑",
+    "members": [
+      {
+        "headword": "fort",
+        "feel_zh": "规模较小",
+        "contrast_hint": "多用于小型军事驻地"
+      },
+      {
+        "headword": "fortress",
+        "feel_zh": "规模宏大",
+        "contrast_hint": "常指大型防御工事"
+      }
+    ]
+  },
+  "toefl:扭曲:n.": {
+    "title_zh": "扭曲的形式",
+    "members": [
+      {
+        "headword": "distortion",
+        "feel_zh": "较正式",
+        "contrast_hint": "多用于技术或艺术领域"
+      },
+      {
+        "headword": "warp",
+        "feel_zh": "较口语",
+        "contrast_hint": "常用于描述物理形变"
+      }
+    ]
+  },
+  "toefl:傲慢的:adj.": {
+    "title_zh": "傲慢的程度",
+    "members": [
+      {
+        "headword": "arrogant",
+        "feel_zh": "自信过度",
+        "contrast_hint": "多指自视甚高"
+      },
+      {
+        "headword": "haughty",
+        "feel_zh": "轻蔑他人",
+        "contrast_hint": "常含鄙视意味"
+      }
+    ]
+  },
+  "toefl:挪用:v.": {
+    "title_zh": "挪用资金",
+    "members": [
+      {
+        "headword": "embezzle",
+        "feel_zh": "语气较正式",
+        "contrast_hint": "多用于法律或商业场合"
+      },
+      {
+        "headword": "peculate",
+        "feel_zh": "书面用词",
+        "contrast_hint": "常见于文学或学术文章"
+      }
+    ]
+  },
+  "toefl:称赞:n.": {
+    "title_zh": "称赞的方式",
+    "members": [
+      {
+        "headword": "compliment",
+        "feel_zh": "礼貌且轻松",
+        "contrast_hint": "常用于日常交流"
+      },
+      {
+        "headword": "acclaim",
+        "feel_zh": "正式且热烈",
+        "contrast_hint": "多用于公开场合"
+      }
+    ]
+  },
+  "toefl:危险:n.": {
+    "title_zh": "危险的程度",
+    "members": [
+      {
+        "headword": "peril",
+        "feel_zh": "更严峻紧迫",
+        "contrast_hint": "常指迫在眉睫的危险"
+      },
+      {
+        "headword": "jeopardy",
+        "feel_zh": "风险较广泛",
+        "contrast_hint": "多指潜在损失或伤害"
+      }
+    ]
+  },
+  "toefl:明显的:adj.": {
+    "title_zh": "明显的程度",
+    "members": [
+      {
+        "headword": "pronounced",
+        "feel_zh": "特征鲜明",
+        "contrast_hint": "用于描述特征或变化"
+      },
+      {
+        "headword": "overt",
+        "feel_zh": "公开无掩饰",
+        "contrast_hint": "用于描述行为或态度"
+      }
+    ]
+  },
+  "toefl:家禽:n.": {
+    "title_zh": "家禽的种类",
+    "members": [
+      {
+        "headword": "poultry",
+        "feel_zh": "偏正式用语",
+        "contrast_hint": "常用于商业语境"
+      },
+      {
+        "headword": "fowl",
+        "feel_zh": "较口语化",
+        "contrast_hint": "多用于日常或历史"
+      }
+    ]
+  },
+  "toefl:迷宫:n.": {
+    "title_zh": "迷宫的类型",
+    "members": [
+      {
+        "headword": "maze",
+        "feel_zh": "常用于游戏",
+        "contrast_hint": "多指娱乐或游戏中的迷宫"
+      },
+      {
+        "headword": "labyrinth",
+        "feel_zh": "强调复杂性",
+        "contrast_hint": "多用于形容复杂的结构或问题"
+      }
+    ]
+  },
+  "toefl:虚张声势:n.": {
+    "title_zh": "虚张声势",
+    "members": [
+      {
+        "headword": "bluff",
+        "feel_zh": "含有欺骗意味",
+        "contrast_hint": "多用于策略性误导"
+      },
+      {
+        "headword": "bravado",
+        "feel_zh": "带有自负色彩",
+        "contrast_hint": "常用于夸耀胆量"
+      }
+    ]
+  },
+  "toefl:宝石:n.": {
+    "title_zh": "宝石的种类",
+    "members": [
+      {
+        "headword": "gem",
+        "feel_zh": "珍贵且罕见",
+        "contrast_hint": "常指珍品或珍贵事物"
+      },
+      {
+        "headword": "gemstone",
+        "feel_zh": "用于珠宝制作",
+        "contrast_hint": "强调用于首饰的原料"
+      }
+    ]
+  },
+  "toefl:星际的:adj.": {
+    "title_zh": "星际的范围",
+    "members": [
+      {
+        "headword": "stellar",
+        "feel_zh": "形容星星或杰出",
+        "contrast_hint": "多用于描述星星或优秀事物"
+      },
+      {
+        "headword": "interstellar",
+        "feel_zh": "星际之间",
+        "contrast_hint": "专指星星之间的空间"
+      }
+    ]
+  },
+  "toefl:法令:n.": {
+    "title_zh": "法令的形式",
+    "members": [
+      {
+        "headword": "ordinance",
+        "feel_zh": "地方性法规",
+        "contrast_hint": "多用于市镇政府制定"
+      },
+      {
+        "headword": "decree",
+        "feel_zh": "权威性命令",
+        "contrast_hint": "常由国家元首发布"
+      }
+    ]
+  },
+  "toefl:巨大的:adj.": {
+    "title_zh": "巨大的程度",
+    "members": [
+      {
+        "headword": "gigantic",
+        "feel_zh": "更具视觉冲击",
+        "contrast_hint": "常用于描述具体物体"
+      },
+      {
+        "headword": "colossal",
+        "feel_zh": "更显威严壮观",
+        "contrast_hint": "多用于形容抽象概念"
+      }
+    ]
+  },
+  "toefl:装饰:v.": {
+    "title_zh": "装饰的方式",
+    "members": [
+      {
+        "headword": "adorn",
+        "feel_zh": "偏正式",
+        "contrast_hint": "多用于文学或正式场合"
+      },
+      {
+        "headword": "bedeck",
+        "feel_zh": "偏口语",
+        "contrast_hint": "常用于日常或非正式场合"
+      }
+    ]
+  },
+  "toefl:装饰:n.": {
+    "title_zh": "装饰方式",
+    "members": [
+      {
+        "headword": "adornment",
+        "feel_zh": "更具艺术感",
+        "contrast_hint": "常指艺术性装饰"
+      },
+      {
+        "headword": "ornamentation",
+        "feel_zh": "更具功能性",
+        "contrast_hint": "强调功能性装饰"
+      }
+    ]
+  },
+  "toefl:明显地:adv.": {
+    "title_zh": "表达清晰度",
+    "members": [
+      {
+        "headword": "distinctly",
+        "feel_zh": "强调清晰可辨",
+        "contrast_hint": "用于强调差异或区别"
+      },
+      {
+        "headword": "plainly",
+        "feel_zh": "强调简单明了",
+        "contrast_hint": "用于强调易于理解"
+      }
+    ]
+  },
+  "toefl:激烈的:adj.": {
+    "title_zh": "激烈的程度",
+    "members": [
+      {
+        "headword": "drastic",
+        "feel_zh": "极端且果断",
+        "contrast_hint": "多指措施或决定"
+      },
+      {
+        "headword": "vehement",
+        "feel_zh": "情感强烈",
+        "contrast_hint": "多指情感或言辞"
+      }
+    ]
+  },
+  "toefl:海豚:n.": {
+    "title_zh": "海洋哺乳动物",
+    "members": [
+      {
+        "headword": "dolphin",
+        "feel_zh": "活泼聪明",
+        "contrast_hint": "常用于描述聪明和友好的行为"
+      },
+      {
+        "headword": "porpoise",
+        "feel_zh": "圆鼻温和",
+        "contrast_hint": "多用于描述外形和温和的特性"
+      }
+    ]
+  },
+  "toefl:魅力:n.": {
+    "title_zh": "吸引的魅力",
+    "members": [
+      {
+        "headword": "glamour",
+        "feel_zh": "外在光鲜",
+        "contrast_hint": "多指表面吸引力"
+      },
+      {
+        "headword": "charisma",
+        "feel_zh": "内在吸引力",
+        "contrast_hint": "强调个人魅力和影响力"
+      }
+    ]
+  },
+  "toefl:香气:n.": {
+    "title_zh": "香气的类型",
+    "members": [
+      {
+        "headword": "fragrance",
+        "feel_zh": "优雅而柔和",
+        "contrast_hint": "多用于香水和花香"
+      },
+      {
+        "headword": "aroma",
+        "feel_zh": "浓郁而诱人",
+        "contrast_hint": "常用于食物和饮品"
+      }
+    ]
+  },
+  "toefl:嗡嗡声:n.": {
+    "title_zh": "嗡嗡声的区别",
+    "members": [
+      {
+        "headword": "buzz",
+        "feel_zh": "带有活力感",
+        "contrast_hint": "常用于形容兴奋或讨论"
+      },
+      {
+        "headword": "whir",
+        "feel_zh": "带有机械感",
+        "contrast_hint": "多用于描述机器运转"
+      }
+    ]
+  },
+  "toefl:美食家:n.": {
+    "title_zh": "美食爱好者",
+    "members": [
+      {
+        "headword": "gourmet",
+        "feel_zh": "讲究品质",
+        "contrast_hint": "强调对高品质美食的鉴赏"
+      },
+      {
+        "headword": "gourmand",
+        "feel_zh": "偏爱大量",
+        "contrast_hint": "可能含有贪吃的意味"
+      }
+    ]
+  },
+  "toefl:阻碍:adj.": {
+    "title_zh": "阻碍的方式",
+    "members": [
+      {
+        "headword": "hinder",
+        "feel_zh": "轻微阻碍",
+        "contrast_hint": "多指无意造成的阻碍"
+      },
+      {
+        "headword": "thwart",
+        "feel_zh": "故意挫败",
+        "contrast_hint": "强调有意图的阻止"
+      }
+    ]
+  },
+  "toefl:分配:v.": {
+    "title_zh": "分配方式",
+    "members": [
+      {
+        "headword": "dispense",
+        "feel_zh": "正式且常规",
+        "contrast_hint": "常用于药品或服务"
+      },
+      {
+        "headword": "allot",
+        "feel_zh": "特定且明确",
+        "contrast_hint": "用于特定用途或群体"
+      }
+    ]
+  },
+  "toefl:交融:v.": {
+    "title_zh": "交融方式",
+    "members": [
+      {
+        "headword": "mingle",
+        "feel_zh": "偏正式",
+        "contrast_hint": "常用于正式场合或活动中"
+      },
+      {
+        "headword": "mingling",
+        "feel_zh": "偏口语",
+        "contrast_hint": "多用于非正式社交场合"
+      }
+    ]
+  },
+  "toefl:表演:n.": {
+    "title_zh": "表演方式",
+    "members": [
+      {
+        "headword": "acting",
+        "feel_zh": "偏重戏剧表演",
+        "contrast_hint": "多指戏剧或影视表演"
+      },
+      {
+        "headword": "rendition",
+        "feel_zh": "偏重演绎或翻译",
+        "contrast_hint": "常用于音乐或文学作品"
+      }
+    ]
+  },
+  "toefl:寒冷的:adj.": {
+    "title_zh": "寒冷程度",
+    "members": [
+      {
+        "headword": "chilly",
+        "feel_zh": "微寒",
+        "contrast_hint": "形容轻微不适的寒冷"
+      },
+      {
+        "headword": "frigid",
+        "feel_zh": "极寒",
+        "contrast_hint": "形容极端刺骨的寒冷"
+      }
+    ]
+  },
+  "toefl:活力:n.": {
+    "title_zh": "活力的表现",
+    "members": [
+      {
+        "headword": "vitality",
+        "feel_zh": "生命力强",
+        "contrast_hint": "强调内在生命力"
+      },
+      {
+        "headword": "vigor",
+        "feel_zh": "体力充沛",
+        "contrast_hint": "强调身体健康"
+      }
+    ]
+  },
+  "toefl:感官的:adj.": {
+    "title_zh": "感官的性质",
+    "members": [
+      {
+        "headword": "sensory",
+        "feel_zh": "科学性强",
+        "contrast_hint": "多用于生理和科学"
+      },
+      {
+        "headword": "sensuous",
+        "feel_zh": "感性愉悦",
+        "contrast_hint": "强调愉悦的感官体验"
+      }
+    ]
+  },
+  "toefl:光滑的:adj.": {
+    "title_zh": "光滑的质感",
+    "members": [
+      {
+        "headword": "glossy",
+        "feel_zh": "表面光亮",
+        "contrast_hint": "强调表面光滑光亮"
+      },
+      {
+        "headword": "glassy",
+        "feel_zh": "如玻璃般",
+        "contrast_hint": "强调如玻璃般透明"
+      }
+    ]
+  },
+  "toefl:限制性的:adj.": {
+    "title_zh": "限制的程度",
+    "members": [
+      {
+        "headword": "restrictive",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于法律或政策中"
+      },
+      {
+        "headword": "confining",
+        "feel_zh": "较为具体",
+        "contrast_hint": "多指空间或环境限制"
+      }
+    ]
+  },
+  "toefl:必要的:n.": {
+    "title_zh": "必要性",
+    "members": [
+      {
+        "headword": "imperative",
+        "feel_zh": "紧急且迫切",
+        "contrast_hint": "强调立即行动的必要性"
+      },
+      {
+        "headword": "integral",
+        "feel_zh": "整体不可分割",
+        "contrast_hint": "强调整体性的重要组成部分"
+      }
+    ]
+  },
+  "toefl:不满:n.": {
+    "title_zh": "不满的表达",
+    "members": [
+      {
+        "headword": "grievance",
+        "feel_zh": "带有委屈感",
+        "contrast_hint": "多指因不公正待遇"
+      },
+      {
+        "headword": "discontent",
+        "feel_zh": "普遍不满情绪",
+        "contrast_hint": "多指对现状不满"
+      }
+    ]
+  },
+  "toefl:无聊:n.": {
+    "title_zh": "无聊的感受",
+    "members": [
+      {
+        "headword": "boredom",
+        "feel_zh": "普通无聊",
+        "contrast_hint": "多指日常生活中的无聊"
+      },
+      {
+        "headword": "ennui",
+        "feel_zh": "深沉倦怠",
+        "contrast_hint": "常用于形容精神上的疲惫"
+      }
+    ]
+  },
+  "toefl:有说服力的:adj.": {
+    "title_zh": "说服的方式",
+    "members": [
+      {
+        "headword": "persuasive",
+        "feel_zh": "强调情感打动",
+        "contrast_hint": "适合日常交流场合"
+      },
+      {
+        "headword": "cogent",
+        "feel_zh": "强调逻辑严密",
+        "contrast_hint": "多用于正式论证中"
+      }
+    ]
+  },
+  "toefl:宽敞的:adj.": {
+    "title_zh": "空间的宽敞",
+    "members": [
+      {
+        "headword": "spacious",
+        "feel_zh": "大而舒适",
+        "contrast_hint": "强调空间的广阔"
+      },
+      {
+        "headword": "commodious",
+        "feel_zh": "舒适且便利",
+        "contrast_hint": "多指实用性和舒适性"
+      }
+    ]
+  },
+  "toefl:偏离:v.": {
+    "title_zh": "偏离的方式",
+    "members": [
+      {
+        "headword": "veer",
+        "feel_zh": "突然转向",
+        "contrast_hint": "多指方向上的突然改变"
+      },
+      {
+        "headword": "deviate",
+        "feel_zh": "脱离常规",
+        "contrast_hint": "多指背离标准或常规"
+      }
+    ]
+  },
+  "toefl:有节奏的:adj.": {
+    "title_zh": "节奏的表达",
+    "members": [
+      {
+        "headword": "rhythmic",
+        "feel_zh": "更为常用",
+        "contrast_hint": "多用于日常用语"
+      },
+      {
+        "headword": "rhythmical",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于文学作品"
+      }
+    ]
+  },
+  "toefl:疾病:n.": {
+    "title_zh": "疾病的表达",
+    "members": [
+      {
+        "headword": "ailment",
+        "feel_zh": "轻微不适",
+        "contrast_hint": "常指小病小痛"
+      },
+      {
+        "headword": "malady",
+        "feel_zh": "严重病症",
+        "contrast_hint": "多指重大疾病"
+      }
+    ]
+  },
+  "toefl:减弱:v.": {
+    "title_zh": "减弱的方式",
+    "members": [
+      {
+        "headword": "subside",
+        "feel_zh": "逐渐减弱",
+        "contrast_hint": "常指自然过程减弱"
+      },
+      {
+        "headword": "abate",
+        "feel_zh": "迅速减少",
+        "contrast_hint": "多用于主动控制"
+      }
+    ]
+  },
+  "toefl:非法的:adj.": {
+    "title_zh": "合法性的缺失",
+    "members": [
+      {
+        "headword": "illicit",
+        "feel_zh": "多指违禁",
+        "contrast_hint": "常用于形容违禁品"
+      },
+      {
+        "headword": "illegitimate",
+        "feel_zh": "带有不正当意味",
+        "contrast_hint": "多用于形容权力或地位"
+      }
+    ]
+  },
+  "toefl:妨碍:v.": {
+    "title_zh": "妨碍的方式",
+    "members": [
+      {
+        "headword": "impede",
+        "feel_zh": "阻力感强",
+        "contrast_hint": "强调阻止进程"
+      },
+      {
+        "headword": "encumber",
+        "feel_zh": "负担感重",
+        "contrast_hint": "强调限制行动"
+      }
+    ]
+  },
+  "toefl:贫困的:adj.": {
+    "title_zh": "贫困的程度",
+    "members": [
+      {
+        "headword": "needy",
+        "feel_zh": "需要帮助",
+        "contrast_hint": "强调需要外界支持"
+      },
+      {
+        "headword": "indigent",
+        "feel_zh": "极度贫困",
+        "contrast_hint": "强调缺乏基本生活必需品"
+      }
+    ]
+  },
+  "toefl:膨胀:v.": {
+    "title_zh": "膨胀的方式",
+    "members": [
+      {
+        "headword": "inflate",
+        "feel_zh": "多指人为充气",
+        "contrast_hint": "常用于气球、轮胎等"
+      },
+      {
+        "headword": "distend",
+        "feel_zh": "自然或病理膨胀",
+        "contrast_hint": "常用于身体部位"
+      }
+    ]
+  },
+  "toefl:安抚:v.": {
+    "title_zh": "安抚的方式",
+    "members": [
+      {
+        "headword": "soothe",
+        "feel_zh": "柔和且温暖",
+        "contrast_hint": "多用于安慰孩子或病人"
+      },
+      {
+        "headword": "placate",
+        "feel_zh": "正式且理智",
+        "contrast_hint": "多用于化解冲突或争端"
+      }
+    ]
+  },
+  "toefl:优势:n.": {
+    "title_zh": "优势的形式",
+    "members": [
+      {
+        "headword": "vantage",
+        "feel_zh": "视觉上的优势",
+        "contrast_hint": "强调位置或视野上的有利"
+      },
+      {
+        "headword": "preponderance",
+        "feel_zh": "数量上的优势",
+        "contrast_hint": "强调数量或影响力的占优"
+      }
+    ]
+  },
+  "toefl:奢华的:adj.": {
+    "title_zh": "奢华的程度",
+    "members": [
+      {
+        "headword": "lavish",
+        "feel_zh": "极尽奢华",
+        "contrast_hint": "强调过度与浪费"
+      },
+      {
+        "headword": "luxurious",
+        "feel_zh": "优雅舒适",
+        "contrast_hint": "强调舒适与享受"
+      }
+    ]
+  },
+  "toefl:宴会:n.": {
+    "title_zh": "宴会类型",
+    "members": [
+      {
+        "headword": "banquet",
+        "feel_zh": "正式隆重",
+        "contrast_hint": "多用于正式场合的大型宴会"
+      },
+      {
+        "headword": "fete",
+        "feel_zh": "轻松欢庆",
+        "contrast_hint": "常用于庆祝或宗教活动的聚会"
+      }
+    ]
+  },
+  "toefl:入侵者:n.": {
+    "title_zh": "入侵者类型",
+    "members": [
+      {
+        "headword": "intruder",
+        "feel_zh": "隐秘性强",
+        "contrast_hint": "多指偷偷进入的个体"
+      },
+      {
+        "headword": "invader",
+        "feel_zh": "规模较大",
+        "contrast_hint": "常指大规模入侵的势力"
+      }
+    ]
+  },
+  "toefl:调味料:n.": {
+    "title_zh": "调味的方式",
+    "members": [
+      {
+        "headword": "seasoning",
+        "feel_zh": "强调整体调味",
+        "contrast_hint": "更强调对整体风味的提升"
+      },
+      {
+        "headword": "flavoring",
+        "feel_zh": "突出特定风味",
+        "contrast_hint": "更注重增添特定的味道"
+      }
+    ]
+  },
+  "toefl:根除:v.": {
+    "title_zh": "根除的方式",
+    "members": [
+      {
+        "headword": "eradicate",
+        "feel_zh": "正式且彻底",
+        "contrast_hint": "多用于政策或疾病"
+      },
+      {
+        "headword": "uproot",
+        "feel_zh": "形象且具体",
+        "contrast_hint": "常用于植物或习惯"
+      }
+    ]
+  },
+  "toefl:宽容的:adj.": {
+    "title_zh": "宽容的方式",
+    "members": [
+      {
+        "headword": "tolerant",
+        "feel_zh": "接受差异",
+        "contrast_hint": "强调对不同观点的接受"
+      },
+      {
+        "headword": "permissive",
+        "feel_zh": "放任自由",
+        "contrast_hint": "强调给予行为自由"
+      }
+    ]
+  },
+  "toefl:剧变:n.": {
+    "title_zh": "剧变的程度",
+    "members": [
+      {
+        "headword": "upheaval",
+        "feel_zh": "社会动荡",
+        "contrast_hint": "常指社会或政治的动荡"
+      },
+      {
+        "headword": "cataclysm",
+        "feel_zh": "自然灾难",
+        "contrast_hint": "多用于自然界的大灾难"
+      }
+    ]
+  },
+  "toefl:愚蠢:n.": {
+    "title_zh": "愚蠢的程度",
+    "members": [
+      {
+        "headword": "folly",
+        "feel_zh": "轻度愚蠢",
+        "contrast_hint": "多指行为不智"
+      },
+      {
+        "headword": "idiocy",
+        "feel_zh": "极端愚蠢",
+        "contrast_hint": "强调智力缺陷"
+      }
+    ]
+  },
+  "toefl:复制品:n.": {
+    "title_zh": "复制品的类型",
+    "members": [
+      {
+        "headword": "replica",
+        "feel_zh": "精确复制",
+        "contrast_hint": "常用于艺术品复制"
+      },
+      {
+        "headword": "facsimile",
+        "feel_zh": "完全复刻",
+        "contrast_hint": "多用于文件或书籍"
+      }
+    ]
+  },
+  "toefl:无效的:adj.": {
+    "title_zh": "无效的表达",
+    "members": [
+      {
+        "headword": "futile",
+        "feel_zh": "徒劳无功",
+        "contrast_hint": "强调努力无效"
+      },
+      {
+        "headword": "null",
+        "feel_zh": "法律无效",
+        "contrast_hint": "多用于法律术语"
+      }
+    ]
+  },
+  "toefl:工匠:n.": {
+    "title_zh": "工匠的种类",
+    "members": [
+      {
+        "headword": "artisan",
+        "feel_zh": "传统手艺",
+        "contrast_hint": "多指个体手工艺人"
+      },
+      {
+        "headword": "craftspeople",
+        "feel_zh": "群体协作",
+        "contrast_hint": "常用于指多个手艺人"
+      }
+    ]
+  },
+  "toefl:驱逐:v.": {
+    "title_zh": "驱逐的方式",
+    "members": [
+      {
+        "headword": "banish",
+        "feel_zh": "正式且永久",
+        "contrast_hint": "常用于法律或传统场合"
+      },
+      {
+        "headword": "oust",
+        "feel_zh": "强制且迅速",
+        "contrast_hint": "多用于职位或权力的剥夺"
+      }
+    ]
+  },
+  "toefl:狂喜:n.": {
+    "title_zh": "极度快乐",
+    "members": [
+      {
+        "headword": "ecstasy",
+        "feel_zh": "更具戏剧性",
+        "contrast_hint": "常用于形容短暂的极乐"
+      },
+      {
+        "headword": "rapture",
+        "feel_zh": "更具宗教色彩",
+        "contrast_hint": "常用于形容灵魂的欢愉"
+      }
+    ]
+  },
+  "toefl:纠缠:n.": {
+    "title_zh": "纠缠的状态",
+    "members": [
+      {
+        "headword": "tangle",
+        "feel_zh": "多指物理纠缠",
+        "contrast_hint": "常用于线、发丝等物理缠绕"
+      },
+      {
+        "headword": "entanglement",
+        "feel_zh": "多指复杂关系",
+        "contrast_hint": "常用于人际关系或情感纠葛"
+      }
+    ]
+  },
+  "toefl:放弃:n.": {
+    "title_zh": "放弃的方式",
+    "members": [
+      {
+        "headword": "abandonment",
+        "feel_zh": "带有遗弃感",
+        "contrast_hint": "常用于被迫或无奈的放弃"
+      },
+      {
+        "headword": "renunciation",
+        "feel_zh": "自愿放弃",
+        "contrast_hint": "强调主动和正式的放弃"
+      }
+    ]
+  },
+  "toefl:阴沉的:adj.": {
+    "title_zh": "阴沉的情绪",
+    "members": [
+      {
+        "headword": "dismal",
+        "feel_zh": "绝望感强",
+        "contrast_hint": "多用于描述环境或氛围"
+      },
+      {
+        "headword": "sullen",
+        "feel_zh": "闷闷不乐",
+        "contrast_hint": "多用于形容人的情绪"
+      }
+    ]
+  },
+  "toefl:稀释:v.": {
+    "title_zh": "稀释的方式",
+    "members": [
+      {
+        "headword": "dilute",
+        "feel_zh": "常用于液体",
+        "contrast_hint": "通常指加水或液体稀释"
+      },
+      {
+        "headword": "rarefy",
+        "feel_zh": "多用于气体",
+        "contrast_hint": "通常指减少密度或浓度"
+      }
+    ]
+  },
+  "toefl:非传统的:adj.": {
+    "title_zh": "非传统的方式",
+    "members": [
+      {
+        "headword": "nontraditional",
+        "feel_zh": "强调不循规蹈矩",
+        "contrast_hint": "更常用于描述行为习惯"
+      },
+      {
+        "headword": "unconventional",
+        "feel_zh": "强调独特创新",
+        "contrast_hint": "多用于艺术或风格"
+      }
+    ]
+  },
+  "toefl:密谋:v.": {
+    "title_zh": "密谋的方式",
+    "members": [
+      {
+        "headword": "conspire",
+        "feel_zh": "正式且严肃",
+        "contrast_hint": "常用于法律或政治语境"
+      },
+      {
+        "headword": "connive",
+        "feel_zh": "隐秘且狡猾",
+        "contrast_hint": "多指小团体的私下勾结"
+      }
+    ]
+  },
+  "toefl:服从:n.": {
+    "title_zh": "服从的形式",
+    "members": [
+      {
+        "headword": "obedience",
+        "feel_zh": "强调自愿顺从",
+        "contrast_hint": "多用于个人对规则的遵守"
+      },
+      {
+        "headword": "subjection",
+        "feel_zh": "强调被动隶属",
+        "contrast_hint": "常指被控制或征服的状态"
+      }
+    ]
+  },
+  "toefl:赞助:n.": {
+    "title_zh": "赞助的方式",
+    "members": [
+      {
+        "headword": "patronage",
+        "feel_zh": "带有支持意味",
+        "contrast_hint": "多指个人或组织长期支持"
+      },
+      {
+        "headword": "auspices",
+        "feel_zh": "带有保护意味",
+        "contrast_hint": "多用于正式或官方场合"
+      }
+    ]
+  },
+  "toefl:合适的:adj.": {
+    "title_zh": "合适的程度",
+    "members": [
+      {
+        "headword": "fitting",
+        "feel_zh": "正式且中性",
+        "contrast_hint": "更强调场合或环境的合适"
+      },
+      {
+        "headword": "agreeable",
+        "feel_zh": "愉悦且亲切",
+        "contrast_hint": "更强调个人或群体的接受度"
+      }
+    ]
+  },
+  "toefl:乏味的:adj.": {
+    "title_zh": "无趣的程度",
+    "members": [
+      {
+        "headword": "bland",
+        "feel_zh": "温和无味",
+        "contrast_hint": "多指缺乏刺激或个性"
+      },
+      {
+        "headword": "stodgy",
+        "feel_zh": "沉闷守旧",
+        "contrast_hint": "多指传统或缺乏活力"
+      }
+    ]
+  },
+  "toefl:宁静的:adj.": {
+    "title_zh": "宁静的状态",
+    "members": [
+      {
+        "headword": "serene",
+        "feel_zh": "内心宁静",
+        "contrast_hint": "多指内心或精神的宁静"
+      },
+      {
+        "headword": "tranquil",
+        "feel_zh": "环境宁静",
+        "contrast_hint": "多指外部环境的宁静"
+      }
+    ]
+  },
+  "toefl:卫生:n.": {
+    "title_zh": "卫生的方式",
+    "members": [
+      {
+        "headword": "sanitation",
+        "feel_zh": "设施和环境",
+        "contrast_hint": "多指公共卫生设施"
+      },
+      {
+        "headword": "hygiene",
+        "feel_zh": "个人与习惯",
+        "contrast_hint": "多指个人卫生习惯"
+      }
+    ]
+  },
+  "toefl:光辉:n.": {
+    "title_zh": "光辉的表现",
+    "members": [
+      {
+        "headword": "gleam",
+        "feel_zh": "短暂微光",
+        "contrast_hint": "用于描述瞬间的光亮"
+      },
+      {
+        "headword": "brilliance",
+        "feel_zh": "耀眼光芒",
+        "contrast_hint": "常用于形容持久而强烈的光辉"
+      }
+    ]
+  },
+  "toefl:节俭:n.": {
+    "title_zh": "节俭的方式",
+    "members": [
+      {
+        "headword": "thrift",
+        "feel_zh": "偏向生活习惯",
+        "contrast_hint": "常指日常生活中的节俭"
+      },
+      {
+        "headword": "frugality",
+        "feel_zh": "偏向理财观念",
+        "contrast_hint": "多用于财务或经济决策"
+      }
+    ]
+  },
+  "toefl:微小的污点:n.": {
+    "title_zh": "微小污点",
+    "members": [
+      {
+        "headword": "speck",
+        "feel_zh": "中性",
+        "contrast_hint": "泛指表面的小污点"
+      },
+      {
+        "headword": "flyspeck",
+        "feel_zh": "轻蔑",
+        "contrast_hint": "常指不重要的污点"
+      }
+    ]
+  },
+  "toefl:争吵:v.": {
+    "title_zh": "争吵的程度",
+    "members": [
+      {
+        "headword": "bicker",
+        "feel_zh": "多指小争吵",
+        "contrast_hint": "常为琐事而争"
+      },
+      {
+        "headword": "squabble",
+        "feel_zh": "声音较大",
+        "contrast_hint": "常指朋友间争吵"
+      }
+    ]
+  },
+  "toefl:灯塔:n.": {
+    "title_zh": "导航建筑",
+    "members": [
+      {
+        "headword": "beacon",
+        "feel_zh": "泛指信号灯",
+        "contrast_hint": "可指任何形式的信号灯"
+      },
+      {
+        "headword": "lighthouse",
+        "feel_zh": "专指海上灯塔",
+        "contrast_hint": "特指用于海上航行的灯塔"
+      }
+    ]
+  },
+  "toefl:讽刺:n.": {
+    "title_zh": "讽刺的方式",
+    "members": [
+      {
+        "headword": "satire",
+        "feel_zh": "文学艺术讽刺",
+        "contrast_hint": "多用于文学作品中"
+      },
+      {
+        "headword": "sarcasm",
+        "feel_zh": "言语尖刻讽刺",
+        "contrast_hint": "多用于日常对话中"
+      }
+    ]
+  },
+  "toefl:尊敬:n.": {
+    "title_zh": "尊敬的深度",
+    "members": [
+      {
+        "headword": "reverence",
+        "feel_zh": "敬畏之情",
+        "contrast_hint": "常含畏惧与尊敬"
+      },
+      {
+        "headword": "veneration",
+        "feel_zh": "崇高敬意",
+        "contrast_hint": "多用于宗教或传统"
+      }
+    ]
+  },
+  "toefl:短暂的:adj.": {
+    "title_zh": "短暂的时间",
+    "members": [
+      {
+        "headword": "fleeting",
+        "feel_zh": "稍纵即逝",
+        "contrast_hint": "强调瞬间即逝的感觉"
+      },
+      {
+        "headword": "ephemeral",
+        "feel_zh": "昙花一现",
+        "contrast_hint": "多用于生命或事物短暂"
+      }
+    ]
+  },
+  "toefl:裂缝:n.": {
+    "title_zh": "裂缝的类型",
+    "members": [
+      {
+        "headword": "rift",
+        "feel_zh": "更大更明显",
+        "contrast_hint": "通常指较大裂缝或分歧"
+      },
+      {
+        "headword": "crevice",
+        "feel_zh": "狭窄且隐蔽",
+        "contrast_hint": "多指小而窄的裂缝"
+      }
+    ]
+  },
+  "toefl:崇敬:v.": {
+    "title_zh": "表达崇敬",
+    "members": [
+      {
+        "headword": "revere",
+        "feel_zh": "带有敬畏之情",
+        "contrast_hint": "常用于宗教或伟人"
+      },
+      {
+        "headword": "venerate",
+        "feel_zh": "强调尊重",
+        "contrast_hint": "多用于传统或长者"
+      }
+    ]
+  },
+  "toefl:获得:n.": {
+    "title_zh": "获得的方式",
+    "members": [
+      {
+        "headword": "attainment",
+        "feel_zh": "正式且积极",
+        "contrast_hint": "强调通过努力达到目标"
+      },
+      {
+        "headword": "garner",
+        "feel_zh": "较为口语化",
+        "contrast_hint": "强调通过时间或努力收集"
+      }
+    ]
+  },
+  "toefl:狂热者:n.": {
+    "title_zh": "狂热程度",
+    "members": [
+      {
+        "headword": "fanatic",
+        "feel_zh": "偏重行为激烈",
+        "contrast_hint": "多指对具体事物的狂热"
+      },
+      {
+        "headword": "zealot",
+        "feel_zh": "偏重思想坚定",
+        "contrast_hint": "多指对抽象信仰的狂热"
+      }
+    ]
+  },
+  "toefl:凝聚:n.": {
+    "title_zh": "凝聚的形式",
+    "members": [
+      {
+        "headword": "cohesion",
+        "feel_zh": "团结一致",
+        "contrast_hint": "强调整体的紧密结合"
+      },
+      {
+        "headword": "condensation",
+        "feel_zh": "物理变化",
+        "contrast_hint": "强调气体转化为液体"
+      }
+    ]
+  },
+  "toefl:精明的:adj.": {
+    "title_zh": "精明的程度",
+    "members": [
+      {
+        "headword": "shrewd",
+        "feel_zh": "更具洞察力",
+        "contrast_hint": "多指商业或政治精明"
+      },
+      {
+        "headword": "astute",
+        "feel_zh": "更善于分析",
+        "contrast_hint": "常用于策略或判断"
+      }
+    ]
+  },
+  "toefl:教育的:adj.": {
+    "title_zh": "教育方法",
+    "members": [
+      {
+        "headword": "pedagogical",
+        "feel_zh": "学术色彩浓",
+        "contrast_hint": "多用于学术讨论"
+      },
+      {
+        "headword": "pedagogic",
+        "feel_zh": "较口语化",
+        "contrast_hint": "日常教学环境常用"
+      }
+    ]
+  },
+  "toefl:尊重:n.": {
+    "title_zh": "尊重的方式",
+    "members": [
+      {
+        "headword": "esteem",
+        "feel_zh": "重视感强",
+        "contrast_hint": "常用于表达对品质的尊重"
+      },
+      {
+        "headword": "deference",
+        "feel_zh": "顺从意味",
+        "contrast_hint": "多指对权威或长辈的尊重"
+      }
+    ]
+  },
+  "toefl:洞穴:n.": {
+    "title_zh": "洞穴类型",
+    "members": [
+      {
+        "headword": "cavern",
+        "feel_zh": "巨大而神秘",
+        "contrast_hint": "常指自然形成的大洞穴"
+      },
+      {
+        "headword": "burrow",
+        "feel_zh": "小巧而隐蔽",
+        "contrast_hint": "多指动物挖掘的地道"
+      }
+    ]
+  },
+  "toefl:粗俗的:adj.": {
+    "title_zh": "粗俗的程度",
+    "members": [
+      {
+        "headword": "vulgar",
+        "feel_zh": "低级趣味",
+        "contrast_hint": "多指品味低下"
+      },
+      {
+        "headword": "crass",
+        "feel_zh": "粗鲁无礼",
+        "contrast_hint": "多指缺乏敏感"
+      }
+    ]
+  },
+  "toefl:大屠杀:n.": {
+    "title_zh": "大屠杀",
+    "members": [
+      {
+        "headword": "carnage",
+        "feel_zh": "场面血腥",
+        "contrast_hint": "常用于战场或暴力事件"
+      },
+      {
+        "headword": "holocaust",
+        "feel_zh": "历史特定",
+        "contrast_hint": "尤指种族灭绝的历史事件"
+      }
+    ]
+  },
+  "toefl:微生物:n.": {
+    "title_zh": "微生物的称谓",
+    "members": [
+      {
+        "headword": "microorganism",
+        "feel_zh": "学术用词",
+        "contrast_hint": "多用于科学研究中"
+      },
+      {
+        "headword": "microbe",
+        "feel_zh": "口语常见",
+        "contrast_hint": "日常交流中更常用"
+      }
+    ]
+  },
+  "toefl:传染性的:adj.": {
+    "title_zh": "传染的性质",
+    "members": [
+      {
+        "headword": "contagious",
+        "feel_zh": "强调直接接触",
+        "contrast_hint": "多指通过接触传播"
+      },
+      {
+        "headword": "infectious",
+        "feel_zh": "强调病原体传播",
+        "contrast_hint": "多指通过病原体传播"
+      }
+    ]
+  },
+  "toefl:间歇性的:adj.": {
+    "title_zh": "间歇的性质",
+    "members": [
+      {
+        "headword": "sporadic",
+        "feel_zh": "不定期出现",
+        "contrast_hint": "强调时间间隔不规则"
+      },
+      {
+        "headword": "fitful",
+        "feel_zh": "断断续续",
+        "contrast_hint": "强调过程不连贯"
+      }
+    ]
+  },
+  "toefl:附属物:n.": {
+    "title_zh": "附属物",
+    "members": [
+      {
+        "headword": "adjunct",
+        "feel_zh": "多指辅助",
+        "contrast_hint": "常用于教育或工作中"
+      },
+      {
+        "headword": "annex",
+        "feel_zh": "多指扩展",
+        "contrast_hint": "常用于建筑或文件中"
+      }
+    ]
+  },
+  "toefl:英勇:n.": {
+    "title_zh": "英勇的表现",
+    "members": [
+      {
+        "headword": "heroism",
+        "feel_zh": "带有崇高感",
+        "contrast_hint": "常用于形容伟大事迹"
+      },
+      {
+        "headword": "gallantry",
+        "feel_zh": "带有骑士精神",
+        "contrast_hint": "多用于形容个人勇气"
+      }
+    ]
+  },
+  "toefl:深渊:n.": {
+    "title_zh": "深渊的类型",
+    "members": [
+      {
+        "headword": "abyss",
+        "feel_zh": "无底的恐怖",
+        "contrast_hint": "强调无底或无尽的深渊"
+      },
+      {
+        "headword": "chasm",
+        "feel_zh": "地表的裂缝",
+        "contrast_hint": "强调地表裂缝或鸿沟"
+      }
+    ]
+  },
+  "toefl:神秘的:adj.": {
+    "title_zh": "神秘的表达",
+    "members": [
+      {
+        "headword": "enigmatic",
+        "feel_zh": "令人费解",
+        "contrast_hint": "更强调难以理解的性质"
+      },
+      {
+        "headword": "cryptic",
+        "feel_zh": "隐晦不明",
+        "contrast_hint": "更强调隐晦和模糊"
+      }
+    ]
+  },
+  "toefl:雕刻:v.": {
+    "title_zh": "雕刻方式",
+    "members": [
+      {
+        "headword": "sculpt",
+        "feel_zh": "立体感强",
+        "contrast_hint": "多用于雕塑艺术创作"
+      },
+      {
+        "headword": "engrave",
+        "feel_zh": "细节精致",
+        "contrast_hint": "常用于金属或石材表面"
+      }
+    ]
+  },
+  "toefl:相邻的:adj.": {
+    "title_zh": "相邻的关系",
+    "members": [
+      {
+        "headword": "adjoining",
+        "feel_zh": "较常用于建筑",
+        "contrast_hint": "常指建筑物之间的相邻"
+      },
+      {
+        "headword": "contiguous",
+        "feel_zh": "更正式",
+        "contrast_hint": "强调物理接触或连续性"
+      }
+    ]
+  },
+  "toefl:雕刻:n.": {
+    "title_zh": "雕刻的方式",
+    "members": [
+      {
+        "headword": "engraving",
+        "feel_zh": "精细且正式",
+        "contrast_hint": "多用于版画或金属雕刻"
+      },
+      {
+        "headword": "carving",
+        "feel_zh": "立体且传统",
+        "contrast_hint": "常用于木材或石材雕刻"
+      }
+    ]
+  },
+  "toefl:微不足道的:adj.": {
+    "title_zh": "微不足道",
+    "members": [
+      {
+        "headword": "negligible",
+        "feel_zh": "正式且理性",
+        "contrast_hint": "常用于数据或影响"
+      },
+      {
+        "headword": "trifling",
+        "feel_zh": "轻松且随意",
+        "contrast_hint": "多指日常琐事"
+      }
+    ]
+  },
+  "toefl:伪装:v.": {
+    "title_zh": "伪装的方式",
+    "members": [
+      {
+        "headword": "camouflage",
+        "feel_zh": "军事色彩浓",
+        "contrast_hint": "常用于军事或自然环境"
+      },
+      {
+        "headword": "dissimulate",
+        "feel_zh": "心理层面重",
+        "contrast_hint": "多指掩饰内心真实情感"
+      }
+    ]
+  },
+  "toefl:重大的:adj.": {
+    "title_zh": "重大事件",
+    "members": [
+      {
+        "headword": "fateful",
+        "feel_zh": "带有宿命感",
+        "contrast_hint": "常指负面重大事件"
+      },
+      {
+        "headword": "momentous",
+        "feel_zh": "强调重要性",
+        "contrast_hint": "多用于正面或中性事件"
+      }
+    ]
+  },
+  "toefl:寓言:n.": {
+    "title_zh": "寓言的类型",
+    "members": [
+      {
+        "headword": "fable",
+        "feel_zh": "简短生动",
+        "contrast_hint": "常用动物角色传递教训"
+      },
+      {
+        "headword": "allegory",
+        "feel_zh": "象征深刻",
+        "contrast_hint": "用象征手法表达深层含义"
+      }
+    ]
+  },
+  "toefl:和谐的:adj.": {
+    "title_zh": "和谐的类型",
+    "members": [
+      {
+        "headword": "harmonious",
+        "feel_zh": "整体感强",
+        "contrast_hint": "用于描述整体和谐的状态"
+      },
+      {
+        "headword": "harmonic",
+        "feel_zh": "音乐感强",
+        "contrast_hint": "多用于音乐领域的和谐"
+      }
+    ]
+  },
+  "toefl:艰巨的:adj.": {
+    "title_zh": "艰巨程度",
+    "members": [
+      {
+        "headword": "arduous",
+        "feel_zh": "强调持久努力",
+        "contrast_hint": "多指持续的努力和坚持"
+      },
+      {
+        "headword": "herculean",
+        "feel_zh": "强调超凡力量",
+        "contrast_hint": "常用于形容极端困难或巨大的挑战"
+      }
+    ]
+  },
+  "toefl:费力的:adj.": {
+    "title_zh": "费力的程度",
+    "members": [
+      {
+        "headword": "strenuous",
+        "feel_zh": "强调体力消耗",
+        "contrast_hint": "多用于体力活动"
+      },
+      {
+        "headword": "laborious",
+        "feel_zh": "强调时间耗费",
+        "contrast_hint": "多用于长时间工作"
+      }
+    ]
+  },
+  "toefl:餐具:n.": {
+    "title_zh": "餐具种类",
+    "members": [
+      {
+        "headword": "utensil",
+        "feel_zh": "多指工具",
+        "contrast_hint": "强调功能性,可用于烹饪"
+      },
+      {
+        "headword": "tableware",
+        "feel_zh": "多指器皿",
+        "contrast_hint": "强调摆设性,用于餐桌"
+      }
+    ]
+  },
+  "toefl:厌恶:n.": {
+    "title_zh": "厌恶的表达",
+    "members": [
+      {
+        "headword": "aversion",
+        "feel_zh": "更偏向个人感受",
+        "contrast_hint": "常用于具体事物"
+      },
+      {
+        "headword": "antipathy",
+        "feel_zh": "更偏向情感对立",
+        "contrast_hint": "常用于抽象概念"
+      }
+    ]
+  },
+  "toefl:宁静:n.": {
+    "title_zh": "宁静的状态",
+    "members": [
+      {
+        "headword": "serenity",
+        "feel_zh": "更具内心平和",
+        "contrast_hint": "常用于形容内心的宁静"
+      },
+      {
+        "headword": "tranquility",
+        "feel_zh": "更强调环境安静",
+        "contrast_hint": "多用于描述外部环境"
+      }
+    ]
+  },
+  "toefl:危险的:adj.": {
+    "title_zh": "危险的程度",
+    "members": [
+      {
+        "headword": "perilous",
+        "feel_zh": "极度危险",
+        "contrast_hint": "强调环境或情况的危险"
+      },
+      {
+        "headword": "treacherous",
+        "feel_zh": "暗藏杀机",
+        "contrast_hint": "强调不可预测和背叛"
+      }
+    ]
+  },
+  "toefl:虔诚的:adj.": {
+    "title_zh": "虔诚的程度",
+    "members": [
+      {
+        "headword": "pious",
+        "feel_zh": "更具形式感",
+        "contrast_hint": "常用于仪式或祈祷"
+      },
+      {
+        "headword": "devout",
+        "feel_zh": "更具内心虔诚",
+        "contrast_hint": "强调个人深刻信仰"
+      }
+    ]
+  },
+  "toefl:征服:v.": {
+    "title_zh": "征服的方式",
+    "members": [
+      {
+        "headword": "subdue",
+        "feel_zh": "含有抑制意味",
+        "contrast_hint": "多指控制情绪或局势"
+      },
+      {
+        "headword": "vanquish",
+        "feel_zh": "强调彻底战胜",
+        "contrast_hint": "常用于战争或竞争"
+      }
+    ]
+  },
+  "toefl:无数的:adj.": {
+    "title_zh": "无数的程度",
+    "members": [
+      {
+        "headword": "innumerable",
+        "feel_zh": "书面语感强",
+        "contrast_hint": "常用于正式场合"
+      },
+      {
+        "headword": "countless",
+        "feel_zh": "口语化常用",
+        "contrast_hint": "适合日常对话"
+      }
+    ]
+  },
+  "toefl:喧闹的:adj.": {
+    "title_zh": "喧闹的程度",
+    "members": [
+      {
+        "headword": "raucous",
+        "feel_zh": "刺耳且粗野",
+        "contrast_hint": "常指扰乱性喧闹"
+      },
+      {
+        "headword": "clamorous",
+        "feel_zh": "持续且嘈杂",
+        "contrast_hint": "多指持续的噪声"
+      }
+    ]
+  },
+  "toefl:刺鼻的:adj.": {
+    "title_zh": "气味的强烈",
+    "members": [
+      {
+        "headword": "pungent",
+        "feel_zh": "辛辣刺激",
+        "contrast_hint": "常用于形容食物气味"
+      },
+      {
+        "headword": "acrid",
+        "feel_zh": "刺鼻难闻",
+        "contrast_hint": "多用于形容烟雾气味"
+      }
+    ]
+  },
+  "toefl:交叉口:n.": {
+    "title_zh": "道路交汇",
+    "members": [
+      {
+        "headword": "junction",
+        "feel_zh": "偏工程术语",
+        "contrast_hint": "常用于铁路、公路交汇"
+      },
+      {
+        "headword": "intersection",
+        "feel_zh": "日常用语",
+        "contrast_hint": "多指城市街道交叉"
+      }
+    ]
+  },
+  "toefl:高地:n.": {
+    "title_zh": "地形类型",
+    "members": [
+      {
+        "headword": "upland",
+        "feel_zh": "多指丘陵",
+        "contrast_hint": "常指不规则的高地"
+      },
+      {
+        "headword": "tableland",
+        "feel_zh": "多指平坦",
+        "contrast_hint": "强调平坦且高的地形"
+      }
+    ]
+  },
+  "toefl:恶意的:adj.": {
+    "title_zh": "恶意的表达",
+    "members": [
+      {
+        "headword": "malicious",
+        "feel_zh": "意图伤害他人",
+        "contrast_hint": "多指行为上的恶意"
+      },
+      {
+        "headword": "malign",
+        "feel_zh": "中伤他人",
+        "contrast_hint": "多指言语上的恶意"
+      }
+    ]
+  },
+  "toefl:令人困惑的:adj.": {
+    "title_zh": "令人困惑",
+    "members": [
+      {
+        "headword": "puzzling",
+        "feel_zh": "隐含复杂性",
+        "contrast_hint": "多指因复杂或模糊"
+      },
+      {
+        "headword": "perplexing",
+        "feel_zh": "更显棘手",
+        "contrast_hint": "多指难以解决或理解"
+      }
+    ]
+  },
+  "toefl:反驳:v.": {
+    "title_zh": "反驳的方式",
+    "members": [
+      {
+        "headword": "disprove",
+        "feel_zh": "强调证据",
+        "contrast_hint": "强调用证据证明错误"
+      },
+      {
+        "headword": "rebut",
+        "feel_zh": "注重辩论",
+        "contrast_hint": "通过辩论或讨论反驳"
+      }
+    ]
+  },
+  "toefl:分歧:n.": {
+    "title_zh": "分歧的类型",
+    "members": [
+      {
+        "headword": "divergence",
+        "feel_zh": "较客观描述",
+        "contrast_hint": "强调不同发展方向"
+      },
+      {
+        "headword": "dissension",
+        "feel_zh": "带有争议意味",
+        "contrast_hint": "强调群体内部争论"
+      }
+    ]
+  },
+  "toefl:否认:v.": {
+    "title_zh": "否认的方式",
+    "members": [
+      {
+        "headword": "repudiate",
+        "feel_zh": "正式且果断",
+        "contrast_hint": "多用于正式声明中"
+      },
+      {
+        "headword": "gainsay",
+        "feel_zh": "带有反驳意味",
+        "contrast_hint": "常用于辩论或争论"
+      }
+    ]
+  },
+  "toefl:灵活的:adj.": {
+    "title_zh": "灵活的程度",
+    "members": [
+      {
+        "headword": "agile",
+        "feel_zh": "动作敏捷",
+        "contrast_hint": "常用于描述身体的灵活性"
+      },
+      {
+        "headword": "nimble",
+        "feel_zh": "思维敏捷",
+        "contrast_hint": "多用于形容思维的灵活性"
+      }
+    ]
+  },
+  "toefl:垂直的:n.": {
+    "title_zh": "垂直的方向",
+    "members": [
+      {
+        "headword": "perpendicular",
+        "feel_zh": "更正式",
+        "contrast_hint": "多用于几何或建筑领域"
+      },
+      {
+        "headword": "plumb",
+        "feel_zh": "较口语化",
+        "contrast_hint": "常用于日常生活和建筑"
+      }
+    ]
+  },
+  "toefl:易怒的:adj.": {
+    "title_zh": "易怒的程度",
+    "members": [
+      {
+        "headword": "irritable",
+        "feel_zh": "情绪波动大",
+        "contrast_hint": "多指日常小事引发"
+      },
+      {
+        "headword": "fractious",
+        "feel_zh": "带有对抗性",
+        "contrast_hint": "常用于形容难以管教"
+      }
+    ]
+  },
+  "toefl:美味的:adj.": {
+    "title_zh": "美味的程度",
+    "members": [
+      {
+        "headword": "palatable",
+        "feel_zh": "令人满意",
+        "contrast_hint": "多用于日常餐饮"
+      },
+      {
+        "headword": "delectable",
+        "feel_zh": "极其美味",
+        "contrast_hint": "多用于赞美佳肴"
+      }
+    ]
+  },
+  "toefl:柔软的:adj.": {
+    "title_zh": "柔软的特质",
+    "members": [
+      {
+        "headword": "supple",
+        "feel_zh": "柔软且富弹性",
+        "contrast_hint": "强调物体的柔韧性"
+      },
+      {
+        "headword": "lithe",
+        "feel_zh": "优雅且灵活",
+        "contrast_hint": "强调动作的优美"
+      }
+    ]
+  },
+  "toefl:掩饰:v.": {
+    "title_zh": "掩饰的方式",
+    "members": [
+      {
+        "headword": "belie",
+        "feel_zh": "暗示矛盾",
+        "contrast_hint": "多指事实与表象不符"
+      },
+      {
+        "headword": "dissemble",
+        "feel_zh": "假装诚恳",
+        "contrast_hint": "多指隐藏真实意图"
+      }
+    ]
+  },
+  "toefl:奴役:n.": {
+    "title_zh": "限制的状态",
+    "members": [
+      {
+        "headword": "bondage",
+        "feel_zh": "带有束缚感",
+        "contrast_hint": "强调身体或精神的束缚"
+      },
+      {
+        "headword": "thrall",
+        "feel_zh": "被控制的状态",
+        "contrast_hint": "强调被他人或事物控制"
+      }
+    ]
+  },
+  "toefl:暗淡的:adj.": {
+    "title_zh": "暗淡的程度",
+    "members": [
+      {
+        "headword": "dingy",
+        "feel_zh": "肮脏陈旧",
+        "contrast_hint": "强调肮脏和破旧"
+      },
+      {
+        "headword": "dusky",
+        "feel_zh": "微暗朦胧",
+        "contrast_hint": "强调光线微弱"
+      }
+    ]
+  },
+  "toefl:闷热的:adj.": {
+    "title_zh": "闷热的感受",
+    "members": [
+      {
+        "headword": "stuffy",
+        "feel_zh": "不通风的压抑",
+        "contrast_hint": "多指室内空气不流通"
+      },
+      {
+        "headword": "sultry",
+        "feel_zh": "潮湿的炎热",
+        "contrast_hint": "多指室外湿热天气"
+      }
+    ]
+  },
+  "toefl:傻瓜:n.": {
+    "title_zh": "愚蠢的程度",
+    "members": [
+      {
+        "headword": "moron",
+        "feel_zh": "较正式且强烈",
+        "contrast_hint": "常用于形容极度愚蠢的人"
+      },
+      {
+        "headword": "pinhead",
+        "feel_zh": "轻蔑且口语化",
+        "contrast_hint": "多用于日常轻蔑称呼"
+      }
+    ]
+  },
+  "toefl:渴望的:adj.": {
+    "title_zh": "渴望的程度",
+    "members": [
+      {
+        "headword": "wistful",
+        "feel_zh": "带有怀旧感",
+        "contrast_hint": "常用于表达对过去的渴望"
+      },
+      {
+        "headword": "desirous",
+        "feel_zh": "强烈的欲望",
+        "contrast_hint": "多用于对未来或目标的渴望"
+      }
+    ]
+  },
+  "toefl:传播:v.": {
+    "title_zh": "传播的方式",
+    "members": [
+      {
+        "headword": "disseminate",
+        "feel_zh": "书面且正式",
+        "contrast_hint": "多用于信息或思想传播"
+      },
+      {
+        "headword": "propagate",
+        "feel_zh": "科学且中性",
+        "contrast_hint": "常用于生物或信仰传播"
+      }
+    ]
+  },
+  "toefl:公正的:adj.": {
+    "title_zh": "公正的方式",
+    "members": [
+      {
+        "headword": "disinterested",
+        "feel_zh": "无私且冷静",
+        "contrast_hint": "强调无私,常用于决策"
+      },
+      {
+        "headword": "impartial",
+        "feel_zh": "平等且客观",
+        "contrast_hint": "强调平等,常用于评判"
+      }
+    ]
+  },
+  "toefl:挑剔的:adj.": {
+    "title_zh": "挑剔的程度",
+    "members": [
+      {
+        "headword": "fussy",
+        "feel_zh": "过于细节",
+        "contrast_hint": "常指对细节过于苛求"
+      },
+      {
+        "headword": "carping",
+        "feel_zh": "吹毛求疵",
+        "contrast_hint": "多指无休止地挑错"
+      }
+    ]
+  },
+  "toefl:坚定的:adj.": {
+    "title_zh": "坚定的程度",
+    "members": [
+      {
+        "headword": "steadfast",
+        "feel_zh": "忠诚不动摇",
+        "contrast_hint": "强调忠诚和信念的坚定"
+      },
+      {
+        "headword": "dogged",
+        "feel_zh": "顽固不放弃",
+        "contrast_hint": "强调坚持不懈和顽固"
+      }
+    ]
+  },
+  "toefl:顺从的:adj.": {
+    "title_zh": "顺从的态度",
+    "members": [
+      {
+        "headword": "amenable",
+        "feel_zh": "较为积极",
+        "contrast_hint": "常指乐于接受建议"
+      },
+      {
+        "headword": "submissive",
+        "feel_zh": "较为消极",
+        "contrast_hint": "多指屈从于权威"
+      }
+    ]
+  },
+  "toefl:格言:n.": {
+    "title_zh": "格言的正式度",
+    "members": [
+      {
+        "headword": "adage",
+        "feel_zh": "口语常用",
+        "contrast_hint": "常用于日常对话"
+      },
+      {
+        "headword": "dictum",
+        "feel_zh": "正式权威",
+        "contrast_hint": "多用于正式场合"
+      }
+    ]
+  },
+  "toefl:悲伤的:adj.": {
+    "title_zh": "表达悲伤",
+    "members": [
+      {
+        "headword": "mournful",
+        "feel_zh": "哀伤且深沉",
+        "contrast_hint": "常用于描述音乐或声音"
+      },
+      {
+        "headword": "dolorous",
+        "feel_zh": "书面且庄重",
+        "contrast_hint": "多用于文学或正式场合"
+      }
+    ]
+  },
+  "toefl:文雅的:adj.": {
+    "title_zh": "文雅的方式",
+    "members": [
+      {
+        "headword": "genteel",
+        "feel_zh": "带有优雅气质",
+        "contrast_hint": "强调上流社会的文雅"
+      },
+      {
+        "headword": "courtly",
+        "feel_zh": "带有宫廷风范",
+        "contrast_hint": "强调礼貌和优雅的姿态"
+      }
+    ]
+  },
+  "toefl:简洁的:adj.": {
+    "title_zh": "表达的简洁",
+    "members": [
+      {
+        "headword": "concise",
+        "feel_zh": "简明扼要",
+        "contrast_hint": "更强调内容精炼"
+      },
+      {
+        "headword": "succinct",
+        "feel_zh": "简洁明了",
+        "contrast_hint": "更强调表达清晰"
+      }
+    ]
+  },
+  "toefl:掠夺:n.": {
+    "title_zh": "掠夺的方式",
+    "members": [
+      {
+        "headword": "plunder",
+        "feel_zh": "暴力色彩浓",
+        "contrast_hint": "强调通过暴力手段获取"
+      },
+      {
+        "headword": "depredation",
+        "feel_zh": "破坏性强",
+        "contrast_hint": "常伴随资源破坏"
+      }
+    ]
+  },
+  "toefl:收缩:n.": {
+    "title_zh": "收缩的方式",
+    "members": [
+      {
+        "headword": "contraction",
+        "feel_zh": "常用于语言学",
+        "contrast_hint": "多指词语或肌肉的收缩"
+      },
+      {
+        "headword": "shrinkage",
+        "feel_zh": "常用于商业",
+        "contrast_hint": "多指数量或体积的减少"
+      }
+    ]
+  },
+  "toefl:验证:v.": {
+    "title_zh": "验证的方式",
+    "members": [
+      {
+        "headword": "validate",
+        "feel_zh": "确认正确性",
+        "contrast_hint": "多用于数据或理论"
+      },
+      {
+        "headword": "authenticate",
+        "feel_zh": "确认身份或真伪",
+        "contrast_hint": "多用于身份或文件"
+      }
+    ]
+  },
+  "toefl:真菌:n.": {
+    "title_zh": "真菌的种类",
+    "members": [
+      {
+        "headword": "fungus",
+        "feel_zh": "单数形式",
+        "contrast_hint": "用于指单一真菌个体"
+      },
+      {
+        "headword": "fungi",
+        "feel_zh": "复数形式",
+        "contrast_hint": "用于指多个真菌个体"
+      }
+    ]
+  },
+  "toefl:迅速的:adj.": {
+    "title_zh": "迅速的程度",
+    "members": [
+      {
+        "headword": "speedy",
+        "feel_zh": "强调速度快",
+        "contrast_hint": "多用于日常场合"
+      },
+      {
+        "headword": "expeditious",
+        "feel_zh": "效率高且迅速",
+        "contrast_hint": "常用于正式或专业场合"
+      }
+    ]
+  },
+  "toefl:赋予:v.": {
+    "title_zh": "赋予的方式",
+    "members": [
+      {
+        "headword": "endow",
+        "feel_zh": "正式且庄重",
+        "contrast_hint": "常用于慈善或教育捐赠"
+      },
+      {
+        "headword": "endue",
+        "feel_zh": "书面且古雅",
+        "contrast_hint": "多用于文学或宗教语境"
+      }
+    ]
+  },
+  "toefl:使困惑:v.": {
+    "title_zh": "困惑的表达",
+    "members": [
+      {
+        "headword": "confound",
+        "feel_zh": "语气较正式",
+        "contrast_hint": "常用于正式场合的困惑"
+      },
+      {
+        "headword": "discomfit",
+        "feel_zh": "带有不安感",
+        "contrast_hint": "多指使人感到不安的困惑"
+      }
+    ]
+  },
+  "toefl:证实:v.": {
+    "title_zh": "证实的方式",
+    "members": [
+      {
+        "headword": "corroborate",
+        "feel_zh": "偏正式用语",
+        "contrast_hint": "常用于法律或科学证据"
+      },
+      {
+        "headword": "substantiate",
+        "feel_zh": "强调实质证据",
+        "contrast_hint": "多用于证明论点或主张"
+      }
+    ]
+  },
+  "toefl:恰当地:adv.": {
+    "title_zh": "恰当的方式",
+    "members": [
+      {
+        "headword": "aptly",
+        "feel_zh": "灵活且贴切",
+        "contrast_hint": "常用于形容语言或描述"
+      },
+      {
+        "headword": "fittingly",
+        "feel_zh": "场合感强",
+        "contrast_hint": "多用于正式场合或仪式"
+      }
+    ]
+  },
+  "toefl:启发:v.": {
+    "title_zh": "启发的方式",
+    "members": [
+      {
+        "headword": "enlighten",
+        "feel_zh": "知识启迪",
+        "contrast_hint": "多指提供知识或见解"
+      },
+      {
+        "headword": "edify",
+        "feel_zh": "道德教化",
+        "contrast_hint": "多指道德或智力上的提升"
+      }
+    ]
+  },
+  "toefl:保护主义者:n.": {
+    "title_zh": "保护的对象",
+    "members": [
+      {
+        "headword": "conservationist",
+        "feel_zh": "环保为主",
+        "contrast_hint": "关注环境保护"
+      },
+      {
+        "headword": "protectionist",
+        "feel_zh": "经济为主",
+        "contrast_hint": "关注贸易保护"
+      }
+    ]
+  },
+  "toefl:层:n.": {
+    "title_zh": "层的类型",
+    "members": [
+      {
+        "headword": "stratum",
+        "feel_zh": "正式且抽象",
+        "contrast_hint": "常用于社会、地质等领域"
+      },
+      {
+        "headword": "ply",
+        "feel_zh": "具体且实用",
+        "contrast_hint": "多指材料的层次"
+      }
+    ]
+  },
+  "toefl:一丝不苟地:adv.": {
+    "title_zh": "细致程度",
+    "members": [
+      {
+        "headword": "meticulously",
+        "feel_zh": "极度细致",
+        "contrast_hint": "强调细节上的完美无缺"
+      },
+      {
+        "headword": "scrupulously",
+        "feel_zh": "道德严谨",
+        "contrast_hint": "强调道德和原则上的严谨"
+      }
+    ]
+  },
+  "toefl:灌输:v.": {
+    "title_zh": "灌输的方式",
+    "members": [
+      {
+        "headword": "instill",
+        "feel_zh": "逐渐渗透",
+        "contrast_hint": "强调渐进过程，多用于思想"
+      },
+      {
+        "headword": "inculcate",
+        "feel_zh": "反复教导",
+        "contrast_hint": "强调反复性，多用于习惯"
+      }
+    ]
+  },
+  "toefl:弥漫:v.": {
+    "title_zh": "弥漫的方式",
+    "members": [
+      {
+        "headword": "pervade",
+        "feel_zh": "遍布无处不在",
+        "contrast_hint": "强调全面渗透"
+      },
+      {
+        "headword": "suffuse",
+        "feel_zh": "逐渐渗透开来",
+        "contrast_hint": "强调缓慢充满"
+      }
+    ]
+  },
+  "toefl:冲动的:adj.": {
+    "title_zh": "冲动的表现",
+    "members": [
+      {
+        "headword": "impulsive",
+        "feel_zh": "随性而为",
+        "contrast_hint": "多指情绪驱动的行为"
+      },
+      {
+        "headword": "impetuous",
+        "feel_zh": "鲁莽急躁",
+        "contrast_hint": "常带有不计后果的意味"
+      }
+    ]
+  },
+  "toefl:得体:n.": {
+    "title_zh": "行为的得体",
+    "members": [
+      {
+        "headword": "propriety",
+        "feel_zh": "注重行为规范",
+        "contrast_hint": "强调行为符合社会标准"
+      },
+      {
+        "headword": "decorum",
+        "feel_zh": "注重礼仪礼节",
+        "contrast_hint": "强调行为符合礼仪规范"
+      }
+    ]
+  },
+  "toefl:旋转:n.": {
+    "title_zh": "旋转的方式",
+    "members": [
+      {
+        "headword": "spinning",
+        "feel_zh": "快速且持续",
+        "contrast_hint": "常用于描述纺织过程"
+      },
+      {
+        "headword": "gyration",
+        "feel_zh": "圆周或螺旋",
+        "contrast_hint": "多用于科学或技术领域"
+      }
+    ]
+  },
+  "toefl:自负:n.": {
+    "title_zh": "自负的表现",
+    "members": [
+      {
+        "headword": "pretension",
+        "feel_zh": "带有炫耀色彩",
+        "contrast_hint": "常指夸大不实的自负"
+      },
+      {
+        "headword": "conceit",
+        "feel_zh": "带有自满情绪",
+        "contrast_hint": "常指对自身过度自信"
+      }
+    ]
+  },
+  "toefl:结晶的:adj.": {
+    "title_zh": "结晶状态",
+    "members": [
+      {
+        "headword": "crystalline",
+        "feel_zh": "结构精细",
+        "contrast_hint": "强调晶体结构的精细和透明"
+      },
+      {
+        "headword": "crystallized",
+        "feel_zh": "已完成结晶",
+        "contrast_hint": "强调结晶过程的完成和结果"
+      }
+    ]
+  },
+  "toefl:慢跑:n.": {
+    "title_zh": "慢跑的方式",
+    "members": [
+      {
+        "headword": "jogging",
+        "feel_zh": "休闲健身",
+        "contrast_hint": "用于日常锻炼时"
+      },
+      {
+        "headword": "canter",
+        "feel_zh": "轻松优雅",
+        "contrast_hint": "多用于马术运动"
+      }
+    ]
+  },
+  "toefl:诽谤:v.": {
+    "title_zh": "诽谤的方式",
+    "members": [
+      {
+        "headword": "defame",
+        "feel_zh": "较为正式",
+        "contrast_hint": "多用于法律场合"
+      },
+      {
+        "headword": "traduce",
+        "feel_zh": "带有恶意",
+        "contrast_hint": "常指恶意中伤"
+      }
+    ]
+  },
+  "toefl:语言学:n.": {
+    "title_zh": "语言研究",
+    "members": [
+      {
+        "headword": "linguistics",
+        "feel_zh": "科学严谨",
+        "contrast_hint": "注重语言结构与规则"
+      },
+      {
+        "headword": "philology",
+        "feel_zh": "历史文学",
+        "contrast_hint": "关注语言的历史与文本"
+      }
+    ]
+  },
+  "toefl:狂热的:adj.": {
+    "title_zh": "狂热的程度",
+    "members": [
+      {
+        "headword": "fanatical",
+        "feel_zh": "极端执着",
+        "contrast_hint": "多指信仰或爱好"
+      },
+      {
+        "headword": "frenetic",
+        "feel_zh": "疯狂忙乱",
+        "contrast_hint": "多指活动或行为"
+      }
+    ]
+  },
+  "toefl:友好的:adj.": {
+    "title_zh": "友好的方式",
+    "members": [
+      {
+        "headword": "congenial",
+        "feel_zh": "自然亲切",
+        "contrast_hint": "多指性格相投的友好"
+      },
+      {
+        "headword": "amicable",
+        "feel_zh": "和平友好",
+        "contrast_hint": "多用于解决冲突的友好"
+      }
+    ]
+  },
+  "toefl:可鄙的:adj.": {
+    "title_zh": "可鄙的程度",
+    "members": [
+      {
+        "headword": "despicable",
+        "feel_zh": "极度卑劣",
+        "contrast_hint": "强调道德上的卑劣"
+      },
+      {
+        "headword": "contemptible",
+        "feel_zh": "令人轻视",
+        "contrast_hint": "强调品质低劣"
+      }
+    ]
+  },
+  "toefl:勇敢的:adj.": {
+    "title_zh": "勇敢的表现",
+    "members": [
+      {
+        "headword": "valiant",
+        "feel_zh": "庄重且正式",
+        "contrast_hint": "多用于正式场合描述"
+      },
+      {
+        "headword": "manful",
+        "feel_zh": "阳刚且果敢",
+        "contrast_hint": "强调男性化的勇敢"
+      }
+    ]
+  },
+  "toefl:不敬的:adj.": {
+    "title_zh": "不敬的态度",
+    "members": [
+      {
+        "headword": "irreverent",
+        "feel_zh": "轻松幽默",
+        "contrast_hint": "常用于非正式场合"
+      },
+      {
+        "headword": "impious",
+        "feel_zh": "宗教不敬",
+        "contrast_hint": "多指宗教信仰上的不敬"
+      }
+    ]
+  },
+  "toefl:模糊的:adj.": {
+    "title_zh": "模糊的程度",
+    "members": [
+      {
+        "headword": "woolly",
+        "feel_zh": "形象模糊",
+        "contrast_hint": "多指思维或表达不清晰"
+      },
+      {
+        "headword": "fogged",
+        "feel_zh": "视觉模糊",
+        "contrast_hint": "多指视觉或记忆模糊"
+      }
+    ]
+  },
+  "toefl:公正地:adv.": {
+    "title_zh": "公正的方式",
+    "members": [
+      {
+        "headword": "justly",
+        "feel_zh": "强调正义",
+        "contrast_hint": "常用于法律或道德判断"
+      },
+      {
+        "headword": "impartially",
+        "feel_zh": "强调无偏见",
+        "contrast_hint": "多用于评审或仲裁场合"
+      }
+    ]
+  },
+  "toefl:束缚:n.": {
+    "title_zh": "束缚的方式",
+    "members": [
+      {
+        "headword": "shackle",
+        "feel_zh": "物理束缚感强",
+        "contrast_hint": "常用于具体的身体束缚"
+      },
+      {
+        "headword": "fetter",
+        "feel_zh": "抽象限制感强",
+        "contrast_hint": "多用于隐喻性的限制"
+      }
+    ]
+  },
+  "toefl:愚蠢的:adj.": {
+    "title_zh": "愚蠢的程度",
+    "members": [
+      {
+        "headword": "idiotic",
+        "feel_zh": "极端愚蠢",
+        "contrast_hint": "用于形容极端愚蠢的行为"
+      },
+      {
+        "headword": "fatuous",
+        "feel_zh": "无意义的愚蠢",
+        "contrast_hint": "用于形容无意义的言论"
+      }
+    ]
+  },
+  "toefl:城堡:n.": {
+    "title_zh": "城堡的类型",
+    "members": [
+      {
+        "headword": "chateau",
+        "feel_zh": "优雅且奢华",
+        "contrast_hint": "常指乡村豪宅或庄园"
+      },
+      {
+        "headword": "citadel",
+        "feel_zh": "坚固且防御性强",
+        "contrast_hint": "多指城市的防御工事"
+      }
+    ]
+  },
+  "toefl:发酵:n.": {
+    "title_zh": "发酵过程",
+    "members": [
+      {
+        "headword": "ferment",
+        "feel_zh": "含义更广泛",
+        "contrast_hint": "既指过程也指结果"
+      },
+      {
+        "headword": "fermentation",
+        "feel_zh": "更科学术语",
+        "contrast_hint": "专指化学过程"
+      }
+    ]
+  },
+  "toefl:脾气坏的:adj.": {
+    "title_zh": "脾气坏的",
+    "members": [
+      {
+        "headword": "grumpy",
+        "feel_zh": "常带有抱怨",
+        "contrast_hint": "多指短暂不悦或轻微烦躁"
+      },
+      {
+        "headword": "grouchy",
+        "feel_zh": "更显得易怒",
+        "contrast_hint": "常用于形容长期坏脾气"
+      }
+    ]
+  },
+  "toefl:吝啬的:adj.": {
+    "title_zh": "吝啬的程度",
+    "members": [
+      {
+        "headword": "stingy",
+        "feel_zh": "口语常用",
+        "contrast_hint": "多用于日常对话"
+      },
+      {
+        "headword": "miserly",
+        "feel_zh": "书面语色彩",
+        "contrast_hint": "常见于正式文本"
+      }
+    ]
+  },
+  "toefl:无力的:adj.": {
+    "title_zh": "无力的状态",
+    "members": [
+      {
+        "headword": "languid",
+        "feel_zh": "慵懒无力",
+        "contrast_hint": "常指因疲惫或病痛无力"
+      },
+      {
+        "headword": "flaccid",
+        "feel_zh": "松弛无力",
+        "contrast_hint": "多指肌肉或组织松软"
+      }
+    ]
+  },
+  "toefl:勤勉的:adj.": {
+    "title_zh": "勤勉的程度",
+    "members": [
+      {
+        "headword": "industrious",
+        "feel_zh": "强调工作努力",
+        "contrast_hint": "常用于形容工作场合"
+      },
+      {
+        "headword": "assiduous",
+        "feel_zh": "强调细致耐心",
+        "contrast_hint": "多用于形容学习或研究"
+      }
+    ]
+  },
+  "toefl:不合适的:adj.": {
+    "title_zh": "不合适的表达",
+    "members": [
+      {
+        "headword": "unseemly",
+        "feel_zh": "多指行为不雅",
+        "contrast_hint": "多用于行为或举止不当"
+      },
+      {
+        "headword": "unbecoming",
+        "feel_zh": "多指不符身份",
+        "contrast_hint": "常用于衣着或言行不符身份"
+      }
+    ]
+  },
+  "toefl:无精打采的:adj.": {
+    "title_zh": "无精打采",
+    "members": [
+      {
+        "headword": "listless",
+        "feel_zh": "轻微疲惫",
+        "contrast_hint": "多指精神不振"
+      },
+      {
+        "headword": "lethargic",
+        "feel_zh": "昏昏欲睡",
+        "contrast_hint": "常因疲劳或病态"
+      }
+    ]
+  },
+  "toefl:卑鄙的:adj.": {
+    "title_zh": "卑鄙的程度",
+    "members": [
+      {
+        "headword": "abject",
+        "feel_zh": "极端悲惨",
+        "contrast_hint": "多指极端不幸或屈辱"
+      },
+      {
+        "headword": "ignoble",
+        "feel_zh": "道德低下",
+        "contrast_hint": "多指品格或行为不光彩"
+      }
+    ]
+  },
+  "toefl:肢解:v.": {
+    "title_zh": "肢解的方式",
+    "members": [
+      {
+        "headword": "dismember",
+        "feel_zh": "更正式用语",
+        "contrast_hint": "用于正式或医学场合"
+      },
+      {
+        "headword": "dismembered",
+        "feel_zh": "带有完成感",
+        "contrast_hint": "强调动作已完成"
+      }
+    ]
+  },
+  "toefl:使负担过重:v.": {
+    "title_zh": "负担过重",
+    "members": [
+      {
+        "headword": "overburden",
+        "feel_zh": "较为正式",
+        "contrast_hint": "常用于工作或责任"
+      },
+      {
+        "headword": "overtax",
+        "feel_zh": "带有压力感",
+        "contrast_hint": "多指精神或体力"
+      }
+    ]
+  },
+  "toefl:柔韧的:adj.": {
+    "title_zh": "柔韧的特性",
+    "members": [
+      {
+        "headword": "pliable",
+        "feel_zh": "物理属性强",
+        "contrast_hint": "多用于描述材料的柔韧性"
+      },
+      {
+        "headword": "pliant",
+        "feel_zh": "顺从性强",
+        "contrast_hint": "常指人或态度的易受影响"
+      }
+    ]
+  },
+  "toefl:不规则地:adv.": {
+    "title_zh": "不规则程度",
+    "members": [
+      {
+        "headword": "erratically",
+        "feel_zh": "更具随机性",
+        "contrast_hint": "强调出乎意料的变化"
+      },
+      {
+        "headword": "irregularly",
+        "feel_zh": "缺乏一致性",
+        "contrast_hint": "强调不遵循固定模式"
+      }
+    ]
+  },
+  "toefl:禁止:v.": {
+    "title_zh": "禁止的方式",
+    "members": [
+      {
+        "headword": "disallow",
+        "feel_zh": "正式且直接",
+        "contrast_hint": "常用于法律或规则中"
+      },
+      {
+        "headword": "proscribe",
+        "feel_zh": "强烈且严厉",
+        "contrast_hint": "多指法律或社会禁令"
+      }
+    ]
+  },
+  "toefl:大黄蜂:n.": {
+    "title_zh": "大黄蜂种类",
+    "members": [
+      {
+        "headword": "hornet",
+        "feel_zh": "攻击性强",
+        "contrast_hint": "多指攻击性强的黄蜂"
+      },
+      {
+        "headword": "bumblebee",
+        "feel_zh": "外形毛茸茸",
+        "contrast_hint": "多指采蜜的毛茸茸黄蜂"
+      }
+    ]
+  },
+  "toefl:抚慰:v.": {
+    "title_zh": "抚慰的方式",
+    "members": [
+      {
+        "headword": "mollify",
+        "feel_zh": "语气温和",
+        "contrast_hint": "多指情绪安抚"
+      },
+      {
+        "headword": "propitiate",
+        "feel_zh": "带有补偿意味",
+        "contrast_hint": "常用祭品或行动"
+      }
+    ]
+  },
+  "toefl:适合的:adj.": {
+    "title_zh": "合适的表达",
+    "members": [
+      {
+        "headword": "suited",
+        "feel_zh": "强调功能合适",
+        "contrast_hint": "多用于描述事物功能"
+      },
+      {
+        "headword": "becoming",
+        "feel_zh": "强调外观得体",
+        "contrast_hint": "常用于描述外观"
+      }
+    ]
+  },
+  "toefl:节制:n.": {
+    "title_zh": "节制的方式",
+    "members": [
+      {
+        "headword": "temperance",
+        "feel_zh": "更广泛的节制",
+        "contrast_hint": "多指饮食方面的自制"
+      },
+      {
+        "headword": "continence",
+        "feel_zh": "多指性方面的节制",
+        "contrast_hint": "强调性行为的控制"
+      }
+    ]
+  },
+  "toefl:节省:v.": {
+    "title_zh": "节省的方法",
+    "members": [
+      {
+        "headword": "skimp",
+        "feel_zh": "略带吝啬",
+        "contrast_hint": "常指不够用的节省"
+      },
+      {
+        "headword": "economize",
+        "feel_zh": "较为理性",
+        "contrast_hint": "强调合理分配资源"
+      }
+    ]
+  },
+  "toefl:顽固的:adj.": {
+    "title_zh": "顽固的程度",
+    "members": [
+      {
+        "headword": "obstinate",
+        "feel_zh": "带有贬义",
+        "contrast_hint": "多指坚持错误立场"
+      },
+      {
+        "headword": "hardheaded",
+        "feel_zh": "偏向中性",
+        "contrast_hint": "强调不易受影响"
+      }
+    ]
+  },
+  "toefl:悦耳的:adj.": {
+    "title_zh": "声音的悦耳",
+    "members": [
+      {
+        "headword": "melodious",
+        "feel_zh": "旋律优美",
+        "contrast_hint": "多用于音乐旋律"
+      },
+      {
+        "headword": "euphonious",
+        "feel_zh": "和谐动听",
+        "contrast_hint": "常用于声音和谐"
+      }
+    ]
+  },
+  "toefl:轻浮:n.": {
+    "title_zh": "轻浮的表现",
+    "members": [
+      {
+        "headword": "frivolity",
+        "feel_zh": "无意义的轻浮",
+        "contrast_hint": "多指行为或活动"
+      },
+      {
+        "headword": "levity",
+        "feel_zh": "轻率的态度",
+        "contrast_hint": "多指心态或言语"
+      }
+    ]
+  },
+  "toefl:无礼的:adj.": {
+    "title_zh": "无礼的程度",
+    "members": [
+      {
+        "headword": "impudent",
+        "feel_zh": "轻佻放肆",
+        "contrast_hint": "多指年轻人不拘礼节"
+      },
+      {
+        "headword": "impertinent",
+        "feel_zh": "冒犯无礼",
+        "contrast_hint": "多指对权威不敬"
+      }
+    ]
+  },
+  "toefl:乐于助人的:adj.": {
+    "title_zh": "助人的态度",
+    "members": [
+      {
+        "headword": "accommodating",
+        "feel_zh": "随和亲切",
+        "contrast_hint": "强调灵活适应他人"
+      },
+      {
+        "headword": "obliging",
+        "feel_zh": "热心友好",
+        "contrast_hint": "强调主动愿意帮助"
+      }
+    ]
+  },
+  "toefl:乐队指挥:n.": {
+    "title_zh": "乐队指挥",
+    "members": [
+      {
+        "headword": "bandleader",
+        "feel_zh": "现代流行乐",
+        "contrast_hint": "多用于流行乐队"
+      },
+      {
+        "headword": "bandmaster",
+        "feel_zh": "传统军乐队",
+        "contrast_hint": "多用于军乐或仪仗队"
+      }
+    ]
+  },
+  "toefl:熟悉的:adj.": {
+    "title_zh": "熟悉的程度",
+    "members": [
+      {
+        "headword": "conversant",
+        "feel_zh": "精通某领域",
+        "contrast_hint": "强调对某领域的深入了解"
+      },
+      {
+        "headword": "acquainted",
+        "feel_zh": "一般了解",
+        "contrast_hint": "强调对人或事物的基本认识"
+      }
+    ]
+  },
+  "toefl:陈腐的:adj.": {
+    "title_zh": "陈腐的表达",
+    "members": [
+      {
+        "headword": "hackneyed",
+        "feel_zh": "过度使用",
+        "contrast_hint": "多指用滥的表达"
+      },
+      {
+        "headword": "platitudinous",
+        "feel_zh": "缺乏新意",
+        "contrast_hint": "多指无趣的老生常谈"
+      }
+    ]
+  },
+  "toefl:懒惰的:adj.": {
+    "title_zh": "懒惰的程度",
+    "members": [
+      {
+        "headword": "indolent",
+        "feel_zh": "更正式",
+        "contrast_hint": "常用于医学或正式场合"
+      },
+      {
+        "headword": "slothful",
+        "feel_zh": "略带贬义",
+        "contrast_hint": "多用于日常口语"
+      }
+    ]
+  },
+  "toefl:满足:v.": {
+    "title_zh": "满足的方式",
+    "members": [
+      {
+        "headword": "satiate",
+        "feel_zh": "过度满足",
+        "contrast_hint": "常指过度满足食欲"
+      },
+      {
+        "headword": "slake",
+        "feel_zh": "缓解满足",
+        "contrast_hint": "多指解渴或缓解欲望"
+      }
+    ]
+  },
+  "toefl:活泼:n.": {
+    "title_zh": "活泼的表现",
+    "members": [
+      {
+        "headword": "vivacity",
+        "feel_zh": "生动有趣",
+        "contrast_hint": "多用于形容人的性格"
+      },
+      {
+        "headword": "briskness",
+        "feel_zh": "轻快敏捷",
+        "contrast_hint": "常用于形容动作或步伐"
+      }
+    ]
+  },
+  "toefl:喋喋不休:v.": {
+    "title_zh": "说话的方式",
+    "members": [
+      {
+        "headword": "gabble",
+        "feel_zh": "快速而含糊",
+        "contrast_hint": "多指语速快且不清楚"
+      },
+      {
+        "headword": "prate",
+        "feel_zh": "冗长而无聊",
+        "contrast_hint": "多指无意义的唠叨"
+      }
+    ]
+  },
+  "toefl:报酬:n.": {
+    "title_zh": "报酬的类型",
+    "members": [
+      {
+        "headword": "emolument",
+        "feel_zh": "正式且法律用语",
+        "contrast_hint": "多用于法律和合同中"
+      },
+      {
+        "headword": "requital",
+        "feel_zh": "带有回报或报复意味",
+        "contrast_hint": "可指正面或负面的回报"
+      }
+    ]
+  }
+}

@@ -74,6 +74,9 @@ export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
 
   return (
     <GrowthChart
+      /* 词汇侧启用堆叠:「已掌握」和「学习中」是同一批词的两个阶段,
+         并排会读成两件独立的事。图书馆侧不传这个 prop,观感不变。 */
+      stacked
       title="词汇成长"
       titleClassName="text-[15px] font-semibold text-slate-900"
       series={series}

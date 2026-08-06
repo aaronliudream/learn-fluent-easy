@@ -1,0 +1,930 @@
+{
+  "founder": {
+    "is_padding": false,
+    "why": "名词义与动词义无关"
+  },
+  "secular": {
+    "is_padding": false,
+    "why": "世俗的与长期存在是不同概念"
+  },
+  "ally": {
+    "is_padding": false,
+    "why": "盟友是具体的人，结盟关系是抽象的关系。"
+  },
+  "sue": {
+    "is_padding": false,
+    "why": "法律行为与请求不同"
+  },
+  "nutrient": {
+    "is_padding": true,
+    "why": "两者都是指营养相关的成分。"
+  },
+  "specialty": {
+    "is_padding": false,
+    "why": "专长是技能，特产是产品。"
+  },
+  "stereotype": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文不同"
+  },
+  "fossil": {
+    "is_padding": false,
+    "why": "化石与陈旧守旧是不同概念"
+  },
+  "shrimp": {
+    "is_padding": false,
+    "why": "虾是动物，矮子是人，两个不同义。"
+  },
+  "hover": {
+    "is_padding": false,
+    "why": "悬停指静止，盘旋翱翔指飞行"
+  },
+  "antibiotic": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是antibiotic。"
+  },
+  "posture": {
+    "is_padding": false,
+    "why": "姿势和态度是不同的概念"
+  },
+  "chronic": {
+    "is_padding": false,
+    "why": "形容词与名词,不同词义"
+  },
+  "prosecute": {
+    "is_padding": false,
+    "why": "法律行为与一般行为不同"
+  },
+  "exile": {
+    "is_padding": false,
+    "why": "流亡是被迫离开，流放是被驱逐。"
+  },
+  "crab": {
+    "is_padding": false,
+    "why": "名词义 vs 动词义,毫无关系"
+  },
+  "haven": {
+    "is_padding": true,
+    "why": "两个义项都指安全的地方"
+  },
+  "merge": {
+    "is_padding": false,
+    "why": "合并与使消失是不同的概念"
+  },
+  "armor": {
+    "is_padding": false,
+    "why": "盔甲是个人防护，装甲是车辆防护。"
+  },
+  "cone": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是cone"
+  },
+  "valve": {
+    "is_padding": false,
+    "why": "阀门是机械装置，活瓣是生物结构。"
+  },
+  "excerpt": {
+    "is_padding": true,
+    "why": "摘录和引用有细微差别"
+  },
+  "census": {
+    "is_padding": false,
+    "why": "人口普查是特定的统计调查"
+  },
+  "nickname": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "activate": {
+    "is_padding": true,
+    "why": "两个义项意思相近，难以区分。"
+  },
+  "entail": {
+    "is_padding": true,
+    "why": "两个义项有重叠"
+  },
+  "pasture": {
+    "is_padding": false,
+    "why": "牧场是地点,放牧是活动"
+  },
+  "lethal": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文不同"
+  },
+  "reef": {
+    "is_padding": false,
+    "why": "珊瑚礁是暗礁的一种"
+  },
+  "bait": {
+    "is_padding": true,
+    "why": "两个义项是动名词形式的转换"
+  },
+  "foam": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是foam。"
+  },
+  "underestimate": {
+    "is_padding": true,
+    "why": "低估和看轻意思相近"
+  },
+  "dietary": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文不同。"
+  },
+  "navigate": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "erode": {
+    "is_padding": false,
+    "why": "侵蚀和物质腐蚀在不同领域使用"
+  },
+  "mimic": {
+    "is_padding": false,
+    "why": "动词与名词义,词典分列"
+  },
+  "terrace": {
+    "is_padding": false,
+    "why": "露台和梯田是不同的概念"
+  },
+  "merchandise": {
+    "is_padding": false,
+    "why": "商品与交易买卖是不同概念"
+  },
+  "conform": {
+    "is_padding": false,
+    "why": "遵守是行为,一致符合是状态"
+  },
+  "dodge": {
+    "is_padding": false,
+    "why": "动词与名词义,不同领域"
+  },
+  "wholesale": {
+    "is_padding": false,
+    "why": "批发和大规模是不同概念"
+  },
+  "tariff": {
+    "is_padding": false,
+    "why": "关税和价格表是不同概念"
+  },
+  "mediate": {
+    "is_padding": true,
+    "why": "调解和调停意思相近"
+  },
+  "inhibit": {
+    "is_padding": false,
+    "why": "抑制是限制行为，禁止是完全不允许。"
+  },
+  "default": {
+    "is_padding": false,
+    "why": "默认与违约责任是不同概念"
+  },
+  "plight": {
+    "is_padding": false,
+    "why": "困境与宣誓保证是不同的概念"
+  },
+  "subsidiary": {
+    "is_padding": false,
+    "why": "子公司与辅助机构是不同概念"
+  },
+  "peril": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "wade": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "fort": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是'fort'"
+  },
+  "lust": {
+    "is_padding": false,
+    "why": "欲望是广义的,色欲是特指性欲。"
+  },
+  "maze": {
+    "is_padding": false,
+    "why": "迷宫和迷惘是不同的概念。"
+  },
+  "rehearse": {
+    "is_padding": true,
+    "why": "两个义项都是指排练的过程"
+  },
+  "nickel": {
+    "is_padding": false,
+    "why": "镍是元素，镍币是货币。"
+  },
+  "heighten": {
+    "is_padding": true,
+    "why": "两个义项意思相近"
+  },
+  "sovereign": {
+    "is_padding": true,
+    "why": "两个义项不够明确区分"
+  },
+  "cardiac": {
+    "is_padding": false,
+    "why": "心脏和贲门是不同的解剖部位"
+  },
+  "glamour": {
+    "is_padding": false,
+    "why": "魅力是吸引力，迷惑是误导。"
+  },
+  "vapor": {
+    "is_padding": false,
+    "why": "蒸汽是物质形态，蒸发现象是过程。"
+  },
+  "converge": {
+    "is_padding": true,
+    "why": "两个义项都指向相同的英文解释。"
+  },
+  "asphalt": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "volcanic": {
+    "is_padding": false,
+    "why": "火山的与猛烈无直接联系"
+  },
+  "restrictive": {
+    "is_padding": true,
+    "why": "两个义项意思相近"
+  },
+  "apprentice": {
+    "is_padding": true,
+    "why": "两个义项是同一件事的不同说法"
+  },
+  "smuggle": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是'smuggle'"
+  },
+  "moss": {
+    "is_padding": false,
+    "why": "苔藓是植物，泥沼是地形，词典分列"
+  },
+  "veer": {
+    "is_padding": true,
+    "why": "两个义项意思相近，都是改变方向。"
+  },
+  "disarm": {
+    "is_padding": false,
+    "why": "解除武装和缓和局势是不同的概念"
+  },
+  "inflate": {
+    "is_padding": false,
+    "why": "膨胀与经济现象不同"
+  },
+  "mint": {
+    "is_padding": false,
+    "why": "薄荷和造币厂是两个不同的概念"
+  },
+  "overlap": {
+    "is_padding": false,
+    "why": "重叠和重复发生是不同概念"
+  },
+  "frail": {
+    "is_padding": false,
+    "why": "形容词与名词,不同词性"
+  },
+  "soothe": {
+    "is_padding": false,
+    "why": "安抚是情感,缓和是状态"
+  },
+  "fluorescent": {
+    "is_padding": false,
+    "why": "形容词与名词,不同词性"
+  },
+  "jelly": {
+    "is_padding": false,
+    "why": "果冻是胶状物的一种"
+  },
+  "syllable": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "fortress": {
+    "is_padding": true,
+    "why": "两个义项表达相同概念"
+  },
+  "plump": {
+    "is_padding": true,
+    "why": "丰满和圆胖意思相近"
+  },
+  "reshape": {
+    "is_padding": true,
+    "why": "两个义项意思相近"
+  },
+  "opaque": {
+    "is_padding": false,
+    "why": "不透明与不传热是不同性质"
+  },
+  "exempt": {
+    "is_padding": true,
+    "why": "免除和豁免是同义词"
+  },
+  "assimilate": {
+    "is_padding": false,
+    "why": "同化和吸收是不同的过程"
+  },
+  "ascend": {
+    "is_padding": false,
+    "why": "上升是一般意义，攀登是特指"
+  },
+  "wed": {
+    "is_padding": true,
+    "why": "两个义项都可翻译为 marry"
+  },
+  "sulfur": {
+    "is_padding": false,
+    "why": "硫是元素，硫磺处理是化学过程。"
+  },
+  "magnify": {
+    "is_padding": false,
+    "why": "放大与夸大是不同概念"
+  },
+  "dent": {
+    "is_padding": false,
+    "why": "凹痕与削弱程度是不同的概念"
+  },
+  "pollen": {
+    "is_padding": false,
+    "why": "花粉是名词，传授花粉是动词。"
+  },
+  "deterrent": {
+    "is_padding": true,
+    "why": "两个义项表达相同概念"
+  },
+  "permeate": {
+    "is_padding": false,
+    "why": "渗透是物理过程，弥漫是扩散状态。"
+  },
+  "dissipate": {
+    "is_padding": false,
+    "why": "消散和浪费掉是不同的概念"
+  },
+  "manure": {
+    "is_padding": false,
+    "why": "名词与动词,不同词性"
+  },
+  "willow": {
+    "is_padding": false,
+    "why": "植物与制品,词典分列"
+  },
+  "clam": {
+    "is_padding": false,
+    "why": "动物与性格描述,无关"
+  },
+  "avalanche": {
+    "is_padding": false,
+    "why": "雪崩和大量是不同的概念"
+  },
+  "serene": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文有差异"
+  },
+  "gait": {
+    "is_padding": false,
+    "why": "步态是自然的,训练步法是人为的。"
+  },
+  "infiltrate": {
+    "is_padding": false,
+    "why": "动词与名词,不同词性"
+  },
+  "gleam": {
+    "is_padding": true,
+    "why": "光辉和微光有细微差别"
+  },
+  "scarlet": {
+    "is_padding": false,
+    "why": "颜色与服装不同"
+  },
+  "zinc": {
+    "is_padding": false,
+    "why": "锌是元素,镀锌是工艺,不同义项"
+  },
+  "beacon": {
+    "is_padding": false,
+    "why": "灯塔用于导航，烽火用于报警"
+  },
+  "edible": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "climax": {
+    "is_padding": true,
+    "why": "两个义项都指向climax的顶点含义"
+  },
+  "obstruct": {
+    "is_padding": true,
+    "why": "两个义项都指阻止或妨碍"
+  },
+  "refund": {
+    "is_padding": false,
+    "why": "退款是返还支付款，偿还是归还借款。"
+  },
+  "defective": {
+    "is_padding": false,
+    "why": "名词与形容词,词典分列"
+  },
+  "daisy": {
+    "is_padding": false,
+    "why": "植物与人物,无关"
+  },
+  "determinant": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "cavern": {
+    "is_padding": true,
+    "why": "两个义项都指大洞"
+  },
+  "saturate": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "dagger": {
+    "is_padding": false,
+    "why": "匕首是名词,用剑刺是动词。"
+  },
+  "axe": {
+    "is_padding": false,
+    "why": "工具与行为,词典分列"
+  },
+  "troupe": {
+    "is_padding": false,
+    "why": "剧团是组织，巡回演出是活动，词典分列。"
+  },
+  "resin": {
+    "is_padding": false,
+    "why": "一个是物质，一个是用途"
+  },
+  "fresco": {
+    "is_padding": false,
+    "why": "制作与作品不同"
+  },
+  "camouflage": {
+    "is_padding": true,
+    "why": "伪装和掩饰行为在语义上非常接近"
+  },
+  "cove": {
+    "is_padding": true,
+    "why": "两个义项都指小型水域"
+  },
+  "fable": {
+    "is_padding": true,
+    "why": "两个义项都指虚构的故事。"
+  },
+  "illiterate": {
+    "is_padding": true,
+    "why": "两个义项都是指不识字。"
+  },
+  "meditate": {
+    "is_padding": false,
+    "why": "冥想是精神放松,沉思反省是思考问题。"
+  },
+  "skyrocket": {
+    "is_padding": false,
+    "why": "急剧上升与焰火是不同的概念。"
+  },
+  "ornamental": {
+    "is_padding": false,
+    "why": "装饰性与观赏植物是不同概念"
+  },
+  "repress": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都为repress。"
+  },
+  "legislate": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "venom": {
+    "is_padding": false,
+    "why": "毒液和恶意是不同概念"
+  },
+  "hoax": {
+    "is_padding": false,
+    "why": "骗局是欺骗，恶作剧是玩笑。"
+  },
+  "flaunt": {
+    "is_padding": false,
+    "why": "炫耀和飘扬是不同的概念"
+  },
+  "starch": {
+    "is_padding": false,
+    "why": "淀粉和浆硬是不同概念"
+  },
+  "embroider": {
+    "is_padding": false,
+    "why": "刺绣与镶边装饰是不同的工艺"
+  },
+  "diverge": {
+    "is_padding": false,
+    "why": "分歧指意见不同，岔开指路径分开。"
+  },
+  "maize": {
+    "is_padding": false,
+    "why": "玉米是植物的具体名称，黄色的植物是描述"
+  },
+  "brawl": {
+    "is_padding": true,
+    "why": "斗殴和争吵有区别"
+  },
+  "effluent": {
+    "is_padding": false,
+    "why": "污水是污染的流出水。"
+  },
+  "gradient": {
+    "is_padding": false,
+    "why": "梯度是数学概念，倾斜度是物理概念。"
+  },
+  "accordion": {
+    "is_padding": false,
+    "why": "乐器与物品功能不同"
+  },
+  "subterranean": {
+    "is_padding": false,
+    "why": "地下的 vs 秘密活动,不同义项"
+  },
+  "barbarian": {
+    "is_padding": false,
+    "why": "名词与形容词,不同词性"
+  },
+  "stimulant": {
+    "is_padding": true,
+    "why": "两者都是指刺激作用的物质"
+  },
+  "additive": {
+    "is_padding": true,
+    "why": "两个义项是同一件事的不同说法"
+  },
+  "sap": {
+    "is_padding": false,
+    "why": "树液和活力是不同概念"
+  },
+  "malfunction": {
+    "is_padding": true,
+    "why": "\u000e4e24\u000e4e2a\u000e4e49\u000e9879\u000e5747\u000e6307\u000e673a\u000e5668\u000e6216\u000e7cfb\u000e7edf\u000e7684\u000e4e0d\u000e6b63\u000e5e38\u000e5de5\u000e4f5c\u000e3002"
+  },
+  "varnish": {
+    "is_padding": false,
+    "why": "清漆是物质,粉饰是行为,不同义"
+  },
+  "consequent": {
+    "is_padding": false,
+    "why": "随之而来的强调结果，合乎逻辑强调因果。"
+  },
+  "luster": {
+    "is_padding": false,
+    "why": "光泽与光彩荣誉是不同概念"
+  },
+  "censure": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是censure。"
+  },
+  "slime": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文不同"
+  },
+  "saber": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "audit": {
+    "is_padding": false,
+    "why": "审计和旁听是不同的概念"
+  },
+  "relapse": {
+    "is_padding": false,
+    "why": "复发指疾病,故态复萌指行为。"
+  },
+  "silt": {
+    "is_padding": false,
+    "why": "名词与动词义,不同词性"
+  },
+  "crouch": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文不同"
+  },
+  "asteroid": {
+    "is_padding": false,
+    "why": "小行星是天体，星状是形状。"
+  },
+  "nurture": {
+    "is_padding": false,
+    "why": "培养强调教育，养育强调抚养。"
+  },
+  "commute": {
+    "is_padding": false,
+    "why": "通勤和交换折偿是不同的概念。"
+  },
+  "seam": {
+    "is_padding": false,
+    "why": "缝合处与裂痕是不同概念"
+  },
+  "reptile": {
+    "is_padding": false,
+    "why": "爬行动物与卑鄙之人是不同概念"
+  },
+  "interrogate": {
+    "is_padding": true,
+    "why": "两个义项都指询问的行为。"
+  },
+  "confiscate": {
+    "is_padding": false,
+    "why": "动词与名词,不同词性"
+  },
+  "prerequisite": {
+    "is_padding": true,
+    "why": "两个义项意思相近"
+  },
+  "swelling": {
+    "is_padding": false,
+    "why": "肿胀是状态,肿胀部位是位置。"
+  },
+  "subversive": {
+    "is_padding": false,
+    "why": "颠覆性是形容词，破坏分子是名词。"
+  },
+  "repel": {
+    "is_padding": false,
+    "why": "两个义项意义不同"
+  },
+  "digestive": {
+    "is_padding": false,
+    "why": "形容词 vs 名词,是两个词条"
+  },
+  "mistrust": {
+    "is_padding": false,
+    "why": "不信任和疑惑是不同的概念"
+  },
+  "predominate": {
+    "is_padding": true,
+    "why": "两个义项意思相近，难以区分。"
+  },
+  "raven": {
+    "is_padding": false,
+    "why": "动物与颜色,不同义"
+  },
+  "sentry": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文都是'sentry'"
+  },
+  "domesticated": {
+    "is_padding": false,
+    "why": "驯化的 vs 家庭生活者,不同领域"
+  },
+  "surcharge": {
+    "is_padding": false,
+    "why": "附加费与超载是不同概念"
+  },
+  "mason": {
+    "is_padding": false,
+    "why": "职业与组织成员不同"
+  },
+  "corrosive": {
+    "is_padding": false,
+    "why": "腐蚀性与有害物质是不同概念"
+  },
+  "baroque": {
+    "is_padding": false,
+    "why": "风格与特征不同"
+  },
+  "modulate": {
+    "is_padding": true,
+    "why": "调节和控制有重叠"
+  },
+  "sunburn": {
+    "is_padding": false,
+    "why": "晒伤和晒黑是不同的结果"
+  },
+  "haggle": {
+    "is_padding": true,
+    "why": "两个义项表达相同意思"
+  },
+  "reversible": {
+    "is_padding": false,
+    "why": "可逆与可撤消是不同概念"
+  },
+  "sapphire": {
+    "is_padding": false,
+    "why": "蓝宝石是宝石，天蓝色是颜色"
+  },
+  "consonant": {
+    "is_padding": false,
+    "why": "语言学术语与形容词义不同"
+  },
+  "germinate": {
+    "is_padding": true,
+    "why": "两个义项都涉及植物生长过程。"
+  },
+  "blemish": {
+    "is_padding": true,
+    "why": "瑕疵和污点在语境中常互换"
+  },
+  "vertebrate": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "facsimile": {
+    "is_padding": false,
+    "why": "复制品是一般意义，传真件是特定用途。"
+  },
+  "sicken": {
+    "is_padding": false,
+    "why": "恶心和厌倦是不同的情感反应"
+  },
+  "mammalian": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "incubate": {
+    "is_padding": false,
+    "why": "孵化指生物,培养指环境,不同领域"
+  },
+  "monochrome": {
+    "is_padding": true,
+    "why": "单色和黑白图像常被视为同义"
+  },
+  "crustacean": {
+    "is_padding": false,
+    "why": "动物分类 vs 生物学分类"
+  },
+  "crevasse": {
+    "is_padding": false,
+    "why": "冰川裂缝是裂缝的一种,词典分列"
+  },
+  "lithograph": {
+    "is_padding": false,
+    "why": "平版画是作品，平版印刷是技术。"
+  },
+  "perishable": {
+    "is_padding": false,
+    "why": "形容词与名词,不同词性"
+  },
+  "ferret": {
+    "is_padding": false,
+    "why": "动物与动作,词典分列"
+  },
+  "azure": {
+    "is_padding": true,
+    "why": "两者都是蓝色的描述"
+  },
+  "overcharge": {
+    "is_padding": false,
+    "why": "收费与载重无关"
+  },
+  "recluse": {
+    "is_padding": true,
+    "why": "两个义项都是指隐居的人。"
+  },
+  "lathe": {
+    "is_padding": false,
+    "why": "车床是工具，车床加工是过程。"
+  },
+  "ultrasonic": {
+    "is_padding": false,
+    "why": "超声波与超音速是不同概念"
+  },
+  "transmute": {
+    "is_padding": true,
+    "why": "两个义项意思相近，都是变化"
+  },
+  "refrigerant": {
+    "is_padding": true,
+    "why": "制冷剂和冷却剂常被视为同义词。"
+  },
+  "sallow": {
+    "is_padding": true,
+    "why": "两个义项描述相似，均指肤色不佳。"
+  },
+  "cabal": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "ragtime": {
+    "is_padding": false,
+    "why": "音乐风格与滑稽风格不同"
+  },
+  "depreciate": {
+    "is_padding": true,
+    "why": "两个义项意思相近，都是价值下降。"
+  },
+  "sublimate": {
+    "is_padding": false,
+    "why": "升华是物理过程,使高尚是心理过程。"
+  },
+  "spanking": {
+    "is_padding": false,
+    "why": "两个义项无关,词典分列"
+  },
+  "ruffian": {
+    "is_padding": true,
+    "why": "两个义项表达相似的概念"
+  },
+  "obligated": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "defecate": {
+    "is_padding": false,
+    "why": "排便和净化污物是不同的概念"
+  },
+  "emaciate": {
+    "is_padding": true,
+    "why": "两个义项翻译回英文相同"
+  },
+  "feint": {
+    "is_padding": true,
+    "why": "假动作和佯攻是同一件事的不同说法"
+  },
+  "rawhide": {
+    "is_padding": false,
+    "why": "生皮和用生皮抽打是不同的概念"
+  },
+  "fireproof": {
+    "is_padding": true,
+    "why": "两者都指防火性能"
+  },
+  "canter": {
+    "is_padding": false,
+    "why": "慢跑是马的步态，流浪者是人。"
+  },
+  "thresh": {
+    "is_padding": false,
+    "why": "脱粒是农业术语，反复推敲是比喻义。"
+  },
+  "fossilize": {
+    "is_padding": false,
+    "why": "化石化与陈腐是不同概念"
+  },
+  "magnetize": {
+    "is_padding": false,
+    "why": "磁化是物理过程，吸引力是心理或物理效应。"
+  },
+  "overbalance": {
+    "is_padding": false,
+    "why": "失衡与超重是不同概念"
+  },
+  "mortar": {
+    "is_padding": false,
+    "why": "建筑材料 vs 厨房工具"
+  },
+  "slumber": {
+    "is_padding": true,
+    "why": "两个义项都指深度睡眠"
+  },
+  "squall": {
+    "is_padding": false,
+    "why": "狂风与喊叫是不同概念"
+  },
+  "erudite": {
+    "is_padding": false,
+    "why": "形容词与名词,词典分列"
+  },
+  "defrost": {
+    "is_padding": false,
+    "why": "解冻和除霜是不同的过程"
+  },
+  "fagot": {
+    "is_padding": false,
+    "why": "两个义项无关,词典分列"
+  },
+  "intestine": {
+    "is_padding": false,
+    "why": "肠是名词，内部的/国内的是形容词。"
+  },
+  "tributary": {
+    "is_padding": false,
+    "why": "支流与纳贡者无关"
+  },
+  "fowl": {
+    "is_padding": false,
+    "why": "家禽是家养的，飞禽是野生的。"
+  },
+  "indent": {
+    "is_padding": false,
+    "why": "缩进和凹痕是不同概念"
+  },
+  "upgrade": {
+    "is_padding": true,
+    "why": "判定调用失败,按安全方向退回单义"
+  },
+  "precedent": {
+    "is_padding": true,
+    "why": "判定调用失败,按安全方向退回单义"
+  },
+  "reservoir": {
+    "is_padding": true,
+    "why": "判定调用失败,按安全方向退回单义"
+  },
+  "tapestry": {
+    "is_padding": true,
+    "why": "判定调用失败,按安全方向退回单义"
+  },
+  "trample": {
+    "is_padding": true,
+    "why": "判定调用失败,按安全方向退回单义"
+  }
+}

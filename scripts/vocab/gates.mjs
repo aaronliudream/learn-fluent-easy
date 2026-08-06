@@ -12,6 +12,8 @@
  *  · 重合率定义写死在这里,别在调用方另算一套。
  */
 
+import { SPEC } from './spec.mjs';
+
 export const SCENES = [
   'academic', 'news', 'daily_life', 'work', 'science_tech',
   'health', 'environment', 'education', 'travel', 'culture',
@@ -142,8 +144,9 @@ export function g1_targetPresent(sentence, headword, table) {
  * 模型自然写出来就是 8-9 词,硬顶下限只能靠重试凑长度,凑出来的句子还注水。
  * 句子该多长由内容决定,不该为了填档位注水。上限不动。
  * ⚠️ 已生成的内容不回溯(Aaron 定),本次调整只对之后的生成生效。 */
-export const LENGTH_BY_TIER = { A2: [8, 12], B1: [8, 14], B2: [9, 16], C1: [10, 20] };
-export const LEGACY_LENGTH = [8, 16];
+/* ⚠️ 数值在 spec.mjs,这里只是转出去。别在这里写字面量(第四条规矩)。 */
+export const LENGTH_BY_TIER = SPEC.example.lengthByTier;
+export const LEGACY_LENGTH = SPEC.example.legacyLength;
 
 /** g2 句长。range 不传则用统一的 8-16(存量口径)。 */
 export function g2_length(sentence, range = LEGACY_LENGTH) {
@@ -161,7 +164,7 @@ export function g3_noEmDash(...texts) {
 }
 
 /** g4 全局 4-gram 去重:与已生成语料重合 >50% 拒。 */
-export function g4_globalDedup(sentence, corpusNgramSets, threshold = 0.5) {
+export function g4_globalDedup(sentence, corpusNgramSets, threshold = SPEC.dedup.globalMax) {
   const a = ngrams(sentence);
   if (!a.size) return null;                      // 太短的句子交给 g2 管
   for (const b of corpusNgramSets) {
@@ -372,15 +375,28 @@ export function defZhShapeProblem(defZh) {
   const s = String(defZh || '').trim();
   if (!s) return 'def_zh 为空';
   if (/[。.!?！？]/.test(s)) return 'def_zh 写成了句子(含句号)';
-  const parts = s.split('；');
-  if (parts.length > 2) return `def_zh 有 ${parts.length} 个义项,最多 2 个`;
+  /* ⚠️ 逗号/顿号当分隔符是**绕过体裁闸的后门**(2026-08-05 Aaron 查 monochrome 时暴露)。
+   *    「单色，单色图像」在闸门眼里是**一个** 7 字义项,于是:
+   *      ① ≤2 义项那条约束形同虚设(想塞几个塞几个)
+   *      ② 双义统计把它算成单义
+   *      ③ 前端 optionText 只按 '；' 切,选项里会整个显示「推，挤」
+   *    实测全池 43 条(1.0%),而且多数本身就是同义堆砌(推/挤、拖/拉、抛弃/放弃)。
+   *    分隔符只能是全角分号 —— 这是规格,闸门必须照着卡。 */
+  if (/[，,、]/.test(s)) return `def_zh 用了逗号/顿号当分隔符:「${s}」(分隔符只能是「${SPEC.defZh.sep}」)`;
+  const parts = s.split(SPEC.defZh.sep);
+  if (parts.length > SPEC.defZh.maxSenses) return `def_zh 有 ${parts.length} 个义项,最多 ${SPEC.defZh.maxSenses} 个`;
   /* ⚠️ 2026-08-05 收紧 12 → 8。prompt 里定的规格一直是"每义项 2-8 个汉字",
    *    检测器却放到 12,中间这一档漏网:honor「尊敬或对成就或品质的认可」、
    *    diagnose「通过检查来识别疾病或问题」—— 没踩任何标记词、也没句号,
    *    照样是解释句不是释义。阈值必须跟规格同一个数,不然就是自己给自己开后门。
    *    实测全池只有 8 个词落在 9-12 这一档(0.2%),收紧不会误伤。 */
-  const tooLong = parts.find(p => p.trim().length > 8);
-  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字,规格 2-8):「${tooLong.trim()}」`;
+  /* ⚠️ 下限判据补上(2026-08-05)。原来只卡上限、不卡下限,而规格写的是区间 ——
+   *    又是"判据没照规格写全"(第四条规矩的同型问题)。
+   *    两端都从 SPEC 取数,不写字面量。 */
+  const tooShort = parts.find(p => p.trim().length < SPEC.defZh.minChars);
+  if (tooShort) return `def_zh 义项过短(${tooShort.trim().length} 字,规格 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars}):「${tooShort.trim()}」`;
+  const tooLong = parts.find(p => p.trim().length > SPEC.defZh.maxChars);
+  if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字,规格 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars}):「${tooLong.trim()}」`;
   /* 标记词只在**长片段**里才说明是解释句。
    * ⚠️ 短义项本身就等于标记词是合法的:notably「显著地；尤其」、customarily「通常；一般」——
    *    「尤其」「通常」正是这些副词的标准释义。不加这条长度前提会把它们全判成解释句(实测误报)。
@@ -399,7 +415,7 @@ export function defZhShapeProblem(defZh) {
 }
 
 /** g6 同词三句相似度:任意两句 4-gram 重合 >30% 拒(防"换个场景词其余照抄")。 */
-export function g6_intraWordSimilarity(examples, threshold = 0.3) {
+export function g6_intraWordSimilarity(examples, threshold = SPEC.dedup.intraWordMax) {
   const sets = examples.map(e => ngrams(e.sentence));
   for (let i = 0; i < sets.length; i++) {
     for (let j = i + 1; j < sets.length; j++) {
@@ -456,8 +472,8 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable, opts =
   }
 
   // def_en 15 词内(不是闸门编号内的,但同属硬约束,一并卡)
-  if (payload?.def_en && words(payload.def_en).length > 15) {
-    fails.push(`def_en ${words(payload.def_en).length} 词,超过 15`);
+  if (payload?.def_en && words(payload.def_en).length > SPEC.defEn.maxWords) {
+    fails.push(`def_en ${words(payload.def_en).length} 词,超过 ${SPEC.defEn.maxWords}`);
   }
   const circular = g12_defEnNotCircular(payload?.def_en, word.headword, inflectTable);
   if (circular) fails.push(circular);

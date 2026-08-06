@@ -10,7 +10,7 @@
  *   { ipa, def_zh, def_en, examples: [3 × { collocation, scene, sentence, translation_zh }] }
  *
  * 九道机器闸门在 ./gates.mjs(独立模块,可离线单测:node scripts/vocab/test-gates.mjs)
- *   g1 目标词存在(认屈折形+派生形)  g2 长度 8-16   g3 em-dash
+ *   g1 目标词存在(认屈折形+派生形)  g2 按档句长(见 spec.mjs)  g3 em-dash
  *   g4 全局 4-gram 去重 >50% 拒       g5 三句 scene/collocation 互斥
  *   g6 同词三句两两 4-gram 重合 >30% 拒
  *   g7 collocation 必须含目标词(拦同义词冒充搭配)
@@ -38,6 +38,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER } from './gates.mjs';
+import { tierRangeText } from './spec.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
 import { DEF_ZH_RULE, FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
 
@@ -344,7 +345,8 @@ async function main() {
           process.stdout.write(`  ✗ ${word.headword} 第${attempt}次 API 失败:${e.message}\n`);
           continue;
         }
-        // useTierLength:新生成走按档句长(A2 8-12 / B1 8-14 / B2 10-16 / C1 12-20)
+        // useTierLength:新生成走按档句长(区间见 spec.mjs,别在注释里复写数字——这行原来写的
+        // 「B2 10-16 / C1 12-20」就已经和常量对不上了)
         // ⚠️ cefr 要挂在**第一个参数**上 —— runAllGates 读的是 word.cefr,不是 payload.cefr
         const fails = runAllGates({ ...word, cefr: cefr.level }, payload, corpus, inflectTable, { useTierLength: true });
         if (!fails.length) {
@@ -572,7 +574,7 @@ ${w.examples.map((e, i) => `| ${i + 1} | ${e.collocation} | \`${e.scene}\` | ${e
 | 闸门 | 判据 | 拦的是什么 |
 | --- | --- | --- |
 | g1 | 句中含 headword 或其屈折形/派生形 | 例句根本没用上目标词 |
-| g2 | 例句 8-16 词 | 太短没语境 / 太长读不动 |
+| g2 | 例句按档句长(${tierRangeText()}) | 太短没语境 / 太长读不动 |
 | g3 | 全字段扫 em-dash / en-dash | 破折号(中文排版里很丑) |
 | g4 | 与**历史全部**已生成句 4-gram 重合 >50% | 跨词、跨批次的套话复读 |
 | g5 | 三句 scene 互不相同且在枚举内;三句 collocation 互不相同 | 三句其实在讲同一个用法 |

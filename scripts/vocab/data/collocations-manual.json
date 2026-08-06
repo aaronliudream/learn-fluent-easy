@@ -1,0 +1,13 @@
+{
+  "_note": "F 段搭配的人工修正。Aaron 审送审件时抓到的,优先级高于模型产出。",
+  "_rule": "在 emit 阶段处理,不写进生成缓存 —— 写进缓存会被下次闸门重验当模型产出淘汰。处理后仍过 f1-f7 + f9。",
+  "_maternal_note": "Aaron 原指示是 maternal leave → maternity leave。但 maternity 不含 maternal,过不了 f1(搭配必须含目标词),而 f1 在这里是对的:maternal 的搭配卡上放一条不含 maternal 的短语,学生学不到这个词怎么用。且 maternity 根本不在本词池里,没有它的卡可挂。所以改为**删除**这条错搭配,maternal 保留 4 条。",
+  "replace": [],
+  "remove": [
+    {
+      "headword": "maternal",
+      "collocation": "maternal leave",
+      "why": "maternal leave 不是英语里的说法(正确的是 maternity leave);但 maternity 不是 maternal 的屈折/派生形,替换会破坏 f1,且 maternity 不在词池 —— 故删除不替换"
+    }
+  ]
+}

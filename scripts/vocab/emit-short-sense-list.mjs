@@ -55,10 +55,24 @@ const A_REASON = {
   stratum: '地质学名',
 };
 
-const res = await fetch(`${SUPA}/rest/v1/vocab_words?select=headword,pos,def_zh&def_zh=not.is.null&limit=5000`,
-  { headers: { apikey: ANON, Authorization: `Bearer ${ANON}` } });
-if (!res.ok) { process.stderr.write(`REST HTTP ${res.status}\n`); process.exit(1); }
-const rows = (await res.json()).filter(r =>
+/* ⚠️ PostgREST **单次最多 1000 行**,`limit=5000` 不起作用 —— 它静默截断。
+ *    第一版就栽在这:拿到 1000 词、筛出 19 条,而库里实际是 51 条。
+ *    "少了 32 条"不会报错,只会让清单看起来完整。一律翻页。 */
+async function fetchAll() {
+  const out = [];
+  for (let offset = 0; ; offset += 1000) {
+    const url = `${SUPA}/rest/v1/vocab_words?select=headword,pos,def_zh&def_zh=not.is.null`
+      + `&order=headword&offset=${offset}&limit=1000`;
+    const res = await fetch(url, { headers: { apikey: ANON, Authorization: `Bearer ${ANON}` } });
+    if (!res.ok) { process.stderr.write(`REST HTTP ${res.status}\n`); process.exit(1); }
+    const page = await res.json();
+    out.push(...page);
+    if (page.length < 1000) return out;
+  }
+}
+const all = await fetchAll();
+process.stdout.write(`· 只读拉取 ${all.length} 词(翻页)\n`);
+const rows = all.filter(r =>
   String(r.def_zh).split(SPEC.defZh.sep).some(s => s.trim().length < SPEC.defZh.minChars));
 rows.sort((a, b) => a.headword.localeCompare(b.headword));
 

@@ -295,3 +295,54 @@ export async function totalMastered(): Promise<number> {
   type R = { modes_correct: string[] | null };
   return ((data || []) as R[]).filter(r => new Set((r.modes_correct || []).filter(Boolean)).size >= 2).length;
 }
+
+/**
+ * 词库进度(快速版)—— 词汇中心页专用。
+ *
+ * ⚠️ 替代 getBankProgress 的原因是**请求数**,不是索引。
+ *    老版:先翻页拉全部 4470 个 word_id(5 次请求),再按 200 一批
+ *    去查 user_vocab_mastery(23 次请求)—— 单库 ~28 次往返,冷启动实测 ~3 秒。
+ *    方向反了:用户最多只有 200 条掌握记录(RLS 配额),
+ *    应该"从用户那 ≤200 条出发",而不是"从库里 4470 个词出发"。
+ *
+ * 新做法 3 次请求:
+ *   ① 分母:count(vocab_word_banks where bank_id) —— head 查询,不拉数据
+ *   ② 用户全部掌握行(≤200,一次拿完)
+ *   ③ 这些 word_id 里哪些属于本库(≤200 个 id 的 in 查询,一次)
+ *
+ * ⚠️ uid 由调用方传入,不在这里再查一次 —— 中心页已经拿过了,
+ *    每个词库再查一遍 auth 是白白多几次往返。
+ * ⚠️ 掌握判定仍复用 isMasteredRow,不另写一套(两处漂移会出鬼故事)。
+ */
+export async function getBankProgressFast(
+  bankId: string,
+  fallbackTotal: number,
+  uid: string | null,
+): Promise<BankProgress> {
+  const { count, error: cErr } = await db
+    .from("vocab_word_banks")
+    .select("word_id", { count: "exact", head: true })
+    .eq("bank_id", bankId);
+  if (cErr) throw cErr;
+  const total = count ?? fallbackTotal;
+  if (!uid || !total) return { mastered: 0, learning: 0, untouched: total, total };
+
+  const rows = await listMasteryRows();
+  if (!rows.length) return { mastered: 0, learning: 0, untouched: total, total };
+
+  const { data: link, error: lErr } = await db
+    .from("vocab_word_banks")
+    .select("word_id")
+    .eq("bank_id", bankId)
+    .in("word_id", rows.map(r => r.word_id));
+  if (lErr) throw lErr;
+  const inBank = new Set((link || []).map(r => (r as { word_id: string }).word_id));
+
+  let mastered = 0, learning = 0;
+  for (const r of rows) {
+    if (!inBank.has(r.word_id)) continue;
+    if (isMasteredRow(r)) mastered++;
+    else if ((r.tested_count ?? 0) > 0) learning++;
+  }
+  return { mastered, learning, untouched: Math.max(0, total - mastered - learning), total };
+}

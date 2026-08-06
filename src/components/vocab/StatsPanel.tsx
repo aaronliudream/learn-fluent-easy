@@ -82,6 +82,12 @@ export default function StatsPanel({
 
   const total = Math.max(0, mastered + learning + untouched);
   const pct = total > 0 ? mastered / total : 0;
+  /* 环身要画**两段**:深身份色=已掌握,浅身份色=学习中。
+   * ⚠️ 由来:实测"学习中 64"时圆环全空 —— 环只绑定了 mastered。
+   *    头四天不可能有任何 mastered(掌握判定要 4 个不同日期),
+   *    于是新用户前四天看到的永远是全灰环,努力完全不可见。
+   *    环心大字仍是"已掌握 N"(口径不变),但环身必须让努力看得见。 */
+  const pctReached = total > 0 ? (mastered + learning) / total : 0;
   const isEmpty = mastered === 0 && learning === 0;
   const pick = (v: StatsView) => { setView(v); writeStatsView(v); };
 
@@ -119,15 +125,28 @@ export default function StatsPanel({
                 style={{ strokeDasharray: `${emptyArc} ${C}`, strokeDashoffset: 0 }}
               />
             ) : (
-              <circle
-                cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="11" strokeLinecap="round"
-                transform="rotate(-90 64 64)"
-                style={{
-                  strokeDasharray: C,
-                  strokeDashoffset: shown ? C * (1 - pct) : C,
-                  transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
-                }}
-              />
+              <>
+                {/* 浅段 = 已掌握 + 学习中(先画,被深段盖住前半) */}
+                <circle
+                  cx="64" cy="64" r={R} fill="none" stroke={color} strokeOpacity={0.3} strokeWidth="11"
+                  strokeLinecap="round" transform="rotate(-90 64 64)"
+                  style={{
+                    strokeDasharray: C,
+                    strokeDashoffset: shown ? C * (1 - pctReached) : C,
+                    transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                />
+                {/* 深段 = 已掌握。mastered 为 0 时这段自然不显示,浅段独自撑起环身 */}
+                <circle
+                  cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="11" strokeLinecap="round"
+                  transform="rotate(-90 64 64)"
+                  style={{
+                    strokeDasharray: C,
+                    strokeDashoffset: shown ? C * (1 - pct) : C,
+                    transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                />
+              </>
             )}
           </svg>
 

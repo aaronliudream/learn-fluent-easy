@@ -82,8 +82,29 @@ export default function StatsPanel({
 
   const total = Math.max(0, mastered + learning + untouched);
   const pct = total > 0 ? mastered / total : 0;
+  /* 环身要画**两段**:深身份色=已掌握,浅身份色=学习中。
+   * ⚠️ 由来:实测"学习中 64"时圆环全空 —— 环只绑定了 mastered。
+   *    头四天不可能有任何 mastered(掌握判定要 4 个不同日期),
+   *    于是新用户前四天看到的永远是全灰环,努力完全不可见。
+   *    环心大字仍是"已掌握 N"(口径不变),但环身必须让努力看得见。 */
+  const pctReached = total > 0 ? (mastered + learning) / total : 0;
   const isEmpty = mastered === 0 && learning === 0;
   const pick = (v: StatsView) => { setView(v); writeStatsView(v); };
+
+  /* 浅段用**向白混色**得到的真浅色,不用 opacity。
+   * ⚠️ 由来:第一版写的是 strokeOpacity={0.3}。身份色 #0C447C 是深海军蓝,
+   *    掉到 30% 之后是 rgb(178,193,209) —— **色相基本没了,就是个浅灰蓝**,
+   *    和 #EFF1F5 的轨道放一起,肉眼(和截图)读出来就是"全灰"。
+   *    环画了、数据也对,但用户看到的是没生效。
+   *    混色保住色相:同样的浅,但一眼能看出是蓝的。 */
+  const tint = (hex: string, toWhite: number) => {
+    const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
+    if (!m) return hex;
+    const n = parseInt(m[1], 16);
+    const mix = (c: number) => Math.round(c + (255 - c) * toWhite);
+    return `rgb(${mix((n >> 16) & 255)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
+  };
+  const lightColor = tint(color, 0.62);
 
   const R = 54, C = 2 * Math.PI * R;
   /* 空态不画纯灰圈:给一段浅身份色引导弧(12% 周长),
@@ -119,15 +140,28 @@ export default function StatsPanel({
                 style={{ strokeDasharray: `${emptyArc} ${C}`, strokeDashoffset: 0 }}
               />
             ) : (
-              <circle
-                cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="11" strokeLinecap="round"
-                transform="rotate(-90 64 64)"
-                style={{
-                  strokeDasharray: C,
-                  strokeDashoffset: shown ? C * (1 - pct) : C,
-                  transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
-                }}
-              />
+              <>
+                {/* 浅段 = 已掌握 + 学习中(先画,被深段盖住前半) */}
+                <circle
+                  cx="64" cy="64" r={R} fill="none" stroke={lightColor} strokeWidth="11"
+                  strokeLinecap="round" transform="rotate(-90 64 64)"
+                  style={{
+                    strokeDasharray: C,
+                    strokeDashoffset: shown ? C * (1 - pctReached) : C,
+                    transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                />
+                {/* 深段 = 已掌握。mastered 为 0 时这段自然不显示,浅段独自撑起环身 */}
+                <circle
+                  cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="11" strokeLinecap="round"
+                  transform="rotate(-90 64 64)"
+                  style={{
+                    strokeDasharray: C,
+                    strokeDashoffset: shown ? C * (1 - pct) : C,
+                    transition: prefersReduced() ? undefined : "stroke-dashoffset 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                />
+              </>
             )}
           </svg>
 

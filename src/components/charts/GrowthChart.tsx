@@ -27,6 +27,7 @@ export default function GrowthChart({
   headerRight,
   emptyHint,
   titleClassName = "text-lg font-extrabold text-slate-800",
+  stacked = false,
 }: {
   title: string;
   series: GrowthSeries[];
@@ -44,9 +45,22 @@ export default function GrowthChart({
   emptyHint?: string;
   /** 默认值是 library 那张图的原始标题样式 —— 抽取时不能顺手改了它的观感。 */
   titleClassName?: string;
+  /**
+   * 堆叠模式:同一天的各 series 叠成**一根柱**,而不是并排几根。
+   * ⚠️ 默认 false —— 图书馆那张图不传这个 prop,观感一个像素都不变。
+   *    词汇侧要它是因为「掌握」和「学习中」是同一批词的两个阶段,
+   *    并排会读成"两件独立的事",叠起来才看得出"今天一共动了多少词"。
+   */
+  stacked?: boolean;
 }) {
   let max = 0;
-  for (const k of axis) for (const v of valuesOf(k)) max = Math.max(max, v);
+  /* ⚠️ 堆叠时纵轴上限要按**每桶的和**取,不是按单个 series 的最大值 ——
+   *    否则叠起来的柱子会顶出画布。 */
+  for (const k of axis) {
+    const vals = valuesOf(k);
+    if (stacked) max = Math.max(max, vals.reduce((a, b) => a + (b || 0), 0));
+    else for (const v of vals) max = Math.max(max, v);
+  }
   const { niceMax, ticks } = niceAxis(max);
   const isEmpty = max === 0;
 
@@ -104,7 +118,22 @@ export default function GrowthChart({
                 const vals = valuesOf(k);
                 return (
                   <div key={k} className="flex w-14 items-end justify-center gap-1" style={{ height: TRACK }}>
-                    {series.map((s, i) => <span key={s.key}>{bar(vals[i] ?? 0, s.color)}</span>)}
+                    {stacked ? (
+                      /* 堆叠:一根柱,自下而上按 series 顺序叠。
+                         第一个 series 在最下面(词汇侧传的是「已掌握」),
+                         视觉上"扎实的部分"托底,与圆环的深浅关系一致。 */
+                      <span className="flex w-3 flex-col-reverse sm:w-3.5">
+                        {series.map((s, i) => (
+                          <span key={s.key} className="w-full"
+                            style={{
+                              height: `${niceMax > 0 && (vals[i] ?? 0) > 0 ? Math.max(3, ((vals[i] ?? 0) / niceMax) * TRACK) : 0}px`,
+                              backgroundColor: s.color,
+                            }} />
+                        ))}
+                      </span>
+                    ) : (
+                      series.map((s, i) => <span key={s.key}>{bar(vals[i] ?? 0, s.color)}</span>)
+                    )}
                   </div>
                 );
               })}

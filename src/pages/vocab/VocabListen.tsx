@@ -19,6 +19,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor } from "@/lib/vocab/theme";
 import { playUrl, stopAudio } from "@/lib/vocab/audio";
+import { startTracking } from "@/lib/vocab/timeTracker";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
@@ -108,6 +109,9 @@ export default function VocabListen() {
 
   useEffect(() => { load(kind); }, [load, kind]);
   useEffect(() => () => stopAudio(), []);
+  /* 学习时长:做题期间累计活跃时长,切后台/失焦/久不操作自动暂停。
+   * 挂在页面级而不是每道题 —— 时长是这一段时间在学,不是答了几题。 */
+  useEffect(() => startTracking(), []);
 
   const q = qs[idx];
   // 进新题自动播一次 —— 听力题不自动响,用户每题都得多点一下

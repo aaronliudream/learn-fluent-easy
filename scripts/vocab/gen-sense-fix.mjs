@@ -300,7 +300,19 @@ function emit(targets, cache, baseline, glossesOf) {
       if (fails.length) s2Warn.push(`${f.headword}:${f.second}(ECDICT 里字面找不到,以人工为准)`);
       cache[f.headword] = out;
     }
-    process.stdout.write(`· 人工裁决:退回 ${manual.revert.length} 条,改形 ${manual.fix.length} 条`);
+    /* set:整条 def_zh 覆盖,**连 s1 都绕过** —— 它改的就是第一义。
+     * ⚠️ 只用于人裁的特例(monochrome 首义用逗号当分隔符,清成单义)。
+     *    例句锚定第一义 —— 这里改的是"单色，单色图像"→"单色",
+     *    含义没变,只是把逗号后那半冗余去掉,所以例句不受影响。
+     *    真要换掉第一义的语义,必须连例句一起重生成,那是另一件事。 */
+    for (const s of manual.set ?? []) {
+      const t = byHw.get(s.headword);
+      if (!t) { process.stdout.write(`  ⚠️ 人工 set 的 "${s.headword}" 不在强信号池,跳过\n`); continue; }
+      const shape = defZhShapeProblem(s.def_zh);
+      if (shape) { process.stdout.write(`  ✗ 人工 set ${s.headword} 体裁不合格:${shape}\n`); process.exitCode = 1; continue; }
+      cache[s.headword] = { skip: false, def_zh: s.def_zh, reason: `人工裁决(整条覆盖):${s.why}`, manual: true, bypassS1: true };
+    }
+    process.stdout.write(`· 人工裁决:退回 ${manual.revert.length} 条,改形 ${manual.fix.length} 条,覆盖 ${(manual.set ?? []).length} 条`);
     process.stdout.write(s2Warn.length ? `,其中 ${s2Warn.length} 条 s2 告警\n` : '\n');
   }
 
@@ -314,7 +326,9 @@ function emit(targets, cache, baseline, glossesOf) {
   const bad = changed.filter(t => {
     const base = { ...t.word, def_zh: baseline[t.headword] };
     const fails = gateSenseFix(base, cache[t.headword], glossesOf(t).flat);
-    return (cache[t.headword].manual ? fails.filter(x => !x.startsWith('s2 第二义')) : fails).length;
+    const v = cache[t.headword];
+    if (v.bypassS1) return fails.filter(x => !x.startsWith('s2 第二义') && !x.startsWith('s1')).length;
+    return (v.manual ? fails.filter(x => !x.startsWith('s2 第二义')) : fails).length;
   });
   process.stdout.write(`\n出件前全量复检:${changed.length} 条改动,不合格 ${bad.length}\n`);
   if (bad.length) {

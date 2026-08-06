@@ -1,19 +1,473 @@
 {
-  "_note": "义项对账的人工裁决,优先级高于模型产出与同义筛。Aaron 2026-08-05 抽样后逐条定。",
-  "_rule": "revert = 退回单义(基线值);fix = 用人工给定的第二义覆盖。合并在 emit 阶段做,不进生成缓存 —— 进了缓存会被下次闸门重验当模型产出淘汰。",
-  "_gate_policy": "人工条目仍过 s1(第一义不变)与 s3(体裁),但 s2(ECDICT 有依据)对人工条目是**告警不是拦截** —— 义项该不该收,人是权威,词典只是参考。过不了 s2 的条目会在送审件里标出来。",
+  "_note": "def_zh 义项对账 · Aaron 终版逐条裁决(232 词)。优先级高于模型产出与同义筛。",
+  "_rule": "revert=退回基线单义;fix=第二义换成给定值(第一义仍取基线);set=整条覆盖(仅用于改第一义的特例)。合并在 emit 阶段做,不进生成缓存。",
+  "_gate_policy": "s1(第一义不变)与 s3(体裁)对 revert/fix 仍是硬闸;s2(ECDICT 有依据)对人工条目是告警不拦截 —— 义项该不该收人是权威。set 连 s1 也绕过,因为它改的就是第一义。",
+  "_verdict_criteria": "打回主判据:①同概念换词性(pasture 牧场/放牧 型)必须与 skip 栏用同一把尺;②幽灵义(sunburn 晒黑=suntan、ultrasonic 超音速=supersonic)属教错级,一律退。",
   "revert": [
-    { "headword": "dagger",      "why": "幽灵义:用剑刺不是该教的义" },
-    { "headword": "resin",       "why": "幽灵义:涂覆树脂" },
-    { "headword": "moss",        "why": "幽灵义:泥沼" },
-    { "headword": "fluorescent", "why": "幽灵义:荧光现象" },
-    { "headword": "consequent",  "why": "幽灵义:合乎逻辑" },
-    { "headword": "exempt",      "why": "同义堆砌" },
-    { "headword": "swelling",    "why": "同义堆砌" },
-    { "headword": "refrigerant", "why": "同义堆砌" }
+    {
+      "headword": "chronic",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "hover",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "crab",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "armor",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "census",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "pasture",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "reef",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "erode",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "mimic",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "conform",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "inhibit",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "plight",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "lust",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "maze",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "cardiac",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "glamour",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "vapor",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "overlap",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "frail",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "soothe",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "opaque",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "ascend",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "willow",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "scarlet",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "daisy",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "refund",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "defective",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "troupe",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "meditate",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "flaunt",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "embroider",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "diverge",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "maize",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "effluent",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "gradient",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "accordion",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "barbarian",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "luster",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "silt",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "nurture",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "asteroid",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "seam",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "confiscate",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "subversive",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "digestive",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "mistrust",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "domesticated",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "corrosive",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "sunburn",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "reversible",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "perishable",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "ultrasonic",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "erudite",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "ragtime",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "sublimate",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "spanking",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "defecate",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "rawhide",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "canter",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "overbalance",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "intestine",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "fowl",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "crevasse",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "crustacean",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "lithograph",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "overcharge",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "gait",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "infiltrate",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "pollen",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "manure",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "zinc",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "sulfur",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "lathe",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "fresco",
+      "why": "同概念换词性(与 skip 栏一把尺)/ 幽灵义,Aaron 2026-08-05 终版裁决"
+    },
+    {
+      "headword": "dagger",
+      "why": "上一轮已裁退回,本轮清单未重复列出但继续有效"
+    },
+    {
+      "headword": "resin",
+      "why": "上一轮已裁退回,本轮清单未重复列出但继续有效"
+    },
+    {
+      "headword": "moss",
+      "why": "上一轮已裁退回,本轮清单未重复列出但继续有效"
+    },
+    {
+      "headword": "fluorescent",
+      "why": "上一轮已裁退回,本轮清单未重复列出但继续有效"
+    },
+    {
+      "headword": "consequent",
+      "why": "上一轮已裁退回,本轮清单未重复列出但继续有效"
+    },
+    {
+      "headword": "swelling",
+      "why": "上一轮已裁退回,本轮清单未重复列出但继续有效"
+    },
+    {
+      "headword": "fagot",
+      "why": "整词移除(见 vocab_toefl_remove_fagot.sql),不进 sense_fix"
+    }
   ],
   "fix": [
-    { "headword": "subterranean", "second": "隐秘的", "why": "原「秘密活动」改形" },
-    { "headword": "starch",       "second": "上浆",   "why": "原「浆硬」改形;⚠️ 上浆不是 ECDICT 原文,s2 告警,以人工为准" }
+    {
+      "headword": "ally",
+      "second": "结盟",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "dodge",
+      "second": "花招",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "default",
+      "second": "违约",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "subsidiary",
+      "second": "辅助的",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "volcanic",
+      "second": "猛烈的",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "dent",
+      "second": "削弱",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "commute",
+      "second": "减刑",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "magnetize",
+      "second": "吸引",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "squall",
+      "second": "尖叫",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "consonant",
+      "second": "一致的",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "baroque",
+      "second": "绮靡的",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "sap",
+      "second": "削弱",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "fossil",
+      "second": "老古董",
+      "why": "Aaron 终版裁决新值"
+    },
+    {
+      "headword": "starch",
+      "second": "上浆",
+      "why": "前一轮已裁,本轮维持"
+    },
+    {
+      "headword": "subterranean",
+      "second": "隐秘的",
+      "why": "前一轮已裁,本轮维持"
+    },
+    {
+      "headword": "reservoir",
+      "second": "贮藏处",
+      "why": "同义筛调用失败误杀,恢复"
+    }
+  ],
+  "set": [
+    {
+      "headword": "monochrome",
+      "def_zh": "单色",
+      "why": "首义用逗号当分隔符,清为单义(43 条逗号问题之一,单独裁决)"
+    }
+  ],
+  "keep": [
+    "founder",
+    "sue",
+    "shrimp",
+    "secular",
+    "specialty",
+    "exile",
+    "merge",
+    "posture",
+    "valve",
+    "wholesale",
+    "tariff",
+    "nickel",
+    "mint",
+    "disarm",
+    "inflate",
+    "jelly",
+    "assimilate",
+    "magnify",
+    "permeate",
+    "dissipate",
+    "clam",
+    "avalanche",
+    "beacon",
+    "axe",
+    "skyrocket",
+    "ornamental",
+    "venom",
+    "hoax",
+    "varnish",
+    "relapse",
+    "audit",
+    "reptile",
+    "repel",
+    "raven",
+    "mason",
+    "surcharge",
+    "sapphire",
+    "sicken",
+    "facsimile",
+    "incubate",
+    "ferret",
+    "defrost",
+    "thresh",
+    "fossilize",
+    "tributary",
+    "indent",
+    "prosecute",
+    "merchandise",
+    "mortar",
+    "terrace"
   ]
 }

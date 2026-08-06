@@ -24,6 +24,7 @@ import {
   currentUserId, type VocabBank,
 } from "@/lib/vocab/data";
 import { readStatsCache, writeStatsCache } from "@/lib/vocab/statsCache";
+import MyDataPanel from "@/components/vocab/MyDataPanel";
 
 type BankRow = VocabBank & { mastered: number; realTotal: number; learning: number };
 
@@ -193,6 +194,8 @@ export default function VocabCenter() {
             词
           </p>
         </div>
+
+        <MyDataPanel color={centerColor} />
 
         <h2 className="mb-3 mt-7 text-[16px] font-semibold text-slate-900">词库</h2>
         {loading ? (

@@ -12,6 +12,7 @@
  *    这条决定统计的可信度:翻一遍词卡不能算学过。
  */
 import { supabase } from "@/integrations/supabase/client";
+import { bumpAnswer } from "@/lib/vocab/stats";
 import { bjToday } from "@/lib/charts/growthBuckets";
 import { currentUserId, isMasteredRow } from "@/lib/vocab/data";
 
@@ -186,6 +187,12 @@ export async function recordAnswer(wordId: string, correct: boolean, mode: Vocab
     const clearedMistake = correct
       ? await onCorrectStreak(uid, wordId, today)
       : (await addMistake(uid, wordId, mode), false);
+
+    /* 积分与逐日计数走 stats.ts 的单一入口 —— 页面不许另外调,
+     * 否则一次作答会被记两遍。答对 +1,同一次达成彻底掌握再 +2。
+     * ⚠️ await 但不让它的失败影响本函数返回:激励数据是附加价值,
+     *    掉了下次补得回来,不该拖垮做题主流程。 */
+    await bumpAnswer(correct, masteredNow);
 
     return { saved: true, masteredNow, clearedMistake };
   } catch (e) {

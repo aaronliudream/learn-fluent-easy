@@ -17,6 +17,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA } from "@/lib/vocab/theme";
 import { playUrl, stopAudio } from "@/lib/vocab/audio";
+import { startTracking } from "@/lib/vocab/timeTracker";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
@@ -79,6 +80,9 @@ export default function VocabSpell() {
 
   useEffect(() => { load(); }, [load]);
   useEffect(() => () => stopAudio(), []);
+  /* 学习时长:做题期间累计活跃时长,切后台/失焦/久不操作自动暂停。
+   * 挂在页面级而不是每道题 —— 时长是这一段时间在学,不是答了几题。 */
+  useEffect(() => startTracking(), []);
 
   const w = words[idx];
   useEffect(() => { if (w && reveal === null) void playUrl(w.audio_url, `w:${w.id}`); }, [w?.id]);   // eslint-disable-line react-hooks/exhaustive-deps

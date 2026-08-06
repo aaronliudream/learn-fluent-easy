@@ -20,6 +20,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor, CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
 import { stopAudio } from "@/lib/vocab/audio";
+import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, optionText, type QuizQuestion } from "@/lib/vocab/quiz";
 import { recordAnswer, type VocabMode } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal } from "@/components/vocab/SessionParts";
@@ -93,6 +94,9 @@ export default function VocabMistakes() {
 
   useEffect(() => { load(); }, [load]);
   useEffect(() => () => stopAudio(), []);
+  /* 学习时长:做题期间累计活跃时长,切后台/失焦/久不操作自动暂停。
+   * 挂在页面级而不是每道题 —— 时长是这一段时间在学,不是答了几题。 */
+  useEffect(() => startTracking(), []);
 
   const active = rows ?? [];
   const byWordId = useMemo(() => new Map(active.map(r => [r.word_id, r])), [active]);

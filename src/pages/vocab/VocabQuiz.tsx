@@ -16,6 +16,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF } from "@/lib/vocab/theme";
 import { playUrl, stopAudio } from "@/lib/vocab/audio";
+import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, pickTargets, type QuizQuestion } from "@/lib/vocab/quiz";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
@@ -75,6 +76,9 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
 
   useEffect(() => { load(defMode); }, [load, defMode]);
   useEffect(() => () => stopAudio(), []);
+  /* 学习时长:做题期间累计活跃时长,切后台/失焦/久不操作自动暂停。
+   * 挂在页面级而不是每道题 —— 时长是这一段时间在学,不是答了几题。 */
+  useEffect(() => startTracking(), []);
 
   const q = questions[idx];
 

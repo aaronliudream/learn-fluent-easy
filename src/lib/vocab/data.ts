@@ -104,9 +104,22 @@ export async function listMasteryRows(wordIds?: string[]): Promise<MasteryRow[]>
   }
 }
 
+/* ⚠️ uid 做短 TTL 记忆化。
+ * `supabase.auth.getUser()` 是**网络请求**(服务端验 JWT),不是读本地缓存。
+ * 而 data.ts 里几乎每个函数都独立调它一次:dueCount / mistakeCount /
+ * totalMastered / listMasteryRows / 每个词库的 progress …
+ * 中心页一次冷启动能凭空多出 5 次 auth 往返 —— 这是"请求数从 28 降到 5
+ * 但体感没变"的剩余瓶颈。
+ * TTL 30 秒:够覆盖一次页面加载的所有调用,又不会让登出后仍拿到旧 uid。 */
+let uidCache: { id: string | null; at: number } | null = null;
+const UID_TTL_MS = 30_000;
+export function clearUserIdCache() { uidCache = null; }
 export async function currentUserId(): Promise<string | null> {
+  if (uidCache && Date.now() - uidCache.at < UID_TTL_MS) return uidCache.id;
   const { data } = await supabase.auth.getUser();
-  return data?.user?.id ?? null;
+  const id = data?.user?.id ?? null;
+  uidCache = { id, at: Date.now() };
+  return id;
 }
 
 /** 全部词库,按 sort_order。含 is_active=false 的(前端分区展示"敬请期待")。 */

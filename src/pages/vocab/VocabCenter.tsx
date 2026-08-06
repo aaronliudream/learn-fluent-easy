@@ -100,6 +100,16 @@ export default function VocabCenter() {
 
   const active = banks.filter(b => b.is_active);
   const soon = banks.filter(b => !b.is_active);
+  /* 中心页身份色 = **最活跃词库**的色(学习中 + 已掌握最多的那个)。
+   * ⚠️ 不用中性主色 —— 中性色浅化之后就是灰,而"浅色段"正是靠色相
+   *    才能和灰色轨道区分开。上一版没传 color,默认 #0F172A(近黑),
+   *    30% 不透明度渲染出来就是灰:功能对了、颜色错了,用户眼里没区别。
+   * 多库并行后它会自然跟随用户的主战场,不用再改。 */
+  const hottest = banks.filter(b => b.is_active)
+    .reduce<BankRow | null>((best, b) =>
+      (b.mastered + b.learning) > ((best?.mastered ?? 0) + (best?.learning ?? 0)) ? b : best, null);
+  const centerColor = bankColor(hottest?.code ?? "toefl");
+
   const nextMilestone = MILESTONES.find(m => m > mastered) ?? MILESTONES[MILESTONES.length - 1];
 
   return (
@@ -119,6 +129,7 @@ export default function VocabCenter() {
           mastered={mastered}
           learning={learning}
           untouched={0}
+          color={centerColor}
           /* 「已测」= 掌握 + 学习中 = 作答过的词数。它**只涨不跌**,
              与只涨也会跌的掌握数构成「实力 + 努力」双成就:
              哪怕掌握数因答错回落,努力的痕迹也还在。 */
@@ -291,9 +302,13 @@ function BankCard({ bank }: { bank: BankRow }) {
         <div className="relative mt-2 h-1.5 overflow-hidden rounded-full bg-slate-100">
           {/* 浅段:已掌握 + 学习中 */}
           <div className="absolute inset-y-0 left-0 rounded-full"
-            style={{ width: `${pctReached}%`, background: color, opacity: 0.3 }} />
+            /* ⚠️ 最小可见宽度 3px,与成长图同口径。
+               百分比宽度让"刚起步"永远看不见:64/4470 = 1%,在 6px 高的条上
+               等于不存在 —— 而"让努力看得见"最需要的恰恰是起步阶段。 */
+            style={{ width: pctReached > 0 ? `max(3px, ${pctReached}%)` : 0, background: color, opacity: 0.3 }} />
           {/* 深段:已掌握(盖在浅段上) */}
-          <div className="absolute inset-y-0 left-0 rounded-full" style={{ width: `${pct}%`, background: color }} />
+          <div className="absolute inset-y-0 left-0 rounded-full"
+            style={{ width: pct > 0 ? `max(3px, ${pct}%)` : 0, background: color }} />
         </div>
         <div className="mt-1.5 text-[13px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
           {bank.mastered} / {total}

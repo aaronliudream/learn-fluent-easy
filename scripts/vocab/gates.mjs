@@ -390,6 +390,11 @@ export function defZhShapeProblem(defZh) {
    *    diagnose「通过检查来识别疾病或问题」—— 没踩任何标记词、也没句号,
    *    照样是解释句不是释义。阈值必须跟规格同一个数,不然就是自己给自己开后门。
    *    实测全池只有 8 个词落在 9-12 这一档(0.2%),收紧不会误伤。 */
+  /* ⚠️ 下限判据补上(2026-08-05)。原来只卡上限、不卡下限,而规格写的是区间 ——
+   *    又是"判据没照规格写全"(第四条规矩的同型问题)。
+   *    两端都从 SPEC 取数,不写字面量。 */
+  const tooShort = parts.find(p => p.trim().length < SPEC.defZh.minChars);
+  if (tooShort) return `def_zh 义项过短(${tooShort.trim().length} 字,规格 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars}):「${tooShort.trim()}」`;
   const tooLong = parts.find(p => p.trim().length > SPEC.defZh.maxChars);
   if (tooLong) return `def_zh 义项过长(${tooLong.trim().length} 字,规格 ${SPEC.defZh.minChars}-${SPEC.defZh.maxChars}):「${tooLong.trim()}」`;
   /* 标记词只在**长片段**里才说明是解释句。

@@ -191,21 +191,37 @@ export default function VocabCenter() {
   );
 }
 
+/**
+ * 入口卡。没有 `to` 的卡必须显式标"即将开放"。
+ *
+ * ⚠️ 由来:错题本卡原来只是不给 `to`,渲染成 `div` —— 技术上确实点不动,
+ *    但它和旁边**可点的「今日复习」卡长得一模一样**,用户当然会去点,
+ *    点了没反应。"不可点"和"看起来不可点"是两回事,
+ *    前者靠 DOM,后者得靠视觉说清楚。PR-4 接上真页面时把 `to` 传进来即可。
+ */
 function EntryCard({ icon, label, count, hint, to }: { icon: React.ReactNode; label: string; count: number; hint: string; to?: string }) {
+  const soon = !to;
   const body = (
     <>
       <div className="flex items-center gap-1.5 text-[14px] font-medium text-slate-700">
         <span className="text-slate-400">{icon}</span>{label}
+        {soon && (
+          <span className="ml-auto rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-normal text-slate-400">
+            即将开放
+          </span>
+        )}
       </div>
       <div className="mt-1 flex items-baseline gap-1">
-        <span className="text-[26px] font-bold text-slate-900"
+        <span className={cn("text-[26px] font-bold", soon ? "text-slate-400" : "text-slate-900")}
           style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>
         <span className="text-[13px] text-slate-400">{hint}</span>
       </div>
     </>
   );
-  const cls = "block rounded-2xl border border-black/[0.06] bg-white px-4 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
-  return to ? <Link to={to} className={cls}>{body}</Link> : <div className={cls}>{body}</div>;
+  const cls = "block rounded-2xl border border-black/[0.06] px-4 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
+  return to
+    ? <Link to={to} className={cn(cls, "bg-white active:bg-slate-50")}>{body}</Link>
+    : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-slate-50/60 opacity-70")}>{body}</div>;
 }
 
 function BankCard({ bank }: { bank: BankRow }) {

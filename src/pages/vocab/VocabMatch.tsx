@@ -119,8 +119,10 @@ export default function VocabMatch() {
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
       <div className="h-[3px] w-full" style={{ background: color }} />
-      <div className="mx-auto w-full max-w-[560px] px-4 pb-28 pt-4">
-        <div className="mb-4 flex items-center justify-between">
+      {/* ⚠️ 首屏要完整露出至少 4 行牌,否则用户会误判牌数(以为只有 6 张)。
+          牌高 76px 是触控合规下限,不能压 —— 只能压页头和间距。 */}
+      <div className="mx-auto w-full max-w-[560px] px-4 pb-24 pt-2">
+        <div className="mb-2 flex items-center justify-between">
           <BackLink to={`/vocab/${bankCode}`} className="inline-flex items-center gap-1 text-[14px] text-slate-500">
             ← {bank?.name_zh ?? "词库"}
           </BackLink>
@@ -145,7 +147,7 @@ export default function VocabMatch() {
 
         {state === "ok" && !done && (
           <>
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-2 gap-2">
               {tiles.map(t => {
                 const gone = cleared.has(t.wordId);
                 const on = sel?.key === t.key;
@@ -167,7 +169,7 @@ export default function VocabMatch() {
                 );
               })}
             </div>
-            <p className="mt-5 text-center text-[13px] text-slate-400">点一张英文,再点它的释义</p>
+            <p className="mt-3 text-center text-[13px] text-slate-400">点一张英文,再点它的释义</p>
           </>
         )}
 

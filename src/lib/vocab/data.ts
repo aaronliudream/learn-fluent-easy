@@ -381,3 +381,55 @@ export async function getBankProgressFast(
   }
   return { mastered, learning, untouched: Math.max(0, total - mastered - learning), total };
 }
+
+/** 错题本一行(待清列表 + 闯关选词都用它)。 */
+export type MistakeRow = {
+  word_id: string;
+  headword_snapshot: string | null;
+  wrong_total: number;
+  last_wrong_mode: string | null;
+  streak_days: number;
+  last_streak_date: string | null;
+  updated_at: string | null;
+};
+
+/**
+ * 待清错题(status='active'),按"最该先清的"排序。
+ *
+ * 排序口径:**最久未清 优先于 错次多** ——
+ * 错次多说明难,但久不复习的词是真的在流失;难词多练一轮还在,忘掉的词就没了。
+ * ⚠️ 一次拉完(有 vmb_active_idx 索引,且待清词本来就不该多),
+ *    不做分批 —— 从"用户的少量记录"出发,别再犯反方向的错。
+ */
+export async function listMistakes(): Promise<MistakeRow[]> {
+  const uid = await currentUserId();
+  if (!uid) return [];
+  const { data, error } = await db
+    .from("vocab_mistake_book")
+    .select("word_id,headword_snapshot,wrong_total,last_wrong_mode,streak_days,last_streak_date,updated_at")
+    .eq("user_id", uid)
+    .eq("status", "active")
+    .order("updated_at", { ascending: true })
+    .limit(500);
+  if (error) throw error;
+  return ((data || []) as MistakeRow[]).sort((a, b) => {
+    const da = a.updated_at ?? "", dbb = b.updated_at ?? "";
+    if (da !== dbb) return da < dbb ? -1 : 1;          // 久未清在前
+    return (b.wrong_total ?? 0) - (a.wrong_total ?? 0); // 同期则错次多在前
+  });
+}
+
+/** 按 word_id 取词详情(闯关出题要完整词卡)。≤200 个一次查得完。 */
+export async function getWordsByIds(ids: string[]): Promise<VocabWord[]> {
+  if (!ids.length) return [];
+  const out: VocabWord[] = [];
+  for (let i = 0; i < ids.length; i += 200) {
+    const { data, error } = await db
+      .from("vocab_words")
+      .select("id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url")
+      .in("id", ids.slice(i, i + 200));
+    if (error) throw error;
+    out.push(...((data || []) as VocabWord[]));
+  }
+  return out;
+}

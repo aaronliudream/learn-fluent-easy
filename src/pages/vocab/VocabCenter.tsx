@@ -155,7 +155,7 @@ export default function VocabCenter() {
         )}
 
         <div className="mt-4 grid grid-cols-2 gap-3">
-          <EntryCard icon={<AlertCircle className="h-[18px] w-[18px]" />} label="错题本" count={mistakes} hint="待清" />
+          <EntryCard icon={<AlertCircle className="h-[18px] w-[18px]" />} label="错题本" count={mistakes} hint="待清" to="/vocab/mistakes" />
           <EntryCard icon={<CalendarClock className="h-[18px] w-[18px]" />} label="今日复习" count={due} hint="到期" to="/vocab/review" />
         </div>
 

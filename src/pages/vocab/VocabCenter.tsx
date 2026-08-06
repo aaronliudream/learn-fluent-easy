@@ -25,6 +25,11 @@ import {
 } from "@/lib/vocab/data";
 import { readStatsCache, writeStatsCache } from "@/lib/vocab/statsCache";
 import MyDataPanel from "@/components/vocab/MyDataPanel";
+import {
+  HardestWords, WeeklyBanner, Confetti, ShareCard, MilestoneStrip,
+  useMilestoneCelebration, type WeeklySummary,
+} from "@/components/vocab/Incentive";
+import { getStats, type UserStats } from "@/lib/vocab/stats";
 
 type BankRow = VocabBank & { mastered: number; realTotal: number; learning: number };
 
@@ -40,6 +45,8 @@ export default function VocabCenter() {
   const [mistakes, setMistakes] = useState(0);
   const [mastered, setMastered] = useState(0);
   const [learning, setLearning] = useState(0);
+  const [uStats, setUStats] = useState<UserStats | null>(null);
+  const [share, setShare] = useState<null | { mastered: number; streak: number; points: number; totalMs: number; milestone?: number | null }>(null);
 
   useEffect(() => {
     let alive = true;
@@ -88,6 +95,7 @@ export default function VocabCenter() {
 
         const learn = activeBanks.reduce((s2, b) => s2 + (byId.get(b.id)?.learning ?? 0), 0);
         setDue(d); setMistakes(m); setMastered(t); setLearning(learn);
+        getStats().then(v => { if (alive) setUStats(v); }).catch(() => { /* 激励数据缺失不该拦住中心页 */ });
         setStatsReady(true);
         writeStatsCache({ due: d, mistakes: m, mastered: t, learning: learn });
       } catch {
@@ -110,6 +118,9 @@ export default function VocabCenter() {
     .reduce<BankRow | null>((best, b) =>
       (b.mastered + b.learning) > ((best?.mastered ?? 0) + (best?.learning ?? 0)) ? b : best, null);
   const centerColor = bankColor(hottest?.code ?? "toefl");
+
+  const celebrate = useMilestoneCelebration(mastered);
+  const [confettiDone, setConfettiDone] = useState(false);
 
   const nextMilestone = MILESTONES.find(m => m > mastered) ?? MILESTONES[MILESTONES.length - 1];
 
@@ -156,7 +167,8 @@ export default function VocabCenter() {
         )}
 
         <div className="mt-4 grid grid-cols-2 gap-3">
-          <EntryCard icon={<AlertCircle className="h-[18px] w-[18px]" />} label="错题本" count={mistakes} hint="待清" to="/vocab/mistakes" />
+          <EntryCard icon={<AlertCircle className="h-[18px] w-[18px]" />} label="错题本" count={mistakes} hint="待清" to="/vocab/mistakes"
+            extra={<HardestWords color={centerColor} />} />
           <EntryCard icon={<CalendarClock className="h-[18px] w-[18px]" />} label="今日复习" count={due} hint="到期" to="/vocab/review" />
         </div>
 
@@ -166,26 +178,7 @@ export default function VocabCenter() {
             <Sparkles className="h-[18px] w-[18px] text-amber-500" />
             里程碑
           </div>
-          <div className="flex flex-wrap gap-2">
-            {MILESTONES.map(m => {
-              const reached = mastered >= m;
-              return (
-                <span
-                  key={m}
-                  className={cn(
-                    "inline-flex min-w-[64px] items-center justify-center rounded-xl border px-3 py-2 text-[15px] font-bold",
-                    reached
-                      ? "border-emerald-200 bg-emerald-50 text-emerald-700"
-                      : "border-black/[0.06] bg-slate-50 text-slate-300",
-                  )}
-                  style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}
-                  aria-label={reached ? `已达成 ${m}` : `未达成 ${m}`}
-                >
-                  {m}
-                </span>
-              );
-            })}
-          </div>
+          <MilestoneStrip mastered={mastered} color={centerColor} />
           <p className="mt-3.5 text-[13px] text-slate-500">
             距离下一档还差{" "}
             <b className="font-semibold text-slate-800" style={{ fontVariantNumeric: "tabular-nums" }}>
@@ -194,6 +187,11 @@ export default function VocabCenter() {
             词
           </p>
         </div>
+
+        <WeeklyBanner color={centerColor} onShare={(w: WeeklySummary) => setShare({
+          mastered, streak: w.streak, points: uStats?.total_points ?? 0,
+          totalMs: uStats?.total_time_ms ?? 0, milestone: MILESTONES.filter(m => mastered >= m).pop() ?? null,
+        })} />
 
         <MyDataPanel color={centerColor} />
 
@@ -252,7 +250,7 @@ export default function VocabCenter() {
  *    点了没反应。"不可点"和"看起来不可点"是两回事,
  *    前者靠 DOM,后者得靠视觉说清楚。PR-4 接上真页面时把 `to` 传进来即可。
  */
-function EntryCard({ icon, label, count, hint, to }: { icon: React.ReactNode; label: string; count: number; hint: string; to?: string }) {
+function EntryCard({ icon, label, count, hint, to, extra }: { icon: React.ReactNode; label: string; count: number; hint: string; to?: string; extra?: React.ReactNode }) {
   const soon = !to;
   const body = (
     <>
@@ -269,6 +267,7 @@ function EntryCard({ icon, label, count, hint, to }: { icon: React.ReactNode; la
           style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>
         <span className="text-[13px] text-slate-400">{hint}</span>
       </div>
+      {extra}
     </>
   );
   const cls = "block rounded-2xl border border-black/[0.06] px-4 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";

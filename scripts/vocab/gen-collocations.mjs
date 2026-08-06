@@ -229,6 +229,8 @@ async function main() {
   emit(words, cache, existingOf);
 }
 
+function writeSqlLegacy() { /* 单文件版已被切片取代,保留签名避免误用 */ }
+
 function emit(words, cache, existingOf) {
   const rows = words.filter(w => w.headword in cache);
   // 出件前全量复检 —— 生成期过闸 ≠ 现在过闸
@@ -245,7 +247,59 @@ function emit(words, cache, existingOf) {
   const values = rows.flatMap(w => cache[w.headword].map((c, i) =>
     `  (${q(w.headword.toLowerCase())}, ${q(c.collocation)}, ${q(c.translation_zh)}, ${i + 1})`)).join(',\n');
 
-  writeSql(`vocab_${BANK}_collocations.sql`, `-- F 段 高频搭配 —— ${rows.length} 词 / ${total} 条
+  /* ⚠️ 1285 KB 单文件会被 Supabase 网页 SQL 编辑器拒(A 段 3.2 MB 踩过)。
+   * 按**词**切片,一个词的 5 条搭配永远在同一片里 —— 按行切会让中途某片的
+   * "每词 N 条"校验在半路就是假的。总量 validate 放最后一片。 */
+  const PARTS = Number(arg('parts', '2'));
+  const size = Math.ceil(rows.length / PARTS);
+  for (let p = 0; p < PARTS; p++) {
+    const chunk = rows.slice(p * size, (p + 1) * size);
+    if (!chunk.length) continue;
+    const last = p === PARTS - 1;
+    const vals = chunk.flatMap(w => cache[w.headword].map((c, i) =>
+      `  (${q(w.headword.toLowerCase())}, ${q(c.collocation)}, ${q(c.translation_zh)}, ${i + 1})`)).join(',\n');
+    writeSql(`vocab_${BANK}_collocations_p${p + 1}of${PARTS}.sql`, `-- F 段 高频搭配 · 第 ${p + 1}/${PARTS} 片(本片 ${chunk.length} 词)
+-- 全量 ${rows.length} 词 / ${total} 条。单文件 1285 KB 超编辑器上限,故切片。
+-- ⚠️ **按顺序跑 p1 → p${PARTS}**。一个词的 5 条搭配都在同一片里。
+-- 与 vocab_examples 里那 3 条搭配互补不重复(f3 闸门保证)。
+-- 幂等:ON CONFLICT (word_id, collocation) 更新。⚠️ 由 Aaron 执行。
+
+BEGIN;
+
+SELECT 'p${p + 1}/${PARTS} BEFORE' AS stage, count(*) AS collocations FROM vocab_collocations;
+
+INSERT INTO vocab_collocations (word_id, collocation, translation_zh, freq_rank)
+SELECT w.id, v.collocation, v.translation_zh, v.freq_rank
+  FROM (VALUES
+${vals}
+  ) AS v(headword, collocation, translation_zh, freq_rank)
+  JOIN vocab_words w ON lower(w.headword) = v.headword
+ON CONFLICT (word_id, collocation) DO UPDATE
+  SET translation_zh = EXCLUDED.translation_zh, freq_rank = EXCLUDED.freq_rank;
+
+SELECT 'p${p + 1}/${PARTS} AFTER' AS stage, count(*) AS collocations FROM vocab_collocations;
+${last ? `
+-- ── 最后一片:总量 count-validate,四行都必须是 t,否则 ROLLBACK ──
+SELECT '搭配总数 = ${total}' AS expect,
+       (SELECT count(*) FROM vocab_collocations) = ${total} AS ok
+UNION ALL
+SELECT '覆盖 ${rows.length} 个词',
+       (SELECT count(DISTINCT word_id) FROM vocab_collocations) = ${rows.length}
+UNION ALL
+SELECT '没有孤儿搭配',
+       NOT EXISTS (SELECT 1 FROM vocab_collocations c LEFT JOIN vocab_words w ON w.id = c.word_id WHERE w.id IS NULL)
+UNION ALL
+SELECT '没有与例句搭配重复的',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_collocations c JOIN vocab_examples e ON e.word_id = c.word_id
+          WHERE lower(btrim(c.collocation)) = lower(btrim(e.collocation))
+       );
+` : '\n-- 中间片不做判定,看上面两行计数递增即可。\n'}
+COMMIT;
+`);
+  }
+
+  writeSqlLegacy(`vocab_${BANK}_collocations.sql`, `-- F 段 高频搭配 —— ${rows.length} 词 / ${total} 条
 -- 与 vocab_examples 里那 3 条搭配**互补不重复**(f3 闸门保证,大小写+空白归一后比对)。
 -- freq_rank 按模型给的常用度顺序,1 最高。
 -- 幂等:ON CONFLICT (word_id, collocation) 更新译文与序号,重复跑不产生重复行。

@@ -1,6 +1,6 @@
--- def_zh 义项补全(强信号批次)—— 146 词补出第二义
+-- def_zh 义项补全(强信号批次)—— 140 词补出第二义
 -- 口径:以 ECDICT 为义项基准,只**加**第二义,**第一义项逐字不变**(例句锚定它,本轮不重生成例句)。
--- 另有 133 词判定"无值得教的第二义",不改。
+-- 另有 139 词判定"无值得教的第二义",不改。
 -- 闸门 s1(第一义不变)/ s2(第二义有词典依据)/ s3(体裁 ≤8 字)全量复检 0 不合格。
 -- 对照件:REVIEWAA/vocab_toefl_sense_fix_sample.md
 -- ⚠️ 由 Aaron 执行。
@@ -55,14 +55,12 @@ UPDATE vocab_words w
   ('mortar', '砂浆；研钵'),
   ('volcanic', '火山的；猛烈'),
   ('mint', '薄荷；造币厂'),
-  ('moss', '苔藓；泥沼'),
   ('disarm', '解除武装；缓和局势'),
   ('inflate', '膨胀；通货膨胀'),
   ('overlap', '重叠；重复发生'),
   ('frail', '脆弱的；虚弱之人'),
   ('soothe', '安抚；缓和'),
   ('jelly', '果冻；胶状物'),
-  ('fluorescent', '荧光的；荧光现象'),
   ('opaque', '不透明的；不传热'),
   ('assimilate', '同化；吸收'),
   ('ascend', '上升；攀登'),
@@ -84,10 +82,8 @@ UPDATE vocab_words w
   ('daisy', '雏菊；一流人物'),
   ('refund', '退款；偿还'),
   ('defective', '有缺陷的；缺陷者'),
-  ('dagger', '匕首；用剑刺'),
   ('axe', '斧头；削减经费'),
   ('troupe', '剧团；巡回演出'),
-  ('resin', '树脂；涂覆树脂'),
   ('fresco', '湿壁画；湿壁画制作'),
   ('meditate', '冥想；沉思反省'),
   ('skyrocket', '急剧上升；焰火'),
@@ -95,17 +91,16 @@ UPDATE vocab_words w
   ('venom', '毒液；恶意'),
   ('hoax', '骗局；恶作剧'),
   ('flaunt', '炫耀；飘扬'),
-  ('starch', '淀粉；浆硬'),
+  ('starch', '淀粉；上浆'),
   ('embroider', '刺绣；镶边装饰'),
   ('diverge', '分歧；岔开'),
   ('maize', '玉米；黄色的植物'),
   ('effluent', '污水；流出水'),
   ('gradient', '梯度；倾斜度'),
-  ('subterranean', '地下的；秘密活动'),
+  ('subterranean', '地下的；隐秘的'),
   ('accordion', '手风琴；可折叠物'),
   ('barbarian', '野蛮人；野蛮的'),
   ('sap', '树液；活力'),
-  ('consequent', '随之而来的；合乎逻辑'),
   ('varnish', '清漆；粉饰'),
   ('luster', '光泽；光彩荣誉'),
   ('silt', '淤泥；使淤塞'),
@@ -115,7 +110,6 @@ UPDATE vocab_words w
   ('asteroid', '小行星；星状'),
   ('commute', '通勤；交换折偿'),
   ('seam', '缝合处；裂痕'),
-  ('swelling', '肿胀；肿胀部位'),
   ('reptile', '爬行动物；卑鄙之人'),
   ('confiscate', '没收；被没收物'),
   ('subversive', '颠覆性的；破坏分子'),
@@ -170,9 +164,9 @@ SELECT 'AFTER' AS stage,
   FROM vocab_words WHERE def_zh IS NOT NULL;
 
 -- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
-SELECT '本批 146 词都已是新值' AS expect,
-       (SELECT count(*) FROM vocab_words WHERE lower(headword) IN ('ally', 'founder', 'sue', 'chronic', 'shrimp', 'secular', 'specialty', 'fossil', 'hover', 'prosecute', 'crab', 'exile', 'merge', 'posture', 'armor', 'valve', 'census', 'pasture', 'reef', 'terrace', 'erode', 'mimic', 'dodge', 'conform', 'merchandise', 'wholesale', 'tariff', 'inhibit', 'plight', 'default', 'subsidiary', 'lust', 'maze', 'nickel', 'cardiac', 'glamour', 'vapor', 'mortar', 'volcanic', 'mint', 'moss', 'disarm', 'inflate', 'overlap', 'frail', 'soothe', 'jelly', 'fluorescent', 'opaque', 'assimilate', 'ascend', 'sulfur', 'magnify', 'dent', 'pollen', 'permeate', 'dissipate', 'manure', 'willow', 'clam', 'avalanche', 'gait', 'scarlet', 'infiltrate', 'zinc', 'beacon', 'daisy', 'refund', 'defective', 'dagger', 'axe', 'troupe', 'resin', 'fresco', 'meditate', 'skyrocket', 'ornamental', 'venom', 'hoax', 'flaunt', 'starch', 'embroider', 'diverge', 'maize', 'effluent', 'gradient', 'subterranean', 'accordion', 'barbarian', 'sap', 'consequent', 'varnish', 'luster', 'silt', 'relapse', 'audit', 'nurture', 'asteroid', 'commute', 'seam', 'swelling', 'reptile', 'confiscate', 'subversive', 'repel', 'digestive', 'mistrust', 'raven', 'mason', 'domesticated', 'surcharge', 'baroque', 'corrosive', 'sunburn', 'reversible', 'sapphire', 'consonant', 'sicken', 'facsimile', 'incubate', 'squall', 'crustacean', 'crevasse', 'lithograph', 'perishable', 'ferret', 'overcharge', 'lathe', 'ultrasonic', 'erudite', 'defrost', 'ragtime', 'sublimate', 'spanking', 'defecate', 'rawhide', 'canter', 'thresh', 'fossilize', 'magnetize', 'overbalance', 'fagot', 'tributary', 'intestine', 'fowl', 'indent')
-         AND def_zh LIKE '%；%') = 146 AS ok
+SELECT '本批 140 词都已是新值' AS expect,
+       (SELECT count(*) FROM vocab_words WHERE lower(headword) IN ('ally', 'founder', 'sue', 'chronic', 'shrimp', 'secular', 'specialty', 'fossil', 'hover', 'prosecute', 'crab', 'exile', 'merge', 'posture', 'armor', 'valve', 'census', 'pasture', 'reef', 'terrace', 'erode', 'mimic', 'dodge', 'conform', 'merchandise', 'wholesale', 'tariff', 'inhibit', 'plight', 'default', 'subsidiary', 'lust', 'maze', 'nickel', 'cardiac', 'glamour', 'vapor', 'mortar', 'volcanic', 'mint', 'disarm', 'inflate', 'overlap', 'frail', 'soothe', 'jelly', 'opaque', 'assimilate', 'ascend', 'sulfur', 'magnify', 'dent', 'pollen', 'permeate', 'dissipate', 'manure', 'willow', 'clam', 'avalanche', 'gait', 'scarlet', 'infiltrate', 'zinc', 'beacon', 'daisy', 'refund', 'defective', 'axe', 'troupe', 'fresco', 'meditate', 'skyrocket', 'ornamental', 'venom', 'hoax', 'flaunt', 'starch', 'embroider', 'diverge', 'maize', 'effluent', 'gradient', 'subterranean', 'accordion', 'barbarian', 'sap', 'varnish', 'luster', 'silt', 'relapse', 'audit', 'nurture', 'asteroid', 'commute', 'seam', 'reptile', 'confiscate', 'subversive', 'repel', 'digestive', 'mistrust', 'raven', 'mason', 'domesticated', 'surcharge', 'baroque', 'corrosive', 'sunburn', 'reversible', 'sapphire', 'consonant', 'sicken', 'facsimile', 'incubate', 'squall', 'crustacean', 'crevasse', 'lithograph', 'perishable', 'ferret', 'overcharge', 'lathe', 'ultrasonic', 'erudite', 'defrost', 'ragtime', 'sublimate', 'spanking', 'defecate', 'rawhide', 'canter', 'thresh', 'fossilize', 'magnetize', 'overbalance', 'fagot', 'tributary', 'intestine', 'fowl', 'indent')
+         AND def_zh LIKE '%；%') = 140 AS ok
 UNION ALL
 SELECT '总词数没变(4471)',
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 4471

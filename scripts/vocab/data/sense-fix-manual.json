@@ -1,0 +1,19 @@
+{
+  "_note": "义项对账的人工裁决,优先级高于模型产出与同义筛。Aaron 2026-08-05 抽样后逐条定。",
+  "_rule": "revert = 退回单义(基线值);fix = 用人工给定的第二义覆盖。合并在 emit 阶段做,不进生成缓存 —— 进了缓存会被下次闸门重验当模型产出淘汰。",
+  "_gate_policy": "人工条目仍过 s1(第一义不变)与 s3(体裁),但 s2(ECDICT 有依据)对人工条目是**告警不是拦截** —— 义项该不该收,人是权威,词典只是参考。过不了 s2 的条目会在送审件里标出来。",
+  "revert": [
+    { "headword": "dagger",      "why": "幽灵义:用剑刺不是该教的义" },
+    { "headword": "resin",       "why": "幽灵义:涂覆树脂" },
+    { "headword": "moss",        "why": "幽灵义:泥沼" },
+    { "headword": "fluorescent", "why": "幽灵义:荧光现象" },
+    { "headword": "consequent",  "why": "幽灵义:合乎逻辑" },
+    { "headword": "exempt",      "why": "同义堆砌" },
+    { "headword": "swelling",    "why": "同义堆砌" },
+    { "headword": "refrigerant", "why": "同义堆砌" }
+  ],
+  "fix": [
+    { "headword": "subterranean", "second": "隐秘的", "why": "原「秘密活动」改形" },
+    { "headword": "starch",       "second": "上浆",   "why": "原「浆硬」改形;⚠️ 上浆不是 ECDICT 原文,s2 告警,以人工为准" }
+  ]
+}

@@ -275,13 +275,46 @@ async function main() {
 }
 
 function emit(targets, cache, baseline, glossesOf) {
+  /* 人工裁决,优先级高于模型产出与同义筛。
+   * ⚠️ 在 emit 阶段合并、**不写进生成缓存** —— 写进缓存的话,
+   *    下次因闸门升级触发缓存重验时会被当模型产出淘汰,人工结论就丢了。
+   * ⚠️ s2(ECDICT 有依据)对人工条目是**告警不是拦截**:
+   *    义项该不该收,人是权威,词典只是参考。
+   *    实例:starch → 上浆,ECDICT 只有「浆硬/浆糊」,字面对不上但人工判定更准。 */
+  const manualPath = path.join(DATA, 'sense-fix-manual.json');
+  const s2Warn = [];
+  if (existsSync(manualPath)) {
+    const manual = JSON.parse(readFileSync(manualPath, 'utf8'));
+    const byHw = new Map(targets.map(t => [t.headword, t]));
+    for (const r of manual.revert) {
+      cache[r.headword] = { skip: true, def_zh: '', reason: `人工裁决退回单义:${r.why}` };
+    }
+    for (const f of manual.fix) {
+      const t = byHw.get(f.headword);
+      if (!t) { process.stdout.write(`  ⚠️ 人工 fix 的 "${f.headword}" 不在强信号池,跳过\n`); continue; }
+      const first = String(baseline[f.headword]).split(SPEC.defZh.sep)[0].trim();
+      const out = { skip: false, def_zh: `${first}${SPEC.defZh.sep}${f.second}`, reason: `人工裁决:${f.why}`, manual: true };
+      const fails = gateSenseFix({ ...t.word, def_zh: baseline[f.headword] }, out, glossesOf(t).flat);
+      const hard = fails.filter(x => !x.startsWith('s2 第二义'));
+      if (hard.length) { process.stdout.write(`  ✗ 人工 fix ${f.headword} 未过硬闸:${hard.join(' / ')}\n`); process.exitCode = 1; continue; }
+      if (fails.length) s2Warn.push(`${f.headword}:${f.second}(ECDICT 里字面找不到,以人工为准)`);
+      cache[f.headword] = out;
+    }
+    process.stdout.write(`· 人工裁决:退回 ${manual.revert.length} 条,改形 ${manual.fix.length} 条`);
+    process.stdout.write(s2Warn.length ? `,其中 ${s2Warn.length} 条 s2 告警\n` : '\n');
+  }
+
   const changed = targets.filter(t => cache[t.headword] && !cache[t.headword].skip);
   const skipped = targets.filter(t => cache[t.headword]?.skip);
 
   // 出件前全量复检 —— 生成期过闸 ≠ 现在过闸(闸门可能已改)
+  /* ⚠️ 人工条目的 s2 是告警不是拦截(见上),所以这层复检也得照同一口径 ——
+   *    否则会出现"合并进去了、复检又把它判废"的自相矛盾。
+   *    s1(第一义不变)和 s3(体裁)对人工条目仍是硬闸。 */
   const bad = changed.filter(t => {
     const base = { ...t.word, def_zh: baseline[t.headword] };
-    return gateSenseFix(base, cache[t.headword], glossesOf(t).flat).length;
+    const fails = gateSenseFix(base, cache[t.headword], glossesOf(t).flat);
+    return (cache[t.headword].manual ? fails.filter(x => !x.startsWith('s2 第二义')) : fails).length;
   });
   process.stdout.write(`\n出件前全量复检:${changed.length} 条改动,不合格 ${bad.length}\n`);
   if (bad.length) {

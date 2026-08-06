@@ -172,13 +172,10 @@ export default function VocabSpell() {
             )}
 
             {reveal !== null && (
+              /* 逐字母对照 + 正确拼写标红,全部由 Feedback 统一渲染,
+                 不再在这里自拼 subtitle(同一信息三种写法正是要防的)。 */
               <Feedback word={w} correct={reveal} onNext={next} lastOne={idx + 1 >= words.length}
-                subtitle={
-                  <div className="mb-2">
-                    <div className="text-[22px] font-semibold text-slate-900" style={{ fontFamily: FONT_SERIF }}>{w.headword}</div>
-                    {!reveal && <div className="mt-0.5 text-[13px] text-slate-400">你写的:{input.trim()}</div>}
-                  </div>
-                } />
+                spelled={input} correctAnswer={reveal ? undefined : w.headword} />
             )}
           </>
         )}

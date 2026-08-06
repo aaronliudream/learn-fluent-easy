@@ -177,7 +177,9 @@ export default function VocabListen() {
                 <Volume2 className="h-9 w-9" />
               </button>
               <p className="mt-3 text-[13px] text-slate-400">点喇叭再听一遍</p>
-              {q.hint && <p className="mt-2 text-[13px] font-medium tracking-[0.02em] text-slate-500">{q.hint}</p>}
+              {/* ⚠️ 作答前**绝不显示** q.hint(搭配文字)——
+                  考听力却把搭配印在题面上,等于直接给答案。
+                  文字一律留到反馈层。原则:考察通道之外的信息才允许出现在题面。 */}
             </div>
 
             <div className="mt-4 space-y-2.5">
@@ -203,8 +205,10 @@ export default function VocabListen() {
             </div>
 
             {picked !== null && (
+              /* 单词大字/音标/词性由 Feedback 统一给,这里不再自拼 subtitle。
+                 答错时把正确选项标红顶上去;短语模式的搭配文字此刻才出现。 */
               <Feedback word={q.word} correct={picked === q.answerIndex} onNext={next} lastOne={idx + 1 >= qs.length}
-                subtitle={<div className="mb-2 text-[22px] font-semibold text-slate-900">{q.word.headword}</div>} />
+                correctAnswer={picked === q.answerIndex ? undefined : q.options[q.answerIndex]} />
             )}
           </>
         )}

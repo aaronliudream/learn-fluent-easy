@@ -167,7 +167,17 @@ async function bankWordIds(bankId: string): Promise<string[]> {
  * 只取有内容的词(def_zh 非空)—— 词表已灌但内容没跟上的批次不该出现在浏览列表里,
  * 否则用户点开是一张空卡。
  */
+/* 会话内词表缓存:同一个词库的全量词在一次会话里不会变,
+ * 但每轮"再来一轮"都要重新拉一遍(翻页 5 次 + 分批 23 次 = 28 次往返),
+ * 实测轮间"出题中"约 3 秒,这是大头。
+ * ⚠️ 只缓存**内容**(词形/释义/音频),不缓存任何用户状态 ——
+ *    掌握度每答一题都在变,缓存它会让状态过滤用上旧数据。 */
+const bankWordsCache = new Map<string, VocabWord[]>();
+export function clearBankWordsCache() { bankWordsCache.clear(); }
+
 export async function listBankWords(bankId: string): Promise<VocabWord[]> {
+  const hit = bankWordsCache.get(bankId);
+  if (hit) return hit;
   const ids = await bankWordIds(bankId);
   if (!ids.length) return [];
   const out: VocabWord[] = [];
@@ -183,6 +193,7 @@ export async function listBankWords(bankId: string): Promise<VocabWord[]> {
     out.push(...((data || []) as VocabWord[]));
   }
   out.sort((a, b) => (a.freq_rank ?? 1e9) - (b.freq_rank ?? 1e9) || a.headword.localeCompare(b.headword));
+  bankWordsCache.set(bankId, out);
   return out;
 }
 
@@ -265,7 +276,14 @@ export type WordStatus = "new" | "learning" | "mastered";
 export async function getWordStatusMap(wordIds: string[]): Promise<Record<string, WordStatus>> {
   const map: Record<string, WordStatus> = {};
   if (!wordIds.length) return map;
-  const rows = await listMasteryRows(wordIds).catch(() => [] as MasteryRow[]);
+  /* ⚠️ 不要按 wordIds 分批查 —— 那是 4470 个 id / 200 一批 = 23 次往返,
+   *    而用户的掌握记录最多 200 条(RLS 配额)。一次拿完再在内存里筛,1 次往返。
+   *    没记录的词天然是 "new",不需要为它们跑查询。
+   *    和 getBankProgressFast 是同一个方向错误:该从"用户的少量记录"出发,
+   *    不该从"词库的全量词"出发。上次只修了那一处,没回头扫同类,这次补上。 */
+  const want = new Set(wordIds);
+  const all = await listMasteryRows().catch(() => [] as MasteryRow[]);
+  const rows = all.filter(r => want.has(r.word_id));
   for (const r of rows) {
     map[r.word_id] = isMasteredRow(r) ? "mastered" : ((r.tested_count ?? 0) > 0 ? "learning" : "new");
   }
@@ -362,4 +380,56 @@ export async function getBankProgressFast(
     else if ((r.tested_count ?? 0) > 0) learning++;
   }
   return { mastered, learning, untouched: Math.max(0, total - mastered - learning), total };
+}
+
+/** 错题本一行(待清列表 + 闯关选词都用它)。 */
+export type MistakeRow = {
+  word_id: string;
+  headword_snapshot: string | null;
+  wrong_total: number;
+  last_wrong_mode: string | null;
+  streak_days: number;
+  last_streak_date: string | null;
+  updated_at: string | null;
+};
+
+/**
+ * 待清错题(status='active'),按"最该先清的"排序。
+ *
+ * 排序口径:**最久未清 优先于 错次多** ——
+ * 错次多说明难,但久不复习的词是真的在流失;难词多练一轮还在,忘掉的词就没了。
+ * ⚠️ 一次拉完(有 vmb_active_idx 索引,且待清词本来就不该多),
+ *    不做分批 —— 从"用户的少量记录"出发,别再犯反方向的错。
+ */
+export async function listMistakes(): Promise<MistakeRow[]> {
+  const uid = await currentUserId();
+  if (!uid) return [];
+  const { data, error } = await db
+    .from("vocab_mistake_book")
+    .select("word_id,headword_snapshot,wrong_total,last_wrong_mode,streak_days,last_streak_date,updated_at")
+    .eq("user_id", uid)
+    .eq("status", "active")
+    .order("updated_at", { ascending: true })
+    .limit(500);
+  if (error) throw error;
+  return ((data || []) as MistakeRow[]).sort((a, b) => {
+    const da = a.updated_at ?? "", dbb = b.updated_at ?? "";
+    if (da !== dbb) return da < dbb ? -1 : 1;          // 久未清在前
+    return (b.wrong_total ?? 0) - (a.wrong_total ?? 0); // 同期则错次多在前
+  });
+}
+
+/** 按 word_id 取词详情(闯关出题要完整词卡)。≤200 个一次查得完。 */
+export async function getWordsByIds(ids: string[]): Promise<VocabWord[]> {
+  if (!ids.length) return [];
+  const out: VocabWord[] = [];
+  for (let i = 0; i < ids.length; i += 200) {
+    const { data, error } = await db
+      .from("vocab_words")
+      .select("id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url")
+      .in("id", ids.slice(i, i + 200));
+    if (error) throw error;
+    out.push(...((data || []) as VocabWord[]));
+  }
+  return out;
 }

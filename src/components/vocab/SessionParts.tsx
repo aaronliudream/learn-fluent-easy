@@ -12,22 +12,26 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronDown, Volume2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { CTA_SHADOW, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
+import { CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { readAutoplay, writeAutoplay } from "@/lib/vocab/quiz";
 import { listExamples, type VocabExample, type VocabWord } from "@/lib/vocab/data";
 
 /**
- * 反馈弹层:对错 + 释义 + 例句 1 + 自动朗读 + "查看全部 3 句"折叠。
- * 例句 1 是 sort_order=1,即**最高频搭配**那句 —— 只给一句时必须给最有代表性的。
+ * 词卡卡体 —— **反馈层与配对结算页共用的唯一实现**。
  *
- * @param subtitle 模式自己补的一行(如听写把正确拼写回显出来)
+ * 规格(Aaron 2026-08-06 封版):做题的反馈时刻是记忆黏合的黄金三秒,
+ * 每一题的反馈都是一次**完整的微型词卡复习**,不是过场。
+ * 所以这里必须给全:大字 + 音标 + 词性 + 中英释义 + 例句1 + 中译 + 朗读 + 折叠全部。
+ *
+ * ⚠️ 各模式**不许**再把单词大字/音标塞进自己的 subtitle 里 ——
+ *    之前 Listen 和 Spell 各拼了一份,同一个信息三种写法,
+ *    正是"只许有一个实现"要防的东西。
+ * ⚠️ 没有音频的词(198 之外)**只隐藏朗读键**,文字反馈一字不少。
  */
-export function Feedback({ word, correct, onNext, lastOne, subtitle }: {
-  word: VocabWord; correct: boolean; onNext: () => void; lastOne: boolean; subtitle?: React.ReactNode;
-}) {
+export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; defaultOpen?: boolean }) {
   const [rows, setRows] = useState<VocabExample[] | null>(null);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(defaultOpen);
   const [autoplay, setAutoplay] = useState(readAutoplay());
   const played = useRef(false);
 
@@ -46,23 +50,32 @@ export function Feedback({ word, correct, onNext, lastOne, subtitle }: {
   const shown = showAll ? list : list.slice(0, 1);
 
   return (
-    <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5">
-      <div className={cn("mb-3 flex items-center gap-2 text-[16px] font-semibold",
-        correct ? "text-emerald-700" : "text-rose-700")}>
-        {correct ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
-        {correct ? "答对了" : "答错了"}
-        {!correct && <span className="ml-1 text-[14px] font-normal text-slate-500">已加入错题本</span>}
+    <>
+      {/* 大字 + 音标 + 词性:三者同屏,这是"微型词卡"的骨架 */}
+      <div className="mb-1.5 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
+        <span className="text-[24px] font-semibold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>
+          {word.headword}
+        </span>
+        {word.ipa && <span className="text-[14px] text-slate-500">{word.ipa}</span>}
+        {word.pos && <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[12px] text-slate-500">{word.pos}</span>}
+        {word.audio_url && (
+          <button type="button" onClick={() => playUrl(word.audio_url, `w:${word.id}`)} aria-label="朗读单词"
+            className="inline-flex items-center rounded-full px-1.5 py-0.5 text-slate-400">
+            <Volume2 className="h-4 w-4" />
+          </button>
+        )}
       </div>
 
-      {subtitle}
-      <div className="mb-3 text-[15px] font-medium text-slate-800">{word.def_zh}</div>
+      <div className="mb-1 text-[15px] font-medium text-slate-800">{word.def_zh}</div>
+      {word.def_en && <div className="mb-2 text-[13px] leading-snug text-slate-500">{word.def_en}</div>}
 
       {shown.map(ex => (
-        <div key={ex.id} className="border-t border-black/[0.06] py-3">
+        <div key={ex.id} className="border-t border-black/[0.06] py-2.5">
           {ex.collocation && <div className="mb-1 text-[12px] font-medium tracking-[0.02em] text-slate-400">{ex.collocation}</div>}
           <button type="button" onClick={() => playUrl(ex.audio_url, `e:${ex.id}`)} disabled={!ex.audio_url}
             className="flex w-full items-start gap-2 text-left">
-            <Volume2 className="mt-1 h-4 w-4 shrink-0 text-slate-400" />
+            {/* 无音频只隐藏喇叭,句子照常显示 */}
+            {ex.audio_url ? <Volume2 className="mt-1 h-4 w-4 shrink-0 text-slate-400" /> : <span className="mt-1 h-4 w-4 shrink-0" />}
             <span className="text-[16px] leading-relaxed text-slate-800">{ex.sentence}</span>
           </button>
           <p className="mt-1 pl-6 text-[13px] leading-relaxed text-slate-500">{ex.translation_zh}</p>
@@ -82,9 +95,82 @@ export function Feedback({ word, correct, onNext, lastOne, subtitle }: {
           onChange={e => { setAutoplay(e.target.checked); writeAutoplay(e.target.checked); }} />
         自动朗读例句
       </label>
+    </>
+  );
+}
+
+/**
+ * 听写专用:用户拼写与正确拼写**逐字母对照**,错的标红。
+ * ⚠️ 用等长逐位比对而不是 diff 算法 —— 学生要看的是"第几个字母写错了",
+ *    不是"最小编辑路径"。长度不一致时,多写的字母同样标红、少写的补下划线位。
+ */
+export function LetterDiff({ input, answer }: { input: string; answer: string }) {
+  const a = input.trim(), b = answer.trim();
+  const n = Math.max(a.length, b.length);
+  return (
+    <div className="mb-2 flex flex-wrap gap-0.5 text-[18px] tracking-[0.08em]" style={{ fontFamily: FONT_SERIF }}>
+      {Array.from({ length: n }, (_, i) => {
+        const ch = a[i];
+        const ok = ch !== undefined && b[i] !== undefined && ch.toLowerCase() === b[i].toLowerCase();
+        return (
+          <span key={i} className={cn(ok ? "text-emerald-700" : "text-rose-600 line-through")}>
+            {ch ?? "_"}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
+/**
+ * 反馈弹层 —— 四个模式统一引用,禁止各写一套。
+ *
+ * @param correctAnswer 答错时要标红显示的正确答案(选择题传选项文本,听写传拼写)
+ * @param spelled       听写模式传用户输入,触发逐字母对照
+ */
+export function Feedback({ word, correct, onNext, lastOne, correctAnswer, spelled }: {
+  word: VocabWord; correct: boolean; onNext: () => void; lastOne: boolean;
+  correctAnswer?: string; spelled?: string;
+}) {
+  /* 挂载即滚进视野 —— 放在这里而不是各模式里,三个模式一次到位。
+   * ⚠️ 手机上反馈层在选项下方,不自动滚的话用户每题都要手动下滑找它,
+   *    而反馈是记忆黏合的黄金三秒,不该让用户先花两秒找它。
+   * block:"start" 让反馈层顶部对齐视口顶部,大字/音标/释义/例句1 一屏内可见。 */
+  const ref = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const t = window.setTimeout(() => {
+      try { el.scrollIntoView({ behavior: "smooth", block: "start" }); } catch { el.scrollIntoView(); }
+    }, 60);                                   // 等反馈层布局稳定再滚,否则滚到半截
+    return () => window.clearTimeout(t);
+  }, []);
+
+  return (
+    <div ref={ref} className="mt-3 scroll-mt-3 rounded-2xl border border-black/[0.06] bg-white p-4">
+      <div className={cn("mb-3 flex items-center gap-2 text-[16px] font-semibold",
+        correct ? "text-emerald-700" : "text-rose-700")}>
+        {correct ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
+        {correct ? "答对了" : "答错了"}
+        {!correct && <span className="ml-1 text-[14px] font-normal text-slate-500">已加入错题本</span>}
+      </div>
+
+      {/* 听写:逐字母对照。拼对时整词绿色,由 LetterDiff 自然给出 */}
+      {typeof spelled === "string" && spelled.length > 0 && (
+        <LetterDiff input={spelled} answer={word.headword} />
+      )}
+
+      {/* 答错时把正确答案标红顶在最前 —— 不能只在选项区标,反馈层里也要有 */}
+      {!correct && correctAnswer && (
+        <div className="mb-3 rounded-xl bg-rose-50 px-3 py-2 text-[14px] text-rose-900">
+          正确答案:<b className="font-semibold">{correctAnswer}</b>
+        </div>
+      )}
+
+      <WordCardBody word={word} />
 
       <button type="button" onClick={onNext}
-        className="mt-4 w-full rounded-2xl px-5 py-3.5 text-center text-[16px] font-semibold text-white"
+        className="mt-3 w-full rounded-2xl px-5 py-3 text-center text-[16px] font-semibold text-white"
         style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
         {lastOne ? "看结果" : "下一题"}
       </button>

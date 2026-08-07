@@ -30,6 +30,7 @@ function timeAgo(iso: string): string {
 
 export default function BookmarkPanel({ open, onClose, bookmarks, chapterLabel, onJump, onDelete }: Props) {
   if (!open) return null;
+  // overlay-ok: 外壳只做定位,遮罩由下面那层可见的 bg-slate-900/30 承担(不是隐形拦截层)
   return (
     <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-label="书签">
       <div className="absolute inset-0 bg-slate-900/30" onClick={onClose} />

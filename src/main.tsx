@@ -2,6 +2,9 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { isChunkLoadError, tryAutoReloadOnce } from "@/lib/chunkError";
+import { installGlobalErrorCapture } from "@/lib/clientErrorLog";
+import { installDeadPageWatchdog } from "@/lib/deadPageWatchdog";
+import AppErrorBoundary from "@/components/AppErrorBoundary";
 
 /**
  * 换版自愈(手机上最常见的"打开报错、刷一下就好"):
@@ -21,4 +24,13 @@ window.addEventListener("unhandledrejection", (e) => {
   if (isChunkLoadError(e.reason)) tryAutoReloadOnce();
 });
 
-createRoot(document.getElementById("root")!).render(<App />);
+// 错误捕获必须在 render 之前装:模块顶层就崩的那种,只有它能接住。
+installGlobalErrorCapture();
+// 「看得见但点不动」看门狗:心跳验尸 + 遮罩现场体检 + 控制台 __unstick() 解卡探针。
+installDeadPageWatchdog();
+
+createRoot(document.getElementById("root")!).render(
+  <AppErrorBoundary>
+    <App />
+  </AppErrorBoundary>,
+);

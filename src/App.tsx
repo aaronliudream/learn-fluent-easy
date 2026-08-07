@@ -209,6 +209,12 @@ const HeartbeatGate = () => {
   return null;
 };
 
+/** 路由级错误边界 + 换页自动复位(崩过一次后不会把错误页粘死到整个会话)。 */
+const RoutedErrorBoundary = ({ children }: { children: ReactNode }) => {
+  const { pathname } = useLocation();
+  return <RouteErrorBoundary resetKey={pathname}>{children}</RouteErrorBoundary>;
+};
+
 // 全站浮动伙伴（彩虹鲸/FloatingPet）已下线，组件归档至 _archived/pet/。
 // /pets 详情页、伙伴养成/聊天等独立功能保留，仅移除右下角浮窗。
 
@@ -344,7 +350,7 @@ const App = () => (
         <GaokaoBreakReminder />
         <MistakeReviewGate />
         <div className="pb-tabbar md:pb-0">
-        <RouteErrorBoundary>
+        <RoutedErrorBoundary>
         <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -596,7 +602,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
-        </RouteErrorBoundary>
+        </RoutedErrorBoundary>
         </div>
         <BottomTabBar />
         <ResumeFab />

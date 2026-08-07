@@ -46,6 +46,20 @@ const NO_EMIT = flag('no-emit');
 const EMIT_ONLY = flag('emit-only');
 const CACHE_FILE = `${BANK}-syllables.json`;
 
+/* ⚠️ 重音统一**不标**(Aaron 2026-08-06 裁决)。
+ * 由来:4471 词里重音标记严重不一致 —— 有标 ˈæl·aɪ、有不标 ə·tɜr·ni、还有标错位的,
+ * 覆盖率不明。而拆读模式逐音节显示时,重音符本身就是视觉噪音;
+ * 重音信息交给音频。补齐 4471 词的重音标注,成本远高于收益。
+ * 生成端一律剥除,DB 侧另有补丁清存量。 */
+export const stripStress = s => String(s).replace(/[ˈˌ]/g, '');
+
+/* 成节辅音统一写成 schwa + 辅音(Aaron 在 irreconcilable 那条已裁:
+ * 「末段成节辅音符 bl̩ 改常规写法」)。模型对 -ble/-gle/-dle 词尾
+ * 写的是 bl / ɡl / dl,不含元音过不了 y7 —— 而它们确实是音节,
+ * 只是写法问题。机械补 ə,与裁决一致。 */
+export const normSyllabic = s => String(s)
+  .replace(/^([bdɡptkfvszʃʒθðmn]+)([lmnr])̩?$/u, '$1ə$2');
+
 /** y1 的归一化:比对时忽略大小写,并剥掉连字符与撇号 —— 拆分不必保留符号。 */
 const norm = s => String(s).toLowerCase().replace(/[^a-z]/g, '');
 
@@ -74,10 +88,21 @@ export function gateSyllable(word, out) {
   });
   // y4 音节数合理 —— 超过 8 段的多半是把字母一个个拆了
   if (syl.length > 8) fails.push(`y4 拆成了 ${syl.length} 段,疑似逐字母拆分`);
-  // y5 IPA 段形式检查(读音对错人审,机器只查空与明显异常)
+  /* y5 IPA 段形式检查。读音对错人审,机器查这几条形式:
+   * ⚠️ 后两条是 Aaron 抽审 G 段后加的,防同类:
+   *   · 段内出现 . 号 —— bipedal 的音标混进了点号
+   *   · 段内没有元音 —— broad-brimmed 把单辅音 /d/ 拆成一段、
+   *     undifferentiated 把塞擦音 ʧ 单独成段。**单辅音不成音节**。 */
+  /* ⚠️ 元音集必须含 **ɚ / ɝ**(r 色化中央元音)和**成节辅音符**(下加点 ̩)——
+   *    voter 的 tɚ、flavor 的 vɚ 都是合法音节,漏了它们会误报 190+ 条。
+   *    第七条规矩:新闸门必须拿已通过样本回跑,正是这一步抓出来的。 */
+  const VOWEL = /[aeiouæɑɒɔəɜɚɝɪʊʌɛyøœɐɘɵɤɯʏʉɞɶ̩]/i;
   ipa.forEach((p, i) => {
-    if (!String(p).trim()) fails.push(`y5 第 ${i + 1} 段 IPA 为空`);
-    else if (/[A-Za-z]{6,}/.test(String(p))) fails.push(`y5 第 ${i + 1} 段 IPA「${p}」疑似写成了拼写不是音标`);
+    const t = String(p).trim();
+    if (!t) { fails.push(`y5 第 ${i + 1} 段 IPA 为空`); return; }
+    if (/[A-Za-z]{6,}/.test(t)) fails.push(`y5 第 ${i + 1} 段 IPA「${p}」疑似写成了拼写不是音标`);
+    if (t.includes('.')) fails.push(`y6 第 ${i + 1} 段 IPA「${p}」含点号 —— 段内不该有分隔符`);
+    if (!VOWEL.test(t)) fails.push(`y7 第 ${i + 1} 段 IPA「${p}」不含元音 —— 单辅音/塞擦音不能自成音节`);
   });
   return fails;
 }
@@ -162,6 +187,9 @@ async function main() {
         for (const it of items) {
           const w = left.find(x => x.headword.toLowerCase() === String(it.headword).toLowerCase());
           if (!w) continue;
+          /* ⚠️ **先归一化再过闸** —— 顺序反了的话闸门看到的还是模型的原始写法(bl),
+           *    而归一化恰恰是为了让它通过。18 个 -ble/-gle 词就卡在这个顺序上。 */
+          it.syllable_ipa = it.syllable_ipa.map(x => normSyllabic(stripStress(x)));
           const f = gateSyllable(w, it);
           if (f.length) { rej++; const k = f[0].slice(0, 40); why.set(k, (why.get(k) ?? 0) + 1); continue; }
           cache[w.headword] = { syllables: it.syllables, syllable_ipa: it.syllable_ipa };

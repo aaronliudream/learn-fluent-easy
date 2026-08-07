@@ -17,10 +17,10 @@
 | grab | grab | ɡræb |
 | cite | cite | saɪt |
 | avant-garde | a · vant · garde | ɑː · vɒ̃t · ɡɑːrd |
-| broad-brimmed | broad · brim · med | brɔd · brɪm · d |
+| broad-brimmed | broad · brimmed | brɔd · brɪmd |
 | constitutional | con · sti · tu · tion · al | kɒn · stɪ · tjuː · ʃən · əl |
 | representation | rep · re · sen · ta · tion | rɛp · rɪ · zɛn · teɪ · ʃən |
-| baby-sitter | ba · by- · sit · ter | beɪ · bi · sɪt · ər |
+| baby-sitter | ba · by · sit · ter | beɪ · bi · sɪt · ər |
 | mall | mall | mɔl |
 | myth | myth | mɪθ |
 | sue | sue | suː |
@@ -29,12 +29,12 @@
 | chip | chip | tʃɪp |
 | ken | ken | kɛn |
 | peer | peer | pɪr |
-| ally | al · ly | ˈæl · aɪ |
+| ally | al · ly | æl · aɪ |
 | norm | norm | nɔrm |
-| administrative | ad · min · is · tra · tive | əd · ˈmɪn · ɪs · trə · tɪv |
+| administrative | ad · min · is · tra · tive | əd · mɪn · ɪs · trə · tɪv |
 | flip | flip | flɪp |
 | bias | bi · as | baɪ · əs |
-| simultaneously | si · mul · ta · ne · ous · ly | sɪ · məl · ˈteɪ · ni · əs · li |
+| simultaneously | si · mul · ta · ne · ous · ly | sɪ · məl · teɪ · ni · əs · li |
 | rip | rip | rɪp |
 | slap | slap | slæp |
 | haul | haul | hɔl |
@@ -47,7 +47,7 @@
 
 ## 按音节数分组抽样
 
-### 1 音节(481 词)
+### 1 音节(491 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
@@ -59,102 +59,102 @@
 | stunt | stunt | stʌnt |
 | gleam | gleam | ɡliːm |
 | yolk | yolk | joʊk |
-| maize | maize | meɪz |
-| smack | smack | smæk |
-| baste | baste | beɪst |
-| mote | mote | moʊt |
+| hump | hump | hʌmp |
+| gash | gash | ɡæʃ |
+| wrought | wrought | rɔt |
+| skulk | skulk | skʌlk |
 
-### 2 音节(1470 词)
+### 2 音节(1484 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
 | concerned | con · cerned | kən · sɜrnd |
-| warfare | war · fare | wɔːr · fɛr |
-| gossip | gos · sip | ˈɡɑːs · ɪp |
-| gourmet | gour · met | ɡʊr · ˈmeɪ |
-| tangle | tan · gle | tæŋ · ɡəl |
-| condone | con · done | kən · ˈdoʊn |
-| molten | mol · ten | moʊl · tən |
-| mirage | mi · rage | mɪ · rɑːʒ |
-| placate | pla · cate | plə · keɪt |
-| homesick | home · sick | hoʊm · sɪk |
-| offhand | off · hand | ɔːf · hænd |
-| bipedal | bi · pedal | baɪ · ˈpiː.dəl |
+| migrant | mi · grant | maɪ · ɡrənt |
+| wrestling | wrest · ling | rɛs · lɪŋ |
+| fragrance | fra · grance | freɪ · ɡrəns |
+| exempt | ex · empt | ɪɡ · zɛmpt |
+| forage | for · age | fɔːr · ɪdʒ |
+| tranquil | tran · quil | træŋ · kwɪl |
+| distort | dis · tort | dɪs · tɔrt |
+| rapture | rap · ture | ræp · tʃər |
+| carnal | car · nal | kɑrn · əl |
+| arraign | ar · raign | ə · reɪn |
+| fervid | fer · vid | fɜːr · vɪd |
 
-### 3 音节(1387 词)
+### 3 音节(1365 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
 | attorney | at · tor · ney | ə · tɜr · ni |
-| concession | con · ces · sion | kən · sɛs · ʃən |
-| advancement | ad · vance · ment | əd · ˈvæns · mənt |
-| unify | u · ni · fy | juː · nɪ · faɪ |
-| salient | sal · i · ent | seɪ · li · ənt |
-| mesmerize | mes · mer · ize | mɛz · mə · raɪz |
-| sculptural | sculp · tur · al | skʌlp · tʃər · əl |
-| misfortune | mis · for · tune | mɪs · ˈfɔːr · tʃən |
-| reschedule | re · sched · ule | riː · ʃɛdʒ · uːl |
-| subspecies | sub · spe · cies | sʌb · spiː · sɪz |
-| ventilate | ven · ti · late | vɛn · tɪ · leɪt |
-| continence | con · ti · nence | kɒn · tɪ · nəns |
+| viable | vi · a · ble | vaɪ · ə · bəl |
+| opposing | op · pos · ing | əp · poʊz · ɪŋ |
+| imbalance | im · bal · ance | ɪm · bæ · ləns |
+| maritime | mar · i · time | mær · ɪ · taɪm |
+| recital | re · cit · al | rɪ · saɪt · əl |
+| vertigo | ver · ti · go | vɜːr · tɪ · ɡoʊ |
+| tenderness | ten · der · ness | tɛn · dɚ · nəs |
+| longitude | lon · gi · tude | lɒn · dʒɪ · tuːd |
+| legible | leg · i · ble | lɛdʒ · ɪ · bəl |
+| levity | lev · i · ty | lɛv · ɪ · ti |
+| martinet | mar · ti · net | mɑːr · tɪ · nɛt |
 
-### 4 音节(795 词)
+### 4 音节(794 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
 | demonstration | dem · on · stra · tion | dɛm · ən · streɪ · ʃən |
 | accomplishment | ac · com · plish · ment | ə · kɒm · plɪʃ · mənt |
-| deficiency | de · fi · cien · cy | dɪ · ˈfɪʃ · ən · si |
-| diversify | di · ver · si · fy | daɪ · vɜːr · sɪ · faɪ |
-| paralysis | pa · ral · y · sis | pə · ræl · ɪ · sɪs |
-| metropolis | me · trop · o · lis | mə · trɒp · ə · lɪs |
-| congenital | con · gen · i · tal | kən · ˈdʒɛn · ɪ · təl |
-| discernible | dis · cern · i · ble | dɪs · ˈsɜrn · ə · bəl |
-| incarcerate | in · car · cer · ate | ɪn · ˈkɑːr · sə · reɪt |
-| malleable | mal · le · a · ble | ˈmæl · i · ə · bəl |
-| depredation | dep · re · da · tion | dɛp · rə · deɪ · ʃən |
-| indemnify | in · dem · ni · fy | ɪn · dɛm · nɪ · faɪ |
+| analogy | a · nal · o · gy | ə · næl · ə · dʒi |
+| intuition | in · tu · i · tion | ɪn · tu · ɪ · ʃən |
+| fidelity | fi · del · i · ty | fɪ · dɛl · ɪ · ti |
+| unrestricted | un · re · strict · ed | ʌn · rɪ · strɪk · tɪd |
+| subsequently | sub · se · quent · ly | sʌb · sɪ · kwənt · li |
+| regenerate | re · gen · er · ate | rɪ · dʒɛn · ə · reɪt |
+| inquisitive | in · qui · si · tive | ɪn · kwɪ · zɪ · tɪv |
+| suburbanite | sub · ur · ban · ite | sə · bɜːr · bə · naɪt |
+| obligated | ob · li · ga · ted | ɑːb · lɪ · ɡeɪ · tɪd |
+| malediction | mal · e · dic · tion | mæl · ɪ · dɪk · ʃən |
 
-### 5 音节(284 词)
+### 5 音节(285 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
 | administrator | ad · min · is · tra · tor | əd · mɪn · ɪs · treɪ · tər |
-| inevitably | in · ev · i · ta · bly | ɪ · ˈnɛv · ɪ · təb · li |
-| proliferation | pro · lif · er · a · tion | prəʊ · lɪf · ə · reɪ · ʃən |
-| incidentally | in · ci · den · tal · ly | ɪn · sɪ · dɛn · tə · li |
-| revolutionize | rev · o · lu · tion · ize | ˌrɛv · ə · ˈluː · ʃən · aɪz |
-| methodically | me · thod · i · cal · ly | mə · ˈθɒd · ɪ · kəl · i |
-| indefinitely | in · def · i · nit · ely | ˌɪn · ˈdɛf · ɪ · nət · li |
-| evaporation | e · vap · o · ra · tion | ɪ · væp · ə · reɪ · ʃən |
-| supplementation | sup · ple · men · ta · tion | sʌp · lə · mɛn · teɪ · ʃən |
-| irreparable | ir · re · par · a · ble | ɪr · ˈrɛ · pə · reɪ · bəl |
-| insufferable | in · suf · fer · a · ble | ɪn · sʌf · ər · ə · bəl |
-| nonconformity | non · con · form · i · ty | ˌnɒn · kən · ˈfɔːr · mə · ti |
+| inevitably | in · ev · i · ta · bly | ɪ · nɛv · ɪ · təb · li |
+| anthropology | an · thro · pol · o · gy | æn · θrə · pɑːl · ə · dʒi |
+| continuation | con · tin · u · a · tion | kən · tɪn · ju · eɪ · ʃən |
+| illumination | il · lu · mi · na · tion | ɪl · uː · mɪ · neɪ · ʃən |
+| choreography | cho · re · o · graph · y | kɔː · ri · ɒ · ɡrəf · i |
+| rehabilitate | re · ha · bil · i · tate | riː · hə · bɪl · ɪ · teɪt |
+| domesticated | do · mes · ti · ca · ted | də · mɛs · tɪ · keɪ · tɪd |
+| uninhabited | un · in · hab · it · ed | ʌn · ɪn · hæb · ɪt · ɪd |
+| facilitation | fa · cil · i · ta · tion | fə · sɪl · ɪ · teɪ · ʃən |
+| recapitulate | re · ca · pit · u · late | riː · kə · pɪtʃ · ə · leɪt |
+| quadrilateral | quad · ri · lat · er · al | kwɒd · rɪ · læt · ər · əl |
 
-### 6 音节(50 词)
+### 6 音节(48 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
-| simultaneously | si · mul · ta · ne · ous · ly | sɪ · məl · ˈteɪ · ni · əs · li |
-| reconciliation | rec · on · cil · i · a · tion | ˌrɛk · ən · ˈsɪl · ɪ · eɪ · ʃən |
-| variability | var · i · a · bil · i · ty | ˌvɛə · ri · ˈæb · ɪl · ɪ · ti |
-| incomprehensible | in · com · pre · hen · si · ble | ɪn · kəm · prɪ · hɛn · sə · bəl |
-| psychoanalysis | psy · cho · a · na · ly · sis | ˌsaɪ · kəʊ · ə · ˈnæl · ɪ · sɪs |
-| meteorologist | me · te · or · ol · o · gist | ˌmiː · ti · ə · ˈrɒl · ə · dʒɪst |
-| individualism | in · di · vid · u · al · ism | ˌɪn · dɪ · vɪdʒ · u · əl · ɪzəm |
-| heterogeneous | het · er · o · ge · ne · ous | ˌhɛt · ər · oʊ · dʒə · ni · əs |
-| irreconcilable | ir · re · con · cil · a · ble | ɪr · ɪ · kɒn · sə · laʊ · əbl̩ |
-| potentiality | po · ten · ti · al · i · ty | pə · ˌtɛn · ʃi · ˈæl · ɪ · ti |
-| malleability | mal · le · a · bil · i · ty | mæl · i · ə · bɪl · ɪ · ti |
-| parapsychology | par · a · psy · cho · lo · gy | pær · ə · saɪ · ˈkɑ · lə · dʒi |
+| simultaneously | si · mul · ta · ne · ous · ly | sɪ · məl · teɪ · ni · əs · li |
+| reconciliation | rec · on · cil · i · a · tion | rɛk · ən · sɪl · ɪ · eɪ · ʃən |
+| generalization | gen · er · al · i · za · tion | dʒɛn · ə · rə · lə · zeɪ · ʃən |
+| intermediary | in · ter · me · di · ar · y | ɪn · tər · miː · di · ə · ri |
+| paleontologist | pa · le · on · to · lo · gist | peɪ · li · ɒn · tɒl · ə · dʒɪst |
+| accessibility | ac · ces · si · bil · i · ty | æk · sɛs · ə · bɪl · ə · ti |
+| diversification | di · ver · si · fi · ca · tion | daɪ · vɜːr · sɪ · fɪ · keɪ · ʃən |
+| idiosyncrasy | id · i · o · syn · cra · sy | ɪd · i · ə · sɪŋ · krə · si |
+| reinterpretation | re · in · ter · pre · ta · tion | riː · ɪn · tɜːr · prɪ · teɪ · ʃən |
+| survivability | sur · vi · va · bil · i · ty | sər · vaɪ · və · bɪl · ɪ · ti |
+| impracticality | im · prac · ti · cal · i · ty | ɪm · prækt · ɪ · kæl · ɪ · ti |
+| electromagnetic | e · lec · tro · mag · ne · tic | ɪ · lɛk · trəʊ · mæɡ · nɛt · ɪk |
 
 ### 7 音节(4 词)
 
 | 词 | 音节 | 音标 |
 | --- | --- | --- |
 | autobiographical | au · to · bi · o · graph · i · cal | ɔː · tə · baɪ · ə · ɡræf · ɪ · kəl |
-| industrialization | in · dus · tri · al · i · za · tion | ɪn · ˌdʌs · tri · ə · laɪ · ˈzeɪ · ʃən |
-| undifferentiated | un · dif · fer · en · ti · a · ted | ʌn · dɪf · ɛr · ən · ʧ · eɪ · tɪd |
-| enthusiastically | en · thu · si · as · ti · cal · ly | ɪn · ˈθjuː · zi · ˈæs · tɪ · kəl · li |
+| industrialization | in · dus · tri · al · i · za · tion | ɪn · dʌs · tri · ə · laɪ · zeɪ · ʃən |
+| undifferentiated | un · dif · fer · en · ti · a · ted | ʌn · dɪf · ə · rɛn · ʃi · eɪ · tɪd |
+| enthusiastically | en · thu · si · as · ti · cal · ly | ɪn · θjuː · zi · æs · tɪ · kəl · li |
 

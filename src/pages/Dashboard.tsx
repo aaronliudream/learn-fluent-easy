@@ -386,6 +386,16 @@ export default function Dashboard() {
     return (moduleMap.get(stageTab) ?? []).some((m) => m.module === "reading");
   }, [moduleMap, stageTab]);
 
+  // 「继续上次」卡:从三学段 hub state(本地+云同步同源)读最后学习位置。纯展示。
+  //
+  // ★这个 useMemo 必须留在下面那个 signed-out early return 之上★
+  // 2026-08-07 smoke 抓到 React #300(Rendered fewer hooks than expected):
+  // 它原本写在 early return **之后** —— 首屏 loading=true 时不走 gate,这个 hook 会执行;
+  // 取数回来发现未登录(loading=false / signedIn=false)就提前 return,这次渲染少跑一个 hook,
+  // React 直接抛错,整个 /dashboard 被 RouteErrorBoundary 接住变成错误页。未登录访客 100% 中。
+  // dev 构建看不见(React 开发版这条路径不报同样的错),只有生产 minify 构建 + smoke 能抓到。
+  const continueTarget = useMemo(() => getContinueTarget(stageTab), [stageTab]);
+
   // ── Signed-out gate ──
   if (!signedIn && !loading) {
     return (
@@ -398,9 +408,6 @@ export default function Dashboard() {
   }
 
   const effectiveStage: StageKey = stageTab ?? "primary";
-
-  // 「继续上次」卡:从三学段 hub state(本地+云同步同源)读最后学习位置。纯展示。
-  const continueTarget = useMemo(() => getContinueTarget(stageTab), [stageTab]);
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">

@@ -1,5 +1,3 @@
--- ✅ DONE 2026-08-07 已执行,Aaron 回报 validate 六条全过
--- 终态可重放:本文件先删不在键表内的表达(renditions 靠 FK CASCADE 连带清),再 upsert 全部
 -- I 段 · 中文高频表达 51 条(**终态写法,可任意重放**)
 --
 -- 一条中文 → 2–3 个不同语域的地道英文说法。本段的全部价值是**挡中式英语**。
@@ -231,9 +229,22 @@ SELECT '同一表达下语域互不相同',
        NOT EXISTS (SELECT 1 FROM vocab_cn_renditions
                     GROUP BY expression_id, register HAVING count(*) > 1)
 UNION ALL
-SELECT '英文例句都真的含该说法(抽 sth/sb 后首词)',
-       NOT EXISTS (SELECT 1 FROM vocab_cn_renditions
-                    WHERE position(lower(split_part(rendition, ' ', 1)) in lower(example_en)) = 0)
+SELECT '英文例句都真的含该说法(实义词命中 ≥60%,与生成端 i5 同一把尺)',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_cn_renditions r
+         CROSS JOIN LATERAL (
+           SELECT count(*) AS tot,
+                  count(*) FILTER (
+                    WHERE position(w in regexp_replace(lower(r.example_en), '[^a-z '' ]', ' ', 'g')) > 0
+                  ) AS hit
+             FROM unnest(string_to_array(
+                    regexp_replace(
+                      regexp_replace(regexp_replace(lower(r.rendition), '''[a-z]+', '', 'g'), '[^a-z ]', ' ', 'g'),
+                      '\s+', ' ', 'g'), ' ')) AS w
+            WHERE length(w) > 2 AND w NOT IN ('that', 'this', 'there', 'these', 'those', 'you', 'she', 'they', 'him', 'her', 'them', 'your', 'his', 'its', 'our', 'their', 'one', 'ones', 'one''s', 'yourself', 'himself', 'herself', 'themselves', 'are', 'was', 'were', 'been', 'being', 'the', 'for', 'and', 'but', 'not', 'does', 'did', 'whatever', 'wherever', 'whenever', 'however')
+         ) s
+         WHERE s.tot > 0 AND s.hit::numeric / s.tot < 0.6
+       )
 UNION ALL
 SELECT '无任何 NOT NULL 列为空',
        NOT EXISTS (SELECT 1 FROM vocab_cn_renditions

@@ -84,31 +84,46 @@ function cnSubseq(hay, needle) {
   return i >= needle.length;
 }
 
-/** 英文说法是否出现在例句里,**容忍首词屈折**。
- *  ⚠️ "stand out like a sore thumb" 在例句里是 "stood out like a sore thumb" ——
- *     整体动词短语的首词必然随时态变形。D 段踩过同一个坑(come across → came)。 */
+/* ⚠️ **停用词表:生成端 i5 与 DB 端 validate 的唯一来源**(Aaron 2026-08-07)。
+   SQL 的 validate 块由这份常量**生成**,不是另写一份等价代码 ——
+   同一个坑跨 D/I 两段栽了四次,其中第四次就是"i5 修好了、SQL 那把尺没跟着改"。
+   凡「文本是否含某说法」的判据,豁免集必须只有一处定义。 */
+const STOPWORDS = new Set([
+  // 虚位主语 / 指示词(最易变的位置)
+  'it', 'that', 'this', 'there', 'these', 'those',
+  // 人称与物主代词
+  'i', 'you', 'he', 'she', 'we', 'they', 'me', 'him', 'her', 'them', 'us',
+  'my', 'your', 'his', 'its', 'our', 'their', 'one', 'ones', "one's",
+  'yourself', 'himself', 'herself', 'themselves',
+  // be 动词与缩写还原后的碎片
+  'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+  // 高频虚词
+  'a', 'an', 'the', 'to', 'of', 'in', 'on', 'at', 'for', 'and', 'or', 'but',
+  'no', 'not', 'so', 'as', 'if', 'do', 'does', 'did',
+  // 同族替换位(whatever/wherever/whenever 可互换)
+  'whatever', 'wherever', 'whenever', 'however',
+]);
+/** 说法里参与命中判定的**实义词**(短词与停用词一律不参与)。 */
+const contentWords = s => String(s).toLowerCase()
+  .replace(/[’]/g, "'")
+  .replace(/\bsth\b|\bsb\b|\bsomeone\b|\bsomething\b/g, ' ')
+  .replace(/'[a-z]+/g, '')          // 缩写尾巴先剥掉:i'm→i、that's→that、one's→one(剥完落进停用词表)
+  .replace(/[^a-z ]/g, ' ').split(/\s+/)
+  .filter(w => w.length > 2 && !STOPWORDS.has(w));
+
+/** 英文说法是否出现在例句里。
+ *  ⚠️ **判据与 DB 端 validate 完全一致:说法的实义词至少 60% 出现在例句中。**
+ *     不再做首词/尾词的分别处理 —— 那套曾连栽四次(首词屈折 / 虚位主语 /
+ *     物主代词 / SQL 那把尺没跟着改)。现在生成端与 DB 端共用 STOPWORDS
+ *     和这条 60% 规则,SQL 谓词由同一份常量生成,不存在两份等价代码。 */
+const HIT_RATIO = 0.6;
 function renditionInExample(rendition, exampleEn) {
-  const ex = String(exampleEn).toLowerCase().replace(/[.,!?;:"']/g, ' ');
-  const parts = String(rendition).toLowerCase()
-    .replace(/\bsth\b|\bsb\b|\bsomeone\b|\bsomething\b|\.\.\./g, ' ')
-    .replace(/[.,!?;:"']/g, ' ').split(/\s+/).filter(Boolean);
-  if (!parts.length) return true;
-  /* 物主/人称代词在真实例句里必然换人:
-       "Learn from your mistakes" → "he decided to learn from his mistakes"
-     这类词不参与比对,否则只有第二人称的例句才算命中。 */
-  const PRONOUNS = new Set(['your', 'my', 'his', 'her', 'its', 'our', 'their', 'ones',
-    "one's", 'you', 'me', 'him', 'them', 'us', 'yourself', 'himself', 'herself', 'themselves']);
-  const tail = parts.slice(1).filter(w => w.length > 2 && !PRONOUNS.has(w));
-  const tailOk = tail.every(w => ex.includes(w));
-  /* 首词有两类天然不匹配,都不该判死:
-       ① 虚位主语/代词:"It escaped my memory" 在例句里是 "Her birthday escaped…"
-       ② 不规则屈折:"have no choice…" 在例句里是 "had no choice…"(3 字母前缀 hav≠had)
-     所以:虚词打头直接免检;实词打头放宽到 2 字母前缀。 */
-  const FUNCTION_HEAD = new Set(['it', 'i', 'you', 'he', 'she', 'we', 'they', 'there',
-    'a', 'an', 'the', 'to', 'of', 'in', 'on', 'no', 'that', 'this', 'my', 'your']);
-  if (FUNCTION_HEAD.has(parts[0])) return tailOk;
-  const headOk = ex.split(/\s+/).some(w => w.slice(0, 2) === parts[0].slice(0, 2));
-  return headOk && tailOk;
+  const ex = ' ' + String(exampleEn).toLowerCase().replace(/[’]/g, "'")
+    .replace(/'[a-z]+/g, '').replace(/[^a-z ]/g, ' ') + ' ';
+  const need = contentWords(rendition);
+  if (!need.length) return true;
+  const hit = need.filter(w => ex.includes(w)).length;
+  return hit / need.length >= HIT_RATIO;
 }
 
 function gateOne(e, seenRend) {
@@ -422,9 +437,22 @@ SELECT '同一表达下语域互不相同',
        NOT EXISTS (SELECT 1 FROM vocab_cn_renditions
                     GROUP BY expression_id, register HAVING count(*) > 1)
 UNION ALL
-SELECT '英文例句都真的含该说法(抽 sth/sb 后首词)',
-       NOT EXISTS (SELECT 1 FROM vocab_cn_renditions
-                    WHERE position(lower(split_part(rendition, ' ', 1)) in lower(example_en)) = 0)
+SELECT '英文例句都真的含该说法(实义词命中 ≥60%,与生成端 i5 同一把尺)',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_cn_renditions r
+         CROSS JOIN LATERAL (
+           SELECT count(*) AS tot,
+                  count(*) FILTER (
+                    WHERE position(w in regexp_replace(lower(r.example_en), '[^a-z '' ]', ' ', 'g')) > 0
+                  ) AS hit
+             FROM unnest(string_to_array(
+                    regexp_replace(
+                      regexp_replace(regexp_replace(lower(r.rendition), '''[a-z]+', '', 'g'), '[^a-z ]', ' ', 'g'),
+                      '\\s+', ' ', 'g'), ' ')) AS w
+            WHERE length(w) > 2 AND w NOT IN (${[...new Set([...STOPWORDS].map(w => w.replace(/'/g, "''")))].filter(w => w.length > 2).map(w => `'${w}'`).join(', ')})
+         ) s
+         WHERE s.tot > 0 AND s.hit::numeric / s.tot < 0.6
+       )
 UNION ALL
 SELECT '无任何 NOT NULL 列为空',
        NOT EXISTS (SELECT 1 FROM vocab_cn_renditions

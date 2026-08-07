@@ -1,3 +1,5 @@
+-- ⛔ SUPERSEDED —— 已被重出的主 SQL(DONE_vocab_toefl_syllables.sql)整体覆盖,勿单独重跑。
+-- Aaron 查库实证:avant-garde / broad-brimmed / baby-sitter 的音节数组均已无连字符。
 -- G 段连字符归一化补丁 —— 16 词(2026-08-07)
 --
 -- ⚠️ 为什么需要这个补丁:交接说明里写的是「Aaron 未跑库,直接改源」,但实况相反 ——

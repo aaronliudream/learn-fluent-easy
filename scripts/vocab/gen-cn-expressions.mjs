@@ -29,6 +29,8 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { callJson, pool, q, writeSql, writeReview } from './llm.mjs';
+/* ⚠️ 归一化实现已抽到 textmatch.mjs —— 生成端与 DB 端共用一份,不留副本 */
+import { STOPWORDS, contains, HIT_RATIO, sqlStopwordList } from './textmatch.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(HERE, 'data', 'generated', 'cn-expressions.json');
@@ -84,47 +86,8 @@ function cnSubseq(hay, needle) {
   return i >= needle.length;
 }
 
-/* ⚠️ **停用词表:生成端 i5 与 DB 端 validate 的唯一来源**(Aaron 2026-08-07)。
-   SQL 的 validate 块由这份常量**生成**,不是另写一份等价代码 ——
-   同一个坑跨 D/I 两段栽了四次,其中第四次就是"i5 修好了、SQL 那把尺没跟着改"。
-   凡「文本是否含某说法」的判据,豁免集必须只有一处定义。 */
-const STOPWORDS = new Set([
-  // 虚位主语 / 指示词(最易变的位置)
-  'it', 'that', 'this', 'there', 'these', 'those',
-  // 人称与物主代词
-  'i', 'you', 'he', 'she', 'we', 'they', 'me', 'him', 'her', 'them', 'us',
-  'my', 'your', 'his', 'its', 'our', 'their', 'one', 'ones', "one's",
-  'yourself', 'himself', 'herself', 'themselves',
-  // be 动词与缩写还原后的碎片
-  'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
-  // 高频虚词
-  'a', 'an', 'the', 'to', 'of', 'in', 'on', 'at', 'for', 'and', 'or', 'but',
-  'no', 'not', 'so', 'as', 'if', 'do', 'does', 'did',
-  // 同族替换位(whatever/wherever/whenever 可互换)
-  'whatever', 'wherever', 'whenever', 'however',
-]);
-/** 说法里参与命中判定的**实义词**(短词与停用词一律不参与)。 */
-const contentWords = s => String(s).toLowerCase()
-  .replace(/[’]/g, "'")
-  .replace(/\bsth\b|\bsb\b|\bsomeone\b|\bsomething\b/g, ' ')
-  .replace(/'[a-z]+/g, '')          // 缩写尾巴先剥掉:i'm→i、that's→that、one's→one(剥完落进停用词表)
-  .replace(/[^a-z ]/g, ' ').split(/\s+/)
-  .filter(w => w.length > 2 && !STOPWORDS.has(w));
-
-/** 英文说法是否出现在例句里。
- *  ⚠️ **判据与 DB 端 validate 完全一致:说法的实义词至少 60% 出现在例句中。**
- *     不再做首词/尾词的分别处理 —— 那套曾连栽四次(首词屈折 / 虚位主语 /
- *     物主代词 / SQL 那把尺没跟着改)。现在生成端与 DB 端共用 STOPWORDS
- *     和这条 60% 规则,SQL 谓词由同一份常量生成,不存在两份等价代码。 */
-const HIT_RATIO = 0.6;
-function renditionInExample(rendition, exampleEn) {
-  const ex = ' ' + String(exampleEn).toLowerCase().replace(/[’]/g, "'")
-    .replace(/'[a-z]+/g, '').replace(/[^a-z ]/g, ' ') + ' ';
-  const need = contentWords(rendition);
-  if (!need.length) return true;
-  const hit = need.filter(w => ex.includes(w)).length;
-  return hit / need.length >= HIT_RATIO;
-}
+/** i5 判据 = textmatch.contains(与 DB 端 validate 同一条规则) */
+const renditionInExample = (rendition, exampleEn) => contains(rendition, exampleEn);
 
 function gateOne(e, seenRend) {
   const f = [];

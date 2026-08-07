@@ -1,0 +1,2563 @@
+{
+  "网络购物": {
+    "n": 1,
+    "title_zh": "网络购物",
+    "theme_en": "online shopping",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "browse → add to cart → place an order → free shipping → track the package → return",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "browse",
+        "text_zh": "浏览",
+        "sort_order": 1,
+        "headword_ref": "browse"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "add to cart",
+        "text_zh": "加入购物车",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "place an order",
+        "text_zh": "下单",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "free shipping vs. expedited shipping",
+        "text_zh": "免费送货 vs. 加急送货;免费送货通常较慢,加急送货则更快但需额外付费。",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "track the package",
+        "text_zh": "追踪包裹",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "return",
+        "text_zh": "退货",
+        "sort_order": 6,
+        "headword_ref": "return"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "customer service",
+        "text_zh": "客户服务",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "product review",
+        "text_zh": "产品评价",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "convenience",
+      "wide selection",
+      "time-saving"
+    ],
+    "drawbacks": [
+      "impersonal experience",
+      "shipping delays",
+      "difficult returns"
+    ],
+    "essay_full_en": "Online shopping has transformed the way we purchase goods. It begins with browsing through a wide selection of products, where one can easily add to cart the desired items. Once satisfied, the next step is to place an order. Many platforms offer free shipping, though expedited shipping is available for those in a hurry. Customers can track the package using real-time updates, ensuring they know exactly when it will arrive. If the product doesn't meet expectations, a return can be initiated, though it may involve dealing with customer service. Product reviews often guide the decision-making process, providing insight into the quality and reliability of items.\n\nThe benefits of online shopping are clear: it offers unparalleled convenience, a wide selection of products, and significant time-saving. However, it is not without its drawbacks. The experience can feel impersonal, with no face-to-face interaction. Shipping delays can be frustrating, especially when free shipping is selected. Additionally, returns can be complicated and time-consuming.\n\nIn conclusion, while online shopping offers numerous advantages, it also presents challenges that consumers must navigate. Balancing convenience with potential drawbacks is key to a satisfying online shopping experience.",
+    "essay_full_zh": "网络购物已经改变了我们购买商品的方式。首先是浏览各种产品,可以轻松将心仪的商品加入购物车。当满意后,下一步就是下单。许多平台提供免费送货,尽管加急送货可供赶时间的人选择。顾客可以通过实时更新追踪包裹,确保知道确切的到货时间。如果产品不符合预期,可以发起退货,但这可能涉及与客户服务打交道。产品评价通常会指导决策过程,提供关于商品质量和可靠性的见解。\n\n网络购物的好处显而易见:它提供了无与伦比的便利性、广泛的产品选择和显著的时间节省。然而,它也并非没有缺点。体验可能显得缺乏人情味,没有面对面的互动。尤其选择免费送货时,送货延迟可能令人沮丧。此外,退货可能复杂且耗时。\n\n总之,虽然网络购物提供了众多优势,但也存在消费者必须应对的挑战。平衡便利性与潜在缺点是获得满意的网络购物体验的关键。",
+    "essay_short_en": "Online shopping starts with browsing a wide selection and adding desired items to the cart. After placing an order, users often choose between free shipping and expedited shipping. Tracking the package provides updates on delivery time. If dissatisfied, returns are possible but may require dealing with customer service. Product reviews assist in decision-making by offering insights into quality.\n\nBenefits include convenience, a wide selection, and time-saving. Drawbacks involve impersonal experiences, shipping delays, and difficult returns. While online shopping offers many advantages, balancing these with potential challenges is crucial for a satisfying experience.",
+    "essay_short_zh": "网络购物从浏览广泛的选择和将心仪商品加入购物车开始。下单后,用户通常在免费送货和加急送货之间选择。追踪包裹提供送货时间的更新。如果不满意,可以退货,但可能需要与客户服务打交道。产品评价通过提供质量见解帮助决策。\n\n好处包括便利性、广泛选择和节省时间。缺点包括缺乏人情味的体验、送货延迟和退货困难。尽管网络购物有很多优势,但平衡这些与潜在挑战对于获得满意的体验至关重要。"
+  },
+  "选课与退课": {
+    "n": 9,
+    "title_zh": "选课与退课",
+    "theme_en": "course registration",
+    "group": "校园学习",
+    "structure": "essay",
+    "seed": "prerequisite → enrol → drop a course → credit → clash",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "prerequisite",
+        "text_zh": "先修课",
+        "sort_order": 1,
+        "headword_ref": "prerequisite"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "meet the requirements",
+        "text_zh": "满足要求",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "register for classes",
+        "text_zh": "注册课程",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "enrol in a course",
+        "text_zh": "选课",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "drop a course",
+        "text_zh": "退课",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "credit",
+        "text_zh": "学分",
+        "sort_order": 6,
+        "headword_ref": "credit"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "mandatory vs elective",
+        "text_zh": "必修课 vs 选修课，必修课是必须要上的，而选修课可以根据兴趣选择。",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "class schedule",
+        "text_zh": "课程表",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "resolve a clash",
+        "text_zh": "解决冲突",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "学分获得",
+      "灵活选择",
+      "满足职业目标"
+    ],
+    "drawbacks": [
+      "时间冲突",
+      "繁琐的手续",
+      "不满意的课程内容"
+    ],
+    "essay_full_en": "When students plan their academic journey, they often start by identifying which prerequisite courses they need to take. Once they meet the requirements, they can register for classes and enrol in a course that aligns with their interests and academic goals. The ability to drop a course if it does not meet their expectations can be beneficial. Earning credit for mandatory courses is crucial, but students also enjoy the flexibility of choosing elective courses based on their interests. \n\nOne benefit of this process is that students can accumulate credits towards their degree. Additionally, having the option to choose electives allows students to tailor their education to their career goals. However, the process is not without drawbacks. Students often face time clashes in their class schedule, requiring them to resolve a clash, which can be stressful. Furthermore, the administrative procedures involved in registration can be cumbersome, and sometimes the course content may not meet students' expectations.\n\nIn conclusion, while there are challenges in the course registration process, the benefits of flexibility and credit accumulation generally outweigh the drawbacks.",
+    "essay_full_zh": "当学生规划他们的学术旅程时，他们通常从确定需要修读哪些先修课开始。一旦满足要求，他们就可以注册课程，选修与兴趣和学术目标相符的课程。如果课程不符合期望，退课的能力可能是有益的。获得必修课的学分是至关重要的，但学生也享受根据兴趣选择选修课的灵活性。\n\n这一过程的一个好处是学生可以积累学位所需的学分。此外，选择选修课的选项允许学生根据职业目标定制他们的教育。然而，这一过程也存在缺点。学生们经常在课程表中遇到时间冲突，需要解决冲突，这可能会带来压力。此外，注册过程中涉及的行政程序可能非常繁琐，有时课程内容可能不符合学生的期望。\n\n总之，尽管选课过程中有挑战，但灵活性和学分积累的好处通常超过了缺点。",
+    "essay_short_en": "Students begin by identifying prerequisite courses. After meeting the requirements, they register for classes and enrol in courses that suit their interests. The option to drop a course is beneficial if it doesn't meet expectations. Earning credits in mandatory courses is vital, but choosing electives adds flexibility. \n\nBenefits include credit accumulation and career-oriented choices. However, drawbacks like time clashes in class schedules and cumbersome procedures exist. Despite these challenges, the benefits of flexibility and credit accumulation generally outweigh the drawbacks.",
+    "essay_short_zh": "学生首先确定先修课。满足要求后，他们注册课程，选修符合兴趣的课。退课选项在不符合期望时是有益的。获得必修课学分至关重要，但选择选修课增加了灵活性。\n\n好处包括学分积累和职业导向选择。然而，也存在时间冲突和繁琐手续等缺点。尽管有这些挑战，灵活性和学分积累的好处通常超过缺点。"
+  },
+  "图书馆借还书": {
+    "n": 11,
+    "title_zh": "图书馆借还书",
+    "theme_en": "using the library",
+    "group": "校园学习",
+    "structure": "experience",
+    "seed": "check out → renew → overdue → fine → reserve",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "check out",
+        "text_zh": "借书",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "due date",
+        "text_zh": "到期日",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "renew a book",
+        "text_zh": "续借一本书",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "overdue",
+        "text_zh": "过期",
+        "sort_order": 4,
+        "headword_ref": "overdue"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "pay a fine",
+        "text_zh": "支付罚款",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "reserve a book",
+        "text_zh": "预约一本书",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "library card vs student ID",
+        "text_zh": "在借书时,有些图书馆要求使用图书馆卡,而不是学生证。",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "return on time",
+        "text_zh": "按时归还",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "library catalog",
+        "text_zh": "图书馆目录",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "丰富的资源",
+      "安静的环境",
+      "免费使用"
+    ],
+    "drawbacks": [
+      "过期罚款",
+      "书籍丢失",
+      "预约等待"
+    ],
+    "essay_full_en": "Using the library efficiently involves understanding a few key steps. First, when you check out a book, always note the due date. This helps you manage your time and avoid issues. If you need more time with the book, you can often renew it, extending your borrowing period. However, if you forget and the book becomes overdue, you may have to pay a fine. To avoid this, it's wise to set reminders. If the book you want is not available, you can reserve it through the library catalog. This ensures you get the book when it's returned. Be aware that some libraries require a library card instead of a student ID for borrowing. A common mistake is forgetting to return books on time, leading to overdue fines. To prevent this, always return on time. My advice is to familiarize yourself with the library's rules and utilize their resources effectively. Libraries offer a wealth of benefits, including a quiet environment and free access to a wide range of materials, but they also have some drawbacks such as overdue fines and wait times for reserved books.",
+    "essay_full_zh": "有效利用图书馆需要了解一些关键步骤。首先,当你借书时,一定要注意到期日。这有助于你管理时间,避免问题。如果你需要更多时间,通常可以续借,延长借阅期。然而,如果你忘记了,书过期了,你可能需要支付罚款。为了避免这种情况,最好设置提醒。如果你想要的书不可用,可以通过图书馆目录预约。这确保了书一归还,你就可以借到。注意,有些图书馆要求使用图书馆卡而不是学生证。常见的错误是忘记按时归还,导致过期罚款。为了避免这种情况,一定要按时归还。我的建议是熟悉图书馆的规则,有效利用他们的资源。图书馆提供丰富的好处,包括安静的环境和免费使用各种材料,但也有一些缺点,如过期罚款和预约等待时间。",
+    "essay_short_en": "Using the library efficiently requires knowing a few steps. When you check out a book, note the due date to avoid issues. You can renew a book if needed, but avoid making it overdue to escape fines. If a book is unavailable, reserve it through the library catalog. Some libraries need a library card instead of a student ID. Common mistakes include not returning on time, leading to fines. Familiarize yourself with the library's rules to make the most of its resources, which offer benefits like a quiet environment and free access, despite some drawbacks like fines and wait times.",
+    "essay_short_zh": "有效利用图书馆需要了解几个步骤。借书时,注意到期日以避免问题。如果需要,可以续借,但要避免过期以免罚款。如书不可用,可通过图书馆目录预约。有些图书馆需用图书馆卡而非学生证。常见错误包括未按时归还,导致罚款。熟悉图书馆规则以充分利用其资源,享受安静环境和免费使用等好处,尽管也有罚款和等待时间等缺点。"
+  },
+  "开会与汇报": {
+    "n": 17,
+    "title_zh": "开会与汇报",
+    "theme_en": "meetings",
+    "group": "工作职场",
+    "structure": "essay",
+    "seed": "agenda → run over → on the same page → action items → follow up",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "agenda",
+        "text_zh": "议程",
+        "sort_order": 1,
+        "headword_ref": "agenda"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "run over",
+        "text_zh": "超时",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "on the same page",
+        "text_zh": "达成共识",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "action items",
+        "text_zh": "行动事项",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "follow up",
+        "text_zh": "后续跟进",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "minutes vs summary",
+        "text_zh": "会议记录 vs 会议总结:前者是详细记录,后者是简要概括",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "consensus",
+        "text_zh": "共识",
+        "sort_order": 7,
+        "headword_ref": "consensus"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "open floor",
+        "text_zh": "开放讨论",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "brainstorm",
+        "text_zh": "头脑风暴",
+        "sort_order": 9,
+        "headword_ref": "brainstorm"
+      }
+    ],
+    "benefits": [
+      "提高效率",
+      "明确责任",
+      "促进沟通"
+    ],
+    "drawbacks": [
+      "时间消耗",
+      "意见分歧",
+      "信息过载"
+    ],
+    "essay_full_en": "In meetings, setting a clear agenda is crucial to ensuring that the discussion remains focused. However, sometimes the meeting might run over, which can be frustrating for participants. It is important for everyone to be on the same page to avoid misunderstandings. Identifying action items is essential, as it provides a clear path forward. After the meeting, follow up is necessary to ensure that these action items are addressed. \n\nOne of the key decisions is whether to create detailed minutes or simply a summary. Minutes provide a comprehensive record, while a summary offers a concise overview. Reaching a consensus during the meeting can significantly enhance productivity. Additionally, opening the floor for discussion and encouraging participants to brainstorm can lead to innovative solutions.\n\nWhile there are clear benefits such as increased efficiency, clear responsibility, and enhanced communication, meetings also have drawbacks. They can consume a lot of time, lead to disagreements, and result in information overload. Thus, balancing the benefits and drawbacks is essential to make meetings as productive as possible.",
+    "essay_full_zh": "在会议中,设定明确的议程对于确保讨论的集中性至关重要。然而,有时会议可能会超时,这可能让参与者感到沮丧。让每个人达成共识很重要,以避免误解。确定行动事项是必要的,因为这提供了一条明确的前进路径。会议结束后,需要进行后续跟进以确保这些行动事项得到解决。\n\n一个关键的决定是制作详细的会议记录还是简要的会议总结。会议记录提供详尽的记录,而会议总结则提供简要的概述。在会议中达成共识可以显著提高效率。此外,开放讨论和鼓励参与者进行头脑风暴,可以带来创新的解决方案。\n\n虽然会议有提高效率、明确责任、促进沟通等明显的好处,但也存在缺点。会议可能消耗大量时间,导致意见分歧,并造成信息过载。因此,平衡好处和弊端对于使会议尽可能高效至关重要。",
+    "essay_short_en": "Setting a clear agenda is key to effective meetings. Despite the risk of running over time, keeping everyone on the same page helps avoid misunderstandings. Identifying action items and following up are crucial for progress. Deciding between detailed minutes or a summary impacts how information is recorded. Reaching a consensus and opening the floor for brainstorming can lead to innovative solutions. \n\nMeetings improve efficiency, clarify responsibilities, and enhance communication, but they can also consume time, cause disagreements, and lead to information overload. Balancing these aspects is essential for productive meetings.",
+    "essay_short_zh": "设定明确的议程是高效会议的关键。尽管有超时的风险,让每个人达成共识有助于避免误解。确定行动事项和后续跟进对进展至关重要。决定是做详细的会议记录还是简要的总结会影响信息的记录方式。达成共识和开放讨论以进行头脑风暴可以带来创新的解决方案。\n\n会议提高效率、明确责任、促进沟通,但也可能消耗时间、引发分歧并导致信息过载。平衡这些方面对提高会议效率至关重要。"
+  },
+  "远程与混合办公": {
+    "n": 18,
+    "title_zh": "远程与混合办公",
+    "theme_en": "remote and hybrid work",
+    "group": "工作职场",
+    "structure": "essay",
+    "seed": "log on → hybrid → time zone → async → check in → stay connected → burnout → work-life balance",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "log on",
+        "text_zh": "登录",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "hybrid work model",
+        "text_zh": "混合办公模式",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "time zone",
+        "text_zh": "时区",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "asynchronous communication",
+        "text_zh": "异步沟通",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "check in with",
+        "text_zh": "与……沟通",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "stay connected",
+        "text_zh": "保持联系",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "burnout",
+        "text_zh": "倦怠",
+        "sort_order": 7,
+        "headword_ref": "burnout"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "work-life balance",
+        "text_zh": "工作与生活的平衡",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "remote vs in-office",
+        "text_zh": "远程 vs 办公室,远程适合灵活性,办公室适合面对面沟通",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "increased flexibility",
+      "reduced commuting time",
+      "access to a wider talent pool"
+    ],
+    "drawbacks": [
+      "communication challenges",
+      "feelings of isolation",
+      "difficulty in separating work and personal life"
+    ],
+    "essay_full_en": "In the modern work environment, the ability to log on from virtually anywhere has revolutionized how we work. The hybrid work model, combining remote and in-office work, has become increasingly popular. One major advantage is increased flexibility, allowing employees to work across different time zones. This flexibility often leads to asynchronous communication, where team members can contribute at their own pace. Additionally, reduced commuting time means more time for personal activities, and companies can access a wider talent pool without geographical limitations.\n\nHowever, there are drawbacks to consider. Communication challenges can arise when team members are not in the same location. Feelings of isolation may develop without regular check-ins and efforts to stay connected. Furthermore, the blurred lines between work and home life can lead to burnout if not managed properly. Achieving a healthy work-life balance is crucial.\n\nIn conclusion, while the hybrid work model offers numerous benefits, it's important to address its challenges. Balancing remote and in-office work can provide the best of both worlds, combining the flexibility of remote work with the collaborative strengths of in-office environments.",
+    "essay_full_zh": "在现代工作环境中,几乎可以从任何地方登录的能力革新了我们的工作方式。混合办公模式,结合了远程和办公室工作,变得越来越流行。一个主要优点是增加了灵活性,允许员工跨不同时区工作。这种灵活性通常导致异步沟通,团队成员可以按照自己的节奏做出贡献。此外,减少通勤时间意味着有更多时间用于个人活动,公司可以不受地域限制地接触到更广泛的人才库。\n\n然而,也有需要考虑的缺点。当团队成员不在同一地点时,沟通挑战可能会出现。如果没有定期的沟通和保持联系的努力,孤立感可能会产生。此外,如果没有妥善管理,工作和家庭生活之间模糊的界限可能会导致倦怠。实现健康的工作与生活平衡至关重要。\n\n总之,虽然混合办公模式提供了许多好处,但解决其挑战也很重要。平衡远程和办公室工作可以提供两全其美的结果,结合远程工作的灵活性和办公室环境的协作优势。",
+    "essay_short_en": "The ability to log on from anywhere has transformed work environments. The hybrid work model, merging remote and in-office work, offers increased flexibility, allowing work across time zones and fostering asynchronous communication. It reduces commuting time and broadens the talent pool. However, challenges like communication difficulties and feelings of isolation may arise. Without regular check-ins, staying connected can be tough, leading to burnout. Balancing work-life is essential. In conclusion, while hybrid work offers many benefits, addressing its challenges is crucial to harness its full potential.",
+    "essay_short_zh": "能够从任何地方登录的能力改变了工作环境。混合办公模式融合了远程和办公室工作,提供了更大的灵活性,允许跨时区工作并促进异步沟通。它减少了通勤时间并扩大了人才库。然而,沟通困难和孤立感等挑战可能会出现。没有定期沟通,保持联系可能很困难,导致倦怠。平衡工作与生活至关重要。总之,虽然混合办公提供了许多好处,但解决其挑战对于充分利用其潜力至关重要。"
+  },
+  "辞职交接": {
+    "n": 20,
+    "title_zh": "辞职交接",
+    "theme_en": "resigning",
+    "group": "工作职场",
+    "structure": "essay",
+    "seed": "hand in notice → notice period → hand over → exit interview",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "hand in notice",
+        "text_zh": "递交辞呈",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "resignation letter",
+        "text_zh": "辞职信",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "notice period",
+        "text_zh": "通知期",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "handover",
+        "text_zh": "交接",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "transfer responsibilities",
+        "text_zh": "移交职责",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "exit interview",
+        "text_zh": "离职面谈",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "severance package vs final paycheck",
+        "text_zh": "遣散费和最后工资单通常都在离职后发放,前者是公司给予的补偿,后者是应得的工资。",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "emotional closure",
+        "text_zh": "情感上的告别",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "networking",
+        "text_zh": "人脉关系",
+        "sort_order": 9,
+        "headword_ref": "network"
+      }
+    ],
+    "benefits": [
+      "职业发展机会",
+      "情感上的告别",
+      "建立新的人脉关系"
+    ],
+    "drawbacks": [
+      "经济不稳定",
+      "适应新环境的压力",
+      "可能失去现有福利"
+    ],
+    "essay_full_en": "Resigning from a job is a significant step in one's career. To begin, you hand in your notice, which often involves submitting a formal resignation letter. This marks the start of the notice period, during which you are expected to continue working and fulfill your responsibilities. During this time, a handover process is crucial, as you must transfer responsibilities to ensure a smooth transition. An exit interview is typically conducted by HR to gather feedback and discuss any concerns. After leaving, employees may receive a severance package or, at the very least, a final paycheck.\n\nThe benefits of resigning include the opportunity for career advancement, emotional closure from leaving a job, and the chance to build new networking connections. However, there are drawbacks, such as potential economic instability, the stress of adapting to a new environment, and the possible loss of existing benefits. \n\nIn conclusion, while resigning can offer new opportunities and personal growth, it also comes with challenges. It is important to weigh these factors carefully and make an informed decision based on both professional and personal considerations.",
+    "essay_full_zh": "辞职是职业生涯中的一个重要步骤。首先,你需要递交辞呈,通常需要提交一份正式的辞职信。这标志着通知期的开始,在此期间,你需要继续工作并履行职责。在这段时间内,交接过程至关重要,你必须移交职责以确保顺利过渡。人力资源部通常会进行离职面谈,以收集反馈并讨论任何问题。离职后,员工可能会收到遣散费,或者至少会有最后的工资单。\n\n辞职的好处包括职业发展机会、情感上的告别,以及建立新人脉关系的机会。然而,也有一些弊端,如经济不稳定、适应新环境的压力和可能失去现有福利。\n\n综上所述,虽然辞职可以提供新的机会和个人成长,但也伴随着挑战。重要的是,在做出决定时要仔细权衡这些因素,基于职业和个人考虑做出明智的选择。",
+    "essay_short_en": "Resigning from a job starts with handing in your notice, often with a resignation letter, marking the notice period. During this time, a handover is essential to transfer responsibilities smoothly. An exit interview is conducted to discuss feedback. Leaving the company may result in receiving a severance package or a final paycheck.\n\nBenefits include career advancement, emotional closure, and networking opportunities. However, drawbacks such as economic instability and adapting stress exist. Weigh these factors carefully to make an informed decision.",
+    "essay_short_zh": "辞职始于递交辞呈,通常附有辞职信,标志着通知期的开始。在此期间,交接是必不可少的,以顺利移交职责。离职面谈用于讨论反馈。离职后可能会收到遣散费或最后工资。\n\n好处包括职业发展、情感上的告别和人脉关系的机会。然而,也存在经济不稳定和适应压力等弊端。仔细权衡这些因素,做出明智的决定。"
+  },
+  "订机票与值机": {
+    "n": 21,
+    "title_zh": "订机票与值机",
+    "theme_en": "flying",
+    "group": "出行旅游",
+    "structure": "essay",
+    "seed": "book a flight → check in → boarding pass → delayed → connecting flight",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "book a flight",
+        "text_zh": "订机票",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "online travel agency",
+        "text_zh": "在线旅行社",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "itinerary",
+        "text_zh": "行程",
+        "sort_order": 3,
+        "headword_ref": "itinerary"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "check in online",
+        "text_zh": "在线值机",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "boarding pass",
+        "text_zh": "登机牌",
+        "sort_order": 5,
+        "headword_ref": "boarding pass"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "arrive early",
+        "text_zh": "提前到达",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "security screening",
+        "text_zh": "安检",
+        "sort_order": 7,
+        "headword_ref": "screening"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "direct flight vs connecting flight",
+        "text_zh": "直飞航班 vs 中转航班:直飞航班通常更方便,但中转航班可能更便宜或提供灵活的时间选择。",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "delayed",
+        "text_zh": "延误",
+        "sort_order": 9,
+        "headword_ref": "delay"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "boarding gate",
+        "text_zh": "登机口",
+        "sort_order": 10,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "convenience of online booking",
+      "flexibility of itinerary",
+      "time-saving with direct flights"
+    ],
+    "drawbacks": [
+      "risk of flight delays",
+      "hassle of security screening",
+      "complexity of connecting flights"
+    ],
+    "essay_full_en": "Booking a flight has become a seamless process thanks to online travel agencies. With just a few clicks, one can book a flight and receive an itinerary instantly. The convenience of online booking cannot be overstated. Travelers can also check in online, which saves time at the airport. Upon successful check-in, a boarding pass is generated, allowing passengers to arrive early at the airport. Arriving early is crucial to navigate through security screening smoothly.\n\nDirect flights offer significant time-saving advantages, yet sometimes travelers opt for connecting flights due to cost or schedule flexibility. However, connecting flights come with their own set of challenges, such as the complexity of managing multiple boarding gates and the risk of flight delays.\n\nWhile the process is generally smooth, there are drawbacks. Flight delays can disrupt plans, and security screening can be a hassle. Despite these issues, the benefits of online booking and the flexibility of itinerary adjustments often outweigh the drawbacks. In conclusion, while there are pros and cons to booking flights, the convenience and flexibility offered by modern travel arrangements make it a worthwhile experience.",
+    "essay_full_zh": "由于在线旅行社的存在,订机票变得非常简单。只需点击几下,就可以订到机票并立即收到行程。在线订票的便利性不言而喻。旅客还可以在线值机,这节省了在机场的时间。成功值机后,系统会生成登机牌,允许旅客提前到达机场。提前到达对于顺利通过安检至关重要。\n\n直飞航班提供了显著的节省时间的好处,但有时旅客会选择中转航班,因为它们可能更便宜或提供灵活的时间选择。然而,中转航班带来了自身的挑战,如管理多个登机口的复杂性和航班延误的风险。\n\n虽然整体过程通常很顺利,但也存在一些弊端。航班延误可能会打乱计划,安检可能令人烦恼。尽管存在这些问题,在线订票的好处和行程调整的灵活性通常超过了缺点。总之,尽管订票有利有弊,但现代旅行安排所提供的便利性和灵活性使其成为值得的体验。",
+    "essay_short_en": "Booking flights is easy with online travel agencies, offering the convenience of online booking and flexibility in itinerary planning. Travelers can check in online and receive a boarding pass, allowing them to arrive early at the airport to smoothly pass through security screening. Direct flights save time, though some prefer connecting flights for cost or schedule flexibility.\n\nHowever, there are drawbacks like flight delays and the hassle of security checks. Despite these, the benefits of convenience and flexibility often outweigh the negatives, making modern flight booking a worthwhile experience.",
+    "essay_short_zh": "通过在线旅行社订机票很简单,提供了在线订票的便利性和行程规划的灵活性。旅客可以在线值机并收到登机牌,让他们可以提前到达机场顺利通过安检。直飞航班节省时间,尽管有些人因成本或时间灵活性选择中转航班。\n\n然而,也有航班延误和安检烦恼等弊端。尽管如此,便利性和灵活性的好处通常超过缺点,使现代订机票成为值得的体验。"
+  },
+  "垃圾分类与环保": {
+    "n": 29,
+    "title_zh": "垃圾分类与环保",
+    "theme_en": "recycling",
+    "group": "社会科技",
+    "structure": "experience",
+    "seed": "sort waste → recycle → single-use → carbon footprint",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "sort waste",
+        "text_zh": "分类垃圾",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "recycle",
+        "text_zh": "回收利用",
+        "sort_order": 2,
+        "headword_ref": "recycle"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "single-use plastic",
+        "text_zh": "一次性塑料",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "reduce consumption",
+        "text_zh": "减少消费",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "compost",
+        "text_zh": "堆肥",
+        "sort_order": 5,
+        "headword_ref": "compost"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "biodegradable vs non-biodegradable",
+        "text_zh": "可生物降解 vs 不可生物降解,可生物降解指能够自然分解的物质,而不可生物降解则需特殊处理",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "carbon footprint",
+        "text_zh": "碳足迹",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "environmentally friendly",
+        "text_zh": "环保的",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "减少垃圾填埋",
+      "降低碳足迹",
+      "保护自然资源"
+    ],
+    "drawbacks": [
+      "初始成本高",
+      "需要时间和精力",
+      "可能存在误分类"
+    ],
+    "essay_full_en": "In recent years, I have become more conscious of my environmental impact, particularly through waste management. First, I learned to sort waste by separating recyclables from non-recyclables. This was a crucial step in ensuring that materials like paper, glass, and metal could be recycled. Next, I focused on avoiding single-use plastics, which contribute significantly to pollution and landfill waste. Instead, I tried to reduce consumption by opting for reusable items. Composting organic waste became a part of my routine, allowing me to return nutrients to the soil. Understanding the difference between biodegradable and non-biodegradable materials helped me make more environmentally friendly choices. For example, choosing products with biodegradable packaging whenever possible. I also began to consider my carbon footprint, aiming to minimize it by using public transportation and supporting sustainable brands. Initially, I struggled with the time and effort required, and occasionally misclassified items. My advice is to start small, gradually incorporating these practices into daily life, and soon, they will become second nature.",
+    "essay_full_zh": "近年来,我对自己的环保影响尤其是垃圾管理变得更加关注。首先,我学会了分类垃圾,将可回收物与不可回收物分开。这是确保纸张、玻璃和金属等材料可以回收利用的关键步骤。接下来,我专注于避免使用一次性塑料,因为它们对污染和垃圾填埋场的贡献很大。取而代之,我尝试通过选择可重复使用的物品来减少消费。堆肥有机废物成为我日常生活的一部分,这让我能把养分还给土壤。了解可生物降解和不可生物降解材料的区别帮助我做出更环保的选择。例如,尽可能选择可生物降解包装的产品。我也开始考虑自己的碳足迹,努力通过使用公共交通和支持可持续品牌来减少它。最初,我在时间和精力上有些挣扎,偶尔还会误分类。我的建议是从小事做起,逐渐将这些做法融入日常生活,不久它们就会成为习惯。",
+    "essay_short_en": "Recently, I've focused on reducing my environmental impact through waste management. I started by sorting waste, separating recyclables for proper recycling. Avoiding single-use plastics was crucial, so I reduced consumption by using reusable items. Composting became a routine, enhancing soil health. Recognizing biodegradable vs non-biodegradable materials helped me choose environmentally friendly products. I also considered my carbon footprint, aiming to reduce it by using public transport and supporting sustainable brands. Initially, the process was time-consuming and led to some misclassification, but starting small made it manageable.",
+    "essay_short_zh": "最近,我通过垃圾管理来减少环境影响。我从分类垃圾开始,确保可回收物正确回收。避免一次性塑料至关重要,因此我通过使用可重复使用的物品来减少消费。堆肥成为日常,改善土壤健康。识别可生物降解与不可生物降解材料帮助我选择环保产品。我也考虑到自己的碳足迹,努力通过公共交通和支持可持续品牌来减少。起初,这个过程耗时且偶有误分类,但从小事做起使其可控。"
+  },
+  "看病就医": {
+    "n": 4,
+    "title_zh": "看病就医",
+    "theme_en": "seeing a doctor",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "make an appointment → symptoms → prescription → side effects → follow-up",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "make an appointment",
+        "text_zh": "预约就诊",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "symptoms",
+        "text_zh": "症状",
+        "sort_order": 2,
+        "headword_ref": "symptom"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "medical examination",
+        "text_zh": "体检",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "diagnosis from the doctor",
+        "text_zh": "医生诊断",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "prescription vs over-the-counter",
+        "text_zh": "处方药 vs 非处方药; 处方药需要医生开具,非处方药可直接购买。",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "side effects",
+        "text_zh": "副作用",
+        "sort_order": 6,
+        "headword_ref": "effect"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "follow-up appointment",
+        "text_zh": "复诊预约",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "health insurance",
+        "text_zh": "健康保险",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "recovery",
+        "text_zh": "康复",
+        "sort_order": 9,
+        "headword_ref": "recovery"
+      }
+    ],
+    "benefits": [
+      "early detection of diseases",
+      "personalized treatment",
+      "professional advice"
+    ],
+    "drawbacks": [
+      "time-consuming",
+      "expensive",
+      "side effects from medication"
+    ],
+    "essay_full_en": "Seeing a doctor is a common necessity for maintaining good health. Initially, one must make an appointment to visit the doctor. During the visit, patients discuss their symptoms, which leads to a medical examination. Based on this, a diagnosis from the doctor is provided. Often, the treatment involves medication, which can be either prescription or over-the-counter. Prescription medications require a doctor's approval, while over-the-counter drugs can be purchased directly. However, all medications can have side effects. After starting treatment, a follow-up appointment is usually necessary to monitor progress. Health insurance often helps with the costs involved in these processes. The ultimate goal is recovery.\n\nThe benefits of seeing a doctor include early detection of diseases, personalized treatment, and professional advice, which are crucial for effective health management. However, the process can be time-consuming and expensive, and medications may have side effects. Balancing these pros and cons, visiting a doctor remains essential for maintaining health, as the benefits of early intervention and expert guidance often outweigh the drawbacks.",
+    "essay_full_zh": "看病就医是保持健康的常见需求。首先,需要进行预约就诊。在就诊期间,患者会描述自己的症状,这会引导医生进行体检。根据体检结果,医生会给出诊断。通常,治疗方案包括用药,可能是处方药或非处方药。处方药需要医生开具,而非处方药可以直接购买。然而,所有药物都可能有副作用。在开始治疗后,通常需要复诊预约以监测病情进展。健康保险通常可以帮助支付这些过程中的费用。最终目标是康复。\n\n看病就医的好处包括疾病的早期发现、个性化治疗和专业建议,这些对于有效的健康管理至关重要。然而,这一过程可能耗时且昂贵,药物可能有副作用。在权衡这些利弊后,就医仍然是保持健康的必要步骤,因为早期干预和专家指导的好处往往超过弊端。",
+    "essay_short_en": "Seeing a doctor involves making an appointment, discussing symptoms, undergoing a medical examination, and receiving a diagnosis from the doctor. Treatment can involve prescription or over-the-counter medications, both of which may have side effects. Follow-up appointments and health insurance play roles in managing the process, leading to recovery.\n\nBenefits include early detection, personalized treatment, and professional advice. However, it can be time-consuming, expensive, and medications may cause side effects. Despite drawbacks, seeing a doctor is crucial for health as its benefits often outweigh the negatives.",
+    "essay_short_zh": "看病就医包括预约就诊、描述症状、进行体检和获得医生诊断。治疗可能涉及处方药或非处方药,两者都可能有副作用。复诊预约和健康保险在管理过程中起作用,最终实现康复。\n\n好处包括早期发现、个性化治疗和专业建议。然而,这一过程可能耗时、昂贵,药物可能有副作用。尽管有弊端,就医对于健康至关重要,因为其好处往往超过缺点。"
+  },
+  "考前复习": {
+    "n": 13,
+    "title_zh": "考前复习",
+    "theme_en": "exam revision",
+    "group": "校园学习",
+    "structure": "essay",
+    "seed": "cram → past papers → burn out → pace yourself → sit the exam",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "cram for exams",
+        "text_zh": "为考试临时抱佛脚",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "past papers",
+        "text_zh": "历年试卷",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "burn out",
+        "text_zh": "精疲力竭",
+        "sort_order": 3,
+        "headword_ref": "burn"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "pace yourself",
+        "text_zh": "合理安排时间",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "study group",
+        "text_zh": "学习小组",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "active recall",
+        "text_zh": "主动回忆",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "flashcards vs mind maps",
+        "text_zh": "单词卡片 vs 思维导图:单词卡片适合记忆具体信息,思维导图适合整理复杂概念。",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "mock exam",
+        "text_zh": "模拟考试",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "sit the exam",
+        "text_zh": "参加考试",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "提高记忆力",
+      "增强自信心",
+      "提高考试成绩"
+    ],
+    "drawbacks": [
+      "压力过大",
+      "影响健康",
+      "影响学习效率"
+    ],
+    "essay_full_en": "When it comes to exam revision, many students find themselves cramming for exams at the last minute. While this method can sometimes be effective, especially if you use past papers to guide your study, it can also lead to burn out. To avoid this, it's important to pace yourself by starting early and setting a realistic study schedule. Joining a study group can also be beneficial, as it allows for discussion and active recall of the material. Additionally, using tools like flashcards or mind maps can help structure your learning; flashcards are great for memorizing specific information, while mind maps are useful for organizing complex concepts. Taking a mock exam can further prepare you for the real thing. Ultimately, when you finally sit the exam, you'll feel more confident and less stressed. \n\nHowever, there are drawbacks to consider. Stress from cramming can negatively impact your health and reduce overall study efficiency. Therefore, balancing intensive study with relaxation is crucial for success.",
+    "essay_full_zh": "谈到考前复习,许多学生往往在最后一刻为考试临时抱佛脚。虽然这种方法有时是有效的,特别是当你使用历年试卷来指导学习时,但它也可能导致精疲力竭。为了避免这种情况,重要的是要合理安排时间,提前开始并制定切实可行的学习计划。加入学习小组也很有帮助,因为它可以进行讨论和主动回忆材料。此外,使用单词卡片或思维导图等工具可以帮助你更好地安排学习;单词卡片适合记忆具体信息,而思维导图适合整理复杂概念。参加模拟考试可以让你更好地准备真正的考试。最终,当你参加考试时,会感到更加自信和不那么紧张。\n\n然而,也有一些弊端需要考虑。临时抱佛脚带来的压力可能会对健康产生负面影响,并降低整体学习效率。因此,在紧张学习与放松之间找到平衡对于成功至关重要。",
+    "essay_short_en": "Many students cram for exams, using past papers to guide their study, but this can lead to burn out. To avoid this, pace yourself by starting early and setting a study schedule. Joining a study group and using active recall methods, like flashcards or mind maps, can further enhance your learning. Taking a mock exam will prepare you for the real test. When you sit the exam, you'll feel more confident. However, cramming can cause stress, affecting health and study efficiency, so balance study with relaxation.",
+    "essay_short_zh": "许多学生临时抱佛脚,使用历年试卷指导学习,但这可能导致精疲力竭。为避免这种情况,要合理安排时间,提前开始并制定学习计划。加入学习小组和使用主动回忆法,如单词卡片或思维导图,可以增强学习效果。参加模拟考试可为正式考试做准备。当你参加考试时,会更有信心。然而,临时抱佛脚会导致压力,影响健康和学习效率,因此要在学习与放松之间找到平衡。"
+  },
+  "找导师改论文": {
+    "n": 14,
+    "title_zh": "找导师改论文",
+    "theme_en": "getting feedback",
+    "group": "校园学习",
+    "structure": "essay",
+    "seed": "office hours → feedback → revise → resubmit",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "office hours",
+        "text_zh": "办公时间",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "feedback",
+        "text_zh": "反馈",
+        "sort_order": 2,
+        "headword_ref": "feedback"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "constructive criticism",
+        "text_zh": "建设性的批评",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "revise",
+        "text_zh": "修改",
+        "sort_order": 4,
+        "headword_ref": "revise"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "incorporate suggestions",
+        "text_zh": "采纳建议",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "improve clarity and coherence",
+        "text_zh": "提高清晰度和连贯性",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "resubmit",
+        "text_zh": "重新提交",
+        "sort_order": 7,
+        "headword_ref": "resubmit"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "accept vs reject",
+        "text_zh": "接受 vs 拒绝,接受表示同意或赞成,拒绝表示不同意或反对",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "gain new insights",
+      "enhance writing skills",
+      "build mentor relationship"
+    ],
+    "drawbacks": [
+      "time-consuming",
+      "potential discouragement",
+      "over-dependence"
+    ],
+    "essay_full_en": "Engaging with a mentor during office hours can profoundly impact your academic work. During these sessions, you receive valuable feedback that often includes constructive criticism. This feedback is crucial as it guides you to revise and improve your work. By incorporating suggestions, you can enhance the clarity and coherence of your paper. Once revisions are made, you resubmit your work for further evaluation. This process allows you to gain new insights and enhances your writing skills. Additionally, it fosters a strong mentor relationship, which can be beneficial for future academic endeavors.\n\nHowever, seeking feedback has its drawbacks. It can be time-consuming, requiring multiple revisions and resubmissions. There's also the potential for discouragement if feedback is overly critical. Moreover, there's a risk of becoming over-dependent on your mentor's guidance, hindering your ability to accept or reject suggestions independently.\n\nOn balance, while the process of seeking feedback and revising can be challenging, the benefits of improved skills and strengthened relationships outweigh the drawbacks, making it a worthwhile endeavor for any student.",
+    "essay_full_zh": "在办公时间与导师交流可以对你的学术工作产生深远影响。在这些会话中,你会收到宝贵的反馈,其中通常包括建设性的批评。这些反馈至关重要,因为它指导你修改和改善你的工作。通过采纳建议,你可以提高论文的清晰度和连贯性。一旦完成修改,你需要重新提交你的工作以供进一步评估。这一过程让你获得新的见解,并提高你的写作技能。此外,它还促进了与导师的良好关系,这对未来的学术发展大有裨益。\n\n然而,寻求反馈也有其缺点。这可能非常耗时,需要多次修改和重新提交。如果反馈过于苛刻,也可能带来挫败感。此外,可能会过于依赖导师的指导,妨碍你独立接受或拒绝建议的能力。\n\n总的来说,虽然寻求反馈和修改的过程可能具有挑战性,但提高技能和加强关系的好处大于其缺点,使其成为任何学生都值得尝试的努力。",
+    "essay_short_en": "Engaging with a mentor during office hours provides valuable feedback, including constructive criticism. This guides you to revise and incorporate suggestions, improving clarity and coherence. Resubmitting the work allows you to gain new insights and enhance writing skills while building a mentor relationship.\n\nHowever, it can be time-consuming and potentially discouraging if feedback is overly critical. There's also a risk of over-dependence, impacting your ability to accept or reject suggestions independently.\n\nDespite these challenges, the benefits of improved skills and relationships make seeking feedback a worthwhile endeavor.",
+    "essay_short_zh": "在办公时间与导师交流提供了宝贵的反馈,包括建设性的批评。这指导你修改并采纳建议,提高清晰度和连贯性。重新提交工作让你获得新见解,提高写作技能,同时建立与导师的关系。\n\n然而,这可能非常耗时,并在反馈过于苛刻时带来挫败感。也有可能过于依赖,影响你独立接受或拒绝建议的能力。\n\n尽管有这些挑战,但提高技能和关系的好处使得寻求反馈成为值得的努力。"
+  },
+  "加薪与升职": {
+    "n": 19,
+    "title_zh": "加薪与升职",
+    "theme_en": "pay and promotion",
+    "group": "工作职场",
+    "structure": "essay",
+    "seed": "performance review → raise → promotion → take on more",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "performance review",
+        "text_zh": "绩效评估",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "meet expectations",
+        "text_zh": "达到预期",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "ask for a raise",
+        "text_zh": "要求加薪",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "negotiation",
+        "text_zh": "谈判",
+        "sort_order": 4,
+        "headword_ref": "negotiation"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "raise vs promotion",
+        "text_zh": "加薪 vs 升职:加薪指增加工资,升职指职位晋升,通常伴随更多责任。",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "take on more responsibilities",
+        "text_zh": "承担更多责任",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "career advancement",
+        "text_zh": "职业发展",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "recognition",
+        "text_zh": "认可",
+        "sort_order": 8,
+        "headword_ref": "recognition"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "job satisfaction",
+        "text_zh": "工作满意度",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "financial stability",
+      "increased motivation",
+      "enhanced reputation"
+    ],
+    "drawbacks": [
+      "increased stress",
+      "work-life imbalance",
+      "higher expectations"
+    ],
+    "essay_full_en": "In the workplace, a performance review often initiates the process of seeking a raise or promotion. When employees meet expectations during their review, they might feel empowered to ask for a raise. This request typically involves negotiation with the employer. It's important to differentiate between a raise and a promotion; a raise refers to an increase in salary, while a promotion involves moving to a higher position, usually with more responsibilities.\n\nTaking on more responsibilities can lead to career advancement, providing recognition and improving job satisfaction. The benefits of receiving a raise or promotion include financial stability, increased motivation, and an enhanced reputation in the workplace.\n\nHowever, there are drawbacks. With a promotion or raise, increased stress and work-life imbalance can occur due to higher expectations. Therefore, while the benefits of recognition and career advancement are significant, it is crucial to consider the potential drawbacks.\n\nUltimately, individuals need to weigh the pros and cons carefully. While the benefits can be substantial, the added responsibilities should align with one's personal and professional goals.",
+    "essay_full_zh": "在职场中,绩效评估通常是寻求加薪或升职的起点。当员工在评估中达到预期时,他们可能会觉得有底气去要求加薪。这一请求通常涉及与雇主的谈判。需要明确加薪和升职的区别;加薪是指增加工资,而升职是指晋升到更高职位,通常伴随更多责任。\n\n承担更多责任可以带来职业发展,提供认可并提高工作满意度。获得加薪或升职的好处包括财务稳定、增加动力和提升职场声誉。\n\n然而,也有弊端。由于更高的期望,升职或加薪可能导致压力增加和工作与生活失衡。因此,尽管认可和职业发展的好处显著,考虑潜在的弊端也很重要。\n\n最终,个人需要仔细权衡利弊。虽然好处可能相当可观,但增加的责任应与个人和职业目标一致。",
+    "essay_short_en": "A performance review often leads to a raise or promotion. Meeting expectations can empower employees to ask for a raise, involving negotiation. Distinguishing a raise from a promotion is crucial; a raise is a salary increase, while a promotion involves more responsibilities. Taking on more responsibilities can lead to career advancement, recognition, and job satisfaction. Benefits include financial stability and increased motivation.\n\nHowever, drawbacks like increased stress and work-life imbalance due to higher expectations must be considered. Balancing these factors is essential to ensure personal and professional goals align with added responsibilities.",
+    "essay_short_zh": "绩效评估常引导至加薪或升职。达到预期可使员工有底气要求加薪,涉及谈判。区分加薪与升职很重要;加薪是工资增加,升职则涉及更多责任。承担更多责任可带来职业发展、认可和工作满意度。好处包括财务稳定和增加动力。\n\n然而,也要考虑由于更高期望而导致的压力增加和工作与生活失衡。平衡这些因素以确保个人和职业目标与增加的责任一致是至关重要的。"
+  },
+  "过海关入境": {
+    "n": 22,
+    "title_zh": "过海关入境",
+    "theme_en": "going through customs",
+    "group": "出行旅游",
+    "structure": "experience",
+    "seed": "passport control → declare → customs → baggage claim",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "passport control",
+        "text_zh": "护照检查",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "declare goods",
+        "text_zh": "申报物品",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "customs officer",
+        "text_zh": "海关官员",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "fill out a declaration form",
+        "text_zh": "填写申报表",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "green channel vs red channel",
+        "text_zh": "绿色通道 vs 红色通道;无物品申报走绿色通道,有物品申报走红色通道",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "inspection",
+        "text_zh": "检查",
+        "sort_order": 6,
+        "headword_ref": "inspection"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "baggage claim",
+        "text_zh": "行李提取",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "lost luggage",
+        "text_zh": "行李丢失",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "快速入境",
+      "便捷流程",
+      "减少等待时间"
+    ],
+    "drawbacks": [
+      "可能被检查",
+      "行李延误",
+      "语言障碍"
+    ],
+    "essay_full_en": "Going through customs can be a daunting experience, especially for first-time international travelers. The first step is passport control, where your documents are checked to ensure everything is in order. Next, you may need to declare goods you are bringing into the country. If you have items to declare, a customs officer will direct you to fill out a declaration form. This is where knowing the difference between the green channel and the red channel becomes crucial. The green channel is for those with nothing to declare, while the red channel is for those who do. \n\nAfter choosing the appropriate channel, you might face an inspection. Once cleared, proceed to baggage claim to collect your luggage. However, sometimes you may encounter lost luggage, which can be frustrating.\n\nA common mistake is not knowing which channel to choose, leading to unnecessary delays. To avoid this, always check the regulations beforehand. My advice is to stay calm and be prepared with all necessary documents. This way, you can enjoy the benefits of a quick and smooth entry, despite potential drawbacks like inspections or language barriers.",
+    "essay_full_zh": "过海关可能是一个令人生畏的经历,特别是对于第一次出国旅行的人。第一步是护照检查,确保你的证件一切正常。接下来,你可能需要申报携带入境的物品。如果有物品需要申报,海关官员会指引你填写申报表。这时,了解绿色通道和红色通道的区别就很重要了。无物品申报的人走绿色通道,有物品申报的人走红色通道。\n\n选择合适的通道后,你可能会面临检查。一旦通过,就可以去行李提取处领取行李。然而,有时你可能会遇到行李丢失,这会令人沮丧。\n\n一个常见的错误是不知道该选择哪个通道,导致不必要的延误。为了避免这种情况,请提前了解相关规定。我的建议是保持冷静,准备好所有必要的文件。这样,即使可能遇到检查或语言障碍等问题,你仍然可以享受快速顺利入境的好处。",
+    "essay_short_en": "Going through customs starts with passport control, ensuring your documents are in order. Next, declare goods if necessary, and a customs officer will guide you to fill out a declaration form. Choose the green channel for no declarations or the red channel if you have something to declare. After potential inspection, proceed to baggage claim. Sometimes, you might face lost luggage.\n\nA common mistake is choosing the wrong channel, causing delays. To avoid this, know the regulations beforehand. Stay calm and prepared with all documents to enjoy a smooth entry, despite possible inspections or language barriers.",
+    "essay_short_zh": "过海关从护照检查开始,确保你的证件无误。接下来,如有必要,申报物品,海关官员会指导你填写申报表。无物品申报走绿色通道,有物品申报走红色通道。经过可能的检查后,去行李提取处。有时你可能会遇到行李丢失。\n\n一个常见错误是选择错误通道,导致延误。为了避免这种情况,提前了解规定。保持冷静,准备好所有文件,以享受顺利入境,尽管可能遇到检查或语言障碍。"
+  },
+  "人工智能进课堂": {
+    "n": 30,
+    "title_zh": "人工智能进课堂",
+    "theme_en": "AI in the classroom",
+    "group": "社会科技",
+    "structure": "essay",
+    "seed": "prompt → generate → fact-check → over-rely → ban or embrace",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "AI in education",
+        "text_zh": "教育中的人工智能",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "prompt",
+        "text_zh": "提示",
+        "sort_order": 2,
+        "headword_ref": "prompt"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "generate content",
+        "text_zh": "生成内容",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "fact-check vs skim",
+        "text_zh": "细查 vs 浏览，细查用于需要确认信息准确性时，浏览用于快速获取大概信息时",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "over-rely",
+        "text_zh": "过度依赖",
+        "sort_order": 5,
+        "headword_ref": "rely"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "ban vs embrace",
+        "text_zh": "禁止 vs 接纳，禁止用于排除风险，接纳用于接受新技术",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "enhance learning",
+        "text_zh": "提升学习",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "personalized education",
+        "text_zh": "个性化教育",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "efficiency",
+        "text_zh": "效率",
+        "sort_order": 9,
+        "headword_ref": "efficiency"
+      }
+    ],
+    "benefits": [
+      "enhanced engagement",
+      "tailored learning paths",
+      "instant feedback"
+    ],
+    "drawbacks": [
+      "loss of critical thinking",
+      "data privacy concerns",
+      "over-dependence on technology"
+    ],
+    "essay_full_en": "AI in education has become increasingly prevalent. Initially, teachers use prompt techniques to encourage students to think critically and creatively. AI systems can generate content that assists in this learning process. However, it's essential to fact-check the information AI provides, as errors can occur if only skimmed. A significant concern is the potential to over-rely on AI, which may lead to a loss of critical thinking skills. This raises the debate: should schools ban or embrace AI in the classroom? \n\nThe benefits of AI in education are substantial. It can enhance learning by providing personalized education, adapting to each student's needs. Enhanced engagement and tailored learning paths are possible because of AI's efficiency. Moreover, students can receive instant feedback, allowing them to improve quickly. \n\nDespite these advantages, there are drawbacks. Over-dependence on technology can hinder students' ability to think independently. Additionally, data privacy concerns arise with the use of AI. Therefore, while AI offers significant benefits, a balanced approach is necessary. Schools should embrace AI cautiously, ensuring it complements traditional teaching without replacing it.",
+    "essay_full_zh": "教育中的人工智能变得越来越普遍。最初,教师使用提示技术来鼓励学生进行批判性和创造性思维。人工智能系统可以生成内容,以辅助这个学习过程。然而,核实人工智能提供的信息是必要的,因为如果只浏览的话,可能会出现错误。一个重要的担忧是可能会过度依赖人工智能,这可能导致批判性思维能力的丧失。这引发了争论:学校应该禁止还是接纳人工智能进入课堂?\n\n人工智能在教育中的好处是显著的。它可以通过提供个性化教育来提升学习,适应每个学生的需求。由于人工智能的效率,增强的参与度和量身定制的学习路径成为可能。此外,学生可以获得即时反馈,使他们能够快速改进。\n\n尽管有这些优势,也存在弊端。对技术的过度依赖可能会妨碍学生独立思考的能力。此外,使用人工智能可能会引发数据隐私问题。因此,虽然人工智能提供了显著的好处,但有必要采取一种平衡的方法。学校应该谨慎地接纳人工智能,确保其能补充而不是取代传统教学。",
+    "essay_short_en": "AI in education is increasingly common. Teachers initially use prompts to stimulate critical and creative thinking, with AI generating content to support learning. Fact-checking is crucial to avoid errors from skimming. Over-reliance on AI can weaken critical thinking, sparking debate on whether to ban or embrace AI in classrooms.\n\nAI's benefits include enhanced learning through personalized education, efficiency, and instant feedback. However, drawbacks like over-dependence and data privacy concerns exist. Schools should cautiously embrace AI, ensuring it complements, not replaces, traditional teaching.",
+    "essay_short_zh": "教育中的人工智能越来越常见。教师最初使用提示来激发批判性和创造性思维,人工智能生成内容以支持学习。核实信息很重要,以避免浏览时出现错误。过度依赖人工智能可能削弱批判性思维,引发是否应禁止或接纳人工智能进入课堂的争论。\n\n人工智能的好处包括通过个性化教育提升学习、提高效率和即时反馈。然而,也存在过度依赖和数据隐私问题等弊端。学校应谨慎接纳人工智能,确保其能补充而非取代传统教学。"
+  },
+  "超市采购": {
+    "n": 3,
+    "title_zh": "超市采购",
+    "theme_en": "grocery shopping",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "shopping list → aisle → in stock → best-before date → self-checkout → loyalty card → coupon → bag it",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "make a shopping list",
+        "text_zh": "列购物清单",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "aisle",
+        "text_zh": "货架通道",
+        "sort_order": 2,
+        "headword_ref": "aisle"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "in stock",
+        "text_zh": "有货",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "check the best-before date",
+        "text_zh": "检查保质期",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "self-checkout vs cashier",
+        "text_zh": "自助结账 vs 收银员结账。前者适合少量商品且不想排队,后者适合大量商品或需要人工帮助时。",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "use a loyalty card",
+        "text_zh": "使用会员卡",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "coupon",
+        "text_zh": "优惠券",
+        "sort_order": 7,
+        "headword_ref": "coupon"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "bag the groceries",
+        "text_zh": "装袋",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "节省时间",
+      "获得折扣",
+      "更有条理"
+    ],
+    "drawbacks": [
+      "可能缺货",
+      "可能忘记清单",
+      "可能排队"
+    ],
+    "essay_full_en": "When heading to the supermarket for grocery shopping, it's wise to first make a shopping list. This helps in saving time and ensures a more organized shopping experience. As you navigate through each aisle, you can quickly identify which products are in stock and avoid the disappointment of missing items. Checking the best-before date is essential to ensure the freshness of your groceries. \n\nWhen it's time to pay, you might choose between self-checkout and a cashier. Self-checkout is great for small purchases and avoiding long lines, while a cashier is better for larger purchases or when you need assistance. Using a loyalty card can earn you points or discounts, adding to the savings. Don't forget to use any coupons you have to further reduce the total cost. Finally, bag the groceries efficiently, ensuring fragile items are protected.\n\nWhile grocery shopping can be efficient and cost-effective, there are drawbacks like potential out-of-stock items or forgetting your list. Sometimes, long queues can also be a hassle. Weighing these pros and cons, being prepared and organized can make your supermarket visit smooth and rewarding.",
+    "essay_full_zh": "去超市采购时,首先列购物清单是明智之举。这有助于节省时间,确保购物过程更有条理。在穿过每个货架通道时,你可以快速识别哪些商品有货,避免缺货的失望。检查保质期是确保食品新鲜的关键。\n\n结账时,你可以选择自助结账或收银员结账。自助结账适合少量商品且不想排队,而收银员结账适合大量商品或需要人工帮助时。使用会员卡可以赚取积分或折扣,增加节省。别忘了使用任何优惠券,进一步降低总成本。最后,有效地装袋,确保易碎物品得到保护。\n\n虽然超市采购可以高效且经济,但也有缺点,如可能缺货或忘记清单。有时,长队也可能是个麻烦。权衡这些利弊,做好准备和有条理可以使你的超市之行顺利且有收获。",
+    "essay_short_en": "When grocery shopping, start by making a shopping list to save time and stay organized. As you walk through each aisle, check what is in stock and the best-before dates for freshness. At checkout, choose between self-checkout for small items or a cashier for larger purchases. Use a loyalty card and any coupons to save more. Lastly, bag the groceries carefully. While there are benefits like discounts and efficiency, challenges such as out-of-stock items and long queues exist. Being prepared can make your trip rewarding.",
+    "essay_short_zh": "在采购时,先列购物清单以节省时间和保持有条理。走过货架通道时,检查有货商品和保质期以确保新鲜。在结账时,小件商品可用自助结账,大件商品或需帮助时选择收银员。使用会员卡和优惠券可省更多。最后,小心装袋。尽管有折扣和效率等好处,但也有缺货和排队等挑战。做好准备可使购物之旅更有收获。"
+  },
+  "求职面试": {
+    "n": 15,
+    "title_zh": "求职面试",
+    "theme_en": "job hunting",
+    "group": "工作职场",
+    "structure": "essay",
+    "seed": "job posting → tailor your CV → shortlist → interview → offer → negotiate",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "job posting",
+        "text_zh": "职位发布",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "tailor your CV",
+        "text_zh": "定制简历",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "shortlist",
+        "text_zh": "入围名单",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "prepare for the interview",
+        "text_zh": "准备面试",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "confidence vs arrogance",
+        "text_zh": "自信与自大的区别在于自信是基于能力的信心,而自大则是过高估计自己。面试时要表现自信,但避免自大。",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "receive an offer",
+        "text_zh": "收到录用通知",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "negotiate salary",
+        "text_zh": "谈判薪资",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "acceptance",
+        "text_zh": "接受",
+        "sort_order": 8,
+        "headword_ref": "acceptance"
+      }
+    ],
+    "benefits": [
+      "提高职业技能",
+      "增加就业机会",
+      "提升自信心"
+    ],
+    "drawbacks": [
+      "竞争激烈",
+      "面试压力大",
+      "谈判过程复杂"
+    ],
+    "essay_full_en": "Job hunting involves several key steps, starting with identifying a suitable job posting. Once you find a position that interests you, tailor your CV to match the job requirements. If your application is successful, you may be placed on a shortlist. This is followed by preparing for the interview, where you must strike a balance between confidence and arrogance. If you impress the interviewers, you may receive an offer. At this stage, negotiate salary to ensure it meets your expectations before deciding on acceptance.\n\nThe benefits of this process include improving your professional skills, as each step requires you to refine your abilities. Additionally, it increases employment opportunities by presenting yourself as a strong candidate. Furthermore, successfully navigating the process can boost your confidence.\n\nHowever, there are drawbacks. The competition is fierce, making it challenging to stand out. The interview stage can be stressful, requiring significant mental preparation. Moreover, the negotiation process can be complex and demanding.\n\nIn conclusion, while job hunting has its challenges, the benefits, such as skill enhancement and increased job opportunities, often outweigh the drawbacks, making it a worthwhile endeavor.",
+    "essay_full_zh": "求职涉及几个关键步骤,首先是找到合适的职位发布。一旦找到感兴趣的职位,就要定制简历以匹配职位要求。如果申请成功,你可能会进入入围名单。接下来是准备面试,在这过程中要在自信与自大之间取得平衡。如果给面试官留下深刻印象,你可能会收到录用通知。在此阶段,谈判薪资以确保符合你的期望,然后再决定是否接受。\n\n这一过程的好处包括提高职业技能,因为每一步都要求你提升自己的能力。此外,它通过展示你作为强有力的候选人而增加就业机会。此外,成功完成这一过程可以提升自信心。\n\n然而,也有缺点。竞争激烈,使得脱颖而出具有挑战性。面试阶段可能会带来压力,需要大量的心理准备。此外,谈判过程可能复杂且要求高。\n\n总之,尽管求职有其挑战,但技能提升和就业机会增加等好处往往超过缺点,使其成为值得的尝试。",
+    "essay_short_en": "Job hunting involves finding a suitable job posting and tailoring your CV to match. If successful, you may be shortlisted and need to prepare for the interview, balancing confidence with arrogance. Receiving an offer leads to negotiating salary before acceptance.\n\nBenefits include skill improvement, increased job opportunities, and confidence boosts. However, intense competition, interview stress, and complex negotiations are drawbacks.\n\nIn conclusion, the benefits of skill enhancement and job opportunities often outweigh the challenges, making job hunting a valuable endeavor.",
+    "essay_short_zh": "求职包括找到合适的职位发布并定制简历以匹配。如果成功,你可能会入围,需要准备面试,在自信与自大之间取得平衡。收到录用通知后,谈判薪资,然后决定是否接受。\n\n好处包括提高技能、增加就业机会和增强自信。然而,激烈的竞争、面试压力和复杂的谈判是缺点。\n\n总之,技能提升和就业机会增加的好处通常超过挑战,使求职成为有价值的尝试。"
+  },
+  "城市交通": {
+    "n": 24,
+    "title_zh": "城市交通",
+    "theme_en": "getting around a city",
+    "group": "出行旅游",
+    "structure": "essay",
+    "seed": "rush hour → transfer → get off → run late → hail a cab",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "rush hour",
+        "text_zh": "高峰时段",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "transfer to another line",
+        "text_zh": "换乘到另一条线路",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "crowded",
+        "text_zh": "拥挤",
+        "sort_order": 3,
+        "headword_ref": "crowded"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "get off",
+        "text_zh": "下车",
+        "sort_order": 4,
+        "headword_ref": "get off"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "running late",
+        "text_zh": "迟到",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "hail a cab",
+        "text_zh": "打车",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "subway vs bus",
+        "text_zh": "地铁 vs 公交车:地铁速度快,但高峰期更拥挤;公交车灵活,但可能遇到堵车。",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "inconvenient route",
+        "text_zh": "不便的路线",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "consider alternatives",
+        "text_zh": "考虑其他选择",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "节省时间",
+      "费用低廉",
+      "环保出行"
+    ],
+    "drawbacks": [
+      "交通拥堵",
+      "时间不确定",
+      "不便的路线"
+    ],
+    "essay_full_en": "Navigating city transportation during rush hour can be quite a challenge. One often needs to transfer to another line, especially when the subway is crowded. The need to get off at the right stop becomes crucial, and running late can add to the stress. Many find themselves needing to hail a cab if they are pressed for time. A subway vs bus debate often ensues: while the subway is faster, it can be more crowded during peak times; buses, on the other hand, offer flexibility but may face traffic jams. An inconvenient route can further complicate matters, prompting individuals to consider alternatives.\n\nDespite these challenges, city transportation offers several benefits. It saves time, is cost-effective, and promotes environmental sustainability. However, drawbacks include traffic congestion, uncertain timing, and inconvenient routes. Weighing these pros and cons, the decision often boils down to personal preference and the specific circumstances one faces. For many, the benefits of using public transportation outweigh the drawbacks, making it a viable option for getting around the city efficiently.",
+    "essay_full_zh": "在高峰时段乘坐城市交通是一项挑战。通常需要换乘到另一条线路,特别是在地铁拥挤的时候。在正确的站点下车变得至关重要,迟到会增加压力。许多人在时间紧迫时需要打车。地铁和公交车的选择常常引发争论:地铁速度快,但高峰期更拥挤;而公交车灵活,但可能遇到堵车。不便的路线会进一步加剧问题,促使人们考虑其他选择。\n\n尽管存在这些挑战,城市交通仍有许多好处。它节省时间、费用低廉,并促进环保出行。然而,缺点包括交通拥堵、时间不确定和不便的路线。权衡这些利弊,决定往往取决于个人偏好和所面对的具体情况。对许多人来说,使用公共交通的好处大于缺点,使其成为高效出行的可行选择。",
+    "essay_short_en": "Navigating city transport during rush hour involves transferring to another line and dealing with crowded subways. Getting off at the right stop is crucial, especially if running late. Hailing a cab becomes necessary for some. The subway vs bus debate highlights that subways are fast but crowded, while buses are flexible but face traffic. Inconvenient routes make individuals consider alternatives. Despite challenges, city transport saves time, is cost-effective, and environmentally friendly. Drawbacks include congestion, uncertain timing, and inconvenient routes. Weighing these, public transport often prevails as a viable option.",
+    "essay_short_zh": "在高峰时段乘坐城市交通需要换乘到另一条线路,应对拥挤的地铁。在正确的站点下车至关重要,特别是迟到时。打车对一些人来说是必要的。地铁和公交车的选择显示,地铁快但拥挤,公交车灵活但可能遇到堵车。不便的路线让人们考虑其他选择。尽管有挑战,城市交通节省时间、费用低廉且环保。缺点包括拥堵、时间不确定和不便的路线。权衡这些因素,公共交通常常是可行的选择。"
+  },
+  "租房搬家": {
+    "n": 2,
+    "title_zh": "租房搬家",
+    "theme_en": "renting a flat",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "view a flat → sign a lease → deposit → utilities → move in → neighbours",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "view a flat",
+        "text_zh": "看房",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "sign a lease",
+        "text_zh": "签租约",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "deposit",
+        "text_zh": "押金",
+        "sort_order": 3,
+        "headword_ref": "deposit"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "set up utilities",
+        "text_zh": "开通水电气",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "furniture",
+        "text_zh": "家具",
+        "sort_order": 5,
+        "headword_ref": "furniture"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "move in",
+        "text_zh": "搬入",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "meet the neighbours",
+        "text_zh": "认识邻居",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "urban vs suburban",
+        "text_zh": "城市 vs 郊区,城市通常交通便利,但郊区环境更安静",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "更多的生活空间",
+      "独立生活",
+      "体验新环境"
+    ],
+    "drawbacks": [
+      "搬家费用高",
+      "适应新环境的挑战",
+      "可能遇到噪音问题"
+    ],
+    "essay_full_en": "Renting a flat and moving can be both exciting and challenging. Initially, you need to view a flat to find one that suits your needs. Once satisfied, you sign a lease, a crucial step that legally binds you to the property. You then pay a deposit, which is usually refundable if no damage is done. Next, you set up utilities like water, gas, and electricity. After arranging your furniture, you finally move in, marking a new chapter in your life. Meeting the neighbours can help you integrate into the community. \n\nLiving in an urban area often offers better access to amenities compared to a suburban area, which might be more peaceful. The benefits of renting a flat include having more living space, living independently, and experiencing a new environment. However, there are drawbacks, such as high moving costs, the challenge of adapting to a new environment, and potential noise issues. Weighing these factors, renting a flat is generally a positive experience if one is prepared for the initial challenges.",
+    "essay_full_zh": "租房搬家既令人兴奋又充满挑战。首先,你需要看房,以找到合适的住所。一旦满意,你便签租约,这是将你合法地与房产绑定的重要一步。接着,你支付押金,通常在没有损坏的情况下是可以退还的。然后,你开通水电气等公用设施。安排好家具后,你最终搬入,标志着生活新篇章的开始。认识邻居可以帮助你融入社区。\n\n居住在城市地区通常比郊区更容易获得便利设施,而郊区可能更宁静。租房的好处包括更多的生活空间、独立生活和体验新环境。然而,也有一些弊端,如搬家费用高、适应新环境的挑战和可能遇到的噪音问题。权衡这些因素,如果准备好迎接初期的挑战,租房总体上是一个积极的经历。",
+    "essay_short_en": "Renting a flat involves several steps. First, you view a flat to find a suitable one. After that, you sign a lease and pay a deposit. Setting up utilities is next, followed by arranging furniture and moving in. Meeting the neighbours is important for community integration. \n\nRenting offers benefits like more living space, independence, and a new environment. However, it also presents drawbacks such as high moving costs, adapting challenges, and potential noise. Overall, with proper preparation, renting can be a rewarding experience.",
+    "essay_short_zh": "租房包括几个步骤。首先,你需要看房以找到合适的住所。接下来,签租约并支付押金。然后开通水电气,安排家具并搬入。认识邻居有助于融入社区。\n\n租房的好处包括更多的生活空间、独立生活和体验新环境。然而,也有搬家费用高、适应挑战和噪音问题等弊端。总体而言,如果准备充分,租房可以是一次值得的经历。"
+  },
+  "点外卖": {
+    "n": 6,
+    "title_zh": "点外卖",
+    "theme_en": "food delivery",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "place an order → delivery fee → running late → cold food → leave a review",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "place an order",
+        "text_zh": "下订单",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "delivery fee",
+        "text_zh": "配送费",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "estimated delivery time",
+        "text_zh": "预计送达时间",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "notification",
+        "text_zh": "通知",
+        "sort_order": 4,
+        "headword_ref": "notification"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "running late",
+        "text_zh": "延迟送达",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "apologize",
+        "text_zh": "道歉",
+        "sort_order": 6,
+        "headword_ref": "apologize"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "cold food vs hot food",
+        "text_zh": "冷食与热食的对比:冷食多因延迟或保温不当而热量不足,热食则是送达及时并保温得当。",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "leave a review",
+        "text_zh": "留下评价",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "方便快捷",
+      "多样选择",
+      "节省时间"
+    ],
+    "drawbacks": [
+      "增加费用",
+      "食物温度问题",
+      "等待时间不确定"
+    ],
+    "essay_full_en": "Ordering food delivery has become a common practice in modern life. When people decide to place an order, they often consider the delivery fee as part of the cost. The convenience and variety offered by food delivery services are undeniable benefits. Additionally, these services save time for those with busy schedules. However, the estimated delivery time is not always accurate, and notifications may inform customers that their orders are running late. In such cases, delivery companies usually apologize, but this doesn't always compensate for the disappointment of receiving cold food instead of hot food. Customers might feel compelled to leave a review to express their dissatisfaction or appreciation. \n\nWhile the convenience, variety, and time-saving aspects of food delivery are significant, drawbacks like increased costs, potential temperature issues with food, and uncertain waiting times can be frustrating. Ultimately, the decision to use food delivery services depends on weighing these benefits against the drawbacks.",
+    "essay_full_zh": "点外卖已成为现代生活中的常见做法。当人们决定下订单时,他们通常会考虑配送费作为成本的一部分。外卖服务提供的便利性和多样性是不可否认的好处。此外,对于时间紧张的人来说,这些服务节省了时间。然而,预计送达时间并不总是准确,通知可能会告知顾客订单延迟。在这种情况下,外卖公司通常会道歉,但这并不能总是弥补收到冷食而非热食的失望。顾客可能会觉得有必要留下评价来表达不满或欣赏。\n\n尽管外卖的便利性、多样性和节省时间的优势显著,但如费用增加、食物温度问题和不确定的等待时间等缺点可能会令人沮丧。最终,是否使用外卖服务取决于对这些利弊的权衡。",
+    "essay_short_en": "Ordering food delivery is now a common practice. People place an order considering the delivery fee. The main benefits are convenience, variety, and time-saving. However, estimated delivery time can be inaccurate, and notifications might indicate running late, leading to cold food instead of hot. Companies apologize, but customers might still leave a review.\n\nWhile food delivery is convenient, drawbacks like increased fees, temperature issues, and uncertain waiting times can be frustrating. The choice to use these services depends on weighing benefits against drawbacks.",
+    "essay_short_zh": "点外卖已成常事。人们下订单时会考虑配送费。主要好处是方便、多样和省时。然而,预计送达时间可能不准,通知可能显示延迟,导致收到冷食而非热食。公司会道歉,但顾客可能仍会留下评价。\n\n尽管外卖方便,但如费用增加、温度问题和不确定的等待时间等缺点可能让人沮丧。是否使用这些服务取决于权衡利弊。"
+  },
+  "在餐厅点餐": {
+    "n": 5,
+    "title_zh": "在餐厅点餐",
+    "theme_en": "eating out",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "book a table → be seated → menu → allergic to → order → the bill → split it → tip → leave a review",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "book a table",
+        "text_zh": "预订餐桌",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "be seated",
+        "text_zh": "入座",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "menu",
+        "text_zh": "菜单",
+        "sort_order": 3,
+        "headword_ref": "menu"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "allergic to",
+        "text_zh": "对...过敏",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "place an order",
+        "text_zh": "下单",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "the bill vs check",
+        "text_zh": "在英国常用“the bill”,而在美国则用“check”指代账单。",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "split it",
+        "text_zh": "分摊费用",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "leave a tip",
+        "text_zh": "留下小费",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "leave a review",
+        "text_zh": "留下评价",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "方便快捷的服务",
+      "多样化的选择",
+      "社交活动的机会"
+    ],
+    "drawbacks": [
+      "价格昂贵",
+      "等待时间长",
+      "菜单选择过多可能导致选择困难"
+    ],
+    "essay_full_en": "Eating out at a restaurant starts with the familiar process of booking a table. Once you arrive, you are usually quickly seated and handed a menu. The variety of choices can be overwhelming, especially if you are allergic to certain ingredients. However, placing an order is an opportunity to explore new dishes. After enjoying your meal, it's time to ask for the bill, or check, depending on whether you're in the UK or the US. If dining with friends, you might decide to split it, making the meal more affordable for everyone. Leaving a tip is customary, rewarding the staff for their service. Finally, you can leave a review online to share your experience.\n\nEating out provides convenient and quick service, a diverse array of options, and social interaction opportunities. However, it can be expensive, involve long waiting times, and the extensive menu may lead to decision fatigue. Balancing these pros and cons, dining out remains a popular choice for many seeking variety and social engagement, despite its drawbacks.",
+    "essay_full_zh": "在餐厅用餐通常从预订餐桌开始。到达后，你会很快入座，并拿到菜单。丰富的选择可能让人眼花缭乱，尤其是如果你对某些成分过敏的话。然而，下单是探索新菜品的好机会。享用完美味之后，就该结账了，在英国称为“the bill”，在美国则称为“check”。如果和朋友一起用餐，你可能会选择分摊费用，这样大家都更能负担得起。留下小费是惯例，以感谢服务员的服务。最后，你可以在线留下评价，与他人分享你的体验。\n\n在外就餐提供方便快捷的服务、多样化的选择以及社交活动的机会。然而，它可能昂贵、需要长时间等待，而且菜单选择过多可能导致选择困难。权衡利弊，尽管有缺点，外出就餐仍然是许多人追求多样性和社交互动的热门选择。",
+    "essay_short_en": "Eating out begins with booking a table. Upon arrival, you are seated and given a menu. If allergic, choose carefully before placing an order. After eating, request the bill or check, depending on your location. Splitting it with friends makes it affordable. Leaving a tip is customary, followed by leaving a review.\n\nEating out offers convenient service, diverse choices, and social opportunities. However, it can be expensive, involve long waits, and lead to decision fatigue from too many menu options. Despite these drawbacks, it remains a popular choice for variety and social engagement.",
+    "essay_short_zh": "在外就餐从预订餐桌开始。到达后，你会入座并拿到菜单。如果过敏，需谨慎选择再下单。用餐后，要求结账，在英国称“the bill”，在美国称“check”。与朋友分摊费用更实惠。留下小费是习惯，接着留下评价。\n\n外出就餐提供方便的服务、多样的选择和社交机会。然而，它可能昂贵，需要长时间等待，并因菜单过多导致选择困难。尽管有这些缺点，外出就餐仍是追求多样性和社交互动的热门选择。"
+  },
+  "邻里噪音纠纷": {
+    "n": 8,
+    "title_zh": "邻里噪音纠纷",
+    "theme_en": "noisy neighbours",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "complain → keep it down → landlord → mediate → compromise",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "complain",
+        "text_zh": "抱怨",
+        "sort_order": 1,
+        "headword_ref": "complain"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "keep it down",
+        "text_zh": "保持安静",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "talk to the landlord",
+        "text_zh": "找房东谈谈",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "mediate",
+        "text_zh": "调解",
+        "sort_order": 4,
+        "headword_ref": "mediate"
+      },
+      {
+        "kind": "word",
+        "text_en": "compromise",
+        "text_zh": "妥协",
+        "sort_order": 5,
+        "headword_ref": "compromise"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "file a noise complaint",
+        "text_zh": "提交噪音投诉",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "community meeting",
+        "text_zh": "社区会议",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "tolerate vs endure",
+        "text_zh": "tolerate 指能容忍而不感到痛苦,而 endure 则是忍受痛苦或不愉快的事情。",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "solution",
+        "text_zh": "解决方案",
+        "sort_order": 9,
+        "headword_ref": "solution"
+      }
+    ],
+    "benefits": [
+      "解决问题",
+      "促进理解",
+      "改善关系"
+    ],
+    "drawbacks": [
+      "耗时长",
+      "可能引发冲突",
+      "妥协不易"
+    ],
+    "essay_full_en": "Dealing with noisy neighbours is a common issue that many people face. When the noise becomes unbearable, the first step is often to complain and ask them to keep it down. If this doesn't work, you might need to talk to the landlord who can mediate the situation. Mediation can lead to a compromise, where both parties agree on a reasonable noise level. Alternatively, you might need to file a noise complaint with local authorities or organize a community meeting to discuss solutions. \n\nThe benefits of addressing noise issues include solving the problem, promoting understanding, and improving relationships among neighbours. However, there are drawbacks; resolving such issues can be time-consuming, may lead to conflicts, and finding a compromise isn't always easy. \n\nIn conclusion, while dealing with noisy neighbours can be challenging, the process of mediation and compromise often leads to a more harmonious living environment. It's important to tolerate minor disturbances but endure only when absolutely necessary. Ultimately, finding a peaceful solution benefits everyone involved.",
+    "essay_full_zh": "处理邻里噪音是许多人面临的常见问题。当噪音变得无法忍受时，第一步通常是抱怨并要求他们保持安静。如果这不起作用，你可能需要找房东谈谈，让他来调解。调解可以导致妥协，双方同意一个合理的噪音水平。或者，你可能需要向当地政府提交噪音投诉，或组织社区会议以讨论解决方案。\n\n解决噪音问题的好处包括解决问题、促进理解和改善邻里关系。然而，也有一些弊端：解决这些问题可能耗时长，可能引发冲突，而且妥协并不总是容易的。\n\n总之，虽然处理邻里噪音可能具有挑战性，但调解和妥协的过程通常会带来更和谐的生活环境。重要的是容忍小的干扰，但只有在绝对必要时才忍受。最终，找到一个和平的解决方案对所有相关方都有利。",
+    "essay_short_en": "Noisy neighbours are a common issue. Initially, one might complain and ask them to keep it down. If that fails, talking to the landlord to mediate might help reach a compromise. Alternatively, filing a noise complaint or organizing a community meeting could be necessary. \n\nBenefits include solving the problem and improving relationships. However, drawbacks are time consumption, potential conflicts, and the challenge of compromise. \n\nUltimately, mediation and compromise lead to a harmonious environment, balancing tolerance and endurance to find a peaceful solution.",
+    "essay_short_zh": "吵闹的邻居是常见问题。一开始可以抱怨并要求对方保持安静。如果无效，找房东调解可能有助于达成妥协。或者，可能需要提交噪音投诉或组织社区会议。\n\n好处包括解决问题和改善关系。然而，弊端是耗时长、可能引发冲突和妥协的挑战。\n\n最终，调解和妥协能带来和谐环境，平衡容忍和忍受以找到和平解决方案。"
+  },
+  "第一天上班": {
+    "n": 16,
+    "title_zh": "第一天上班",
+    "theme_en": "starting a new job",
+    "group": "工作职场",
+    "structure": "essay",
+    "seed": "onboarding → probation → colleague → get up to speed",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "starting a new job",
+        "text_zh": "开始一份新工作",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "onboarding",
+        "text_zh": "入职培训",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "first impressions",
+        "text_zh": "第一印象",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "probation vs permanent",
+        "text_zh": "试用期 vs 正式员工,试用期是刚开始工作时的考察阶段,而正式员工是在通过试用期后转正的员工。",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "colleague",
+        "text_zh": "同事",
+        "sort_order": 5,
+        "headword_ref": "colleague"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "get up to speed",
+        "text_zh": "跟上进度",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "company culture",
+        "text_zh": "公司文化",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "work-life balance",
+        "text_zh": "工作与生活的平衡",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "broaden your network",
+      "learn new skills",
+      "increase earning potential"
+    ],
+    "drawbacks": [
+      "stressful adaptation period",
+      "uncertain job security",
+      "work-life balance challenges"
+    ],
+    "essay_full_en": "Starting a new job is an exciting yet challenging experience. The onboarding process is crucial as it sets the stage for first impressions and helps new employees adapt to their roles. During the probation period, which precedes becoming a permanent employee, individuals have the chance to demonstrate their abilities and fit within the company. Engaging with colleagues is essential for building relationships and getting up to speed with tasks and responsibilities. Understanding company culture is another important aspect, as it influences how one interacts with others and navigates workplace dynamics. \n\nOne of the main benefits of starting a new job is the opportunity to broaden your network, which can open doors to future opportunities. Additionally, it allows employees to learn new skills and increase their earning potential. However, there are drawbacks, such as the stressful adaptation period and uncertain job security during the probation phase. Additionally, maintaining work-life balance can be challenging. \n\nIn conclusion, while starting a new job presents both benefits and drawbacks, the experience can be rewarding if approached with a positive attitude and readiness to adapt.",
+    "essay_full_zh": "开始一份新工作是一种既令人兴奋又具有挑战性的体验。入职培训非常重要,因为它为第一印象奠定了基础,并帮助新员工适应他们的角色。在试用期,即成为正式员工之前,个人有机会展示他们的能力并适应公司。与同事交流对于建立关系和跟上工作任务和责任的进度至关重要。理解公司文化是另一个重要方面,因为它影响着一个人与他人的互动方式以及在工作场所的动态。\n\n开始新工作的主要好处之一是有机会拓宽人际网络,这可以为未来的机会打开大门。此外,它还允许员工学习新技能并提高他们的收入潜力。然而,也有一些弊端,如适应期的压力以及试用期内不确定的工作安全性。此外,维持工作与生活的平衡可能是一个挑战。\n\n总之,虽然开始一份新工作有其优点和缺点,但如果以积极的态度和适应的准备来对待,这段经历可以是有益的。",
+    "essay_short_en": "Starting a new job involves onboarding, which sets first impressions and aids adaptation. During probation, employees prove their worth before becoming permanent. Engaging with colleagues and getting up to speed are key. Understanding company culture is vital as it affects workplace interactions. Benefits include broadening your network, learning new skills, and increasing earning potential. However, the adaptation period can be stressful, job security is uncertain during probation, and work-life balance may be challenging. Despite drawbacks, starting a new job can be rewarding with a positive approach.",
+    "essay_short_zh": "开始一份新工作涉及入职培训,这奠定了第一印象并帮助适应。在试用期,员工在成为正式员工前展示他们的价值。与同事交流和跟上进度是关键。理解公司文化很重要,因为它影响着工作场所的互动。好处包括拓宽人际网络、学习新技能和提高收入潜力。然而,适应期可能压力大,试用期内工作安全性不确定,且工作与生活的平衡可能是挑战。尽管有缺点,以积极态度开始新工作可以是有益的。"
+  },
+  "酒店入住": {
+    "n": 23,
+    "title_zh": "酒店入住",
+    "theme_en": "staying at a hotel",
+    "group": "出行旅游",
+    "structure": "essay",
+    "seed": "reservation → check in → room service → check out → deposit refund",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "make a reservation",
+        "text_zh": "预订",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "confirm the booking",
+        "text_zh": "确认预订",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "check-in",
+        "text_zh": "登记入住",
+        "sort_order": 3,
+        "headword_ref": "check-in"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "provide identification",
+        "text_zh": "出示身份证明",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "room service",
+        "text_zh": "客房服务",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "complimentary vs charged",
+        "text_zh": "免费 vs 收费,有些酒店提供免费的客房服务,而有些则收取费用,入住前需确认清楚。",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "request additional amenities",
+        "text_zh": "要求额外设施",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "check-out",
+        "text_zh": "退房",
+        "sort_order": 8,
+        "headword_ref": "check-out"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "settle the bill",
+        "text_zh": "结算账单",
+        "sort_order": 9,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "deposit refund",
+        "text_zh": "退还押金",
+        "sort_order": 10,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "convenient location",
+      "variety of services",
+      "comfortable stay"
+    ],
+    "drawbacks": [
+      "unexpected charges",
+      "noisy environment",
+      "limited availability"
+    ],
+    "essay_full_en": "Staying at a hotel involves several steps that can make your travel experience smooth and enjoyable. First, you need to make a reservation. This is followed by confirming the booking to ensure your room is secured. Upon arrival, the check-in process requires you to provide identification. Once settled in, you can enjoy various services, such as room service. However, it is essential to note whether these services are complimentary or charged, as this can vary from one hotel to another. You might also want to request additional amenities to enhance your stay.\n\nThe benefits of staying at a hotel include a convenient location, a variety of services, and a comfortable stay. These advantages can significantly improve your travel experience. However, there are drawbacks to consider, such as unexpected charges, a noisy environment, and limited availability during peak seasons.\n\nIn conclusion, while staying at a hotel offers numerous conveniences, it is crucial to weigh the benefits against the potential drawbacks. By planning and confirming details beforehand, you can maximize the positive aspects of your stay. After enjoying your time, the final steps are to check out, settle the bill, and ensure your deposit refund is processed.",
+    "essay_full_zh": "入住酒店涉及多个步骤,可以让你的旅行体验顺畅愉快。首先,你需要预订,然后确认预订以确保你的房间已被保留。到达后,登记入住需要你出示身份证明。入住后,你可以享受各种服务,如客房服务。然而,需要注意这些服务是免费还是收费,因为不同酒店的政策不同。你也可能想要求额外设施以提升入住体验。\n\n入住酒店的好处包括便利的位置、各种服务和舒适的住宿。这些优势可以显著提升你的旅行体验。然而,也有一些缺点需要考虑,例如意外费用、嘈杂的环境和旺季时的有限供应。\n\n总之,尽管入住酒店提供了众多便利,但权衡利弊是很重要的。通过提前计划和确认细节,你可以最大化入住的积极方面。享受完入住后,最后的步骤是退房、结算账单,并确保押金退还。",
+    "essay_short_en": "Staying at a hotel starts with making a reservation and confirming the booking. Upon arrival, you check in by providing identification. During your stay, enjoy services like room service, but check if they are complimentary or charged. Request additional amenities if needed.\n\nHotels offer a convenient location, various services, and a comfortable stay, enhancing your travel experience. However, be aware of unexpected charges, noisy environments, and limited availability.\n\nAfter your stay, check out, settle the bill, and ensure your deposit refund is processed. Weigh the benefits against the drawbacks for the best experience.",
+    "essay_short_zh": "入住酒店从预订和确认预订开始。到达后,通过出示身份证明进行登记入住。期间,享受客房服务,但要确认是免费还是收费。如有需要,可要求额外设施。\n\n酒店提供便利的位置、丰富的服务和舒适的住宿,提升旅行体验。但要注意意外费用、嘈杂环境和有限的供应。\n\n入住结束后,退房、结算账单,确保押金退还。权衡利弊,以获得最佳体验。"
+  },
+  "旅途出岔子": {
+    "n": 25,
+    "title_zh": "旅途出岔子",
+    "theme_en": "when travel goes wrong",
+    "group": "出行旅游",
+    "structure": "essay",
+    "seed": "lost luggage → missed the train → refund → travel insurance",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "lost luggage",
+        "text_zh": "行李丢失",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "missed the train",
+        "text_zh": "错过火车",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "refund",
+        "text_zh": "退款",
+        "sort_order": 3,
+        "headword_ref": "refund"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "travel insurance",
+        "text_zh": "旅游保险",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "contact customer service",
+        "text_zh": "联系客户服务",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "alternative transportation",
+        "text_zh": "备选交通方式",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "claim vs complaint",
+        "text_zh": "claim 用于索赔, complaint 用于投诉",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "stressful",
+        "text_zh": "压力大的",
+        "sort_order": 8,
+        "headword_ref": "stressful"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "unexpected delays",
+        "text_zh": "意外延误",
+        "sort_order": 9,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "make the best of it",
+        "text_zh": "尽量做好",
+        "sort_order": 10,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "financial protection",
+      "peace of mind",
+      "coverage for unexpected events"
+    ],
+    "drawbacks": [
+      "additional cost",
+      "limited coverage",
+      "complex claims process"
+    ],
+    "essay_full_en": "Traveling can be an exciting adventure, but it doesn't always go as planned. One common issue is lost luggage, which can be frustrating. If you missed the train due to unexpected delays, it might lead to further complications. In such cases, a refund could be possible if you contact customer service promptly. Having travel insurance can be a great relief as it offers financial protection and peace of mind. It also provides coverage for unexpected events, such as lost luggage or missed connections, making stressful situations more manageable.\n\nHowever, there are drawbacks to consider. Travel insurance often comes with an additional cost, and the coverage might be limited. Furthermore, the claims process can be complex, requiring detailed documentation. Despite these challenges, having insurance can be advantageous. If you encounter issues, you can make a claim instead of a complaint. Moreover, finding alternative transportation can help mitigate the inconvenience. Ultimately, while travel mishaps are stressful, making the best of it and being prepared can turn a challenging situation into a manageable one.",
+    "essay_full_zh": "旅行可以是一次激动人心的冒险,但并不总是一帆风顺。常见的问题之一是行李丢失,这可能令人沮丧。如果由于意外延误错过火车,可能会导致进一步的麻烦。在这种情况下,如果及时联系客户服务,可能会获得退款。拥有旅游保险可以带来极大的安心感,因为它提供财务保护和意外事件的保障,如行李丢失或错过的交通连接,使压力大的情况更易于应对。\n\n然而,也有一些弊端需要考虑。旅游保险通常会增加额外费用,且保障范围可能有限。此外,索赔过程可能很复杂,需要详细的文件。尽管有这些挑战,拥有保险仍然有利。如果遇到问题,可以索赔而不是投诉。此外,寻找备选交通方式可以帮助缓解不便。总之,虽然旅行中的意外事件会带来压力,但尽量做好准备,可以将挑战转变为可控的情况。",
+    "essay_short_en": "Traveling can be unpredictable. Issues like lost luggage or missed trains due to unexpected delays are common. In such events, contacting customer service for a refund and having travel insurance can be beneficial. Insurance offers financial protection and peace of mind, covering unexpected events. However, it comes with additional costs and limited coverage, and the claims process can be complex. Despite these drawbacks, making a claim rather than a complaint and finding alternative transportation can help. Being prepared and making the best of it can turn a stressful situation into a manageable one.",
+    "essay_short_zh": "旅行充满不确定性。行李丢失或因意外延误错过火车是常见问题。在这种情况下,联系客户服务申请退款和拥有旅游保险是有益的。保险提供财务保护和安心,涵盖意外事件。然而,保险伴随额外费用和有限的保障,索赔过程也可能复杂。尽管有这些弊端,索赔而非投诉和寻找备选交通方式可以有所帮助。做好准备,尽量做好,能将压力大的情况变为可控。"
+  },
+  "租车与事故处理": {
+    "n": 26,
+    "title_zh": "租车与事故处理",
+    "theme_en": "renting a car",
+    "group": "出行旅游",
+    "structure": "essay",
+    "seed": "rent a car → rental agreement → insurance → deductible → damage → exchange information → file a claim → repair → reimbursement",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "rent a car",
+        "text_zh": "租车",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "rental agreement",
+        "text_zh": "租赁协议",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "insurance",
+        "text_zh": "保险",
+        "sort_order": 3,
+        "headword_ref": "insurance"
+      },
+      {
+        "kind": "contrast",
+        "text_en": "deductible vs premium",
+        "text_zh": "deductible 是指保险自付额,即在保险公司赔付之前,个人需要承担的费用;而 premium 是指保费,即为购买保险所支付的金额。",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "damage",
+        "text_zh": "损坏",
+        "sort_order": 5,
+        "headword_ref": "damage"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "exchange information",
+        "text_zh": "交换信息",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "file a claim",
+        "text_zh": "提出索赔",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "repair",
+        "text_zh": "修理",
+        "sort_order": 8,
+        "headword_ref": "repair"
+      },
+      {
+        "kind": "word",
+        "text_en": "reimbursement",
+        "text_zh": "报销",
+        "sort_order": 9,
+        "headword_ref": "reimbursement"
+      }
+    ],
+    "benefits": [
+      "方便快捷",
+      "灵活选择车型",
+      "无需长期承诺"
+    ],
+    "drawbacks": [
+      "额外费用",
+      "保险复杂",
+      "潜在损坏责任"
+    ],
+    "essay_full_en": "Renting a car provides convenience and flexibility for travelers who need temporary transportation. The process starts when you rent a car and sign a rental agreement, which outlines the terms of the rental. Opting for insurance is usually a wise decision to protect against unforeseen events. Understanding the difference between deductible and premium is crucial: the deductible is the amount you pay out-of-pocket before insurance covers the rest, while the premium is the cost of buying the insurance. \n\nIf damage occurs, the first step is to exchange information with any involved parties. Following that, you should file a claim with the insurance company. Once the claim is approved, the car will be sent for repair. Eventually, you may receive reimbursement for any costs you initially covered. \n\nWhile renting a car is convenient, offering flexibility and no long-term commitment, it does come with drawbacks. Extra fees, complex insurance terms, and potential liability for damage can be downsides. Overall, the benefits often outweigh the drawbacks, especially for short-term needs.",
+    "essay_full_zh": "租车为需要临时交通工具的旅行者提供了便利和灵活性。整个过程从租车开始,签署租赁协议,该协议列出了租赁的条款。选择购买保险通常是明智的决定,以防不测。了解 deductible 和 premium 的区别至关重要:deductible 是在保险公司赔付之前你需要自付的金额,而 premium 是购买保险需支付的费用。\n\n如果发生损坏,第一步是与相关方交换信息。接下来,你需要向保险公司提出索赔。一旦索赔获批,车辆将被送去修理。最终,你可能会收到对你最初支付费用的报销。\n\n虽然租车很方便,提供灵活性且无需长期承诺,但也有缺点。额外费用、复杂的保险条款和潜在的损坏责任可能是缺点。总体而言,尤其是对于短期需求,好处往往超过弊端。",
+    "essay_short_en": "Renting a car is a convenient choice for travelers needing temporary transportation. The process involves signing a rental agreement and opting for insurance, which requires understanding the deductible vs premium difference. If damage occurs, you exchange information and file a claim. After approval, the car is repaired, and you may receive reimbursement.\n\nThough convenient and flexible, renting a car has drawbacks like extra fees, complex insurance, and potential damage liability. However, for short-term needs, the benefits often outweigh these issues.",
+    "essay_short_zh": "租车是需要临时交通工具的旅行者的便利选择。过程包括签署租赁协议和选择保险,这需要了解 deductible 和 premium 的区别。如果发生损坏,你需要交换信息并提出索赔。索赔获批后,车辆被修理,你可能会收到报销。\n\n尽管方便灵活,租车也有额外费用、复杂保险和潜在损坏责任等缺点。然而,对于短期需求,好处往往超过这些问题。"
+  },
+  "手机套餐与换运营商": {
+    "n": 7,
+    "title_zh": "手机套餐与换运营商",
+    "theme_en": "mobile plans",
+    "group": "日常生活",
+    "structure": "essay",
+    "seed": "choose a plan → data allowance → unlimited → roaming → run out of data → overage → top up → switch carriers → keep your number",
+    "items": [
+      {
+        "kind": "chunk",
+        "text_en": "choose a plan",
+        "text_zh": "选择套餐",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "data allowance",
+        "text_zh": "流量额度",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "unlimited vs limited",
+        "text_zh": "无限流量 vs 有限流量:无限流量适合常用网络的人,有限流量适合偶尔使用的人",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "roaming",
+        "text_zh": "漫游",
+        "sort_order": 4,
+        "headword_ref": "roam"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "run out of data",
+        "text_zh": "流量用完",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "overage",
+        "text_zh": "超额费用",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "top up",
+        "text_zh": "充值",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "switch carriers",
+        "text_zh": "换运营商",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "keep your number",
+        "text_zh": "保留号码",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "更大流量额度",
+      "避免超额费用",
+      "漫游费更低"
+    ],
+    "drawbacks": [
+      "换运营商麻烦",
+      "网络覆盖不佳",
+      "可能有隐藏费用"
+    ],
+    "essay_full_en": "When choosing a mobile plan, it's essential to consider your data allowance needs. Some people opt for unlimited plans, which are excellent for heavy users, while others prefer limited plans if they use data less frequently. Roaming is another crucial factor if you travel often. \n\nThe benefits of selecting the right plan include a larger data allowance, avoiding overage fees, and potentially lower roaming charges. However, there are drawbacks to consider. Switching carriers can be a hassle, and you might face poor network coverage with a new provider. Hidden fees can also be an unwelcome surprise.\n\nIf you run out of data, you may have to pay overage fees, or you might need to top up your plan. In some cases, it might be more economical to switch carriers. Fortunately, you can keep your number when you change providers, maintaining continuity.\n\nIn conclusion, while there are benefits to choosing a new mobile plan, such as better data allowances and reduced costs, the potential drawbacks of switching carriers must be carefully weighed. Ultimately, the best decision depends on your specific needs and usage habits.",
+    "essay_full_zh": "在选择手机套餐时,了解自己的流量额度需求至关重要。有些人选择无限流量套餐,这对重度用户来说是不错的选择,而偶尔使用流量的人可能更倾向于有限流量套餐。如果你经常旅行,漫游也是一个需要考虑的重要因素。\n\n选择合适套餐的好处包括更大流量额度、避免超额费用,以及可能更低的漫游费用。然而,也有一些弊端需要考虑。换运营商可能会很麻烦,而且新运营商的网络覆盖可能不佳。此外,隐藏费用也可能会让人措手不及。\n\n如果流量用完,你可能需要支付超额费用,或者需要充值。在某些情况下,换运营商可能更经济。好在,你可以在更换服务商时保留原号码,保持联系的连续性。\n\n总之,虽然选择新手机套餐有更大流量额度和降低费用等好处,但换运营商的潜在弊端也必须认真权衡。最终,最佳决定取决于你的具体需求和使用习惯。",
+    "essay_short_en": "Choosing a mobile plan requires considering data allowance needs. Unlimited plans suit heavy users, while limited plans work for occasional users. Roaming is vital for travelers. Benefits include larger data allowances and avoiding overage fees, but switching carriers can be a hassle with possible poor network coverage and hidden fees.\n\nRunning out of data leads to overage fees or the need to top up. Switching carriers might be economical, and you can keep your number. While new plans offer advantages, weigh the drawbacks of switching carriers carefully. The best choice depends on your needs.",
+    "essay_short_zh": "选择手机套餐时,要考虑流量额度需求。无限流量适合重度用户,有限流量适合偶尔使用者。漫游对旅行者至关重要。好处包括更大流量额度和避免超额费用,但换运营商可能麻烦,且网络覆盖不佳,还可能有隐藏费用。\n\n流量用完会导致超额费用或需充值。换运营商可能更经济,且可保留号码。新套餐有优点,但需认真权衡换运营商的弊端。最佳选择取决于你的需求。"
+  },
+  "网上支付与诈骗": {
+    "n": 28,
+    "title_zh": "网上支付与诈骗",
+    "theme_en": "online payment and scams",
+    "group": "社会科技",
+    "structure": "essay",
+    "seed": "link a card → two-factor → phishing → freeze the account → dispute",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "link a card",
+        "text_zh": "绑定银行卡",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "enable two-factor authentication",
+        "text_zh": "启用双重身份验证",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "phishing",
+        "text_zh": "网络钓鱼",
+        "sort_order": 3,
+        "headword_ref": "phishing"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "freeze the account",
+        "text_zh": "冻结账户",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "file a dispute",
+        "text_zh": "提交争议",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "fraud vs scam",
+        "text_zh": "fraud 通常指金融上的欺诈,而 scam 则指较小规模的骗局",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "identity theft",
+        "text_zh": "身份盗窃",
+        "sort_order": 7,
+        "headword_ref": "theft"
+      },
+      {
+        "kind": "word",
+        "text_en": "secure",
+        "text_zh": "安全的",
+        "sort_order": 8,
+        "headword_ref": "secure"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "financial loss",
+        "text_zh": "经济损失",
+        "sort_order": 9,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "便利快捷",
+      "提高交易安全性",
+      "实时交易记录"
+    ],
+    "drawbacks": [
+      "身份盗窃风险",
+      "经济损失",
+      "账户冻结"
+    ],
+    "essay_full_en": "Online payments have revolutionized the way we handle transactions. To start using online payment systems, you first need to link a card to your account. This step is crucial as it sets the foundation for all future transactions. To enhance security, it's advisable to enable two-factor authentication. This extra layer of protection helps safeguard against phishing attacks, which are attempts to steal sensitive information like passwords and credit card numbers.\n\nDespite these precautions, online payments are not without risks. Phishing can lead to identity theft, causing significant financial loss. If you suspect unauthorized activity, you may need to freeze the account and file a dispute to resolve the issue. It's important to distinguish between fraud and scam; fraud is often a more elaborate financial deceit, while a scam is a smaller-scale trick.\n\nThe convenience and security of online payments are undeniable benefits, offering real-time transaction records. However, they come with drawbacks like the risk of identity theft and potential financial loss. In conclusion, while online payments offer numerous advantages, users must remain vigilant to mitigate the associated risks.",
+    "essay_full_zh": "网上支付革新了我们处理交易的方式。要开始使用网上支付系统,首先需要绑定银行卡。这一步至关重要,因为它为未来的所有交易奠定了基础。为了增强安全性,建议启用双重身份验证。这一额外的保护层有助于防范网络钓鱼攻击,这些攻击试图窃取密码和信用卡号等敏感信息。\n\n尽管有这些预防措施,网上支付并非没有风险。网络钓鱼可能导致身份盗窃,从而造成重大经济损失。如果怀疑有未经授权的活动,可能需要冻结账户并提交争议以解决问题。重要的是要区分 fraud 和 scam; fraud 通常是更复杂的金融欺诈,而 scam 则是较小规模的骗局。\n\n网上支付的便利性和安全性是不可否认的好处,提供实时交易记录。然而,它们也有缺点,如身份盗窃风险和潜在的经济损失。总之,虽然网上支付提供了许多优势,但用户必须保持警惕以减轻相关风险。",
+    "essay_short_en": "Online payments have changed how we transact, beginning with linking a card to your account. Enhancing security with two-factor authentication protects against phishing attacks. However, risks remain, such as identity theft and financial loss. If unauthorized activity occurs, freezing the account and filing a dispute may be necessary. Fraud is more elaborate than a scam, a smaller trick. Despite the convenience and security of online payments, offering real-time records, users must be cautious of identity theft risks and potential financial losses.",
+    "essay_short_zh": "网上支付改变了我们的交易方式,首先需绑定银行卡。通过启用双重身份验证来增强安全性,以防范网络钓鱼攻击。然而,风险依然存在,如身份盗窃和经济损失。如果发生未经授权的活动,可能需要冻结账户并提交争议。fraud 比 scam 更复杂,后者是较小骗局。尽管网上支付的便利性和安全性提供实时记录,用户仍需警惕身份盗窃风险和潜在的经济损失。"
+  },
+  "社交媒体": {
+    "n": 27,
+    "title_zh": "社交媒体",
+    "theme_en": "social media",
+    "group": "社会科技",
+    "structure": "essay",
+    "seed": "scroll → go viral → follower → misinformation → digital detox",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "scroll",
+        "text_zh": "滚动浏览",
+        "sort_order": 1,
+        "headword_ref": "scroll"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "go viral",
+        "text_zh": "迅速走红",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "follower",
+        "text_zh": "粉丝",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "engage with content",
+        "text_zh": "与内容互动",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "misinformation vs disinformation",
+        "text_zh": "misinformation指无意传播的错误信息,而disinformation指故意传播的虚假信息",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "troll",
+        "text_zh": "喷子",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "digital detox",
+        "text_zh": "数字排毒",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "strike a balance",
+        "text_zh": "找到平衡点",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "扩大社交圈",
+      "获取最新资讯",
+      "提升品牌影响力"
+    ],
+    "drawbacks": [
+      "信息过载",
+      "隐私泄露风险",
+      "网络欺凌"
+    ],
+    "essay_full_en": "Social media has become an integral part of our lives. People often scroll through their feeds, seeking entertainment or information. When content goes viral, it can quickly reach millions, attracting new followers and expanding one's social circle. Engaging with content allows users to participate in discussions and share their opinions. However, the spread of misinformation and disinformation is a significant downside. While misinformation is often shared unintentionally, disinformation is deliberately misleading. Additionally, trolls can create a hostile environment, discouraging genuine interaction.\n\nDespite these drawbacks, social media offers undeniable benefits, such as keeping users informed with the latest news and trends, and enhancing brand influence. However, the risks of information overload, privacy breaches, and cyberbullying cannot be ignored.\n\nTo address these issues, many people opt for a digital detox, taking breaks from social media to recharge. Ultimately, it's important to strike a balance between enjoying the benefits of social media and protecting oneself from its downsides. By being mindful of their usage, individuals can enjoy the positives while minimizing the negatives.",
+    "essay_full_zh": "社交媒体已经成为我们生活中不可或缺的一部分。人们常常滚动浏览自己的动态,寻找娱乐或信息。当内容迅速走红时,它可以迅速覆盖数百万人,吸引新粉丝并扩大社交圈。与内容互动让用户可以参与讨论,分享自己的观点。然而,错误信息和虚假信息的传播是一个显著的缺点。错误信息通常是无意间传播的,而虚假信息是故意误导的。此外,喷子可能会制造敌对的环境,阻碍真实的互动。\n\n尽管存在这些弊端,社交媒体也有不可否认的好处,如帮助用户获取最新资讯和趋势,提升品牌影响力。然而,信息过载、隐私泄露风险和网络欺凌的风险也不容忽视。\n\n为了解决这些问题,许多人选择进行数字排毒,从社交媒体中抽身,以便重新充电。最终,重要的是找到在享受社交媒体好处与保护自己免受其弊端之间的平衡。通过注意使用方式,个人可以享受其积极面,同时将消极面降至最低。",
+    "essay_short_en": "Social media is vital in modern life, with people regularly scrolling through feeds. Viral content can attract followers and expand social circles. Engaging with content allows for discussion, but misinformation and disinformation pose challenges. Misinformation is unintentional, whereas disinformation is deliberately false. Trolls further complicate interactions.\n\nDespite drawbacks, social media keeps users informed and enhances brand influence. Risks like information overload and privacy breaches exist. A digital detox can help manage these issues. Striking a balance is crucial to enjoy benefits while minimizing negatives.",
+    "essay_short_zh": "社交媒体在现代生活中至关重要,人们经常滚动浏览动态。迅速走红的内容能吸引粉丝,扩大社交圈。与内容互动促进讨论,但错误信息和虚假信息带来挑战。错误信息是无意的,而虚假信息是故意的,喷子也让互动更复杂。\n\n尽管有弊端,社交媒体帮助用户获取资讯,提升品牌影响力。信息过载和隐私泄露等风险存在。数字排毒有助于管理这些问题。找到平衡点对于享受其好处,同时将负面影响降至最低至关重要。"
+  },
+  "小组作业": {
+    "n": 10,
+    "title_zh": "小组作业",
+    "theme_en": "group projects",
+    "group": "校园学习",
+    "structure": "essay",
+    "seed": "assign roles → free-rider → deadline → merge slides → present",
+    "items": [
+      {
+        "kind": "collocation",
+        "text_en": "assign roles",
+        "text_zh": "分配角色",
+        "sort_order": 1,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "brainstorm",
+        "text_zh": "头脑风暴",
+        "sort_order": 2,
+        "headword_ref": "brainstorm"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "reach consensus",
+        "text_zh": "达成共识",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "cooperate vs collaborate",
+        "text_zh": "合作(cooperate)通常指为了共同目标分工协作,而协作(collaborate)更强调共同参与和贡献。",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "free-rider problem",
+        "text_zh": "搭便车问题",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "deadline",
+        "text_zh": "截止日期",
+        "sort_order": 6,
+        "headword_ref": "deadline"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "merge slides",
+        "text_zh": "合并幻灯片",
+        "sort_order": 7,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "rehearse presentation",
+        "text_zh": "排练演讲",
+        "sort_order": 8,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "feedback",
+        "text_zh": "反馈",
+        "sort_order": 9,
+        "headword_ref": "feedback"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "reflect on the process",
+        "text_zh": "反思过程",
+        "sort_order": 10,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "提高沟通能力",
+      "培养团队合作精神",
+      "促进创新思维"
+    ],
+    "drawbacks": [
+      "时间管理挑战",
+      "容易产生冲突",
+      "责任不均衡"
+    ],
+    "essay_full_en": "In group projects, the first step is often to assign roles to each member, ensuring that everyone knows their responsibilities. This is followed by a brainstorming session to generate ideas and reach consensus on the project's direction. As the project progresses, members must cooperate and collaborate effectively. However, the free-rider problem can arise when some members do not contribute equally. Meeting the deadline becomes crucial, and teams often need to merge slides and rehearse the presentation to ensure smooth delivery. After the presentation, feedback is gathered, and it's important to reflect on the process to identify areas for improvement.\n\nGroup projects offer several benefits. They enhance communication skills as members must articulate ideas clearly. They also foster team spirit, encouraging members to work together towards a common goal. Moreover, they promote innovative thinking by combining diverse perspectives.\n\nHowever, group projects also have drawbacks. Time management can be challenging, especially when coordinating schedules. Conflicts may arise from differing opinions, and responsibilities might not be evenly distributed.\n\nIn conclusion, while group projects present certain challenges, their benefits in developing valuable skills make them a worthwhile endeavor.",
+    "essay_full_zh": "在小组作业中,第一步通常是为每个成员分配角色,确保每个人都知道他们的责任。接下来是头脑风暴,以产生想法并在项目方向上达成共识。随着项目的进展,成员们必须有效地合作与协作。然而,搭便车问题可能会出现,即有些成员贡献不均。此时,截止日期变得至关重要,团队通常需要合并幻灯片并排练演讲以确保顺利交付。演讲结束后,会收集反馈,反思过程以找出改进之处是很重要的。\n\n小组作业有几个好处。它们提高沟通能力,因为成员必须清晰地表达想法。它们也培养团队精神,鼓励成员为共同目标一起努力。此外,通过结合多样化的视角,它们促进创新思维。\n\n然而,小组作业也有一些弊端。时间管理可能是个挑战,尤其是在协调时间表时。不同意见可能引发冲突,责任可能分配不均。\n\n总之,尽管小组作业存在某些挑战,但在培养有价值技能方面的好处使其成为值得尝试的事情。",
+    "essay_short_en": "In group projects, assigning roles is the first step to ensure everyone knows their tasks. This is followed by brainstorming to reach consensus on the project. Cooperation and collaboration are key, but the free-rider problem can occur if some members don't contribute equally. Teams must meet deadlines, merge slides, and rehearse presentations. Afterward, feedback is gathered and the process is reflected upon.\n\nGroup projects enhance communication skills, foster team spirit, and promote innovative thinking. However, they also pose challenges like time management issues, potential conflicts, and uneven responsibility distribution. Despite these drawbacks, the benefits make group projects a valuable experience.",
+    "essay_short_zh": "在小组作业中,第一步是分配角色,确保每个人知道他们的任务。接下来是头脑风暴,以便在项目上达成共识。合作与协作是关键,但如果有些成员不均衡贡献,搭便车问题可能出现。团队必须遵守截止日期,合并幻灯片并排练演讲。之后,收集反馈并反思过程。\n\n小组作业提高沟通能力,培养团队精神,促进创新思维。然而,它们也带来时间管理问题、潜在冲突和责任不均衡等挑战。尽管有这些缺点,小组作业的好处使其成为一项有价值的体验。"
+  },
+  "论文写作与查重": {
+    "n": 12,
+    "title_zh": "论文写作与查重",
+    "theme_en": "academic writing",
+    "group": "校园学习",
+    "structure": "essay",
+    "seed": "outline → cite → paraphrase → plagiarism → proofread",
+    "items": [
+      {
+        "kind": "word",
+        "text_en": "outline",
+        "text_zh": "提纲",
+        "sort_order": 1,
+        "headword_ref": "outline"
+      },
+      {
+        "kind": "chunk",
+        "text_en": "gather sources",
+        "text_zh": "搜集资料",
+        "sort_order": 2,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "cite correctly",
+        "text_zh": "正确引用",
+        "sort_order": 3,
+        "headword_ref": ""
+      },
+      {
+        "kind": "contrast",
+        "text_en": "paraphrase vs quote",
+        "text_zh": "paraphrase 是用自己的话表达原意,quote 是直接引用原文,需加引号",
+        "sort_order": 4,
+        "headword_ref": ""
+      },
+      {
+        "kind": "collocation",
+        "text_en": "avoid plagiarism",
+        "text_zh": "避免抄袭",
+        "sort_order": 5,
+        "headword_ref": ""
+      },
+      {
+        "kind": "chunk",
+        "text_en": "use plagiarism detection software",
+        "text_zh": "使用查重软件",
+        "sort_order": 6,
+        "headword_ref": ""
+      },
+      {
+        "kind": "word",
+        "text_en": "proofread",
+        "text_zh": "校对",
+        "sort_order": 7,
+        "headword_ref": "proofread"
+      },
+      {
+        "kind": "collocation",
+        "text_en": "finalize the draft",
+        "text_zh": "定稿",
+        "sort_order": 8,
+        "headword_ref": ""
+      }
+    ],
+    "benefits": [
+      "提高写作结构",
+      "确保引用准确",
+      "避免学术不端"
+    ],
+    "drawbacks": [
+      "耗时费力",
+      "查重软件不够准确",
+      "过度依赖技术"
+    ],
+    "essay_full_en": "Writing an academic paper requires careful planning and execution. The process begins with creating a detailed outline, which helps in structuring the paper effectively. Next, one must gather sources from various references to support the arguments. To maintain academic integrity, it is crucial to cite correctly and decide whether to paraphrase or quote, as paraphrasing involves using your own words to express the original idea, while quoting requires using the exact words with quotation marks. This practice helps to avoid plagiarism, a serious academic offense. To further ensure originality, one should use plagiarism detection software. After addressing these elements, proofreading becomes essential to catch any grammatical or typographical errors. Finally, the draft is finalized, ensuring that the paper is polished and ready for submission.\n\nWhile this meticulous process improves the writing structure, ensures accurate citations, and avoids academic misconduct, it can be time-consuming and labor-intensive. Additionally, reliance on plagiarism detection software might not always be accurate, leading to false positives. Over-dependence on technology can also hinder the development of independent writing skills. Balancing these aspects is key to successful academic writing.",
+    "essay_full_zh": "写作学术论文需要精心的规划和执行。首先需要制定详细的提纲,有助于有效地组织论文结构。接下来,需要从各种参考资料中搜集资料来支持论点。为了维护学术诚信,正确引用至关重要,并需决定是paraphrase还是quote,因为paraphrase是用自己的话表达原意,而quote则需要用引号标出原文。这有助于避免抄袭,一种严重的学术违规行为。为进一步确保原创性,应使用查重软件。在解决这些问题后,校对是必不可少的,以发现任何语法或排版错误。最后,定稿确保论文已经打磨完毕,可以提交。\n\n虽然这个细致的过程能提高写作结构,确保引用准确,避免学术不端,但也可能耗时费力。此外,对查重软件的依赖可能不够准确,导致误报。过度依赖技术也可能阻碍独立写作能力的发展。平衡这些方面是成功学术写作的关键。",
+    "essay_short_en": "Writing an academic paper starts with an outline to structure the paper. Then, gather sources to support arguments. Correct citation is crucial, deciding between paraphrase and quote to avoid plagiarism. Paraphrasing uses your words, while quoting uses exact words with quotes. Use plagiarism detection software for originality. Proofreading is essential to catch errors before finalizing the draft.\n\nThis process improves structure, ensures citations, and avoids misconduct, but is time-consuming and software reliability can be an issue. Balancing these is key to success.",
+    "essay_short_zh": "撰写学术论文从提纲开始,用于组织结构。然后,搜集资料支持论点。正确引用至关重要,需在paraphrase和quote之间选择以避免抄袭。paraphrase用自己的话,quote则用引号标出原文。使用查重软件确保原创性。校对对发现错误至关重要,然后定稿。\n\n这个过程提高结构、确保引用、避免不端,但耗时且软件可靠性成问题。平衡这些是成功的关键。"
+  }
+}

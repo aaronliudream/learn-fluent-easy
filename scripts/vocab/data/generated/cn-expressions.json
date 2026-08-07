@@ -1,0 +1,1464 @@
+{
+  "我随便说说": {
+    "cn_phrase": "我随便说说",
+    "cn_note": "表示不确定或非认真",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm just saying.",
+        "register": "casual",
+        "scene_hint": "用于朋友间随意聊天",
+        "example_en": "I'm just saying, maybe we should try a new restaurant.",
+        "example_zh": "我随便说说,或许我们该试试新的餐馆。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "It's just a thought.",
+        "register": "neutral",
+        "scene_hint": "用于表达不确定想法",
+        "example_en": "It's just a thought, but maybe we could start earlier.",
+        "example_zh": "我随便说说,但或许我们可以早点开始。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "This is merely a suggestion.",
+        "register": "formal",
+        "scene_hint": "用于正式场合表达建议",
+        "example_en": "This is merely a suggestion for your consideration.",
+        "example_zh": "我随便说说,供你参考。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "没问题": {
+    "cn_phrase": "没问题",
+    "cn_note": "表示同意或接受",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "No problem.",
+        "register": "casual",
+        "scene_hint": "用于朋友间回应请求",
+        "example_en": "No problem, I'll help you move on Saturday.",
+        "example_zh": "没问题,我周六帮你搬家。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "That sounds fine.",
+        "register": "neutral",
+        "scene_hint": "用于一般场合表示同意",
+        "example_en": "That sounds fine, let's meet at 3 PM.",
+        "example_zh": "没问题,我们下午3点见。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I have no objections.",
+        "register": "formal",
+        "scene_hint": "用于正式场合表示同意",
+        "example_en": "I have no objections to the proposed plan.",
+        "example_zh": "我对提议的计划没问题。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我想也是": {
+    "cn_phrase": "我想也是",
+    "cn_note": "表示赞同他人意见",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I think so too.",
+        "register": "casual",
+        "scene_hint": "用于朋友间表达同意",
+        "example_en": "I think so too, it's a great idea!",
+        "example_zh": "我想也是,这是个好主意!",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I agree with you.",
+        "register": "neutral",
+        "scene_hint": "用于一般场合表示同意",
+        "example_en": "I agree with you, the proposal is promising.",
+        "example_zh": "我想也是,这个提议很有前景。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I concur with your assessment.",
+        "register": "formal",
+        "scene_hint": "用于正式场合表示同意",
+        "example_en": "I concur with your assessment of the situation.",
+        "example_zh": "我想也是,对于这种情况我同意你的看法。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "别生气": {
+    "cn_phrase": "别生气",
+    "cn_note": "用于安抚情绪",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Don't get mad.",
+        "register": "casual",
+        "scene_hint": "用于朋友间安抚情绪",
+        "example_en": "Don't get mad, it was just a joke.",
+        "example_zh": "别生气,这只是个玩笑。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Try to stay calm.",
+        "register": "neutral",
+        "scene_hint": "用于一般场合安抚情绪",
+        "example_en": "Try to stay calm while we sort this out.",
+        "example_zh": "我们处理这件事时,你尽量别生气。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Please remain composed.",
+        "register": "formal",
+        "scene_hint": "用于正式场合安抚情绪",
+        "example_en": "Please remain composed during the discussion.",
+        "example_zh": "在讨论期间请别生气。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我不太确定": {
+    "cn_phrase": "我不太确定",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm not sure",
+        "register": "neutral",
+        "scene_hint": "一般场合表达不确定性",
+        "example_en": "I'm not sure if the meeting is still on.",
+        "example_zh": "我不太确定会议是否还开。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I have no idea",
+        "register": "casual",
+        "scene_hint": "随意表达完全不知情",
+        "example_en": "Honestly, I have no idea where she went.",
+        "example_zh": "老实说，我不太确定她去哪了。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I lack sufficient information to confirm",
+        "register": "formal",
+        "scene_hint": "正式场合强调信息不足",
+        "example_en": "I lack sufficient information to confirm the project's timeline.",
+        "example_zh": "我不太确定项目时间表，因为信息不足。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我来试试": {
+    "cn_phrase": "我来试试",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Let me give it a shot",
+        "register": "casual",
+        "scene_hint": "朋友间尝试新事物",
+        "example_en": "That game looks fun, let me give it a shot.",
+        "example_zh": "那个游戏看起来很有趣，我来试试。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'll give it a try",
+        "register": "neutral",
+        "scene_hint": "一般场合尝试新事物",
+        "example_en": "I haven't cooked this dish before, but I'll give it a try.",
+        "example_zh": "我以前没做过这个菜，但我来试试。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I shall attempt this",
+        "register": "formal",
+        "scene_hint": "正式场合尝试做某事",
+        "example_en": "Given the circumstances, I shall attempt this task.",
+        "example_zh": "鉴于情况，我来试试做这个任务。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我很期待": {
+    "cn_phrase": "我很期待",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Can't wait",
+        "register": "casual",
+        "scene_hint": "朋友间表达对某事的期待",
+        "example_en": "Can't wait for the concert next week!",
+        "example_zh": "我很期待下周的演唱会！",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm looking forward to it",
+        "register": "neutral",
+        "scene_hint": "一般场合表达期待",
+        "example_en": "I'm looking forward to our meeting next Monday.",
+        "example_zh": "我很期待下周一的会议。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I eagerly anticipate",
+        "register": "formal",
+        "scene_hint": "正式场合表达强烈期待",
+        "example_en": "I eagerly anticipate the results of the upcoming study.",
+        "example_zh": "我很期待即将到来的研究结果。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "水滴石穿": {
+    "cn_phrase": "水滴石穿",
+    "cn_note": "强调坚持不懈的力量",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "Keep on keeping on.",
+        "register": "casual",
+        "scene_hint": "鼓励朋友坚持下去",
+        "example_en": "I know it's tough, but keep on keeping on.",
+        "example_zh": "我知道这很难,但水滴石穿,继续坚持下去。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Persistence pays off.",
+        "register": "neutral",
+        "scene_hint": "在一般场合谈论坚持的价值",
+        "example_en": "It took years, but persistence pays off.",
+        "example_zh": "花了几年时间,但水滴石穿,坚持的价值最终显现。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Constant effort can overcome any obstacle.",
+        "register": "formal",
+        "scene_hint": "正式场合中强调努力的重要性",
+        "example_en": "Constant effort can overcome any obstacle in this project.",
+        "example_zh": "在这个项目中,水滴石穿,持续的努力可以克服任何障碍。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "无风不起浪": {
+    "cn_phrase": "无风不起浪",
+    "cn_note": "指事情总有起因",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "Where there's smoke, there's fire.",
+        "register": "casual",
+        "scene_hint": "谈论传闻或谣言时",
+        "example_en": "I heard they're breaking up. Where there's smoke, there's fire.",
+        "example_zh": "我听说他们要分手了,无风不起浪。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "There's no effect without a cause.",
+        "register": "neutral",
+        "scene_hint": "分析问题时提到因果关系",
+        "example_en": "The sudden drop in sales suggests there's no effect without a cause.",
+        "example_zh": "销售的突然下降表明无风不起浪,一定有原因。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Every event has an underlying cause.",
+        "register": "formal",
+        "scene_hint": "正式分析事件的起因",
+        "example_en": "Every event has an underlying cause that must be investigated thoroughly.",
+        "example_zh": "每个事件都有其根本原因,无风不起浪,需要彻底调查。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "不入虎穴,焉得虎子": {
+    "cn_phrase": "不入虎穴,焉得虎子",
+    "cn_note": "强调冒险的重要性",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "No guts, no glory.",
+        "register": "casual",
+        "scene_hint": "鼓励朋友勇敢尝试",
+        "example_en": "You should go for it. No guts, no glory!",
+        "example_zh": "你应该去尝试,不入虎穴,焉得虎子!",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Nothing ventured, nothing gained.",
+        "register": "neutral",
+        "scene_hint": "劝说某人尝试新事物",
+        "example_en": "Consider applying for that job. Nothing ventured, nothing gained.",
+        "example_zh": "考虑申请那份工作,不入虎穴,焉得虎子。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Risk is indispensable to achievement.",
+        "register": "formal",
+        "scene_hint": "正式场合中谈论风险和成就",
+        "example_en": "In business, risk is indispensable to achievement and innovation.",
+        "example_zh": "在商业中,不入虎穴,焉得虎子,风险是成就和创新的关键。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "江山易改,本性难移": {
+    "cn_phrase": "江山易改,本性难移",
+    "cn_note": "强调本性难以改变",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "A leopard can't change its spots.",
+        "register": "casual",
+        "scene_hint": "朋友间谈论某人不改的习惯",
+        "example_en": "He promised to be punctual, but a leopard can't change its spots.",
+        "example_zh": "他承诺会准时,但江山易改,本性难移。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Old habits die hard.",
+        "register": "neutral",
+        "scene_hint": "一般场合讨论习惯难改",
+        "example_en": "He's trying to quit smoking, but old habits die hard.",
+        "example_zh": "他在努力戒烟,但江山易改,本性难移。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Innate characteristics are resistant to change.",
+        "register": "formal",
+        "scene_hint": "正式场合中讨论性格特征",
+        "example_en": "In psychology, innate characteristics are resistant to change, influencing behavior.",
+        "example_zh": "在心理学中,江山易改,本性难移,影响行为。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "众口难调": {
+    "cn_phrase": "众口难调",
+    "cn_note": "指难以满足所有人的需求",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "You can't please everyone.",
+        "register": "casual",
+        "scene_hint": "朋友间谈论无法让每个人满意",
+        "example_en": "I chose the movie, but you can't please everyone.",
+        "example_zh": "我选了电影,但众口难调,不可能让每个人都满意。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "It's difficult to satisfy all interests.",
+        "register": "neutral",
+        "scene_hint": "一般场合中描述协调问题",
+        "example_en": "In planning events, it's difficult to satisfy all interests.",
+        "example_zh": "在策划活动时,众口难调,很难满足所有人的需求。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Accommodating all preferences is challenging.",
+        "register": "formal",
+        "scene_hint": "正式场合谈论协调复杂需求",
+        "example_en": "In policy-making, accommodating all preferences is challenging and requires negotiation.",
+        "example_zh": "在政策制定中,众口难调,协调所有偏好具有挑战性,需要协商。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "老马识途": {
+    "cn_phrase": "老马识途",
+    "cn_note": "指经验丰富的人善于指导",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "An old hand knows the ropes.",
+        "register": "casual",
+        "scene_hint": "谈论某人经验丰富",
+        "example_en": "Ask Tom for help; he's an old hand and knows the ropes.",
+        "example_zh": "找汤姆帮忙,他是老马识途,经验丰富。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Experience is the best guide.",
+        "register": "neutral",
+        "scene_hint": "一般场合中讨论经验的价值",
+        "example_en": "In navigating complex tasks, experience is the best guide.",
+        "example_zh": "在处理复杂任务时,老马识途,经验是最好的指导。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Veteran insight is invaluable for guidance.",
+        "register": "formal",
+        "scene_hint": "正式场合中提到经验的作用",
+        "example_en": "In strategic planning, veteran insight is invaluable for guidance and success.",
+        "example_zh": "在战略规划中,老马识途,资深人士的见解对指导和成功至关重要。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "那不关我的事": {
+    "cn_phrase": "那不关我的事",
+    "cn_note": "用于撇清关系",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "That's none of my business",
+        "register": "neutral",
+        "scene_hint": "一般场合撇清关系",
+        "example_en": "You can do what you like, that's none of my business.",
+        "example_zh": "你可以随便做,那不关我的事。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Not my problem",
+        "register": "casual",
+        "scene_hint": "轻松场合撇清关系",
+        "example_en": "If he messed up, that's not my problem.",
+        "example_zh": "如果他搞砸了,那不关我的事。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "That is not my concern",
+        "register": "formal",
+        "scene_hint": "正式场合撇清关系",
+        "example_en": "I'm afraid that is not my concern at this point.",
+        "example_zh": "恐怕那不关我的事。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我不明白": {
+    "cn_phrase": "我不明白",
+    "cn_note": "用于表达不理解",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I don't understand",
+        "register": "neutral",
+        "scene_hint": "一般场合表达不解",
+        "example_en": "I don't understand what you mean by that.",
+        "example_zh": "我不明白你那是什么意思。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm lost",
+        "register": "casual",
+        "scene_hint": "随意场合表达不解",
+        "example_en": "I'm lost. Can you explain it again?",
+        "example_zh": "我不明白。你能再解释一下吗?",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I'm not clear on that",
+        "register": "formal",
+        "scene_hint": "正式场合表达不解",
+        "example_en": "I'm not clear on that point. Could you elaborate?",
+        "example_zh": "我不明白那一点。你能详细说明吗?",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我得走了": {
+    "cn_phrase": "我得走了",
+    "cn_note": "用于表示要离开",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I have to go",
+        "register": "neutral",
+        "scene_hint": "一般场合表示要走",
+        "example_en": "It's getting late, I have to go.",
+        "example_zh": "时间不早了,我得走了。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Gotta run",
+        "register": "casual",
+        "scene_hint": "朋友间表达要离开",
+        "example_en": "Sorry, gotta run, see you later!",
+        "example_zh": "抱歉,我得走了,回头见!",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I must take my leave",
+        "register": "formal",
+        "scene_hint": "正式场合表示要离开",
+        "example_en": "I must take my leave now, thank you for the meeting.",
+        "example_zh": "我得走了,谢谢你们的会议。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "随便你": {
+    "cn_phrase": "随便你",
+    "cn_note": "用于表示无所谓",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "It's up to you",
+        "register": "neutral",
+        "scene_hint": "一般场合表示无所谓",
+        "example_en": "We can eat anywhere, it's up to you.",
+        "example_zh": "我们可以随便吃,随便你。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Whatever you want",
+        "register": "casual",
+        "scene_hint": "朋友间表达无所谓",
+        "example_en": "We can watch whatever you want.",
+        "example_zh": "你想看什么都行,随便你。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I leave it to your discretion",
+        "register": "formal",
+        "scene_hint": "正式场合表示无所谓",
+        "example_en": "I leave it to your discretion whether to proceed.",
+        "example_zh": "是否继续,随便你。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我来帮你": {
+    "cn_phrase": "我来帮你",
+    "cn_note": "用于表示愿意帮忙",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Let me help you",
+        "register": "neutral",
+        "scene_hint": "一般场合表示愿意帮忙",
+        "example_en": "Let me help you with those bags.",
+        "example_zh": "我来帮你拿这些袋子。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I've got you covered",
+        "register": "casual",
+        "scene_hint": "朋友间表示帮忙",
+        "example_en": "Don't worry about the tickets, I've got you covered.",
+        "example_zh": "别担心票的问题,我来帮你。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I am at your service",
+        "register": "formal",
+        "scene_hint": "正式场合表示愿意帮忙",
+        "example_en": "If you need anything, I am at your service.",
+        "example_zh": "如果你需要任何帮助,我来帮你。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我同意": {
+    "cn_phrase": "我同意",
+    "cn_note": "用于表示赞同",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I agree",
+        "register": "neutral",
+        "scene_hint": "一般场合表示赞同",
+        "example_en": "I agree with your point about the budget.",
+        "example_zh": "我同意你关于预算的观点。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm with you",
+        "register": "casual",
+        "scene_hint": "朋友间表示赞同",
+        "example_en": "I'm with you on this, let's go for it.",
+        "example_zh": "我同意,就这么做吧。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I am in accord",
+        "register": "formal",
+        "scene_hint": "正式场合表示赞同",
+        "example_en": "I am in accord with the board's decision.",
+        "example_zh": "我同意董事会的决定。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我不知道": {
+    "cn_phrase": "我不知道",
+    "cn_note": "用于表示不知情",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I don't know",
+        "register": "neutral",
+        "scene_hint": "一般场合表示不知情",
+        "example_en": "I don't know the answer to that question.",
+        "example_zh": "我不知道那个问题的答案。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "No idea",
+        "register": "casual",
+        "scene_hint": "朋友间表示不知情",
+        "example_en": "No idea where she went after the party.",
+        "example_zh": "我不知道她派对后去了哪里。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I'm unaware",
+        "register": "formal",
+        "scene_hint": "正式场合表示不知情",
+        "example_en": "I'm unaware of any changes to the schedule.",
+        "example_zh": "我不知道时间表有任何变动。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我懂了": {
+    "cn_phrase": "我懂了",
+    "cn_note": "用于表示理解",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I get it",
+        "register": "neutral",
+        "scene_hint": "一般场合表示理解",
+        "example_en": "I get it now, thanks for explaining.",
+        "example_zh": "我懂了,谢谢你的解释。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Got it",
+        "register": "casual",
+        "scene_hint": "朋友间表示理解",
+        "example_en": "Got it, I'll send the email right away.",
+        "example_zh": "我懂了,我会马上发邮件。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I comprehend",
+        "register": "formal",
+        "scene_hint": "正式场合表示理解",
+        "example_en": "I comprehend the terms you outlined.",
+        "example_zh": "我懂了你所列出的条款。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "没关系": {
+    "cn_phrase": "没关系",
+    "cn_note": "用于安慰他人",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "It's okay",
+        "register": "neutral",
+        "scene_hint": "一般场合安慰他人",
+        "example_en": "It's okay, we all make mistakes.",
+        "example_zh": "没关系,我们都会犯错。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "No worries",
+        "register": "casual",
+        "scene_hint": "朋友间安慰他人",
+        "example_en": "No worries, it happens to everyone.",
+        "example_zh": "没关系,每个人都会遇到。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "It's of no consequence",
+        "register": "formal",
+        "scene_hint": "正式场合安慰他人",
+        "example_en": "It's of no consequence, please proceed.",
+        "example_zh": "没关系,请继续。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我很高兴": {
+    "cn_phrase": "我很高兴",
+    "cn_note": "用于表达开心",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm happy",
+        "register": "neutral",
+        "scene_hint": "一般场合表达开心",
+        "example_en": "I'm happy to hear about your success.",
+        "example_zh": "我很高兴听到你的成功。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm thrilled",
+        "register": "casual",
+        "scene_hint": "朋友间表达开心",
+        "example_en": "I'm thrilled we won the championship!",
+        "example_zh": "我很高兴我们赢得了冠军!",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I am delighted",
+        "register": "formal",
+        "scene_hint": "正式场合表达开心",
+        "example_en": "I am delighted to accept the invitation.",
+        "example_zh": "我很高兴接受邀请。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我很着急": {
+    "cn_phrase": "我很着急",
+    "cn_note": "用于描述紧张或焦虑",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm anxious",
+        "register": "neutral",
+        "scene_hint": "一般场合表达紧张",
+        "example_en": "I'm anxious about my job interview tomorrow.",
+        "example_zh": "我很着急明天的工作面试。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm freaking out",
+        "register": "casual",
+        "scene_hint": "朋友间表达紧张",
+        "example_en": "I'm freaking out about the test results!",
+        "example_zh": "我很着急考试结果!",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I am concerned",
+        "register": "formal",
+        "scene_hint": "正式场合表达紧张",
+        "example_en": "I am concerned about the recent developments.",
+        "example_zh": "我很着急最近的发展情况。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我没听见": {
+    "cn_phrase": "我没听见",
+    "cn_note": "用于表示没听清",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I didn't hear you",
+        "register": "neutral",
+        "scene_hint": "一般场合表示没听清",
+        "example_en": "I'm sorry, I didn't hear you. Could you repeat that?",
+        "example_zh": "抱歉,我没听见。你能再说一次吗?",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I missed that",
+        "register": "casual",
+        "scene_hint": "朋友间表示没听清",
+        "example_en": "I missed that, can you say it again?",
+        "example_zh": "我没听见,你能再说一次吗?",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I did not catch that",
+        "register": "formal",
+        "scene_hint": "正式场合表示没听清",
+        "example_en": "I did not catch that last point, could you clarify?",
+        "example_zh": "我没听见最后一点,你能澄清吗?",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我在路上": {
+    "cn_phrase": "我在路上",
+    "cn_note": "用于告知正前往之中",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm on my way",
+        "register": "neutral",
+        "scene_hint": "一般场合告知在路上",
+        "example_en": "I'm on my way to the office now.",
+        "example_zh": "我在路上去办公室。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Heading over now",
+        "register": "casual",
+        "scene_hint": "朋友间告知在路上",
+        "example_en": "I'm heading over now, see you soon!",
+        "example_zh": "我在路上,很快见!",
+        "sort_order": 2
+      },
+      {
+        "rendition": "In transit",
+        "register": "formal",
+        "scene_hint": "正式场合告知在路上",
+        "example_en": "I am currently in transit and will arrive shortly.",
+        "example_zh": "我在路上,即将到达。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "小心点": {
+    "cn_phrase": "小心点",
+    "cn_note": "用于提醒注意安全",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Be careful",
+        "register": "neutral",
+        "scene_hint": "一般场合提醒注意安全",
+        "example_en": "Be careful when you drive in the rain.",
+        "example_zh": "下雨开车时小心点。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Watch out",
+        "register": "casual",
+        "scene_hint": "随意场合提醒注意安全",
+        "example_en": "Watch out for the wet floor!",
+        "example_zh": "小心点,地滑!",
+        "sort_order": 2
+      },
+      {
+        "rendition": "Exercise caution",
+        "register": "formal",
+        "scene_hint": "正式场合提醒注意安全",
+        "example_en": "Please exercise caution when handling chemicals.",
+        "example_zh": "处理化学品时请小心点。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我在想": {
+    "cn_phrase": "我在想",
+    "cn_note": "用于表示正在考虑",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm thinking",
+        "register": "neutral",
+        "scene_hint": "一般场合表示考虑中",
+        "example_en": "I'm thinking about applying for that job.",
+        "example_zh": "我在想要不要申请那份工作。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm pondering",
+        "register": "formal",
+        "scene_hint": "正式场合表示考虑中",
+        "example_en": "I'm pondering the implications of this decision.",
+        "example_zh": "我在想这个决定的影响。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I'm mulling it over",
+        "register": "casual",
+        "scene_hint": "朋友间表示考虑中",
+        "example_en": "I'm mulling it over before I decide.",
+        "example_zh": "我在想,再做决定。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我想睡觉": {
+    "cn_phrase": "我想睡觉",
+    "cn_note": "用于表示困倦",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm sleepy",
+        "register": "neutral",
+        "scene_hint": "一般场合表示困倦",
+        "example_en": "I'm sleepy, let's call it a night.",
+        "example_zh": "我想睡觉,我们结束吧。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm beat",
+        "register": "casual",
+        "scene_hint": "随意场合表示困倦",
+        "example_en": "I'm beat, time to hit the sack.",
+        "example_zh": "我想睡觉,该上床了。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I am fatigued",
+        "register": "formal",
+        "scene_hint": "正式场合表示困倦",
+        "example_en": "After a long day, I am fatigued and ready for bed.",
+        "example_zh": "经过漫长的一天,我想睡觉。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我忘了": {
+    "cn_phrase": "我忘了",
+    "cn_note": "用于承认忘记",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I forgot",
+        "register": "neutral",
+        "scene_hint": "一般场合承认忘记",
+        "example_en": "I forgot to bring my lunch today.",
+        "example_zh": "我忘了带午餐。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "It slipped my mind",
+        "register": "casual",
+        "scene_hint": "随意场合承认忘记",
+        "example_en": "Sorry, it slipped my mind to call you back.",
+        "example_zh": "抱歉,我忘了回你电话。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I failed to recall",
+        "register": "formal",
+        "scene_hint": "正式场合承认忘记",
+        "example_en": "I failed to recall the details of the agreement.",
+        "example_zh": "我忘了协议的细节。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "杯水车薪": {
+    "cn_phrase": "杯水车薪",
+    "cn_note": "比喻无济于事。",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "a drop in the bucket",
+        "register": "casual",
+        "scene_hint": "朋友间形容微不足道的贡献",
+        "example_en": "Donating $5 is just a drop in the bucket for such a huge project.",
+        "example_zh": "捐5美元对这个庞大的项目来说只是杯水车薪。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "insufficient to meet the needs",
+        "register": "neutral",
+        "scene_hint": "一般场合形容资源不足",
+        "example_en": "The aid provided was insufficient to meet the needs of the affected families.",
+        "example_zh": "提供的援助对受灾家庭来说是杯水车薪。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "inadequate to address the issue",
+        "register": "formal",
+        "scene_hint": "正式场合指措施不足",
+        "example_en": "The proposed measures are inadequate to address the issue at hand.",
+        "example_zh": "所提措施对眼前问题是杯水车薪。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "唇亡齿寒": {
+    "cn_phrase": "唇亡齿寒",
+    "cn_note": "比喻关系密切,互相依存",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "We're in the same boat.",
+        "register": "casual",
+        "scene_hint": "朋友间形容共同利益",
+        "example_en": "Don't worry, we're in the same boat with this project.",
+        "example_zh": "别担心,我们这个项目唇亡齿寒。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "interdependent",
+        "register": "neutral",
+        "scene_hint": "一般场合描述互相依存关系",
+        "example_en": "The two departments are interdependent for success.",
+        "example_zh": "这两个部门唇亡齿寒,成功需要互相依存。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "mutual dependency",
+        "register": "formal",
+        "scene_hint": "正式场合论述密切关系",
+        "example_en": "The mutual dependency of these systems ensures stability.",
+        "example_zh": "这些系统唇亡齿寒,以确保稳定性。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "覆水难收": {
+    "cn_phrase": "覆水难收",
+    "cn_note": "比喻事情不可逆转",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "What's done is done.",
+        "register": "casual",
+        "scene_hint": "朋友间安慰对方放下过去",
+        "example_en": "Don't stress over it. What's done is done.",
+        "example_zh": "别太在意,覆水难收。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "There's no use crying over spilled milk.",
+        "register": "neutral",
+        "scene_hint": "一般场合劝人放下不可逆的事",
+        "example_en": "You missed the deadline. There's no use crying over spilled milk now.",
+        "example_zh": "你错过了截止日期,覆水难收。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "The damage is irreversible.",
+        "register": "formal",
+        "scene_hint": "正式场合论述不可逆转的后果",
+        "example_en": "The damage to the environment is irreversible if actions are not taken.",
+        "example_zh": "如不采取行动,对环境的损害将覆水难收。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我饿了": {
+    "cn_phrase": "我饿了",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm starving.",
+        "register": "casual",
+        "scene_hint": "朋友间随意表达",
+        "example_en": "Let's grab a burger, I'm starving.",
+        "example_zh": "我们去吃个汉堡吧,我饿了。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm hungry.",
+        "register": "neutral",
+        "scene_hint": "一般场合表达饥饿",
+        "example_en": "Do you have any snacks? I'm hungry.",
+        "example_zh": "你有零食吗? 我饿了。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "你有空吗": {
+    "cn_phrase": "你有空吗",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Got a sec?",
+        "register": "casual",
+        "scene_hint": "朋友间随意询问",
+        "example_en": "Hey, got a sec to chat?",
+        "example_zh": "嘿,你有空聊聊吗?",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Are you available?",
+        "register": "neutral",
+        "scene_hint": "一般场合询问时间",
+        "example_en": "Are you available for a meeting tomorrow?",
+        "example_zh": "你明天有空开会吗?",
+        "sort_order": 2
+      }
+    ]
+  },
+  "我保证": {
+    "cn_phrase": "我保证",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I swear.",
+        "register": "casual",
+        "scene_hint": "承诺时的随意说法",
+        "example_en": "I swear, I left the keys right here.",
+        "example_zh": "我保证,我把钥匙放在这里了。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I assure you.",
+        "register": "neutral",
+        "scene_hint": "一般场合保证某事",
+        "example_en": "I assure you, the product will be delivered on time.",
+        "example_zh": "我保证,产品会按时交付。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "关灯": {
+    "cn_phrase": "关灯",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Kill the lights.",
+        "register": "casual",
+        "scene_hint": "非正式场合关灯",
+        "example_en": "It's movie time, kill the lights.",
+        "example_zh": "电影时间到了,关灯吧。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Turn off the lights.",
+        "register": "neutral",
+        "scene_hint": "一般场合要求关灯",
+        "example_en": "Please turn off the lights when you leave.",
+        "example_zh": "请离开时关灯。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "去散步": {
+    "cn_phrase": "去散步",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "Go for a stroll.",
+        "register": "casual",
+        "scene_hint": "朋友间随意提议",
+        "example_en": "It's a nice evening, let's go for a stroll.",
+        "example_zh": "今天天气不错,我们去散步吧。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "Take a walk.",
+        "register": "neutral",
+        "scene_hint": "一般场合建议散步",
+        "example_en": "I like to take a walk after dinner.",
+        "example_zh": "我喜欢晚饭后去散步。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "我不在乎": {
+    "cn_phrase": "我不在乎",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I don't care.",
+        "register": "casual",
+        "scene_hint": "随意表达无所谓",
+        "example_en": "I don't care what they think.",
+        "example_zh": "我不在乎他们怎么想。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "It doesn't matter to me.",
+        "register": "neutral",
+        "scene_hint": "一般场合表示不在乎",
+        "example_en": "It doesn't matter to me if we go or not.",
+        "example_zh": "我不在乎我们去不去。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "我很无聊": {
+    "cn_phrase": "我很无聊",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm bored to death.",
+        "register": "casual",
+        "scene_hint": "非正式表达极端无聊",
+        "example_en": "This lecture is endless, I'm bored to death.",
+        "example_zh": "这堂课没完没了,我很无聊。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm bored.",
+        "register": "neutral",
+        "scene_hint": "一般场合表达无聊",
+        "example_en": "I'm bored, let's do something fun.",
+        "example_zh": "我很无聊,我们做点有趣的事吧。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "真可惜": {
+    "cn_phrase": "真可惜",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "What a bummer.",
+        "register": "casual",
+        "scene_hint": "朋友间表示遗憾",
+        "example_en": "The concert's canceled, what a bummer.",
+        "example_zh": "演唱会取消了,真可惜。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "That's unfortunate.",
+        "register": "neutral",
+        "scene_hint": "一般场合表示遗憾",
+        "example_en": "That's unfortunate, I was looking forward to it.",
+        "example_zh": "真可惜,我很期待的。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "我想休息一下": {
+    "cn_phrase": "我想休息一下",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I need a break.",
+        "register": "casual",
+        "scene_hint": "随意表达需要休息",
+        "example_en": "I've been studying all day, I need a break.",
+        "example_zh": "我学习了一整天,我想休息一下。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I want to take a rest.",
+        "register": "neutral",
+        "scene_hint": "一般场合表示休息",
+        "example_en": "After the meeting, I want to take a rest.",
+        "example_zh": "会议结束后,我想休息一下。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "画蛇添足": {
+    "cn_phrase": "画蛇添足",
+    "cn_note": "",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "add unnecessary details",
+        "register": "neutral",
+        "scene_hint": "做事多此一举时",
+        "example_en": "Her story was good, but she added unnecessary details that confused everyone.",
+        "example_zh": "她的故事很好,但画蛇添足的细节让人困惑。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "gild the lily",
+        "register": "formal",
+        "scene_hint": "做事多此一举时",
+        "example_en": "The designer suggested not to gild the lily by adding more decorations.",
+        "example_zh": "设计师建议不要画蛇添足,增添更多装饰。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "入乡随俗": {
+    "cn_phrase": "入乡随俗",
+    "cn_note": "",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "when in Rome, do as the Romans do",
+        "register": "neutral",
+        "scene_hint": "适应当地习俗时",
+        "example_en": "When in Rome, do as the Romans do; try the local food.",
+        "example_zh": "入乡随俗,试试当地的食物。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "adapt to local customs",
+        "register": "formal",
+        "scene_hint": "适应当地习俗时",
+        "example_en": "Visitors are advised to adapt to local customs to enhance their experience.",
+        "example_zh": "建议游客入乡随俗,以提升体验。",
+        "sort_order": 2
+      }
+    ]
+  },
+  "真好吃": {
+    "cn_phrase": "真好吃",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "This is delicious!",
+        "register": "casual",
+        "scene_hint": "朋友聚餐时",
+        "example_en": "Wow, this is delicious! Did you make it?",
+        "example_zh": "哇,真好吃!是你做的吗?",
+        "sort_order": 1
+      },
+      {
+        "rendition": "The food tastes great.",
+        "register": "neutral",
+        "scene_hint": "一般场合用餐时",
+        "example_en": "The food tastes great. What's the recipe?",
+        "example_zh": "这食物真好吃。配方是什么?",
+        "sort_order": 2
+      },
+      {
+        "rendition": "The cuisine is exquisite.",
+        "register": "formal",
+        "scene_hint": "正式场合用餐时",
+        "example_en": "The cuisine is exquisite. My compliments to the chef.",
+        "example_zh": "这道菜真好吃。请代我向厨师致意。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我很生气": {
+    "cn_phrase": "我很生气",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm pissed off",
+        "register": "casual",
+        "scene_hint": "非正式场合表达愤怒时",
+        "example_en": "I'm pissed off about the cancellation.",
+        "example_zh": "取消让我很生气。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I'm upset",
+        "register": "neutral",
+        "scene_hint": "一般场合表达不满时",
+        "example_en": "I'm upset about how things turned out.",
+        "example_zh": "事情的结果让我很生气。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I am quite displeased",
+        "register": "formal",
+        "scene_hint": "正式场合表达不悦时",
+        "example_en": "I am quite displeased with the service provided.",
+        "example_zh": "我对所提供的服务很生气。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "骑虎难下": {
+    "cn_phrase": "骑虎难下",
+    "cn_note": "指事情进行中难以停下。",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "caught between a rock and a hard place",
+        "register": "casual",
+        "scene_hint": "朋友间表达两难境地",
+        "example_en": "I'm caught between a rock and a hard place with this job offer.",
+        "example_zh": "我在这份工作邀请上骑虎难下。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "in a bind",
+        "register": "neutral",
+        "scene_hint": "一般场合表达困境",
+        "example_en": "I'm in a bind with these conflicting deadlines.",
+        "example_zh": "这些互相冲突的截止日期让我骑虎难下。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "in an untenable position",
+        "register": "formal",
+        "scene_hint": "正式场合描述难以维持的处境",
+        "example_en": "The company found itself in an untenable position due to the scandal.",
+        "example_zh": "公司因丑闻陷入骑虎难下的境地。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我很抱歉": {
+    "cn_phrase": "我很抱歉",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I'm really sorry",
+        "register": "casual",
+        "scene_hint": "随意对话中道歉",
+        "example_en": "I'm really sorry for breaking your mug.",
+        "example_zh": "我很抱歉打破了你的杯子。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I apologize",
+        "register": "neutral",
+        "scene_hint": "一般场合表达歉意",
+        "example_en": "I apologize for the delay in response.",
+        "example_zh": "我很抱歉回复晚了。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I extend my apologies",
+        "register": "formal",
+        "scene_hint": "正式书面或对上级道歉",
+        "example_en": "I extend my apologies for the oversight in the report.",
+        "example_zh": "我很抱歉报告中的疏漏。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "你说得对": {
+    "cn_phrase": "你说得对",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "You're right",
+        "register": "casual",
+        "scene_hint": "随意同意他人观点",
+        "example_en": "You're right, this movie is really good.",
+        "example_zh": "你说得对,这电影确实不错。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "That is correct",
+        "register": "neutral",
+        "scene_hint": "一般场合确认他人正确",
+        "example_en": "That is correct, the meeting starts at 3 PM.",
+        "example_zh": "你说得对,会议三点开始。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "You are absolutely correct",
+        "register": "formal",
+        "scene_hint": "正式场合强调对方正确",
+        "example_en": "You are absolutely correct in your assessment.",
+        "example_zh": "你说得对,你的评估很准确。",
+        "sort_order": 3
+      }
+    ]
+  },
+  "我需要帮助": {
+    "cn_phrase": "我需要帮助",
+    "cn_note": "",
+    "category": "daily",
+    "renditions": [
+      {
+        "rendition": "I need a hand",
+        "register": "casual",
+        "scene_hint": "随意请求帮助",
+        "example_en": "I need a hand with these boxes.",
+        "example_zh": "我需要帮助搬这些箱子。",
+        "sort_order": 1
+      },
+      {
+        "rendition": "I need some assistance",
+        "register": "neutral",
+        "scene_hint": "一般场合请求帮助",
+        "example_en": "I need some assistance with my computer.",
+        "example_zh": "我需要帮助修一下电脑。",
+        "sort_order": 2
+      },
+      {
+        "rendition": "I require assistance",
+        "register": "formal",
+        "scene_hint": "正式场合请求帮助",
+        "example_en": "I require assistance in finalizing the report.",
+        "example_zh": "我需要帮助完成报告。",
+        "sort_order": 3
+      }
+    ]
+  }
+}

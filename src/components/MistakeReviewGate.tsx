@@ -86,7 +86,32 @@ function isRedoableMcq(m: Mistake): boolean {
 }
 
 const TARGET = 5;
-const dailyKey = (userId: string) => `mistakeReviewGate:${userId}:${bjToday()}`;
+
+/**
+ * 「今天已经弹过」标记(2026-08-07)。
+ *
+ * ★为什么换 key、为什么不带 userId★
+ * 旧实现是 `mistakeReviewGate:<userId>:<日期>`,而且**只在 close() 里写** ——
+ * 可关闭按钮在做满 5 道前是 disabled,于是用户中途刷新一下、切个页,
+ * maybeOpen 重跑、标记从没写过 → 同一批题当天反复弹。这是「一天弹很多次」的根因。
+ *
+ * 现在:① 标记改在**弹窗打开的那一刻**写,做没做完都算数;
+ *       ② key 不带 userId,所以能在 auth.getUser() 之前就判掉 ——
+ *          今天已弹过就直接 return,连那次跨境的 getUser + 选题查询都不发。
+ *
+ * 代价:同一台浏览器当天换账号登录,第二个账号今天不会再被拦。这是刻意取舍 ——
+ * 这个标记的语义本来就是「别再烦这台设备」,不是账号级的学习进度。
+ *
+ * 日期用北京时间,与 RPC bump_mistake_correct 里的 `_today` 同口径(见 bjToday)。
+ * 跨天自动失效:key 里带日期,昨天的 key 天然不再命中,不需要任何清理逻辑。
+ */
+const shownKey = () => `mistake_gate_shown_${bjToday()}`;
+const markShownToday = () => {
+  try { localStorage.setItem(shownKey(), "1"); } catch { /* 隐私模式忽略 */ }
+};
+const wasShownToday = (): boolean => {
+  try { return !!localStorage.getItem(shownKey()); } catch { return false; }
+};
 
 async function fetchDueRedoable(): Promise<Mistake[]> {
   const now = Date.now();
@@ -111,18 +136,23 @@ export function MistakeReviewGate() {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
-  const userIdRef = useRef<string | null>(null);
+  // userIdRef 已随「标记改在打开时写」一并去掉:它此前只服务于 close() 里那次
+  // localStorage 写入,现在没有任何读取方,留着就是只写不读的死状态。
   const busyRef = useRef(false); // 防重入(load 事件 + SIGNED_IN 同时触发)
 
   const maybeOpen = useCallback(async () => {
     if (busyRef.current || open) return;
+    // ★最先判★ 今天已弹过就到此为止 —— 连 getUser 和选题查询都不发。
+    // (key 不带 userId 正是为了能在这里判,见 shownKey 注释)
+    if (wasShownToday()) return;
     busyRef.current = true;
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
-      userIdRef.current = user.id;
-      if (localStorage.getItem(dailyKey(user.id))) return; // 今天已完成/已弹过
+      // ★打开的同一时刻就记账★ 不等做满 5 道、不等 close()。
+      // 用户中途刷新/切页 → 上面那个 wasShownToday() 直接拦下,不会再弹第二次。
       setOpen(true);
+      markShownToday();
       setPhase("loading");
       let rows: Mistake[] = [];
       try {
@@ -171,7 +201,7 @@ export function MistakeReviewGate() {
   const actionRef = useRevealScroll<HTMLDivElement>(revealed);
 
   const close = useCallback(() => {
-    if (userIdRef.current) localStorage.setItem(dailyKey(userIdRef.current), "1");
+    // 「今天已弹过」标记已在 maybeOpen 打开弹窗时写入,这里不再重复写。
     setOpen(false);
   }, []);
 

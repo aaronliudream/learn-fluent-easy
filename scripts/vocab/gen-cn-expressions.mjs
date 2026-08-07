@@ -51,7 +51,9 @@ const SPEC_I = {
   renditionWords: { daily: [1, 8], proverb: [1, 10] },
   exampleWords: [6, 16],
   cnPhraseChars: [2, 10],
-  cnNoteChars: [0, 20],
+  /* 上限从 20 放宽到 60:Aaron 裁定「英语无对等成语」这类注要写清**为什么无对等、
+     直译在什么场合才能用**,20 字装不下(井底之蛙那条 45 字)。判据跟裁决走。 */
+  cnNoteChars: [0, 60],
   sceneHintChars: [4, 16],
 };
 

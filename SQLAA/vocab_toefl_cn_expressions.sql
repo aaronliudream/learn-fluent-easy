@@ -64,7 +64,7 @@ INSERT INTO vocab_cn_expressions (cn_phrase, cn_note, category, sort_order) VALU
   ('人无远虑,必有近忧', '/', 'proverb', 42),
   ('不入虎穴,焉得虎子', '/', 'proverb', 43),
   ('近朱者赤,近墨者黑', '/', 'proverb', 44),
-  ('井底之蛙', NULL, 'proverb', 45),
+  ('井底之蛙', '英语无对等成语;a frog in a well 是中文直译,母语者能懂但只在讲中国寓言时才用,不作日常表达', 'proverb', 45),
   ('画蛇添足', NULL, 'proverb', 46),
   ('亡羊补牢', NULL, 'proverb', 47),
   ('隔墙有耳', NULL, 'proverb', 48),
@@ -193,8 +193,9 @@ SELECT e.id, v.rendition, v.register, v.scene_hint, v.example_en, v.example_zh, 
     ('不入虎穴,焉得虎子', 'Fortune favors the bold.', 'formal', '正式场合鼓励冒险', 'He took a chance and succeeded. Fortune favors the bold.', '他冒险并成功了。不入虎穴,焉得虎子。', 2),
     ('近朱者赤,近墨者黑', 'Birds of a feather flock together.', 'neutral', '形容人以类聚', 'He started hanging out with musicians and became one himself. Birds of a feather flock together.', '他开始和音乐家们混在一起,自己也成了音乐家。近朱者赤,近墨者黑。', 1),
     ('近朱者赤,近墨者黑', 'You are judged by the company you keep.', 'formal', '正式场合谈论交友影响', 'Her reputation suffered because of her friends. You are judged by the company you keep.', '她的名声因朋友受损。近朱者赤,近墨者黑。', 2),
-    ('井底之蛙', 'He has a narrow view of the world', 'neutral', '说某人见识狭隘', 'He has a narrow view of the world, thinking only his town matters.', '他真是井底之蛙,总觉得只有他们小镇的事情才重要。', 1),
-    ('井底之蛙', 'You''re living in a bubble.', 'casual', '指出对方视野狭窄', 'You''re living in a bubble if you think that''s all there is.', '你真是井底之蛙,要是你觉得那就是全部的话。', 2),
+    ('井底之蛙', 'living in a bubble', 'casual', '说人脱离外界活在小世界', 'She doesn''t know much about the world, living in a bubble.', '她对世界知之甚少,活在自己的小世界里。井底之蛙。', 1),
+    ('井底之蛙', 'a big fish in a small pond', 'neutral', '说人在小圈子里自视甚高', 'He thinks he''s a big fish in a small pond, but he''s never faced real competition.', '他觉得自己在小圈子里很了不起，但他从未面对过真正的竞争。井底之蛙。', 2),
+    ('井底之蛙', 'have a narrow view of the world', 'formal', '正式指出眼界狭窄', 'Those who never travel have a narrow view of the world.', '从不出门远行的人眼界狭窄。井底之蛙。', 3),
     ('画蛇添足', 'You''re overdoing it.', 'casual', '朋友间提醒画蛇添足', 'Adding more spices will ruin the dish. You''re overdoing it.', '加更多香料会毁了这道菜,你这就是画蛇添足。', 1),
     ('画蛇添足', 'That''s unnecessary embellishment.', 'neutral', '指出某人多此一举', 'The extra chapter doesn''t add value; it''s unnecessary embellishment.', '加的那一章没有意义,这就是画蛇添足。', 2),
     ('亡羊补牢', 'Better late than never.', 'casual', '朋友间鼓励及时补救', 'You finally started exercising? Better late than never!', '你终于开始锻炼了? 亡羊补牢,犹未晚也!', 1),
@@ -216,8 +217,8 @@ SELECT e.id, v.rendition, v.register, v.scene_hint, v.example_en, v.example_zh, 
 SELECT '表达恰 51 条' AS expect,
        (SELECT count(*) FROM vocab_cn_expressions) = 51 AS ok
 UNION ALL
-SELECT '说法恰 132 条',
-       (SELECT count(*) FROM vocab_cn_renditions) = 132
+SELECT '说法恰 133 条',
+       (SELECT count(*) FROM vocab_cn_renditions) = 133
 UNION ALL
 SELECT '每条表达都有 2-3 个说法',
        NOT EXISTS (SELECT 1 FROM vocab_cn_expressions e

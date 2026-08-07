@@ -371,12 +371,13 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 | neutral | **Birds of a feather flock together.** | 形容人以类聚 | He started hanging out with musicians and became one himself. Birds of a feather flock together.<br>他开始和音乐家们混在一起,自己也成了音乐家。近朱者赤,近墨者黑。 |
 | formal | **You are judged by the company you keep.** | 正式场合谈论交友影响 | Her reputation suffered because of her friends. You are judged by the company you keep.<br>她的名声因朋友受损。近朱者赤,近墨者黑。 |
 
-**井底之蛙**
+**井底之蛙**(英语无对等成语;a frog in a well 是中文直译,母语者能懂但只在讲中国寓言时才用,不作日常表达)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **He has a narrow view of the world** | 说某人见识狭隘 | He has a narrow view of the world, thinking only his town matters.<br>他真是井底之蛙,总觉得只有他们小镇的事情才重要。 |
-| casual | **You're living in a bubble.** | 指出对方视野狭窄 | You're living in a bubble if you think that's all there is.<br>你真是井底之蛙,要是你觉得那就是全部的话。 |
+| casual | **living in a bubble** | 说人脱离外界活在小世界 | She doesn't know much about the world, living in a bubble.<br>她对世界知之甚少,活在自己的小世界里。井底之蛙。 |
+| neutral | **a big fish in a small pond** | 说人在小圈子里自视甚高 | He thinks he's a big fish in a small pond, but he's never faced real competition.<br>他觉得自己在小圈子里很了不起，但他从未面对过真正的竞争。井底之蛙。 |
+| formal | **have a narrow view of the world** | 正式指出眼界狭窄 | Those who never travel have a narrow view of the world.<br>从不出门远行的人眼界狭窄。井底之蛙。 |
 
 **画蛇添足**
 

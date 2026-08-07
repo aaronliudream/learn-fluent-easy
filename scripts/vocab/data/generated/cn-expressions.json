@@ -1237,24 +1237,32 @@
   },
   "井底之蛙": {
     "cn_phrase": "井底之蛙",
-    "cn_note": "",
     "category": "proverb",
+    "cn_note": "英语无对等成语;a frog in a well 是中文直译,母语者能懂但只在讲中国寓言时才用,不作日常表达",
     "renditions": [
       {
-        "rendition": "He has a narrow view of the world",
-        "register": "neutral",
-        "scene_hint": "说某人见识狭隘",
-        "example_en": "He has a narrow view of the world, thinking only his town matters.",
-        "example_zh": "他真是井底之蛙,总觉得只有他们小镇的事情才重要。",
-        "sort_order": 1
+        "rendition": "living in a bubble",
+        "register": "casual",
+        "scene_hint": "说人脱离外界活在小世界",
+        "sort_order": 1,
+        "example_en": "She doesn't know much about the world, living in a bubble.",
+        "example_zh": "她对世界知之甚少,活在自己的小世界里。井底之蛙。"
       },
       {
-        "rendition": "You're living in a bubble.",
-        "register": "casual",
-        "scene_hint": "指出对方视野狭窄",
-        "example_en": "You're living in a bubble if you think that's all there is.",
-        "example_zh": "你真是井底之蛙,要是你觉得那就是全部的话。",
-        "sort_order": 2
+        "rendition": "a big fish in a small pond",
+        "register": "neutral",
+        "scene_hint": "说人在小圈子里自视甚高",
+        "sort_order": 2,
+        "example_en": "He thinks he's a big fish in a small pond, but he's never faced real competition.",
+        "example_zh": "他觉得自己在小圈子里很了不起，但他从未面对过真正的竞争。井底之蛙。"
+      },
+      {
+        "rendition": "have a narrow view of the world",
+        "register": "formal",
+        "scene_hint": "正式指出眼界狭窄",
+        "sort_order": 3,
+        "example_en": "Those who never travel have a narrow view of the world.",
+        "example_zh": "从不出门远行的人眼界狭窄。井底之蛙。"
       }
     ]
   },

@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,库内实证:vocab_dictionary 表 + vocab_words.syllables 列已存在
 -- 两件事,一个文件:
 --   G 段  音节拆分  → vocab_words 加 syllables text[] + syllable_ipa text[]
 --   PR-8  点词查词  → 建 vocab_dictionary(ECDICT 预导入例句全部 token)

@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,Aaron 回报 validate 四条全 t
 -- H 段补丁 —— 删 1 增 1 改 3(Aaron 审 50 条后)
 --
 -- 【删】kick the bucket —— 粗俗戏谑说法(≈中文"蹬腿了"),违反本段

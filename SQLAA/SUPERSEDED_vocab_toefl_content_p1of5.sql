@@ -1,3 +1,4 @@
+-- ⛔ SUPERSEDED —— 已被补丁取代,勿单独重跑(见下方警告头)
 -- ═══════════════════════════════════════════════════════════════
 -- ⚠️ 本文件已被补丁取代,**勿单独重跑**。
 --    取代它的补丁:content_patch1 · defzh_lost_fix · sense_fix_v2_and_comma · short_sense_fix · short_sense_fix_v2 · remove_fagot · review_patch_20260805

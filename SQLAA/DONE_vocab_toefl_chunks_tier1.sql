@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,库内实证:vocab_chunks 中非 idiom 词块恰 100 条
 -- D 段 词块 tier1 —— 100 条
 -- 四类定额:phrasal_verb 35 / collocation_ext 30 / frame 20 / connector 15
 -- ⚠️ 一条都没有 idiom —— 那是 H 段的,k1 闸门硬卡。

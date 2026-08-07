@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,库内实证:vocab_examples 中 594 条有 audio_url
 -- 词汇音频回填:198 词音频 + 594 例句音频
 -- 生成: node scripts/vocab/generate-audio.mjs --bank=toefl --emit-sql
 -- 合成配置: voice=alloy accent=US speed=0.95(与前端 speakUS 一致,

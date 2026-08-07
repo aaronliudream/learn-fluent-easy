@@ -1,0 +1,232 @@
+{
+  "enigma": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者是同一用法的不同译法。"
+  },
+  "genus": {
+    "two_uses": true,
+    "second": "类",
+    "why": "\"属\"用于生物分类,\"类\"用于广义分类。"
+  },
+  "cite": {
+    "two_uses": true,
+    "second": "表彰",
+    "why": "引用用于学术，表彰用于荣誉。"
+  },
+  "membrane": {
+    "two_uses": true,
+    "second": "羊皮纸",
+    "why": "膜和羊皮纸在不同语境中使用。"
+  },
+  "championship": {
+    "two_uses": true,
+    "second": "冠军身份",
+    "why": "锦标赛指比赛，冠军身份指获胜者的地位。"
+  },
+  "retirement": {
+    "two_uses": true,
+    "second": "隐居",
+    "why": "退休和隐居在语境上有明显区别。"
+  },
+  "administrator": {
+    "two_uses": true,
+    "second": "行政官",
+    "why": "管理人和行政官在职责和场合上有区别"
+  },
+  "fiber": {
+    "two_uses": false,
+    "second": "",
+    "why": "纤维和构造在同一语境下可互换。"
+  },
+  "negotiation": {
+    "two_uses": false,
+    "second": "",
+    "why": "\u000e8c磋商\u000e8d和\u000e8c谈判\u000e8d在\u000e8c语境\u000e8d中\u000e8c可以互换\u000e8d\u000e8c使用\u000e8d\u000e8c而不改变意思\u000e8d\u000e8c。"
+  },
+  "frustration": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者都是指挫折的感觉。"
+  },
+  "portray": {
+    "two_uses": false,
+    "second": "",
+    "why": "描绘和描写在此处为同一用法的不同译法。"
+  },
+  "alliance": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"联盟\"和\"联合\"在此语境下是同一用法的不同译法。"
+  },
+  "presidency": {
+    "two_uses": true,
+    "second": "总裁职位",
+    "why": "总统和总裁是不同的职位"
+  },
+  "prediction": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"预测\"和\"预言\"在此语境下可互换。"
+  },
+  "conspiracy": {
+    "two_uses": true,
+    "second": "同谋",
+    "why": "阴谋是策划，同谋是参与。"
+  },
+  "concerned": {
+    "two_uses": true,
+    "second": "关心的",
+    "why": "担忧和关心在语境中不同。"
+  },
+  "testimony": {
+    "two_uses": true,
+    "second": "声明",
+    "why": "法律证词与一般声明不同语境"
+  },
+  "cooperation": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"合作\"和\"协力\"在同一语境下可互换。"
+  },
+  "infection": {
+    "two_uses": true,
+    "second": "影响",
+    "why": "感染指疾病传播，影响指广泛影响。"
+  },
+  "constitutional": {
+    "two_uses": true,
+    "second": "体质的",
+    "why": "涉及法律和生理两个不同领域"
+  },
+  "testify": {
+    "two_uses": false,
+    "second": "",
+    "why": "作证和声明在法律语境中可互换。"
+  },
+  "emission": {
+    "two_uses": true,
+    "second": "发射",
+    "why": "排放物和发射在环境和技术领域中用法不同。"
+  },
+  "survivor": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者是同一用法的不同译法。"
+  },
+  "galaxy": {
+    "two_uses": true,
+    "second": "银河",
+    "why": "星系泛指所有星系，银河特指银河系。"
+  },
+  "allegation": {
+    "two_uses": true,
+    "second": "断言",
+    "why": "指控和断言在法律和日常语境中有不同用法"
+  },
+  "dramatically": {
+    "two_uses": true,
+    "second": "戏剧地",
+    "why": "显著地用于强调变化，戏剧地用于描述风格。"
+  },
+  "monster": {
+    "two_uses": true,
+    "second": "恶人",
+    "why": "怪物指实体，恶人指人品，语境不同"
+  },
+  "fraud": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"欺诈\"和\"诡计\"在此处是同一用法的不同译法。"
+  },
+  "recession": {
+    "two_uses": true,
+    "second": "凹处",
+    "why": "经济衰退和凹处在不同语境中使用。"
+  },
+  "innovation": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"创新\"和\"改革\"在同一语境下可以互换。"
+  },
+  "amendment": {
+    "two_uses": true,
+    "second": "改善",
+    "why": "修正案指法律文件，改善指一般改进。"
+  },
+  "corruption": {
+    "two_uses": true,
+    "second": "堕落",
+    "why": "腐败指政治或经济领域，堕落指道德或行为。"
+  },
+  "awareness": {
+    "two_uses": false,
+    "second": "",
+    "why": "意识和认识在此处是同一用法的不同译法。"
+  },
+  "dedicate": {
+    "two_uses": true,
+    "second": "献出",
+    "why": "致力于强调努力，献出强调给予。"
+  },
+  "counterpart": {
+    "two_uses": true,
+    "second": "副本",
+    "why": "对应物指相应的实体，副本指复制品。"
+  },
+  "exploration": {
+    "two_uses": true,
+    "second": "踏勘",
+    "why": "\"探索\"和\"踏勘\"在语境上有区别，前者更广泛，后者多用于地质等专业领域。"
+  },
+  "accounting": {
+    "two_uses": true,
+    "second": "帐单",
+    "why": "会计学和帐单是不同的概念和应用场景。"
+  },
+  "inflation": {
+    "two_uses": true,
+    "second": "夸张",
+    "why": "通货膨胀和夸张是不同的经济和修辞用法"
+  },
+  "ideological": {
+    "two_uses": true,
+    "second": "空想的",
+    "why": "意识形态的和空想的在不同语境下使用"
+  },
+  "touchdown": {
+    "two_uses": true,
+    "second": "着陆",
+    "why": "体育用语与航空用语的区别"
+  },
+  "anonymous": {
+    "two_uses": true,
+    "second": "姓氏不详的",
+    "why": "匿名和姓氏不详在不同语境下使用"
+  },
+  "ken": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"知识范围\"和\"见地\"是同一用法的不同译法。"
+  },
+  "fixed": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"固定的\"和\"不变的\"在同一语境中可互换。"
+  },
+  "rhetoric": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者都是修辞的不同译法,没有不同用法。"
+  },
+  "banker": {
+    "two_uses": true,
+    "second": "庄家",
+    "why": "银行家和庄家在金融和赌博中有不同的角色。"
+  },
+  "sensitivity": {
+    "two_uses": true,
+    "second": "灵敏度",
+    "why": "敏感性指情感或反应，灵敏度指测量或检测能力。"
+  }
+}

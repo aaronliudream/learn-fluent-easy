@@ -111,6 +111,11 @@ const NOTE_LEVEL = {
 };
 /** 有没有写要点:看有没有括号说明。 */
 const hasNote = def => /[((][^))]{2,}[))]/.test(String(def));
+/* ⚠️ SQL validate 必须用**同一把尺**(第四条规矩)。
+ *    原来闸门查"有没有括号"、validate 查"含不含边界关键词",两把尺 ——
+ *    实测 as a consequence「结果是(有明确因果,非泛泛承接)」内容完全正确,
+ *    却因为关键词表里只有「而非」没有「非」而被判 false。
+ *    中文表达边界的说法太多,关键词表天生列不全;"有没有括号"才是机械可判的。 */
 
 /* ═══ 可分性:规则表判定,模型不碰这个字段(Aaron 2026-08-06 定)═══
  *
@@ -485,9 +490,9 @@ UNION ALL
 SELECT '没有 idiom(那是 H 段的)',
        NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type = 'idiom')
 UNION ALL
-SELECT 'connector 的释义都点出了使用边界',
+SELECT 'connector 的释义都写了边界说明(括号)',
        NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type = 'connector'
-                    AND translation_zh !~ '不用于|不能用|不是|区别|仅用|只用|须|需|前句|后句|而非|不同于|不可');
+                    AND translation_zh !~ '[(（][^)）]{2,}[)）]');
 
 COMMIT;
 `);

@@ -1,0 +1,4602 @@
+{
+  "kept": [
+    {
+      "headword": "concerned",
+      "pos": "adj.",
+      "ours": "担忧的",
+      "cand": "关心的",
+      "overlap": 0.33,
+      "ecdict": "a. 关心的，有关的，参与的，担心的"
+    },
+    {
+      "headword": "intervention",
+      "pos": "n.",
+      "ours": "干预",
+      "cand": "插入",
+      "overlap": 0,
+      "ecdict": "n. 插入，介入，调停"
+    },
+    {
+      "headword": "cite",
+      "pos": "v.",
+      "ours": "引用",
+      "cand": "表彰",
+      "overlap": 0,
+      "ecdict": "vt. 引用，引证，表彰"
+    },
+    {
+      "headword": "transition",
+      "pos": "n.",
+      "ours": "过渡",
+      "cand": "转变",
+      "overlap": 0,
+      "ecdict": "n. 转变，转换，变迁，过渡时期"
+    },
+    {
+      "headword": "negotiation",
+      "pos": "n.",
+      "ours": "谈判",
+      "cand": "磋商",
+      "overlap": 0,
+      "ecdict": "n. 谈判，磋商，交涉"
+    },
+    {
+      "headword": "championship",
+      "pos": "n.",
+      "ours": "锦标赛",
+      "cand": "冠军身份",
+      "overlap": 0,
+      "ecdict": "n. 冠军身份，冠军称号，捍卫"
+    },
+    {
+      "headword": "retirement",
+      "pos": "n.",
+      "ours": "退休",
+      "cand": "隐居",
+      "overlap": 0,
+      "ecdict": "n. 退休，隐居，撤退"
+    },
+    {
+      "headword": "administrator",
+      "pos": "n.",
+      "ours": "管理员",
+      "cand": "行政官",
+      "overlap": 0,
+      "ecdict": "n. 管理人，行政官"
+    },
+    {
+      "headword": "fiber",
+      "pos": "n.",
+      "ours": "纤维",
+      "cand": "构造",
+      "overlap": 0,
+      "ecdict": "n. 纤维，构造，纤维制品"
+    },
+    {
+      "headword": "testimony",
+      "pos": "n.",
+      "ours": "证词",
+      "cand": "声明",
+      "overlap": 0,
+      "ecdict": "n. 证言，证据，声明"
+    },
+    {
+      "headword": "cooperation",
+      "pos": "n.",
+      "ours": "合作",
+      "cand": "协力",
+      "overlap": 0,
+      "ecdict": "n. 合作，协力，配合"
+    },
+    {
+      "headword": "infection",
+      "pos": "n.",
+      "ours": "感染",
+      "cand": "影响",
+      "overlap": 0,
+      "ecdict": "n. 传染，影响，传染病"
+    },
+    {
+      "headword": "constitutional",
+      "pos": "adj.",
+      "ours": "宪法的",
+      "cand": "体质的",
+      "overlap": 0.33,
+      "ecdict": "a. 宪法的，立宪的，体质的"
+    },
+    {
+      "headword": "ken",
+      "pos": "n.",
+      "ours": "知识范围",
+      "cand": "见地",
+      "overlap": 0,
+      "ecdict": "n. 视野范围，知识范围，见地"
+    },
+    {
+      "headword": "awareness",
+      "pos": "n.",
+      "ours": "意识",
+      "cand": "认识",
+      "overlap": 0.5,
+      "ecdict": "n. 意识，认识"
+    },
+    {
+      "headword": "testify",
+      "pos": "v.",
+      "ours": "作证",
+      "cand": "声明",
+      "overlap": 0,
+      "ecdict": "v. 证明，作证，声明，表明"
+    },
+    {
+      "headword": "emission",
+      "pos": "n.",
+      "ours": "排放物",
+      "cand": "发射",
+      "overlap": 0,
+      "ecdict": "n. 发射，射出，发行"
+    },
+    {
+      "headword": "survivor",
+      "pos": "n.",
+      "ours": "幸存者",
+      "cand": "生还者",
+      "overlap": 0.33,
+      "ecdict": "n. 生还者，幸存者"
+    },
+    {
+      "headword": "galaxy",
+      "pos": "n.",
+      "ours": "星系",
+      "cand": "银河",
+      "overlap": 0,
+      "ecdict": "n. 银河，星系，一群(显赫的人物)"
+    },
+    {
+      "headword": "frustration",
+      "pos": "n.",
+      "ours": "挫折感",
+      "cand": "顿挫",
+      "overlap": 0.5,
+      "ecdict": "n. 挫折，顿挫"
+    },
+    {
+      "headword": "portray",
+      "pos": "v.",
+      "ours": "描绘",
+      "cand": "描写",
+      "overlap": 0.5,
+      "ecdict": "vt. 描绘，描写，描绘...的肖像"
+    },
+    {
+      "headword": "dramatically",
+      "pos": "adv.",
+      "ours": "显著地",
+      "cand": "戏剧地",
+      "overlap": 0.33,
+      "ecdict": "adv. 戏剧地，引人注目地，突然地"
+    },
+    {
+      "headword": "alliance",
+      "pos": "n.",
+      "ours": "联盟",
+      "cand": "联合",
+      "overlap": 0.5,
+      "ecdict": "n. 联盟，联合"
+    },
+    {
+      "headword": "presidency",
+      "pos": "n.",
+      "ours": "总统职务或任期",
+      "cand": "总裁职位",
+      "overlap": 0.5,
+      "ecdict": "n. 总统职权，总裁职位"
+    },
+    {
+      "headword": "allegation",
+      "pos": "n.",
+      "ours": "指控",
+      "cand": "断言",
+      "overlap": 0,
+      "ecdict": "n. 断言，主张，申辩"
+    },
+    {
+      "headword": "fraud",
+      "pos": "n.",
+      "ours": "欺诈",
+      "cand": "诡计",
+      "overlap": 0,
+      "ecdict": "n. 欺骗，欺诈，诡计，骗子"
+    },
+    {
+      "headword": "monster",
+      "pos": "n.",
+      "ours": "怪物",
+      "cand": "恶人",
+      "overlap": 0,
+      "ecdict": "n. 怪物，恶人，巨物"
+    },
+    {
+      "headword": "facilitate",
+      "pos": "v.",
+      "ours": "促进",
+      "cand": "使容易",
+      "overlap": 0,
+      "ecdict": "vt. 使容易，促进，帮助"
+    },
+    {
+      "headword": "recession",
+      "pos": "n.",
+      "ours": "经济衰退",
+      "cand": "凹处",
+      "overlap": 0,
+      "ecdict": "n. 后退，凹处，衰退，归还"
+    },
+    {
+      "headword": "prediction",
+      "pos": "n.",
+      "ours": "预测",
+      "cand": "预言",
+      "overlap": 0.5,
+      "ecdict": "n. 预言，预报"
+    },
+    {
+      "headword": "innovation",
+      "pos": "n.",
+      "ours": "创新",
+      "cand": "改革",
+      "overlap": 0,
+      "ecdict": "n. 改革，创新"
+    },
+    {
+      "headword": "amendment",
+      "pos": "n.",
+      "ours": "修正案",
+      "cand": "改善",
+      "overlap": 0,
+      "ecdict": "n. 修订，改善，改良，改正"
+    },
+    {
+      "headword": "undermine",
+      "pos": "v.",
+      "ours": "削弱",
+      "cand": "在...下面挖",
+      "overlap": 0,
+      "ecdict": "vt. 在...下面挖，渐渐破坏，暗地里破坏"
+    },
+    {
+      "headword": "rhetoric",
+      "pos": "n.",
+      "ours": "修辞艺术",
+      "cand": "雄辩(术)",
+      "overlap": 0.33,
+      "ecdict": "n. 修辞，修辞学，雄辩(术)"
+    },
+    {
+      "headword": "corruption",
+      "pos": "n.",
+      "ours": "腐败",
+      "cand": "堕落",
+      "overlap": 0,
+      "ecdict": "n. 腐败，堕落，贪污"
+    },
+    {
+      "headword": "contractor",
+      "pos": "n.",
+      "ours": "承包商",
+      "cand": "立契约的人",
+      "overlap": 0,
+      "ecdict": "n. 立契约的人，承包商"
+    },
+    {
+      "headword": "dedicate",
+      "pos": "v.",
+      "ours": "致力于",
+      "cand": "献出",
+      "overlap": 0,
+      "ecdict": "vt. 献出，贡献"
+    },
+    {
+      "headword": "counterpart",
+      "pos": "n.",
+      "ours": "对应物",
+      "cand": "副本",
+      "overlap": 0,
+      "ecdict": "n. 副本，复本，配对物，相应物"
+    },
+    {
+      "headword": "exploration",
+      "pos": "n.",
+      "ours": "探索",
+      "cand": "踏勘",
+      "overlap": 0,
+      "ecdict": "n. 探险，踏勘，探测"
+    },
+    {
+      "headword": "accounting",
+      "pos": "n.",
+      "ours": "会计",
+      "cand": "帐单",
+      "overlap": 0,
+      "ecdict": "n. 会计学，帐单，清帐"
+    },
+    {
+      "headword": "inflation",
+      "pos": "n.",
+      "ours": "通货膨胀",
+      "cand": "夸张",
+      "overlap": 0,
+      "ecdict": "n. 胀大，夸张，通货膨胀"
+    },
+    {
+      "headword": "inspiration",
+      "pos": "n.",
+      "ours": "灵感",
+      "cand": "鼓舞人心的人或物",
+      "overlap": 0,
+      "ecdict": "n. 灵感，鼓舞人心的人或物，妙计，吸气"
+    },
+    {
+      "headword": "costume",
+      "pos": "n.",
+      "ours": "服装",
+      "cand": "装束",
+      "overlap": 0.5,
+      "ecdict": "n. 装束，服装"
+    },
+    {
+      "headword": "ideological",
+      "pos": "adj.",
+      "ours": "意识形态的",
+      "cand": "空想的",
+      "overlap": 0.33,
+      "ecdict": "a. 意识形态的，空想的"
+    },
+    {
+      "headword": "conspiracy",
+      "pos": "n.",
+      "ours": "阴谋",
+      "cand": "同谋",
+      "overlap": 0.5,
+      "ecdict": "n. 同谋，阴谋，阴谋集团"
+    },
+    {
+      "headword": "touchdown",
+      "pos": "n.",
+      "ours": "触地得分",
+      "cand": "着地",
+      "overlap": 0.5,
+      "ecdict": "n. 触地，触地得分，着地"
+    },
+    {
+      "headword": "anonymous",
+      "pos": "adj.",
+      "ours": "匿名的",
+      "cand": "姓氏不详的",
+      "overlap": 0.33,
+      "ecdict": "a. 姓氏不详的，无名的，无特色的"
+    },
+    {
+      "headword": "flexibility",
+      "pos": "n.",
+      "ours": "灵活性",
+      "cand": "适应性",
+      "overlap": 0.33,
+      "ecdict": "n. 弹性，适应性"
+    },
+    {
+      "headword": "fixed",
+      "pos": "adj.",
+      "ours": "固定的",
+      "cand": "不变的",
+      "overlap": 0.33,
+      "ecdict": "a. 固定的，不变的"
+    },
+    {
+      "headword": "donation",
+      "pos": "n.",
+      "ours": "捐赠",
+      "cand": "捐款",
+      "overlap": 0.5,
+      "ecdict": "n. 捐赠物，捐款，捐赠"
+    },
+    {
+      "headword": "banker",
+      "pos": "n.",
+      "ours": "银行家",
+      "cand": "庄家",
+      "overlap": 0.5,
+      "ecdict": "n. 银行家，庄家"
+    },
+    {
+      "headword": "sensitivity",
+      "pos": "n.",
+      "ours": "敏感性",
+      "cand": "灵敏度",
+      "overlap": 0.33,
+      "ecdict": "n. 敏感，灵敏度"
+    },
+    {
+      "headword": "genre",
+      "pos": "n.",
+      "ours": "类型",
+      "cand": "流派",
+      "overlap": 0,
+      "ecdict": "n. 类型，流派"
+    },
+    {
+      "headword": "migration",
+      "pos": "n.",
+      "ours": "迁移",
+      "cand": "移民",
+      "overlap": 0.5,
+      "ecdict": "n. 移民，移往，移动"
+    },
+    {
+      "headword": "depressed",
+      "pos": "adj.",
+      "ours": "沮丧的",
+      "cand": "降低的",
+      "overlap": 0.33,
+      "ecdict": "a. 沮丧的，降低的"
+    },
+    {
+      "headword": "journalism",
+      "pos": "n.",
+      "ours": "新闻学",
+      "cand": "报章杂志",
+      "overlap": 0,
+      "ecdict": "n. 新闻业，报章杂志"
+    },
+    {
+      "headword": "informal",
+      "pos": "adj.",
+      "ours": "非正式的",
+      "cand": "不拘礼的",
+      "overlap": 0.25,
+      "ecdict": "a. 非正式的，不拘礼的，通俗的"
+    },
+    {
+      "headword": "butt",
+      "pos": "n.",
+      "ours": "臀部",
+      "cand": "粗大的一头",
+      "overlap": 0,
+      "ecdict": "n. 粗大的一头，烟头，靶，笑柄"
+    },
+    {
+      "headword": "threshold",
+      "pos": "n.",
+      "ours": "阈值",
+      "cand": "门槛",
+      "overlap": 0,
+      "ecdict": "n. 门槛，入口，开端，阈"
+    },
+    {
+      "headword": "landmark",
+      "pos": "n.",
+      "ours": "地标",
+      "cand": "划时代的事",
+      "overlap": 0,
+      "ecdict": "n. 陆标，划时代的事，地界标"
+    },
+    {
+      "headword": "consecutive",
+      "pos": "adj.",
+      "ours": "连续的",
+      "cand": "联贯的",
+      "overlap": 0.33,
+      "ecdict": "a. 连续的，联贯的"
+    },
+    {
+      "headword": "devastating",
+      "pos": "adj.",
+      "ours": "毁灭性的",
+      "cand": "(非正式)很好的",
+      "overlap": 0.25,
+      "ecdict": "a. 毁灭性的，(非正式)很好的，引人注目的"
+    },
+    {
+      "headword": "citizenship",
+      "pos": "n.",
+      "ours": "公民身份",
+      "cand": "国籍",
+      "overlap": 0,
+      "ecdict": "n. 国籍，市民权，市民的身份"
+    },
+    {
+      "headword": "accusation",
+      "pos": "n.",
+      "ours": "指控",
+      "cand": "控告",
+      "overlap": 0.5,
+      "ecdict": "n. 控告，指控，指责"
+    },
+    {
+      "headword": "sovereignty",
+      "pos": "n.",
+      "ours": "主权",
+      "cand": "独立国",
+      "overlap": 0,
+      "ecdict": "n. 主权，独立国"
+    },
+    {
+      "headword": "spine",
+      "pos": "n.",
+      "ours": "脊柱",
+      "cand": "背骨",
+      "overlap": 0,
+      "ecdict": "n. 背骨，脊柱，尖刺"
+    },
+    {
+      "headword": "nominate",
+      "pos": "v.",
+      "ours": "提名",
+      "cand": "任命",
+      "overlap": 0,
+      "ecdict": "vt. 提名，任命，命名"
+    },
+    {
+      "headword": "skeptical",
+      "pos": "adj.",
+      "ours": "怀疑的",
+      "cand": "不可知论的",
+      "overlap": 0.33,
+      "ecdict": "a. 怀疑论的，怀疑的，不可知论的"
+    },
+    {
+      "headword": "suppress",
+      "pos": "v.",
+      "ours": "压制",
+      "cand": "使止住",
+      "overlap": 0,
+      "ecdict": "vt. 镇压，使止住，禁止，抑制"
+    },
+    {
+      "headword": "consistency",
+      "pos": "n.",
+      "ours": "一致性",
+      "cand": "黏稠度",
+      "overlap": 0,
+      "ecdict": "n. 坚硬性，黏稠度，一致性"
+    },
+    {
+      "headword": "rejection",
+      "pos": "n.",
+      "ours": "拒绝",
+      "cand": "抛弃",
+      "overlap": 0,
+      "ecdict": "n. 拒绝，抛弃，驳回，被抛弃的东西"
+    },
+    {
+      "headword": "evoke",
+      "pos": "v.",
+      "ours": "唤起",
+      "cand": "召(魂)",
+      "overlap": 0,
+      "ecdict": "vt. 唤起，引起，召(魂)"
+    },
+    {
+      "headword": "warfare",
+      "pos": "n.",
+      "ours": "战争",
+      "cand": "战斗",
+      "overlap": 0.5,
+      "ecdict": "n. 战争，战斗，交战，斗争"
+    },
+    {
+      "headword": "intervene",
+      "pos": "v.",
+      "ours": "干预",
+      "cand": "插入",
+      "overlap": 0,
+      "ecdict": "vi. 插入，调停，干涉"
+    },
+    {
+      "headword": "destiny",
+      "pos": "n.",
+      "ours": "命运",
+      "cand": "定数",
+      "overlap": 0,
+      "ecdict": "n. 命运，定数"
+    },
+    {
+      "headword": "hierarchy",
+      "pos": "n.",
+      "ours": "等级制度",
+      "cand": "僧侣统治",
+      "overlap": 0,
+      "ecdict": "n. 等级制度，僧侣统治，等级体系"
+    },
+    {
+      "headword": "reconstruction",
+      "pos": "n.",
+      "ours": "重建",
+      "cand": "改造",
+      "overlap": 0,
+      "ecdict": "n. 改造，再建"
+    },
+    {
+      "headword": "hostility",
+      "pos": "n.",
+      "ours": "敌意",
+      "cand": "反对",
+      "overlap": 0,
+      "ecdict": "n. 敌意，敌对，反对"
+    },
+    {
+      "headword": "cult",
+      "pos": "n.",
+      "ours": "邪教",
+      "cand": "膜拜",
+      "overlap": 0,
+      "ecdict": "n. 膜拜，礼拜式，祭仪，一群信徒"
+    },
+    {
+      "headword": "odor",
+      "pos": "n.",
+      "ours": "气味",
+      "cand": "名声",
+      "overlap": 0,
+      "ecdict": "n. 气味，香味，名声，意味"
+    },
+    {
+      "headword": "freshly",
+      "pos": "adv.",
+      "ours": "新鲜地",
+      "cand": "精神饱满",
+      "overlap": 0,
+      "ecdict": "adv. 新，新近，精神饱满"
+    },
+    {
+      "headword": "venue",
+      "pos": "n.",
+      "ours": "场所",
+      "cand": "犯罪地点",
+      "overlap": 0,
+      "ecdict": "n. 犯罪地点，审判地，发生地点"
+    },
+    {
+      "headword": "parameter",
+      "pos": "n.",
+      "ours": "参数",
+      "cand": "参变量",
+      "overlap": 0.5,
+      "ecdict": "n. 参变数，参变量，参数，参量"
+    },
+    {
+      "headword": "flaw",
+      "pos": "n.",
+      "ours": "缺陷",
+      "cand": "裂纹",
+      "overlap": 0,
+      "ecdict": "n. 缺点，裂纹，瑕疵，一阵狂风"
+    },
+    {
+      "headword": "frightening",
+      "pos": "adj.",
+      "ours": "令人恐惧的",
+      "cand": "引起突然惊恐的",
+      "overlap": 0.4,
+      "ecdict": "a. 令人恐惧的，引起突然惊恐的"
+    },
+    {
+      "headword": "distinguished",
+      "pos": "adj.",
+      "ours": "杰出的",
+      "cand": "卓著的",
+      "overlap": 0.33,
+      "ecdict": "a. 卓著的，著名的"
+    },
+    {
+      "headword": "supervise",
+      "pos": "v.",
+      "ours": "监督",
+      "cand": "管理",
+      "overlap": 0,
+      "ecdict": "v. 监督，管理，指导"
+    },
+    {
+      "headword": "declaration",
+      "pos": "n.",
+      "ours": "声明",
+      "cand": "宣告",
+      "overlap": 0,
+      "ecdict": "n. 宣告，说明，宣布"
+    },
+    {
+      "headword": "inclined",
+      "pos": "adj.",
+      "ours": "倾向的",
+      "cand": "想要...的",
+      "overlap": 0.33,
+      "ecdict": "a. 倾向于...的，想要...的，可能的，趋向于...的"
+    },
+    {
+      "headword": "eternal",
+      "pos": "adj.",
+      "ours": "永恒的",
+      "cand": "不灭的",
+      "overlap": 0.33,
+      "ecdict": "a. 永恒的，永远的，不灭的"
+    },
+    {
+      "headword": "monopoly",
+      "pos": "n.",
+      "ours": "垄断",
+      "cand": "专卖权",
+      "overlap": 0,
+      "ecdict": "n. 垄断，专卖权，独占事业"
+    },
+    {
+      "headword": "analogy",
+      "pos": "n.",
+      "ours": "类比",
+      "cand": "相似",
+      "overlap": 0,
+      "ecdict": "n. 相似，类似"
+    },
+    {
+      "headword": "erosion",
+      "pos": "n.",
+      "ours": "侵蚀",
+      "cand": "腐蚀",
+      "overlap": 0.5,
+      "ecdict": "n. 腐蚀，冲蚀，侵蚀"
+    },
+    {
+      "headword": "educated",
+      "pos": "adj.",
+      "ours": "受过教育的",
+      "cand": "有教养的",
+      "overlap": 0.5,
+      "ecdict": "a. 受过教育的，有教养的"
+    },
+    {
+      "headword": "courthouse",
+      "pos": "n.",
+      "ours": "法庭",
+      "cand": "郡政府所在地",
+      "overlap": 0,
+      "ecdict": "n. 法院，郡政府所在地"
+    },
+    {
+      "headword": "artery",
+      "pos": "n.",
+      "ours": "动脉",
+      "cand": "干道",
+      "overlap": 0,
+      "ecdict": "n. 动脉，干道，要道"
+    },
+    {
+      "headword": "denounce",
+      "pos": "v.",
+      "ours": "谴责",
+      "cand": "告发",
+      "overlap": 0,
+      "ecdict": "vt. 告发，抨击，谴责"
+    },
+    {
+      "headword": "saturated",
+      "pos": "adj.",
+      "ours": "饱和的",
+      "cand": "渗透的",
+      "overlap": 0.33,
+      "ecdict": "a. 饱和的，渗透的"
+    },
+    {
+      "headword": "shocking",
+      "pos": "adj.",
+      "ours": "令人震惊的",
+      "cand": "不正当的",
+      "overlap": 0.25,
+      "ecdict": "a. 令人震惊的，极坏的，不正当的"
+    },
+    {
+      "headword": "elevate",
+      "pos": "v.",
+      "ours": "提升",
+      "cand": "举起",
+      "overlap": 0,
+      "ecdict": "vt. 举起，提拔，鼓舞"
+    },
+    {
+      "headword": "lottery",
+      "pos": "n.",
+      "ours": "彩票",
+      "cand": "奖券",
+      "overlap": 0,
+      "ecdict": "n. 奖券，彩票，运气"
+    },
+    {
+      "headword": "corps",
+      "pos": "n.",
+      "ours": "军团",
+      "cand": "队",
+      "overlap": 0,
+      "ecdict": "n. 军，队，部队，兵种"
+    },
+    {
+      "headword": "quota",
+      "pos": "n.",
+      "ours": "配额",
+      "cand": "限额",
+      "overlap": 0.5,
+      "ecdict": "n. 配额，限额"
+    },
+    {
+      "headword": "soy",
+      "pos": "n.",
+      "ours": "大豆",
+      "cand": "酱油",
+      "overlap": 0,
+      "ecdict": "n. 酱油，大豆"
+    },
+    {
+      "headword": "coordination",
+      "pos": "n.",
+      "ours": "协调",
+      "cand": "同等",
+      "overlap": 0,
+      "ecdict": "n. 同等，协调"
+    },
+    {
+      "headword": "abandoned",
+      "pos": "adj.",
+      "ours": "被遗弃的",
+      "cand": "无约束的",
+      "overlap": 0.25,
+      "ecdict": "a. 被抛弃的，无约束的，恣意放荡的"
+    },
+    {
+      "headword": "deprive",
+      "pos": "v.",
+      "ours": "剥夺",
+      "cand": "使丧失",
+      "overlap": 0,
+      "ecdict": "vt. 剥夺，使丧失"
+    },
+    {
+      "headword": "oyster",
+      "pos": "n.",
+      "ours": "牡蛎",
+      "cand": "蚝",
+      "overlap": 0,
+      "ecdict": "n. 牡蛎，蚝，沉默者"
+    },
+    {
+      "headword": "oath",
+      "pos": "n.",
+      "ours": "誓言",
+      "cand": "咒骂",
+      "overlap": 0,
+      "ecdict": "n. 誓约，誓言，咒骂"
+    },
+    {
+      "headword": "perfection",
+      "pos": "n.",
+      "ours": "完美",
+      "cand": "极端",
+      "overlap": 0,
+      "ecdict": "n. 完美，完成，极端"
+    },
+    {
+      "headword": "offspring",
+      "pos": "n.",
+      "ours": "后代",
+      "cand": "子孙",
+      "overlap": 0,
+      "ecdict": "n. 子孙，后代，产物"
+    },
+    {
+      "headword": "contamination",
+      "pos": "n.",
+      "ours": "污染",
+      "cand": "污物",
+      "overlap": 0.5,
+      "ecdict": "n. 污染，污物"
+    },
+    {
+      "headword": "fury",
+      "pos": "n.",
+      "ours": "愤怒",
+      "cand": "狂暴",
+      "overlap": 0,
+      "ecdict": "n. 愤怒，狂暴，狂怒的人"
+    },
+    {
+      "headword": "misleading",
+      "pos": "adj.",
+      "ours": "误导的",
+      "cand": "引入歧途的",
+      "overlap": 0.33,
+      "ecdict": "a. 引入歧途的，使人误解的，骗人的"
+    },
+    {
+      "headword": "lettuce",
+      "pos": "n.",
+      "ours": "生菜",
+      "cand": "莴苣",
+      "overlap": 0,
+      "ecdict": "n. 莴苣，生菜，纸币"
+    },
+    {
+      "headword": "sermon",
+      "pos": "n.",
+      "ours": "布道",
+      "cand": "说教",
+      "overlap": 0,
+      "ecdict": "n. 说教，启示，布道"
+    },
+    {
+      "headword": "rigorous",
+      "pos": "adj.",
+      "ours": "严格的",
+      "cand": "苛刻的",
+      "overlap": 0.33,
+      "ecdict": "a. 严厉的，严酷的，严格的，苛刻的"
+    },
+    {
+      "headword": "embryo",
+      "pos": "n.",
+      "ours": "胚胎",
+      "cand": "胎儿",
+      "overlap": 0.5,
+      "ecdict": "n. 胚胎，胎儿，胚芽"
+    },
+    {
+      "headword": "transcend",
+      "pos": "v.",
+      "ours": "超越",
+      "cand": "胜过",
+      "overlap": 0,
+      "ecdict": "vt. 超越，胜过"
+    },
+    {
+      "headword": "sensibility",
+      "pos": "n.",
+      "ours": "敏感性",
+      "cand": "感觉",
+      "overlap": 0.5,
+      "ecdict": "n. 感性，感觉，情感"
+    },
+    {
+      "headword": "implicit",
+      "pos": "adj.",
+      "ours": "隐含的",
+      "cand": "暗示的",
+      "overlap": 0.33,
+      "ecdict": "a. 暗示的，含蓄的，固有的，绝对的"
+    },
+    {
+      "headword": "charitable",
+      "pos": "adj.",
+      "ours": "慈善的",
+      "cand": "宽厚的",
+      "overlap": 0.33,
+      "ecdict": "a. 大慈大悲的，宽厚的，慈善的"
+    },
+    {
+      "headword": "discriminate",
+      "pos": "v.",
+      "ours": "歧视",
+      "cand": "区别",
+      "overlap": 0,
+      "ecdict": "v. 区别，差别待遇"
+    },
+    {
+      "headword": "commuter",
+      "pos": "n.",
+      "ours": "通勤者",
+      "cand": "月季票乘客",
+      "overlap": 0,
+      "ecdict": "n. 乘公共车辆上下班者，月季票乘客"
+    },
+    {
+      "headword": "muscular",
+      "pos": "adj.",
+      "ours": "肌肉的",
+      "cand": "强壮的",
+      "overlap": 0.33,
+      "ecdict": "a. 强壮的，肌肉发达的，有力的"
+    },
+    {
+      "headword": "crater",
+      "pos": "n.",
+      "ours": "火山口",
+      "cand": "弹坑",
+      "overlap": 0,
+      "ecdict": "n. 火山口，环行山，弹坑"
+    },
+    {
+      "headword": "comprehend",
+      "pos": "v.",
+      "ours": "理解",
+      "cand": "包括",
+      "overlap": 0,
+      "ecdict": "vt. 理解，包括"
+    },
+    {
+      "headword": "exploitation",
+      "pos": "n.",
+      "ours": "剥削",
+      "cand": "开发",
+      "overlap": 0,
+      "ecdict": "n. 开发，开采，剥削"
+    },
+    {
+      "headword": "elusive",
+      "pos": "adj.",
+      "ours": "难以捉摸的",
+      "cand": "易忘的",
+      "overlap": 0.33,
+      "ecdict": "a. 难懂的，易忘的，难以捉摸的"
+    },
+    {
+      "headword": "immunity",
+      "pos": "n.",
+      "ours": "免疫力",
+      "cand": "免除",
+      "overlap": 0.5,
+      "ecdict": "n. 免疫，免疫性，免除"
+    },
+    {
+      "headword": "extinction",
+      "pos": "n.",
+      "ours": "灭绝",
+      "cand": "消失",
+      "overlap": 0,
+      "ecdict": "n. 消失，消灭，废止"
+    },
+    {
+      "headword": "membrane",
+      "pos": "n.",
+      "ours": "膜",
+      "cand": "羊皮纸",
+      "overlap": 0,
+      "ecdict": "n. 薄膜，膜，羊皮纸"
+    },
+    {
+      "headword": "plaza",
+      "pos": "n.",
+      "ours": "广场",
+      "cand": "购物区",
+      "overlap": 0,
+      "ecdict": "n. 广场，市场，购物区"
+    },
+    {
+      "headword": "cylinder",
+      "pos": "n.",
+      "ours": "圆柱",
+      "cand": "汽缸",
+      "overlap": 0,
+      "ecdict": "n. 圆筒，圆筒状物，汽缸，柱面"
+    },
+    {
+      "headword": "exemption",
+      "pos": "n.",
+      "ours": "豁免",
+      "cand": "解除",
+      "overlap": 0,
+      "ecdict": "n. 解除，免除，免税"
+    },
+    {
+      "headword": "paralyze",
+      "pos": "v.",
+      "ours": "瘫痪",
+      "cand": "使麻痹",
+      "overlap": 0,
+      "ecdict": "vt. 使瘫痪，使麻痹"
+    },
+    {
+      "headword": "harass",
+      "pos": "v.",
+      "ours": "骚扰",
+      "cand": "使烦恼",
+      "overlap": 0,
+      "ecdict": "vt. 使困扰，使烦恼，折磨"
+    },
+    {
+      "headword": "realism",
+      "pos": "n.",
+      "ours": "现实主义",
+      "cand": "实在论",
+      "overlap": 0.33,
+      "ecdict": "n. 写实主义，现实，实在论"
+    },
+    {
+      "headword": "spinach",
+      "pos": "n.",
+      "ours": "菠菜",
+      "cand": "货币",
+      "overlap": 0,
+      "ecdict": "n. 菠菜，货币，胡说八道"
+    },
+    {
+      "headword": "fusion",
+      "pos": "n.",
+      "ours": "融合",
+      "cand": "熔合物",
+      "overlap": 0.5,
+      "ecdict": "n. 熔合物，结合，熔合"
+    },
+    {
+      "headword": "visibility",
+      "pos": "n.",
+      "ours": "可见性",
+      "cand": "能见度",
+      "overlap": 0.33,
+      "ecdict": "n. 可见性，能见度，能见距离"
+    },
+    {
+      "headword": "chord",
+      "pos": "n.",
+      "ours": "和弦",
+      "cand": "和音",
+      "overlap": 0.5,
+      "ecdict": "n. 弦，和音"
+    },
+    {
+      "headword": "auditor",
+      "pos": "n.",
+      "ours": "审计员",
+      "cand": "听者",
+      "overlap": 0,
+      "ecdict": "n. 审计员，听者，旁听生"
+    },
+    {
+      "headword": "reconstruct",
+      "pos": "v.",
+      "ours": "重建",
+      "cand": "改造",
+      "overlap": 0,
+      "ecdict": "vt. 重建，改造"
+    },
+    {
+      "headword": "palette",
+      "pos": "n.",
+      "ours": "调色板",
+      "cand": "颜料",
+      "overlap": 0,
+      "ecdict": "n. 调色板，颜料"
+    },
+    {
+      "headword": "persistence",
+      "pos": "n.",
+      "ours": "坚持不懈",
+      "cand": "固执",
+      "overlap": 0,
+      "ecdict": "n. 固执，坚持不懈，持续(性)，存留(状态)"
+    },
+    {
+      "headword": "detain",
+      "pos": "v.",
+      "ours": "拘留",
+      "cand": "扣押",
+      "overlap": 0,
+      "ecdict": "vt. 扣留，扣押，耽搁"
+    },
+    {
+      "headword": "troubling",
+      "pos": "n.",
+      "ours": "令人不安的",
+      "cand": "浊度",
+      "overlap": 0,
+      "ecdict": "n. 浊度，浑浊度"
+    },
+    {
+      "headword": "collide",
+      "pos": "v.",
+      "ours": "碰撞",
+      "cand": "抵触",
+      "overlap": 0,
+      "ecdict": "vi. 碰撞，互撞，抵触"
+    },
+    {
+      "headword": "brink",
+      "pos": "n.",
+      "ours": "边缘",
+      "cand": "陡岸",
+      "overlap": 0,
+      "ecdict": "n. 边缘，陡岸"
+    },
+    {
+      "headword": "breakup",
+      "pos": "n.",
+      "ours": "分手",
+      "cand": "崩溃",
+      "overlap": 0,
+      "ecdict": "n. 分裂，崩溃，解散，解体"
+    },
+    {
+      "headword": "ordeal",
+      "pos": "n.",
+      "ours": "严峻考验",
+      "cand": "痛苦经历",
+      "overlap": 0,
+      "ecdict": "n. 严酷考验，痛苦经历，煎熬"
+    },
+    {
+      "headword": "periodic",
+      "pos": "adj.",
+      "ours": "周期性的",
+      "cand": "循环的",
+      "overlap": 0.33,
+      "ecdict": "a. 周期的，定期的，间歇(性)的，循环的"
+    },
+    {
+      "headword": "appraisal",
+      "pos": "n.",
+      "ours": "评估",
+      "cand": "评价",
+      "overlap": 0.5,
+      "ecdict": "n. 评价，估价"
+    },
+    {
+      "headword": "scrutinize",
+      "pos": "v.",
+      "ours": "仔细审查",
+      "cand": "vi. 细看",
+      "overlap": 0.5,
+      "ecdict": "vt. vi. 细看，仔细检查，审查，细阅"
+    },
+    {
+      "headword": "catalyst",
+      "pos": "n.",
+      "ours": "催化剂",
+      "cand": "触媒",
+      "overlap": 0,
+      "ecdict": "n. 触媒，接触剂，催化剂，刺激因素"
+    },
+    {
+      "headword": "resonance",
+      "pos": "n.",
+      "ours": "共鸣",
+      "cand": "回声",
+      "overlap": 0,
+      "ecdict": "n. 共鸣，回声，反响，谐振"
+    },
+    {
+      "headword": "latitude",
+      "pos": "n.",
+      "ours": "纬度",
+      "cand": "范围",
+      "overlap": 0,
+      "ecdict": "n. 纬度，范围"
+    },
+    {
+      "headword": "solitude",
+      "pos": "n.",
+      "ours": "孤独",
+      "cand": "单独",
+      "overlap": 0.5,
+      "ecdict": "n. 孤独，单独，孤寂"
+    },
+    {
+      "headword": "anatomy",
+      "pos": "n.",
+      "ours": "解剖学",
+      "cand": "骨骼",
+      "overlap": 0,
+      "ecdict": "n. 剖析，解剖学，骨骼，结构"
+    },
+    {
+      "headword": "nebula",
+      "pos": "n.",
+      "ours": "星云",
+      "cand": "角膜云翳",
+      "overlap": 0.5,
+      "ecdict": "n. 星云，角膜云翳"
+    },
+    {
+      "headword": "synthesis",
+      "pos": "n.",
+      "ours": "合成",
+      "cand": "组织",
+      "overlap": 0,
+      "ecdict": "n. 综合，组织，综合体"
+    },
+    {
+      "headword": "compression",
+      "pos": "n.",
+      "ours": "压缩",
+      "cand": "压紧",
+      "overlap": 0.5,
+      "ecdict": "n. 压缩，压紧"
+    },
+    {
+      "headword": "abstraction",
+      "pos": "n.",
+      "ours": "抽象",
+      "cand": "心不在焉",
+      "overlap": 0,
+      "ecdict": "n. 抽象化，心不在焉，空想，提炼"
+    },
+    {
+      "headword": "temperament",
+      "pos": "n.",
+      "ours": "气质",
+      "cand": "性格",
+      "overlap": 0,
+      "ecdict": "n. 气质，性格，性情"
+    },
+    {
+      "headword": "accumulation",
+      "pos": "n.",
+      "ours": "积累",
+      "cand": "积聚",
+      "overlap": 0.5,
+      "ecdict": "n. 积聚，累积，积聚物"
+    },
+    {
+      "headword": "fluctuation",
+      "pos": "n.",
+      "ours": "波动",
+      "cand": "变动",
+      "overlap": 0.5,
+      "ecdict": "n. 变动，波动，动摇"
+    },
+    {
+      "headword": "absorption",
+      "pos": "n.",
+      "ours": "吸收",
+      "cand": "专心",
+      "overlap": 0,
+      "ecdict": "n. 吸收，专心，全神贯注"
+    },
+    {
+      "headword": "supernatural",
+      "pos": "adj.",
+      "ours": "超自然的",
+      "cand": "神奇的",
+      "overlap": 0.33,
+      "ecdict": "a. 超自然的，神奇的"
+    },
+    {
+      "headword": "seduce",
+      "pos": "v.",
+      "ours": "引诱",
+      "cand": "唆使",
+      "overlap": 0,
+      "ecdict": "vt. 唆使，怂恿，引诱，诱奸"
+    },
+    {
+      "headword": "mutation",
+      "pos": "n.",
+      "ours": "突变",
+      "cand": "变化",
+      "overlap": 0.5,
+      "ecdict": "n. 变化，突变，元音变化"
+    },
+    {
+      "headword": "eruption",
+      "pos": "n.",
+      "ours": "喷发",
+      "cand": "出疹",
+      "overlap": 0,
+      "ecdict": "n. 爆发，喷出物，出疹"
+    },
+    {
+      "headword": "spacious",
+      "pos": "adj.",
+      "ours": "宽敞的",
+      "cand": "广大的",
+      "overlap": 0.33,
+      "ecdict": "a. 广大的，宽广的"
+    },
+    {
+      "headword": "unanimous",
+      "pos": "adj.",
+      "ours": "全体一致的",
+      "cand": "无异议的",
+      "overlap": 0.25,
+      "ecdict": "a. 意见一致的，无异议的"
+    },
+    {
+      "headword": "assassin",
+      "pos": "n.",
+      "ours": "刺客",
+      "cand": "暗杀者",
+      "overlap": 0,
+      "ecdict": "n. 暗杀者，刺客"
+    },
+    {
+      "headword": "cedar",
+      "pos": "n.",
+      "ours": "雪松",
+      "cand": "香椿",
+      "overlap": 0,
+      "ecdict": "n. 雪松，香椿"
+    },
+    {
+      "headword": "assassinate",
+      "pos": "v.",
+      "ours": "刺杀",
+      "cand": "暗杀",
+      "overlap": 0.5,
+      "ecdict": "vt. 暗杀，行刺"
+    },
+    {
+      "headword": "intellect",
+      "pos": "n.",
+      "ours": "智力",
+      "cand": "出众的才华",
+      "overlap": 0,
+      "ecdict": "n. 智力，出众的才华，知识分子"
+    },
+    {
+      "headword": "perennial",
+      "pos": "adj.",
+      "ours": "多年生的",
+      "cand": "长期的",
+      "overlap": 0.33,
+      "ecdict": "a. 常年的，长期的，反复的"
+    },
+    {
+      "headword": "longevity",
+      "pos": "n.",
+      "ours": "长寿",
+      "cand": "长命",
+      "overlap": 0.5,
+      "ecdict": "n. 长命，长寿，寿命"
+    },
+    {
+      "headword": "anomaly",
+      "pos": "n.",
+      "ours": "异常",
+      "cand": "不规则",
+      "overlap": 0,
+      "ecdict": "n. 不规则，反常事物，畸形"
+    },
+    {
+      "headword": "arbitration",
+      "pos": "n.",
+      "ours": "仲裁",
+      "cand": "公断",
+      "overlap": 0,
+      "ecdict": "n. 仲裁，公断"
+    },
+    {
+      "headword": "helper",
+      "pos": "n.",
+      "ours": "助手",
+      "cand": "帮忙者",
+      "overlap": 0,
+      "ecdict": "n. 帮忙者，有益的东西"
+    },
+    {
+      "headword": "pamphlet",
+      "pos": "n.",
+      "ours": "小册子",
+      "cand": "活页文选",
+      "overlap": 0,
+      "ecdict": "n. 小册子，活页文选"
+    },
+    {
+      "headword": "obstruction",
+      "pos": "n.",
+      "ours": "障碍",
+      "cand": "闭塞物",
+      "overlap": 0,
+      "ecdict": "n. 障碍，妨碍，闭塞物"
+    },
+    {
+      "headword": "symbolism",
+      "pos": "n.",
+      "ours": "象征主义",
+      "cand": "符号论",
+      "overlap": 0,
+      "ecdict": "n. 象征主义，符号论"
+    },
+    {
+      "headword": "equilibrium",
+      "pos": "n.",
+      "ours": "平衡",
+      "cand": "平静",
+      "overlap": 0.5,
+      "ecdict": "n. 平衡，平静，均衡"
+    },
+    {
+      "headword": "luxurious",
+      "pos": "adj.",
+      "ours": "奢华的",
+      "cand": "放纵的",
+      "overlap": 0.33,
+      "ecdict": "a. 豪华的，奢侈的，放纵的"
+    },
+    {
+      "headword": "irresistible",
+      "pos": "adj.",
+      "ours": "不可抗拒的",
+      "cand": "不能压制的",
+      "overlap": 0.4,
+      "ecdict": "a. 不可抵抗的，不能压制的"
+    },
+    {
+      "headword": "displacement",
+      "pos": "n.",
+      "ours": "位移",
+      "cand": "换置",
+      "overlap": 0,
+      "ecdict": "n. 换置，移位，移动，取代"
+    },
+    {
+      "headword": "authoritative",
+      "pos": "adj.",
+      "ours": "权威的",
+      "cand": "官方的",
+      "overlap": 0.33,
+      "ecdict": "a. 权威性的，官方的，命令式的"
+    },
+    {
+      "headword": "elegance",
+      "pos": "n.",
+      "ours": "优雅",
+      "cand": "高雅",
+      "overlap": 0.5,
+      "ecdict": "n. 高雅，典雅，优雅"
+    },
+    {
+      "headword": "miraculous",
+      "pos": "adj.",
+      "ours": "奇迹般的",
+      "cand": "不可思议的",
+      "overlap": 0.25,
+      "ecdict": "a. 奇迹的，不可思议的"
+    },
+    {
+      "headword": "idol",
+      "pos": "n.",
+      "ours": "偶像",
+      "cand": "崇拜物",
+      "overlap": 0,
+      "ecdict": "n. 偶像，崇拜物，宠儿，幻象"
+    },
+    {
+      "headword": "cultivation",
+      "pos": "n.",
+      "ours": "培养",
+      "cand": "教化",
+      "overlap": 0,
+      "ecdict": "n. 教化，培养，耕作"
+    },
+    {
+      "headword": "ecstasy",
+      "pos": "n.",
+      "ours": "狂喜",
+      "cand": "心醉神迷",
+      "overlap": 0,
+      "ecdict": "n. 狂喜，心醉神迷，忘形"
+    },
+    {
+      "headword": "prolong",
+      "pos": "v.",
+      "ours": "延长",
+      "cand": "拖延",
+      "overlap": 0.5,
+      "ecdict": "vt. 延长，拖延，拖长"
+    },
+    {
+      "headword": "relinquish",
+      "pos": "v.",
+      "ours": "放弃",
+      "cand": "撤回",
+      "overlap": 0,
+      "ecdict": "vt. 放弃，撤回，停止，松开"
+    },
+    {
+      "headword": "commence",
+      "pos": "v.",
+      "ours": "开始",
+      "cand": "得学位",
+      "overlap": 0,
+      "ecdict": "v. (使)开始，得学位"
+    },
+    {
+      "headword": "pleasing",
+      "pos": "adj.",
+      "ours": "令人愉快的",
+      "cand": "舒适的",
+      "overlap": 0.33,
+      "ecdict": "a. 令人喜爱的，愉快的，舒适的"
+    },
+    {
+      "headword": "humility",
+      "pos": "n.",
+      "ours": "谦逊",
+      "cand": "谦虚",
+      "overlap": 0.5,
+      "ecdict": "n. 谦逊，谦虚，谦卑"
+    },
+    {
+      "headword": "amass",
+      "pos": "v.",
+      "ours": "积累",
+      "cand": "积聚",
+      "overlap": 0.5,
+      "ecdict": "vt. 积聚，堆积"
+    },
+    {
+      "headword": "treadmill",
+      "pos": "n.",
+      "ours": "跑步机",
+      "cand": "踏车",
+      "overlap": 0,
+      "ecdict": "n. 踏车，令人厌倦的工作"
+    },
+    {
+      "headword": "squarely",
+      "pos": "adv.",
+      "ours": "直截了当地",
+      "cand": "正好",
+      "overlap": 0,
+      "ecdict": "adv. 干脆地，正好，直角地"
+    },
+    {
+      "headword": "backbone",
+      "pos": "n.",
+      "ours": "骨干",
+      "cand": "脊椎",
+      "overlap": 0,
+      "ecdict": "n. 脊椎，志气，骨干，支柱"
+    },
+    {
+      "headword": "demolish",
+      "pos": "v.",
+      "ours": "拆除",
+      "cand": "毁坏",
+      "overlap": 0,
+      "ecdict": "vt. 毁坏，破坏，粉碎"
+    },
+    {
+      "headword": "marrow",
+      "pos": "n.",
+      "ours": "骨髓",
+      "cand": "精华",
+      "overlap": 0,
+      "ecdict": "n. 髓，骨髓，精华，活力"
+    },
+    {
+      "headword": "orbital",
+      "pos": "adj.",
+      "ours": "轨道的",
+      "cand": "眼眶的",
+      "overlap": 0.33,
+      "ecdict": "a. 轨道的，眼眶的"
+    },
+    {
+      "headword": "greasy",
+      "pos": "adj.",
+      "ours": "油腻的",
+      "cand": "含脂肪多的",
+      "overlap": 0.33,
+      "ecdict": "a. 油腻的，含脂肪多的"
+    },
+    {
+      "headword": "combustion",
+      "pos": "n.",
+      "ours": "燃烧",
+      "cand": "骚动",
+      "overlap": 0,
+      "ecdict": "n. 燃烧，骚动"
+    },
+    {
+      "headword": "imprisonment",
+      "pos": "n.",
+      "ours": "监禁",
+      "cand": "下狱",
+      "overlap": 0,
+      "ecdict": "n. 监禁，下狱，坐牢"
+    },
+    {
+      "headword": "sensational",
+      "pos": "adj.",
+      "ours": "耸人听闻的",
+      "cand": "非常好的",
+      "overlap": 0.25,
+      "ecdict": "a. 使人感动的，非常好的"
+    },
+    {
+      "headword": "wrath",
+      "pos": "n.",
+      "ours": "愤怒",
+      "cand": "(自然现象等)严酷",
+      "overlap": 0,
+      "ecdict": "n. 愤怒，激怒，愤怒的举动，(自然现象等)严酷"
+    },
+    {
+      "headword": "obedience",
+      "pos": "n.",
+      "ours": "服从",
+      "cand": "忠实",
+      "overlap": 0,
+      "ecdict": "n. 服从，顺从，忠实"
+    },
+    {
+      "headword": "hamlet",
+      "pos": "n.",
+      "ours": "小村庄",
+      "cand": "部落",
+      "overlap": 0,
+      "ecdict": "n. 小村，部落"
+    },
+    {
+      "headword": "envoy",
+      "pos": "n.",
+      "ours": "特使",
+      "cand": "外交使节",
+      "overlap": 0.5,
+      "ecdict": "n. 外交使节，特使"
+    },
+    {
+      "headword": "unconventional",
+      "pos": "adj.",
+      "ours": "非传统的",
+      "cand": "不依惯例的",
+      "overlap": 0.25,
+      "ecdict": "a. 不依惯例的，非传统的，非常规的"
+    },
+    {
+      "headword": "stationary",
+      "pos": "adj.",
+      "ours": "静止的",
+      "cand": "不动的",
+      "overlap": 0.33,
+      "ecdict": "a. 不动的，静止的，不变的，固定的"
+    },
+    {
+      "headword": "coordinated",
+      "pos": "v.",
+      "ours": "协调的",
+      "cand": "整理",
+      "overlap": 0,
+      "ecdict": "vt. 调节，调整，整理，使调和（coordinate的过去分词）"
+    },
+    {
+      "headword": "fir",
+      "pos": "n.",
+      "ours": "冷杉",
+      "cand": "枞树",
+      "overlap": 0,
+      "ecdict": "n. 枞树，杉木"
+    },
+    {
+      "headword": "legion",
+      "pos": "n.",
+      "ours": "军团",
+      "cand": "众多的人",
+      "overlap": 0,
+      "ecdict": "n. 军团，军队，众多的人"
+    },
+    {
+      "headword": "installment",
+      "pos": "n.",
+      "ours": "分期付款",
+      "cand": "就职",
+      "overlap": 0,
+      "ecdict": "n. 就职，装设，分期付款"
+    },
+    {
+      "headword": "patriarchal",
+      "pos": "adj.",
+      "ours": "父权制的",
+      "cand": "由族长统治的",
+      "overlap": 0.25,
+      "ecdict": "a. 家长的，族长的，由族长统治的"
+    },
+    {
+      "headword": "projector",
+      "pos": "n.",
+      "ours": "投影仪",
+      "cand": "计划人",
+      "overlap": 0,
+      "ecdict": "n. 计划人，发起人，规划人，放映机"
+    },
+    {
+      "headword": "mediocre",
+      "pos": "adj.",
+      "ours": "平庸的",
+      "cand": "通常",
+      "overlap": 0,
+      "ecdict": "a. 不好不坏的，通常，平凡的"
+    },
+    {
+      "headword": "caste",
+      "pos": "n.",
+      "ours": "种姓制度",
+      "cand": "(排他的)社会团体",
+      "overlap": 0,
+      "ecdict": "n. 印度的种姓制度，(排他的)社会团体"
+    },
+    {
+      "headword": "improbable",
+      "pos": "adj.",
+      "ours": "不太可能的",
+      "cand": "不象发生的",
+      "overlap": 0.4,
+      "ecdict": "a. 不大可能的，不象发生的，荒谬可笑的"
+    },
+    {
+      "headword": "arid",
+      "pos": "adj.",
+      "ours": "干旱的",
+      "cand": "不毛的",
+      "overlap": 0.33,
+      "ecdict": "a. 干燥的，不毛的"
+    },
+    {
+      "headword": "patriarch",
+      "pos": "n.",
+      "ours": "家长",
+      "cand": "创办人",
+      "overlap": 0,
+      "ecdict": "n. 创办人，家长，元老，教长"
+    },
+    {
+      "headword": "funnel",
+      "pos": "n.",
+      "ours": "漏斗",
+      "cand": "烟囱",
+      "overlap": 0,
+      "ecdict": "n. 漏斗，漏斗状的东西，烟囱"
+    },
+    {
+      "headword": "viability",
+      "pos": "n.",
+      "ours": "可行性",
+      "cand": "生存能力",
+      "overlap": 0,
+      "ecdict": "n. 生存能力，发育能力"
+    },
+    {
+      "headword": "genus",
+      "pos": "n.",
+      "ours": "属",
+      "cand": "种",
+      "overlap": 0,
+      "ecdict": "n. 种，类"
+    },
+    {
+      "headword": "exaggeration",
+      "pos": "n.",
+      "ours": "夸张",
+      "cand": "夸大的事物",
+      "overlap": 0.5,
+      "ecdict": "n. 夸张，夸大的事物，夸大之词"
+    },
+    {
+      "headword": "feeder",
+      "pos": "n.",
+      "ours": "供给者",
+      "cand": "奶瓶",
+      "overlap": 0,
+      "ecdict": "n. 饲养者，供给者，奶瓶"
+    },
+    {
+      "headword": "infancy",
+      "pos": "n.",
+      "ours": "婴儿期",
+      "cand": "幼年",
+      "overlap": 0,
+      "ecdict": "n. 幼年，初期，幼儿期"
+    },
+    {
+      "headword": "metabolic",
+      "pos": "adj.",
+      "ours": "新陈代谢的",
+      "cand": "变化的",
+      "overlap": 0.33,
+      "ecdict": "a. 变化的，变形的，新陈代谢的"
+    },
+    {
+      "headword": "revolutionize",
+      "pos": "v.",
+      "ours": "彻底改变",
+      "cand": "向...鼓吹革命",
+      "overlap": 0,
+      "ecdict": "vt. 向...鼓吹革命，使发生革命性剧变"
+    },
+    {
+      "headword": "diffusion",
+      "pos": "n.",
+      "ours": "扩散",
+      "cand": "传播",
+      "overlap": 0,
+      "ecdict": "n. 散播，传播，蔓延"
+    },
+    {
+      "headword": "beak",
+      "pos": "n.",
+      "ours": "鸟喙",
+      "cand": "鸟嘴",
+      "overlap": 0.5,
+      "ecdict": "n. 鸟嘴，喙"
+    },
+    {
+      "headword": "coherence",
+      "pos": "n.",
+      "ours": "连贯性",
+      "cand": "黏合(性)",
+      "overlap": 0.33,
+      "ecdict": "n. 黏合(性)，连贯性，一致性"
+    },
+    {
+      "headword": "precipitation",
+      "pos": "n.",
+      "ours": "降水量",
+      "cand": "坠落",
+      "overlap": 0,
+      "ecdict": "n. 坠落，沉淀，降水，轻率"
+    },
+    {
+      "headword": "exhale",
+      "pos": "v.",
+      "ours": "呼气",
+      "cand": "发出",
+      "overlap": 0,
+      "ecdict": "v. 呼气，发出，散发"
+    },
+    {
+      "headword": "carnival",
+      "pos": "n.",
+      "ours": "狂欢节",
+      "cand": "嘉年华会",
+      "overlap": 0,
+      "ecdict": "n. 嘉年华会，狂欢节，饮宴狂欢"
+    },
+    {
+      "headword": "leopard",
+      "pos": "n.",
+      "ours": "豹子",
+      "cand": "美洲豹",
+      "overlap": 0.5,
+      "ecdict": "n. 豹，美洲豹"
+    },
+    {
+      "headword": "weaver",
+      "pos": "n.",
+      "ours": "织工",
+      "cand": "织布者",
+      "overlap": 0.5,
+      "ecdict": "n. 织布者，织工"
+    },
+    {
+      "headword": "sculpt",
+      "pos": "v.",
+      "ours": "雕刻",
+      "cand": "造型",
+      "overlap": 0,
+      "ecdict": "v. 雕刻，造型"
+    },
+    {
+      "headword": "negligible",
+      "pos": "adj.",
+      "ours": "微不足道的",
+      "cand": "可以忽略的",
+      "overlap": 0.2,
+      "ecdict": "a. 可以忽略的，不足取的，无用的"
+    },
+    {
+      "headword": "suspense",
+      "pos": "n.",
+      "ours": "悬念",
+      "cand": "焦虑",
+      "overlap": 0,
+      "ecdict": "n. 悬疑，焦虑，悬念，悬而不决"
+    },
+    {
+      "headword": "metropolis",
+      "pos": "n.",
+      "ours": "大都市",
+      "cand": "重要中心",
+      "overlap": 0,
+      "ecdict": "n. 大都市，重要中心，首府"
+    },
+    {
+      "headword": "fender",
+      "pos": "n.",
+      "ours": "挡泥板",
+      "cand": "防卫物",
+      "overlap": 0,
+      "ecdict": "n. 防卫物，挡泥板"
+    },
+    {
+      "headword": "wand",
+      "pos": "n.",
+      "ours": "魔杖",
+      "cand": "棒",
+      "overlap": 0,
+      "ecdict": "n. 棒，棍，杖"
+    },
+    {
+      "headword": "originality",
+      "pos": "n.",
+      "ours": "独创性",
+      "cand": "新奇",
+      "overlap": 0,
+      "ecdict": "n. 创意，新奇，独创能力，原始"
+    },
+    {
+      "headword": "juxtaposition",
+      "pos": "n.",
+      "ours": "并列， 对比",
+      "cand": "并排",
+      "overlap": 0.5,
+      "ecdict": "n. 并排，并置，并列"
+    },
+    {
+      "headword": "arduous",
+      "pos": "adj.",
+      "ours": "艰巨的",
+      "cand": "费力的",
+      "overlap": 0.33,
+      "ecdict": "a. 费力的，努力的，险峻的"
+    },
+    {
+      "headword": "tentacle",
+      "pos": "n.",
+      "ours": "触手",
+      "cand": "触须",
+      "overlap": 0.5,
+      "ecdict": "n. 触须，触手，触角"
+    },
+    {
+      "headword": "pedagogy",
+      "pos": "n.",
+      "ours": "教育学",
+      "cand": "教授法",
+      "overlap": 0.33,
+      "ecdict": "n. 教育学，教授法，教学工作"
+    },
+    {
+      "headword": "temperate",
+      "pos": "adj.",
+      "ours": "温和的",
+      "cand": "适度的",
+      "overlap": 0.33,
+      "ecdict": "a. 温和的，适度的，有节制的，温带的"
+    },
+    {
+      "headword": "insulting",
+      "pos": "adj.",
+      "ours": "侮辱性的",
+      "cand": "损害人体的",
+      "overlap": 0.25,
+      "ecdict": "a. 侮辱的，损害人体的"
+    },
+    {
+      "headword": "harmonious",
+      "pos": "adj.",
+      "ours": "和谐的",
+      "cand": "协调的",
+      "overlap": 0.33,
+      "ecdict": "a. 和睦的，调和的，和谐的，协调的"
+    },
+    {
+      "headword": "aperture",
+      "pos": "n.",
+      "ours": "光圈",
+      "cand": "孔",
+      "overlap": 0,
+      "ecdict": "n. 孔，缝隙，孔径"
+    },
+    {
+      "headword": "gamma",
+      "pos": "n.",
+      "ours": "伽马",
+      "cand": "希腊语的第三个字母(Γ",
+      "overlap": 0,
+      "ecdict": "n. 希腊语的第三个字母(Γ，γ)"
+    },
+    {
+      "headword": "nonverbal",
+      "pos": "adj.",
+      "ours": "非语言的",
+      "cand": "不用动词的",
+      "overlap": 0.25,
+      "ecdict": "a. 不用语言的，不用动词的"
+    },
+    {
+      "headword": "inaccessible",
+      "pos": "adj.",
+      "ours": "不可接近的",
+      "cand": "难得到的",
+      "overlap": 0.25,
+      "ecdict": "a. 难得到的，难接近的，难达成的"
+    },
+    {
+      "headword": "evasion",
+      "pos": "n.",
+      "ours": "逃避",
+      "cand": "藉口",
+      "overlap": 0,
+      "ecdict": "n. 逃避，藉口"
+    },
+    {
+      "headword": "appraise",
+      "pos": "v.",
+      "ours": "评估",
+      "cand": "评价",
+      "overlap": 0.5,
+      "ecdict": "vt. 评价，估价"
+    },
+    {
+      "headword": "junction",
+      "pos": "n.",
+      "ours": "交叉口",
+      "cand": "连接",
+      "overlap": 0,
+      "ecdict": "n. 连接，会合处，交叉点"
+    },
+    {
+      "headword": "inconvenient",
+      "pos": "adj.",
+      "ours": "不方便的",
+      "cand": "有困难的",
+      "overlap": 0.25,
+      "ecdict": "a. 不便的，有困难的"
+    },
+    {
+      "headword": "puzzling",
+      "pos": "adj.",
+      "ours": "令人困惑的",
+      "cand": "把人难住的",
+      "overlap": 0.4,
+      "ecdict": "a. 使迷惑的，把人难住的"
+    },
+    {
+      "headword": "defection",
+      "pos": "n.",
+      "ours": "叛逃",
+      "cand": "缺乏",
+      "overlap": 0,
+      "ecdict": "n. 背叛，缺乏，毛病"
+    },
+    {
+      "headword": "abstain",
+      "pos": "v.",
+      "ours": "戒除",
+      "cand": "自制",
+      "overlap": 0,
+      "ecdict": "vi. 自制，戒绝，弃权，回避"
+    },
+    {
+      "headword": "typify",
+      "pos": "v.",
+      "ours": "典型化",
+      "cand": "代表",
+      "overlap": 0,
+      "ecdict": "vt. 代表，象征，为...之典型"
+    },
+    {
+      "headword": "genesis",
+      "pos": "n.",
+      "ours": "创世纪",
+      "cand": "发生",
+      "overlap": 0,
+      "ecdict": "n. 发生，起源，创世记"
+    },
+    {
+      "headword": "corrosion",
+      "pos": "n.",
+      "ours": "腐蚀",
+      "cand": "铁锈",
+      "overlap": 0,
+      "ecdict": "n. 腐蚀，侵蚀，腐蚀产生的物质，铁锈"
+    },
+    {
+      "headword": "impeach",
+      "pos": "v.",
+      "ours": "弹劾",
+      "cand": "控告",
+      "overlap": 0,
+      "ecdict": "vt. 控告，怀疑，检举，弹劾"
+    },
+    {
+      "headword": "uniformity",
+      "pos": "n.",
+      "ours": "一致性",
+      "cand": "无差异",
+      "overlap": 0,
+      "ecdict": "n. 无差异，同样，划一，一致"
+    },
+    {
+      "headword": "percussion",
+      "pos": "n.",
+      "ours": "打击乐器",
+      "cand": "碰撞",
+      "overlap": 0,
+      "ecdict": "n. 敲打，碰撞，叩击，叩诊"
+    },
+    {
+      "headword": "meek",
+      "pos": "adj.",
+      "ours": "温顺",
+      "cand": "逆来顺受的",
+      "overlap": 0.5,
+      "ecdict": "a. 温顺的，逆来顺受的"
+    },
+    {
+      "headword": "ambience",
+      "pos": "n.",
+      "ours": "氛围",
+      "cand": "周围环境",
+      "overlap": 0.5,
+      "ecdict": "n. 周围环境，气氛"
+    },
+    {
+      "headword": "prodigy",
+      "pos": "n.",
+      "ours": "天才",
+      "cand": "惊人的事物",
+      "overlap": 0,
+      "ecdict": "n. 惊人的事物，奇迹，不凡的人，奇才"
+    },
+    {
+      "headword": "enigma",
+      "pos": "n.",
+      "ours": "谜",
+      "cand": "费解的事物",
+      "overlap": 0,
+      "ecdict": "n. 谜，费解的事物"
+    },
+    {
+      "headword": "stylized",
+      "pos": "adj.",
+      "ours": "风格化的",
+      "cand": "程式化的",
+      "overlap": 0.5,
+      "ecdict": "a. 程式化的，按固定格式的"
+    },
+    {
+      "headword": "nimble",
+      "pos": "adj.",
+      "ours": "灵活的",
+      "cand": "敏捷的",
+      "overlap": 0.33,
+      "ecdict": "a. 敏捷的，伶俐的，聪明的"
+    },
+    {
+      "headword": "acidic",
+      "pos": "adj.",
+      "ours": "酸性的",
+      "cand": "尖刻的",
+      "overlap": 0.33,
+      "ecdict": "a. 成酸的，尖刻的，酸性的"
+    },
+    {
+      "headword": "fictitious",
+      "pos": "adj.",
+      "ours": "虚构的",
+      "cand": "假想的",
+      "overlap": 0.33,
+      "ecdict": "a. 假想的，编造的，虚伪的"
+    },
+    {
+      "headword": "secrete",
+      "pos": "v.",
+      "ours": "分泌",
+      "cand": "隐秘",
+      "overlap": 0,
+      "ecdict": "vt. 隐秘，隐藏，隐匿，分泌"
+    },
+    {
+      "headword": "nectar",
+      "pos": "n.",
+      "ours": "花蜜",
+      "cand": "神酒",
+      "overlap": 0,
+      "ecdict": "n. 神酒，甜美饮料，甘露"
+    },
+    {
+      "headword": "inferiority",
+      "pos": "n.",
+      "ours": "劣势",
+      "cand": "自卑",
+      "overlap": 0,
+      "ecdict": "n. 自卑，次等"
+    },
+    {
+      "headword": "holocaust",
+      "pos": "n.",
+      "ours": "大屠杀",
+      "cand": "毁灭",
+      "overlap": 0,
+      "ecdict": "n. 大屠杀，大火灾，毁灭，大规模烧杀"
+    },
+    {
+      "headword": "colt",
+      "pos": "n.",
+      "ours": "小马",
+      "cand": "苔绳",
+      "overlap": 0,
+      "ecdict": "n. 小马，苔绳，无经验的年轻人"
+    },
+    {
+      "headword": "scavenger",
+      "pos": "n.",
+      "ours": "拾荒者",
+      "cand": "(英)清道夫",
+      "overlap": 0,
+      "ecdict": "n. (英)清道夫，清扫工，拾垃圾的人，清除剂"
+    },
+    {
+      "headword": "exacting",
+      "pos": "adj.",
+      "ours": "要求严格的",
+      "cand": "吃力的",
+      "overlap": 0.33,
+      "ecdict": "a. 苛求的，吃力的"
+    },
+    {
+      "headword": "purification",
+      "pos": "n.",
+      "ours": "净化",
+      "cand": "提纯",
+      "overlap": 0,
+      "ecdict": "n. 纯化，提纯，涤罪"
+    },
+    {
+      "headword": "impropriety",
+      "pos": "n.",
+      "ours": "不当行为",
+      "cand": "不得体",
+      "overlap": 0.33,
+      "ecdict": "n. 不适当，不得体，不正当行为，用词不当"
+    },
+    {
+      "headword": "enormity",
+      "pos": "n.",
+      "ours": "严重性",
+      "cand": "暴行",
+      "overlap": 0,
+      "ecdict": "n. 暴行，极恶，巨大"
+    },
+    {
+      "headword": "springboard",
+      "pos": "n.",
+      "ours": "跳板",
+      "cand": "出发点",
+      "overlap": 0,
+      "ecdict": "n. 跳板，出发点"
+    },
+    {
+      "headword": "fragility",
+      "pos": "n.",
+      "ours": "脆弱性",
+      "cand": "虚弱",
+      "overlap": 0.5,
+      "ecdict": "n. 脆弱，虚弱"
+    },
+    {
+      "headword": "mirage",
+      "pos": "n.",
+      "ours": "海市蜃楼",
+      "cand": "幻景",
+      "overlap": 0,
+      "ecdict": "n. 海市蜃楼，幻景，妄想"
+    },
+    {
+      "headword": "eccentricity",
+      "pos": "n.",
+      "ours": "古怪，偏心",
+      "cand": "古怪行为",
+      "overlap": 0.5,
+      "ecdict": "n. 古怪，古怪行为，怪癖"
+    },
+    {
+      "headword": "intersection",
+      "pos": "n.",
+      "ours": "交叉口",
+      "cand": "十字路口",
+      "overlap": 0.33,
+      "ecdict": "n. 交集，十字路口，交叉点"
+    },
+    {
+      "headword": "distort",
+      "pos": "v.",
+      "ours": "扭曲",
+      "cand": "歪曲",
+      "overlap": 0.5,
+      "ecdict": "vt. 扭曲，歪曲"
+    },
+    {
+      "headword": "renewable",
+      "pos": "adj.",
+      "ours": "可再生的",
+      "cand": "可更新的",
+      "overlap": 0.5,
+      "ecdict": "a. 可更新的，可恢复的，可继续的，可换新的"
+    },
+    {
+      "headword": "validate",
+      "pos": "v.",
+      "ours": "验证",
+      "cand": "使有效",
+      "overlap": 0,
+      "ecdict": "vt. 使有效，使生效，确认，证实"
+    },
+    {
+      "headword": "speedy",
+      "pos": "adj.",
+      "ours": "迅速的",
+      "cand": "快的",
+      "overlap": 0.5,
+      "ecdict": "a. 快的，迅速的"
+    },
+    {
+      "headword": "incompatible",
+      "pos": "adj.",
+      "ours": "不相容的",
+      "cand": "矛盾的",
+      "overlap": 0.33,
+      "ecdict": "a. 不相容的，不能并存的，矛盾的"
+    },
+    {
+      "headword": "symmetry",
+      "pos": "n.",
+      "ours": "对称",
+      "cand": "匀称",
+      "overlap": 0.5,
+      "ecdict": "n. 对称，匀称"
+    },
+    {
+      "headword": "proficiency",
+      "pos": "n.",
+      "ours": "熟练程度",
+      "cand": "精通",
+      "overlap": 0,
+      "ecdict": "n. 精通，熟练，精练"
+    },
+    {
+      "headword": "misfortune",
+      "pos": "n.",
+      "ours": "不幸",
+      "cand": "灾祸",
+      "overlap": 0,
+      "ecdict": "n. 不幸，灾祸，坏运气"
+    },
+    {
+      "headword": "embryonic",
+      "pos": "adj.",
+      "ours": "胚胎的",
+      "cand": "未成熟",
+      "overlap": 0,
+      "ecdict": "a. 萌芽的，初期的，未成熟"
+    },
+    {
+      "headword": "accessibility",
+      "pos": "n.",
+      "ours": "可及性",
+      "cand": "易接近",
+      "overlap": 0,
+      "ecdict": "n. 易接近，可进入"
+    },
+    {
+      "headword": "delta",
+      "pos": "n.",
+      "ours": "三角洲",
+      "cand": "希腊字母的第四个字",
+      "overlap": 0,
+      "ecdict": "n. 三角洲，希腊字母的第四个字"
+    },
+    {
+      "headword": "confound",
+      "pos": "v.",
+      "ours": "使困惑",
+      "cand": "挫败",
+      "overlap": 0,
+      "ecdict": "vt. 使混淆，使狼狈，挫败"
+    },
+    {
+      "headword": "individualism",
+      "pos": "n.",
+      "ours": "个人主义",
+      "cand": "个人特征",
+      "overlap": 0.5,
+      "ecdict": "n. 个人主义，个人特征"
+    },
+    {
+      "headword": "disciplined",
+      "pos": "adj.",
+      "ours": "有纪律的",
+      "cand": "受过训练的",
+      "overlap": 0.25,
+      "ecdict": "a. 遵守纪律的，受过训练的"
+    },
+    {
+      "headword": "involuntary",
+      "pos": "adj.",
+      "ours": "非自愿的",
+      "cand": "无意识的",
+      "overlap": 0.25,
+      "ecdict": "a. 自然而然的，无意识的，不知不觉的，偶然的"
+    },
+    {
+      "headword": "adversity",
+      "pos": "n.",
+      "ours": "逆境",
+      "cand": "不幸",
+      "overlap": 0,
+      "ecdict": "n. 逆境，不幸，灾祸，灾难"
+    },
+    {
+      "headword": "labyrinth",
+      "pos": "n.",
+      "ours": "迷宫",
+      "cand": "难解事物",
+      "overlap": 0,
+      "ecdict": "n. 迷宫，难解事物，迷路"
+    },
+    {
+      "headword": "retribution",
+      "pos": "n.",
+      "ours": "报应",
+      "cand": "惩罚",
+      "overlap": 0,
+      "ecdict": "n. 报应，惩罚，报酬"
+    },
+    {
+      "headword": "cancellation",
+      "pos": "n.",
+      "ours": "取消",
+      "cand": "作废",
+      "overlap": 0,
+      "ecdict": "n. 取消，作废，注销戳"
+    },
+    {
+      "headword": "circumvent",
+      "pos": "v.",
+      "ours": "规避",
+      "cand": "绕行",
+      "overlap": 0,
+      "ecdict": "vt. 绕行，陷害，包围，智取"
+    },
+    {
+      "headword": "assemblage",
+      "pos": "n.",
+      "ours": "集合体",
+      "cand": "装配",
+      "overlap": 0,
+      "ecdict": "n. 集合，装配，一群人"
+    },
+    {
+      "headword": "instill",
+      "pos": "v.",
+      "ours": "灌输",
+      "cand": "滴注",
+      "overlap": 0,
+      "ecdict": "vt. 滴注，慢慢地灌输"
+    },
+    {
+      "headword": "exude",
+      "pos": "v.",
+      "ours": "散发，流露",
+      "cand": "(使)渗出",
+      "overlap": 0,
+      "ecdict": "v. (使)流出，(使)渗出"
+    },
+    {
+      "headword": "engraving",
+      "pos": "n.",
+      "ours": "雕刻",
+      "cand": "镌版术",
+      "overlap": 0,
+      "ecdict": "n. 雕刻，镌版术，雕版"
+    },
+    {
+      "headword": "compressed",
+      "pos": "adj.",
+      "ours": "压缩的",
+      "cand": "扁平的",
+      "overlap": 0.33,
+      "ecdict": "a. 被压缩的，扁平的"
+    },
+    {
+      "headword": "discernible",
+      "pos": "adj.",
+      "ours": "可辨别的",
+      "cand": "看得清的",
+      "overlap": 0.25,
+      "ecdict": "a. 看得清的，可看出的，可辨别的，辨别得出的"
+    },
+    {
+      "headword": "impulsive",
+      "pos": "adj.",
+      "ours": "冲动的",
+      "cand": "受感情驱使的",
+      "overlap": 0.33,
+      "ecdict": "a. 冲动的，受感情驱使的，任性的"
+    },
+    {
+      "headword": "fertilize",
+      "pos": "v.",
+      "ours": "施肥",
+      "cand": "使丰饶",
+      "overlap": 0,
+      "ecdict": "vt. 施肥，使丰饶，使受精"
+    },
+    {
+      "headword": "diversification",
+      "pos": "n.",
+      "ours": "多样化",
+      "cand": "变化",
+      "overlap": 0.5,
+      "ecdict": "n. 变化，多样化"
+    },
+    {
+      "headword": "porous",
+      "pos": "adj.",
+      "ours": "多孔的",
+      "cand": "能渗透的",
+      "overlap": 0.33,
+      "ecdict": "a. 多孔的，有气孔的，多孔性的，能渗透的"
+    },
+    {
+      "headword": "perspiration",
+      "pos": "n.",
+      "ours": "汗水",
+      "cand": "努力",
+      "overlap": 0,
+      "ecdict": "n. 汗，流汗，努力"
+    },
+    {
+      "headword": "entangle",
+      "pos": "v.",
+      "ours": "纠缠",
+      "cand": "卷入",
+      "overlap": 0,
+      "ecdict": "vt. 使纠缠，卷入，使混乱"
+    },
+    {
+      "headword": "crystalline",
+      "pos": "adj.",
+      "ours": "结晶的",
+      "cand": "透明的",
+      "overlap": 0.33,
+      "ecdict": "a. 透明的，水晶般的，水晶制的"
+    },
+    {
+      "headword": "leaky",
+      "pos": "adj.",
+      "ours": "漏水的",
+      "cand": "爱哭的",
+      "overlap": 0.33,
+      "ecdict": "a. 有漏洞的，易泄漏秘密的，爱哭的"
+    },
+    {
+      "headword": "depreciation",
+      "pos": "n.",
+      "ours": "折旧",
+      "cand": "价值减低",
+      "overlap": 0,
+      "ecdict": "n. 价值减低，减价，跌落，贬低"
+    },
+    {
+      "headword": "grasshopper",
+      "pos": "n.",
+      "ours": "蚱蜢",
+      "cand": "蝗虫",
+      "overlap": 0,
+      "ecdict": "n. 蚱蜢，蝗虫"
+    },
+    {
+      "headword": "evaporation",
+      "pos": "n.",
+      "ours": "蒸发",
+      "cand": "脱水",
+      "overlap": 0,
+      "ecdict": "n. 蒸发，脱水，消失"
+    },
+    {
+      "headword": "detectable",
+      "pos": "adj.",
+      "ours": "可检测的",
+      "cand": "易发现的",
+      "overlap": 0.25,
+      "ecdict": "a. 可察觉的，易发现的"
+    },
+    {
+      "headword": "decomposition",
+      "pos": "n.",
+      "ours": "分解",
+      "cand": "腐败",
+      "overlap": 0,
+      "ecdict": "n. 分解，腐败，变质"
+    },
+    {
+      "headword": "lichen",
+      "pos": "n.",
+      "ours": "地衣",
+      "cand": "青苔",
+      "overlap": 0,
+      "ecdict": "n. 青苔，地衣，苔藓病"
+    },
+    {
+      "headword": "flint",
+      "pos": "n.",
+      "ours": "燧石",
+      "cand": "极硬的东西",
+      "overlap": 0,
+      "ecdict": "n. 打火石，燧石，极硬的东西"
+    },
+    {
+      "headword": "decompose",
+      "pos": "v.",
+      "ours": "分解",
+      "cand": "(使)腐烂",
+      "overlap": 0,
+      "ecdict": "v. 分解，(使)腐烂"
+    },
+    {
+      "headword": "engross",
+      "pos": "v.",
+      "ours": "使全神贯注",
+      "cand": "用大字体书写",
+      "overlap": 0,
+      "ecdict": "vt. 用大字体书写，独占(市场)，使全神贯注"
+    },
+    {
+      "headword": "convection",
+      "pos": "n.",
+      "ours": "对流",
+      "cand": "传送",
+      "overlap": 0,
+      "ecdict": "n. 传送，对流，传导"
+    },
+    {
+      "headword": "jettison",
+      "pos": "n.",
+      "ours": "抛弃，放弃",
+      "cand": "投弃货物",
+      "overlap": 0.33,
+      "ecdict": "n. 投弃，投弃货物"
+    },
+    {
+      "headword": "superfluous",
+      "pos": "adj.",
+      "ours": "多余的",
+      "cand": "过剩的",
+      "overlap": 0.33,
+      "ecdict": "a. 多余的，过剩的"
+    },
+    {
+      "headword": "asymmetrical",
+      "pos": "adj.",
+      "ours": "不对称的",
+      "cand": "偏位的",
+      "overlap": 0.33,
+      "ecdict": "a. 不对称的，偏位的"
+    },
+    {
+      "headword": "elucidate",
+      "pos": "v.",
+      "ours": "阐明",
+      "cand": "说明",
+      "overlap": 0.5,
+      "ecdict": "vt. 阐明，说明"
+    },
+    {
+      "headword": "interlude",
+      "pos": "n.",
+      "ours": "插曲",
+      "cand": "幕间",
+      "overlap": 0,
+      "ecdict": "n. 幕间，幕间时间，插曲，穿插"
+    },
+    {
+      "headword": "inanimate",
+      "pos": "adj.",
+      "ours": "无生命的",
+      "cand": "失去知觉的",
+      "overlap": 0.25,
+      "ecdict": "a. 失去知觉的，没生命的，无精打采的"
+    },
+    {
+      "headword": "expound",
+      "pos": "v.",
+      "ours": "阐述",
+      "cand": "详细说明",
+      "overlap": 0,
+      "ecdict": "v. 详细说明，解释"
+    },
+    {
+      "headword": "dogmatic",
+      "pos": "adj.",
+      "ours": "教条的",
+      "cand": "武断的",
+      "overlap": 0.33,
+      "ecdict": "a. 教条的，武断的"
+    },
+    {
+      "headword": "evasive",
+      "pos": "adj.",
+      "ours": "回避的",
+      "cand": "托辞的",
+      "overlap": 0.33,
+      "ecdict": "a. 逃避的，回避的，托辞的"
+    },
+    {
+      "headword": "immobilize",
+      "pos": "v.",
+      "ours": "使失去活动能力",
+      "cand": "使固定",
+      "overlap": 0.33,
+      "ecdict": "vt. 使不动，使固定，使不能移动"
+    },
+    {
+      "headword": "legume",
+      "pos": "n.",
+      "ours": "豆类",
+      "cand": "豆荚",
+      "overlap": 0.5,
+      "ecdict": "n. 豆类，豆荚"
+    },
+    {
+      "headword": "monotonous",
+      "pos": "adj.",
+      "ours": "单调的",
+      "cand": "无变化的",
+      "overlap": 0.33,
+      "ecdict": "a. 单调的，无变化的"
+    },
+    {
+      "headword": "secretion",
+      "pos": "n.",
+      "ours": "分泌物",
+      "cand": "隐蔽",
+      "overlap": 0,
+      "ecdict": "n. 分泌，分泌物，分泌液，隐蔽"
+    },
+    {
+      "headword": "discerning",
+      "pos": "adj.",
+      "ours": "有洞察力的",
+      "cand": "敏锐的",
+      "overlap": 0.33,
+      "ecdict": "a. 有眼力的，敏锐的，有辨别能力的，有洞察力的"
+    },
+    {
+      "headword": "subdivide",
+      "pos": "v.",
+      "ours": "细分",
+      "cand": "vi. (把...)再分",
+      "overlap": 0.5,
+      "ecdict": "vt. vi. (把...)再分，(把...)细分"
+    },
+    {
+      "headword": "gregarious",
+      "pos": "adj.",
+      "ours": "群居的",
+      "cand": "社交的",
+      "overlap": 0.33,
+      "ecdict": "a. 社交的，群居的"
+    },
+    {
+      "headword": "enmity",
+      "pos": "n.",
+      "ours": "敌意",
+      "cand": "憎恨",
+      "overlap": 0,
+      "ecdict": "n. 敌意，憎恨"
+    },
+    {
+      "headword": "organically",
+      "pos": "adv.",
+      "ours": "有机地",
+      "cand": "器官上地",
+      "overlap": 0.33,
+      "ecdict": "adv. 有机性地，器官上地，有组织地"
+    },
+    {
+      "headword": "undaunted",
+      "pos": "adj.",
+      "ours": "无畏的",
+      "cand": "勇敢的",
+      "overlap": 0.33,
+      "ecdict": "a. 大无畏的，勇敢的"
+    },
+    {
+      "headword": "solicitor",
+      "pos": "n.",
+      "ours": "律师",
+      "cand": "(美)法务官",
+      "overlap": 0,
+      "ecdict": "n. (英)律师，初级律师，(美)法务官，(美)掮客"
+    },
+    {
+      "headword": "outmoded",
+      "pos": "adj.",
+      "ours": "过时的",
+      "cand": "废弃的",
+      "overlap": 0.33,
+      "ecdict": "a. 过时的，废弃的"
+    },
+    {
+      "headword": "monopolize",
+      "pos": "v.",
+      "ours": "垄断",
+      "cand": "独占",
+      "overlap": 0,
+      "ecdict": "vt. 独占，垄断"
+    },
+    {
+      "headword": "respiration",
+      "pos": "n.",
+      "ours": "呼吸",
+      "cand": "一口气",
+      "overlap": 0,
+      "ecdict": "n. 呼吸，一口气，呼吸作用"
+    },
+    {
+      "headword": "mallet",
+      "pos": "n.",
+      "ours": "木槌",
+      "cand": "球棍",
+      "overlap": 0,
+      "ecdict": "n. 木槌，球棍，棒"
+    },
+    {
+      "headword": "elation",
+      "pos": "n.",
+      "ours": "欢欣，兴高采烈",
+      "cand": "得意洋洋",
+      "overlap": 0,
+      "ecdict": "n. 得意洋洋，兴高采烈"
+    },
+    {
+      "headword": "infest",
+      "pos": "v.",
+      "ours": "滋扰，侵扰",
+      "cand": "寄生于",
+      "overlap": 0,
+      "ecdict": "vt. 骚扰，寄生于，大批出没"
+    },
+    {
+      "headword": "hardness",
+      "pos": "n.",
+      "ours": "硬度",
+      "cand": "困难",
+      "overlap": 0,
+      "ecdict": "n. 坚硬，困难，严厉，勇气"
+    },
+    {
+      "headword": "forerunner",
+      "pos": "n.",
+      "ours": "先驱，前身",
+      "cand": "前兆",
+      "overlap": 0.5,
+      "ecdict": "n. 先驱，前兆"
+    },
+    {
+      "headword": "magnetism",
+      "pos": "n.",
+      "ours": "磁性",
+      "cand": "吸引力",
+      "overlap": 0,
+      "ecdict": "n. 磁性，吸引力，磁学，催眠术"
+    },
+    {
+      "headword": "cyclone",
+      "pos": "n.",
+      "ours": "气旋",
+      "cand": "龙卷风",
+      "overlap": 0,
+      "ecdict": "n. 龙卷风，暴风"
+    },
+    {
+      "headword": "impurity",
+      "pos": "n.",
+      "ours": "杂质",
+      "cand": "不洁",
+      "overlap": 0,
+      "ecdict": "n. 杂质，不洁，不纯"
+    },
+    {
+      "headword": "commercialize",
+      "pos": "v.",
+      "ours": "商业化",
+      "cand": "使能营利",
+      "overlap": 0,
+      "ecdict": "vt. 使商业化，使商品化，使能营利，在...发展商业"
+    },
+    {
+      "headword": "receptacle",
+      "pos": "n.",
+      "ours": "容器",
+      "cand": "花托",
+      "overlap": 0,
+      "ecdict": "n. 容器，花托，插座"
+    },
+    {
+      "headword": "aurora",
+      "pos": "n.",
+      "ours": "极光",
+      "cand": "曙光",
+      "overlap": 0.5,
+      "ecdict": "n. 曙光，极光，奥罗拉(曙光女神)"
+    },
+    {
+      "headword": "morphology",
+      "pos": "n.",
+      "ours": "形态学",
+      "cand": "词法",
+      "overlap": 0,
+      "ecdict": "n. 形态学，词法，形态"
+    },
+    {
+      "headword": "plagiarism",
+      "pos": "n.",
+      "ours": "剽窃",
+      "cand": "抄袭",
+      "overlap": 0,
+      "ecdict": "n. 剽窃，抄袭，剽窃物"
+    },
+    {
+      "headword": "malleable",
+      "pos": "adj.",
+      "ours": "可塑的",
+      "cand": "有延展性的",
+      "overlap": 0.33,
+      "ecdict": "a. 有延展性的，可锻的"
+    },
+    {
+      "headword": "acrid",
+      "pos": "adj.",
+      "ours": "刺鼻的",
+      "cand": "苦味的",
+      "overlap": 0.33,
+      "ecdict": "a. 苦味的，辛辣的，讥讽的，刻薄的"
+    },
+    {
+      "headword": "mimetic",
+      "pos": "adj.",
+      "ours": "模仿的",
+      "cand": "摹拟的",
+      "overlap": 0.33,
+      "ecdict": "a. 模仿的，摹拟的，好模仿的，类似的"
+    },
+    {
+      "headword": "industrious",
+      "pos": "adj.",
+      "ours": "勤勉的",
+      "cand": "刻苦的",
+      "overlap": 0.33,
+      "ecdict": "a. 勤勉的，刻苦的"
+    },
+    {
+      "headword": "deciduous",
+      "pos": "adj.",
+      "ours": "落叶的",
+      "cand": "非永久性的",
+      "overlap": 0.33,
+      "ecdict": "a. 每年落叶的，非永久性的"
+    },
+    {
+      "headword": "uproot",
+      "pos": "v.",
+      "ours": "根除",
+      "cand": "连根拔起",
+      "overlap": 0.5,
+      "ecdict": "vt. 连根拔起，根除"
+    },
+    {
+      "headword": "unevenly",
+      "pos": "adv.",
+      "ours": "不均匀地",
+      "cand": "不平坦地",
+      "overlap": 0.5,
+      "ecdict": "adv. 不平坦地，不均衡地，不平行地"
+    },
+    {
+      "headword": "sloth",
+      "pos": "n.",
+      "ours": "懒惰",
+      "cand": "怠惰",
+      "overlap": 0.5,
+      "ecdict": "n. 怠惰，懒惰"
+    },
+    {
+      "headword": "elixir",
+      "pos": "n.",
+      "ours": "灵药",
+      "cand": "炼金药",
+      "overlap": 0.5,
+      "ecdict": "n. 炼金药，不老长寿药，万能药"
+    },
+    {
+      "headword": "tyrannical",
+      "pos": "adj.",
+      "ours": "专制的",
+      "cand": "暴虐的",
+      "overlap": 0.33,
+      "ecdict": "a. 暴虐的，暴君的，残暴的"
+    },
+    {
+      "headword": "waxy",
+      "pos": "adj.",
+      "ours": "蜡状的",
+      "cand": "苍白的",
+      "overlap": 0.33,
+      "ecdict": "a. 蜡制的，像蜡的，蜡色的，苍白的"
+    },
+    {
+      "headword": "trumpeter",
+      "pos": "n.",
+      "ours": "小号演奏者",
+      "cand": "吹鼓手",
+      "overlap": 0,
+      "ecdict": "n. 小号吹奏者，号兵，吹鼓手"
+    },
+    {
+      "headword": "reclamation",
+      "pos": "n.",
+      "ours": "恢复，复垦",
+      "cand": "教化",
+      "overlap": 0,
+      "ecdict": "n. 开垦，教化"
+    },
+    {
+      "headword": "diction",
+      "pos": "n.",
+      "ours": "措辞",
+      "cand": "发音",
+      "overlap": 0,
+      "ecdict": "n. 措辞，发音，用语"
+    },
+    {
+      "headword": "turnpike",
+      "pos": "n.",
+      "ours": "收费公路",
+      "cand": "收税栅",
+      "overlap": 0.33,
+      "ecdict": "n. 收税栅，收税路，收税高速公路，公路"
+    },
+    {
+      "headword": "surging",
+      "pos": "v.",
+      "ours": "激增",
+      "cand": "浪涌",
+      "overlap": 0,
+      "ecdict": "v. 浪涌，冲击（surge的ing形式）"
+    },
+    {
+      "headword": "abbreviation",
+      "pos": "n.",
+      "ours": "缩写",
+      "cand": "节略",
+      "overlap": 0,
+      "ecdict": "n. 缩写词，缩写，缩短，节略"
+    },
+    {
+      "headword": "mechanized",
+      "pos": "adj.",
+      "ours": "机械化的",
+      "cand": "呆板的",
+      "overlap": 0.33,
+      "ecdict": "a. 机械化的，呆板的"
+    },
+    {
+      "headword": "rascal",
+      "pos": "n.",
+      "ours": "调皮鬼",
+      "cand": "流氓",
+      "overlap": 0,
+      "ecdict": "n. 流氓，无赖，坏蛋，淘气鬼"
+    },
+    {
+      "headword": "equivocal",
+      "pos": "adj.",
+      "ours": "模棱两可的",
+      "cand": "意义不明确的",
+      "overlap": 0.2,
+      "ecdict": "a. 意义不明确的，模棱两可的"
+    },
+    {
+      "headword": "dismember",
+      "pos": "v.",
+      "ours": "肢解",
+      "cand": "割断手足",
+      "overlap": 0,
+      "ecdict": "vt. 割断手足，支解，分割"
+    },
+    {
+      "headword": "overburden",
+      "pos": "v.",
+      "ours": "使负担过重",
+      "cand": "装载过多",
+      "overlap": 0.25,
+      "ecdict": "vt. 装载过多，负担过多，使过劳"
+    },
+    {
+      "headword": "roe",
+      "pos": "n.",
+      "ours": "鱼卵",
+      "cand": "狍",
+      "overlap": 0,
+      "ecdict": "n. 狍，鱼子，鱼卵"
+    },
+    {
+      "headword": "tedium",
+      "pos": "n.",
+      "ours": "单调乏味",
+      "cand": "沉闷",
+      "overlap": 0,
+      "ecdict": "n. 单调乏味，沉闷"
+    },
+    {
+      "headword": "ruinous",
+      "pos": "adj.",
+      "ours": "破坏性的",
+      "cand": "招致毁灭的",
+      "overlap": 0.25,
+      "ecdict": "a. 破坏性的，招致毁灭的"
+    },
+    {
+      "headword": "academician",
+      "pos": "n.",
+      "ours": "院士",
+      "cand": "学会会员",
+      "overlap": 0,
+      "ecdict": "n. 学会会员，院士，学究，大学生"
+    },
+    {
+      "headword": "irregularly",
+      "pos": "adv.",
+      "ours": "不规则地",
+      "cand": "不整齐",
+      "overlap": 0.33,
+      "ecdict": "adv. 不规则，不整齐，不合法"
+    },
+    {
+      "headword": "downcast",
+      "pos": "adj.",
+      "ours": "沮丧的",
+      "cand": "气馁的",
+      "overlap": 0.33,
+      "ecdict": "a. 气馁的，沮丧的"
+    },
+    {
+      "headword": "accommodating",
+      "pos": "adj.",
+      "ours": "乐于助人的",
+      "cand": "肯通融的",
+      "overlap": 0.25,
+      "ecdict": "a. 与人方便的，肯通融的"
+    },
+    {
+      "headword": "chivalry",
+      "pos": "n.",
+      "ours": "骑士精神",
+      "cand": "骑士制度",
+      "overlap": 0.5,
+      "ecdict": "n. 骑士精神，骑士制度"
+    },
+    {
+      "headword": "apportion",
+      "pos": "v.",
+      "ours": "分配，划分",
+      "cand": "分摊",
+      "overlap": 0.5,
+      "ecdict": "vt. 分配，分摊，分派"
+    },
+    {
+      "headword": "entrap",
+      "pos": "v.",
+      "ours": "诱捕",
+      "cand": "骗入",
+      "overlap": 0,
+      "ecdict": "vt. 骗入，诱捕，使陷入"
+    },
+    {
+      "headword": "mulberry",
+      "pos": "n.",
+      "ours": "桑葚",
+      "cand": "深紫红色",
+      "overlap": 0,
+      "ecdict": "n. 桑树，桑椹，深紫红色"
+    },
+    {
+      "headword": "lifesaver",
+      "pos": "n.",
+      "ours": "救生员",
+      "cand": "济急的人",
+      "overlap": 0,
+      "ecdict": "n. 救命者，救生员，济急的人"
+    },
+    {
+      "headword": "potentiality",
+      "pos": "n.",
+      "ours": "潜在性",
+      "cand": "可能性",
+      "overlap": 0.33,
+      "ecdict": "n. 潜在性，可能性"
+    },
+    {
+      "headword": "emaciated",
+      "pos": "adj.",
+      "ours": "消瘦的",
+      "cand": "衰弱的",
+      "overlap": 0.33,
+      "ecdict": "a. 瘦弱的，衰弱的"
+    },
+    {
+      "headword": "armory",
+      "pos": "n.",
+      "ours": "军械库",
+      "cand": "纹章",
+      "overlap": 0,
+      "ecdict": "n. 纹章，纹章学，军械库，兵工厂"
+    },
+    {
+      "headword": "impute",
+      "pos": "v.",
+      "ours": "归因",
+      "cand": "使负责",
+      "overlap": 0,
+      "ecdict": "vt. 归罪，使负责，嫁祸于"
+    },
+    {
+      "headword": "inborn",
+      "pos": "adj.",
+      "ours": "与生俱来的",
+      "cand": "先天的",
+      "overlap": 0.33,
+      "ecdict": "a. 天生的，先天的"
+    },
+    {
+      "headword": "weathering",
+      "pos": "n.",
+      "ours": "风化",
+      "cand": "泻水坡",
+      "overlap": 0,
+      "ecdict": "n. 泻水坡，风化"
+    },
+    {
+      "headword": "needlework",
+      "pos": "n.",
+      "ours": "针线活",
+      "cand": "刺绣",
+      "overlap": 0,
+      "ecdict": "n. 刺绣，缝纫"
+    },
+    {
+      "headword": "purified",
+      "pos": "adj.",
+      "ours": "净化的",
+      "cand": "精制的",
+      "overlap": 0.33,
+      "ecdict": "a. 净化的，精制的"
+    },
+    {
+      "headword": "excitable",
+      "pos": "adj.",
+      "ours": "易激动的",
+      "cand": "易兴奋的",
+      "overlap": 0.5,
+      "ecdict": "a. 能被激动的，易兴奋的，易怒的"
+    },
+    {
+      "headword": "economize",
+      "pos": "v.",
+      "ours": "节省",
+      "cand": "有效地利用",
+      "overlap": 0,
+      "ecdict": "v. 节约，节省，有效地利用"
+    },
+    {
+      "headword": "declaim",
+      "pos": "v.",
+      "ours": "慷慨激昂地演讲",
+      "cand": "朗读",
+      "overlap": 0,
+      "ecdict": "v. 慷慨陈词，演讲，朗读"
+    },
+    {
+      "headword": "domesticate",
+      "pos": "v.",
+      "ours": "驯化",
+      "cand": "引进(外来词等)",
+      "overlap": 0,
+      "ecdict": "vt. 养驯，引进(外来词等)，教化"
+    },
+    {
+      "headword": "gravitation",
+      "pos": "n.",
+      "ours": "引力",
+      "cand": "沉下",
+      "overlap": 0,
+      "ecdict": "n. 引力，重力，沉下"
+    },
+    {
+      "headword": "abridge",
+      "pos": "v.",
+      "ours": "缩短",
+      "cand": "删节",
+      "overlap": 0,
+      "ecdict": "vt. 缩短，删节，减少，剥夺"
+    },
+    {
+      "headword": "disclaim",
+      "pos": "v.",
+      "ours": "声明不承担责任",
+      "cand": "放弃",
+      "overlap": 0,
+      "ecdict": "v. 放弃，弃权，拒绝承认"
+    },
+    {
+      "headword": "condenser",
+      "pos": "n.",
+      "ours": "冷凝器",
+      "cand": "缩写者",
+      "overlap": 0,
+      "ecdict": "n. 凝结器，冷凝器，缩写者"
+    },
+    {
+      "headword": "foghorn",
+      "pos": "n.",
+      "ours": "汽笛",
+      "cand": "雾号",
+      "overlap": 0,
+      "ecdict": "n. 雾号，响而尖的声音"
+    },
+    {
+      "headword": "dismembered",
+      "pos": "v.",
+      "ours": "肢解",
+      "cand": "身首异处",
+      "overlap": 0,
+      "ecdict": "v. 分割…的肢体，肢解( dismember的过去式和过去分词)，身首异处"
+    },
+    {
+      "headword": "watercourse",
+      "pos": "n.",
+      "ours": "水道",
+      "cand": "河道",
+      "overlap": 0.5,
+      "ecdict": "n. 水道，河道"
+    },
+    {
+      "headword": "inoffensive",
+      "pos": "adj.",
+      "ours": "无攻击性的",
+      "cand": "不触犯人的",
+      "overlap": 0.2,
+      "ecdict": "a. 无害的，不触犯人的，不讨厌的"
+    },
+    {
+      "headword": "urbanize",
+      "pos": "v.",
+      "ours": "城市化",
+      "cand": "使文雅",
+      "overlap": 0,
+      "ecdict": "vt. 使都市化，使成都市式，使文雅"
+    },
+    {
+      "headword": "vacillation",
+      "pos": "n.",
+      "ours": "犹豫不决",
+      "cand": "踌躇",
+      "overlap": 0,
+      "ecdict": "n. 游移不定，踌躇，不果断"
+    },
+    {
+      "headword": "egoism",
+      "pos": "n.",
+      "ours": "自我主义",
+      "cand": "利己主义",
+      "overlap": 0.5,
+      "ecdict": "n. 自我主义，利己主义"
+    },
+    {
+      "headword": "jolting",
+      "pos": "n.",
+      "ours": "震动",
+      "cand": "震压造型",
+      "overlap": 0.5,
+      "ecdict": "n. 震压造型，震动"
+    },
+    {
+      "headword": "indented",
+      "pos": "adj.",
+      "ours": "缩进的",
+      "cand": "犬牙交错的",
+      "overlap": 0.33,
+      "ecdict": "a. 犬牙交错的，受契约约束的，[印刷]缩进排印的"
+    },
+    {
+      "headword": "prospecting",
+      "pos": "n.",
+      "ours": "勘探",
+      "cand": "探矿",
+      "overlap": 0.5,
+      "ecdict": "n. 探矿，勘探"
+    },
+    {
+      "headword": "palpitate",
+      "pos": "v.",
+      "ours": "心悸",
+      "cand": "发抖",
+      "overlap": 0,
+      "ecdict": "vi. 悸动，心跳，发抖"
+    },
+    {
+      "headword": "atomization",
+      "pos": "n.",
+      "ours": "原子化",
+      "cand": "粉碎",
+      "overlap": 0,
+      "ecdict": "n. 粉碎，以原子弹轰炸，雾化"
+    },
+    {
+      "headword": "vaporization",
+      "pos": "n.",
+      "ours": "汽化",
+      "cand": "蒸发",
+      "overlap": 0,
+      "ecdict": "n. 蒸发，汽化"
+    },
+    {
+      "headword": "retentive",
+      "pos": "adj.",
+      "ours": "保持力强的",
+      "cand": "记性好的",
+      "overlap": 0.25,
+      "ecdict": "a. 保持的，有保持力的，记性好的"
+    },
+    {
+      "headword": "antedate",
+      "pos": "v.",
+      "ours": "早于，先于",
+      "cand": "前于",
+      "overlap": 0.5,
+      "ecdict": "vt. 先于，前于"
+    },
+    {
+      "headword": "gilding",
+      "pos": "n.",
+      "ours": "镀金",
+      "cand": "虚饰的外观",
+      "overlap": 0,
+      "ecdict": "n. 镀金，镀金材料，涂金，虚饰的外观"
+    },
+    {
+      "headword": "euphonious",
+      "pos": "adj.",
+      "ours": "悦耳的",
+      "cand": "音响好的",
+      "overlap": 0.33,
+      "ecdict": "a. 音响好的，悦耳的，声音和谐的"
+    },
+    {
+      "headword": "impassible",
+      "pos": "adj.",
+      "ours": "无法通行的",
+      "cand": "不觉痛苦的",
+      "overlap": 0.2,
+      "ecdict": "a. 不觉痛苦的，不受伤害的，无感觉的，无感情的"
+    },
+    {
+      "headword": "patricide",
+      "pos": "n.",
+      "ours": "弑父",
+      "cand": "杀父(罪)",
+      "overlap": 0.5,
+      "ecdict": "n. 杀父(罪)，杀父者"
+    },
+    {
+      "headword": "petrifaction",
+      "pos": "n.",
+      "ours": "石化",
+      "cand": "使变成石头",
+      "overlap": 0.5,
+      "ecdict": "n. 使变成石头，石化，化石，僵化"
+    },
+    {
+      "headword": "recompose",
+      "pos": "v.",
+      "ours": "重组",
+      "cand": "修改",
+      "overlap": 0,
+      "ecdict": "vt. 重组，修改，使镇定"
+    },
+    {
+      "headword": "reorient",
+      "pos": "v.",
+      "ours": "重新定向",
+      "cand": "使适应",
+      "overlap": 0,
+      "ecdict": "vt. 使适应，再调整"
+    },
+    {
+      "headword": "spined",
+      "pos": "adj.",
+      "ours": "有脊椎的",
+      "cand": "有背骨的",
+      "overlap": 0.5,
+      "ecdict": "a. 有背骨的，有脊柱的，有刺的"
+    },
+    {
+      "headword": "subduct",
+      "pos": "v.",
+      "ours": "俯冲",
+      "cand": "减去",
+      "overlap": 0,
+      "ecdict": "vt. 减去，拿掉"
+    },
+    {
+      "headword": "subjected",
+      "pos": "v.",
+      "ours": "遭受",
+      "cand": "使从属",
+      "overlap": 0,
+      "ecdict": "v. 使从属，受…影响，使遭受（subject的过去分词形式）"
+    },
+    {
+      "headword": "excavate",
+      "pos": "v.",
+      "ours": "挖掘",
+      "cand": "凿通",
+      "overlap": 0,
+      "ecdict": "v. 挖空，挖出，凿通"
+    },
+    {
+      "headword": "pocketbook",
+      "pos": "n.",
+      "ours": "钱包",
+      "cand": "笔记本",
+      "overlap": 0,
+      "ecdict": "n. 笔记本，钱袋，皮夹，经济来源"
+    },
+    {
+      "headword": "digestion",
+      "pos": "n.",
+      "ours": "消化",
+      "cand": "领悟",
+      "overlap": 0,
+      "ecdict": "n. 消化力，领悟"
+    },
+    {
+      "headword": "courteous",
+      "pos": "adj.",
+      "ours": "有礼貌的",
+      "cand": "谦恭的",
+      "overlap": 0.33,
+      "ecdict": "a. 彬彬有礼，谦恭的"
+    },
+    {
+      "headword": "herder",
+      "pos": "n.",
+      "ours": "牧人",
+      "cand": "(美)(非正式)监狱看守",
+      "overlap": 0,
+      "ecdict": "n. 牧人，(美)(非正式)监狱看守"
+    },
+    {
+      "headword": "deport",
+      "pos": "v.",
+      "ours": "驱逐，放逐",
+      "cand": "举止",
+      "overlap": 0,
+      "ecdict": "vt. 举止，驱逐出境"
+    },
+    {
+      "headword": "by-product",
+      "pos": "n.",
+      "ours": "副产品",
+      "cand": "额外收获",
+      "overlap": 0,
+      "ecdict": "n. 副产品，额外收获，意外收获"
+    },
+    {
+      "headword": "long-range",
+      "pos": "adj.",
+      "ours": "长距离的",
+      "cand": "远程的",
+      "overlap": 0.33,
+      "ecdict": "a. 远程的，远大的，长期的"
+    }
+  ],
+  "sample": [
+    {
+      "headword": "membrane",
+      "pos": "n.",
+      "ours": "膜",
+      "cand": "羊皮纸",
+      "overlap": 0,
+      "ecdict": "n. 薄膜，膜，羊皮纸",
+      "boundary": "单字义项(A 类不动,验不误改)"
+    },
+    {
+      "headword": "genus",
+      "pos": "n.",
+      "ours": "属",
+      "cand": "种",
+      "overlap": 0,
+      "ecdict": "n. 种，类",
+      "boundary": "单字义项(A 类不动,验不误改)"
+    },
+    {
+      "headword": "enigma",
+      "pos": "n.",
+      "ours": "谜",
+      "cand": "费解的事物",
+      "overlap": 0,
+      "ecdict": "n. 谜，费解的事物",
+      "boundary": "单字义项(A 类不动,验不误改)"
+    },
+    {
+      "headword": "intervention",
+      "pos": "n.",
+      "ours": "干预",
+      "cand": "插入",
+      "overlap": 0,
+      "ecdict": "n. 插入，介入，调停",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "cite",
+      "pos": "v.",
+      "ours": "引用",
+      "cand": "表彰",
+      "overlap": 0,
+      "ecdict": "vt. 引用，引证，表彰",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "transition",
+      "pos": "n.",
+      "ours": "过渡",
+      "cand": "转变",
+      "overlap": 0,
+      "ecdict": "n. 转变，转换，变迁，过渡时期",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "negotiation",
+      "pos": "n.",
+      "ours": "谈判",
+      "cand": "磋商",
+      "overlap": 0,
+      "ecdict": "n. 谈判，磋商，交涉",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "championship",
+      "pos": "n.",
+      "ours": "锦标赛",
+      "cand": "冠军身份",
+      "overlap": 0,
+      "ecdict": "n. 冠军身份，冠军称号，捍卫",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "retirement",
+      "pos": "n.",
+      "ours": "退休",
+      "cand": "隐居",
+      "overlap": 0,
+      "ecdict": "n. 退休，隐居，撤退",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "administrator",
+      "pos": "n.",
+      "ours": "管理员",
+      "cand": "行政官",
+      "overlap": 0,
+      "ecdict": "n. 管理人，行政官",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "fiber",
+      "pos": "n.",
+      "ours": "纤维",
+      "cand": "构造",
+      "overlap": 0,
+      "ecdict": "n. 纤维，构造，纤维制品",
+      "boundary": "候选与现值零重合(最可能是真两义)"
+    },
+    {
+      "headword": "awareness",
+      "pos": "n.",
+      "ours": "意识",
+      "cand": "认识",
+      "overlap": 0.5,
+      "ecdict": "n. 意识，认识",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "frustration",
+      "pos": "n.",
+      "ours": "挫折感",
+      "cand": "顿挫",
+      "overlap": 0.5,
+      "ecdict": "n. 挫折，顿挫",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "portray",
+      "pos": "v.",
+      "ours": "描绘",
+      "cand": "描写",
+      "overlap": 0.5,
+      "ecdict": "vt. 描绘，描写，描绘...的肖像",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "alliance",
+      "pos": "n.",
+      "ours": "联盟",
+      "cand": "联合",
+      "overlap": 0.5,
+      "ecdict": "n. 联盟，联合",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "presidency",
+      "pos": "n.",
+      "ours": "总统职务或任期",
+      "cand": "总裁职位",
+      "overlap": 0.5,
+      "ecdict": "n. 总统职权，总裁职位",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "prediction",
+      "pos": "n.",
+      "ours": "预测",
+      "cand": "预言",
+      "overlap": 0.5,
+      "ecdict": "n. 预言，预报",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "costume",
+      "pos": "n.",
+      "ours": "服装",
+      "cand": "装束",
+      "overlap": 0.5,
+      "ecdict": "n. 装束，服装",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "conspiracy",
+      "pos": "n.",
+      "ours": "阴谋",
+      "cand": "同谋",
+      "overlap": 0.5,
+      "ecdict": "n. 同谋，阴谋，阴谋集团",
+      "boundary": "候选重合 0.4-0.59(擦边,最容易误判)"
+    },
+    {
+      "headword": "concerned",
+      "pos": "adj.",
+      "ours": "担忧的",
+      "cand": "关心的",
+      "overlap": 0.33,
+      "ecdict": "a. 关心的，有关的，参与的，担心的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "testimony",
+      "pos": "n.",
+      "ours": "证词",
+      "cand": "声明",
+      "overlap": 0,
+      "ecdict": "n. 证言，证据，声明",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "cooperation",
+      "pos": "n.",
+      "ours": "合作",
+      "cand": "协力",
+      "overlap": 0,
+      "ecdict": "n. 合作，协力，配合",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "infection",
+      "pos": "n.",
+      "ours": "感染",
+      "cand": "影响",
+      "overlap": 0,
+      "ecdict": "n. 传染，影响，传染病",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "constitutional",
+      "pos": "adj.",
+      "ours": "宪法的",
+      "cand": "体质的",
+      "overlap": 0.33,
+      "ecdict": "a. 宪法的，立宪的，体质的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "ken",
+      "pos": "n.",
+      "ours": "知识范围",
+      "cand": "见地",
+      "overlap": 0,
+      "ecdict": "n. 视野范围，知识范围，见地",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "testify",
+      "pos": "v.",
+      "ours": "作证",
+      "cand": "声明",
+      "overlap": 0,
+      "ecdict": "v. 证明，作证，声明，表明",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "emission",
+      "pos": "n.",
+      "ours": "排放物",
+      "cand": "发射",
+      "overlap": 0,
+      "ecdict": "n. 发射，射出，发行",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "survivor",
+      "pos": "n.",
+      "ours": "幸存者",
+      "cand": "生还者",
+      "overlap": 0.33,
+      "ecdict": "n. 生还者，幸存者",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "galaxy",
+      "pos": "n.",
+      "ours": "星系",
+      "cand": "银河",
+      "overlap": 0,
+      "ecdict": "n. 银河，星系，一群(显赫的人物)",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "dramatically",
+      "pos": "adv.",
+      "ours": "显著地",
+      "cand": "戏剧地",
+      "overlap": 0.33,
+      "ecdict": "adv. 戏剧地，引人注目地，突然地",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "allegation",
+      "pos": "n.",
+      "ours": "指控",
+      "cand": "断言",
+      "overlap": 0,
+      "ecdict": "n. 断言，主张，申辩",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "fraud",
+      "pos": "n.",
+      "ours": "欺诈",
+      "cand": "诡计",
+      "overlap": 0,
+      "ecdict": "n. 欺骗，欺诈，诡计，骗子",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "monster",
+      "pos": "n.",
+      "ours": "怪物",
+      "cand": "恶人",
+      "overlap": 0,
+      "ecdict": "n. 怪物，恶人，巨物",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "facilitate",
+      "pos": "v.",
+      "ours": "促进",
+      "cand": "使容易",
+      "overlap": 0,
+      "ecdict": "vt. 使容易，促进，帮助",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "recession",
+      "pos": "n.",
+      "ours": "经济衰退",
+      "cand": "凹处",
+      "overlap": 0,
+      "ecdict": "n. 后退，凹处，衰退，归还",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "innovation",
+      "pos": "n.",
+      "ours": "创新",
+      "cand": "改革",
+      "overlap": 0,
+      "ecdict": "n. 改革，创新",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "amendment",
+      "pos": "n.",
+      "ours": "修正案",
+      "cand": "改善",
+      "overlap": 0,
+      "ecdict": "n. 修订，改善，改良，改正",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "undermine",
+      "pos": "v.",
+      "ours": "削弱",
+      "cand": "在...下面挖",
+      "overlap": 0,
+      "ecdict": "vt. 在...下面挖，渐渐破坏，暗地里破坏",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "rhetoric",
+      "pos": "n.",
+      "ours": "修辞艺术",
+      "cand": "雄辩(术)",
+      "overlap": 0.33,
+      "ecdict": "n. 修辞，修辞学，雄辩(术)",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "corruption",
+      "pos": "n.",
+      "ours": "腐败",
+      "cand": "堕落",
+      "overlap": 0,
+      "ecdict": "n. 腐败，堕落，贪污",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "contractor",
+      "pos": "n.",
+      "ours": "承包商",
+      "cand": "立契约的人",
+      "overlap": 0,
+      "ecdict": "n. 立契约的人，承包商",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "dedicate",
+      "pos": "v.",
+      "ours": "致力于",
+      "cand": "献出",
+      "overlap": 0,
+      "ecdict": "vt. 献出，贡献",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "counterpart",
+      "pos": "n.",
+      "ours": "对应物",
+      "cand": "副本",
+      "overlap": 0,
+      "ecdict": "n. 副本，复本，配对物，相应物",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "exploration",
+      "pos": "n.",
+      "ours": "探索",
+      "cand": "踏勘",
+      "overlap": 0,
+      "ecdict": "n. 探险，踏勘，探测",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "accounting",
+      "pos": "n.",
+      "ours": "会计",
+      "cand": "帐单",
+      "overlap": 0,
+      "ecdict": "n. 会计学，帐单，清帐",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "inflation",
+      "pos": "n.",
+      "ours": "通货膨胀",
+      "cand": "夸张",
+      "overlap": 0,
+      "ecdict": "n. 胀大，夸张，通货膨胀",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "inspiration",
+      "pos": "n.",
+      "ours": "灵感",
+      "cand": "鼓舞人心的人或物",
+      "overlap": 0,
+      "ecdict": "n. 灵感，鼓舞人心的人或物，妙计，吸气",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "ideological",
+      "pos": "adj.",
+      "ours": "意识形态的",
+      "cand": "空想的",
+      "overlap": 0.33,
+      "ecdict": "a. 意识形态的，空想的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "touchdown",
+      "pos": "n.",
+      "ours": "触地得分",
+      "cand": "着地",
+      "overlap": 0.5,
+      "ecdict": "n. 触地，触地得分，着地",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "anonymous",
+      "pos": "adj.",
+      "ours": "匿名的",
+      "cand": "姓氏不详的",
+      "overlap": 0.33,
+      "ecdict": "a. 姓氏不详的，无名的，无特色的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "flexibility",
+      "pos": "n.",
+      "ours": "灵活性",
+      "cand": "适应性",
+      "overlap": 0.33,
+      "ecdict": "n. 弹性，适应性",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "fixed",
+      "pos": "adj.",
+      "ours": "固定的",
+      "cand": "不变的",
+      "overlap": 0.33,
+      "ecdict": "a. 固定的，不变的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "donation",
+      "pos": "n.",
+      "ours": "捐赠",
+      "cand": "捐款",
+      "overlap": 0.5,
+      "ecdict": "n. 捐赠物，捐款，捐赠",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "banker",
+      "pos": "n.",
+      "ours": "银行家",
+      "cand": "庄家",
+      "overlap": 0.5,
+      "ecdict": "n. 银行家，庄家",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "sensitivity",
+      "pos": "n.",
+      "ours": "敏感性",
+      "cand": "灵敏度",
+      "overlap": 0.33,
+      "ecdict": "n. 敏感，灵敏度",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "genre",
+      "pos": "n.",
+      "ours": "类型",
+      "cand": "流派",
+      "overlap": 0,
+      "ecdict": "n. 类型，流派",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "migration",
+      "pos": "n.",
+      "ours": "迁移",
+      "cand": "移民",
+      "overlap": 0.5,
+      "ecdict": "n. 移民，移往，移动",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "depressed",
+      "pos": "adj.",
+      "ours": "沮丧的",
+      "cand": "降低的",
+      "overlap": 0.33,
+      "ecdict": "a. 沮丧的，降低的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "journalism",
+      "pos": "n.",
+      "ours": "新闻学",
+      "cand": "报章杂志",
+      "overlap": 0,
+      "ecdict": "n. 新闻业，报章杂志",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "informal",
+      "pos": "adj.",
+      "ours": "非正式的",
+      "cand": "不拘礼的",
+      "overlap": 0.25,
+      "ecdict": "a. 非正式的，不拘礼的，通俗的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "butt",
+      "pos": "n.",
+      "ours": "臀部",
+      "cand": "粗大的一头",
+      "overlap": 0,
+      "ecdict": "n. 粗大的一头，烟头，靶，笑柄",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "threshold",
+      "pos": "n.",
+      "ours": "阈值",
+      "cand": "门槛",
+      "overlap": 0,
+      "ecdict": "n. 门槛，入口，开端，阈",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "landmark",
+      "pos": "n.",
+      "ours": "地标",
+      "cand": "划时代的事",
+      "overlap": 0,
+      "ecdict": "n. 陆标，划时代的事，地界标",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "consecutive",
+      "pos": "adj.",
+      "ours": "连续的",
+      "cand": "联贯的",
+      "overlap": 0.33,
+      "ecdict": "a. 连续的，联贯的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "devastating",
+      "pos": "adj.",
+      "ours": "毁灭性的",
+      "cand": "(非正式)很好的",
+      "overlap": 0.25,
+      "ecdict": "a. 毁灭性的，(非正式)很好的，引人注目的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "citizenship",
+      "pos": "n.",
+      "ours": "公民身份",
+      "cand": "国籍",
+      "overlap": 0,
+      "ecdict": "n. 国籍，市民权，市民的身份",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "accusation",
+      "pos": "n.",
+      "ours": "指控",
+      "cand": "控告",
+      "overlap": 0.5,
+      "ecdict": "n. 控告，指控，指责",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "sovereignty",
+      "pos": "n.",
+      "ours": "主权",
+      "cand": "独立国",
+      "overlap": 0,
+      "ecdict": "n. 主权，独立国",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "spine",
+      "pos": "n.",
+      "ours": "脊柱",
+      "cand": "背骨",
+      "overlap": 0,
+      "ecdict": "n. 背骨，脊柱，尖刺",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "nominate",
+      "pos": "v.",
+      "ours": "提名",
+      "cand": "任命",
+      "overlap": 0,
+      "ecdict": "vt. 提名，任命，命名",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "skeptical",
+      "pos": "adj.",
+      "ours": "怀疑的",
+      "cand": "不可知论的",
+      "overlap": 0.33,
+      "ecdict": "a. 怀疑论的，怀疑的，不可知论的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "suppress",
+      "pos": "v.",
+      "ours": "压制",
+      "cand": "使止住",
+      "overlap": 0,
+      "ecdict": "vt. 镇压，使止住，禁止，抑制",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "consistency",
+      "pos": "n.",
+      "ours": "一致性",
+      "cand": "黏稠度",
+      "overlap": 0,
+      "ecdict": "n. 坚硬性，黏稠度，一致性",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "rejection",
+      "pos": "n.",
+      "ours": "拒绝",
+      "cand": "抛弃",
+      "overlap": 0,
+      "ecdict": "n. 拒绝，抛弃，驳回，被抛弃的东西",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "evoke",
+      "pos": "v.",
+      "ours": "唤起",
+      "cand": "召(魂)",
+      "overlap": 0,
+      "ecdict": "vt. 唤起，引起，召(魂)",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "warfare",
+      "pos": "n.",
+      "ours": "战争",
+      "cand": "战斗",
+      "overlap": 0.5,
+      "ecdict": "n. 战争，战斗，交战，斗争",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "intervene",
+      "pos": "v.",
+      "ours": "干预",
+      "cand": "插入",
+      "overlap": 0,
+      "ecdict": "vi. 插入，调停，干涉",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "destiny",
+      "pos": "n.",
+      "ours": "命运",
+      "cand": "定数",
+      "overlap": 0,
+      "ecdict": "n. 命运，定数",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "hierarchy",
+      "pos": "n.",
+      "ours": "等级制度",
+      "cand": "僧侣统治",
+      "overlap": 0,
+      "ecdict": "n. 等级制度，僧侣统治，等级体系",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "reconstruction",
+      "pos": "n.",
+      "ours": "重建",
+      "cand": "改造",
+      "overlap": 0,
+      "ecdict": "n. 改造，再建",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "hostility",
+      "pos": "n.",
+      "ours": "敌意",
+      "cand": "反对",
+      "overlap": 0,
+      "ecdict": "n. 敌意，敌对，反对",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "cult",
+      "pos": "n.",
+      "ours": "邪教",
+      "cand": "膜拜",
+      "overlap": 0,
+      "ecdict": "n. 膜拜，礼拜式，祭仪，一群信徒",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "odor",
+      "pos": "n.",
+      "ours": "气味",
+      "cand": "名声",
+      "overlap": 0,
+      "ecdict": "n. 气味，香味，名声，意味",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "freshly",
+      "pos": "adv.",
+      "ours": "新鲜地",
+      "cand": "精神饱满",
+      "overlap": 0,
+      "ecdict": "adv. 新，新近，精神饱满",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "venue",
+      "pos": "n.",
+      "ours": "场所",
+      "cand": "犯罪地点",
+      "overlap": 0,
+      "ecdict": "n. 犯罪地点，审判地，发生地点",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "parameter",
+      "pos": "n.",
+      "ours": "参数",
+      "cand": "参变量",
+      "overlap": 0.5,
+      "ecdict": "n. 参变数，参变量，参数，参量",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "flaw",
+      "pos": "n.",
+      "ours": "缺陷",
+      "cand": "裂纹",
+      "overlap": 0,
+      "ecdict": "n. 缺点，裂纹，瑕疵，一阵狂风",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "frightening",
+      "pos": "adj.",
+      "ours": "令人恐惧的",
+      "cand": "引起突然惊恐的",
+      "overlap": 0.4,
+      "ecdict": "a. 令人恐惧的，引起突然惊恐的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "distinguished",
+      "pos": "adj.",
+      "ours": "杰出的",
+      "cand": "卓著的",
+      "overlap": 0.33,
+      "ecdict": "a. 卓著的，著名的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "supervise",
+      "pos": "v.",
+      "ours": "监督",
+      "cand": "管理",
+      "overlap": 0,
+      "ecdict": "v. 监督，管理，指导",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "declaration",
+      "pos": "n.",
+      "ours": "声明",
+      "cand": "宣告",
+      "overlap": 0,
+      "ecdict": "n. 宣告，说明，宣布",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "inclined",
+      "pos": "adj.",
+      "ours": "倾向的",
+      "cand": "想要...的",
+      "overlap": 0.33,
+      "ecdict": "a. 倾向于...的，想要...的，可能的，趋向于...的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "eternal",
+      "pos": "adj.",
+      "ours": "永恒的",
+      "cand": "不灭的",
+      "overlap": 0.33,
+      "ecdict": "a. 永恒的，永远的，不灭的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "monopoly",
+      "pos": "n.",
+      "ours": "垄断",
+      "cand": "专卖权",
+      "overlap": 0,
+      "ecdict": "n. 垄断，专卖权，独占事业",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "analogy",
+      "pos": "n.",
+      "ours": "类比",
+      "cand": "相似",
+      "overlap": 0,
+      "ecdict": "n. 相似，类似",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "erosion",
+      "pos": "n.",
+      "ours": "侵蚀",
+      "cand": "腐蚀",
+      "overlap": 0.5,
+      "ecdict": "n. 腐蚀，冲蚀，侵蚀",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "educated",
+      "pos": "adj.",
+      "ours": "受过教育的",
+      "cand": "有教养的",
+      "overlap": 0.5,
+      "ecdict": "a. 受过教育的，有教养的",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "courthouse",
+      "pos": "n.",
+      "ours": "法庭",
+      "cand": "郡政府所在地",
+      "overlap": 0,
+      "ecdict": "n. 法院，郡政府所在地",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "artery",
+      "pos": "n.",
+      "ours": "动脉",
+      "cand": "干道",
+      "overlap": 0,
+      "ecdict": "n. 动脉，干道，要道",
+      "boundary": "随机补足"
+    },
+    {
+      "headword": "denounce",
+      "pos": "v.",
+      "ours": "谴责",
+      "cand": "告发",
+      "overlap": 0,
+      "ecdict": "vt. 告发，抨击，谴责",
+      "boundary": "随机补足"
+    }
+  ]
+}

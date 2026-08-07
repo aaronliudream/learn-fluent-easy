@@ -34,7 +34,10 @@ const Index = () => {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
-  const { stats } = useStreakStats(user?.id);
+  // ★ 首屏请求闸(2026-08-06):本组件默认 `return <LandingPage />`(见下方 forceHub 判断),
+  // streak 与 onboarding 这两份数据只有 ?hub=1 的旧学习台才用得上。国内往返 200-305ms,
+  // 首页又是全站最热的入口 —— 不加这个闸,每个访客白付 2 次跨境往返换两份没人读的数据。
+  const { stats } = useStreakStats(forceHub ? user?.id : undefined);
   const liveStreak = stats?.current_streak ?? streak;
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
 
@@ -50,7 +53,8 @@ const Index = () => {
 
   // Show 4-step onboarding for first-time logged-in users (no onboarded_at).
   useEffect(() => {
-    if (!user) { setNeedsOnboarding(false); return; }
+    // 同上:LandingPage 分支不渲染 OnboardingWizard,这次查询在默认首页上是纯浪费。
+    if (!forceHub || !user) { setNeedsOnboarding(false); return; }
     let cancelled = false;
     (async () => {
       const { data } = await supabase
@@ -63,7 +67,7 @@ const Index = () => {
       setNeedsOnboarding(!done);
     })();
     return () => { cancelled = true; };
-  }, [user]);
+  }, [user, forceHub]);
 
   const signOut = async () => {
     await supabase.auth.signOut();

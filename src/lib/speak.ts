@@ -72,9 +72,23 @@ export const getLastSpoken = () => lastSpoken;
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string;
 const AUDIO_CDN_BASE = (import.meta.env.VITE_AUDIO_CDN_BASE as string | undefined)?.replace(/\/$/, "");
 const TTS_BUCKET = "tts-audio";
+/**
+ * 回退路径的默认 CDN(2026-08-06)。
+ *
+ * 原来 env 没配时会退到裸 Supabase Storage URL —— 那条链路有两个问题:
+ *  ① 直连 us-east-1 源站,国内往返 200-305ms(实测最差 上海电信 271 / 重庆联通 305);
+ *  ② 桶里存量对象的 Cache-Control 曾是非法的 `max-age=public, ...`,浏览器解析不出 max-age
+ *     → 等于完全不缓存(存量已由 SQLAA/DONE_storage_cache_control_fix.sql 刷正,但源站链路依旧慢)。
+ *
+ * audio.bigmooneducation.com 就是 tts-audio 桶的 Cloudflare 前置,路径结构完全一致
+ * (实测 `/76/76022b….mp3` → 200 · CF-Cache-Status: HIT · public, max-age=31536000, immutable)。
+ * 所以把它作为兜底默认值:env 配了以 env 为准,没配也不会掉回源站。
+ */
+const AUDIO_CDN_FALLBACK = "https://audio.bigmooneducation.com";
 
 function buildCdnUrl(path: string): string {
-  if (AUDIO_CDN_BASE) return `${AUDIO_CDN_BASE}/${path}`;
+  const base = AUDIO_CDN_BASE || AUDIO_CDN_FALLBACK;
+  if (base) return `${base}/${path}`;
   return `${SUPABASE_URL}/storage/v1/object/public/${TTS_BUCKET}/${path}`;
 }
 

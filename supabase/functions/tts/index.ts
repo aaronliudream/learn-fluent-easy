@@ -117,7 +117,12 @@ async function existsInStorage(path: string): Promise<boolean> {
 async function uploadToStorage(path: string, bytes: ArrayBuffer): Promise<void> {
   const { error } = await supabase.storage.from(BUCKET).upload(path, bytes, {
     contentType: "audio/mpeg",
-    cacheControl: "public, max-age=31536000, immutable",
+    // ★ 只能传秒数,Supabase 自己拼 `max-age=<值>`。
+    // 之前传整串 header,拼出来是非法的 `max-age=public, max-age=31536000, immutable`
+    // (2026-08-06 实测裸 Supabase URL 返回的就是这个)—— 走 audio.bigmooneducation.com
+    // 时被 Cloudflare 规则覆盖所以没暴雷,但回退到裸 URL 的路径会失去缓存。
+    // 存量 53787 条已由 SQLAA/DONE_storage_cache_control_fix.sql 刷正。
+    cacheControl: "31536000",
     upsert: true,
   });
   if (error) console.warn("[tts] storage upload failed:", error.message);

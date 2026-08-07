@@ -33,8 +33,6 @@ export interface DashboardExtras {
   // Gamification chips
   coins: number;
   badges: number;
-  petLevel: number;
-  petName: string;
   rank: number | null;        // null if no leaderboard data or opted out
   // Today
   minutesToday: number;
@@ -59,8 +57,6 @@ function emptyExtras(): DashboardExtras {
     displayName: "学习者",
     coins: 0,
     badges: 0,
-    petLevel: 1,
-    petName: "Spark",
     rank: null,
     minutesToday: 0,
     dailyGoalMin: DEFAULT_DAILY_GOAL_MIN,
@@ -112,11 +108,8 @@ export function useDashboardExtras(userId: string | null | undefined): Dashboard
         .select("id", { count: "exact", head: true })
         .eq("user_id", userId);
 
-      const petQ = supabase
-        .from("pet_state")
-        .select("name, level")
-        .eq("user_id", userId)
-        .maybeSingle();
+      // pet_state 查询已删(2026-08-06):宠物养成展示层全站下线后,petLevel/petName
+      // 一路传到 TodayHero 却从没被渲染过 —— 每次进 dashboard 白发一次跨境请求。
 
       const rankQ = supabase.rpc("get_weekly_leaderboard");
 
@@ -145,8 +138,8 @@ export function useDashboardExtras(userId: string | null | undefined): Dashboard
         .order("last_wrong_at", { ascending: false })
         .limit(500);
 
-      const [profileR, coinsR, badgesR, petR, rankR, weakR, trendR, moduleR] = await Promise.all([
-        profileQ, coinsQ, badgesQ, petQ, rankQ, weakQ, trendQ, moduleQ,
+      const [profileR, coinsR, badgesR, rankR, weakR, trendR, moduleR] = await Promise.all([
+        profileQ, coinsQ, badgesQ, rankQ, weakQ, trendQ, moduleQ,
       ]);
       if (cancelled) return;
 
@@ -156,11 +149,9 @@ export function useDashboardExtras(userId: string | null | undefined): Dashboard
         (profileR.data?.leaderboard_alias as string | null) ||
         "学习者";
 
-      // --- coins / badges / pet ---
+      // --- coins / badges ---
       const coins = Number(coinsR.data?.balance ?? 0) || 0;
       const badges = Number(badgesR.count ?? 0) || 0;
-      const petLevel = Number(petR.data?.level ?? 1) || 1;
-      const petName = (petR.data?.name as string | null) || "Spark";
 
       // --- rank ---
       let rank: number | null = null;
@@ -229,8 +220,6 @@ export function useDashboardExtras(userId: string | null | undefined): Dashboard
         displayName,
         coins,
         badges,
-        petLevel,
-        petName,
         rank,
         minutesToday,
         dailyGoalMin: DEFAULT_DAILY_GOAL_MIN,

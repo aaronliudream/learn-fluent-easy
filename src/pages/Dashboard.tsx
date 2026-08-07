@@ -424,8 +424,6 @@ export default function Dashboard() {
           dailyGoalMin={extras.dailyGoalMin}
           coins={extras.coins}
           badges={extras.badges}
-          petLevel={extras.petLevel}
-          petName={extras.petName}
           rank={extras.rank}
         />
       </div>

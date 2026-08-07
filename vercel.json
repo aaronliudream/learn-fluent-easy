@@ -4,5 +4,19 @@
       "source": "/((?!.*\\.(?:mp3|mp4|m4a|wav|ogg|opus|png|jpg|jpeg|gif|svg|webp|avif|ico|css|js|mjs|cjs|map|json|webmanifest|txt|xml|md|pdf|html|woff|woff2|ttf|otf|eot|zip)$).*)",
       "destination": "/index.html"
     }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|webp|avif|gif|svg|ico|mp4|webm|woff2)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    }
   ]
 }

@@ -11,13 +11,13 @@ export function TodayHero(props: {
   dailyGoalMin: number;
   coins: number;
   badges: number;
-  petLevel: number;
-  petName: string;
   rank: number | null;
 }) {
+  // petLevel/petName 已随 pet_state 死查询一并删除(2026-08-06):宠物板块下线后
+  // 这两个 prop 从没被渲染过,却让 dashboard 每次多发一次跨境请求。
   const {
     displayName, currentStreak, minutesToday, dailyGoalMin,
-    coins, badges, petLevel, petName, rank,
+    coins, badges, rank,
   } = props;
   const goalPct = Math.min(100, Math.round((minutesToday / Math.max(1, dailyGoalMin)) * 100));
   const minsLeft = Math.max(0, dailyGoalMin - minutesToday);

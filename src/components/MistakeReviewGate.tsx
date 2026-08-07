@@ -10,10 +10,13 @@ import { Loader2, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 
 /**
  * 登录强制复习门(MistakeReviewGate)
- * Aaron 定:每天首次登录时,若有【到期错题】→ 弹阻断式弹窗,强制【答满 5 道】才解锁"继续做/关闭"。
+ * Aaron 定:每天首次登录时,若有【到期错题】→ 弹阻断式弹窗,强制【答满 6 道】才解锁"继续做/关闭"。
  *  - 每天首次:localStorage 按 user + 北京日期 门控,当天完成后不再弹。
- *  - 答满 5 道:计"答了几道"(不论对错),做对会推进 SRS(bumpMistakeCorrect);target=min(5,可做数)。
- *  - 没到期错题:不弹。到期但可做<5:做完可做的即解锁(不锁死用户)。
+ *  - 答满 6 道:计"答了几道"(不论对错),做对会推进 SRS(bumpMistakeCorrect);target=min(6,可做数)。
+ *  - 没到期错题:不弹。到期但可做<6:做完可做的即解锁(不锁死用户)。
+ *  - 同一道题一天只进一次弹窗:展示时即写 last_shown_date(mark_mistakes_shown),
+ *    选题时在 DB 层排除今天已展示的。
+ *  - 移出错题本:隔天连续做对 2 次(bump_mistake_correct 阈值 _new >= 2)。
  *  - 技术逃生:取数失败/无可做题 → 允许直接关闭,绝不把用户锁在弹窗里进不去 App。
  * 只收【单题 MCQ】(snapshot.options 有 ≥2 项且正确答案命中某字母)——与 /mistakes 就地重做同口径;
  * 阅读整篇/开放题/薄行不在强制门内(无法就地判对错)。
@@ -85,14 +88,14 @@ function isRedoableMcq(m: Mistake): boolean {
   return pairs.some(([letter]) => letter === c);
 }
 
-const TARGET = 5;
+const TARGET = 6;
 
 /**
  * 「今天已经弹过」标记(2026-08-07)。
  *
  * ★为什么换 key、为什么不带 userId★
  * 旧实现是 `mistakeReviewGate:<userId>:<日期>`,而且**只在 close() 里写** ——
- * 可关闭按钮在做满 5 道前是 disabled,于是用户中途刷新一下、切个页,
+ * 可关闭按钮在做满 6 道前是 disabled,于是用户中途刷新一下、切个页,
  * maybeOpen 重跑、标记从没写过 → 同一批题当天反复弹。这是「一天弹很多次」的根因。
  *
  * 现在:① 标记改在**弹窗打开的那一刻**写,做没做完都算数;
@@ -121,12 +124,38 @@ async function fetchDueRedoable(): Promise<Mistake[]> {
     .eq("is_resolved", false)
     .not("module", "in", pgInList(MISTAKE_HIDDEN_DEFAULT))
     .lte("next_review_at", new Date(now).toISOString())
+    // ★同一道题一天只进一次弹窗★ 排除「今天已经展示过」的。
+    // 必须加在 DB 层,不能挪到下面的前端 filter —— 下面有 limit(60),
+    // 若今天已展示的题混在这 60 条里被取回,前端再滤就可能滤成空,弹窗空转。
+    // 日期用北京时间,与 mark_mistakes_shown 里写入的 (now() at time zone 'Asia/Shanghai')::date 同口径。
+    .or(`last_shown_date.is.null,last_shown_date.lt.${bjToday()}`)
     .order("next_review_at", { ascending: true })
     .limit(60);
   if (error) throw error;
   return ((data as Mistake[]) || []).filter(
     (m) => !m.module.startsWith("primary_") && isRedoableMcq(m),
   );
+}
+
+/**
+ * 把这批题标记成「今天已展示」(写 user_mistakes.last_shown_date)。
+ *
+ * RPC `mark_mistakes_shown` 是 2026-08-07 新建的,还没进生成的 types.ts
+ * (重生成 types.ts 是独立 backlog,波及面大,不在本 PR 内)—— 这里就地窄化 cast,
+ * 不给整个文件开 any。日期由 RPC 内部按 Asia/Shanghai 取,前端不传。
+ */
+async function markShownOnServer(ids: string[]): Promise<void> {
+  if (!ids.length) return;
+  try {
+    const rpc = supabase.rpc as unknown as (
+      fn: string,
+      args: Record<string, unknown>,
+    ) => Promise<{ error: { message: string } | null }>;
+    const { error } = await rpc("mark_mistakes_shown", { _ids: ids });
+    if (error) console.warn("[mistake gate] mark_mistakes_shown failed", error.message);
+  } catch (e) {
+    console.warn("[mistake gate] mark_mistakes_shown threw", e);
+  }
 }
 
 export function MistakeReviewGate() {
@@ -149,7 +178,7 @@ export function MistakeReviewGate() {
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
-      // ★打开的同一时刻就记账★ 不等做满 5 道、不等 close()。
+      // ★打开的同一时刻就记账★ 不等做满 6 道、不等 close()。
       // 用户中途刷新/切页 → 上面那个 wasShownToday() 直接拦下,不会再弹第二次。
       setOpen(true);
       markShownToday();
@@ -166,6 +195,11 @@ export function MistakeReviewGate() {
       setItems(rows);
       setIdx(0); setAnswered(0); setPicked(null);
       setPhase("quiz");
+      // ★展示即回写★ 把本次**实际要展示的那批**(target 条,不是取回的 60 条)
+      // 标记成「今天已展示」。必须在这里调、不能等答完 —— 用户中途退出的题
+      // 今天也不该再进队(那正是"天天见同一道"的体感来源)。
+      // 失败只 warn:标记写不进去最坏是今天可能再见到,绝不能阻断弹窗。
+      void markShownOnServer(rows.slice(0, Math.min(TARGET, rows.length)).map((m) => m.id));
     } finally {
       busyRef.current = false;
     }
@@ -254,7 +288,7 @@ export function MistakeReviewGate() {
           <div className="px-5 py-4">
             {!done && (
               <p className="mb-3 text-xs text-muted-foreground">
-                <T>做满 5 道错题就能继续或关闭。做对会帮你推进复习进度。</T>
+                <T>做满 6 道错题就能继续或关闭。隔天连续做对 2 次,这道题就移出错题本。</T>
               </p>
             )}
             {/* 空号标题:完形题才有。**始终显示**,不随"藏答案"规则隐藏 ——
@@ -378,7 +412,7 @@ export function MistakeReviewGate() {
             onClick={close}
             className={cn(!done && "opacity-40")}
           >
-            {done ? <T>关闭</T> : <T>做满 5 道后可关闭</T>}
+            {done ? <T>关闭</T> : <T>做满 6 道后可关闭</T>}
           </Button>
         </div>
       </div>

@@ -93,7 +93,12 @@ function renditionInExample(rendition, exampleEn) {
     .replace(/\bsth\b|\bsb\b|\bsomeone\b|\bsomething\b|\.\.\./g, ' ')
     .replace(/[.,!?;:"']/g, ' ').split(/\s+/).filter(Boolean);
   if (!parts.length) return true;
-  const tail = parts.slice(1).filter(w => w.length > 2);
+  /* 物主/人称代词在真实例句里必然换人:
+       "Learn from your mistakes" → "he decided to learn from his mistakes"
+     这类词不参与比对,否则只有第二人称的例句才算命中。 */
+  const PRONOUNS = new Set(['your', 'my', 'his', 'her', 'its', 'our', 'their', 'ones',
+    "one's", 'you', 'me', 'him', 'them', 'us', 'yourself', 'himself', 'herself', 'themselves']);
+  const tail = parts.slice(1).filter(w => w.length > 2 && !PRONOUNS.has(w));
   const tailOk = tail.every(w => ex.includes(w));
   /* 首词有两类天然不匹配,都不该判死:
        ① 虚位主语/代词:"It escaped my memory" 在例句里是 "Her birthday escaped…"

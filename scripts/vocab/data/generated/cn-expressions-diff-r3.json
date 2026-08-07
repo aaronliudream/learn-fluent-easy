@@ -1,0 +1,82 @@
+[
+  {
+    "p": "一分耕耘,一分收获",
+    "before": "neutral=You reap what you sow.",
+    "after": "(删除)"
+  },
+  {
+    "p": "一分耕耘,一分收获",
+    "before": "formal=Effort brings reward.",
+    "after": "(删除)"
+  },
+  {
+    "p": "一分耕耘,一分收获",
+    "before": "(新增/改写)",
+    "after": "casual=No pain, no gain"
+  },
+  {
+    "p": "一分耕耘,一分收获",
+    "before": "(新增/改写)",
+    "after": "neutral=You reap what you sow"
+  },
+  {
+    "p": "人无远虑,必有近忧",
+    "before": "formal=Failing to plan is planning to fail.",
+    "after": "(删除)"
+  },
+  {
+    "p": "人无远虑,必有近忧",
+    "before": "neutral=Trouble comes to those who don't plan ahead",
+    "after": "(删除)"
+  },
+  {
+    "p": "人无远虑,必有近忧",
+    "before": "(新增/改写)",
+    "after": "casual=Plan ahead or trouble will follow"
+  },
+  {
+    "p": "人无远虑,必有近忧",
+    "before": "(新增/改写)",
+    "after": "formal=If you fail to plan, you plan to fail"
+  },
+  {
+    "p": "画蛇添足",
+    "before": "casual=You're overdoing it.",
+    "after": "(删除)"
+  },
+  {
+    "p": "画蛇添足",
+    "before": "neutral=That's unnecessary embellishment.",
+    "after": "(删除)"
+  },
+  {
+    "p": "画蛇添足",
+    "before": "(新增/改写)",
+    "after": "casual=You're overdoing it"
+  },
+  {
+    "p": "画蛇添足",
+    "before": "(新增/改写)",
+    "after": "neutral=gild the lily"
+  },
+  {
+    "p": "吃一堑,长一智",
+    "before": "casual=Live and learn.",
+    "after": "(删除)"
+  },
+  {
+    "p": "吃一堑,长一智",
+    "before": "neutral=Experience is the best teacher.",
+    "after": "(删除)"
+  },
+  {
+    "p": "吃一堑,长一智",
+    "before": "(新增/改写)",
+    "after": "casual=Live and learn"
+  },
+  {
+    "p": "吃一堑,长一智",
+    "before": "(新增/改写)",
+    "after": "neutral=Learn from your mistakes"
+  }
+]

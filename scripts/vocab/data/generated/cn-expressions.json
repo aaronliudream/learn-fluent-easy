@@ -1103,20 +1103,20 @@
     "category": "proverb",
     "renditions": [
       {
-        "rendition": "Live and learn.",
+        "rendition": "Live and learn",
         "register": "casual",
-        "scene_hint": "生活中学到教训后",
-        "example_en": "I won't make that mistake again. Live and learn.",
-        "example_zh": "我不会再犯那个错误了。吃一堑,长一智。",
+        "scene_hint": "吃亏后自嘲或安慰",
+        "example_en": "After losing my wallet, I told myself, live and learn.",
+        "example_zh": "丢了钱包后，我告诉自己，吃一堑，长一智。吃一堑，长一智。",
         "sort_order": 1
       },
       {
-        "rendition": "Experience is the best teacher.",
         "register": "neutral",
-        "scene_hint": "谈论经验的重要性",
-        "example_en": "After failing the exam, he realized experience is the best teacher.",
-        "example_zh": "考试失败后,他意识到吃一堑,长一智。",
-        "sort_order": 2
+        "rendition": "Learn from your mistakes",
+        "scene_hint": "提醒从失误中吸取教训",
+        "sort_order": 2,
+        "example_en": "After losing the game, he decided to learn from his mistakes.",
+        "example_zh": "输掉比赛后，他决定从失误中吸取教训。吃一堑，长一智。"
       }
     ]
   },
@@ -1149,19 +1149,19 @@
     "category": "proverb",
     "renditions": [
       {
-        "rendition": "You reap what you sow.",
-        "register": "neutral",
-        "scene_hint": "讨论努力与结果的关系",
-        "example_en": "His hard work paid off; you reap what you sow.",
-        "example_zh": "他的努力得到了回报;一分耕耘,一分收获。",
-        "sort_order": 1
+        "register": "casual",
+        "rendition": "No pain, no gain",
+        "scene_hint": "鼓励别人吃苦才有回报",
+        "sort_order": 1,
+        "example_en": "If you want to succeed in the marathon, remember: no pain, no gain.",
+        "example_zh": "如果你想在马拉松中取得成功，记住：不劳无获。要知道，一分耕耘，一分收获。"
       },
       {
-        "rendition": "Effort brings reward.",
-        "register": "formal",
-        "scene_hint": "正式场合谈论努力的价值",
-        "example_en": "The success of the project shows that effort brings reward.",
-        "example_zh": "项目的成功表明一分耕耘,一分收获。",
+        "rendition": "You reap what you sow",
+        "register": "neutral",
+        "scene_hint": "说付出与回报相称",
+        "example_en": "After months of hard work, she got the promotion. You reap what you sow.",
+        "example_zh": "经过几个月的努力工作，她得到了升职。 一分耕耘，一分收获。",
         "sort_order": 2
       }
     ]
@@ -1172,19 +1172,19 @@
     "category": "proverb",
     "renditions": [
       {
-        "rendition": "Failing to plan is planning to fail.",
-        "register": "formal",
-        "scene_hint": "强调计划的重要性",
-        "example_en": "She learned that failing to plan is planning to fail.",
-        "example_zh": "她终于明白,人无远虑,必有近忧。",
-        "sort_order": 1
+        "register": "casual",
+        "rendition": "Plan ahead or trouble will follow",
+        "scene_hint": "提醒朋友早做打算",
+        "sort_order": 1,
+        "example_en": "Remember to plan ahead or trouble will follow when organizing the event.",
+        "example_zh": "记得在筹备活动时要提前计划。人无远虑，必有近忧。"
       },
       {
-        "rendition": "Trouble comes to those who don't plan ahead",
-        "register": "neutral",
-        "scene_hint": "劝人早做打算",
-        "example_en": "Trouble comes to those who don't plan ahead. Always think about the future.",
-        "example_zh": "人无远虑,必有近忧。常思未来。",
+        "rendition": "If you fail to plan, you plan to fail",
+        "register": "formal",
+        "scene_hint": "职场强调规划的重要",
+        "example_en": "In the business world, if you fail to plan, you plan to fail.",
+        "example_zh": "在商业世界中，如果你不做计划，你就计划失败。人无远虑，必有近忧。",
         "sort_order": 2
       }
     ]
@@ -1272,20 +1272,20 @@
     "category": "proverb",
     "renditions": [
       {
-        "rendition": "You're overdoing it.",
+        "rendition": "You're overdoing it",
         "register": "casual",
-        "scene_hint": "朋友间提醒画蛇添足",
-        "example_en": "Adding more spices will ruin the dish. You're overdoing it.",
-        "example_zh": "加更多香料会毁了这道菜,你这就是画蛇添足。",
+        "scene_hint": "劝人别再加东西了",
+        "example_en": "The cake is perfect as it is; you're overdoing it by adding more frosting.",
+        "example_zh": "蛋糕这样就已经很完美了，你再加糖霜就是画蛇添足。",
         "sort_order": 1
       },
       {
-        "rendition": "That's unnecessary embellishment.",
         "register": "neutral",
-        "scene_hint": "指出某人多此一举",
-        "example_en": "The extra chapter doesn't add value; it's unnecessary embellishment.",
-        "example_zh": "加的那一章没有意义,这就是画蛇添足。",
-        "sort_order": 2
+        "rendition": "gild the lily",
+        "scene_hint": "说多此一举的润色",
+        "sort_order": 2,
+        "example_en": "Adding more decorations to the cake might gild the lily.",
+        "example_zh": "在蛋糕上添加更多装饰可能是多此一举。画蛇添足。"
       }
     ]
   },

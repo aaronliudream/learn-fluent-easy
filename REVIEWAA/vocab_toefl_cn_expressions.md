@@ -333,8 +333,8 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **Live and learn.** | 生活中学到教训后 | I won't make that mistake again. Live and learn.<br>我不会再犯那个错误了。吃一堑,长一智。 |
-| neutral | **Experience is the best teacher.** | 谈论经验的重要性 | After failing the exam, he realized experience is the best teacher.<br>考试失败后,他意识到吃一堑,长一智。 |
+| casual | **Live and learn** | 吃亏后自嘲或安慰 | After losing my wallet, I told myself, live and learn.<br>丢了钱包后，我告诉自己，吃一堑，长一智。吃一堑，长一智。 |
+| neutral | **Learn from your mistakes** | 提醒从失误中吸取教训 | After losing the game, he decided to learn from his mistakes.<br>输掉比赛后，他决定从失误中吸取教训。吃一堑，长一智。 |
 
 **熟能生巧**(/)
 
@@ -347,15 +347,15 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **You reap what you sow.** | 讨论努力与结果的关系 | His hard work paid off; you reap what you sow.<br>他的努力得到了回报;一分耕耘,一分收获。 |
-| formal | **Effort brings reward.** | 正式场合谈论努力的价值 | The success of the project shows that effort brings reward.<br>项目的成功表明一分耕耘,一分收获。 |
+| casual | **No pain, no gain** | 鼓励别人吃苦才有回报 | If you want to succeed in the marathon, remember: no pain, no gain.<br>如果你想在马拉松中取得成功，记住：不劳无获。要知道，一分耕耘，一分收获。 |
+| neutral | **You reap what you sow** | 说付出与回报相称 | After months of hard work, she got the promotion. You reap what you sow.<br>经过几个月的努力工作，她得到了升职。 一分耕耘，一分收获。 |
 
 **人无远虑,必有近忧**(/)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| formal | **Failing to plan is planning to fail.** | 强调计划的重要性 | She learned that failing to plan is planning to fail.<br>她终于明白,人无远虑,必有近忧。 |
-| neutral | **Trouble comes to those who don't plan ahead** | 劝人早做打算 | Trouble comes to those who don't plan ahead. Always think about the future.<br>人无远虑,必有近忧。常思未来。 |
+| casual | **Plan ahead or trouble will follow** | 提醒朋友早做打算 | Remember to plan ahead or trouble will follow when organizing the event.<br>记得在筹备活动时要提前计划。人无远虑，必有近忧。 |
+| formal | **If you fail to plan, you plan to fail** | 职场强调规划的重要 | In the business world, if you fail to plan, you plan to fail.<br>在商业世界中，如果你不做计划，你就计划失败。人无远虑，必有近忧。 |
 
 **不入虎穴,焉得虎子**(/)
 
@@ -383,8 +383,8 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **You're overdoing it.** | 朋友间提醒画蛇添足 | Adding more spices will ruin the dish. You're overdoing it.<br>加更多香料会毁了这道菜,你这就是画蛇添足。 |
-| neutral | **That's unnecessary embellishment.** | 指出某人多此一举 | The extra chapter doesn't add value; it's unnecessary embellishment.<br>加的那一章没有意义,这就是画蛇添足。 |
+| casual | **You're overdoing it** | 劝人别再加东西了 | The cake is perfect as it is; you're overdoing it by adding more frosting.<br>蛋糕这样就已经很完美了，你再加糖霜就是画蛇添足。 |
+| neutral | **gild the lily** | 说多此一举的润色 | Adding more decorations to the cake might gild the lily.<br>在蛋糕上添加更多装饰可能是多此一举。画蛇添足。 |
 
 **亡羊补牢**
 

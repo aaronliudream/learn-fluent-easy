@@ -183,10 +183,11 @@
     "chunk": "the last straw",
     "type": "idiom",
     "translation_zh": "最后一根稻草",
-    "literal_trap": "字面\"最后一根稻草\",实为\"忍无可忍\"",
+    "literal_trap": "字面\"最后一根稻草\",实指\"压垮忍耐的那件事\"",
     "scene": "daily_life",
     "example_en": "Her rude comment was the last straw for him.",
-    "example_zh": "她的无礼评论是他忍无可忍的最后一根稻草。"
+    "example_zh": "她的无礼评论是他忍无可忍的最后一根稻草。",
+    "manual": true
   },
   "throw in the towel": {
     "chunk": "throw in the towel",
@@ -326,11 +327,12 @@
   "break the bank": {
     "chunk": "break the bank",
     "type": "idiom",
-    "translation_zh": "倾家荡产",
-    "literal_trap": "字面\"破坏银行\",实为\"倾家荡产\"",
+    "translation_zh": "花费过多",
+    "literal_trap": "字面\"把银行弄破产\",实为\"花费过多\"",
     "scene": "daily_life",
     "example_en": "The vacation won't break the bank.",
-    "example_zh": "这次度假不会让你倾家荡产。"
+    "example_zh": "这次度假不会让你倾家荡产。",
+    "manual": true
   },
   "cut the mustard": {
     "chunk": "cut the mustard",
@@ -407,20 +409,12 @@
   "hit the jackpot": {
     "chunk": "hit the jackpot",
     "type": "idiom",
-    "translation_zh": "中大奖",
+    "translation_zh": "中大奖；大获成功",
     "literal_trap": "字面\"中头奖\",实为\"获得巨大成功\"",
     "scene": "daily_life",
     "example_en": "She hit the jackpot with her new book deal.",
-    "example_zh": "她的新书合同取得了巨大成功。"
-  },
-  "kick the bucket": {
-    "chunk": "kick the bucket",
-    "type": "idiom",
-    "translation_zh": "去世",
-    "literal_trap": "字面\"踢桶\",实为\"去世\"",
-    "scene": "culture",
-    "example_en": "He kicked the bucket at a ripe old age.",
-    "example_zh": "他在高龄时去世。"
+    "example_zh": "她的新书合同取得了巨大成功。",
+    "manual": true
   },
   "hit the roof": {
     "chunk": "hit the roof",
@@ -448,5 +442,15 @@
     "scene": "travel",
     "example_en": "We should hit the road early to avoid traffic.",
     "example_zh": "我们应该早点上路以避免交通拥堵。"
+  },
+  "on the same page": {
+    "chunk": "on the same page",
+    "type": "idiom",
+    "translation_zh": "达成共识",
+    "literal_trap": "字面\"在同一页\",实为\"看法一致\"",
+    "scene": "work",
+    "example_en": "Let us make sure everyone is on the same page before the launch.",
+    "example_zh": "发布前我们要确保每个人都达成共识。",
+    "manual": true
   }
 }

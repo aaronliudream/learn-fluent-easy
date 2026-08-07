@@ -48,6 +48,21 @@ export const SPEC = {
     globalMax: 0.5,        // g4:与历史语料 4-gram 重合率上限
     intraWordMax: 0.3,     // g6:同词三句两两重合率上限
   },
+  /** D 段 词块 —— 词数范围**按类型分设**。
+   * ⚠️ 统一 2-5 会误伤两头:connector 的 therefore / meanwhile 是**单词**,
+   *    frame 的 not only ... but also ... 有**双槽位**要 6 词。
+   *    这两类边界形态在 10 条小样里一条都没出现,放量才撞上 —— 第八条规矩的教训。 */
+  chunk: {
+    wordRange: {
+      connector: [1, 4],
+      phrasal_verb: [2, 4],
+      frame: [3, 8],
+      collocation_ext: [2, 5],
+    },
+    /** 词块例句比词汇例句短,6 词就能完整展示用法。 */
+    exampleLength: [6, 16],
+  },
+
   /** B 段 反义词 */
   antonyms: {
     max: 3,

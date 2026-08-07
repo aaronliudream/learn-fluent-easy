@@ -29,14 +29,14 @@ UPDATE vocab_words w
   ('grab', ARRAY['grab']::text[], ARRAY['ɡræb']::text[]),
   ('cite', ARRAY['cite']::text[], ARRAY['saɪt']::text[]),
   ('asset', ARRAY['as', 'set']::text[], ARRAY['æs', 'ɛt']::text[]),
-  ('avant-garde', ARRAY['a', 'vant', 'garde']::text[], ARRAY['ɑː', 'vɒ̃t', 'ɡɑːrd']::text[]),
-  ('broad-brimmed', ARRAY['broad', 'brimmed']::text[], ARRAY['brɔd', 'brɪmd']::text[]),
+  ('avant-garde', ARRAY['a', 'vant-', 'garde']::text[], ARRAY['ɑː', 'vɒ̃t', 'ɡɑːrd']::text[]),
+  ('broad-brimmed', ARRAY['broad-', 'brimmed']::text[], ARRAY['brɔd', 'brɪmd']::text[]),
   ('administrator', ARRAY['ad', 'min', 'is', 'tra', 'tor']::text[], ARRAY['əd', 'mɪn', 'ɪs', 'treɪ', 'tər']::text[]),
   ('constitutional', ARRAY['con', 'sti', 'tu', 'tion', 'al']::text[], ARRAY['kɒn', 'stɪ', 'tjuː', 'ʃən', 'əl']::text[]),
   ('representation', ARRAY['rep', 're', 'sen', 'ta', 'tion']::text[], ARRAY['rɛp', 'rɪ', 'zɛn', 'teɪ', 'ʃən']::text[]),
   ('demonstration', ARRAY['dem', 'on', 'stra', 'tion']::text[], ARRAY['dɛm', 'ən', 'streɪ', 'ʃən']::text[]),
   ('participant', ARRAY['par', 'tic', 'i', 'pant']::text[], ARRAY['pɑːr', 'tɪk', 'ɪ', 'pənt']::text[]),
-  ('baby-sitter', ARRAY['ba', 'by', 'sit', 'ter']::text[], ARRAY['beɪ', 'bi', 'sɪt', 'ər']::text[]),
+  ('baby-sitter', ARRAY['ba', 'by-', 'sit', 'ter']::text[], ARRAY['beɪ', 'bi', 'sɪt', 'ər']::text[]),
   ('incredible', ARRAY['in', 'cred', 'i', 'ble']::text[], ARRAY['ɪn', 'krɛd', 'ɪ', 'bəl']::text[]),
   ('galaxy', ARRAY['gal', 'a', 'xy']::text[], ARRAY['ɡæl', 'ə', 'ksi']::text[]),
   ('mall', ARRAY['mall']::text[], ARRAY['mɔl']::text[]),
@@ -4301,17 +4301,17 @@ UPDATE vocab_words w
   ('discomfort', ARRAY['dis', 'com', 'fort']::text[], ARRAY['dɪs', 'kʌm', 'fərt']::text[]),
   ('excavate', ARRAY['ex', 'ca', 'vate']::text[], ARRAY['ɛk', 'skə', 'veɪt']::text[]),
   ('perpetuate', ARRAY['per', 'pet', 'u', 'ate']::text[], ARRAY['pər', 'pɛtʃ', 'u', 'eɪt']::text[]),
-  ('long-range', ARRAY['long', 'range']::text[], ARRAY['lɔŋ', 'reɪndʒ']::text[]),
-  ('long-lasting', ARRAY['long', 'last', 'ing']::text[], ARRAY['lɔːŋ', 'læs', 'tɪŋ']::text[]),
-  ('self-sufficient', ARRAY['self', 'suf', 'fi', 'cient']::text[], ARRAY['sɛlf', 'səf', 'ɪ', 'ʃənt']::text[]),
-  ('thousand-fold', ARRAY['thou', 'sand', 'fold']::text[], ARRAY['θaʊ', 'zənd', 'foʊld']::text[]),
+  ('long-range', ARRAY['long-', 'range']::text[], ARRAY['lɔŋ', 'reɪndʒ']::text[]),
+  ('long-lasting', ARRAY['long-', 'last', 'ing']::text[], ARRAY['lɔːŋ', 'læs', 'tɪŋ']::text[]),
+  ('self-sufficient', ARRAY['self-', 'suf', 'fi', 'cient']::text[], ARRAY['sɛlf', 'səf', 'ɪ', 'ʃənt']::text[]),
+  ('thousand-fold', ARRAY['thou', 'sand-', 'fold']::text[], ARRAY['θaʊ', 'zənd', 'foʊld']::text[]),
   ('teens', ARRAY['teens']::text[], ARRAY['tiːnz']::text[]),
-  ('long-standing', ARRAY['long', 'stand', 'ing']::text[], ARRAY['lɔːŋ', 'stænd', 'ɪŋ']::text[]),
-  ('short-range', ARRAY['short', 'range']::text[], ARRAY['ʃɔrt', 'reɪndʒ']::text[]),
-  ('time-consuming', ARRAY['time', 'con', 'su', 'ming']::text[], ARRAY['taɪm', 'kən', 'sjuː', 'mɪŋ']::text[]),
-  ('well-being', ARRAY['well', 'be', 'ing']::text[], ARRAY['wɛl', 'bi', 'ɪŋ']::text[]),
-  ('wedge-shaped', ARRAY['wedge', 'shaped']::text[], ARRAY['wɛdʒ', 'ʃeɪpt']::text[]),
-  ('three-dimensional', ARRAY['three', 'di', 'men', 'sion', 'al']::text[], ARRAY['θriː', 'dɪ', 'mɛn', 'ʃən', 'əl']::text[]),
+  ('long-standing', ARRAY['long-', 'stand', 'ing']::text[], ARRAY['lɔːŋ', 'stænd', 'ɪŋ']::text[]),
+  ('short-range', ARRAY['short-', 'range']::text[], ARRAY['ʃɔrt', 'reɪndʒ']::text[]),
+  ('time-consuming', ARRAY['time-', 'con', 'su', 'ming']::text[], ARRAY['taɪm', 'kən', 'sjuː', 'mɪŋ']::text[]),
+  ('well-being', ARRAY['well-', 'be', 'ing']::text[], ARRAY['wɛl', 'bi', 'ɪŋ']::text[]),
+  ('wedge-shaped', ARRAY['wedge-', 'shaped']::text[], ARRAY['wɛdʒ', 'ʃeɪpt']::text[]),
+  ('three-dimensional', ARRAY['three-', 'di', 'men', 'sion', 'al']::text[], ARRAY['θriː', 'dɪ', 'mɛn', 'ʃən', 'əl']::text[]),
   ('temporarily', ARRAY['tem', 'po', 'rar', 'i', 'ly']::text[], ARRAY['tɛm', 'pə', 'rɛ', 'rɪ', 'li']::text[]),
   ('predictive', ARRAY['pre', 'dic', 'tive']::text[], ARRAY['prɪ', 'dɪk', 'tɪv']::text[]),
   ('electromagnetic', ARRAY['e', 'lec', 'tro', 'mag', 'ne', 'tic']::text[], ARRAY['ɪ', 'lɛk', 'trəʊ', 'mæɡ', 'nɛt', 'ɪk']::text[]),
@@ -4353,9 +4353,9 @@ UPDATE vocab_words w
   ('indent', ARRAY['in', 'dent']::text[], ARRAY['ɪn', 'dɛnt']::text[]),
   ('perennially', ARRAY['pe', 'ren', 'ni', 'al', 'ly']::text[], ARRAY['pə', 'rɛn', 'i', 'ə', 'li']::text[]),
   ('disillusion', ARRAY['dis', 'il', 'lu', 'sion']::text[], ARRAY['dɪs', 'ɪl', 'luː', 'ʒən']::text[]),
-  ('by-product', ARRAY['by', 'pro', 'duct']::text[], ARRAY['baɪ', 'prɒd', 'ʌkt']::text[]),
-  ('eye-catching', ARRAY['eye', 'catch', 'ing']::text[], ARRAY['aɪ', 'kætʃ', 'ɪŋ']::text[]),
-  ('far-reaching', ARRAY['far', 'reach', 'ing']::text[], ARRAY['fɑːr', 'riː', 'tʃɪŋ']::text[]),
+  ('by-product', ARRAY['by-', 'pro', 'duct']::text[], ARRAY['baɪ', 'prɒd', 'ʌkt']::text[]),
+  ('eye-catching', ARRAY['eye-', 'catch', 'ing']::text[], ARRAY['aɪ', 'kætʃ', 'ɪŋ']::text[]),
+  ('far-reaching', ARRAY['far-', 'reach', 'ing']::text[], ARRAY['fɑːr', 'riː', 'tʃɪŋ']::text[]),
   ('deprecate', ARRAY['dep', 're', 'cate']::text[], ARRAY['dɛp', 'rɪ', 'keɪt']::text[]),
   ('courteously', ARRAY['cour', 'te', 'ous', 'ly']::text[], ARRAY['kɔr', 't̬əs', 'əs', 'li']::text[]),
   ('polygon', ARRAY['pol', 'y', 'gon']::text[], ARRAY['pɒl', 'ɪ', 'ɡɒn']::text[]),
@@ -4493,23 +4493,38 @@ UPDATE vocab_words w
 
 SELECT 'AFTER' AS stage, count(*) AS with_syllables FROM vocab_words WHERE syllables IS NOT NULL;
 
--- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
-SELECT '有音节的词 = 4471' AS expect,
+-- ── count-validate:五行都必须是 t,否则 ROLLBACK ──
+SELECT 'y0 有音节的词 = 4471' AS expect,
        (SELECT count(*) FROM vocab_words WHERE syllables IS NOT NULL) = 4471 AS ok
 UNION ALL
-SELECT '两个数组逐词等长',
+-- y2:音节数 = 音标段数。
+SELECT 'y2 两个数组逐词等长',
        NOT EXISTS (SELECT 1 FROM vocab_words WHERE syllables IS NOT NULL
                     AND array_length(syllables, 1) IS DISTINCT FROM array_length(syllable_ipa, 1))
 UNION ALL
-SELECT '音节拼接回来等于原词(核心闸,DB 侧复验)',
+-- y1(2026-08-07 收紧):原来两边都套 regexp_replace('[^a-zA-Z]','') 把标点剥掉再比,
+-- 于是 'a'+'vant'+'garde' = "avantgarde" 能和 "avant-garde" 判等 —— 16 个连字符词
+-- 就是从这个洞里漏过去的。现在改成**逐字符严格相等**,连字符必须原样留在音节里。
+-- (实测:全库 4471 条中,除那 16 条外其余 4455 条本来就满足严格相等,收紧不误伤。)
+SELECT 'y1 音节拼接逐字符等于原词(核心闸)',
        NOT EXISTS (
          SELECT 1 FROM vocab_words
           WHERE syllables IS NOT NULL
-            AND lower(regexp_replace(array_to_string(syllables, ''), '[^a-zA-Z]', '', 'g'))
-                IS DISTINCT FROM lower(regexp_replace(headword, '[^a-zA-Z]', '', 'g'))
+            AND lower(array_to_string(syllables, '')) IS DISTINCT FROM lower(headword)
        )
 UNION ALL
-SELECT '没有空音节段',
+-- y3(2026-08-07 新增):连字符专项。约定 = 连字符保留在**前一音节末尾**
+-- (baby-sitter → ba/by-/sit/ter)。这里独立断言「以 '-' 结尾的 token 数」= 「原词连字符数」,
+-- 位置由 y1 的严格相等兜住。y1 已能覆盖本条,保留它是为了报错时一眼看出是连字符问题。
+SELECT 'y3 连字符个数与音节末尾的 - 一一对应',
+       NOT EXISTS (
+         SELECT 1 FROM vocab_words w
+          WHERE w.syllables IS NOT NULL
+            AND (SELECT count(*) FROM unnest(w.syllables) AS s WHERE s LIKE '%-')
+                IS DISTINCT FROM (length(w.headword) - length(replace(w.headword, '-', '')))::bigint
+       )
+UNION ALL
+SELECT 'y4 没有空音节段',
        NOT EXISTS (SELECT 1 FROM vocab_words, unnest(syllables) AS s
                     WHERE syllables IS NOT NULL AND btrim(s) = '');
 

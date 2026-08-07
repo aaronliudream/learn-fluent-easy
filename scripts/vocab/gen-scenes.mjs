@@ -21,7 +21,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { callJson, pool, q, writeSql, writeReview } from './llm.mjs';
-import { contains, hitRatio, sqlHitRatioBelow } from './textmatch.mjs';
+import { contains, hitRatio, sqlHitRatioBelow, articleMismatches } from './textmatch.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(HERE, 'data', 'generated', 'scenes.json');
@@ -132,6 +132,13 @@ function gateOne(p) {
   for (const [br, us] of BRITISH)
     if (new RegExp(br, 'i').test(hay))
       f.push(`j10 出现英式表达 /${br}/,应为美式「${us}」`);
+
+  /* j11 冠词错配(Aaron 2026-08-07 新增)—— 批量替换 flat→apartment 留下 7 处 'a apartment'。
+     判据按读音,不按拼写(a university / an hour),实现在 textmatch.mjs 共用。 */
+  for (const k of ['essay_full_en', 'essay_short_en'])
+    for (const bad of articleMismatches(p[k])) f.push(`j11 ${k} 冠词错配「${bad}」`);
+  for (const it of items)
+    for (const bad of articleMismatches(it.text_en)) f.push(`j11 节点冠词错配「${bad}」`);
 
   // 同义弹药 / 正反面
   const contrastN = items.filter(it => it.kind === 'contrast').length;

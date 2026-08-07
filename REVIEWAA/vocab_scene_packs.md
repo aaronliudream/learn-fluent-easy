@@ -76,7 +76,7 @@ Benefits include convenience, a wide selection, and time-saving. Drawbacks invol
 
 | # | 类型 | 英文 | 中文 | 挂词卡 |
 | --- | --- | --- | --- | --- |
-| 1 | chunk | view a apartment | 看房 | — |
+| 1 | chunk | view an apartment | 看房 | — |
 | 2 | collocation | sign a lease | 签租约 | — |
 | 3 | word | deposit | 押金 | — |
 | 4 | chunk | set up utilities | 开通水电气 | — |
@@ -90,9 +90,9 @@ Benefits include convenience, a wide selection, and time-saving. Drawbacks invol
 
 ### 完整版（169 词）
 
-Renting a apartment and moving can be both exciting and challenging. Initially, you need to view a apartment to find one that suits your needs. Once satisfied, you sign a lease, a crucial step that legally binds you to the property. You then pay a deposit, which is usually refundable if no damage is done. Next, you set up utilities like water, gas, and electricity. After arranging your furniture, you finally move in, marking a new chapter in your life. Meeting the neighbors can help you integrate into the community. 
+Renting an apartment and moving can be both exciting and challenging. Initially, you need to view an apartment to find one that suits your needs. Once satisfied, you sign a lease, a crucial step that legally binds you to the property. You then pay a deposit, which is usually refundable if no damage is done. Next, you set up utilities like water, gas, and electricity. After arranging your furniture, you finally move in, marking a new chapter in your life. Meeting the neighbors can help you integrate into the community. 
 
-Living in an urban area often offers better access to amenities compared to a suburban area, which might be more peaceful. The benefits of renting a apartment include having more living space, living independently, and experiencing a new environment. However, there are drawbacks, such as high moving costs, the challenge of adapting to a new environment, and potential noise issues. Weighing these factors, renting a apartment is generally a positive experience if one is prepared for the initial challenges.
+Living in an urban area often offers better access to amenities compared to a suburban area, which might be more peaceful. The benefits of renting an apartment include having more living space, living independently, and experiencing a new environment. However, there are drawbacks, such as high moving costs, the challenge of adapting to a new environment, and potential noise issues. Weighing these factors, renting an apartment is generally a positive experience if one is prepared for the initial challenges.
 
 租房搬家既令人兴奋又充满挑战。首先,你需要看房,以找到合适的住所。一旦满意,你便签租约,这是将你合法地与房产绑定的重要一步。接着,你支付押金,通常在没有损坏的情况下是可以退还的。然后,你开通水电气等公用设施。安排好家具后,你最终搬入,标志着生活新篇章的开始。认识邻居可以帮助你融入社区。
 
@@ -100,7 +100,7 @@ Living in an urban area often offers better access to amenities compared to a su
 
 ### 速览版（83 词，完整版的压缩，不必细审）
 
-Renting a apartment involves several steps. First, you view a apartment to find a suitable one. After that, you sign a lease and pay a deposit. Setting up utilities is next, followed by arranging furniture and moving in. Meeting the neighbors is important for community integration. 
+Renting an apartment involves several steps. First, you view an apartment to find a suitable one. After that, you sign a lease and pay a deposit. Setting up utilities is next, followed by arranging furniture and moving in. Meeting the neighbors is important for community integration. 
 
 Renting offers benefits like more living space, independence, and a new environment. However, it also presents drawbacks such as high moving costs, adapting challenges, and potential noise. Overall, with proper preparation, renting can be a rewarding experience.
 

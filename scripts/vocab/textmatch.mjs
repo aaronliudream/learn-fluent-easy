@@ -52,6 +52,37 @@ export function hitRatio(needle, haystack) {
 export const contains = (needle, haystack, ratio = HIT_RATIO) =>
   hitRatio(needle, haystack) >= ratio;
 
+/* ══════════ 冠词错配扫描(j11)══════════
+   ⚠️ 立此闸的事故(Aaron 2026-08-07):J 段把 flat 批量换成 apartment,
+      **换词成功但冠词留在原地**,全篇 7 处 "a apartment"。
+      规矩:**批量文本替换必须同时处理随之变化的语法形式**(冠词、单复数、
+      介词搭配),不能只换词。
+   ⚠️ 判据是**读音**不是拼写:a university(读 /j/)、an hour(h 不发音)。
+      下面两张表是例外兜底,不是完备音标 —— 新发现的往里加。 */
+const CONS_VOWEL = /^(u(ni|se|su|ti|sa|ra|ran|reth|ro|kr|nanim|niqu|nif|nil|nis|nit|niv|rin|topia|tens|surp)|eu|one|once)/i;
+const VOWEL_CONS = /^(hour|honest|honor|honour|heir|herb|homage)/i;
+
+/** 该词前面该用 a 还是 an(按读音)。 */
+export const articleFor = w =>
+  (/^[aeiou]/i.test(w) ? !CONS_VOWEL.test(w) : VOWEL_CONS.test(w)) ? 'an' : 'a';
+
+/** 找出文本里所有冠词错配,返回 ['a apartment', ...]。 */
+export function articleMismatches(text) {
+  const out = [];
+  for (const m of String(text ?? '').matchAll(/\b(a|an) ([a-z][a-z-]{2,})/gi))
+    if (m[1].toLowerCase() !== articleFor(m[2])) out.push(m[0]);
+  return out;
+}
+
+/** 修正文本里的冠词错配(批量替换后必跑)。 */
+export const fixArticles = t => String(t ?? '')
+  .replace(/\b(a|an|A|An) ([a-zA-Z][a-zA-Z-]{2,})/g, (m, art, w) => {
+    const want = articleFor(w);
+    if (art.toLowerCase() === want) return m;
+    const cased = art[0] === art[0].toUpperCase() ? want[0].toUpperCase() + want.slice(1) : want;
+    return `${cased} ${w}`;
+  });
+
 /** 供 SQL 用的停用词字面量列表 —— **由上面同一份 STOPWORDS 生成**。 */
 export const sqlStopwordList = () =>
   [...STOPWORDS].filter(w => w.length > 2)

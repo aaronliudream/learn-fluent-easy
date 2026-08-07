@@ -123,8 +123,8 @@ UNION ALL
 SELECT '没有 idiom(那是 H 段的)',
        NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type = 'idiom')
 UNION ALL
-SELECT 'connector 的释义都点出了使用边界',
+SELECT 'connector 的释义都写了边界说明(括号)',
        NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type = 'connector'
-                    AND translation_zh !~ '不用于|不能用|不是|区别|仅用|只用|须|需|前句|后句|而非|不同于|不可');
+                    AND translation_zh !~ '[(（][^)）]{2,}[)）]');
 
 COMMIT;

@@ -29,12 +29,18 @@ import { DATA, REPO, arg, flag, callJson, pool, loadCache, saveCache, q, writeSq
 const BANK = 'toefl';
 const LIMIT = Number(arg('limit', '100'));
 const CONCURRENCY = Number(arg('concurrency', '4'));
-const PICK_MODEL = arg('pick-model', 'gpt-4o');
+/* ⚠️ 这一步本质是 yes/no 二分判断,不需要 4o。
+ * 用 4o 反而三次重试都撞 "Unterminated string" —— 输出被截断。
+ * 换 mini + 设 max_tokens 上限:判断题不需要长输出,限死反而更稳。 */
+const PICK_MODEL = arg('pick-model', 'gpt-4o-mini');
 const CACHE_FILE = `${BANK}-weak-senses.json`;
 const BASELINE = path.join(DATA, `${BANK}-weak-baseline.json`);
 
 const pre = JSON.parse(readFileSync(path.join(DATA, `${BANK}-weak-prescreened.json`), 'utf8'));
-const targets = pre.sample.slice(0, LIMIT);
+/* 试点走 sample(含刻意造的边界样本),放量走 kept 全量。
+ * sample 已在 kept 里,续跑时不会重复烧 token(cache 命中即跳过)。 */
+const FULL = flag('full');
+const targets = FULL ? pre.kept.slice(0, LIMIT) : pre.sample.slice(0, LIMIT);
 
 const SCHEMA = {
   type: 'object', additionalProperties: false,
@@ -114,7 +120,7 @@ async function main() {
     let out = null;
     for (let a = 1; a <= 3 && !out; a++) {
       try {
-        const r = await callJson({ system: SYSTEM, user: prompt(t), schemaName: 'weak_sense', schema: SCHEMA, model: PICK_MODEL, temperature: 0 });
+        const r = await callJson({ system: SYSTEM, user: prompt(t), schemaName: 'weak_sense', schema: SCHEMA, model: PICK_MODEL, temperature: 0, maxTokens: 200 });
         const f = gate(t, r);
         if (!f.length) out = r;
         else if (a === 3) { bad++; process.stdout.write(`  ✗ ${t.headword}: ${f[0]}\n`); }

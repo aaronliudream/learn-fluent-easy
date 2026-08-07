@@ -24,10 +24,11 @@ export const arg = (k, d) => process.argv.find(a => a.startsWith(`--${k}=`))?.sp
 export const flag = k => process.argv.includes(`--${k}`);
 
 /** 调模型,强制 JSON schema 输出。限流/5xx 指数退避,最多 5 次。 */
-export async function callJson({ system, user, schemaName, schema, model = 'gpt-4o-mini', temperature = 0.7 }) {
+export async function callJson({ system, user, schemaName, schema, model = 'gpt-4o-mini', temperature = 0.7, maxTokens }) {
   requireKeys(ENV, ['OPENAI_API_KEY']);
   const body = {
     model, temperature,
+    ...(maxTokens ? { max_tokens: maxTokens } : {}),
     messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
     response_format: { type: 'json_schema', json_schema: { name: schemaName, strict: true, schema } },
   };

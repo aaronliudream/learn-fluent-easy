@@ -228,5 +228,2085 @@
     "two_uses": true,
     "second": "灵敏度",
     "why": "敏感性指情感或反应，灵敏度指测量或检测能力。"
+  },
+  "genre": {
+    "two_uses": true,
+    "second": "流派",
+    "why": "类型指类别，流派指艺术风格。"
+  },
+  "migration": {
+    "two_uses": true,
+    "second": "移民",
+    "why": "迁移指一般移动，移民特指人口迁徙。"
+  },
+  "depressed": {
+    "two_uses": true,
+    "second": "降低的",
+    "why": "情绪低落与物理或状态降低是不同语境"
+  },
+  "contractor": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者是同一用法的不同译法。"
+  },
+  "informal": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者是同一用法的不同译法。"
+  },
+  "butt": {
+    "two_uses": true,
+    "second": "粗大的一头",
+    "why": "两个用法在不同语境下使用"
+  },
+  "threshold": {
+    "two_uses": true,
+    "second": "门槛",
+    "why": "阈值用于科学，门槛用于日常。"
+  },
+  "landmark": {
+    "two_uses": true,
+    "second": "划时代的事",
+    "why": "地标和划时代的事是不同的概念"
+  },
+  "devastating": {
+    "two_uses": true,
+    "second": "很好的",
+    "why": "两个用法在语境中差异明显"
+  },
+  "citizenship": {
+    "two_uses": true,
+    "second": "市民权",
+    "why": "公民身份指个人的法律地位，国籍指国家归属。"
+  },
+  "accusation": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"指控\"和\"控告\"是同一用法的不同译法。"
+  },
+  "nominate": {
+    "two_uses": true,
+    "second": "任命",
+    "why": "提名和任命在不同场合使用，提名是推荐，任命是正式授予职位。"
+  },
+  "skeptical": {
+    "two_uses": true,
+    "second": "不可知论的",
+    "why": "怀疑的指对事物持怀疑态度，不可知论的指哲学观点。"
+  },
+  "consecutive": {
+    "two_uses": false,
+    "second": "",
+    "why": "\u000e8fd9\u000e4e24\u000e4e2a\u000e8bf4\u000e6cd5\u000e53ef\u000e4ee5\u000e5720\u000e6362\u000e4f7f\u000e7528\u000e800c\u000e4e0d\u000e6539\u000e53d8\u000e610f\u000e601d\u000e3002"
+  },
+  "consistency": {
+    "two_uses": true,
+    "second": "黏稠度",
+    "why": "一致性和黏稠度在不同语境下使用。"
+  },
+  "rejection": {
+    "two_uses": true,
+    "second": "抛弃",
+    "why": "拒绝和抛弃在语境上有区别，前者是拒绝接受，后者是丢弃已拥有的。"
+  },
+  "evoke": {
+    "two_uses": true,
+    "second": "召(魂)",
+    "why": "唤起和召(魂)在语境上不同"
+  },
+  "warfare": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"战争\"和\"战斗\"在此为同一用法的不同译法。"
+  },
+  "intervene": {
+    "two_uses": true,
+    "second": "插入",
+    "why": "干预和插入在语境中有不同的应用场景。"
+  },
+  "hierarchy": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者都是指等级结构的不同译法。"
+  },
+  "reconstruction": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"重建\"和\"改造\"在同一语境下可互换。"
+  },
+  "cult": {
+    "two_uses": true,
+    "second": "膜拜",
+    "why": "邪教指极端宗教团体，膜拜泛指崇拜行为。"
+  },
+  "odor": {
+    "two_uses": true,
+    "second": "名声",
+    "why": "气味和名声在不同语境中使用,如物理气味和社会评价。"
+  },
+  "destiny": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"命运\"和\"定数\"是同一用法的不同译法。"
+  },
+  "venue": {
+    "two_uses": true,
+    "second": "犯罪地点",
+    "why": "场所泛指任何地点，犯罪地点特指犯罪发生地。"
+  },
+  "flaw": {
+    "two_uses": true,
+    "second": "裂纹",
+    "why": "缺陷指整体问题，裂纹指具体物理损伤。"
+  },
+  "freshly": {
+    "two_uses": true,
+    "second": "精神饱满",
+    "why": "新鲜地和精神饱满在不同语境下使用。"
+  },
+  "frightening": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者是同一用法的不同译法。"
+  },
+  "distinguished": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"杰出的\"和\"卓著的\"是同一用法的不同译法。"
+  },
+  "inclined": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者是同一用法的不同译法。"
+  },
+  "eternal": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"永恒的\"和\"不灭的\"在同一语境下可互换。"
+  },
+  "monopoly": {
+    "two_uses": true,
+    "second": "专卖权",
+    "why": "垄断指市场控制，专卖权指特许销售权。"
+  },
+  "declaration": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"声明\"和\"宣告\"在此处是同一用法的不同译法。"
+  },
+  "educated": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者在同一语境中可互换使用。"
+  },
+  "courthouse": {
+    "two_uses": true,
+    "second": "郡政府所在地",
+    "why": "法庭和郡政府所在地指代不同的机构和功能"
+  },
+  "artery": {
+    "two_uses": true,
+    "second": "干道",
+    "why": "动脉指生物学用法，干道指交通用法。"
+  },
+  "denounce": {
+    "two_uses": true,
+    "second": "告发",
+    "why": "\"谴责\"和\"告发\"在语境中有不同的使用场景。"
+  },
+  "sovereignty": {
+    "two_uses": false,
+    "second": "",
+    "why": "主权和独立国在同一语境下表达的是同一概念的不同翻译。"
+  },
+  "flexibility": {
+    "two_uses": false,
+    "second": "",
+    "why": "灵活性和适应性在同一语境下可以互换，均指代应对变化的能力，属于同一用法的不同译法。"
+  },
+  "journalism": {
+    "two_uses": false,
+    "second": "",
+    "why": "新闻学和报章杂志在语义上是相互关联的，都是指与新闻相关的内容，但并不代表它们在用法上有明显的区别。"
+  },
+  "inspiration": {
+    "two_uses": false,
+    "second": "",
+    "why": "灵感和鼓舞人心的人或物在用法上是同义的，都是指激发创造力或积极情绪的事物，没有实质性的不同语境。"
+  },
+  "undermine": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法在同一个句子位置可以互换而不改变意思，都是指削弱某种力量或影响。"
+  },
+  "facilitate": {
+    "two_uses": false,
+    "second": "",
+    "why": "促进和使容易在同一用法下是同义词，均指帮助某事物的发展或进展。"
+  },
+  "donation": {
+    "two_uses": false,
+    "second": "",
+    "why": "捐赠和捐款在中文中是同义词，表示相同的行为，没有不同的用法或语境。"
+  },
+  "transition": {
+    "two_uses": false,
+    "second": "",
+    "why": "过渡和转变在同一语境下可以互换，指的是变化的过程，没有实质性区别。"
+  },
+  "intervention": {
+    "two_uses": false,
+    "second": "",
+    "why": "干预和插入在同一语境下是同义词，表示相同的概念。"
+  },
+  "spine": {
+    "two_uses": false,
+    "second": "",
+    "why": "脊柱和背骨是同一概念的不同翻译，属于同一用法。"
+  },
+  "suppress": {
+    "two_uses": false,
+    "second": "",
+    "why": "压制和使止住在语义上是相近的，都是指控制或限制某种状态或行为，没有明显的不同用法。"
+  },
+  "supervise": {
+    "two_uses": false,
+    "second": "",
+    "why": "监督和管理在此处是同一用法的不同译法，均指对某项工作的监控和指导。"
+  },
+  "parameter": {
+    "two_uses": false,
+    "second": "",
+    "why": "参数和参变量在数学和计算机科学中通常指代同一概念，都是用来表示函数或模型中的可变因素，属于同一用法的不同译法。"
+  },
+  "shocking": {
+    "two_uses": false,
+    "second": "",
+    "why": "同一用法的不同译法"
+  },
+  "analogy": {
+    "two_uses": false,
+    "second": "",
+    "why": "类比和相似在同一语境下可以互换使用，都是指事物之间的相似性，没有不同的用法。"
+  },
+  "hostility": {
+    "two_uses": false,
+    "second": "",
+    "why": "敌意和反对在语义上是相近的，都是表达对某事物的不满或对立情绪，属于同一用法的不同表达。"
+  },
+  "erosion": {
+    "two_uses": false,
+    "second": "",
+    "why": "侵蚀和腐蚀在同一语境下可以互换，均指物质的破坏过程，属于同一用法的不同译法。"
+  },
+  "saturated": {
+    "two_uses": false,
+    "second": "",
+    "why": "饱和的和渗透的在同一用法下是同义词，均指物质达到最大浓度或无法再吸收更多的状态。"
+  },
+  "costume": {
+    "two_uses": false,
+    "second": "",
+    "why": "服装和装束在此语境下是同义词，表示相同的概念，没有不同的用法。"
+  },
+  "soy": {
+    "two_uses": false,
+    "second": "",
+    "why": "大豆和酱油在同一语境下是同一种用法的不同译法。"
+  },
+  "elevate": {
+    "two_uses": false,
+    "second": "",
+    "why": "提升和举起在同一用法下都是指增加高度或程度，属于同义词的不同翻译。"
+  },
+  "lottery": {
+    "two_uses": false,
+    "second": "",
+    "why": "彩票和奖券在中文中是同义词，指的是同一种事物，没有不同的用法或语境。"
+  },
+  "abandoned": {
+    "two_uses": false,
+    "second": "",
+    "why": "被遗弃的和无约束的在同一用法下，都是描述一种状态，无法互换。"
+  },
+  "corps": {
+    "two_uses": false,
+    "second": "",
+    "why": "军团和队在军事语境中可以视为同一概念的不同翻译，未必代表不同的用法或语境。"
+  },
+  "quota": {
+    "two_uses": false,
+    "second": "",
+    "why": "配额和限额在同一语境下可以互换，表示相同的概念。"
+  },
+  "oyster": {
+    "two_uses": false,
+    "second": "",
+    "why": "牡蛎和蚝是同一种海鲜的不同称呼，属于同一用法的不同译法。"
+  },
+  "coordination": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"协调\"和\"同等\"在同一词性下是同义词，表示相似的概念，没有不同的用法。"
+  },
+  "oath": {
+    "two_uses": false,
+    "second": "",
+    "why": "誓言和咒骂在语境上并不对应两种不同的用法，实际上是同一词的不同翻译。"
+  },
+  "deprive": {
+    "two_uses": false,
+    "second": "",
+    "why": "剥夺和使丧失在语义上是相似的，都是指失去某种东西，但并不代表它们在用法上有明显的区别。"
+  },
+  "perfection": {
+    "two_uses": false,
+    "second": "",
+    "why": "完美和极端在同一词性下是同义的不同译法，指向相似的概念。"
+  },
+  "offspring": {
+    "two_uses": false,
+    "second": "",
+    "why": "后代和子孙在中文中是同义词，表示同一种概念，没有不同的用法或语境。"
+  },
+  "contamination": {
+    "two_uses": false,
+    "second": "",
+    "why": "污染和污物在同一用法下，都是指不洁净的状态或物质，没有实质性的不同语境。"
+  },
+  "fury": {
+    "two_uses": false,
+    "second": "",
+    "why": "愤怒和狂暴在语义上是相近的，都是指强烈的情绪状态，且可以在同一语境中互换使用。"
+  },
+  "misleading": {
+    "two_uses": false,
+    "second": "",
+    "why": "误导的和引入歧途的在语义上是相似的，都是指使人产生错误理解的意思，属于同一用法的不同表达。"
+  },
+  "embryo": {
+    "two_uses": false,
+    "second": "",
+    "why": "胚胎和胎儿在生物学上是同一发展阶段的不同称呼，属于同一用法的不同译法。"
+  },
+  "lettuce": {
+    "two_uses": false,
+    "second": "",
+    "why": "生菜和莴苣是同一种植物的不同称呼，属于同一用法的不同译法。"
+  },
+  "sermon": {
+    "two_uses": false,
+    "second": "",
+    "why": "布道和说教在语境上是相似的，都是传达宗教或道德教义的行为，属于同一用法的不同译法。"
+  },
+  "transcend": {
+    "two_uses": false,
+    "second": "",
+    "why": "超越和胜过在同一用法下都是指在某种程度上超过某物或某人，属于同义词的不同翻译。"
+  },
+  "implicit": {
+    "two_uses": false,
+    "second": "",
+    "why": "隐含的和暗示的在语义上非常接近，通常可以互换使用，指代同一种含义。"
+  },
+  "rigorous": {
+    "two_uses": false,
+    "second": "",
+    "why": "严格的和苛刻的在语义上有重叠，但在用法上并不对应两种不同的语境。"
+  },
+  "sensibility": {
+    "two_uses": false,
+    "second": "",
+    "why": "敏感性和感觉在同一语境下可以互换，指代相似的概念。"
+  },
+  "commuter": {
+    "two_uses": false,
+    "second": "",
+    "why": "通勤者和月季票乘客在语义上是同一用法的不同表达，均指代使用公共交通上下班的人。"
+  },
+  "charitable": {
+    "two_uses": false,
+    "second": "",
+    "why": "慈善的和宽厚的在语义上有重叠，但并不代表它们在用法上是不同的。"
+  },
+  "muscular": {
+    "two_uses": false,
+    "second": "",
+    "why": "肌肉的和强壮的在同一语境下可以互换，均指身体的肌肉发达程度，没有不同的用法。"
+  },
+  "discriminate": {
+    "two_uses": false,
+    "second": "",
+    "why": "歧视和区别在语义上存在差异，前者通常带有负面含义，指不公正的对待，而后者则是中性词，指简单的区分或辨别。"
+  },
+  "elusive": {
+    "two_uses": false,
+    "second": "",
+    "why": "同一用法的不同译法"
+  },
+  "comprehend": {
+    "two_uses": false,
+    "second": "",
+    "why": "理解和包括在同一用法下，都是指对某事物的理解，没有真正的不同语境。"
+  },
+  "crater": {
+    "two_uses": false,
+    "second": "",
+    "why": "火山口和弹坑在同一词性下是不同的翻译，但它们指代的概念在用法上是相同的，都是指地面上的凹陷或坑洞。"
+  },
+  "exploitation": {
+    "two_uses": false,
+    "second": "",
+    "why": "剥削和开发在同一词性下是同义的不同译法，指向相似的概念，没有真正的不同用法。"
+  },
+  "immunity": {
+    "two_uses": false,
+    "second": "",
+    "why": "免疫力和免除在同一词性下是同一用法的不同译法，均涉及免疫相关的概念。"
+  },
+  "extinction": {
+    "two_uses": false,
+    "second": "",
+    "why": "灭绝和消失在语义上有重叠，但在具体用法和语境上并不构成两种不同的用法。"
+  },
+  "cylinder": {
+    "two_uses": false,
+    "second": "",
+    "why": "圆柱和汽缸在同一用法下是不同的翻译，指代同一种物体的不同方面。"
+  },
+  "plaza": {
+    "two_uses": false,
+    "second": "",
+    "why": "广场和购物区在同一用法下都是指公共空间，但并不代表它们在语境上有明显的不同。"
+  },
+  "exemption": {
+    "two_uses": false,
+    "second": "",
+    "why": "豁免和解除在同一语境下可以互换，均指免除某种责任或义务，属于同一用法的不同译法。"
+  },
+  "paralyze": {
+    "two_uses": false,
+    "second": "",
+    "why": "瘫痪和使麻痹在语义上是同义的，都是指失去运动能力或功能的状态，没有不同的用法或语境。"
+  },
+  "realism": {
+    "two_uses": false,
+    "second": "",
+    "why": "现实主义和实在论在同一语境下通常指代相同的概念，都是对现实的关注和描述，没有实质性的不同用法。"
+  },
+  "spinach": {
+    "two_uses": false,
+    "second": "",
+    "why": "菠菜和货币在同一词性下并不是学生会遇到的两种不同用法，菠菜指的是一种蔬菜，而货币则是经济学中的概念，二者在语境上没有交集。"
+  },
+  "fusion": {
+    "two_uses": false,
+    "second": "",
+    "why": "融合和熔合物在同一用法下，都是指物质的结合或合成，没有实质性的不同语境。"
+  },
+  "visibility": {
+    "two_uses": false,
+    "second": "",
+    "why": "可见性和能见度在同一语境下可以互换使用，表示相同的概念。"
+  },
+  "chord": {
+    "two_uses": false,
+    "second": "",
+    "why": "和弦和和音在音乐中指代的是同一种概念，都是指多个音符的组合，属于同一用法的不同译法。"
+  },
+  "auditor": {
+    "two_uses": false,
+    "second": "",
+    "why": "审计员和听者在同一词性下是同一用法的不同译法，均指代特定的角色或身份，没有不同的语境。"
+  },
+  "reconstruct": {
+    "two_uses": false,
+    "second": "",
+    "why": "重建和改造在此上下文中是同义词，表示对某物进行重新构造或改变，没有不同的用法。"
+  },
+  "detain": {
+    "two_uses": false,
+    "second": "",
+    "why": "拘留和扣押在法律语境中通常指的是限制个人自由的行为，但在具体用法上并不涉及不同的场景或含义。"
+  },
+  "palette": {
+    "two_uses": false,
+    "second": "",
+    "why": "调色板和颜料在用法上是同义的，都是指与绘画相关的工具或材料，没有不同的语境。"
+  },
+  "persistence": {
+    "two_uses": false,
+    "second": "",
+    "why": "坚持不懈和固执在语义上有重叠，但在用法和语境上并不完全相同。坚持不懈通常指的是在面对困难时的毅力，而固执则带有负面含义，指的是不愿意改变自己的看法或行为。"
+  },
+  "troubling": {
+    "two_uses": false,
+    "second": "",
+    "why": "同一用法的不同译法"
+  },
+  "brink": {
+    "two_uses": false,
+    "second": "",
+    "why": "边缘和陡岸在同一用法下都是指物体的边界或边缘，没有实质性的不同语境。"
+  },
+  "collide": {
+    "two_uses": false,
+    "second": "",
+    "why": "碰撞和抵触在语义上有重叠，但在用法上并不对应两种不同的语境。"
+  },
+  "ordeal": {
+    "two_uses": false,
+    "second": "",
+    "why": "严峻考验和痛苦经历在语义上是相似的，都是指经历困难和挑战的过程，属于同一用法的不同表达。"
+  },
+  "periodic": {
+    "two_uses": false,
+    "second": "",
+    "why": "周期性的和循环的在此上下文中是同义词，表示相同的概念。"
+  },
+  "breakup": {
+    "two_uses": false,
+    "second": "",
+    "why": "分手和崩溃在语境上并不对应两种不同的用法，都是指关系的结束，但表达的侧重点不同。"
+  },
+  "scrutinize": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法在同一个句子位置可以互换而不改变意思，属于同一用法的不同译法。"
+  },
+  "appraisal": {
+    "two_uses": false,
+    "second": "",
+    "why": "评估和评价在同一语境下可以互换，表示对事物的判断或估计，属于同一用法的不同表达。"
+  },
+  "resonance": {
+    "two_uses": false,
+    "second": "",
+    "why": "共鸣和回声在同一语境下可以互换，指代相同的概念。"
+  },
+  "catalyst": {
+    "two_uses": false,
+    "second": "",
+    "why": "催化剂和触媒在化学领域是同义词，表示同一种物质，没有不同的用法或语境。"
+  },
+  "solitude": {
+    "two_uses": false,
+    "second": "",
+    "why": "孤独和单独在同一语境下可以互换，但并不代表它们有不同的用法。"
+  },
+  "latitude": {
+    "two_uses": false,
+    "second": "",
+    "why": "纬度和范围在同一语境下并不对应两种不同的用法，主要是同义的不同翻译。"
+  },
+  "anatomy": {
+    "two_uses": false,
+    "second": "",
+    "why": "解剖学和骨骼在语境上是同一领域的不同方面，不能算作两种不同的用法。"
+  },
+  "harass": {
+    "two_uses": false,
+    "second": "",
+    "why": "骚扰和使烦恼在语义上是相似的，都是指对他人造成困扰或不适，因此可以视为同一用法的不同表达。"
+  },
+  "compression": {
+    "two_uses": false,
+    "second": "",
+    "why": "压缩和压紧在同一语境下可以互换，表示相似的概念，没有明显的不同用法。"
+  },
+  "abstraction": {
+    "two_uses": false,
+    "second": "",
+    "why": "抽象和心不在焉在语义上并不对应两种不同的用法，而是同一用法的不同表达。"
+  },
+  "nebula": {
+    "two_uses": false,
+    "second": "",
+    "why": "星云和角膜云翳在同一词性下是不同的领域术语，前者属于天文学，后者属于医学，学生在不同的学科中会遇到这两个词。"
+  },
+  "accumulation": {
+    "two_uses": false,
+    "second": "",
+    "why": "积累和积聚在同一语境下可以互换，表示相似的概念，没有实质性的不同用法。"
+  },
+  "temperament": {
+    "two_uses": false,
+    "second": "",
+    "why": "气质和性格在中文中通常可以互换使用，指代个体的心理特征，没有明显的语境差异。"
+  },
+  "absorption": {
+    "two_uses": false,
+    "second": "",
+    "why": "吸收和专心在同一语境下并不对应两种不同的用法，而是不同的中文翻译。"
+  },
+  "fluctuation": {
+    "two_uses": false,
+    "second": "",
+    "why": "波动和变动在此处是同义词，表示相似的概念，没有不同的用法。"
+  },
+  "eruption": {
+    "two_uses": false,
+    "second": "",
+    "why": "喷发和出疹在语境上并不相同，前者通常指自然现象，后者则涉及医学领域。"
+  },
+  "mutation": {
+    "two_uses": false,
+    "second": "",
+    "why": "突变和变化在同一语境下可以互换使用，均指事物的改变，没有实质上的不同用法。"
+  },
+  "assassin": {
+    "two_uses": false,
+    "second": "",
+    "why": "刺客和暗杀者在中文中是同义词，表示同一种职业或角色，没有不同的用法或语境。"
+  },
+  "spacious": {
+    "two_uses": false,
+    "second": "",
+    "why": "宽敞的和广大的在此上下文中是同义词，表示空间的大小，没有不同的用法或语境。"
+  },
+  "synthesis": {
+    "two_uses": false,
+    "second": "",
+    "why": "合成和组织在同一语境下可以互换，都是指将不同部分结合成一个整体的过程，没有实质性区别。"
+  },
+  "seduce": {
+    "two_uses": false,
+    "second": "",
+    "why": "引诱和唆使在语义上有重叠，均涉及影响他人行为，但通常在使用场景上并不完全相同，故判定为同一用法的不同译法。"
+  },
+  "cedar": {
+    "two_uses": false,
+    "second": "",
+    "why": "雪松和香椿是同一种植物的不同中文名称，属于同一用法的不同译法。"
+  },
+  "assassinate": {
+    "two_uses": false,
+    "second": "",
+    "why": "刺杀和暗杀在中文中是同义词，指的是用暴力手段杀死某人，通常是出于政治或其他目的。"
+  },
+  "supernatural": {
+    "two_uses": false,
+    "second": "",
+    "why": "超自然的和神奇的在语义上是相近的，通常可以互换使用，表示相似的概念。"
+  },
+  "unanimous": {
+    "two_uses": false,
+    "second": "",
+    "why": "全体一致的和无异议的在语境上是同义的，均表示没有分歧或不同意见。"
+  },
+  "longevity": {
+    "two_uses": false,
+    "second": "",
+    "why": "长寿和长命在中文中是同义词，表示相同的概念，没有不同的用法或语境。"
+  },
+  "helper": {
+    "two_uses": false,
+    "second": "",
+    "why": "助手和帮忙者在同一语境下可以互换，指代相同的角色或功能。"
+  },
+  "anomaly": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"异常\"和\"不规则\"在同一语境下可以互换使用，表示相同的概念。"
+  },
+  "arbitration": {
+    "two_uses": false,
+    "second": "",
+    "why": "仲裁和公断在法律语境中是同义词，指的是通过第三方解决争议的过程，没有不同的用法。"
+  },
+  "intellect": {
+    "two_uses": false,
+    "second": "",
+    "why": "智力和出众的才华在语义上是相近的，都是指与思维和能力相关的特质，属于同一用法的不同表达。"
+  },
+  "perennial": {
+    "two_uses": false,
+    "second": "",
+    "why": "‘多年生的’和‘长期的’在同一语境下可以互换，指代植物的生长周期，属于同一用法的不同译法。"
+  },
+  "pamphlet": {
+    "two_uses": false,
+    "second": "",
+    "why": "小册子和活页文选在语义上是同义的，都是指一种印刷的资料，通常用于宣传或信息传递，没有不同的用法或语境。"
+  },
+  "symbolism": {
+    "two_uses": false,
+    "second": "",
+    "why": "象征主义和符号论在语境上是同义的，都是指代相同的概念，没有不同的用法。"
+  },
+  "obstruction": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"障碍\"和\"闭塞物\"在同一语境下可以互换使用，指代相同的概念。"
+  },
+  "irresistible": {
+    "two_uses": false,
+    "second": "",
+    "why": "不可抗拒的和不能压制的在语义上是相近的，都是指无法抵挡或控制的状态，属于同一用法的不同表达。"
+  },
+  "equilibrium": {
+    "two_uses": false,
+    "second": "",
+    "why": "平衡和平静在同一用法下是同义词，均指一种状态，没有不同的语境。"
+  },
+  "displacement": {
+    "two_uses": false,
+    "second": "",
+    "why": "位移和换置在同一语境下可以互换，均指物体位置的改变，没有实质性区别。"
+  },
+  "authoritative": {
+    "two_uses": false,
+    "second": "",
+    "why": "权威的和官方的在同一语境下可以互换，表示相似的含义。"
+  },
+  "elegance": {
+    "two_uses": false,
+    "second": "",
+    "why": "优雅和高雅在中文中通常被视为同义词，表达相似的概念，没有明显的不同用法。"
+  },
+  "luxurious": {
+    "two_uses": false,
+    "second": "",
+    "why": "奢华的和放纵的在同一用法下表达的是奢侈的生活方式，没有真正的不同语境。"
+  },
+  "cultivation": {
+    "two_uses": false,
+    "second": "",
+    "why": "培养和教化在同一语境下可以互换使用，均指对人的教育和发展。"
+  },
+  "idol": {
+    "two_uses": false,
+    "second": "",
+    "why": "偶像和崇拜物在同一语境下可以互换，指代同一种概念，故为同一用法。"
+  },
+  "ecstasy": {
+    "two_uses": false,
+    "second": "",
+    "why": "狂喜和心醉神迷是同一用法的不同译法，均指极度的快乐或兴奋状态。"
+  },
+  "miraculous": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者在语义上相近，均可用于描述令人惊讶或超出常规的事物，属于同一用法的不同表达。"
+  },
+  "prolong": {
+    "two_uses": false,
+    "second": "",
+    "why": "延长和拖延在用法上是同义的，都是指时间的延续，没有不同的语境。"
+  },
+  "pleasing": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法都是描述令人愉快的体验，属于同一用法的不同表达。"
+  },
+  "commence": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"开始\"和\"得学位\"在同一词性下是同一用法的不同译法。"
+  },
+  "relinquish": {
+    "two_uses": false,
+    "second": "",
+    "why": "放弃和撤回在语境上是相似的，都是指停止某种行为或权利的行使，属于同一用法的不同表达。"
+  },
+  "treadmill": {
+    "two_uses": false,
+    "second": "",
+    "why": "跑步机和踏车在同一语境下都指代运动器械，属于同一用法的不同译法。"
+  },
+  "humility": {
+    "two_uses": false,
+    "second": "",
+    "why": "谦逊和谦虚在中文中是同义词，表达相同的概念，没有不同的用法或语境。"
+  },
+  "squarely": {
+    "two_uses": false,
+    "second": "",
+    "why": "直截了当地和正好在用法上是同义的，都是表示一种直接、明确的方式，没有不同的语境。"
+  },
+  "backbone": {
+    "two_uses": false,
+    "second": "",
+    "why": "骨干和脊椎在此处都是指支撑的意思，属于同一用法的不同译法。"
+  },
+  "amass": {
+    "two_uses": false,
+    "second": "",
+    "why": "积累和积聚在此语境下是同义词，表示相同的动作或过程。"
+  },
+  "marrow": {
+    "two_uses": false,
+    "second": "",
+    "why": "骨髓和精华在同一语境下都指代某种核心或重要的东西，属于同一用法的不同翻译。"
+  },
+  "greasy": {
+    "two_uses": false,
+    "second": "",
+    "why": "油腻的和含脂肪多的是同一用法的不同表达方式，均指食物的油脂含量。"
+  },
+  "demolish": {
+    "two_uses": false,
+    "second": "",
+    "why": "拆除和毁坏在语义上有重叠，但它们通常用于不同的上下文，拆除更侧重于结构性物体的去除，而毁坏则更广泛，包含对物体的损坏或破坏。"
+  },
+  "orbital": {
+    "two_uses": false,
+    "second": "",
+    "why": "轨道的和眼眶的在同一词性下是同一用法的不同译法，不能算作两种不同的用法。"
+  },
+  "imprisonment": {
+    "two_uses": false,
+    "second": "",
+    "why": "监禁和下狱在中文中是同义词，表示相同的概念，没有不同的用法或语境。"
+  },
+  "combustion": {
+    "two_uses": false,
+    "second": "",
+    "why": "燃烧和骚动在同一词性下是同义的不同译法，指代的概念并不相互独立。"
+  },
+  "wrath": {
+    "two_uses": false,
+    "second": "",
+    "why": "愤怒和(自然现象等)严酷在语境上并不对应两种不同的用法，前者指情绪，后者指自然现象，属于不同的概念。"
+  },
+  "obedience": {
+    "two_uses": false,
+    "second": "",
+    "why": "服从和忠实在语义上是相近的，都是指对某种权威或信念的遵循，但并不代表它们在用法上有明显的区别。"
+  },
+  "sensational": {
+    "two_uses": false,
+    "second": "",
+    "why": "耸人听闻的和非常好的在语义上并不对应两种不同的用法，而是同一用法的不同中文表达。"
+  },
+  "envoy": {
+    "two_uses": false,
+    "second": "",
+    "why": "特使和外交使节在同一语境下可以互换，均指代代表国家进行外交活动的人，属于同一用法的不同译法。"
+  },
+  "hamlet": {
+    "two_uses": false,
+    "second": "",
+    "why": "小村庄和部落在同一语境下可以互换使用，表示相似的概念，没有真正的不同用法。"
+  },
+  "unconventional": {
+    "two_uses": false,
+    "second": "",
+    "why": "非传统的和不依惯例的在用法上是同义的，均指不符合常规或传统的事物。"
+  },
+  "fir": {
+    "two_uses": false,
+    "second": "",
+    "why": "冷杉和枞树是同一种树木的不同称呼，属于同一用法的不同译法。"
+  },
+  "stationary": {
+    "two_uses": false,
+    "second": "",
+    "why": "静止的和不动的在同一语境下可以互换，表示相同的状态，没有不同的用法。"
+  },
+  "coordinated": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"协调的\"和\"整理\"在同一用法下是不同的中文表达,但它们并不对应两种不同的用法。"
+  },
+  "installment": {
+    "two_uses": false,
+    "second": "",
+    "why": "分期付款和就职在同一词性下是不同的概念，无法互换。"
+  },
+  "legion": {
+    "two_uses": false,
+    "second": "",
+    "why": "军团和众多的人在同一语境下可以互换，都是指数量庞大的群体，属于同一用法的不同译法。"
+  },
+  "projector": {
+    "two_uses": false,
+    "second": "",
+    "why": "投影仪和计划人是同一词性的不同翻译，实际上是同一种用法的不同表达。"
+  },
+  "funnel": {
+    "two_uses": false,
+    "second": "",
+    "why": "漏斗和烟囱在同一词性下是同一用法的不同译法。"
+  },
+  "arid": {
+    "two_uses": false,
+    "second": "",
+    "why": "干旱的和不毛的在同一用法下是同义词，均指缺乏水分或生长能力的状态。"
+  },
+  "patriarch": {
+    "two_uses": false,
+    "second": "",
+    "why": "家长和创办人是同一用法的不同译法，均指代某种领导或管理角色，没有实质性区别。"
+  },
+  "mediocre": {
+    "two_uses": false,
+    "second": "",
+    "why": "平庸的和通常在同一用法下表达的是相似的含义，都是指一种不突出、不特别的状态。"
+  },
+  "caste": {
+    "two_uses": false,
+    "second": "",
+    "why": "种姓制度和(排他的)社会团体在同一语境下可以互换使用，指代同一概念。"
+  },
+  "improbable": {
+    "two_uses": false,
+    "second": "",
+    "why": "不太可能的和不象发生的在语义上是相似的，都是表达某事发生的可能性很小，因此可以视为同一用法的不同译法。"
+  },
+  "viability": {
+    "two_uses": false,
+    "second": "",
+    "why": "可行性和生存能力在同一用法下是不同的中文表达，实际上是同义的翻译。"
+  },
+  "exaggeration": {
+    "two_uses": false,
+    "second": "",
+    "why": "夸张和夸大的事物在语义上是相同的，都是指对事物的夸大描述，没有不同的用法或语境。"
+  },
+  "feeder": {
+    "two_uses": false,
+    "second": "",
+    "why": "供给者和奶瓶在同一语境下并不对应两种不同的用法，奶瓶是供给者的具体物品，而供给者是一个更广泛的概念。"
+  },
+  "patriarchal": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法在同一个句子位置可以互换而不改变意思，都是指父权制的社会结构。"
+  },
+  "infancy": {
+    "two_uses": false,
+    "second": "",
+    "why": "婴儿期和幼年都是指儿童早期的阶段，属于同一用法的不同译法。"
+  },
+  "diffusion": {
+    "two_uses": false,
+    "second": "",
+    "why": "扩散和传播在同一语境下可以互换，表示相同的概念。"
+  },
+  "metabolic": {
+    "two_uses": false,
+    "second": "",
+    "why": "新陈代谢的和变化的在同一语境下可以互换使用，指代生物体内的变化过程，属于同一用法的不同表达。"
+  },
+  "beak": {
+    "two_uses": false,
+    "second": "",
+    "why": "鸟喙和鸟嘴是同一用法的不同译法，均指鸟类的嘴部结构。"
+  },
+  "coherence": {
+    "two_uses": false,
+    "second": "",
+    "why": "连贯性和黏合(性)在同一语境下可以互换使用，指代相似的概念，故判定为同一用法。"
+  },
+  "precipitation": {
+    "two_uses": false,
+    "second": "",
+    "why": "降水量和坠落在同一词性下是同一用法的不同译法，均涉及物质的沉降或降落。"
+  },
+  "leopard": {
+    "two_uses": false,
+    "second": "",
+    "why": "豹子和美洲豹是同一种动物的不同称呼，没有不同的用法或语境。"
+  },
+  "carnival": {
+    "two_uses": false,
+    "second": "",
+    "why": "狂欢节和嘉年华会是同一概念的不同翻译，没有不同的用法或语境。"
+  },
+  "exhale": {
+    "two_uses": false,
+    "second": "",
+    "why": "呼气和发出在此处是同一用法的不同译法，均指释放气体的动作。"
+  },
+  "weaver": {
+    "two_uses": false,
+    "second": "",
+    "why": "‘织工’和‘织布者’在同一语境下可以互换，表示同一种职业，没有不同的用法。"
+  },
+  "revolutionize": {
+    "two_uses": false,
+    "second": "",
+    "why": "这两个说法在同一语境下可以互换而不改变意思，都是指对事物的重大改变。"
+  },
+  "sculpt": {
+    "two_uses": false,
+    "second": "",
+    "why": "雕刻和造型在此处是同一用法的不同译法，均指对材料进行艺术加工的过程。"
+  },
+  "negligible": {
+    "two_uses": false,
+    "second": "",
+    "why": "微不足道的和可以忽略的在语义上相近，均表示某事物的重要性极低，通常可以互换使用。"
+  },
+  "suspense": {
+    "two_uses": false,
+    "second": "",
+    "why": "悬念和焦虑在语境上并不对应两种不同的用法，都是指情感状态，且可以在某些情况下互换使用。"
+  },
+  "fender": {
+    "two_uses": false,
+    "second": "",
+    "why": "挡泥板和防卫物在同一用法下是不同的翻译，前者指车辆部件，后者指保护性物品。"
+  },
+  "tentacle": {
+    "two_uses": false,
+    "second": "",
+    "why": "触手和触须在同一语境下通常指代相同的生物结构，属于同义词。"
+  },
+  "juxtaposition": {
+    "two_uses": false,
+    "second": "",
+    "why": "并列和并排在此语境下是同义词，表示相同的概念。"
+  },
+  "wand": {
+    "two_uses": false,
+    "second": "",
+    "why": "魔杖和棒在同一语境下都可以指代一种长条形的物体，且在大多数情况下可以互换使用，故判定为同一用法的不同译法。"
+  },
+  "arduous": {
+    "two_uses": false,
+    "second": "",
+    "why": "艰巨的和费力的在语义上相近，都是形容任务的困难程度，属于同一用法的不同表达。"
+  },
+  "metropolis": {
+    "two_uses": false,
+    "second": "",
+    "why": "大都市和重要中心在语义上是相似的，都是指一个城市的重要性，但并不代表它们在用法上有明显的区别。"
+  },
+  "pedagogy": {
+    "two_uses": false,
+    "second": "",
+    "why": "教育学和教授法在语义上是相互关联的，通常指的是同一领域的不同侧面，不能视为两种不同的用法。"
+  },
+  "originality": {
+    "two_uses": false,
+    "second": "",
+    "why": "独创性和新奇在同一语境下可以互换使用，均指代创造性和新颖性，没有实质上的不同用法。"
+  },
+  "harmonious": {
+    "two_uses": false,
+    "second": "",
+    "why": "和谐的和协调的在同一语境下可以互换，表示相似的概念，没有明显的不同用法。"
+  },
+  "temperate": {
+    "two_uses": false,
+    "second": "",
+    "why": "温和的和适度的在同一语境下可以互换使用，表示相似的概念，没有真正的不同用法。"
+  },
+  "aperture": {
+    "two_uses": false,
+    "second": "",
+    "why": "光圈和孔在同一语境下都指代开口，但并不代表它们在具体用法上有不同的含义。"
+  },
+  "gamma": {
+    "two_uses": false,
+    "second": "",
+    "why": "伽马和希腊语的第三个字母(Γ)是同一用法的不同译法，指代同一个概念。"
+  },
+  "appraise": {
+    "two_uses": false,
+    "second": "",
+    "why": "评估和评价在中文中是同义词，表示对事物的价值或质量进行判断，没有不同的用法或语境。"
+  },
+  "evasion": {
+    "two_uses": false,
+    "second": "",
+    "why": "逃避和藉口在语义上是相近的，都是指避免面对某种责任或问题，属于同一用法的不同表达。"
+  },
+  "insulting": {
+    "two_uses": false,
+    "second": "",
+    "why": "侮辱性的和损害人体的在语义上并不对应两种不同的用法，而是同一用法的不同表达。"
+  },
+  "inaccessible": {
+    "two_uses": false,
+    "second": "",
+    "why": "不可接近的和难得到的在语义上是相似的，都表示某种事物难以到达或获得，因此可以视为同一用法的不同表达。"
+  },
+  "nonverbal": {
+    "two_uses": false,
+    "second": "",
+    "why": "非语言的和不用动词的在语义上是相似的，都指代不使用语言或动词的表达方式，因此可以视为同一用法的不同翻译。"
+  },
+  "defection": {
+    "two_uses": false,
+    "second": "",
+    "why": "叛逃和缺乏在语义上没有真正的不同用法，都是指向不同的情境下的同一概念。"
+  },
+  "junction": {
+    "two_uses": false,
+    "second": "",
+    "why": "交叉口和连接在同一语境下都指代相似的概念，属于同一用法的不同译法。"
+  },
+  "puzzling": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者表达的意思相近，均指使人感到困惑，没有明显的不同用法。"
+  },
+  "abstain": {
+    "two_uses": false,
+    "second": "",
+    "why": "戒除和自制在语义上是相近的，都是指控制自己的行为，属于同一用法的不同译法。"
+  },
+  "typify": {
+    "two_uses": false,
+    "second": "",
+    "why": "典型化和代表在同一用法下是同义的，都是指某事物的特征或象征。"
+  },
+  "inconvenient": {
+    "two_uses": false,
+    "second": "",
+    "why": "不方便的和有困难的在语义上是相近的，通常可以互换使用，表示相似的情况。"
+  },
+  "genesis": {
+    "two_uses": false,
+    "second": "",
+    "why": "创世纪和发生在语义上是同一概念的不同表达，均指代事物的起源或开始，没有实质性的不同用法。"
+  },
+  "uniformity": {
+    "two_uses": false,
+    "second": "",
+    "why": "一致性和无差异在同一语境下可以互换使用，表示相同的概念。"
+  },
+  "corrosion": {
+    "two_uses": false,
+    "second": "",
+    "why": "腐蚀和铁锈在同一语境下指代同一现象的不同表现形式，属于同义词。"
+  },
+  "impeach": {
+    "two_uses": false,
+    "second": "",
+    "why": "弹劾和控告在法律语境中通常指向同一行为，即对某人提出指控或要求调查，因此它们在用法上并无实质区别。"
+  },
+  "percussion": {
+    "two_uses": false,
+    "second": "",
+    "why": "打击乐器和碰撞在同一词性下是同一用法的不同译法。"
+  },
+  "meek": {
+    "two_uses": false,
+    "second": "",
+    "why": "温顺和逆来顺受的在语义上是相近的，都是描述一种顺从的态度，没有明显的不同用法。"
+  },
+  "secrete": {
+    "two_uses": false,
+    "second": "",
+    "why": "分泌和隐秘在同一词性下是同一用法的不同译法，不能算作两种不同的用法。"
+  },
+  "acidic": {
+    "two_uses": false,
+    "second": "",
+    "why": "酸性的和尖刻的在同一用法下是不同的中文表达，实际上是同义的不同翻译。"
+  },
+  "prodigy": {
+    "two_uses": false,
+    "second": "",
+    "why": "天才和惊人的事物在用法上是同义的，都是指非凡的才能或表现，不能算作不同的用法。"
+  },
+  "stylized": {
+    "two_uses": false,
+    "second": "",
+    "why": "风格化的和程式化的在同一用法下是同义的，均指一种特定的表现形式，没有不同的语境。"
+  },
+  "fictitious": {
+    "two_uses": false,
+    "second": "",
+    "why": "虚构的和假想的在语义上相近，均指不真实的事物，属于同一用法的不同表达。"
+  },
+  "nectar": {
+    "two_uses": false,
+    "second": "",
+    "why": "花蜜和神酒在语境上并不对应两种不同的用法，都是指甜美的液体，属于同一概念的不同表达。"
+  },
+  "ambience": {
+    "two_uses": false,
+    "second": "",
+    "why": "氛围和周围环境在语义上是相似的，都是指某种环境的感觉或特征，属于同一用法的不同表达。"
+  },
+  "nimble": {
+    "two_uses": false,
+    "second": "",
+    "why": "灵活的和敏捷的在此处是同义词，均指代动作或思维的快速和灵活性，没有不同的用法或语境。"
+  },
+  "holocaust": {
+    "two_uses": false,
+    "second": "",
+    "why": "大屠杀和毁灭在同一语境下是同义词，指代相同的概念。"
+  },
+  "inferiority": {
+    "two_uses": false,
+    "second": "",
+    "why": "劣势和自卑在语境上是相同的，都指向一种低于他人的状态，没有真正的不同用法。"
+  },
+  "scavenger": {
+    "two_uses": false,
+    "second": "",
+    "why": "拾荒者和清道夫在语义上是同一用法的不同译法，均指代从事清理或收集废弃物的人。"
+  },
+  "purification": {
+    "two_uses": false,
+    "second": "",
+    "why": "净化和提纯在同一语境下通常指代相同的过程，都是去除杂质的意思，故判定为同一用法。"
+  },
+  "impropriety": {
+    "two_uses": false,
+    "second": "",
+    "why": "不当行为和不得体在语义上是相近的，都是指不符合社会规范的行为，但并不代表它们在用法上有明显的区别。"
+  },
+  "exacting": {
+    "two_uses": false,
+    "second": "",
+    "why": "要求严格的和吃力的在语义上并不对应两种不同的用法，而是同一用法的不同表达。"
+  },
+  "colt": {
+    "two_uses": false,
+    "second": "",
+    "why": "小马和苔绳在同一词性下是同一用法的不同译法，指代的概念并不相互独立。"
+  },
+  "springboard": {
+    "two_uses": false,
+    "second": "",
+    "why": "跳板和出发点在同一用法下是同义词，均指代某种起始或支持的概念，没有实质性区别。"
+  },
+  "enormity": {
+    "two_uses": false,
+    "second": "",
+    "why": "严重性和暴行在语境上是同一用法的不同译法，均指代一种极端的状态或行为。"
+  },
+  "fragility": {
+    "two_uses": false,
+    "second": "",
+    "why": "脆弱性和虚弱在语义上是相近的，都是指缺乏强度或抵抗力的状态，属于同一用法的不同表达。"
+  },
+  "mirage": {
+    "two_uses": false,
+    "second": "",
+    "why": "海市蜃楼和幻景都是指视觉上的错觉或虚幻的景象，属于同一用法的不同译法。"
+  },
+  "intersection": {
+    "two_uses": false,
+    "second": "",
+    "why": "交叉口和十字路口在中文中是同义词，表示相同的概念，均指道路交汇的地方。"
+  },
+  "eccentricity": {
+    "two_uses": false,
+    "second": "",
+    "why": "古怪和古怪行为在语义上是相近的，都是指与常规不同的表现，属于同一用法的不同表达。"
+  },
+  "distort": {
+    "two_uses": false,
+    "second": "",
+    "why": "扭曲和歪曲在中文中是同义词，表示相同的意思，通常可以互换使用。"
+  },
+  "incompatible": {
+    "two_uses": false,
+    "second": "",
+    "why": "不相容的和矛盾的在语义上是相近的，通常可以互换使用，表示事物之间的冲突或不兼容性。"
+  },
+  "renewable": {
+    "two_uses": false,
+    "second": "",
+    "why": "可再生的和可更新的在同一语境下可以互换，指代相同的概念，故为同一用法的不同译法。"
+  },
+  "validate": {
+    "two_uses": false,
+    "second": "",
+    "why": "验证和使有效在语义上是相近的，都是指确认某事的真实性或有效性，属于同一用法的不同翻译。"
+  },
+  "proficiency": {
+    "two_uses": false,
+    "second": "",
+    "why": "熟练程度和精通在同一语境下可以互换，均指对某项技能的掌握程度，属于同一用法的不同表达。"
+  },
+  "symmetry": {
+    "two_uses": false,
+    "second": "",
+    "why": "对称和匀称在中文中是同一概念的不同表达，指的是形状或结构的均衡性，没有实质上的不同用法。"
+  },
+  "misfortune": {
+    "two_uses": false,
+    "second": "",
+    "why": "不幸和灾祸在语义上相近，都是指不好的事情，但在用法上并没有明显的不同，属于同一用法的不同表达。"
+  },
+  "speedy": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"迅速的\"和\"快的\"在同一语境下可以互换使用，表示相同的意思。"
+  },
+  "accessibility": {
+    "two_uses": false,
+    "second": "",
+    "why": "可及性和易接近在同一语境下可以互换，表示相同的概念。"
+  },
+  "confound": {
+    "two_uses": false,
+    "second": "",
+    "why": "使困惑和挫败在语义上有重叠，都是指造成某种困扰或障碍，但在具体用法上并不对应不同的语境。"
+  },
+  "disciplined": {
+    "two_uses": false,
+    "second": "",
+    "why": "有纪律的和受过训练的在同一语境下可以互换，指的是遵守规则和经过训练的状态，属于同一用法的不同表达。"
+  },
+  "delta": {
+    "two_uses": false,
+    "second": "",
+    "why": "三角洲和希腊字母的第四个字是同一词的不同译法，没有不同的用法或语境。"
+  },
+  "individualism": {
+    "two_uses": false,
+    "second": "",
+    "why": "个人主义和个人特征在语义上是相近的，都是指个体的特性或行为，但并不代表两种不同的用法。"
+  },
+  "embryonic": {
+    "two_uses": false,
+    "second": "",
+    "why": "胚胎的和未成熟在同一语境下可以互换，均指事物的早期阶段，没有实质性区别。"
+  },
+  "labyrinth": {
+    "two_uses": false,
+    "second": "",
+    "why": "迷宫和难解事物在语义上是同义的，都是指复杂的结构或情况，没有真正的不同用法。"
+  },
+  "retribution": {
+    "two_uses": false,
+    "second": "",
+    "why": "报应和惩罚在语义上是相近的，通常可以互换使用，表示对不当行为的回应或惩罚，因此属于同一用法的不同译法。"
+  },
+  "involuntary": {
+    "two_uses": false,
+    "second": "",
+    "why": "非自愿的和无意识的在语义上有重叠，均指缺乏主动控制或意识的状态，属于同一用法的不同表达。"
+  },
+  "circumvent": {
+    "two_uses": false,
+    "second": "",
+    "why": "规避和绕行在同一用法下，都是指避免某种情况或障碍，没有实质性的不同语境。"
+  },
+  "adversity": {
+    "two_uses": false,
+    "second": "",
+    "why": "逆境和不幸在语义上是相近的，都是指遭遇困难或不利的情况，属于同一用法的不同表达。"
+  },
+  "assemblage": {
+    "two_uses": false,
+    "second": "",
+    "why": "集合体和装配在同一用法下是同义词，均指一种组合或集合的状态，没有不同的语境。"
+  },
+  "instill": {
+    "two_uses": false,
+    "second": "",
+    "why": "灌输和滴注在同一用法下，都是指逐渐地传递某种思想或情感，没有实质性的不同语境。"
+  },
+  "cancellation": {
+    "two_uses": false,
+    "second": "",
+    "why": "取消和作废在语义上是相似的，都是指停止或无效化某个事物，没有明显的不同用法。"
+  },
+  "discernible": {
+    "two_uses": false,
+    "second": "",
+    "why": "可辨别的和看得清的在用法上是同义的，均指能够被识别或看出的状态。"
+  },
+  "impulsive": {
+    "two_uses": false,
+    "second": "",
+    "why": "冲动的和受感情驱使的在语义上是相近的，属于同一用法的不同表达。"
+  },
+  "engraving": {
+    "two_uses": false,
+    "second": "",
+    "why": "雕刻和镌版术在同一语境下都指代雕刻的艺术形式，属于同一用法的不同译法。"
+  },
+  "diversification": {
+    "two_uses": false,
+    "second": "",
+    "why": "多样化和变化在同一语境下可以互换，指的是事物的多样性或不同形式，没有实质性区别。"
+  },
+  "compressed": {
+    "two_uses": false,
+    "second": "",
+    "why": "压缩的和扁平的在同一语境下可以互换，指的是物体的形态变化，属于同一用法的不同表达。"
+  },
+  "exude": {
+    "two_uses": false,
+    "second": "",
+    "why": "散发，流露与(使)渗出在同一用法下，都是指物质或情感的释放，没有实质的语境差异。"
+  },
+  "fertilize": {
+    "two_uses": false,
+    "second": "",
+    "why": "施肥和使丰饶在语义上是同一用法的不同表达，均指向增加土壤的养分。"
+  },
+  "porous": {
+    "two_uses": false,
+    "second": "",
+    "why": "多孔的和能渗透的在同一语境下可以互换，指的是物体的结构特性，没有不同的用法。"
+  },
+  "perspiration": {
+    "two_uses": false,
+    "second": "",
+    "why": "汗水和努力在同一词性下是同义的不同译法，表示同一种概念。"
+  },
+  "entangle": {
+    "two_uses": false,
+    "second": "",
+    "why": "纠缠和卷入在语义上是相似的，都是指被困在某种复杂的状态中，没有明显的不同用法。"
+  },
+  "leaky": {
+    "two_uses": false,
+    "second": "",
+    "why": "漏水的和爱哭的在语义上没有交集，属于同一用法的不同表达。"
+  },
+  "crystalline": {
+    "two_uses": false,
+    "second": "",
+    "why": "结晶的和透明的在同一用法下是同义的，都是描述物质的性质。"
+  },
+  "evaporation": {
+    "two_uses": false,
+    "second": "",
+    "why": "蒸发和脱水在同一语境下都指液体转变为气体的过程，属于同一用法的不同译法。"
+  },
+  "decomposition": {
+    "two_uses": false,
+    "second": "",
+    "why": "分解和腐败在同一用法下，都是指物质的变化，但并不代表两种不同的语境。"
+  },
+  "grasshopper": {
+    "two_uses": false,
+    "second": "",
+    "why": "蚱蜢和蝗虫是同一种昆虫的不同中文名称，没有不同的用法或语境。"
+  },
+  "detectable": {
+    "two_uses": false,
+    "second": "",
+    "why": "可检测的和易发现的在同一语境下可以互换，表示相同的意思。"
+  },
+  "engross": {
+    "two_uses": false,
+    "second": "",
+    "why": "这两个说法在同一语境下无法互换，属于不同的用法。"
+  },
+  "flint": {
+    "two_uses": false,
+    "second": "",
+    "why": "燧石和极硬的东西在用法上是同义的，都是指一种物质的特性，没有不同的语境。"
+  },
+  "depreciation": {
+    "two_uses": false,
+    "second": "",
+    "why": "折旧和价值减低在财务和经济学中通常指同一概念，都是指资产价值的减少，因此是同一用法的不同译法。"
+  },
+  "lichen": {
+    "two_uses": false,
+    "second": "",
+    "why": "地衣和青苔在中文中是同一种植物的不同称呼，属于同一用法。"
+  },
+  "convection": {
+    "two_uses": false,
+    "second": "",
+    "why": "对流和传送在同一用法下是同义词，均指物质或能量的移动方式，没有不同的语境。"
+  },
+  "decompose": {
+    "two_uses": false,
+    "second": "",
+    "why": "分解和(使)腐烂在语义上并不对应两种不同的用法，而是同一用法的不同译法。"
+  },
+  "jettison": {
+    "two_uses": false,
+    "second": "",
+    "why": "抛弃，放弃和投弃货物在语义上是同一用法的不同表达，均指放弃某物的行为。"
+  },
+  "asymmetrical": {
+    "two_uses": false,
+    "second": "",
+    "why": "不对称的和偏位的在同一语境下可以互换使用，指代相同的概念。"
+  },
+  "superfluous": {
+    "two_uses": false,
+    "second": "",
+    "why": "多余的和过剩的在用法上是同义的，均指数量超过所需或必要的情况。"
+  },
+  "elucidate": {
+    "two_uses": false,
+    "second": "",
+    "why": "阐明和说明在用法上是同义的，均指对某事进行解释或使其清晰。"
+  },
+  "evasive": {
+    "two_uses": false,
+    "second": "",
+    "why": "回避的和托辞的在语义上是相似的，都是指逃避责任或问题的行为，没有明显的不同用法。"
+  },
+  "interlude": {
+    "two_uses": false,
+    "second": "",
+    "why": "插曲和幕间在同一语境下都指代表演中的间隔部分，属于同一用法的不同译法。"
+  },
+  "expound": {
+    "two_uses": false,
+    "second": "",
+    "why": "阐述和详细说明在语义上是相近的，都是指对某一事物进行解释或说明，没有明显的不同用法。"
+  },
+  "dogmatic": {
+    "two_uses": false,
+    "second": "",
+    "why": "教条的和武断的在语义上有重叠，但并不代表它们在用法上有明显的不同。"
+  },
+  "inanimate": {
+    "two_uses": false,
+    "second": "",
+    "why": "无生命的和失去知觉的在语义上是相似的，都是指缺乏生命或活力的状态，属于同一用法的不同表达。"
+  },
+  "immobilize": {
+    "two_uses": false,
+    "second": "",
+    "why": "这两个说法在同一语境下可以互换，均指使某物失去移动能力，属于同一用法的不同表达。"
+  },
+  "legume": {
+    "two_uses": false,
+    "second": "",
+    "why": "豆类和豆荚在同一语境下可以互换使用，均指代植物的种子或果实，属于同一用法。"
+  },
+  "monotonous": {
+    "two_uses": false,
+    "second": "",
+    "why": "单调的和无变化的在同一语境下可以互换，表示缺乏变化或多样性，属于同一用法的不同表达。"
+  },
+  "subdivide": {
+    "two_uses": false,
+    "second": "",
+    "why": "细分和再分在同一语境下表达相同的意思，属于同一用法的不同译法。"
+  },
+  "enmity": {
+    "two_uses": false,
+    "second": "",
+    "why": "敌意和憎恨在语义上相近，属于同一用法的不同表达。"
+  },
+  "organically": {
+    "two_uses": false,
+    "second": "",
+    "why": "有机地和器官上地在同一用法下并不对应不同的语境，主要是翻译上的差异。"
+  },
+  "undaunted": {
+    "two_uses": false,
+    "second": "",
+    "why": "无畏的和勇敢的在语义上非常接近，通常可以互换使用，表示相同的特质。"
+  },
+  "secretion": {
+    "two_uses": false,
+    "second": "",
+    "why": "分泌物和隐蔽在同一词性下是同一用法的不同译法，均与生物学相关的分泌过程有关。"
+  },
+  "gregarious": {
+    "two_uses": false,
+    "second": "",
+    "why": "群居的和社交的在此处表达的是同一种特性，都是指个体在群体中的行为方式，没有实质上的不同用法。"
+  },
+  "discerning": {
+    "two_uses": false,
+    "second": "",
+    "why": "有洞察力的和敏锐的在此语境下是同义的，均指对事物的理解和判断能力强。"
+  },
+  "solicitor": {
+    "two_uses": false,
+    "second": "",
+    "why": "律师和法务官在不同的法律体系中有不同的角色和职责，虽然都是法律相关的职业，但并不属于同一种用法。"
+  },
+  "monopolize": {
+    "two_uses": false,
+    "second": "",
+    "why": "垄断和独占在中文中是同义词，表示相同的概念，没有不同的用法或语境。"
+  },
+  "respiration": {
+    "two_uses": false,
+    "second": "",
+    "why": "呼吸和一口气在同一语境下可以互换，指代相同的生理过程。"
+  },
+  "outmoded": {
+    "two_uses": false,
+    "second": "",
+    "why": "过时的和废弃的在同一用法下都指代不再使用的状态，属于同义表达。"
+  },
+  "mallet": {
+    "two_uses": false,
+    "second": "",
+    "why": "木槌和球棍在同一用法下是不同的翻译，但并不代表它们在语境上有不同的用法。"
+  },
+  "forerunner": {
+    "two_uses": false,
+    "second": "",
+    "why": "先驱和前兆在语义上有重叠，但它们在具体用法和语境上并不相同，前者强调引领和开创，后者则指示未来可能发生的事情。"
+  },
+  "elation": {
+    "two_uses": false,
+    "second": "",
+    "why": "欢欣，兴高采烈与得意洋洋在语义上是相近的，均表达一种愉悦的情绪，属于同一用法的不同表达。"
+  },
+  "infest": {
+    "two_uses": false,
+    "second": "",
+    "why": "滋扰和寄生于在语义上有明显差异，前者强调对环境的干扰，后者则指生物的寄生关系。"
+  },
+  "cyclone": {
+    "two_uses": false,
+    "second": "",
+    "why": "气旋和龙卷风在气象学上是不同的现象，但在日常用法中常被混用，实际上是同一用法的不同译法。"
+  },
+  "magnetism": {
+    "two_uses": false,
+    "second": "",
+    "why": "磁性和吸引力在同一语境下可以互换使用，均指代物体的吸引特性，属于同一用法的不同译法。"
+  },
+  "impurity": {
+    "two_uses": false,
+    "second": "",
+    "why": "杂质和不洁在同一语境下可以互换，均指含有不纯物质的状态，属于同一用法的不同译法。"
+  },
+  "receptacle": {
+    "two_uses": false,
+    "second": "",
+    "why": "容器和花托在用法上是同义的，都是指某种容纳物的功能，没有不同的语境。"
+  },
+  "aurora": {
+    "two_uses": false,
+    "second": "",
+    "why": "极光和曙光在同一语境下可以互换使用，均指代自然现象，没有不同的用法。"
+  },
+  "malleable": {
+    "two_uses": false,
+    "second": "",
+    "why": "可塑的和有延展性的在同一语境下可以互换，均指材料的物理特性，没有不同的用法。"
+  },
+  "acrid": {
+    "two_uses": false,
+    "second": "",
+    "why": "刺鼻的和苦味的在用法上是相同的，都描述了强烈的味觉或嗅觉体验。"
+  },
+  "commercialize": {
+    "two_uses": false,
+    "second": "",
+    "why": "商业化和使能营利在语义上是相似的，都是指将某种事物转变为可以盈利的状态，因此可以视为同一用法的不同表达。"
+  },
+  "morphology": {
+    "two_uses": false,
+    "second": "",
+    "why": "形态学和词法在语言学中是相关但不同的概念，形态学关注词的结构和形式，而词法则关注词的组合和使用规则。"
+  },
+  "plagiarism": {
+    "two_uses": false,
+    "second": "",
+    "why": "剽窃和抄袭在学术语境中通常指同一种行为，即未经授权使用他人作品的行为，属于同义词。"
+  },
+  "mimetic": {
+    "two_uses": false,
+    "second": "",
+    "why": "模仿的和摹拟的在此语境下是同义词，表示相同的概念，没有不同的用法。"
+  },
+  "industrious": {
+    "two_uses": false,
+    "second": "",
+    "why": "勤勉的和刻苦的在用法上是同义的，均指努力工作或学习，没有不同的语境。"
+  },
+  "deciduous": {
+    "two_uses": false,
+    "second": "",
+    "why": "落叶的和非永久性的在同一语境下表达的是同一种特征，指的是植物的生长周期。"
+  },
+  "uproot": {
+    "two_uses": false,
+    "second": "",
+    "why": "根除和连根拔起在意义上是相同的，都是指彻底消除某种事物，没有不同的用法或语境。"
+  },
+  "tyrannical": {
+    "two_uses": false,
+    "second": "",
+    "why": "专制的和暴虐的在语义上有重叠，但并不代表它们在用法上有明显的区别。"
+  },
+  "unevenly": {
+    "two_uses": false,
+    "second": "",
+    "why": "不均匀地和不平坦地在同一用法下是同义的，均指缺乏一致性或平滑性。"
+  },
+  "hardness": {
+    "two_uses": false,
+    "second": "",
+    "why": "硬度和困难在同一词性下是同义的不同翻译，均可表示某种程度的坚硬或难度，没有真正的不同用法。"
+  },
+  "elixir": {
+    "two_uses": false,
+    "second": "",
+    "why": "灵药和炼金药在语义上是相似的，都是指具有神奇效果的药物，没有不同的用法或语境。"
+  },
+  "sloth": {
+    "two_uses": false,
+    "second": "",
+    "why": "懒惰和怠惰在中文中是同义词，表示相同的概念，没有不同的用法或语境。"
+  },
+  "reclamation": {
+    "two_uses": false,
+    "second": "",
+    "why": "恢复，复垦和教化在同一词性下是同一用法的不同译法，均涉及对某种状态的改善或改变。"
+  },
+  "diction": {
+    "two_uses": false,
+    "second": "",
+    "why": "措辞和发音在同一语境下是不同的表达方式，但它们并不代表两种不同的用法。"
+  },
+  "waxy": {
+    "two_uses": false,
+    "second": "",
+    "why": "蜡状的和苍白的在同一语境下可以互换，但并不代表它们在不同语境下有不同的用法。"
+  },
+  "abbreviation": {
+    "two_uses": false,
+    "second": "",
+    "why": "缩写和节略在同一语境下都指代对词语或句子的简化形式，属于同一用法的不同译法。"
+  },
+  "surging": {
+    "two_uses": false,
+    "second": "",
+    "why": "激增和浪涌在同一用法下，都是指数量或力量的突然增加，属于同义表达。"
+  },
+  "turnpike": {
+    "two_uses": false,
+    "second": "",
+    "why": "收费公路和收税栅在同一语境下指代同一种事物，即收取通行费的公路，属于同一用法的不同译法。"
+  },
+  "mechanized": {
+    "two_uses": false,
+    "second": "",
+    "why": "机械化的和呆板的在同一用法下并不对应不同的语境，实际上是同一概念的不同表达。"
+  },
+  "rascal": {
+    "two_uses": false,
+    "second": "",
+    "why": "调皮鬼和流氓在语境上并不对应两种不同的用法，都是指不守规矩的人，但语气和场合不同。"
+  },
+  "equivocal": {
+    "two_uses": false,
+    "second": "",
+    "why": "模棱两可的和意义不明确的在语义上是相同的，都是指缺乏清晰性或确定性的状态。"
+  },
+  "overburden": {
+    "two_uses": false,
+    "second": "",
+    "why": "这两个说法在同一语境下可以互换，均指负担过重的状态，没有实质性区别。"
+  },
+  "dismember": {
+    "two_uses": false,
+    "second": "",
+    "why": "肢解和割断手足在语义上是同义的，都是指将身体分割成部分，没有不同的用法或语境。"
+  },
+  "roe": {
+    "two_uses": false,
+    "second": "",
+    "why": "鱼卵和狍是同一词性的不同翻译，指代的概念并不相同。"
+  },
+  "ruinous": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法在同一个句子位置可以互换而不改变意思，属于同一用法的不同译法。"
+  },
+  "downcast": {
+    "two_uses": false,
+    "second": "",
+    "why": "沮丧的和气馁的在语义上非常接近，都是描述一种消极情绪，没有明显的不同用法。"
+  },
+  "tedium": {
+    "two_uses": false,
+    "second": "",
+    "why": "单调乏味和沉闷在语义上是相似的，都是描述一种缺乏趣味或活力的状态，属于同一用法的不同表达。"
+  },
+  "trumpeter": {
+    "two_uses": false,
+    "second": "",
+    "why": "小号演奏者和吹鼓手在同一语境下都指代演奏小号的人，属于同一用法的不同译法。"
+  },
+  "accommodating": {
+    "two_uses": false,
+    "second": "",
+    "why": "乐于助人的和肯通融的在语义上是相近的，都是指对他人友好和愿意提供帮助的态度，属于同一用法的不同表达。"
+  },
+  "academician": {
+    "two_uses": false,
+    "second": "",
+    "why": "院士和学会会员在同一语境下可以互换，但并不代表它们在所有情况下都可以互换，主要是因为院士是特定的荣誉称号，而学会会员则是更广泛的身份。"
+  },
+  "chivalry": {
+    "two_uses": false,
+    "second": "",
+    "why": "骑士精神和骑士制度在中文中是同一概念的不同表达，指向相同的文化和历史背景，没有实质上的不同用法。"
+  },
+  "apportion": {
+    "two_uses": false,
+    "second": "",
+    "why": "分配和分摊在此上下文中是同义词，表示相同的分配行为，没有不同的用法。"
+  },
+  "irregularly": {
+    "two_uses": false,
+    "second": "",
+    "why": "不规则地和不整齐在用法上是同义的，都是描述缺乏规则性或整齐性。"
+  },
+  "entrap": {
+    "two_uses": false,
+    "second": "",
+    "why": "诱捕和骗入在语义上是相似的，都是指使某人或某物陷入某种困境，但并不代表它们在用法上有明显的区别。"
+  },
+  "lifesaver": {
+    "two_uses": false,
+    "second": "",
+    "why": "救生员和济急的人在语义上是相似的，都是指帮助他人的角色，但并不代表两种不同的用法。"
+  },
+  "mulberry": {
+    "two_uses": false,
+    "second": "",
+    "why": "桑葚和深紫红色在同一词性下是同一用法的不同译法，均指代桑树的果实或颜色，没有不同的语境。"
+  },
+  "impute": {
+    "two_uses": false,
+    "second": "",
+    "why": "归因和使负责在语义上有重叠，但在具体用法和语境上并不完全相同。"
+  },
+  "emaciated": {
+    "two_uses": false,
+    "second": "",
+    "why": "消瘦的和衰弱的在此处表达的是同一种状态的不同侧面，均指身体状况不佳，无法互换使用。"
+  },
+  "armory": {
+    "two_uses": false,
+    "second": "",
+    "why": "军械库和纹章在同一词性下是不同的翻译，但它们并不代表两种不同的用法，而是同一词的不同含义。"
+  },
+  "inborn": {
+    "two_uses": false,
+    "second": "",
+    "why": "与生俱来的和先天的在语义上是相同的，都是指天生的特质，没有不同的用法或语境。"
+  },
+  "purified": {
+    "two_uses": false,
+    "second": "",
+    "why": "净化的和精制的在同一用法下可以互换，均指经过处理的状态，没有实质性区别。"
+  },
+  "potentiality": {
+    "two_uses": false,
+    "second": "",
+    "why": "潜在性和可能性在语义上非常接近，通常可以互换使用，表示事物的潜在状态或可能发生的情况，因此它们并不代表两种不同的用法。"
+  },
+  "weathering": {
+    "two_uses": false,
+    "second": "",
+    "why": "风化和泻水坡在同一词性下是同一用法的不同译法，均指代地质过程中的风化现象。"
+  },
+  "needlework": {
+    "two_uses": false,
+    "second": "",
+    "why": "针线活和刺绣都是指用针和线进行的手工艺，但刺绣是针线活的一种特定形式，二者并不构成不同的用法。"
+  },
+  "economize": {
+    "two_uses": false,
+    "second": "",
+    "why": "节省和有效地利用在语义上是相近的，都是指减少资源的消耗，属于同一用法的不同表达。"
+  },
+  "excitable": {
+    "two_uses": false,
+    "second": "",
+    "why": "易激动的和易兴奋的在语义上相近，都是描述情绪反应，但并不代表两种不同的用法。"
+  },
+  "declaim": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者在语境上并不对应不同的用法，而是同一用法的不同表达方式。"
+  },
+  "domesticate": {
+    "two_uses": false,
+    "second": "",
+    "why": "驯化和引进在同一用法下，都是指对某种事物的适应或改变，不能算作不同的用法。"
+  },
+  "gravitation": {
+    "two_uses": false,
+    "second": "",
+    "why": "引力和沉下在同一语境下是同义的，都是指物体因重力而向下的作用。"
+  },
+  "abridge": {
+    "two_uses": false,
+    "second": "",
+    "why": "缩短和删节在语义上是相近的，都是指减少内容或长度，属于同一用法的不同表达。"
+  },
+  "disclaim": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法在同一语境下可以互换，均表示不承担责任的意思。"
+  },
+  "foghorn": {
+    "two_uses": false,
+    "second": "",
+    "why": "汽笛和雾号是同一用法的不同译法，均指发出响亮的声音的装置。"
+  },
+  "dismembered": {
+    "two_uses": false,
+    "second": "",
+    "why": "肢解和身首异处在语义上是相似的，都是指将身体分开，但并不代表它们在用法上有明显的不同。"
+  },
+  "watercourse": {
+    "two_uses": false,
+    "second": "",
+    "why": "水道和河道在中文中是同义词，指代相同的概念，没有不同的用法或语境。"
+  },
+  "condenser": {
+    "two_uses": false,
+    "second": "",
+    "why": "冷凝器和缩写者在同一词性下并不对应两种不同的用法，而是不同的翻译或语境。"
+  },
+  "inoffensive": {
+    "two_uses": false,
+    "second": "",
+    "why": "无攻击性的和不触犯人的在语义上是相近的，都是指不造成冒犯或伤害的性质，属于同一用法的不同表达。"
+  },
+  "egoism": {
+    "two_uses": false,
+    "second": "",
+    "why": "自我主义和利己主义在中文中是同义词，表示相同的概念，没有不同的用法或语境。"
+  },
+  "urbanize": {
+    "two_uses": false,
+    "second": "",
+    "why": "城市化和使文雅在语义上并不对应两种不同的用法，而是同一词的不同翻译。"
+  },
+  "palpitate": {
+    "two_uses": false,
+    "second": "",
+    "why": "心悸和发抖都是描述身体反应的词汇，属于同一用法的不同译法。"
+  },
+  "prospecting": {
+    "two_uses": false,
+    "second": "",
+    "why": "勘探和探矿在同一语境下是同义词，指的是寻找矿藏的过程，没有不同的用法。"
+  },
+  "indented": {
+    "two_uses": false,
+    "second": "",
+    "why": "缩进的和犬牙交错的在同一用法下并不对应不同的语境，都是描述排版或结构的特征。"
+  },
+  "jolting": {
+    "two_uses": false,
+    "second": "",
+    "why": "震动和震压造型在同一语境下指代相同的现象，属于同一用法的不同翻译。"
+  },
+  "vacillation": {
+    "two_uses": false,
+    "second": "",
+    "why": "犹豫不决和踌躇在语义上是相似的，都是指缺乏决断的状态，属于同一用法的不同表达。"
+  },
+  "vaporization": {
+    "two_uses": false,
+    "second": "",
+    "why": "汽化和蒸发在科学上是同义词，指的是相同的物理过程，没有不同的用法或语境。"
+  },
+  "antedate": {
+    "two_uses": false,
+    "second": "",
+    "why": "两者在用法上是同义的，均表示时间上的先后关系。"
+  },
+  "atomization": {
+    "two_uses": false,
+    "second": "",
+    "why": "原子化和粉碎在同一用法下是同义词，均指将物体分解成更小的部分，没有不同的语境。"
+  },
+  "retentive": {
+    "two_uses": false,
+    "second": "",
+    "why": "保持力强的和记性好的在语义上是同一用法的不同表达，均指代对信息或事物的保持能力，没有实质性的不同语境。"
+  },
+  "gilding": {
+    "two_uses": false,
+    "second": "",
+    "why": "镀金和虚饰的外观在意义上是相似的，都是指表面装饰，属于同一用法的不同表达。"
+  },
+  "patricide": {
+    "two_uses": false,
+    "second": "",
+    "why": "弑父和杀父(罪)在意义上是相同的，都是指杀害父亲的行为，没有不同的用法或语境。"
+  },
+  "recompose": {
+    "two_uses": false,
+    "second": "",
+    "why": "重组和修改在同一用法下，都是指对某事物进行改变或调整，属于同义词的不同表达方式。"
+  },
+  "reorient": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法在同一语境下可以互换，均指调整方向或适应环境，属于同一用法的不同表达。"
+  },
+  "spined": {
+    "two_uses": false,
+    "second": "",
+    "why": "这两个说法在同一语境下可以互换，均指代具有脊椎的生物，属于同一用法的不同译法。"
+  },
+  "euphonious": {
+    "two_uses": false,
+    "second": "",
+    "why": "悦耳的和音响好的在语义上是相近的，都是描述声音的美好，没有不同的用法或语境。"
+  },
+  "impassible": {
+    "two_uses": false,
+    "second": "",
+    "why": "两个说法是同一用法的不同译法，均指代无法通行的状态。"
+  },
+  "subduct": {
+    "two_uses": false,
+    "second": "",
+    "why": "俯冲和减去在语义上没有不同的用法，都是指一种去掉或减少的动作。"
+  },
+  "petrifaction": {
+    "two_uses": false,
+    "second": "",
+    "why": "石化和使变成石头在同一语境下表达的是同一种现象的不同说法，没有实质上的用法区别。"
+  },
+  "herder": {
+    "two_uses": false,
+    "second": "",
+    "why": "同一用法的不同译法"
+  },
+  "subjected": {
+    "two_uses": false,
+    "second": "",
+    "why": "\"遭受\"和\"使从属\"在同一词性下是同一用法的不同译法，不能视为两种不同的用法。"
+  },
+  "deport": {
+    "two_uses": false,
+    "second": "",
+    "why": "驱逐和举止在语义上没有不同的用法，都是指行为的表现。"
+  },
+  "by-product": {
+    "two_uses": false,
+    "second": "",
+    "why": "副产品和额外收获在同一语境下可以互换，指代同一概念。"
+  },
+  "digestion": {
+    "two_uses": false,
+    "second": "",
+    "why": "消化和领悟在同一词性下是同一用法的不同译法，均指对信息或食物的处理和理解。"
+  },
+  "pocketbook": {
+    "two_uses": false,
+    "second": "",
+    "why": "钱包和笔记本在同一词性下是同一用法的不同译法，均指代一种物品，没有不同的语境或用法。"
+  },
+  "excavate": {
+    "two_uses": false,
+    "second": "",
+    "why": "挖掘和凿通在语义上是相似的，都涉及到对物体的挖掘或开凿，但它们并不代表两种不同的用法或语境。"
+  },
+  "courteous": {
+    "two_uses": false,
+    "second": "",
+    "why": "有礼貌的和谦恭的在语义上相近，都是指对他人表现出尊重和礼貌，属于同一用法的不同表达。"
+  },
+  "long-range": {
+    "two_uses": false,
+    "second": "",
+    "why": "长距离的和远程的在同一用法下是同义的，均指距离较远的情况。"
   }
 }

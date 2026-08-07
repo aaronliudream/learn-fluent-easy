@@ -1,0 +1,15 @@
+{
+  "_note": "义项补全的常设清单 —— 攒批处理,不设专项流程(Aaron 2026-08-06 定,与 antonym-suggestions.json 同款)。",
+  "_why": "弱信号 1290 整段已放弃(c 筛后真两义只有个位数量级,为此动 462 条已上线内容不划算)。但 cite 型例外确实存在,在别的工作中撞见就随手记一条,攒够一批人工审后补。",
+  "_flow": "撞见 → 记这里(status=pending)→ 攒批时人工审 → 合格的出补丁 SQL 并置 status=merged",
+  "candidates": [
+    {
+      "headword": "cite",
+      "current": "引用",
+      "suggest_second": "表彰",
+      "basis": "ECDICT vt. 引用，引证，表彰",
+      "why": "学术引用 vs 授予荣誉,两个真实场景,是弱信号 462 条里唯一明确成立的",
+      "status": "pending"
+    }
+  ]
+}

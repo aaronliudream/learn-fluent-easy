@@ -1,39 +1,247 @@
 {
   "_note": "J 段 30 场景选题定稿(Aaron 2026-08-07,收敛多方评审,不再变动)。structure: essay=议论文(引入→好处三条→转折弊端→权衡结论);experience=经验分享型(引入→三要点→常见失误→建议)。已删:社团招新(链短+与第一天上班重叠)、办健身卡(链薄)。tier2 备选本轮不做:银行开户与信用卡、二手交易与闲置转让。",
   "topics": [
-    { "n": 1,  "title_zh": "网络购物",         "theme_en": "online shopping",        "group": "日常生活", "structure": "essay",      "seed": "browse → add to cart → place an order → free shipping → track the package → return" },
-    { "n": 2,  "title_zh": "租房搬家",         "theme_en": "renting a flat",         "group": "日常生活", "structure": "essay",      "seed": "view a flat → sign a lease → deposit → utilities → move in → neighbours" },
-    { "n": 3,  "title_zh": "超市采购",         "theme_en": "grocery shopping",       "group": "日常生活", "structure": "essay",      "seed": "shopping list → aisle → in stock → best-before date → self-checkout → loyalty card → coupon → bag it" },
-    { "n": 4,  "title_zh": "看病就医",         "theme_en": "seeing a doctor",        "group": "日常生活", "structure": "essay",      "seed": "make an appointment → symptoms → prescription → side effects → follow-up" },
-    { "n": 5,  "title_zh": "在餐厅点餐",       "theme_en": "eating out",             "group": "日常生活", "structure": "essay",      "seed": "book a table → be seated → menu → allergic to → order → the bill → split it → tip → leave a review" },
-    { "n": 6,  "title_zh": "点外卖",           "theme_en": "food delivery",          "group": "日常生活", "structure": "essay",      "seed": "place an order → delivery fee → running late → cold food → leave a review" },
-    { "n": 7,  "title_zh": "手机套餐与换运营商","theme_en": "mobile plans",          "group": "日常生活", "structure": "essay",      "seed": "choose a plan → data allowance → unlimited → roaming → run out of data → overage → top up → switch carriers → keep your number" },
-    { "n": 8,  "title_zh": "邻里噪音纠纷",     "theme_en": "noisy neighbours",       "group": "日常生活", "structure": "essay",      "seed": "complain → keep it down → landlord → mediate → compromise" },
-
-    { "n": 9,  "title_zh": "选课与退课",       "theme_en": "course registration",    "group": "校园学习", "structure": "essay",      "seed": "prerequisite → enrol → drop a course → credit → clash" },
-    { "n": 10, "title_zh": "小组作业",         "theme_en": "group projects",         "group": "校园学习", "structure": "essay",      "seed": "assign roles → free-rider → deadline → merge slides → present" },
-    { "n": 11, "title_zh": "图书馆借还书",     "theme_en": "using the library",      "group": "校园学习", "structure": "experience", "seed": "check out → renew → overdue → fine → reserve" },
-    { "n": 12, "title_zh": "论文写作与查重",   "theme_en": "academic writing",       "group": "校园学习", "structure": "essay",      "seed": "outline → cite → paraphrase → plagiarism → proofread" },
-    { "n": 13, "title_zh": "考前复习",         "theme_en": "exam revision",          "group": "校园学习", "structure": "essay",      "seed": "cram → past papers → burn out → pace yourself → sit the exam" },
-    { "n": 14, "title_zh": "找导师改论文",     "theme_en": "getting feedback",       "group": "校园学习", "structure": "essay",      "seed": "office hours → feedback → revise → resubmit" },
-
-    { "n": 15, "title_zh": "求职面试",         "theme_en": "job hunting",            "group": "工作职场", "structure": "essay",      "seed": "job posting → tailor your CV → shortlist → interview → offer → negotiate" },
-    { "n": 16, "title_zh": "第一天上班",       "theme_en": "starting a new job",     "group": "工作职场", "structure": "essay",      "seed": "onboarding → probation → colleague → get up to speed" },
-    { "n": 17, "title_zh": "开会与汇报",       "theme_en": "meetings",               "group": "工作职场", "structure": "essay",      "seed": "agenda → run over → on the same page → action items → follow up" },
-    { "n": 18, "title_zh": "远程与混合办公",   "theme_en": "remote and hybrid work", "group": "工作职场", "structure": "essay",      "seed": "log on → hybrid → time zone → async → check in → stay connected → burnout → work-life balance" },
-    { "n": 19, "title_zh": "加薪与升职",       "theme_en": "pay and promotion",      "group": "工作职场", "structure": "essay",      "seed": "performance review → raise → promotion → take on more" },
-    { "n": 20, "title_zh": "辞职交接",         "theme_en": "resigning",              "group": "工作职场", "structure": "essay",      "seed": "hand in notice → notice period → hand over → exit interview" },
-
-    { "n": 21, "title_zh": "订机票与值机",     "theme_en": "flying",                 "group": "出行旅游", "structure": "essay",      "seed": "book a flight → check in → boarding pass → delayed → connecting flight" },
-    { "n": 22, "title_zh": "过海关入境",       "theme_en": "going through customs",  "group": "出行旅游", "structure": "experience", "seed": "passport control → declare → customs → baggage claim" },
-    { "n": 23, "title_zh": "酒店入住",         "theme_en": "staying at a hotel",     "group": "出行旅游", "structure": "essay",      "seed": "reservation → check in → room service → check out → deposit refund" },
-    { "n": 24, "title_zh": "城市交通",         "theme_en": "getting around a city",  "group": "出行旅游", "structure": "essay",      "seed": "rush hour → transfer → get off → run late → hail a cab" },
-    { "n": 25, "title_zh": "旅途出岔子",       "theme_en": "when travel goes wrong", "group": "出行旅游", "structure": "essay",      "seed": "lost luggage → missed the train → refund → travel insurance" },
-    { "n": 26, "title_zh": "租车与事故处理",   "theme_en": "renting a car",          "group": "出行旅游", "structure": "essay",      "seed": "rent a car → rental agreement → insurance → deductible → damage → exchange information → file a claim → repair → reimbursement" },
-
-    { "n": 27, "title_zh": "社交媒体",         "theme_en": "social media",           "group": "社会科技", "structure": "essay",      "seed": "scroll → go viral → follower → misinformation → digital detox" },
-    { "n": 28, "title_zh": "网上支付与诈骗",   "theme_en": "online payment and scams","group": "社会科技", "structure": "essay",      "seed": "link a card → two-factor → phishing → freeze the account → dispute" },
-    { "n": 29, "title_zh": "垃圾分类与环保",   "theme_en": "recycling",              "group": "社会科技", "structure": "experience", "seed": "sort waste → recycle → single-use → carbon footprint" },
-    { "n": 30, "title_zh": "人工智能进课堂",   "theme_en": "AI in the classroom",    "group": "社会科技", "structure": "essay",      "seed": "prompt → generate → fact-check → over-rely → ban or embrace" }
-  ]
+    {
+      "n": 1,
+      "title_zh": "网络购物",
+      "theme_en": "online shopping",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "browse → add to cart → place an order → free shipping → track the package → return"
+    },
+    {
+      "n": 2,
+      "title_zh": "租房搬家",
+      "theme_en": "renting a flat",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "view a flat → sign a lease → deposit → utilities → move in → neighbours"
+    },
+    {
+      "n": 3,
+      "title_zh": "超市采购",
+      "theme_en": "grocery shopping",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "shopping list → aisle → in stock → best-before date → self-checkout → loyalty card → coupon → bag it"
+    },
+    {
+      "n": 4,
+      "title_zh": "看病就医",
+      "theme_en": "seeing a doctor",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "make an appointment → symptoms → prescription → side effects → follow-up"
+    },
+    {
+      "n": 5,
+      "title_zh": "在餐厅点餐",
+      "theme_en": "eating out",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "book a table → be seated → menu → allergic to → order → the check → split it → tip vs service charge → leave a review",
+      "note": "the check 是美式,the bill 是英式;本场景一律用美式"
+    },
+    {
+      "n": 6,
+      "title_zh": "点外卖",
+      "theme_en": "food delivery",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "place an order → delivery fee → running late → cold food → leave a review"
+    },
+    {
+      "n": 7,
+      "title_zh": "手机套餐与换运营商",
+      "theme_en": "mobile plans",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "choose a plan → data allowance → unlimited → roaming → run out of data → overage → top up → switch carriers → keep your number"
+    },
+    {
+      "n": 8,
+      "title_zh": "邻里噪音纠纷",
+      "theme_en": "noisy neighbours",
+      "group": "日常生活",
+      "structure": "essay",
+      "seed": "complain → keep it down → talk to the landlord → mediate → put up with vs file a complaint → file a noise complaint → compromise"
+    },
+    {
+      "n": 9,
+      "title_zh": "选课与退课",
+      "theme_en": "course registration",
+      "group": "校园学习",
+      "structure": "essay",
+      "seed": "check the class schedule → prerequisite → enroll in a course → credit → clash → drop a course → add/drop deadline"
+    },
+    {
+      "n": 10,
+      "title_zh": "小组作业",
+      "theme_en": "group projects",
+      "group": "校园学习",
+      "structure": "essay",
+      "seed": "assign roles → free-rider → deadline → merge slides → present"
+    },
+    {
+      "n": 11,
+      "title_zh": "图书馆借还书",
+      "theme_en": "using the library",
+      "group": "校园学习",
+      "structure": "experience",
+      "seed": "library catalog → locate the book → library card vs student ID → check out → due date → renew → overdue → fine → reserve"
+    },
+    {
+      "n": 12,
+      "title_zh": "论文写作与查重",
+      "theme_en": "academic writing",
+      "group": "校园学习",
+      "structure": "essay",
+      "seed": "outline → cite → paraphrase → plagiarism → proofread"
+    },
+    {
+      "n": 13,
+      "title_zh": "考前复习",
+      "theme_en": "exam revision",
+      "group": "校园学习",
+      "structure": "essay",
+      "seed": "make a study plan → practice tests → old exams → cram → burn out → pace yourself → take the exam"
+    },
+    {
+      "n": 14,
+      "title_zh": "找导师改论文",
+      "theme_en": "getting feedback",
+      "group": "校园学习",
+      "structure": "essay",
+      "seed": "office hours → feedback → revise → resubmit"
+    },
+    {
+      "n": 15,
+      "title_zh": "求职面试",
+      "theme_en": "job hunting",
+      "group": "工作职场",
+      "structure": "essay",
+      "seed": "job posting → tailor your resume → apply → get shortlisted → prepare for the interview → receive an offer → negotiate salary → accept the offer"
+    },
+    {
+      "n": 16,
+      "title_zh": "第一天上班",
+      "theme_en": "starting a new job",
+      "group": "工作职场",
+      "structure": "essay",
+      "seed": "onboarding → probation → colleague → get up to speed"
+    },
+    {
+      "n": 17,
+      "title_zh": "开会与汇报",
+      "theme_en": "meetings",
+      "group": "工作职场",
+      "structure": "essay",
+      "seed": "set the agenda → open the floor → brainstorm → discussion → run over → get on the same page → reach consensus → identify action items → take minutes → follow up"
+    },
+    {
+      "n": 18,
+      "title_zh": "远程与混合办公",
+      "theme_en": "remote and hybrid work",
+      "group": "工作职场",
+      "structure": "essay",
+      "seed": "remote vs in-office → hybrid work model → log on → time zone → async → check in → stay connected → burnout → work-life balance"
+    },
+    {
+      "n": 19,
+      "title_zh": "加薪与升职",
+      "theme_en": "pay and promotion",
+      "group": "工作职场",
+      "structure": "essay",
+      "seed": "performance review → raise → promotion → take on more"
+    },
+    {
+      "n": 20,
+      "title_zh": "辞职交接",
+      "theme_en": "resigning",
+      "group": "工作职场",
+      "structure": "essay",
+      "seed": "hand in notice → notice period → hand over → exit interview"
+    },
+    {
+      "n": 21,
+      "title_zh": "订机票与值机",
+      "theme_en": "flying",
+      "group": "出行旅游",
+      "structure": "essay",
+      "seed": "online travel agency → direct vs connecting → book a flight → check in → boarding pass → delayed → make the connection"
+    },
+    {
+      "n": 22,
+      "title_zh": "过海关入境",
+      "theme_en": "going through customs",
+      "group": "出行旅游",
+      "structure": "experience",
+      "seed": "passport control → customs declaration form → baggage claim → customs inspection → nothing to declare vs items to declare → exit"
+    },
+    {
+      "n": 23,
+      "title_zh": "酒店入住",
+      "theme_en": "staying at a hotel",
+      "group": "出行旅游",
+      "structure": "essay",
+      "seed": "reservation → check in → room service → check out → deposit refund"
+    },
+    {
+      "n": 24,
+      "title_zh": "城市交通",
+      "theme_en": "getting around a city",
+      "group": "出行旅游",
+      "structure": "essay",
+      "seed": "rush hour → transfer → get off → run late → hail a cab"
+    },
+    {
+      "n": 25,
+      "title_zh": "旅途出岔子",
+      "theme_en": "when travel goes wrong",
+      "group": "出行旅游",
+      "structure": "essay",
+      "seed": "missed the train → unexpected delays → contact customer service → alternative transportation → refund → travel insurance → file a claim → make the best of it"
+    },
+    {
+      "n": 26,
+      "title_zh": "租车与事故处理",
+      "theme_en": "renting a car",
+      "group": "出行旅游",
+      "structure": "essay",
+      "seed": "rent a car → rental agreement → insurance → deductible → damage → exchange information → file a claim → repair → reimbursement"
+    },
+    {
+      "n": 27,
+      "title_zh": "社交媒体",
+      "theme_en": "social media",
+      "group": "社会科技",
+      "structure": "essay",
+      "seed": "scroll → go viral → follower → misinformation → digital detox"
+    },
+    {
+      "n": 28,
+      "title_zh": "网上支付与诈骗",
+      "theme_en": "online payment and scams",
+      "group": "社会科技",
+      "structure": "essay",
+      "seed": "link a card → two-factor → phishing → freeze the account → dispute"
+    },
+    {
+      "n": 29,
+      "title_zh": "垃圾分类与环保",
+      "theme_en": "recycling",
+      "group": "社会科技",
+      "structure": "experience",
+      "seed": "sort waste → recycle → single-use → carbon footprint"
+    },
+    {
+      "n": 30,
+      "title_zh": "人工智能进课堂",
+      "theme_en": "AI in the classroom",
+      "group": "社会科技",
+      "structure": "essay",
+      "seed": "write a prompt → generate a draft → AI-assisted vs AI-generated → fact-check the output → cite your sources → disclose AI use → over-rely on it → academic integrity policy → ban or embrace"
+    }
+  ],
+  "_round2": "Aaron 2026-08-07 二轮:12 条按「真实事件链 + 美式英语」重排/重做。lost luggage 从过海关移出(属航空公司行李服务,已在旅途出岔子覆盖)。"
 }

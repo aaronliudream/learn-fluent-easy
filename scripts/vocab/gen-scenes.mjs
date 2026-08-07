@@ -31,7 +31,7 @@ const TOPICS = JSON.parse(readFileSync(path.join(HERE, 'data', 'scene-topics.jso
 const SPEC_J = {
   items: [8, 15],
   kinds: ['word', 'collocation', 'chunk', 'contrast'],   // DDL CHECK
-  contrastPairs: [1, 2],
+  contrastPairs: [0, 2],   // 下限 0:Aaron 原则③ —— 宁可没有 contrast,不要放低价值对比
   prosCons: 3,
   essayFullWords: [150, 200],
   essayShortWords: [80, 100],
@@ -119,12 +119,28 @@ function gateOne(p) {
       f.push(`j9 在库词「${it.text_en}」没有标出 headword_ref,无法挂 word_id`);
   }
 
+  /* j10 美式英语闸(Aaron 原则②)。⚠️ 这是停用词表不是形式判据 ——
+     '英式感'没有可机械化的形式特征,只能拿实际打回过的那批兜底 + 人审收口(第九条)。 */
+  const BRITISH = [
+    ['sit the exam', 'take the exam'], ['past papers', 'practice tests'],
+    ['\\bCVs?\\b', 'resume'], ['green channel', '美国无此制度'], ['red channel', '美国无此制度'],
+    ['\\bflats?\\b', 'apartment'], ['\\bqueue', 'line'], ['neighbour', 'neighbor'],
+    ['\\bpetrol\\b', 'gas'], ['\\benrol\\b', 'enroll'], ['\\btimetable\\b', 'schedule'],
+    ['\\bthe bill\\b', 'the check'], ['\\brevise for\\b', 'study for'], ['\\bmobile phone\\b', 'cell phone'],
+  ];
+  const hay = [p.essay_full_en, p.essay_short_en, ...items.map(i => i.text_en)].join(' | ');
+  for (const [br, us] of BRITISH)
+    if (new RegExp(br, 'i').test(hay))
+      f.push(`j10 出现英式表达 /${br}/,应为美式「${us}」`);
+
   // 同义弹药 / 正反面
   const contrastN = items.filter(it => it.kind === 'contrast').length;
   if (contrastN < SPEC_J.contrastPairs[0] || contrastN > SPEC_J.contrastPairs[1])
     f.push(`同义弹药 ${contrastN} 组,规格 ${SPEC_J.contrastPairs.join('-')}`);
   if ((p.benefits ?? []).length !== SPEC_J.prosCons) f.push(`benefits 需 ${SPEC_J.prosCons} 条,实为 ${(p.benefits ?? []).length}`);
   if ((p.drawbacks ?? []).length !== SPEC_J.prosCons) f.push(`drawbacks 需 ${SPEC_J.prosCons} 条,实为 ${(p.drawbacks ?? []).length}`);
+  for (const x of [...(p.benefits ?? []), ...(p.drawbacks ?? [])])
+    if (/[一-龥]/.test(x)) f.push(`benefits/drawbacks 须一律英文,「${x}」是中文`);
 
   return f;
 }
@@ -140,6 +156,30 @@ const SYSTEM = `你为中国英语学习者编写「场景串记」内容。
 一个生活场景,串起 8–15 个词/搭配/词块,**按事情真实发生的先后顺序排列**,
 最后用短文把链上的词全部串进去。学生学完一条链 = 会说一个完整场景。
 
+══════ 三条不可违背的原则(Aaron 2026-08-07 升格为规格)══════
+
+**① 链的判据是「能按真实事件顺序连续讲出来」,不是「相关词的集合」。**
+每个节点必须能回答:**身处这个场景时,美国人真的会在这一步说这个吗?**
+说不出口、或顺序对不上真实流程的,不要放进链里。
+反例:把两条互不相干的平行事故("行李丢了"和"错过火车")塞进同一条链 ——
+那不是链,是清单。
+
+**② 全段以美式英语为准。** 凡英式表达一律改美式:
+  ❌ sit the exam → ✅ take the exam
+  ❌ past papers  → ✅ practice tests / old exams
+  ❌ CV           → ✅ resume
+  ❌ the bill(餐厅)→ ✅ the check
+  ❌ green channel / red channel(英式海关制度,美国根本没有)
+流程本身也要是美式的:美国入境是**先取行李再过海关**,不是相反。
+
+**③ contrast 服务于场景,不为凑类型硬塞。**
+宁可某个场景一组 contrast 都没有,也不要放低价值对比。
+  ❌ tolerate vs endure(学习价值低)
+  ❌ the bill vs check(那是英美用词差异,不是辨析)
+  ❌ fact-check vs skim(非可比概念)
+  ✅ put up with vs file a complaint(忍 vs 走正式流程,真决策点)
+  ✅ AI-assisted vs AI-generated(辅助 vs 代写,真争议)
+
 铁律:
 1. **顺序就是内容**。sort_order 从 1 开始,按事情发生的次序,不是按重要性。
    例(网络购物):browse → add to cart → place an order → free shipping → track the package → return
@@ -150,7 +190,7 @@ const SYSTEM = `你为中国英语学习者编写「场景串记」内容。
 4. **完整版短文必须把链上每一个节点都用进去**(至少 80%),150–200 词。
 5. 速览版 **必须落在 80–100 词之间**,是完整版的压缩,保留主干链词。
    ⚠️ 写完请自己数一遍词数;低于 80 词的会被直接打回,宁可多写两句也不要写短。
-6. benefits / drawbacks 各 3 条**短语**(不是整句)。
+6. benefits / drawbacks 各 3 条**英文短语**(不是整句,**一律英文**,不要中文)。
 7. **禁止使用破折号(em-dash —— 或 --)**,用逗号或分号。
 8. 中文栏不许混英文,英文栏不许混汉字。
 9. 单词节点若是常见托福词,把原形写进 headword_ref;不是就留空字符串。`;

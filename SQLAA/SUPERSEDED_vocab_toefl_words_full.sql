@@ -1,4 +1,4 @@
--- ⛔ SUPERSEDED —— 已被补丁取代,勿单独重跑(见下方警告头)
+-- ⛔ SUPERSEDED —— 已被补丁取代;若确需重放,本文件已内置排除清单(见文末 ⑨),重跑不会复活已移除的词
 -- ═══════════════════════════════════════════════════════════════
 -- ⚠️ 本文件已被补丁取代,**勿单独重跑**。
 --    取代它的补丁:vocab_toefl_words_batch1_topup.sql · vocab_toefl_remove_fagot.sql
@@ -4524,5 +4524,51 @@ UNION ALL
 SELECT 'toefl_links = 4471',
        (SELECT count(*) FROM vocab_word_banks
          WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = 'toefl')) = 4471;
+
+
+-- ═══════════════════════════════════════════════════════════════
+-- ⑨ 排除清单(2026-08-07 新增)—— **让本文件重跑不复活已裁决移除的词**
+--
+-- 立此块的事故:fagot(歧视性词的异拼形)已按裁决从 toefl 库摘除,
+-- 但本文件被重跑时又把它 INSERT 回来了。**删除类操作的主 SQL 天然不可重放** ——
+-- 上面的 INSERT 是「加法」,而删除是「减法」,只跑加法必然回退减法。
+-- 解法:把减法也写进本文件,让本文件自身收敛到终态。
+--
+-- ⚠️ 将来任何词被裁决移出词表,**必须同时加进下面的 excluded 清单**,
+--    否则下一次重跑它就会复活。
+-- ═══════════════════════════════════════════════════════════════
+
+WITH excluded(headword) AS (VALUES
+  ('fagot')   -- 歧视性词异拼形;释义与三条例句全是幻觉(误作"酒吧")
+)
+-- ⑨-a 从 toefl 库摘除
+DELETE FROM vocab_word_banks wb
+ USING vocab_words w, vocab_banks b, excluded x
+ WHERE wb.word_id = w.id AND wb.bank_id = b.id AND b.code = 'toefl'
+   AND lower(w.headword) = x.headword;
+
+-- ⑨-b 清掉可能随之灌入的内容(例句 / 搭配 / 释义),幂等
+WITH excluded(headword) AS (VALUES ('fagot'))
+DELETE FROM vocab_examples e USING vocab_words w, excluded x
+ WHERE e.word_id = w.id AND lower(w.headword) = x.headword;
+
+WITH excluded(headword) AS (VALUES ('fagot'))
+DELETE FROM vocab_collocations c USING vocab_words w, excluded x
+ WHERE c.word_id = w.id AND lower(w.headword) = x.headword;
+
+WITH excluded(headword) AS (VALUES ('fagot'))
+UPDATE vocab_words w SET def_zh = NULL, def_en = NULL, updated_at = now()
+ FROM excluded x WHERE lower(w.headword) = x.headword;
+
+-- ⑨-c validate:重跑本文件任意次,这两行恒为 t
+SELECT '排除清单里的词都不在 toefl 库' AS expect,
+       NOT EXISTS (SELECT 1 FROM vocab_word_banks wb
+                     JOIN vocab_words w ON w.id = wb.word_id
+                     JOIN vocab_banks b ON b.id = wb.bank_id
+                    WHERE b.code = 'toefl' AND lower(w.headword) IN ('fagot')) AS ok
+UNION ALL
+SELECT 'toefl 库恰 4470 词',
+       (SELECT count(*) FROM vocab_word_banks wb JOIN vocab_banks b ON b.id = wb.bank_id
+         WHERE b.code = 'toefl') = 4470;
 
 COMMIT;

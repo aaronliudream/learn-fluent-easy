@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,Aaron 回报 validate 五条全 t(first_learned_date 列 / vocab_review_daily 表 / RLS / 3 条策略 / 无空值)
 -- 成长图数据源补齐:user_vocab_mastery 加首学日列 + 建 vocab_review_daily
 --
 -- ── 为什么需要 ────────────────────────────────────────────────

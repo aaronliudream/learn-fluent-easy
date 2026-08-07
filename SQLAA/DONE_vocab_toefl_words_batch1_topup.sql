@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,Aaron 回报已跑
 -- 托福 batch1 补插:congressional
 --
 -- 背景:此前按「美国政体专名」的范围理由把 congressional 从词表剔除并从 DB 删掉,

@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,Aaron 回报 validate 三条全 t
 -- 反义词 · 人工清单补丁 —— 21 词 / 21 条
 -- 前置:全量 vocab_toefl_antonyms.sql 已跑(四条 validate 全 t)。**本补丁不要求重跑它**。
 -- 来源:① Aaron 审送审件判空栏抓到的漏网(microscopic / synthesize)

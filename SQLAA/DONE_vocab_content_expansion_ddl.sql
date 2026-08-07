@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,Aaron 回报 validate 十条全 t(建的是 antonyms 列 + vocab_confusion_groups/members + vocab_chunks/chunk_banks)
 -- 放量内容规格 A/C/D 段的建表 DDL(一个文件交付)
 --
 --   A 段  反义词      → vocab_words.antonyms text[]

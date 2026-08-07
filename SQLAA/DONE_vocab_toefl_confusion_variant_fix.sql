@@ -1,3 +1,4 @@
+-- ✅ DONE 2026-08-07 已执行,Aaron 回报 validate 四条全 t
 -- C 段拼写变体修正 —— 只动受影响的 2 组
 --
 -- 由来:Aaron 抓到 endeavor/endeavour 同组。加"拼写变体不入组"闸门后全库重扫,

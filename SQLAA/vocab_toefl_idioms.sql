@@ -1,15 +1,23 @@
--- H 段 美国习惯用语 —— 50 条(type='idiom')
+-- H 段 · 托福习语 50 条(**终态写法,可任意重放**)
 --
--- 前置:vocab_idioms_and_cn_expressions_ddl.sql 已跑(type 枚举含 idiom、literal_trap 列 + CHECK)。
--- ⚠️ literal_trap 是这一段的全部价值:格式「字面 X,实为 Y」,DDL 侧也 CHECK 了非空。
--- 幂等:ON CONFLICT (lower(chunk)) 更新。⚠️ 由 Aaron 执行。
+-- ⚠️ 本文件已把 vocab_toefl_idioms_patch.sql 的删/增/改**全部合并进来**,
+--    并改成**终态**:先删掉 type=idiom 中不在本表内的行,再 upsert 本表全部。
+--    所以重跑本文件的结果恒等于"主 SQL + 补丁",不会把已删的条目插回来。
+--    补丁文件保留只为存档,**不需要再跑**。
+--
+-- (立此写法的事故:2026-08-06 重跑旧版主 SQL 把已删的 kick the bucket 插回,50→51。
+--  幂等只保证同一文件重跑无害,不保证主 SQL 与补丁乱序重放无害 —— 先后关系本身就是状态。)
+-- ⚠️ 由 Aaron 执行。
 
 BEGIN;
 
-SELECT 'BEFORE' AS stage, count(*) FILTER (WHERE type='idiom') AS idioms, count(*) AS total FROM vocab_chunks;
+-- ① 终态收敛:清掉本表之外的 idiom(旧版遗留 / 已裁决删除的条目)
+DELETE FROM vocab_chunks WHERE type = 'idiom' AND lower(chunk) NOT IN (
+  'break the ice', 'piece of cake', 'hit the nail on the head', 'a blessing in disguise', 'the ball is in your court', 'under the weather', 'let the cat out of the bag', 'burn the midnight oil', 'cost an arm and a leg', 'bark up the wrong tree', 'bite the bullet', 'call it a day', 'cut to the chase', 'hit the sack', 'jump on the bandwagon', 'keep your chin up', 'on the ball', 'see eye to eye', 'spill the beans', 'take it with a grain of salt', 'the last straw', 'throw in the towel', 'under the radar', 'bend over backwards', 'cut corners', 'in the same boat', 'off the hook', 'over the moon', 'play it by ear', 'rock the boat', 'sit on the fence', 'walk on eggshells', 'water under the bridge', 'beat around the bush', 'bite off more than you can chew', 'blow off steam', 'break the bank', 'cut the mustard', 'get a second wind', 'go down in flames', 'hit the ground running', 'jump the gun', 'hit the books', 'break a leg', 'under the gun', 'hit the jackpot', 'hit the roof', 'burn bridges', 'hit the road', 'on the same page'
+);
 
-INSERT INTO vocab_chunks (chunk, type, translation_zh, literal_trap, scene, example_en, example_zh, freq_rank)
-VALUES
+-- ② upsert 全部 50 条
+INSERT INTO vocab_chunks (chunk, type, translation_zh, literal_trap, scene, example_en, example_zh, freq_rank) VALUES
   ('break the ice', 'idiom', '打破僵局', '字面"打破冰",实为"打破僵局"', 'daily_life', 'Let''s play a game to break the ice.', '我们来玩个游戏来打破僵局。', 1),
   ('piece of cake', 'idiom', '小菜一碟', '字面"一块蛋糕",实为"小菜一碟"', 'daily_life', 'The test was a piece of cake for her.', '这个测试对她来说是小菜一碟。', 2),
   ('hit the nail on the head', 'idiom', '一针见血', '字面"敲钉子在头上",实为"一针见血"', 'work', 'You really hit the nail on the head with that comment.', '你的评论真是一针见血。', 3),
@@ -30,7 +38,7 @@ VALUES
   ('see eye to eye', 'idiom', '意见一致', '字面"眼对眼",实为"意见一致"', 'work', 'We don''t always see eye to eye on politics.', '我们在政治上并不总是意见一致。', 18),
   ('spill the beans', 'idiom', '透露秘密', '字面"洒豆子",实为"透露秘密"', 'daily_life', 'She accidentally spilled the beans about the surprise.', '她不小心透露了惊喜的秘密。', 19),
   ('take it with a grain of salt', 'idiom', '持保留态度', '字面"带一粒盐",实为"持保留态度"', 'news', 'You should take his advice with a grain of salt.', '你应该对他的建议持保留态度。', 20),
-  ('the last straw', 'idiom', '最后一根稻草', '字面"最后一根稻草",实为"忍无可忍"', 'daily_life', 'Her rude comment was the last straw for him.', '她的无礼评论是他忍无可忍的最后一根稻草。', 21),
+  ('the last straw', 'idiom', '最后一根稻草', '字面"最后一根稻草",实指"压垮忍耐的那件事"', 'daily_life', 'Her rude comment was the last straw for him.', '她的无礼评论是他忍无可忍的最后一根稻草。', 21),
   ('throw in the towel', 'idiom', '认输', '字面"扔毛巾",实为"认输"', 'work', 'After several failures, he decided to throw in the towel.', '几次失败后,他决定认输。', 22),
   ('under the radar', 'idiom', '不被注意', '字面"在雷达下",实为"不被注意"', 'work', 'The new policy went under the radar for months.', '新政策几个月来不被注意。', 23),
   ('bend over backwards', 'idiom', '竭尽全力', '字面"向后弯曲",实为"竭尽全力"', 'work', 'She bent over backwards to help him succeed.', '她竭尽全力帮助他成功。', 24),
@@ -46,7 +54,7 @@ VALUES
   ('beat around the bush', 'idiom', '拐弯抹角', '字面"在灌木丛周围打",实为"拐弯抹角"', 'work', 'Stop beating around the bush and get to the point.', '别拐弯抹角,直入正题。', 34),
   ('bite off more than you can chew', 'idiom', '贪多嚼不烂', '字面"咬超过能嚼的",实为"贪多嚼不烂"', 'work', 'Don''t bite off more than you can chew with this project.', '别在这个项目上贪多嚼不烂。', 35),
   ('blow off steam', 'idiom', '发泄情绪', '字面"放掉蒸汽",实为"发泄情绪"', 'health', 'He goes jogging to blow off steam after work.', '他下班后去慢跑发泄情绪。', 36),
-  ('break the bank', 'idiom', '倾家荡产', '字面"破坏银行",实为"倾家荡产"', 'daily_life', 'The vacation won''t break the bank.', '这次度假不会让你倾家荡产。', 37),
+  ('break the bank', 'idiom', '花费过多', '字面"把银行弄破产",实为"花费过多"', 'daily_life', 'The vacation won''t break the bank.', '这次度假不会让你倾家荡产。', 37),
   ('cut the mustard', 'idiom', '符合要求', '字面"切芥末",实为"符合要求"', 'work', 'He didn''t cut the mustard for the team.', '他没有达到团队的要求。', 38),
   ('get a second wind', 'idiom', '恢复活力', '字面"得到第二阵风",实为"恢复活力"', 'health', 'After a short break, I got a second wind.', '短暂休息后,我恢复了活力。', 39),
   ('go down in flames', 'idiom', '彻底失败', '字面"在火焰中下沉",实为"彻底失败"', 'daily_life', 'The plan went down in flames after the first week.', '计划在第一周彻底失败了。', 40),
@@ -55,32 +63,29 @@ VALUES
   ('hit the books', 'idiom', '用功读书', '字面"打书",实为"用功读书"', 'education', 'I need to hit the books for tomorrow''s exam.', '我得为明天的考试用功读书。', 43),
   ('break a leg', 'idiom', '祝好运', '字面"摔断腿",实为"祝好运"', 'culture', 'Break a leg at your performance tonight!', '祝你今晚演出好运！', 44),
   ('under the gun', 'idiom', '压力之下', '字面"在枪下",实为"压力之下"', 'work', 'I''m under the gun to finish this report by noon.', '我得在中午前完成这份报告,压力很大。', 45),
-  ('hit the jackpot', 'idiom', '中大奖', '字面"中头奖",实为"获得巨大成功"', 'daily_life', 'She hit the jackpot with her new book deal.', '她的新书合同取得了巨大成功。', 46),
-  ('kick the bucket', 'idiom', '去世', '字面"踢桶",实为"去世"', 'culture', 'He kicked the bucket at a ripe old age.', '他在高龄时去世。', 47),
-  ('hit the roof', 'idiom', '大发雷霆', '字面"撞到屋顶",实为"大发雷霆"', 'daily_life', 'My dad hit the roof when he saw the dent in the car.', '我爸爸看到车上的凹痕时大发雷霆。', 48),
-  ('burn bridges', 'idiom', '断绝关系', '字面"烧桥",实为"断绝关系"', 'work', 'Don''t burn bridges with your former employer.', '不要与前雇主断绝关系。', 49),
-  ('hit the road', 'idiom', '上路', '字面"打路",实为"上路"', 'travel', 'We should hit the road early to avoid traffic.', '我们应该早点上路以避免交通拥堵。', 50)
-ON CONFLICT (lower(chunk)) DO UPDATE
-  SET type = EXCLUDED.type, translation_zh = EXCLUDED.translation_zh,
-      literal_trap = EXCLUDED.literal_trap, scene = EXCLUDED.scene,
-      example_en = EXCLUDED.example_en, example_zh = EXCLUDED.example_zh,
-      freq_rank = EXCLUDED.freq_rank, updated_at = now();
+  ('hit the jackpot', 'idiom', '中大奖；大获成功', '字面"中头奖",实为"获得巨大成功"', 'daily_life', 'She hit the jackpot with her new book deal.', '她的新书合同取得了巨大成功。', 46),
+  ('hit the roof', 'idiom', '大发雷霆', '字面"撞到屋顶",实为"大发雷霆"', 'daily_life', 'My dad hit the roof when he saw the dent in the car.', '我爸爸看到车上的凹痕时大发雷霆。', 47),
+  ('burn bridges', 'idiom', '断绝关系', '字面"烧桥",实为"断绝关系"', 'work', 'Don''t burn bridges with your former employer.', '不要与前雇主断绝关系。', 48),
+  ('hit the road', 'idiom', '上路', '字面"打路",实为"上路"', 'travel', 'We should hit the road early to avoid traffic.', '我们应该早点上路以避免交通拥堵。', 49),
+  ('on the same page', 'idiom', '达成共识', '字面"在同一页",实为"看法一致"', 'work', 'Let us make sure everyone is on the same page before the launch.', '发布前我们要确保每个人都达成共识。', 50)
+ON CONFLICT (lower(chunk)) DO UPDATE SET
+  type = EXCLUDED.type, translation_zh = EXCLUDED.translation_zh,
+  literal_trap = EXCLUDED.literal_trap, scene = EXCLUDED.scene,
+  example_en = EXCLUDED.example_en, example_zh = EXCLUDED.example_zh,
+  freq_rank = EXCLUDED.freq_rank, updated_at = now();
 
-SELECT 'AFTER' AS stage, count(*) FILTER (WHERE type='idiom') AS idioms, count(*) AS total FROM vocab_chunks;
-
--- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
-SELECT 'idiom 条数 = 50' AS expect,
+-- ── validate:四行都必须是 t(重跑本文件任意次,结果不变)──
+SELECT 'idiom 恰好 50 条' AS expect,
        (SELECT count(*) FROM vocab_chunks WHERE type='idiom') = 50 AS ok
 UNION ALL
-SELECT '每条 idiom 都有 literal_trap',
-       NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type='idiom'
-                    AND (literal_trap IS NULL OR btrim(literal_trap)=''))
+SELECT 'kick the bucket 不在库中(已裁决删除)',
+       NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE lower(chunk)='kick the bucket')
 UNION ALL
-SELECT 'literal_trap 都点出了字面义与实际义',
-       NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type='idiom'
-                    AND NOT (literal_trap LIKE '%字面%' AND literal_trap ~ '实为|实指|实际'))
+SELECT 'on the same page 已入',
+       EXISTS (SELECT 1 FROM vocab_chunks WHERE lower(chunk)='on the same page' AND type='idiom')
 UNION ALL
-SELECT 'D 段那 100 条词块没被动过',
-       (SELECT count(*) FROM vocab_chunks WHERE type <> 'idiom') = 100;
+SELECT '每条 idiom 的 trap 都点出字面义与实际义',
+       NOT EXISTS (SELECT 1 FROM vocab_chunks WHERE type='idiom'
+                    AND NOT (literal_trap LIKE '%字面%' AND literal_trap ~ '实为|实指|实际'));
 
 COMMIT;

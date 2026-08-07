@@ -1,3 +1,11 @@
+-- ═══════════════════════════════════════════════════════════════
+-- ⚠️ 本文件已被补丁取代,**勿单独重跑**。
+--    取代它的补丁:vocab_toefl_words_batch1_topup.sql · vocab_toefl_remove_fagot.sql
+--    如需重放:先跑本文件,再**按上列顺序**跑补丁。
+--    幂等 ≠ 可任意重放 —— 主 SQL 与补丁的先后关系本身就是状态。
+--    (2026-08-06 踩过:重跑 idioms 主 SQL 把已删的 kick the bucket 插回来,条数 50→51)
+-- ═══════════════════════════════════════════════════════════════
+
 -- 托福词库 batch1:freq_rank 前 4471 词
 -- 生成: node scripts/vocab/ingest-toefl.mjs --emit-sql
 -- 数据源: skywind3000/ECDICT · MIT License (c) 2025 Linwei

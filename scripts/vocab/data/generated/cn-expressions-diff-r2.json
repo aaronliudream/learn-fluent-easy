@@ -1,0 +1,104 @@
+[
+  {
+    "p": "此地无银三百两",
+    "field": "整条",
+    "before": "(不存在)",
+    "after": "(新增)"
+  },
+  {
+    "p": "井底之蛙",
+    "field": "rendition",
+    "before": "A frog in a well.",
+    "after": "He has a narrow view of the world"
+  },
+  {
+    "p": "三思而后行",
+    "field": "rendition",
+    "before": "It's better to be safe than sorry.",
+    "after": "Exercise caution before proceeding."
+  },
+  {
+    "p": "三思而后行",
+    "field": "rendition",
+    "before": "Exercise caution before proceeding.",
+    "after": "(删除)"
+  },
+  {
+    "p": "人无远虑,必有近忧",
+    "field": "rendition",
+    "before": "Look before you leap.",
+    "after": "Trouble comes to those who don't plan ahead"
+  },
+  {
+    "p": "我想也是",
+    "field": "rendition",
+    "before": "I concur with your assessment.",
+    "after": "That's my read too"
+  },
+  {
+    "p": "我很期待",
+    "field": "rendition",
+    "before": "I eagerly anticipate",
+    "after": "I'm very much looking forward to it"
+  },
+  {
+    "p": "那不关我的事",
+    "field": "rendition",
+    "before": "That is not my concern",
+    "after": "I'd rather not get involved"
+  },
+  {
+    "p": "我得走了",
+    "field": "rendition",
+    "before": "I must take my leave",
+    "after": "I'm afraid I need to head out"
+  },
+  {
+    "p": "随便你",
+    "field": "rendition",
+    "before": "I leave it to your discretion",
+    "after": "Whatever works for you"
+  },
+  {
+    "p": "我来帮你",
+    "field": "rendition",
+    "before": "I am at your service",
+    "after": "Happy to help"
+  },
+  {
+    "p": "真好吃",
+    "field": "rendition",
+    "before": "The cuisine is exquisite.",
+    "after": "This is excellent"
+  },
+  {
+    "p": "我很抱歉",
+    "field": "rendition",
+    "before": "I extend my apologies",
+    "after": "Please accept my apologies"
+  },
+  {
+    "p": "我需要帮助",
+    "field": "rendition",
+    "before": "I require assistance",
+    "after": "Could I get some help with this?"
+  },
+  {
+    "p": "我在想",
+    "field": "rendition",
+    "before": "I'm pondering",
+    "after": "I'm giving it some thought"
+  },
+  {
+    "p": "我不太确定",
+    "field": "rendition",
+    "before": "I can't confirm that",
+    "after": "I'm not certain"
+  },
+  {
+    "p": "我很着急",
+    "field": "整条",
+    "before": "存在",
+    "after": "(删除)"
+  }
+]

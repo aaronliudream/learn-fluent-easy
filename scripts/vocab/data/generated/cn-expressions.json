@@ -70,24 +70,24 @@
         "rendition": "I think so too.",
         "register": "casual",
         "scene_hint": "用于朋友间表达同意",
-        "example_en": "I think so too, it's a great idea!",
-        "example_zh": "我想也是,这是个好主意!",
+        "example_en": "\"Do you think it's going to rain?\" \"I think so too.\"",
+        "example_zh": "\"你觉得今天会下雨吗?\" \"我想也是。\"",
         "sort_order": 1
       },
       {
         "rendition": "I agree with you.",
         "register": "neutral",
         "scene_hint": "用于一般场合表示同意",
-        "example_en": "I agree with you, the proposal is promising.",
-        "example_zh": "我想也是,这个提议很有前景。",
+        "example_en": "\"This policy will benefit everyone.\" \"I agree with you.\"",
+        "example_zh": "\"这个政策会让每个人受益。\" \"我想也是。\"",
         "sort_order": 2
       },
       {
-        "rendition": "I concur with your assessment.",
+        "rendition": "That's my read too",
         "register": "formal",
         "scene_hint": "用于正式场合表示同意",
-        "example_en": "I concur with your assessment of the situation.",
-        "example_zh": "我想也是,对于这种情况我同意你的看法。",
+        "example_en": "\"The report suggests a slowdown.\" \"That's my read too.\"",
+        "example_zh": "\"报告显示经济增速放缓。\" \"我想也是。\"",
         "sort_order": 3
       }
     ]
@@ -132,24 +132,24 @@
         "rendition": "I'm not sure",
         "register": "neutral",
         "scene_hint": "一般场合表达不确定性",
-        "example_en": "I'm not sure if the meeting is at 3 PM.",
-        "example_zh": "我不太确定会议是不是在下午三点。",
+        "example_en": "I'm not sure if we have a meeting today.",
+        "example_zh": "我不太确定今天有没有会议。",
         "sort_order": 1
       },
       {
         "rendition": "I have no idea",
         "register": "casual",
         "scene_hint": "随意表达完全不知情",
-        "example_en": "I have no idea where she went after dinner.",
-        "example_zh": "晚饭后她去哪儿了,我不太确定。",
+        "example_en": "I have no idea where she went after the party.",
+        "example_zh": "聚会结束后她去了哪里,我不太确定。",
         "sort_order": 2
       },
       {
-        "rendition": "I can't confirm that",
+        "rendition": "I'm not certain",
         "register": "formal",
         "scene_hint": "正式场合强调信息不足",
-        "example_en": "I can't confirm that the report will be ready by Friday.",
-        "example_zh": "报告能不能在周五前准备好,我不太确定。",
+        "example_en": "I'm not certain about the details of the contract.",
+        "example_zh": "合同的细节我不太确定。",
         "sort_order": 3
       }
     ]
@@ -194,24 +194,24 @@
         "rendition": "Can't wait",
         "register": "casual",
         "scene_hint": "朋友间表达对某事的期待",
-        "example_en": "Can't wait for the concert next week!",
-        "example_zh": "我很期待下周的演唱会！",
+        "example_en": "I can't wait for the concert this weekend!",
+        "example_zh": "我很期待周末的演唱会!",
         "sort_order": 1
       },
       {
         "rendition": "I'm looking forward to it",
         "register": "neutral",
         "scene_hint": "一般场合表达期待",
-        "example_en": "I'm looking forward to our meeting next Monday.",
-        "example_zh": "我很期待下周一的会议。",
+        "example_en": "I'm looking forward to it when the new book releases.",
+        "example_zh": "新书发行的时候我很期待。",
         "sort_order": 2
       },
       {
-        "rendition": "I eagerly anticipate",
+        "rendition": "I'm very much looking forward to it",
         "register": "formal",
         "scene_hint": "正式场合表达强烈期待",
-        "example_en": "I eagerly anticipate the results of the upcoming study.",
-        "example_zh": "我很期待即将到来的研究结果。",
+        "example_en": "I'm very much looking forward to it when we meet next month.",
+        "example_zh": "下个月见面的时候,我很期待。",
         "sort_order": 3
       }
     ]
@@ -225,24 +225,24 @@
         "rendition": "That's none of my business",
         "register": "neutral",
         "scene_hint": "一般场合撇清关系",
-        "example_en": "You can do what you like, that's none of my business.",
-        "example_zh": "你可以随便做,那不关我的事。",
+        "example_en": "If they argue, that's none of my business.",
+        "example_zh": "如果他们吵架,那不关我的事。",
         "sort_order": 1
       },
       {
         "rendition": "Not my problem",
         "register": "casual",
         "scene_hint": "轻松场合撇清关系",
-        "example_en": "If he messed up, that's not my problem.",
-        "example_zh": "如果他搞砸了,那不关我的事。",
+        "example_en": "You lost your keys? Not my problem.",
+        "example_zh": "你把钥匙弄丢了?那不关我的事。",
         "sort_order": 2
       },
       {
-        "rendition": "That is not my concern",
+        "rendition": "I'd rather not get involved",
         "register": "formal",
         "scene_hint": "正式场合撇清关系",
-        "example_en": "I'm afraid that is not my concern at this point.",
-        "example_zh": "恐怕那不关我的事。",
+        "example_en": "I'd rather not get involved in their dispute.",
+        "example_zh": "他们的争执,我宁愿不插手,那不关我的事。",
         "sort_order": 3
       }
     ]
@@ -287,24 +287,24 @@
         "rendition": "I have to go",
         "register": "neutral",
         "scene_hint": "一般场合表示要走",
-        "example_en": "It's getting late, I have to go.",
-        "example_zh": "时间不早了,我得走了。",
+        "example_en": "Sorry, I have to go pick up my kids.",
+        "example_zh": "不好意思,我得走了,去接孩子。",
         "sort_order": 1
       },
       {
         "rendition": "Gotta run",
         "register": "casual",
         "scene_hint": "朋友间表达要离开",
-        "example_en": "Sorry, gotta run, see you later!",
-        "example_zh": "抱歉,我得走了,回头见!",
+        "example_en": "Hey, gotta run! See you at the party tonight.",
+        "example_zh": "嘿,我得走了!今晚派对上见。",
         "sort_order": 2
       },
       {
-        "rendition": "I must take my leave",
+        "rendition": "I'm afraid I need to head out",
         "register": "formal",
         "scene_hint": "正式场合表示要离开",
-        "example_en": "I must take my leave now, thank you for the meeting.",
-        "example_zh": "我得走了,谢谢你们的会议。",
+        "example_en": "I'm afraid I need to head out for another meeting.",
+        "example_zh": "恐怕我得走了,要去参加另一个会议。",
         "sort_order": 3
       }
     ]
@@ -318,24 +318,24 @@
         "rendition": "It's up to you",
         "register": "neutral",
         "scene_hint": "一般场合表示无所谓",
-        "example_en": "We can eat anywhere, it's up to you.",
-        "example_zh": "我们可以随便吃,随便你。",
+        "example_en": "You can choose the movie. It's up to you.",
+        "example_zh": "今晚吃什么随便你,我都可以。",
         "sort_order": 1
       },
       {
         "rendition": "Whatever you want",
         "register": "casual",
         "scene_hint": "朋友间表达无所谓",
-        "example_en": "We can watch whatever you want.",
-        "example_zh": "你想看什么都行,随便你。",
+        "example_en": "We can go wherever you want this weekend.",
+        "example_zh": "你想吃什么随便你,我都行。",
         "sort_order": 2
       },
       {
-        "rendition": "I leave it to your discretion",
+        "rendition": "Whatever works for you",
         "register": "formal",
         "scene_hint": "正式场合表示无所谓",
-        "example_en": "I leave it to your discretion whether to proceed.",
-        "example_zh": "是否继续,随便你。",
+        "example_en": "We can schedule the meeting whenever works for you.",
+        "example_zh": "会议时间随便你定,我们都可以。",
         "sort_order": 3
       }
     ]
@@ -349,24 +349,24 @@
         "rendition": "Let me help you",
         "register": "neutral",
         "scene_hint": "一般场合表示愿意帮忙",
-        "example_en": "Let me help you with those bags.",
-        "example_zh": "我来帮你拿这些袋子。",
+        "example_en": "Let me help you carry those heavy boxes to your car.",
+        "example_zh": "那些重箱子我来帮你搬到车上。",
         "sort_order": 1
       },
       {
         "rendition": "I've got you covered",
         "register": "casual",
         "scene_hint": "朋友间表示帮忙",
-        "example_en": "Don't worry about the tickets, I've got you covered.",
-        "example_zh": "别担心票的问题,我来帮你。",
+        "example_en": "Don't worry about the tickets; I've got you covered.",
+        "example_zh": "别担心票的事,我来帮你搞定。",
         "sort_order": 2
       },
       {
-        "rendition": "I am at your service",
+        "rendition": "Happy to help",
         "register": "formal",
         "scene_hint": "正式场合表示愿意帮忙",
-        "example_en": "If you need anything, I am at your service.",
-        "example_zh": "如果你需要任何帮助,我来帮你。",
+        "example_en": "If you have any questions, I'm happy to help.",
+        "example_zh": "如果你有任何问题,我来帮你解答。",
         "sort_order": 3
       }
     ]
@@ -526,37 +526,6 @@
       }
     ]
   },
-  "我很着急": {
-    "cn_phrase": "我很着急",
-    "cn_note": "用于描述紧张或焦虑",
-    "category": "daily",
-    "renditions": [
-      {
-        "rendition": "I'm anxious",
-        "register": "neutral",
-        "scene_hint": "一般场合表达紧张",
-        "example_en": "I'm anxious about the upcoming job interview.",
-        "example_zh": "我很着急,因为明天有个重要的工作面试。",
-        "sort_order": 1
-      },
-      {
-        "rendition": "I'm freaking out",
-        "register": "casual",
-        "scene_hint": "朋友间表达紧张",
-        "example_en": "I'm freaking out about the final exams next week.",
-        "example_zh": "我很着急,因为下周就要期末考试了。",
-        "sort_order": 2
-      },
-      {
-        "rendition": "I am concerned",
-        "register": "formal",
-        "scene_hint": "正式场合表达紧张",
-        "example_en": "I am concerned about the recent changes in policy.",
-        "example_zh": "我很着急,因为最近的政策变动让我感到不安。",
-        "sort_order": 3
-      }
-    ]
-  },
   "我没听见": {
     "cn_phrase": "我没听见",
     "cn_note": "用于表示没听清",
@@ -659,24 +628,24 @@
         "rendition": "I'm thinking",
         "register": "neutral",
         "scene_hint": "一般场合表示考虑中",
-        "example_en": "I'm thinking about applying for that job.",
-        "example_zh": "我在想要不要申请那份工作。",
+        "example_en": "I'm thinking about going to Italy this summer.",
+        "example_zh": "我在想今年夏天去意大利旅行。",
         "sort_order": 1
       },
       {
-        "rendition": "I'm pondering",
+        "rendition": "I'm giving it some thought",
         "register": "formal",
         "scene_hint": "正式场合表示考虑中",
-        "example_en": "I'm pondering the implications of this decision.",
-        "example_zh": "我在想这个决定的影响。",
+        "example_en": "I'm giving it some thought before making a decision.",
+        "example_zh": "在做决定之前,我在想这个问题。",
         "sort_order": 2
       },
       {
         "rendition": "I'm mulling it over",
         "register": "casual",
         "scene_hint": "朋友间表示考虑中",
-        "example_en": "I'm mulling it over before I decide.",
-        "example_zh": "我在想,再做决定。",
+        "example_en": "I'm mulling it over before I respond to his offer.",
+        "example_zh": "在回复他的提议之前,我在想这件事。",
         "sort_order": 3
       }
     ]
@@ -959,24 +928,24 @@
         "rendition": "This is delicious!",
         "register": "casual",
         "scene_hint": "朋友聚餐时",
-        "example_en": "Wow, this is delicious! Did you make it?",
-        "example_zh": "哇,真好吃!是你做的吗?",
+        "example_en": "Wow, this cake is delicious! Where did you buy it?",
+        "example_zh": "哇,这个蛋糕真好吃!你在哪里买的?",
         "sort_order": 1
       },
       {
         "rendition": "The food tastes great.",
         "register": "neutral",
         "scene_hint": "一般场合用餐时",
-        "example_en": "The food tastes great. What's the recipe?",
-        "example_zh": "这食物真好吃。配方是什么?",
+        "example_en": "The food tastes great, especially the grilled chicken.",
+        "example_zh": "这食物真好吃,尤其是烤鸡。",
         "sort_order": 2
       },
       {
-        "rendition": "The cuisine is exquisite.",
+        "rendition": "This is excellent",
         "register": "formal",
         "scene_hint": "正式场合用餐时",
-        "example_en": "The cuisine is exquisite. My compliments to the chef.",
-        "example_zh": "这道菜真好吃。请代我向厨师致意。",
+        "example_en": "This is excellent; I need the recipe!",
+        "example_zh": "真好吃; 我需要这个食谱!",
         "sort_order": 3
       }
     ]
@@ -1021,24 +990,24 @@
         "rendition": "I'm really sorry",
         "register": "casual",
         "scene_hint": "随意对话中道歉",
-        "example_en": "I'm really sorry for breaking your mug.",
-        "example_zh": "我很抱歉打破了你的杯子。",
+        "example_en": "I'm really sorry for being late to the meeting.",
+        "example_zh": "我很抱歉今天早上迟到了,下次一定注意。",
         "sort_order": 1
       },
       {
         "rendition": "I apologize",
         "register": "neutral",
         "scene_hint": "一般场合表达歉意",
-        "example_en": "I apologize for the delay in response.",
-        "example_zh": "我很抱歉回复晚了。",
+        "example_en": "I apologize for the inconvenience caused by the delay.",
+        "example_zh": "我很抱歉给您带来了麻烦,请您谅解。",
         "sort_order": 2
       },
       {
-        "rendition": "I extend my apologies",
+        "rendition": "Please accept my apologies",
         "register": "formal",
         "scene_hint": "正式书面或对上级道歉",
-        "example_en": "I extend my apologies for the oversight in the report.",
-        "example_zh": "我很抱歉报告中的疏漏。",
+        "example_en": "Please accept my apologies for the oversight in the report.",
+        "example_zh": "对于报告中的疏漏,我很抱歉。请接受我的歉意。",
         "sort_order": 3
       }
     ]
@@ -1083,24 +1052,24 @@
         "rendition": "I need a hand",
         "register": "casual",
         "scene_hint": "随意请求帮助",
-        "example_en": "I need a hand with these boxes.",
-        "example_zh": "我需要帮助搬这些箱子。",
+        "example_en": "I need a hand with these heavy boxes.",
+        "example_zh": "这些重箱子我一个人搬不动,我需要帮助。",
         "sort_order": 1
       },
       {
         "rendition": "I need some assistance",
         "register": "neutral",
         "scene_hint": "一般场合请求帮助",
-        "example_en": "I need some assistance with my computer.",
-        "example_zh": "我需要帮助修一下电脑。",
+        "example_en": "I need some assistance with my computer issues.",
+        "example_zh": "我的电脑出问题了,我需要帮助。",
         "sort_order": 2
       },
       {
-        "rendition": "I require assistance",
+        "rendition": "Could I get some help with this?",
         "register": "formal",
         "scene_hint": "正式场合请求帮助",
-        "example_en": "I require assistance in finalizing the report.",
-        "example_zh": "我需要帮助完成报告。",
+        "example_en": "Could I get some help with this report, please?",
+        "example_zh": "这份报告我有点搞不定,我需要帮助。",
         "sort_order": 3
       }
     ]
@@ -1206,16 +1175,16 @@
         "rendition": "Failing to plan is planning to fail.",
         "register": "formal",
         "scene_hint": "强调计划的重要性",
-        "example_en": "Without a strategy, the company floundered. Failing to plan is planning to fail.",
-        "example_zh": "没有策略,公司陷入困境。人无远虑,必有近忧。",
+        "example_en": "She learned that failing to plan is planning to fail.",
+        "example_zh": "她终于明白,人无远虑,必有近忧。",
         "sort_order": 1
       },
       {
-        "rendition": "Look before you leap.",
+        "rendition": "Trouble comes to those who don't plan ahead",
         "register": "neutral",
-        "scene_hint": "提醒谨慎行事",
-        "example_en": "Before investing in stocks, remember to look before you leap.",
-        "example_zh": "在投资股票前,记得人无远虑,必有近忧。",
+        "scene_hint": "劝人早做打算",
+        "example_en": "Trouble comes to those who don't plan ahead. Always think about the future.",
+        "example_zh": "人无远虑,必有近忧。常思未来。",
         "sort_order": 2
       }
     ]
@@ -1272,19 +1241,19 @@
     "category": "proverb",
     "renditions": [
       {
-        "rendition": "A frog in a well.",
+        "rendition": "He has a narrow view of the world",
         "register": "neutral",
-        "scene_hint": "形容见识短浅的人",
-        "example_en": "He thinks his small town is the whole world; he's a frog in a well.",
-        "example_zh": "他以为小镇就是整个世界,真是井底之蛙。",
+        "scene_hint": "说某人见识狭隘",
+        "example_en": "He has a narrow view of the world, thinking only his town matters.",
+        "example_zh": "他真是井底之蛙,总觉得只有他们小镇的事情才重要。",
         "sort_order": 1
       },
       {
         "rendition": "You're living in a bubble.",
         "register": "casual",
         "scene_hint": "指出对方视野狭窄",
-        "example_en": "You've never traveled outside your city? You're living in a bubble.",
-        "example_zh": "你从没出过城? 真是井底之蛙。",
+        "example_en": "You're living in a bubble if you think that's all there is.",
+        "example_zh": "你真是井底之蛙,要是你觉得那就是全部的话。",
         "sort_order": 2
       }
     ]
@@ -1367,25 +1336,17 @@
         "rendition": "Think twice before you act.",
         "register": "neutral",
         "scene_hint": "建议他人仔细考虑时",
-        "example_en": "Before you quit your job, think twice before you act.",
-        "example_zh": "在你辞职之前,三思而后行。",
+        "example_en": "You should think twice before you act in such situations.",
+        "example_zh": "在这种情况下,你应该三思而后行。",
         "sort_order": 1
-      },
-      {
-        "rendition": "It's better to be safe than sorry.",
-        "register": "casual",
-        "scene_hint": "劝人多加小心时",
-        "example_en": "Bring a jacket; it's better to be safe than sorry.",
-        "example_zh": "带上夹克,三思而后行。",
-        "sort_order": 2
       },
       {
         "rendition": "Exercise caution before proceeding.",
         "register": "formal",
         "scene_hint": "正式建议谨慎行事时",
-        "example_en": "In regulatory matters, it's wise to exercise caution before proceeding.",
-        "example_zh": "在监管事务中,理应三思而后行。",
-        "sort_order": 3
+        "example_en": "We must exercise caution before proceeding with the investment.",
+        "example_zh": "我们在做投资之前必须三思而后行。",
+        "sort_order": 2
       }
     ]
   },
@@ -1417,6 +1378,37 @@
         "example_en": "The current funding is nowhere near enough to finish the project.",
         "example_zh": "现有资金要完成这个项目远远不够。真是杯水车薪。",
         "sort_order": 3
+      }
+    ]
+  },
+  "此地无银三百两": {
+    "cn_phrase": "此地无银三百两",
+    "cn_note": "",
+    "category": "proverb",
+    "renditions": [
+      {
+        "rendition": "That's a dead giveaway.",
+        "register": "casual",
+        "scene_hint": "说对方反而露馅了",
+        "sort_order": 1,
+        "example_en": "When he said he wasn’t hiding anything, it was a dead giveaway.",
+        "example_zh": "他越说自己什么都没藏,就越显得此地无银三百两。"
+      },
+      {
+        "rendition": "The more you deny it, the more suspicious you look.",
+        "register": "neutral",
+        "scene_hint": "提醒对方越辩解越可疑",
+        "sort_order": 2,
+        "example_en": "The more you deny it, the more suspicious you look to everyone.",
+        "example_zh": "你越解释,大家就越觉得你此地无银三百两。"
+      },
+      {
+        "rendition": "You're protesting too much.",
+        "register": "formal",
+        "scene_hint": "正式场合点破过度辩白",
+        "sort_order": 3,
+        "example_en": "During the meeting, she was protesting too much about her innocence.",
+        "example_zh": "在会上,她不断为自己的清白辩解,真是此地无银三百两。"
       }
     ]
   }

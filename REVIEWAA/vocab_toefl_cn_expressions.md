@@ -6,8 +6,8 @@
 
 | | 条数 | 形态 | 说明 |
 | --- | --- | --- | --- |
-| **谚语** | 13 | **新形态** | 已按「说法 vs 解释」全部重做:三档是**同一中文在三个场景下美国人真会说的三句不同的话** |
-| **日常** | 38 | **旧形态** | 只改了 Aaron 点名的 11 处 formal,整体仍是「同一句话换语域」的老写法 |
+| **谚语** | 14 | **新形态** | 已按「说法 vs 解释」全部重做:三档是**同一中文在三个场景下美国人真会说的三句不同的话** |
+| **日常** | 37 | **旧形态** | 只改了 Aaron 点名的 11 处 formal,整体仍是「同一句话换语域」的老写法 |
 
 **请对照两者的差距,再决定日常 38 条要不要也推倒重做。** 不盲目推倒。
 
@@ -31,7 +31,7 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 ## 全量 51 条
 
-### 日常口语高频表达(不是成语)(38 条)
+### 日常口语高频表达(不是成语)(37 条)
 
 **我随便说说**(表示不确定或非认真)
 
@@ -53,9 +53,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **I think so too.** | 用于朋友间表达同意 | I think so too, it's a great idea!<br>我想也是,这是个好主意! |
-| neutral | **I agree with you.** | 用于一般场合表示同意 | I agree with you, the proposal is promising.<br>我想也是,这个提议很有前景。 |
-| formal | **I concur with your assessment.** | 用于正式场合表示同意 | I concur with your assessment of the situation.<br>我想也是,对于这种情况我同意你的看法。 |
+| casual | **I think so too.** | 用于朋友间表达同意 | "Do you think it's going to rain?" "I think so too."<br>"你觉得今天会下雨吗?" "我想也是。" |
+| neutral | **I agree with you.** | 用于一般场合表示同意 | "This policy will benefit everyone." "I agree with you."<br>"这个政策会让每个人受益。" "我想也是。" |
+| formal | **That's my read too** | 用于正式场合表示同意 | "The report suggests a slowdown." "That's my read too."<br>"报告显示经济增速放缓。" "我想也是。" |
 
 **别生气**(用于安抚情绪)
 
@@ -69,9 +69,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I'm not sure** | 一般场合表达不确定性 | I'm not sure if the meeting is at 3 PM.<br>我不太确定会议是不是在下午三点。 |
-| casual | **I have no idea** | 随意表达完全不知情 | I have no idea where she went after dinner.<br>晚饭后她去哪儿了,我不太确定。 |
-| formal | **I can't confirm that** | 正式场合强调信息不足 | I can't confirm that the report will be ready by Friday.<br>报告能不能在周五前准备好,我不太确定。 |
+| neutral | **I'm not sure** | 一般场合表达不确定性 | I'm not sure if we have a meeting today.<br>我不太确定今天有没有会议。 |
+| casual | **I have no idea** | 随意表达完全不知情 | I have no idea where she went after the party.<br>聚会结束后她去了哪里,我不太确定。 |
+| formal | **I'm not certain** | 正式场合强调信息不足 | I'm not certain about the details of the contract.<br>合同的细节我不太确定。 |
 
 **我来试试**
 
@@ -85,17 +85,17 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **Can't wait** | 朋友间表达对某事的期待 | Can't wait for the concert next week!<br>我很期待下周的演唱会！ |
-| neutral | **I'm looking forward to it** | 一般场合表达期待 | I'm looking forward to our meeting next Monday.<br>我很期待下周一的会议。 |
-| formal | **I eagerly anticipate** | 正式场合表达强烈期待 | I eagerly anticipate the results of the upcoming study.<br>我很期待即将到来的研究结果。 |
+| casual | **Can't wait** | 朋友间表达对某事的期待 | I can't wait for the concert this weekend!<br>我很期待周末的演唱会! |
+| neutral | **I'm looking forward to it** | 一般场合表达期待 | I'm looking forward to it when the new book releases.<br>新书发行的时候我很期待。 |
+| formal | **I'm very much looking forward to it** | 正式场合表达强烈期待 | I'm very much looking forward to it when we meet next month.<br>下个月见面的时候,我很期待。 |
 
 **那不关我的事**(用于撇清关系)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **That's none of my business** | 一般场合撇清关系 | You can do what you like, that's none of my business.<br>你可以随便做,那不关我的事。 |
-| casual | **Not my problem** | 轻松场合撇清关系 | If he messed up, that's not my problem.<br>如果他搞砸了,那不关我的事。 |
-| formal | **That is not my concern** | 正式场合撇清关系 | I'm afraid that is not my concern at this point.<br>恐怕那不关我的事。 |
+| neutral | **That's none of my business** | 一般场合撇清关系 | If they argue, that's none of my business.<br>如果他们吵架,那不关我的事。 |
+| casual | **Not my problem** | 轻松场合撇清关系 | You lost your keys? Not my problem.<br>你把钥匙弄丢了?那不关我的事。 |
+| formal | **I'd rather not get involved** | 正式场合撇清关系 | I'd rather not get involved in their dispute.<br>他们的争执,我宁愿不插手,那不关我的事。 |
 
 **我不明白**(用于表达不理解)
 
@@ -109,25 +109,25 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I have to go** | 一般场合表示要走 | It's getting late, I have to go.<br>时间不早了,我得走了。 |
-| casual | **Gotta run** | 朋友间表达要离开 | Sorry, gotta run, see you later!<br>抱歉,我得走了,回头见! |
-| formal | **I must take my leave** | 正式场合表示要离开 | I must take my leave now, thank you for the meeting.<br>我得走了,谢谢你们的会议。 |
+| neutral | **I have to go** | 一般场合表示要走 | Sorry, I have to go pick up my kids.<br>不好意思,我得走了,去接孩子。 |
+| casual | **Gotta run** | 朋友间表达要离开 | Hey, gotta run! See you at the party tonight.<br>嘿,我得走了!今晚派对上见。 |
+| formal | **I'm afraid I need to head out** | 正式场合表示要离开 | I'm afraid I need to head out for another meeting.<br>恐怕我得走了,要去参加另一个会议。 |
 
 **随便你**(用于表示无所谓)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **It's up to you** | 一般场合表示无所谓 | We can eat anywhere, it's up to you.<br>我们可以随便吃,随便你。 |
-| casual | **Whatever you want** | 朋友间表达无所谓 | We can watch whatever you want.<br>你想看什么都行,随便你。 |
-| formal | **I leave it to your discretion** | 正式场合表示无所谓 | I leave it to your discretion whether to proceed.<br>是否继续,随便你。 |
+| neutral | **It's up to you** | 一般场合表示无所谓 | You can choose the movie. It's up to you.<br>今晚吃什么随便你,我都可以。 |
+| casual | **Whatever you want** | 朋友间表达无所谓 | We can go wherever you want this weekend.<br>你想吃什么随便你,我都行。 |
+| formal | **Whatever works for you** | 正式场合表示无所谓 | We can schedule the meeting whenever works for you.<br>会议时间随便你定,我们都可以。 |
 
 **我来帮你**(用于表示愿意帮忙)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **Let me help you** | 一般场合表示愿意帮忙 | Let me help you with those bags.<br>我来帮你拿这些袋子。 |
-| casual | **I've got you covered** | 朋友间表示帮忙 | Don't worry about the tickets, I've got you covered.<br>别担心票的问题,我来帮你。 |
-| formal | **I am at your service** | 正式场合表示愿意帮忙 | If you need anything, I am at your service.<br>如果你需要任何帮助,我来帮你。 |
+| neutral | **Let me help you** | 一般场合表示愿意帮忙 | Let me help you carry those heavy boxes to your car.<br>那些重箱子我来帮你搬到车上。 |
+| casual | **I've got you covered** | 朋友间表示帮忙 | Don't worry about the tickets; I've got you covered.<br>别担心票的事,我来帮你搞定。 |
+| formal | **Happy to help** | 正式场合表示愿意帮忙 | If you have any questions, I'm happy to help.<br>如果你有任何问题,我来帮你解答。 |
 
 **我同意**(用于表示赞同)
 
@@ -169,14 +169,6 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 | casual | **I'm thrilled** | 朋友间表达开心 | I'm thrilled we won the championship!<br>我很高兴我们赢得了冠军! |
 | formal | **I am delighted** | 正式场合表达开心 | I am delighted to accept the invitation.<br>我很高兴接受邀请。 |
 
-**我很着急**(用于描述紧张或焦虑)
-
-| 语域 | 英文说法 | 什么场合用 | 例句 |
-| --- | --- | --- | --- |
-| neutral | **I'm anxious** | 一般场合表达紧张 | I'm anxious about the upcoming job interview.<br>我很着急,因为明天有个重要的工作面试。 |
-| casual | **I'm freaking out** | 朋友间表达紧张 | I'm freaking out about the final exams next week.<br>我很着急,因为下周就要期末考试了。 |
-| formal | **I am concerned** | 正式场合表达紧张 | I am concerned about the recent changes in policy.<br>我很着急,因为最近的政策变动让我感到不安。 |
-
 **我没听见**(用于表示没听清)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
@@ -205,9 +197,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I'm thinking** | 一般场合表示考虑中 | I'm thinking about applying for that job.<br>我在想要不要申请那份工作。 |
-| formal | **I'm pondering** | 正式场合表示考虑中 | I'm pondering the implications of this decision.<br>我在想这个决定的影响。 |
-| casual | **I'm mulling it over** | 朋友间表示考虑中 | I'm mulling it over before I decide.<br>我在想,再做决定。 |
+| neutral | **I'm thinking** | 一般场合表示考虑中 | I'm thinking about going to Italy this summer.<br>我在想今年夏天去意大利旅行。 |
+| formal | **I'm giving it some thought** | 正式场合表示考虑中 | I'm giving it some thought before making a decision.<br>在做决定之前,我在想这个问题。 |
+| casual | **I'm mulling it over** | 朋友间表示考虑中 | I'm mulling it over before I respond to his offer.<br>在回复他的提议之前,我在想这件事。 |
 
 **我想睡觉**(用于表示困倦)
 
@@ -292,9 +284,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **This is delicious!** | 朋友聚餐时 | Wow, this is delicious! Did you make it?<br>哇,真好吃!是你做的吗? |
-| neutral | **The food tastes great.** | 一般场合用餐时 | The food tastes great. What's the recipe?<br>这食物真好吃。配方是什么? |
-| formal | **The cuisine is exquisite.** | 正式场合用餐时 | The cuisine is exquisite. My compliments to the chef.<br>这道菜真好吃。请代我向厨师致意。 |
+| casual | **This is delicious!** | 朋友聚餐时 | Wow, this cake is delicious! Where did you buy it?<br>哇,这个蛋糕真好吃!你在哪里买的? |
+| neutral | **The food tastes great.** | 一般场合用餐时 | The food tastes great, especially the grilled chicken.<br>这食物真好吃,尤其是烤鸡。 |
+| formal | **This is excellent** | 正式场合用餐时 | This is excellent; I need the recipe!<br>真好吃; 我需要这个食谱! |
 
 **我很生气**
 
@@ -308,9 +300,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **I'm really sorry** | 随意对话中道歉 | I'm really sorry for breaking your mug.<br>我很抱歉打破了你的杯子。 |
-| neutral | **I apologize** | 一般场合表达歉意 | I apologize for the delay in response.<br>我很抱歉回复晚了。 |
-| formal | **I extend my apologies** | 正式书面或对上级道歉 | I extend my apologies for the oversight in the report.<br>我很抱歉报告中的疏漏。 |
+| casual | **I'm really sorry** | 随意对话中道歉 | I'm really sorry for being late to the meeting.<br>我很抱歉今天早上迟到了,下次一定注意。 |
+| neutral | **I apologize** | 一般场合表达歉意 | I apologize for the inconvenience caused by the delay.<br>我很抱歉给您带来了麻烦,请您谅解。 |
+| formal | **Please accept my apologies** | 正式书面或对上级道歉 | Please accept my apologies for the oversight in the report.<br>对于报告中的疏漏,我很抱歉。请接受我的歉意。 |
 
 **你说得对**
 
@@ -324,11 +316,11 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **I need a hand** | 随意请求帮助 | I need a hand with these boxes.<br>我需要帮助搬这些箱子。 |
-| neutral | **I need some assistance** | 一般场合请求帮助 | I need some assistance with my computer.<br>我需要帮助修一下电脑。 |
-| formal | **I require assistance** | 正式场合请求帮助 | I require assistance in finalizing the report.<br>我需要帮助完成报告。 |
+| casual | **I need a hand** | 随意请求帮助 | I need a hand with these heavy boxes.<br>这些重箱子我一个人搬不动,我需要帮助。 |
+| neutral | **I need some assistance** | 一般场合请求帮助 | I need some assistance with my computer issues.<br>我的电脑出问题了,我需要帮助。 |
+| formal | **Could I get some help with this?** | 正式场合请求帮助 | Could I get some help with this report, please?<br>这份报告我有点搞不定,我需要帮助。 |
 
-### 汉语谚语/俗语(务必先看"说法 vs 解释"那一节;必须包含「此地无银三百两」)(13 条)
+### 汉语谚语/俗语(务必先看"说法 vs 解释"那一节;必须包含「此地无银三百两」)(14 条)
 
 **耳听为虚,眼见为实**(/)
 
@@ -362,8 +354,8 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| formal | **Failing to plan is planning to fail.** | 强调计划的重要性 | Without a strategy, the company floundered. Failing to plan is planning to fail.<br>没有策略,公司陷入困境。人无远虑,必有近忧。 |
-| neutral | **Look before you leap.** | 提醒谨慎行事 | Before investing in stocks, remember to look before you leap.<br>在投资股票前,记得人无远虑,必有近忧。 |
+| formal | **Failing to plan is planning to fail.** | 强调计划的重要性 | She learned that failing to plan is planning to fail.<br>她终于明白,人无远虑,必有近忧。 |
+| neutral | **Trouble comes to those who don't plan ahead** | 劝人早做打算 | Trouble comes to those who don't plan ahead. Always think about the future.<br>人无远虑,必有近忧。常思未来。 |
 
 **不入虎穴,焉得虎子**(/)
 
@@ -383,8 +375,8 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **A frog in a well.** | 形容见识短浅的人 | He thinks his small town is the whole world; he's a frog in a well.<br>他以为小镇就是整个世界,真是井底之蛙。 |
-| casual | **You're living in a bubble.** | 指出对方视野狭窄 | You've never traveled outside your city? You're living in a bubble.<br>你从没出过城? 真是井底之蛙。 |
+| neutral | **He has a narrow view of the world** | 说某人见识狭隘 | He has a narrow view of the world, thinking only his town matters.<br>他真是井底之蛙,总觉得只有他们小镇的事情才重要。 |
+| casual | **You're living in a bubble.** | 指出对方视野狭窄 | You're living in a bubble if you think that's all there is.<br>你真是井底之蛙,要是你觉得那就是全部的话。 |
 
 **画蛇添足**
 
@@ -411,9 +403,8 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **Think twice before you act.** | 建议他人仔细考虑时 | Before you quit your job, think twice before you act.<br>在你辞职之前,三思而后行。 |
-| casual | **It's better to be safe than sorry.** | 劝人多加小心时 | Bring a jacket; it's better to be safe than sorry.<br>带上夹克,三思而后行。 |
-| formal | **Exercise caution before proceeding.** | 正式建议谨慎行事时 | In regulatory matters, it's wise to exercise caution before proceeding.<br>在监管事务中,理应三思而后行。 |
+| neutral | **Think twice before you act.** | 建议他人仔细考虑时 | You should think twice before you act in such situations.<br>在这种情况下,你应该三思而后行。 |
+| formal | **Exercise caution before proceeding.** | 正式建议谨慎行事时 | We must exercise caution before proceeding with the investment.<br>我们在做投资之前必须三思而后行。 |
 
 **杯水车薪**
 
@@ -422,4 +413,12 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 | casual | **a drop in the bucket** | 捐款或资源量小 | Our donation is just a drop in the bucket compared to their need.<br>跟他们的需求比,我们的捐款只是杯水车薪。 |
 | neutral | **barely makes a dent** | 职场供应链谈影响甚微 | This quantity barely makes a dent in the shortage.<br>这点数量对缓解短缺几乎没有影响。杯水车薪而已。 |
 | formal | **nowhere near enough** | 正式场合说远远不够 | The current funding is nowhere near enough to finish the project.<br>现有资金要完成这个项目远远不够。真是杯水车薪。 |
+
+**此地无银三百两**
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| casual | **That's a dead giveaway.** | 说对方反而露馅了 | When he said he wasn’t hiding anything, it was a dead giveaway.<br>他越说自己什么都没藏,就越显得此地无银三百两。 |
+| neutral | **The more you deny it, the more suspicious you look.** | 提醒对方越辩解越可疑 | The more you deny it, the more suspicious you look to everyone.<br>你越解释,大家就越觉得你此地无银三百两。 |
+| formal | **You're protesting too much.** | 正式场合点破过度辩白 | During the meeting, she was protesting too much about her innocence.<br>在会上,她不断为自己的清白辩解,真是此地无银三百两。 |
 

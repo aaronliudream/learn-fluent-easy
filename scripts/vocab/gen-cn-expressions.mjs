@@ -45,7 +45,10 @@ const SPEC_I = {
   /* ⚠️ 按类别分档,不是一把尺 —— 谚语的对应说法天然更长
      (a proverb maps to a whole clause: "better to see once than hear a hundred times")。
      第八条同款坑:D 段也踩过"词块用词汇级句长"。 */
-  renditionWords: { daily: [1, 6], proverb: [1, 10] },
+  /* ⚠️ daily 上限从 6 放宽到 8:Aaron 裁定的 formal 说法本身就是整句客气话
+     (「I'm afraid I need to head out」「Could I get some help with this?」),
+     而 formal 的正确形态恰恰是这种。判据要跟着裁决走,不是反过来卡裁决。 */
+  renditionWords: { daily: [1, 8], proverb: [1, 10] },
   exampleWords: [6, 16],
   cnPhraseChars: [2, 10],
   cnNoteChars: [0, 20],
@@ -53,7 +56,10 @@ const SPEC_I = {
 };
 
 const CATEGORIES = [
-  { key: 'daily',   n: 38, desc: '日常口语高频表达(不是成语)' },
+  /* 37 而非 38:「我很着急」经 Aaron 裁决整条删除(中文多义,英文说法只覆盖"担心"一支),
+     且他明示**删后不必补**。配额同步下调,否则下次跑会自动补一条未经审核的进来
+     —— 上一轮就这样混进了「我在开会」,其 formal 档正是刚被禁的"换大词"。 */
+  { key: 'daily',   n: 37, desc: '日常口语高频表达(不是成语)' },
   /* ⚠️ 谚语这一档最容易产出「解释」而不是「说法」(Aaron 2026-08-07 全批打回)。
      种子条目由 Aaron 亲自示范:此地无银三百两 →
        casual That's a dead giveaway. / neutral The more you deny it, the more

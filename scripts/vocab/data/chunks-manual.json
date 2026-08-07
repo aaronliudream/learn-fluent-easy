@@ -1,0 +1,63 @@
+{
+  "_note": "D 段词块的人工裁决(Aaron 2026-08-06 审 100 条)。优先级高于规则表与模型。",
+  "_lesson": "规则表只看小品词词性,不看该短语在**这个释义下**是否及物。同一词组不同义项可分性不同(take off 起飞不可分 / 脱下可分)。可分性判定必须与释义绑定,规则表结果只是初判。",
+  "separability": {
+    "take over": "separable",
+    "take on": "separable",
+    "take apart": "separable",
+    "go over": "inseparable",
+    "go on": "inseparable",
+    "come across": "inseparable",
+    "carry on": "inseparable",
+    "turn out": "inseparable",
+    "break out": "inseparable",
+    "show up": "inseparable"
+  },
+  "_separability_why": {
+    "go over": "go 不及物,over 为介词",
+    "come across": "across 为介词",
+    "carry on": "本义不及物,carry sth on 罕用不教",
+    "turn out": "「结果是」义不及物(It turned out that…)",
+    "break out": "「爆发」义不及物,无 break sth out",
+    "show up": "「露面」义不及物"
+  },
+  "rewrite": [
+    {
+      "chunk": "take off",
+      "translation_zh": "脱下(take sth off 可分,代词须插中间)",
+      "example_en": "He took off his coat and hung it by the door.",
+      "example_zh": "他脱下外套，挂在门边。",
+      "why": "原释义「起飞」是不及物义,却判了可分 —— 释义与可分性错位"
+    }
+  ],
+  "remove": [
+    {
+      "chunk": "carry out",
+      "type": "collocation_ext",
+      "why": "与 phrasal_verb 里的重复,类型串味"
+    },
+    {
+      "chunk": "focus on",
+      "type": "collocation_ext",
+      "why": "是短语动词不是固定搭配"
+    },
+    {
+      "chunk": "lead to",
+      "type": "collocation_ext",
+      "why": "是短语动词不是固定搭配"
+    },
+    {
+      "chunk": "deal with",
+      "type": "collocation_ext",
+      "why": "是短语动词不是固定搭配"
+    }
+  ],
+  "intransitive": [
+    "turn out",
+    "break out",
+    "show up",
+    "go on",
+    "carry on"
+  ],
+  "_intransitive_why": "真正不带任何宾语的只有这 5 条。go over sth / come across sth 是**带介词宾语**的,只是不可分 —— 「go 不及物」说的是动词本身,不是整个词块不带宾语。措辞分两种:不及物写「不及物,不带宾语」,带介词宾语但不可分写「X sth,宾语不插中间」。"
+}

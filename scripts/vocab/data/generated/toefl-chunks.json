@@ -1,0 +1,943 @@
+{
+  "a wide range of": {
+    "chunk": "a wide range of",
+    "type": "collocation_ext",
+    "def_zh": "各种各样的(后接复数名词)",
+    "scene": "academic",
+    "example_en": "The library offers a wide range of resources for students.",
+    "example_zh": "图书馆为学生提供各种各样的资源。"
+  },
+  "play a key role": {
+    "chunk": "play a key role",
+    "type": "collocation_ext",
+    "def_zh": "发挥关键作用",
+    "scene": "work",
+    "example_en": "Effective communication plays a key role in team success.",
+    "example_zh": "有效的沟通在团队成功中发挥关键作用。"
+  },
+  "take into account": {
+    "chunk": "take into account",
+    "type": "collocation_ext",
+    "def_zh": "考虑到",
+    "scene": "work",
+    "example_en": "We need to take into account the potential risks before proceeding.",
+    "example_zh": "在继续之前，我们需要考虑到潜在的风险。"
+  },
+  "it is clear that...": {
+    "chunk": "it is clear that...",
+    "type": "frame",
+    "def_zh": "显而易见的是(句首,引出显见事实,学术或新闻)",
+    "scene": "academic",
+    "example_en": "It is clear that climate change affects biodiversity globally.",
+    "example_zh": "显而易见的是,气候变化在全球范围内影响生物多样性。"
+  },
+  "it is possible that...": {
+    "chunk": "it is possible that...",
+    "type": "frame",
+    "def_zh": "有可能的是(句首,引出假设或可能性,学术或新闻)",
+    "scene": "science_tech",
+    "example_en": "It is possible that new technologies will solve this issue.",
+    "example_zh": "有可能的是,新技术会解决这个问题。"
+  },
+  "as a result": {
+    "chunk": "as a result",
+    "type": "connector",
+    "def_zh": "因此(须有明确因果,不作泛泛承接)",
+    "scene": "academic",
+    "example_en": "The experiment failed, and as a result, the hypothesis was rejected.",
+    "example_zh": "实验失败,因此假设被否定了。"
+  },
+  "on the contrary": {
+    "chunk": "on the contrary",
+    "type": "connector",
+    "def_zh": "恰恰相反(纠正前句,非对比)",
+    "scene": "news",
+    "example_en": "Some believe the policy will harm the economy; on the contrary, it could boost growth.",
+    "example_zh": "一些人认为该政策会损害经济;恰恰相反,它可能促进增长。"
+  },
+  "look into": {
+    "chunk": "look into",
+    "type": "phrasal_verb",
+    "def_zh": "调查(look into sth,宾语不插中间)",
+    "scene": "work",
+    "example_en": "The manager promised to look into the issue by tomorrow.",
+    "example_zh": "经理承诺在明天之前调查这个问题。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "介词 into"
+    }
+  },
+  "come up with": {
+    "chunk": "come up with",
+    "type": "phrasal_verb",
+    "def_zh": "想出(come up with sth,宾语不插中间)",
+    "scene": "work",
+    "example_en": "She came up with a brilliant idea for the project.",
+    "example_zh": "她为这个项目想出了一个绝妙的主意。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "三词短语动词"
+    }
+  },
+  "set up": {
+    "chunk": "set up",
+    "type": "phrasal_verb",
+    "def_zh": "建立(set sth up 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "They set up the new system in just two days.",
+    "example_zh": "他们在短短两天内建立了新系统。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "carry on": {
+    "chunk": "carry on",
+    "type": "phrasal_verb",
+    "def_zh": "继续(不及物,不带宾语)",
+    "scene": "daily_life",
+    "example_en": "Despite the difficulties, they decided to carry on with the plan.",
+    "example_zh": "尽管困难重重,他们决定继续执行计划。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "本义不及物,carry sth on 罕用不教"
+    }
+  },
+  "in addition": {
+    "chunk": "in addition",
+    "type": "connector",
+    "def_zh": "此外(用于补充,不用于递进)",
+    "scene": "academic",
+    "example_en": "The study was successful; in addition, it received international recognition.",
+    "example_zh": "这项研究取得了成功；此外,还获得了国际认可。"
+  },
+  "in other words": {
+    "chunk": "in other words",
+    "type": "connector",
+    "def_zh": "换句话说(用于解释,不用于总结)",
+    "scene": "education",
+    "example_en": "The results were inconclusive; in other words, more research is needed.",
+    "example_zh": "结果尚不明确；换句话说,还需要更多研究。"
+  },
+  "on the other hand": {
+    "chunk": "on the other hand",
+    "type": "connector",
+    "def_zh": "另一方面(用于对比,不用于转折)",
+    "scene": "news",
+    "example_en": "The economy is growing; on the other hand, unemployment remains high.",
+    "example_zh": "经济在增长；另一方面,失业率仍然很高。"
+  },
+  "for example": {
+    "chunk": "for example",
+    "type": "connector",
+    "def_zh": "例如(用于举例,不用于列举)",
+    "scene": "academic",
+    "example_en": "Many animals are endangered; for example, the giant panda is at risk.",
+    "example_zh": "许多动物濒临灭绝；例如,大熊猫正面临危险。"
+  },
+  "as a consequence": {
+    "chunk": "as a consequence",
+    "type": "connector",
+    "def_zh": "结果是(有明确因果,非泛泛承接)",
+    "scene": "science_tech",
+    "example_en": "The experiment failed; as a consequence, the hypothesis was rejected.",
+    "example_zh": "实验失败了；结果是,假设被否定了。"
+  },
+  "in fact": {
+    "chunk": "in fact",
+    "type": "connector",
+    "def_zh": "事实上(用于强调,不用于转折)",
+    "scene": "news",
+    "example_en": "He claimed to be an expert; in fact, he had no experience.",
+    "example_zh": "他自称是专家；事实上,他没有经验。"
+  },
+  "in summary": {
+    "chunk": "in summary",
+    "type": "connector",
+    "def_zh": "总结来说(用于总结,不用于解释)",
+    "scene": "academic",
+    "example_en": "In summary, the project was a success despite initial challenges.",
+    "example_zh": "总结来说,尽管最初面临挑战,该项目取得了成功。"
+  },
+  "in contrast": {
+    "chunk": "in contrast",
+    "type": "connector",
+    "def_zh": "相比之下(比较两者,不纠正前句)",
+    "scene": "science_tech",
+    "example_en": "The north is cold; in contrast, the south is warm and sunny.",
+    "example_zh": "北方寒冷；相比之下,南方温暖而阳光明媚。"
+  },
+  "as a result of": {
+    "chunk": "as a result of",
+    "type": "connector",
+    "def_zh": "由于(表示原因,不用于结果)",
+    "scene": "health",
+    "example_en": "The river flooded as a result of heavy rainfall.",
+    "example_zh": "由于降雨量大,河流泛滥了。"
+  },
+  "in particular": {
+    "chunk": "in particular",
+    "type": "connector",
+    "def_zh": "尤其是(用于强调,不用于列举)",
+    "scene": "culture",
+    "example_en": "European art is diverse; in particular, Italian Renaissance art is notable.",
+    "example_zh": "欧洲艺术多样化；尤其是,意大利文艺复兴艺术尤为显著。"
+  },
+  "in conclusion": {
+    "chunk": "in conclusion",
+    "type": "connector",
+    "def_zh": "总之(用于结尾,不用于过渡)",
+    "scene": "academic",
+    "example_en": "In conclusion, climate change is a pressing global issue.",
+    "example_zh": "总之,气候变化是一个紧迫的全球性问题。"
+  },
+  "in spite of": {
+    "chunk": "in spite of",
+    "type": "connector",
+    "def_zh": "尽管(用于让步,不用于因果)",
+    "scene": "daily_life",
+    "example_en": "In spite of the rain, we decided to go hiking.",
+    "example_zh": "尽管下雨,我们还是决定去远足。"
+  },
+  "as long as": {
+    "chunk": "as long as",
+    "type": "connector",
+    "def_zh": "只要(用于条件,不用于时间)",
+    "scene": "work",
+    "example_en": "You can join the meeting as long as you finish your work.",
+    "example_zh": "只要你完成工作,就可以参加会议。"
+  },
+  "find out": {
+    "chunk": "find out",
+    "type": "phrasal_verb",
+    "def_zh": "查明(find sth out 可分,代词须插中间)",
+    "scene": "daily_life",
+    "example_en": "She needs to find out the truth about her family.",
+    "example_zh": "她需要查明关于她家庭的真相。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 out"
+    }
+  },
+  "turn down": {
+    "chunk": "turn down",
+    "type": "phrasal_verb",
+    "def_zh": "拒绝(turn sth down 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "He decided to turn down the job offer.",
+    "example_zh": "他决定拒绝这份工作邀请。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 down"
+    }
+  },
+  "figure out": {
+    "chunk": "figure out",
+    "type": "phrasal_verb",
+    "def_zh": "弄清楚(figure sth out 可分,代词须插中间)",
+    "scene": "education",
+    "example_en": "I can't figure out how to solve this problem.",
+    "example_zh": "我无法弄清楚如何解决这个问题。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 out"
+    }
+  },
+  "take over": {
+    "chunk": "take over",
+    "type": "phrasal_verb",
+    "def_zh": "接管(take sth over 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "The company will take over the smaller firm next month.",
+    "example_zh": "这家公司将于下个月接管这家小公司。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "Aaron 人工裁决"
+    }
+  },
+  "make up": {
+    "chunk": "make up",
+    "type": "phrasal_verb",
+    "def_zh": "组成(make sth up 可分,代词须插中间)",
+    "scene": "science_tech",
+    "example_en": "Water makes up about 70% of the human body.",
+    "example_zh": "水约占人体的 70%。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "come across": {
+    "chunk": "come across",
+    "type": "phrasal_verb",
+    "def_zh": "偶然遇到(come across sth,宾语不插中间)",
+    "scene": "daily_life",
+    "example_en": "I came across an old friend at the market yesterday.",
+    "example_zh": "我昨天在市场上偶然遇到了一位老朋友。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "across 为介词"
+    }
+  },
+  "run into": {
+    "chunk": "run into",
+    "type": "phrasal_verb",
+    "def_zh": "偶然碰到(run into sth,宾语不插中间)",
+    "scene": "daily_life",
+    "example_en": "I ran into my teacher at the bookstore.",
+    "example_zh": "我在书店偶然碰到了我的老师。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "介词 into"
+    }
+  },
+  "look after": {
+    "chunk": "look after",
+    "type": "phrasal_verb",
+    "def_zh": "照顾(look after sth,宾语不插中间)",
+    "scene": "daily_life",
+    "example_en": "She looks after her younger brother every weekend.",
+    "example_zh": "她每个周末都照顾她的弟弟。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "介词 after"
+    }
+  },
+  "put off": {
+    "chunk": "put off",
+    "type": "phrasal_verb",
+    "def_zh": "推迟(put sth off 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "They decided to put off the meeting until next week.",
+    "example_zh": "他们决定将会议推迟到下周。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 off"
+    }
+  },
+  "bring up": {
+    "chunk": "bring up",
+    "type": "phrasal_verb",
+    "def_zh": "提起(bring sth up 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "She brought up an interesting point during the discussion.",
+    "example_zh": "她在讨论中提起了一个有趣的观点。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "break down": {
+    "chunk": "break down",
+    "type": "phrasal_verb",
+    "def_zh": "分解(break sth down 可分,代词须插中间)",
+    "scene": "science_tech",
+    "example_en": "The scientist broke down the complex process into simple steps.",
+    "example_zh": "科学家将复杂的过程分解成简单的步骤。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 down"
+    }
+  },
+  "give up": {
+    "chunk": "give up",
+    "type": "phrasal_verb",
+    "def_zh": "放弃(give sth up 可分,代词须插中间)",
+    "scene": "daily_life",
+    "example_en": "She decided to give up smoking for her health.",
+    "example_zh": "她决定为了健康而放弃吸烟。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "take off": {
+    "chunk": "take off",
+    "type": "phrasal_verb",
+    "def_zh": "脱下(take sth off 可分,代词须插中间)",
+    "scene": "travel",
+    "example_en": "He took off his coat and hung it by the door.",
+    "example_zh": "他脱下外套，挂在门边。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 off"
+    },
+    "manual": true
+  },
+  "pick up": {
+    "chunk": "pick up",
+    "type": "phrasal_verb",
+    "def_zh": "捡起(pick sth up 可分,代词须插中间)",
+    "scene": "daily_life",
+    "example_en": "He picked up the book from the floor.",
+    "example_zh": "他从地上捡起了书。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "turn up": {
+    "chunk": "turn up",
+    "type": "phrasal_verb",
+    "def_zh": "出现(turn sth up 可分,代词须插中间)",
+    "scene": "daily_life",
+    "example_en": "He turned up at the party unexpectedly.",
+    "example_zh": "他出乎意料地出现在聚会上。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "set off": {
+    "chunk": "set off",
+    "type": "phrasal_verb",
+    "def_zh": "出发(set sth off 可分,代词须插中间)",
+    "scene": "travel",
+    "example_en": "They set off on their journey early in the morning.",
+    "example_zh": "他们一大早就出发了。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 off"
+    }
+  },
+  "look forward to": {
+    "chunk": "look forward to",
+    "type": "phrasal_verb",
+    "def_zh": "期待(look forward to sth,宾语不插中间)",
+    "scene": "daily_life",
+    "example_en": "I look forward to the weekend.",
+    "example_zh": "我期待着周末。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "三词短语动词"
+    }
+  },
+  "put up with": {
+    "chunk": "put up with",
+    "type": "phrasal_verb",
+    "def_zh": "忍受(put up with sth,宾语不插中间)",
+    "scene": "daily_life",
+    "example_en": "She can't put up with the noise any longer.",
+    "example_zh": "她再也无法忍受这种噪音了。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "三词短语动词"
+    }
+  },
+  "turn out": {
+    "chunk": "turn out",
+    "type": "phrasal_verb",
+    "def_zh": "结果是(不及物,不带宾语)",
+    "scene": "daily_life",
+    "example_en": "It turned out that the weather was perfect for a picnic.",
+    "example_zh": "结果天气非常适合野餐。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "「结果是」义不及物(It turned out that…)"
+    }
+  },
+  "call off": {
+    "chunk": "call off",
+    "type": "phrasal_verb",
+    "def_zh": "取消(call sth off 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "They had to call off the event due to rain.",
+    "example_zh": "他们不得不因为下雨取消活动。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 off"
+    }
+  },
+  "go on": {
+    "chunk": "go on",
+    "type": "phrasal_verb",
+    "def_zh": "继续(不及物,不带宾语)",
+    "scene": "daily_life",
+    "example_en": "After a short break, they went on with their work.",
+    "example_zh": "短暂休息后，他们继续工作。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "Aaron 人工裁决"
+    }
+  },
+  "put out": {
+    "chunk": "put out",
+    "type": "phrasal_verb",
+    "def_zh": "扑灭(put sth out 可分,代词须插中间)",
+    "scene": "daily_life",
+    "example_en": "Firefighters managed to put out the fire quickly.",
+    "example_zh": "消防员迅速扑灭了火灾。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 out"
+    }
+  },
+  "show up": {
+    "chunk": "show up",
+    "type": "phrasal_verb",
+    "def_zh": "露面(不及物,不带宾语)",
+    "scene": "daily_life",
+    "example_en": "He didn't show up for the meeting.",
+    "example_zh": "他没有出席会议。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "「露面」义不及物"
+    }
+  },
+  "back up": {
+    "chunk": "back up",
+    "type": "phrasal_verb",
+    "def_zh": "支持(back sth up 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "She always backs up her arguments with evidence.",
+    "example_zh": "她总是用证据支持她的论点。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 up"
+    }
+  },
+  "take on": {
+    "chunk": "take on",
+    "type": "phrasal_verb",
+    "def_zh": "承担(take sth on 可分,代词须插中间)",
+    "scene": "work",
+    "example_en": "She decided to take on more responsibilities at work.",
+    "example_zh": "她决定在工作中承担更多责任。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "Aaron 人工裁决"
+    }
+  },
+  "break out": {
+    "chunk": "break out",
+    "type": "phrasal_verb",
+    "def_zh": "爆发(不及物,不带宾语)",
+    "scene": "news",
+    "example_en": "A fire broke out in the building last night.",
+    "example_zh": "昨晚大楼里发生了火灾。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "「爆发」义不及物,无 break sth out"
+    }
+  },
+  "take apart": {
+    "chunk": "take apart",
+    "type": "phrasal_verb",
+    "def_zh": "拆开(take sth apart 可分,代词须插中间)",
+    "scene": "science_tech",
+    "example_en": "He took apart the computer to fix it.",
+    "example_zh": "他拆开了电脑进行修理。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "Aaron 人工裁决"
+    }
+  },
+  "go over": {
+    "chunk": "go over",
+    "type": "phrasal_verb",
+    "def_zh": "复习(go over sth,宾语不插中间)",
+    "scene": "education",
+    "example_en": "Let's go over the main points of the lecture.",
+    "example_zh": "让我们复习一下讲座的要点。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "go 不及物,over 为介词"
+    }
+  },
+  "bring about": {
+    "chunk": "bring about",
+    "type": "phrasal_verb",
+    "def_zh": "导致(bring about sth,宾语不插中间)",
+    "scene": "science_tech",
+    "example_en": "The new policy will bring about significant changes.",
+    "example_zh": "新政策将带来重大变革。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "介词 about"
+    }
+  },
+  "cut down on": {
+    "chunk": "cut down on",
+    "type": "phrasal_verb",
+    "def_zh": "减少(cut down on sth,宾语不插中间)",
+    "scene": "health",
+    "example_en": "She needs to cut down on sugar for her health.",
+    "example_zh": "为了健康，她需要减少糖的摄入。",
+    "separability": {
+      "verdict": "inseparable",
+      "basis": "三词短语动词"
+    }
+  },
+  "give away": {
+    "chunk": "give away",
+    "type": "phrasal_verb",
+    "def_zh": "赠送(give sth away 可分,代词须插中间)",
+    "scene": "daily_life",
+    "example_en": "She decided to give away her old clothes to charity.",
+    "example_zh": "她决定把旧衣服捐赠给慈善机构。",
+    "separability": {
+      "verdict": "separable",
+      "basis": "副词小品词 away"
+    }
+  },
+  "based on": {
+    "chunk": "based on",
+    "type": "collocation_ext",
+    "def_zh": "基于",
+    "scene": "work",
+    "example_en": "The decision was made based on the latest data.",
+    "example_zh": "这个决定是基于最新数据做出的。"
+  },
+  "in order to": {
+    "chunk": "in order to",
+    "type": "collocation_ext",
+    "def_zh": "为了",
+    "scene": "education",
+    "example_en": "He studied hard in order to pass the exam.",
+    "example_zh": "他努力学习为了通过考试。"
+  },
+  "as well as": {
+    "chunk": "as well as",
+    "type": "collocation_ext",
+    "def_zh": "以及",
+    "scene": "academic",
+    "example_en": "The course covers biology as well as chemistry.",
+    "example_zh": "这门课程涵盖生物学以及化学。"
+  },
+  "due to": {
+    "chunk": "due to",
+    "type": "collocation_ext",
+    "def_zh": "由于",
+    "scene": "news",
+    "example_en": "The event was canceled due to bad weather.",
+    "example_zh": "活动因恶劣天气取消。"
+  },
+  "pay attention to": {
+    "chunk": "pay attention to",
+    "type": "collocation_ext",
+    "def_zh": "注意",
+    "scene": "education",
+    "example_en": "Students should pay attention to the teacher's instructions.",
+    "example_zh": "学生应该注意老师的指示。"
+  },
+  "in relation to": {
+    "chunk": "in relation to",
+    "type": "collocation_ext",
+    "def_zh": "关于",
+    "scene": "academic",
+    "example_en": "The report discusses climate change in relation to agriculture.",
+    "example_zh": "报告讨论了气候变化与农业的关系。"
+  },
+  "in charge of": {
+    "chunk": "in charge of",
+    "type": "collocation_ext",
+    "def_zh": "负责",
+    "scene": "work",
+    "example_en": "She is in charge of the marketing department.",
+    "example_zh": "她负责市场部。"
+  },
+  "in response to": {
+    "chunk": "in response to",
+    "type": "collocation_ext",
+    "def_zh": "回应",
+    "scene": "news",
+    "example_en": "The company issued a statement in response to the allegations.",
+    "example_zh": "公司发布声明回应指控。"
+  },
+  "take advantage of": {
+    "chunk": "take advantage of",
+    "type": "collocation_ext",
+    "def_zh": "利用",
+    "scene": "work",
+    "example_en": "We should take advantage of the new technology.",
+    "example_zh": "我们应该利用新技术。"
+  },
+  "in favor of": {
+    "chunk": "in favor of",
+    "type": "collocation_ext",
+    "def_zh": "赞成",
+    "scene": "news",
+    "example_en": "The majority voted in favor of the new policy.",
+    "example_zh": "多数人投票赞成新政策。"
+  },
+  "be aware of": {
+    "chunk": "be aware of",
+    "type": "collocation_ext",
+    "def_zh": "意识到",
+    "scene": "health",
+    "example_en": "You should be aware of the potential risks.",
+    "example_zh": "你应该意识到潜在的风险。"
+  },
+  "in line with": {
+    "chunk": "in line with",
+    "type": "collocation_ext",
+    "def_zh": "符合",
+    "scene": "work",
+    "example_en": "The new procedures are in line with company policy.",
+    "example_zh": "新程序符合公司政策。"
+  },
+  "be capable of": {
+    "chunk": "be capable of",
+    "type": "collocation_ext",
+    "def_zh": "能够",
+    "scene": "science_tech",
+    "example_en": "This robot is capable of learning new tasks.",
+    "example_zh": "这个机器人能够学习新任务。"
+  },
+  "be familiar with": {
+    "chunk": "be familiar with",
+    "type": "collocation_ext",
+    "def_zh": "熟悉",
+    "scene": "work",
+    "example_en": "He is familiar with the company's procedures.",
+    "example_zh": "他熟悉公司的程序。"
+  },
+  "in accordance with": {
+    "chunk": "in accordance with",
+    "type": "collocation_ext",
+    "def_zh": "依照",
+    "scene": "work",
+    "example_en": "The project was completed in accordance with the guidelines.",
+    "example_zh": "项目依照指导方针完成。"
+  },
+  "be involved in": {
+    "chunk": "be involved in",
+    "type": "collocation_ext",
+    "def_zh": "参与",
+    "scene": "education",
+    "example_en": "She is involved in several research projects.",
+    "example_zh": "她参与了几个研究项目。"
+  },
+  "be responsible for": {
+    "chunk": "be responsible for",
+    "type": "collocation_ext",
+    "def_zh": "负责",
+    "scene": "work",
+    "example_en": "He is responsible for managing the team.",
+    "example_zh": "他负责管理团队。"
+  },
+  "be likely to": {
+    "chunk": "be likely to",
+    "type": "collocation_ext",
+    "def_zh": "可能",
+    "scene": "daily_life",
+    "example_en": "The weather is likely to improve tomorrow.",
+    "example_zh": "天气明天可能会好转。"
+  },
+  "be similar to": {
+    "chunk": "be similar to",
+    "type": "collocation_ext",
+    "def_zh": "类似于",
+    "scene": "science_tech",
+    "example_en": "The new design is similar to the previous model.",
+    "example_zh": "新设计类似于之前的型号。"
+  },
+  "play a significant role": {
+    "chunk": "play a significant role",
+    "type": "collocation_ext",
+    "def_zh": "发挥重要作用",
+    "scene": "academic",
+    "example_en": "Education plays a significant role in shaping a person's future.",
+    "example_zh": "教育在塑造一个人的未来中发挥重要作用。"
+  },
+  "make a difference": {
+    "chunk": "make a difference",
+    "type": "collocation_ext",
+    "def_zh": "产生影响",
+    "scene": "education",
+    "example_en": "Volunteers can make a difference in the lives of many children.",
+    "example_zh": "志愿者可以对许多孩子的生活产生影响。"
+  },
+  "have access to": {
+    "chunk": "have access to",
+    "type": "collocation_ext",
+    "def_zh": "有权使用",
+    "scene": "science_tech",
+    "example_en": "Students should have access to the latest technology in the classroom.",
+    "example_zh": "学生应该有权在教室使用最新技术。"
+  },
+  "be dependent on": {
+    "chunk": "be dependent on",
+    "type": "collocation_ext",
+    "def_zh": "依赖于",
+    "scene": "environment",
+    "example_en": "The local economy is heavily dependent on tourism.",
+    "example_zh": "当地经济严重依赖于旅游业。"
+  },
+  "it is important to...": {
+    "chunk": "it is important to...",
+    "type": "frame",
+    "def_zh": "重要的是(句首,强调某事的重要性)",
+    "scene": "education",
+    "example_en": "It is important to understand the basics before moving on.",
+    "example_zh": "重要的是在继续之前理解基础知识。"
+  },
+  "the fact that...": {
+    "chunk": "the fact that...",
+    "type": "frame",
+    "def_zh": "事实是(句首或句中,用于强调事实)",
+    "scene": "news",
+    "example_en": "The fact that the company is expanding is promising.",
+    "example_zh": "公司正在扩张的事实令人期待。"
+  },
+  "there is a need for...": {
+    "chunk": "there is a need for...",
+    "type": "frame",
+    "def_zh": "有必要(句首,引出需求或建议)",
+    "scene": "work",
+    "example_en": "There is a need for improved communication within the team.",
+    "example_zh": "团队内部有必要提高沟通。"
+  },
+  "it is unlikely that...": {
+    "chunk": "it is unlikely that...",
+    "type": "frame",
+    "def_zh": "不太可能(句首,引出否定可能性)",
+    "scene": "science_tech",
+    "example_en": "It is unlikely that the experiment will yield different results.",
+    "example_zh": "实验不太可能得出不同的结果。"
+  },
+  "it is essential that...": {
+    "chunk": "it is essential that...",
+    "type": "frame",
+    "def_zh": "至关重要的是(句首,引出必须做的事)",
+    "scene": "health",
+    "example_en": "It is essential that patients follow the prescribed treatment plan.",
+    "example_zh": "至关重要的是患者遵循规定的治疗计划。"
+  },
+  "it is worth mentioning that...": {
+    "chunk": "it is worth mentioning that...",
+    "type": "frame",
+    "def_zh": "值得一提的是(句首,引出补充信息)",
+    "scene": "news",
+    "example_en": "It is worth mentioning that the event was a huge success.",
+    "example_zh": "值得一提的是,活动非常成功。"
+  },
+  "it is not surprising that...": {
+    "chunk": "it is not surprising that...",
+    "type": "frame",
+    "def_zh": "不足为奇的是(句首,引出合理结果)",
+    "scene": "culture",
+    "example_en": "It is not surprising that the movie won several awards.",
+    "example_zh": "这部电影获得多个奖项不足为奇。"
+  },
+  "the extent to which...": {
+    "chunk": "the extent to which...",
+    "type": "frame",
+    "def_zh": "在多大程度上(句中,用于讨论程度)",
+    "scene": "academic",
+    "example_en": "The extent to which this will impact the economy is still unknown.",
+    "example_zh": "这将对经济产生多大影响尚不清楚。"
+  },
+  "it is assumed that...": {
+    "chunk": "it is assumed that...",
+    "type": "frame",
+    "def_zh": "假设是(句首,用于引出假设或观点)",
+    "scene": "academic",
+    "example_en": "It is assumed that the results will be consistent across trials.",
+    "example_zh": "假设各次试验的结果将是一致的。"
+  },
+  "there is no denying that...": {
+    "chunk": "there is no denying that...",
+    "type": "frame",
+    "def_zh": "不可否认的是(句首,引出无可争议的事实)",
+    "scene": "daily_life",
+    "example_en": "There is no denying that exercise is beneficial for health.",
+    "example_zh": "不可否认的是,锻炼对健康有益。"
+  },
+  "what matters most is that...": {
+    "chunk": "what matters most is that...",
+    "type": "frame",
+    "def_zh": "最重要的是(句首,强调重点)",
+    "scene": "daily_life",
+    "example_en": "What matters most is that we learn from our mistakes.",
+    "example_zh": "最重要的是我们从错误中学习。"
+  },
+  "it is recommended that...": {
+    "chunk": "it is recommended that...",
+    "type": "frame",
+    "def_zh": "建议(句首,用于提出建议)",
+    "scene": "health",
+    "example_en": "It is recommended that you drink plenty of water during the day.",
+    "example_zh": "建议您在一天中多喝水。"
+  },
+  "it is evident that...": {
+    "chunk": "it is evident that...",
+    "type": "frame",
+    "def_zh": "显然(句首,用于引出明显结论)",
+    "scene": "academic",
+    "example_en": "It is evident that climate change is affecting global weather patterns.",
+    "example_zh": "显然,气候变化正在影响全球天气模式。"
+  },
+  "it is believed that...": {
+    "chunk": "it is believed that...",
+    "type": "frame",
+    "def_zh": "人们相信(句首,引出普遍观点或假设)",
+    "scene": "science_tech",
+    "example_en": "It is believed that the universe is constantly expanding.",
+    "example_zh": "人们相信宇宙在不断膨胀。"
+  },
+  "it is likely that...": {
+    "chunk": "it is likely that...",
+    "type": "frame",
+    "def_zh": "很可能(句首,引出可能性)",
+    "scene": "news",
+    "example_en": "It is likely that the new policy will be implemented next year.",
+    "example_zh": "新政策很可能在明年实施。"
+  },
+  "the reason why...": {
+    "chunk": "the reason why...",
+    "type": "frame",
+    "def_zh": "原因是(句中或句首,用于解释原因)",
+    "scene": "work",
+    "example_en": "The reason why the project was delayed is still unclear.",
+    "example_zh": "项目延期的原因尚不清楚。"
+  },
+  "it is unfortunate that...": {
+    "chunk": "it is unfortunate that...",
+    "type": "frame",
+    "def_zh": "不幸的是(句首,引出遗憾或不好的消息)",
+    "scene": "news",
+    "example_en": "It is unfortunate that the event was canceled due to the weather.",
+    "example_zh": "不幸的是,由于天气原因,活动被取消。"
+  },
+  "it is noteworthy that...": {
+    "chunk": "it is noteworthy that...",
+    "type": "frame",
+    "def_zh": "值得注意的是(句首,强调重要信息)",
+    "scene": "academic",
+    "example_en": "It is noteworthy that the study received widespread attention.",
+    "example_zh": "值得注意的是,这项研究受到了广泛关注。"
+  },
+  "carry out research": {
+    "chunk": "carry out research",
+    "type": "collocation_ext",
+    "def_zh": "进行研究",
+    "scene": "academic",
+    "example_en": "The team will carry out research on climate change impacts.",
+    "example_zh": "该团队将进行气候变化影响的研究。"
+  },
+  "play an important role": {
+    "chunk": "play an important role",
+    "type": "collocation_ext",
+    "def_zh": "发挥重要作用",
+    "scene": "news",
+    "example_en": "Education plays an important role in economic development.",
+    "example_zh": "教育在经济发展中发挥着重要作用。"
+  },
+  "pose a threat to": {
+    "chunk": "pose a threat to",
+    "type": "collocation_ext",
+    "def_zh": "对…构成威胁",
+    "scene": "environment",
+    "example_en": "Pollution poses a threat to marine life in the ocean.",
+    "example_zh": "污染对海洋生物构成威胁。"
+  },
+  "make an effort to": {
+    "chunk": "make an effort to",
+    "type": "collocation_ext",
+    "def_zh": "努力去...",
+    "scene": "education",
+    "example_en": "Students should make an effort to improve their grades.",
+    "example_zh": "学生们应该努力提高他们的成绩。"
+  }
+}

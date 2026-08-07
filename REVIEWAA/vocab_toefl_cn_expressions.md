@@ -1,4 +1,4 @@
-# I 段 · 中文高频表达 50 条(全量送审,不抽样)
+# I 段 · 中文高频表达 51 条(全量送审,不抽样)
 
 一条中文 → **2–3 个不同语域**的地道英文说法。本段的全部价值是**替学生挡掉中式英语**。
 
@@ -17,7 +17,7 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 **i5+i6 双向包含是本段最强的形式判据** —— 它挡住的是"例句和说法各说各话"这类
 看起来完整、实则对不上的产出。
 
-## 全量 50 条
+## 全量 51 条
 
 ### 日常口语高频表达(不是成语)(38 条)
 
@@ -57,17 +57,17 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I'm not sure** | 一般场合表达不确定性 | I'm not sure if the meeting is still on.<br>我不太确定会议是否还开。 |
-| casual | **I have no idea** | 随意表达完全不知情 | Honestly, I have no idea where she went.<br>老实说，我不太确定她去哪了。 |
-| formal | **I lack sufficient information to confirm** | 正式场合强调信息不足 | I lack sufficient information to confirm the project's timeline.<br>我不太确定项目时间表，因为信息不足。 |
+| neutral | **I'm not sure** | 一般场合表达不确定性 | I'm not sure if the meeting is at 3 PM.<br>我不太确定会议是不是在下午三点。 |
+| casual | **I have no idea** | 随意表达完全不知情 | I have no idea where she went after dinner.<br>晚饭后她去哪儿了,我不太确定。 |
+| formal | **I can't confirm that** | 正式场合强调信息不足 | I can't confirm that the report will be ready by Friday.<br>报告能不能在周五前准备好,我不太确定。 |
 
 **我来试试**
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **Let me give it a shot** | 朋友间尝试新事物 | That game looks fun, let me give it a shot.<br>那个游戏看起来很有趣，我来试试。 |
-| neutral | **I'll give it a try** | 一般场合尝试新事物 | I haven't cooked this dish before, but I'll give it a try.<br>我以前没做过这个菜，但我来试试。 |
-| formal | **I shall attempt this** | 正式场合尝试做某事 | Given the circumstances, I shall attempt this task.<br>鉴于情况，我来试试做这个任务。 |
+| casual | **Let me give it a shot** | 朋友间尝试新事物 | I'm not sure if I can fix it, but let me give it a shot.<br>我不确定我能不能修好它,但我来试试。 |
+| neutral | **I'll give it a try** | 一般场合尝试新事物 | I've never cooked Italian food before, but I'll give it a try.<br>我从来没有做过意大利菜,但我来试试。 |
+| formal | **I'll take that on** | 正式场合尝试做某事 | The manager said, 'I'll take that on and handle the negotiations.'<br>经理说:“我来试试,负责这次谈判。” |
 
 **我很期待**
 
@@ -121,33 +121,33 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I agree** | 一般场合表示赞同 | I agree with your point about the budget.<br>我同意你关于预算的观点。 |
-| casual | **I'm with you** | 朋友间表示赞同 | I'm with you on this, let's go for it.<br>我同意,就这么做吧。 |
-| formal | **I am in accord** | 正式场合表示赞同 | I am in accord with the board's decision.<br>我同意董事会的决定。 |
+| neutral | **I agree** | 一般场合表示赞同 | I agree with your decision to move forward.<br>我同意你的决定,继续前进吧。 |
+| casual | **I'm with you** | 朋友间表示赞同 | I'm with you on trying that new restaurant.<br>我同意,我们去试试那家新餐馆吧。 |
+| formal | **I'm in full agreement** | 正式场合表示赞同 | I'm in full agreement with the proposed policy changes.<br>我完全同意你提出的政策变更。 |
 
 **我不知道**(用于表示不知情)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I don't know** | 一般场合表示不知情 | I don't know the answer to that question.<br>我不知道那个问题的答案。 |
-| casual | **No idea** | 朋友间表示不知情 | No idea where she went after the party.<br>我不知道她派对后去了哪里。 |
-| formal | **I'm unaware** | 正式场合表示不知情 | I'm unaware of any changes to the schedule.<br>我不知道时间表有任何变动。 |
+| neutral | **I don't know** | 一般场合表示不知情 | I don't know where she put the keys.<br>我不知道她把钥匙放在哪里了。 |
+| casual | **No idea** | 朋友间表示不知情 | No idea what time the movie starts.<br>我不知道电影几点开始。 |
+| formal | **I'm not aware of that** | 正式场合表示不知情 | I'm not aware of that policy change at work.<br>我不知道工作上的政策变动。 |
 
 **我懂了**(用于表示理解)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I get it** | 一般场合表示理解 | I get it now, thanks for explaining.<br>我懂了,谢谢你的解释。 |
-| casual | **Got it** | 朋友间表示理解 | Got it, I'll send the email right away.<br>我懂了,我会马上发邮件。 |
-| formal | **I comprehend** | 正式场合表示理解 | I comprehend the terms you outlined.<br>我懂了你所列出的条款。 |
+| neutral | **I get it** | 一般场合表示理解 | After your explanation, I get it now.<br>听完你的解释,我懂了。 |
+| casual | **Got it** | 朋友间表示理解 | You want the report by Friday? Got it!<br>你想要周五前拿到报告?我懂了! |
+| formal | **I understand completely** | 正式场合表示理解 | After reviewing the policy, I understand completely.<br>看完政策后,我完全懂了。 |
 
 **没关系**(用于安慰他人)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **It's okay** | 一般场合安慰他人 | It's okay, we all make mistakes.<br>没关系,我们都会犯错。 |
-| casual | **No worries** | 朋友间安慰他人 | No worries, it happens to everyone.<br>没关系,每个人都会遇到。 |
-| formal | **It's of no consequence** | 正式场合安慰他人 | It's of no consequence, please proceed.<br>没关系,请继续。 |
+| neutral | **It's okay** | 一般场合安慰他人 | It's okay, mistakes happen to everyone.<br>没关系,犯错是每个人都会有的事。 |
+| casual | **No worries** | 朋友间安慰他人 | No worries, you can try again tomorrow.<br>没关系,你明天可以再试一次。 |
+| formal | **Please don't worry about it** | 正式场合安慰他人 | Please don't worry about it; we will handle everything.<br>没关系,我们会处理好一切的。 |
 
 **我很高兴**(用于表达开心)
 
@@ -161,9 +161,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I'm anxious** | 一般场合表达紧张 | I'm anxious about my job interview tomorrow.<br>我很着急明天的工作面试。 |
-| casual | **I'm freaking out** | 朋友间表达紧张 | I'm freaking out about the test results!<br>我很着急考试结果! |
-| formal | **I am concerned** | 正式场合表达紧张 | I am concerned about the recent developments.<br>我很着急最近的发展情况。 |
+| neutral | **I'm anxious** | 一般场合表达紧张 | I'm anxious about the upcoming job interview.<br>我很着急,因为明天有个重要的工作面试。 |
+| casual | **I'm freaking out** | 朋友间表达紧张 | I'm freaking out about the final exams next week.<br>我很着急,因为下周就要期末考试了。 |
+| formal | **I am concerned** | 正式场合表达紧张 | I am concerned about the recent changes in policy.<br>我很着急,因为最近的政策变动让我感到不安。 |
 
 **我没听见**(用于表示没听清)
 
@@ -177,9 +177,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I'm on my way** | 一般场合告知在路上 | I'm on my way to the office now.<br>我在路上去办公室。 |
-| casual | **Heading over now** | 朋友间告知在路上 | I'm heading over now, see you soon!<br>我在路上,很快见! |
-| formal | **In transit** | 正式场合告知在路上 | I am currently in transit and will arrive shortly.<br>我在路上,即将到达。 |
+| neutral | **I'm on my way** | 一般场合告知在路上 | Don't worry, I'm on my way to the meeting.<br>别担心,我在路上去开会呢。 |
+| casual | **Heading over now** | 朋友间告知在路上 | Hey, I'm heading over now, see you soon!<br>嘿,我在路上了,很快见!  |
+| formal | **I'm en route** | 正式场合告知在路上 | I am en route to the conference; I'll arrive by 3 PM.<br>我在路上去参加会议,会在下午三点到。 |
 
 **小心点**(用于提醒注意安全)
 
@@ -201,17 +201,17 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I'm sleepy** | 一般场合表示困倦 | I'm sleepy, let's call it a night.<br>我想睡觉,我们结束吧。 |
-| casual | **I'm beat** | 随意场合表示困倦 | I'm beat, time to hit the sack.<br>我想睡觉,该上床了。 |
-| formal | **I am fatigued** | 正式场合表示困倦 | After a long day, I am fatigued and ready for bed.<br>经过漫长的一天,我想睡觉。 |
+| neutral | **I'm sleepy** | 一般场合表示困倦 | After the long meeting, I'm sleepy and need a nap.<br>开完长会之后，我想睡觉，需要小憩一下。 |
+| casual | **I'm beat** | 随意场合表示困倦 | After hiking all day, I'm beat and ready for bed.<br>在外面徒步了一整天，我想睡觉，准备去睡了。 |
+| formal | **I'm quite tired** | 正式场合表示困倦 | After the conference, I'm quite tired and need to rest.<br>参加完会议后，我想睡觉，需要休息一下。 |
 
 **我忘了**(用于承认忘记)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **I forgot** | 一般场合承认忘记 | I forgot to bring my lunch today.<br>我忘了带午餐。 |
-| casual | **It slipped my mind** | 随意场合承认忘记 | Sorry, it slipped my mind to call you back.<br>抱歉,我忘了回你电话。 |
-| formal | **I failed to recall** | 正式场合承认忘记 | I failed to recall the details of the agreement.<br>我忘了协议的细节。 |
+| neutral | **I forgot** | 一般场合承认忘记 | I forgot to bring my keys to the office.<br>今天早上出门时我忘了带钥匙。 |
+| casual | **It slipped my mind** | 随意场合承认忘记 | I was supposed to call her, but it slipped my mind.<br>我本来要打电话给她,但我忘了。 |
+| formal | **It escaped my memory** | 正式场合承认忘记 | Her birthday escaped my memory this year, unfortunately.<br>很不幸,今年我忘了她的生日。 |
 
 **我饿了**
 
@@ -288,9 +288,9 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **I'm pissed off** | 非正式场合表达愤怒时 | I'm pissed off about the cancellation.<br>取消让我很生气。 |
-| neutral | **I'm upset** | 一般场合表达不满时 | I'm upset about how things turned out.<br>事情的结果让我很生气。 |
-| formal | **I am quite displeased** | 正式场合表达不悦时 | I am quite displeased with the service provided.<br>我对所提供的服务很生气。 |
+| casual | **I'm pissed off** | 非正式场合表达愤怒时 | I'm pissed off because they canceled the concert.<br>他们取消了演唱会,我很生气。 |
+| neutral | **I'm annoyed** | 一般场合表达不满时 | I'm annoyed by the constant noise from the construction.<br>施工的噪音不断,我很生气。 |
+| formal | **I am quite displeased** | 正式场合表达不悦时 | I am quite displeased with the service at the restaurant.<br>餐厅的服务让我很生气。 |
 
 **我很抱歉**
 
@@ -316,99 +316,98 @@ i7 中文表达与注释长度 / i8 场景提示长度 / i9 说法全局不重�
 | neutral | **I need some assistance** | 一般场合请求帮助 | I need some assistance with my computer.<br>我需要帮助修一下电脑。 |
 | formal | **I require assistance** | 正式场合请求帮助 | I require assistance in finalizing the report.<br>我需要帮助完成报告。 |
 
-### 汉语谚语/俗语(12 条)
+### 汉语谚语/俗语(务必先看"说法 vs 解释"那一节;必须包含「此地无银三百两」)(13 条)
 
-**水滴石穿**(强调坚持不懈的力量)
-
-| 语域 | 英文说法 | 什么场合用 | 例句 |
-| --- | --- | --- | --- |
-| casual | **Keep on keeping on.** | 鼓励朋友坚持下去 | I know it's tough, but keep on keeping on.<br>我知道这很难,但水滴石穿,继续坚持下去。 |
-| neutral | **Persistence pays off.** | 在一般场合谈论坚持的价值 | It took years, but persistence pays off.<br>花了几年时间,但水滴石穿,坚持的价值最终显现。 |
-| formal | **Constant effort can overcome any obstacle.** | 正式场合中强调努力的重要性 | Constant effort can overcome any obstacle in this project.<br>在这个项目中,水滴石穿,持续的努力可以克服任何障碍。 |
-
-**无风不起浪**(指事情总有起因)
+**耳听为虚,眼见为实**(/)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **Where there's smoke, there's fire.** | 谈论传闻或谣言时 | I heard they're breaking up. Where there's smoke, there's fire.<br>我听说他们要分手了,无风不起浪。 |
-| neutral | **There's no effect without a cause.** | 分析问题时提到因果关系 | The sudden drop in sales suggests there's no effect without a cause.<br>销售的突然下降表明无风不起浪,一定有原因。 |
-| formal | **Every event has an underlying cause.** | 正式分析事件的起因 | Every event has an underlying cause that must be investigated thoroughly.<br>每个事件都有其根本原因,无风不起浪,需要彻底调查。 |
+| casual | **I'll believe it when I see it.** | 怀疑未经证实的信息 | They say the movie's fantastic, but I'll believe it when I see it.<br>他们说这电影很棒,但耳听为虚,眼见为实。 |
+| neutral | **Seeing is believing.** | 强调实证的重要性 | People were skeptical about the new invention, but seeing is believing.<br>人们对新发明表示怀疑,但耳听为虚,眼见为实。 |
 
-**不入虎穴,焉得虎子**(强调冒险的重要性)
-
-| 语域 | 英文说法 | 什么场合用 | 例句 |
-| --- | --- | --- | --- |
-| casual | **No guts, no glory.** | 鼓励朋友勇敢尝试 | You should go for it. No guts, no glory!<br>你应该去尝试,不入虎穴,焉得虎子! |
-| neutral | **Nothing ventured, nothing gained.** | 劝说某人尝试新事物 | Consider applying for that job. Nothing ventured, nothing gained.<br>考虑申请那份工作,不入虎穴,焉得虎子。 |
-| formal | **Risk is indispensable to achievement.** | 正式场合中谈论风险和成就 | In business, risk is indispensable to achievement and innovation.<br>在商业中,不入虎穴,焉得虎子,风险是成就和创新的关键。 |
-
-**江山易改,本性难移**(强调本性难以改变)
+**吃一堑,长一智**(/)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **A leopard can't change its spots.** | 朋友间谈论某人不改的习惯 | He promised to be punctual, but a leopard can't change its spots.<br>他承诺会准时,但江山易改,本性难移。 |
-| neutral | **Old habits die hard.** | 一般场合讨论习惯难改 | He's trying to quit smoking, but old habits die hard.<br>他在努力戒烟,但江山易改,本性难移。 |
-| formal | **Innate characteristics are resistant to change.** | 正式场合中讨论性格特征 | In psychology, innate characteristics are resistant to change, influencing behavior.<br>在心理学中,江山易改,本性难移,影响行为。 |
+| casual | **Live and learn.** | 生活中学到教训后 | I won't make that mistake again. Live and learn.<br>我不会再犯那个错误了。吃一堑,长一智。 |
+| neutral | **Experience is the best teacher.** | 谈论经验的重要性 | After failing the exam, he realized experience is the best teacher.<br>考试失败后,他意识到吃一堑,长一智。 |
 
-**众口难调**(指难以满足所有人的需求)
-
-| 语域 | 英文说法 | 什么场合用 | 例句 |
-| --- | --- | --- | --- |
-| casual | **You can't please everyone.** | 朋友间谈论无法让每个人满意 | I chose the movie, but you can't please everyone.<br>我选了电影,但众口难调,不可能让每个人都满意。 |
-| neutral | **It's difficult to satisfy all interests.** | 一般场合中描述协调问题 | In planning events, it's difficult to satisfy all interests.<br>在策划活动时,众口难调,很难满足所有人的需求。 |
-| formal | **Accommodating all preferences is challenging.** | 正式场合谈论协调复杂需求 | In policy-making, accommodating all preferences is challenging and requires negotiation.<br>在政策制定中,众口难调,协调所有偏好具有挑战性,需要协商。 |
-
-**老马识途**(指经验丰富的人善于指导)
+**熟能生巧**(/)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **An old hand knows the ropes.** | 谈论某人经验丰富 | Ask Tom for help; he's an old hand and knows the ropes.<br>找汤姆帮忙,他是老马识途,经验丰富。 |
-| neutral | **Experience is the best guide.** | 一般场合中讨论经验的价值 | In navigating complex tasks, experience is the best guide.<br>在处理复杂任务时,老马识途,经验是最好的指导。 |
-| formal | **Veteran insight is invaluable for guidance.** | 正式场合中提到经验的作用 | In strategic planning, veteran insight is invaluable for guidance and success.<br>在战略规划中,老马识途,资深人士的见解对指导和成功至关重要。 |
+| casual | **Practice makes perfect.** | 鼓励多加练习 | Keep practicing the piano. Practice makes perfect.<br>继续练习钢琴吧,熟能生巧。 |
+| neutral | **Repetition breeds skill.** | 强调重复练习的价值 | They say repetition breeds skill, so keep at it.<br>他们说熟能生巧,所以坚持下去。 |
 
-**杯水车薪**(比喻无济于事。)
-
-| 语域 | 英文说法 | 什么场合用 | 例句 |
-| --- | --- | --- | --- |
-| casual | **a drop in the bucket** | 朋友间形容微不足道的贡献 | Donating $5 is just a drop in the bucket for such a huge project.<br>捐5美元对这个庞大的项目来说只是杯水车薪。 |
-| neutral | **insufficient to meet the needs** | 一般场合形容资源不足 | The aid provided was insufficient to meet the needs of the affected families.<br>提供的援助对受灾家庭来说是杯水车薪。 |
-| formal | **inadequate to address the issue** | 正式场合指措施不足 | The proposed measures are inadequate to address the issue at hand.<br>所提措施对眼前问题是杯水车薪。 |
-
-**唇亡齿寒**(比喻关系密切,互相依存)
+**一分耕耘,一分收获**(/)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **We're in the same boat.** | 朋友间形容共同利益 | Don't worry, we're in the same boat with this project.<br>别担心,我们这个项目唇亡齿寒。 |
-| neutral | **interdependent** | 一般场合描述互相依存关系 | The two departments are interdependent for success.<br>这两个部门唇亡齿寒,成功需要互相依存。 |
-| formal | **mutual dependency** | 正式场合论述密切关系 | The mutual dependency of these systems ensures stability.<br>这些系统唇亡齿寒,以确保稳定性。 |
+| neutral | **You reap what you sow.** | 讨论努力与结果的关系 | His hard work paid off; you reap what you sow.<br>他的努力得到了回报;一分耕耘,一分收获。 |
+| formal | **Effort brings reward.** | 正式场合谈论努力的价值 | The success of the project shows that effort brings reward.<br>项目的成功表明一分耕耘,一分收获。 |
 
-**覆水难收**(比喻事情不可逆转)
+**人无远虑,必有近忧**(/)
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **What's done is done.** | 朋友间安慰对方放下过去 | Don't stress over it. What's done is done.<br>别太在意,覆水难收。 |
-| neutral | **There's no use crying over spilled milk.** | 一般场合劝人放下不可逆的事 | You missed the deadline. There's no use crying over spilled milk now.<br>你错过了截止日期,覆水难收。 |
-| formal | **The damage is irreversible.** | 正式场合论述不可逆转的后果 | The damage to the environment is irreversible if actions are not taken.<br>如不采取行动,对环境的损害将覆水难收。 |
+| formal | **Failing to plan is planning to fail.** | 强调计划的重要性 | Without a strategy, the company floundered. Failing to plan is planning to fail.<br>没有策略,公司陷入困境。人无远虑,必有近忧。 |
+| neutral | **Look before you leap.** | 提醒谨慎行事 | Before investing in stocks, remember to look before you leap.<br>在投资股票前,记得人无远虑,必有近忧。 |
+
+**不入虎穴,焉得虎子**(/)
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| neutral | **No risk, no reward.** | 谈论冒险的重要性 | Starting your own business is tough, but no risk, no reward.<br>创业很难,但不入虎穴,焉得虎子。 |
+| formal | **Fortune favors the bold.** | 正式场合鼓励冒险 | He took a chance and succeeded. Fortune favors the bold.<br>他冒险并成功了。不入虎穴,焉得虎子。 |
+
+**近朱者赤,近墨者黑**(/)
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| neutral | **Birds of a feather flock together.** | 形容人以类聚 | He started hanging out with musicians and became one himself. Birds of a feather flock together.<br>他开始和音乐家们混在一起,自己也成了音乐家。近朱者赤,近墨者黑。 |
+| formal | **You are judged by the company you keep.** | 正式场合谈论交友影响 | Her reputation suffered because of her friends. You are judged by the company you keep.<br>她的名声因朋友受损。近朱者赤,近墨者黑。 |
+
+**井底之蛙**
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| neutral | **A frog in a well.** | 形容见识短浅的人 | He thinks his small town is the whole world; he's a frog in a well.<br>他以为小镇就是整个世界,真是井底之蛙。 |
+| casual | **You're living in a bubble.** | 指出对方视野狭窄 | You've never traveled outside your city? You're living in a bubble.<br>你从没出过城? 真是井底之蛙。 |
 
 **画蛇添足**
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| neutral | **add unnecessary details** | 做事多此一举时 | Her story was good, but she added unnecessary details that confused everyone.<br>她的故事很好,但画蛇添足的细节让人困惑。 |
-| formal | **gild the lily** | 做事多此一举时 | The designer suggested not to gild the lily by adding more decorations.<br>设计师建议不要画蛇添足,增添更多装饰。 |
+| casual | **You're overdoing it.** | 朋友间提醒画蛇添足 | Adding more spices will ruin the dish. You're overdoing it.<br>加更多香料会毁了这道菜,你这就是画蛇添足。 |
+| neutral | **That's unnecessary embellishment.** | 指出某人多此一举 | The extra chapter doesn't add value; it's unnecessary embellishment.<br>加的那一章没有意义,这就是画蛇添足。 |
 
-**入乡随俗**
-
-| 语域 | 英文说法 | 什么场合用 | 例句 |
-| --- | --- | --- | --- |
-| neutral | **when in Rome, do as the Romans do** | 适应当地习俗时 | When in Rome, do as the Romans do; try the local food.<br>入乡随俗,试试当地的食物。 |
-| formal | **adapt to local customs** | 适应当地习俗时 | Visitors are advised to adapt to local customs to enhance their experience.<br>建议游客入乡随俗,以提升体验。 |
-
-**骑虎难下**(指事情进行中难以停下。)
+**亡羊补牢**
 
 | 语域 | 英文说法 | 什么场合用 | 例句 |
 | --- | --- | --- | --- |
-| casual | **caught between a rock and a hard place** | 朋友间表达两难境地 | I'm caught between a rock and a hard place with this job offer.<br>我在这份工作邀请上骑虎难下。 |
-| neutral | **in a bind** | 一般场合表达困境 | I'm in a bind with these conflicting deadlines.<br>这些互相冲突的截止日期让我骑虎难下。 |
-| formal | **in an untenable position** | 正式场合描述难以维持的处境 | The company found itself in an untenable position due to the scandal.<br>公司因丑闻陷入骑虎难下的境地。 |
+| casual | **Better late than never.** | 朋友间鼓励及时补救 | You finally started exercising? Better late than never!<br>你终于开始锻炼了? 亡羊补牢,犹未晚也! |
+| neutral | **It's not too late to fix it.** | 鼓励改正错误 | The project can still meet the deadline. It's not too late to fix it.<br>项目仍能按期完成。亡羊补牢,犹未晚也。 |
+
+**隔墙有耳**
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| neutral | **Walls have ears.** | 提醒小心说话 | Don't discuss sensitive topics here. Walls have ears.<br>别在这里讨论敏感话题。隔墙有耳。 |
+| casual | **You never know who's listening.** | 提醒注意保密 | Lower your voice. You never know who's listening.<br>小声点。隔墙有耳。 |
+
+**三思而后行**(英语无对等。)
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| neutral | **Think twice before you act.** | 建议他人仔细考虑时 | Before you quit your job, think twice before you act.<br>在你辞职之前,三思而后行。 |
+| casual | **It's better to be safe than sorry.** | 劝人多加小心时 | Bring a jacket; it's better to be safe than sorry.<br>带上夹克,三思而后行。 |
+| formal | **Exercise caution before proceeding.** | 正式建议谨慎行事时 | In regulatory matters, it's wise to exercise caution before proceeding.<br>在监管事务中,理应三思而后行。 |
+
+**杯水车薪**
+
+| 语域 | 英文说法 | 什么场合用 | 例句 |
+| --- | --- | --- | --- |
+| casual | **a drop in the bucket** | 捐款或资源量小 | Our donation is just a drop in the bucket compared to their need.<br>跟他们的需求比,我们的捐款只是杯水车薪。 |
+| neutral | **barely makes a dent** | 职场供应链谈影响甚微 | This quantity barely makes a dent in the shortage.<br>这点数量对缓解短缺几乎没有影响。杯水车薪而已。 |
+| formal | **nowhere near enough** | 正式场合说远远不够 | The current funding is nowhere near enough to finish the project.<br>现有资金要完成这个项目远远不够。真是杯水车薪。 |
 

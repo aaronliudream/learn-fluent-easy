@@ -1,0 +1,73 @@
+{
+  "_note": "Aaron 2026-08-07 审核裁决。replace 按 (cn_phrase, 原 rendition) 定位;set 直接改字段。谚语的 example_zh 一律由 fix-cn-expressions.mjs 按两句式重生成。",
+
+  "唇亡齿寒": {
+    "why": "casual we're in the same boat = 同舟共济,不是唇亡齿寒;neutral interdependent 是形容词不是说法",
+    "renditions": [
+      { "rendition": "when one falls, the other follows", "register": "casual", "scene_hint": "提醒对方两方绑在一起" },
+      { "rendition": "if the lips are gone, the teeth get cold", "register": "neutral", "scene_hint": "向外国人解释这句成语" },
+      { "rendition": "share a common fate", "register": "formal", "scene_hint": "正式场合谈利害相关" }
+    ],
+    "cn_note": "直译需加注,英文无完全对应习语"
+  },
+  "杯水车薪": {
+    "why": "neutral/formal 两条是解释不是说法,只留 casual 并补同义习语",
+    "renditions": [
+      { "rendition": "a drop in the bucket", "register": "casual", "scene_hint": "抱怨投入远远不够" },
+      { "rendition": "a drop in the ocean", "register": "neutral", "scene_hint": "英式说法,书面口语皆可" }
+    ]
+  },
+  "水滴石穿": {
+    "why": "casual keep on keeping on 不对应(那是坚持下去,没有滴水穿石的意象)",
+    "renditions": [
+      { "rendition": "constant dripping wears away the stone", "register": "neutral", "scene_hint": "劝人以恒久之功取胜" },
+      { "rendition": "little by little does the trick", "register": "casual", "scene_hint": "鼓励朋友慢慢来" },
+      { "rendition": "persistence overcomes all obstacles", "register": "formal", "scene_hint": "正式演讲谈毅力" }
+    ]
+  },
+  "骑虎难下": {
+    "why": "caught between a rock and a hard place = 进退两难,少了骑虎那层「停不下来」",
+    "renditions": [
+      { "rendition": "in too deep to back out", "register": "casual", "scene_hint": "谈已经陷太深的事" },
+      { "rendition": "have no choice but to see it through", "register": "neutral", "scene_hint": "说明只能硬着头皮做完" },
+      { "rendition": "committed beyond the point of retreat", "register": "formal", "scene_hint": "正式说明已无退路" }
+    ]
+  },
+  "老马识途": {
+    "why": "formal 档原是造句不是说法",
+    "renditions": [
+      { "rendition": "there's no substitute for experience", "register": "formal", "scene_hint": "正式场合强调经验价值" },
+      { "rendition": "an old hand knows the way", "register": "neutral", "scene_hint": "说某人熟门熟路" },
+      { "rendition": "he's been around the block", "register": "casual", "scene_hint": "朋友间夸人有经验" }
+    ]
+  },
+  "画蛇添足": {
+    "why": "gild the lily 是地道习语,不是正式用语,语域标错",
+    "renditions": [
+      { "rendition": "overdo it", "register": "casual", "scene_hint": "劝人别再加东西了" },
+      { "rendition": "gild the lily", "register": "neutral", "scene_hint": "说多此一举的润色" },
+      { "rendition": "add superfluous detail", "register": "formal", "scene_hint": "正式评价过度修饰" }
+    ]
+  },
+
+  "_daily_formal_fix": "以下 11 条全在 formal 档生硬/古旧(Aaron:formal 不是把 casual 逐词换大词)",
+  "_replace": [
+    ["I am in accord", "I'm in full agreement"],
+    ["I comprehend", "I understand completely"],
+    ["I failed to recall", "It escaped my memory"],
+    ["I shall attempt this", "I'll take that on"],
+    ["It's of no consequence", "Please don't worry about it"],
+    ["In transit", "I'm en route"],
+    ["I am fatigued", "I'm quite tired"],
+    ["I'm unaware", "I'm not aware of that"],
+    ["I lack sufficient information to confirm", "I can't confirm that"],
+    ["I'm upset", "I'm annoyed"]
+  ],
+  "_replace_why": {
+    "In transit": "in transit 是物流术语,不是人话",
+    "I'm upset": "upset = 难过,不是生气(我很生气 neutral 档语义错)"
+  },
+  "_example_zh_fix": {
+    "我很着急": ["我很着急最近的发展情况", "我很着急,明天就要面试了"]
+  }
+}

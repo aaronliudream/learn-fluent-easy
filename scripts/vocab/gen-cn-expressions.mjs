@@ -51,7 +51,11 @@ const SPEC_I = {
 
 const CATEGORIES = [
   { key: 'daily',   n: 38, desc: '日常口语高频表达(不是成语)' },
-  { key: 'proverb', n: 12, desc: '汉语谚语/俗语' },
+  /* ⚠️ 谚语这一档最容易产出「解释」而不是「说法」(Aaron 2026-08-07 全批打回)。
+     种子条目由 Aaron 亲自示范:此地无银三百两 →
+       casual That's a dead giveaway. / neutral The more you deny it, the more
+       suspicious you look. / formal You're protesting too much. */
+  { key: 'proverb', n: 12, desc: '汉语谚语/俗语(务必先看"说法 vs 解释"那一节;必须包含「此地无银三百两」)' },
 ];
 
 /* ══════════ 机器闸 i1–i9 ══════════ */
@@ -79,9 +83,15 @@ function renditionInExample(rendition, exampleEn) {
     .replace(/[.,!?;:"']/g, ' ').split(/\s+/).filter(Boolean);
   if (!parts.length) return true;
   const tail = parts.slice(1).filter(w => w.length > 2);
-  // 首词只比词干(允许 -s/-ed/-ing/不规则:取前 3 字母)
-  const headOk = ex.split(/\s+/).some(w => w.slice(0, 3) === parts[0].slice(0, 3));
   const tailOk = tail.every(w => ex.includes(w));
+  /* 首词有两类天然不匹配,都不该判死:
+       ① 虚位主语/代词:"It escaped my memory" 在例句里是 "Her birthday escaped…"
+       ② 不规则屈折:"have no choice…" 在例句里是 "had no choice…"(3 字母前缀 hav≠had)
+     所以:虚词打头直接免检;实词打头放宽到 2 字母前缀。 */
+  const FUNCTION_HEAD = new Set(['it', 'i', 'you', 'he', 'she', 'we', 'they', 'there',
+    'a', 'an', 'the', 'to', 'of', 'in', 'on', 'no', 'that', 'this', 'my', 'your']);
+  if (FUNCTION_HEAD.has(parts[0])) return tailOk;
+  const headOk = ex.split(/\s+/).some(w => w.slice(0, 2) === parts[0].slice(0, 2));
   return headOk && tailOk;
 }
 
@@ -135,13 +145,48 @@ function gateOne(e, seenRend) {
     const ew = words(r.example_en);
     if (ew < SPEC_I.exampleWords[0] || ew > SPEC_I.exampleWords[1])
       f.push(`i5 例句${tag} ${ew} 词,超出 ${SPEC_I.exampleWords.join('-')}`);
-    // i6 中文例句必须含这条中文表达 —— 证明例句确实在演示它,而非另起炉灶
-    if (!cnSubseq(cnCore(r.example_zh), cnCore(e.cn_phrase)))
+    /* i6 中文例句必须含这条中文表达 —— 证明例句确实在演示它,而非另起炉灶。
+       ⚠️ 分档(Aaron 2026-08-07 裁决):
+         daily   —— 表达嵌在句中,按序包含即可(「你有空吗」→「你这周六有空吗」)
+         proverb —— **谚语在汉语里整句独立使用,不能嵌进任意主句**。
+                    硬要求嵌入会逼出「我们这个项目唇亡齿寒」这种病句。
+                    改为两句式:英文例句的自然中译 + 谚语单独成句点题,
+                    判据放宽为「谚语在译文中原样出现即可」。 */
+    if (e.category === 'proverb') {
+      if (!cnCore(r.example_zh).includes(cnCore(e.cn_phrase)))
+        f.push(`i6 中文例句「${r.example_zh}」里没有原样出现谚语「${e.cn_phrase}」`);
+      /* ⚠️ 「谚语被硬塞进主句」这条**不可机械化**,不硬造判据(第四条)。
+         我试过两版形式判据,两版都误伤:
+           ① 「必须两句式」→ 判死「他试图让每个人都满意,但众口难调。」(好中文)
+           ② 「谚语前须有停顿」→ 判死「…终于取得了进步。真是水滴石穿。」
+              (「真是」开头,前面不是标点,但这正是 Aaron 要的两句式)
+         病句与好句的差别在句法角色,不在表层标点。**留给人审,不假装机器能判。**
+         机器只保留 Aaron 明说的那条:谚语原样出现。
+         另加一条**真能机械判**的:谚语只许出现一次 ——
+         「…只是杯水车薪。真是杯水车薪。」这种画蛇添足式重复是实打实的缺陷。 */
+      const occ = String(r.example_zh).split(e.cn_phrase).length - 1;
+      if (occ > 1)
+        f.push(`i6 谚语「${e.cn_phrase}」在中文例句里重复出现 ${occ} 次:「${r.example_zh}」`);
+    } else if (!cnSubseq(cnCore(r.example_zh), cnCore(e.cn_phrase))) {
       f.push(`i6 中文例句「${r.example_zh}」不含表达「${e.cn_phrase}」`);
+    }
     if (/[a-zA-Z]/.test(r.example_zh))
       f.push(`i6 中文例句${tag} 混入英文`);
     if (r.sort_order !== i + 1)
       f.push(`i3 sort_order 应为 ${i + 1},实为 ${r.sort_order}`);
+  }
+
+  /* i10 formal 档不是"把 casual 逐词换成大词"(Aaron 2026-08-07 规格补充)。
+     ⚠️ 这是**停用词表**,不是形式判据 —— 我知道它按第四条属于下策,
+        但"生硬/古旧"没有可机械化的形式特征,只能停用词表兜底 + 人审收口。
+        表里是 Aaron 实际打回的那批词根,新发现的要往里加。 */
+  const ARCHAIC = ['shall', 'comprehend', 'in accord', 'fatigued', 'of no consequence',
+    'failed to recall', 'attempt this', 'in transit', 'am unaware', 'lack sufficient'];
+  for (const r of rs) {
+    if (r.register !== 'formal') continue;
+    const low = ' ' + r.rendition.toLowerCase() + ' ';
+    const hit = ARCHAIC.find(a => low.includes(a));
+    if (hit) f.push(`i10 formal 说法「${r.rendition}」用了古旧/公文词「${hit}」—— formal 也要是母语者真会说的话`);
   }
 
   // i9 全局去重:同一个英文说法不得在两条中文表达下重复出现
@@ -158,16 +203,63 @@ const SYSTEM = `你是为中国英语学习者编写「中译英说法库」的�
 
 任务:给出一条**中文高频表达**,以及 2–3 个**地道英文说法**。
 
+══════ 最重要的一条:给「说法」,不是给「解释」 ══════
+
+判据:**这句话能不能在真实对话里脱口而出?不能就是解释,不是说法。**
+
+✅ a drop in the bucket              ❌ insufficient to meet the needs
+✅ there's no substitute for experience  ❌ Veteran insight is invaluable for guidance
+✅ That's a dead giveaway.           ❌ Innate characteristics are resistant to change
+✅ You're protesting too much.       ❌ Excessive denial indicates guilt
+
+中文谚语在英语里**大多没有对等成语**。不要硬找成语 ——
+要给「**美国人在同一场景下真会说的那句话**」。
+
+范例(此地无银三百两):
+  casual  → That's a dead giveaway.
+  neutral → The more you deny it, the more suspicious you look.
+  formal  → You're protesting too much.
+三档**不是同一句话换大词**,而是同一个中文在不同场景下美国人真会说的三句**不同的话**。
+
+再看一个(杯水车薪),注意三档是**三个不同侧重**,不是同义换词:
+  casual  → a drop in the bucket        (量小;捐款/资源场景)
+  neutral → barely makes a dent          (影响甚微;职场/供应链场景)
+  formal  → nowhere near enough          (远远不够)
+
+⚠️ **formal 档尤其容易写坏**。formal 要找的是「**正式场合的另一种说法**」,
+不是「同一说法的书面化」。下面这些都是把 casual 换大词的产物,一律不要:
+  ❌ I comprehend(应为 I understand completely)
+  ❌ I am in accord(应为 I'm in full agreement)
+  ❌ I shall attempt this(应为 I'll take that on)
+  ❌ I am fatigued / in transit / of no consequence / failed to recall
+
+**允许直译加注**:若英语确无对应,可给直译并在 cn_note 写明
+(唇亡齿寒 → When the lips are gone, the teeth feel cold;注明英语无对等,
+美国人会说 we sink or swim together)。
+
+**允许只给 2 个说法**,不要硬凑 3 个 —— 凑出来的第三个必然是解释。
+
 铁律:
 1. 英文说法必须是**母语者真会说的话**,不是逐字硬翻。这一栏的全部价值就在于
    替学生挡掉中式英语 —— 若某个说法是把中文一个字一个字换成英文,直接不要。
 2. 2–3 个说法**必须分属不同语域**:casual(朋友之间)/ neutral(一般场合)/
    formal(正式书面或对上级)。语域相同的说法没有教学价值。
+   ⚠️ **formal 不等于把 casual 逐词换成大词**。formal 必须是母语者在正式场合
+   真会说的话 —— "I'm in full agreement" 是 formal,"I am in accord" 不是,
+   那是公文腔。凡 shall / comprehend / fatigued / in accord / of no consequence
+   这类古旧或书面公文用词,一律不要。宁可用平实的整句(如 "Please don't worry
+   about it"),也不要生造大词。
+   ⚠️ formal 也不是"造一个句子":老马识途的 formal 应是
+   "there's no substitute for experience",不是把谚语解释一遍。
 3. scene_hint 用中文写「**什么场合用这一说法**」(4–16 字),
    不要复述它的意思 —— 意思学生已经知道了,他不知道的是什么时候能用。
 4. 每个说法配一条英文例句 + 对应中文例句。
    **英文例句必须包含该说法**(动词可随时态变形);
    **中文例句必须包含该中文表达**(中间可插入成分,如「你有空吗」→「你这周六有空吗」)。
+   ⚠️ **谚语(proverb)例外**:谚语在汉语里整句独立使用,不能嵌进任意主句
+   (「我们这个项目唇亡齿寒」是病句)。谚语的中文例句写成**两句式**:
+   先是英文例句的自然中译,再让谚语单独成句点题。
+   例:「他坚持了三年才成功。真是水滴石穿。」
 5. 例句 6–16 词,场景具体,不要教科书腔。
 7. sort_order 从 1 开始编号。
 6. cn_note 可选,≤20 字,只在该表达有歧义或使用限制时才写。`;

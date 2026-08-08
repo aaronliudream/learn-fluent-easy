@@ -34,7 +34,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  AlertCircle, CalendarClock, Check, ChevronDown, Gauge, Headphones,
+  AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, Gauge, Headphones,
   Layers, Link2, Lock, Mic, SpellCheck,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -285,7 +285,21 @@ export default function VocabCenter() {
  *    (同理绝不能写 Tailwind 的 `bg-[#xxx]/8`:那套只有 5 的倍数才编得出来,/8 直接透明。)
  * ⚠️ 圆角/细边/阴影沿用 VOCAB_DESIGN_SPEC 第 1 节那套(16px 圆角 + 1px 细边),
  *    没有另起一套;卡本身不用渐变(全页唯一渐变位属于主 CTA)。
+ *
+ * ── 「这里能换词库」怎么讲清楚(三层同时上)──
+ *   ① 右侧一颗**有形态的胶囊**「⇄ 切换词库」:描边 + 内边距 + 按压态,
+ *      不是一个漂浮的箭头。判据是"不看说明能不能懂"。
+ *   ② 卡底一行「还有 N 个词库陆续上线 · 点击切换」—— 用数字制造好奇,
+ *      让用户知道背后有货,不是只有托福一个。
+ *   ③ 首访做一次 1.5s 呼吸动效,点一下即止,并写 localStorage 永不再来。
+ *
+ * ⚠️ 那颗胶囊是 `<span>` 不是 `<button>` —— **整张卡本身就是 button,
+ *    里面再嵌 button 是非法 HTML**(嵌套交互元素,读屏器也会读乱)。
+ *    点卡任意处 = 展开,行为完全一致,所以胶囊只负责"长得像按钮";
+ *    按压态靠父级 `group` 的 `group-active:` 传下去,手感不丢。
+ * ⚠️ 文案里的 N 一律来自 banks 实际条数,不写死 —— 写死的数字迟早和库对不上。
  */
+const SWITCH_HINT_KEY = "vocab_bank_switch_hinted";
 function BankCard({ banks, selected, onPick, color, progress }: {
   banks: VocabBank[];
   selected: VocabBank | null;
@@ -299,6 +313,24 @@ function BankCard({ banks, selected, onPick, color, progress }: {
 
   const active = useMemo(() => banks.filter(b => b.is_active), [banks]);
   const soon = useMemo(() => banks.filter(b => !b.is_active), [banks]);
+
+  /* 首访呼吸引导。**一进来就写 localStorage**(不是等点击才写)——
+     "只做一次"指的是只演一次,用户看没看到都不该演第二次。
+     ⚠️ 尊重 prefers-reduced-motion:命中就不演,那部分用户靠胶囊和底部那行文案照样看得懂。 */
+  const [breathe, setBreathe] = useState(false);
+  useEffect(() => {
+    if (!banks.length) return;              // 等词库到位再演,否则对着骨架呼吸
+    let reduced = false;
+    try { reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch { /* 老浏览器当没有 */ }
+    if (reduced) return;
+    try {
+      if (localStorage.getItem(SWITCH_HINT_KEY) === "1") return;
+      localStorage.setItem(SWITCH_HINT_KEY, "1");
+    } catch { return; }                     // 隐私模式存不了 → 干脆不演,免得每次都演
+    setBreathe(true);
+    const t = window.setTimeout(() => setBreathe(false), 1600);
+    return () => window.clearTimeout(t);
+  }, [banks.length]);
 
   /* 面板右侧那个词数:只给**已上线**的库数(未上线的显示「敬请期待」)。
      展开时才拉 —— 没点开的人不该为它付一次往返。 */
@@ -336,17 +368,34 @@ function BankCard({ banks, selected, onPick, color, progress }: {
     <div ref={boxRef} className="relative">
       <div className="mb-1 text-[12px] text-slate-400">当前词库</div>
 
-      <button type="button" onClick={() => setOpen(v => !v)}
+      {/* 呼吸动效的 keyframes 就地注入(与 Incentive 的彩带同一套做法,不进全局 css) */}
+      {breathe && <style>{"@keyframes vbankbreathe{0%,45%,100%{transform:scale(1)}22%,68%{transform:scale(1.018)}}"}</style>}
+
+      <button type="button" onClick={() => { setOpen(v => !v); setBreathe(false); }}
         aria-haspopup="listbox" aria-expanded={open} disabled={!banks.length}
-        className="block w-full rounded-2xl border p-3.5 text-left shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-transform duration-100 active:scale-[0.99]"
-        style={{ backgroundColor: tintToWhite(color, 0.92), borderColor: tintToWhite(color, 0.72) }}>
+        className="group block w-full rounded-2xl border p-3.5 text-left shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-transform duration-100 active:scale-[0.99]"
+        style={{
+          backgroundColor: tintToWhite(color, 0.92),
+          borderColor: tintToWhite(color, 0.72),
+          animation: breathe ? "vbankbreathe 1.5s ease-in-out 1" : undefined,
+        }}>
         <div className="flex items-center gap-2.5">
           <span className="h-3 w-3 shrink-0 rounded-full" style={{ backgroundColor: color }} />
           <span className="min-w-0 flex-1 truncate text-[20px] font-bold tracking-tight text-slate-900">
             {selected?.name_zh ?? (banks.length ? "选择词库" : "加载中")}
           </span>
           {selected && needsUnlock(selected) && <Lock className="h-4 w-4 shrink-0 text-slate-400" />}
-          <ChevronDown className={cn("h-5 w-5 shrink-0 text-slate-400 transition-transform duration-150", open && "rotate-180")} />
+
+          {/* ① 有形态的胶囊。span 不是 button —— 外层整张卡已经是 button 了,
+              嵌套交互元素是非法 HTML。按压态靠 group-active 从父级传下来。 */}
+          <span className={cn(
+            "inline-flex shrink-0 items-center gap-1 rounded-full border bg-white px-2.5 py-1 text-[12px] font-medium",
+            "transition-transform duration-100 group-active:scale-95",
+          )} style={{ borderColor: tintToWhite(color, 0.55), color }}>
+            <ArrowLeftRight className="h-3.5 w-3.5" />
+            切换词库
+          </span>
+          <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-400 transition-transform duration-150", open && "rotate-180")} />
         </div>
 
         {/* 进度靠右下 —— 数字先于条,条只是数字的可视化 */}
@@ -370,6 +419,17 @@ function BankCard({ banks, selected, onPick, color, progress }: {
               style={{ width: pct > 0 ? `max(3px, ${pct}%)` : 0, background: color }} />
           </div>
         </div>
+
+        {/* ② 卡底提示:用"还有几个"制造好奇。
+            ⚠️ N 来自 soon.length,不写死;真没有待上线的库时换成不含数字的说法,
+               免得哪天全上线了还在说"还有 0 个"。 */}
+        {banks.length > 0 && (
+          <div className="mt-2 border-t pt-2 text-[12px] text-slate-400" style={{ borderColor: tintToWhite(color, 0.8) }}>
+            {soon.length > 0
+              ? <>还有 <b className="font-semibold text-slate-500" style={{ fontVariantNumeric: "tabular-nums" }}>{soon.length}</b> 个词库陆续上线 · 点击切换</>
+              : <>共 {active.length} 个词库 · 点击切换</>}
+          </div>
+        )}
       </button>
 
       {/* 展开面板:150ms 高度 + 透明度过渡,不生硬闪现。
@@ -386,8 +446,19 @@ function BankCard({ banks, selected, onPick, color, progress }: {
         aria-hidden={!open}
       >
         <div className="overflow-hidden">
-          <div role="listbox"
+          <div
             className="max-h-[60vh] overflow-y-auto rounded-2xl border border-black/[0.08] bg-white p-1.5 shadow-[0_12px_32px_rgba(15,23,42,0.14)]">
+            {/* 面板抬头 —— 让它像个货架,不像一个系统 select。
+                两个数字都来自 banks,不写死。 */}
+            <div className="px-2.5 pb-2 pt-1.5">
+              <div className="text-[14px] font-semibold text-slate-900">选择词库</div>
+              <div className="mt-0.5 text-[12px] text-slate-400">
+                已上线 {active.length} 个{soon.length > 0 ? ",陆续更新" : ""}
+              </div>
+            </div>
+            <div className="mx-2.5 mb-1 border-t border-black/[0.06]" />
+
+            <div role="listbox">
             {active.map(b => {
               const c = bankColor(b.code);
               const on = b.id === selected?.id;
@@ -429,6 +500,7 @@ function BankCard({ banks, selected, onPick, color, progress }: {
                 ))}
               </>
             )}
+            </div>
           </div>
         </div>
       </div>

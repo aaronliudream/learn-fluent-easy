@@ -1,13 +1,20 @@
 /**
  * 词汇音频批量预生成:每词 1 条词音频 + 每词 3 条例句音频。
  *
- * 走线上 tts edge function(format:'url'),与前端 speakUS 完全同配置:
- *     voiceId = 'alloy' · accent = 'US' · speed = 0.95
- * 这三个值必须和 src/lib/speak.ts 的 normalizeForHash 一致 —— edge 的存储键是
+ * 走线上 tts edge function(format:'url')。edge 的存储键是
  *     sha256(`${provider}|${voice}|${safeSpeed}|${accentUpper}|${text}`)
- * 对上了,前端 predictCdnUrl 猜出来的 URL 才和这里预生成的是同一个文件,
- * 否则用户点播还会现合成一遍,预生成白做。
- * (speak.ts:202 的 safeSpeed 兜底值就是 0.95,故这里取 0.95 而非 1.0)
+ * 参数对上了,前端 predictCdnUrl 猜出来的 URL 才和这里预生成的是同一个文件,
+ * 否则用户点播还会现合成一遍,预生成白做、还多出一份重复文件。
+ *
+ * ⚠️ 定版参数 = voiceId 'alloy' · accent '' · speed 1(2026-08-08 统一)。
+ *    依据不是猜的:拿库里现存音频的文件名(内容哈希)反解,20/20 命中
+ *    `openai|alloy|1||<text>` —— 库里那 4470 条词音频和例句音频**全部**
+ *    是这组参数烧的。
+ *    此前这里默认 speed=0.95 / accent='US',和库里对不上;真按它补烧会
+ *    生成一批哈希不同的重复文件,前端预测又指向另一个。
+ *    ⚠️ 别把 accent 改回 'US':speak.ts:198 会因 accentUpper==='US'
+ *       把 voice 强制成 'alloy'——结果凑巧一样,但 accentUpper 进哈希,
+ *       'US' 与 '' 是两个不同的键,文件仍会分叉。
  *
  * ⚠️ 不自己算 hash 拼 URL,一律用 edge 返回的 audioUrl 落库 ——
  *    edge 会按地区选 provider(openai / volcano),provider 进 hash,
@@ -43,8 +50,8 @@ const GEN = path.join(DATA, 'generated');
 const arg = (k, d) => process.argv.find(a => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=') ?? d;
 const BANK = arg('bank', 'toefl');
 const VOICE = arg('voice', 'alloy');
-const ACCENT = arg('accent', 'US');
-const SPEED = Number(arg('speed', '0.95'));
+const ACCENT = arg('accent', '');        // 定版:空(见文件头,不是 'US')
+const SPEED = Number(arg('speed', '1'));  // 定版:1(见文件头,不是 0.95)
 const THROTTLE_MS = Number(arg('throttle', '1200'));
 const DRY = process.argv.includes('--dry-run');
 const EMIT_ONLY = process.argv.includes('--emit-sql');
@@ -140,7 +147,7 @@ async function main() {
   const todoExamples = examples.filter(e => !cache.examples[e.id]);
   process.stdout.write(
     `· ${BANK}:待合成 词 ${todoWords.length}/${words.length} · 例句 ${todoExamples.length}/${examples.length}\n` +
-    `  配置 voice=${VOICE} accent=${ACCENT} speed=${SPEED}(与 speakUS 一致)\n`
+    `  配置 voice=${VOICE} accent='${ACCENT}' speed=${SPEED}(与库内现存音频同参)\n`
   );
 
   if (DRY) { process.stdout.write('  (--dry-run:未调用 tts)\n'); return; }
@@ -187,8 +194,9 @@ function emit(cache) {
   const esc = s => String(s).replace(/'/g, "''");
   const sql = `-- 词汇音频回填:${wordRows.length} 词音频 + ${exRows.length} 例句音频
 -- 生成: node scripts/vocab/generate-audio.mjs --bank=${BANK} --emit-sql
--- 合成配置: voice=${VOICE} accent=${ACCENT} speed=${SPEED}(与前端 speakUS 一致,
---           故前端 predictCdnUrl 猜到的就是这些文件,点播不会再现合成)
+-- 合成配置: voice=${VOICE} accent='${ACCENT}' speed=${SPEED}
+--           与库内现存音频同参(由文件名内容哈希反解证实:openai|alloy|1||text),
+--           故前端 predictCdnUrl 猜到的就是这些文件,点播不会再现合成、也不分叉出重复文件。
 -- ⚠️ audio_url 一律取 tts edge 实际返回值,不是本地猜的 hash。
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 

@@ -7,7 +7,7 @@
  * ── 后台播放(这项的成败点)──
  *   ① 全程只用**一个长期存活的 `<audio>` 元素**,换词只换 src。
  *      每次 new Audio() 会让 iOS 认为是新的播放请求,锁屏后基本必断。
- *   ② 一个词的整段序列(单词/拆读/例句 + 间隔)在 earTraining.ts 里
+ *   ② 一个词的整段序列(单词/慢速/例句 + 间隔)在 earTraining.ts 里
  *      离线渲染成**一条**连续音频 —— 间隔是真静音,不靠 setTimeout。
  *      后台页面的定时器会被节流,靠 timer 补间隔锁屏必停。
  *   ③ MediaSession 设 metadata + play/pause/上一首/下一首,
@@ -15,8 +15,10 @@
  *   ⚠️ 真机锁屏行为**只能 Aaron 用手机验**:无头浏览器没有锁屏,
  *      我这边只能验到"元素单例 / 一条连续音频 / MediaSession 已注册"。
  *
- * ⚠️ 速度用元素层 playbackRate(保音高)。代价是「拆读固定 1.0」做不到,
- *    详见 earTraining.ts 文件头的取舍说明。
+ * ⚠️ 全局倍速用元素层 playbackRate(浏览器做时间拉伸,保音高)。
+ *    而「慢速跟读」是序列里的一档、只慢那一段,烧进波形时用的是
+ *    earTraining.ts 里自带的 WSOLA 拉伸 —— 同样保音高。两者不是一回事。
+ * ⚠️ 拆读档已弃用(TTS 把音节当独立单词读),详见 earTraining.ts 文件头。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -30,7 +32,7 @@ import { getBankByCode, type VocabBank } from "@/lib/vocab/data";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { getScenePack } from "@/lib/vocab/scenes";
 import {
-  buildPlaylist, buildWordClip, clipUrlsFor, diag, prefetchClip, recordListening,
+  buildPlaylist, buildWordClip, clipSpecsFor, diag, prefetchClip, recordListening,
   DEFAULT_TOGGLES, ELEMENTS, SOURCES,
   type ElementKey, type ElementToggles, type ListenItem, type SourceKind,
 } from "@/lib/vocab/earTraining";
@@ -136,11 +138,11 @@ export default function VocabEarTraining() {
     const el = audioRef.current;
     const it = items?.[i];
     if (!el || !it) return false;
-    const urls = clipUrlsFor(it, toggles);
-    if (!urls.length) return false;                     // 整词无音频 → 交给调用方跳过
+    const specs = clipSpecsFor(it, toggles);
+    if (!specs.length) return false;                    // 整词无音频 → 交给调用方跳过
     setLoadingClip(true);
     try {
-      const { url } = await buildWordClip(urls);
+      const { url } = await buildWordClip(specs);
       releaseUrl();
       objUrlRef.current = url;
       el.src = url;
@@ -179,7 +181,7 @@ export default function VocabEarTraining() {
       /* 当前这条已经在播了,趁机把**下一个词**的音频字节烤进缓存,
          换词时就不用等网络(否则每换一词卡一下,像是断了) */
       const nxt = items?.[idx + 1];
-      if (nxt) void prefetchClip(clipUrlsFor(nxt, toggles));
+      if (nxt) void prefetchClip(clipSpecsFor(nxt, toggles));
     })();
     return () => { alive = false; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -390,7 +392,7 @@ export default function VocabEarTraining() {
               </div>
               <div className="mb-6 text-[13px] text-slate-400">
                 {[
-                  toggles.syllable && "拆读",
+                  toggles.slow && "慢速跟读",
                   toggles.example && "例句",
                 ].filter(Boolean).join(" · ") || "只读单词"}
                 {repeat > 1 ? ` · 每词 ${repeat} 遍` : ""}

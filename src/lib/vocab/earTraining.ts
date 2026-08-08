@@ -14,12 +14,24 @@
  *    实测 audio.bigmooneducation.com 返回 `Access-Control-Allow-Origin: *`,可以。
  *    万一将来关掉了,`buildWordClip` 会抛错,调用方回落到"逐条播"(前台可用、后台会停)。
  *
- * ⚠️ **速度**:统一用 `<audio>.playbackRate` 在元素层调,不烧进波形 ——
- *    元素层变速是**保音高**的(浏览器做时间拉伸),烧进波形只能改采样率,
- *    0.7 倍会明显变成低沉的"慢放磁带"。
- *    代价:规格里「拆读固定 1.0」做不到 —— 拆读跟着整条一起变速。
- *    要真做到就得把拆读切成独立一条音频,而那正好把"一条连续音频"这个
- *    后台播放的前提给毁了。两害相权,保后台播放。已在 PR 里向 Aaron 挑明。
+ * ⚠️ **速度**:整条的全局倍速用 `<audio>.playbackRate` 在元素层调,不烧进波形 ——
+ *    元素层变速是**保音高**的(浏览器做时间拉伸)。
+ *    但「慢速跟读」是序列里的**一档**,只慢这一段,必须烧进那条拼接音频。
+ *    此处不能用 `AudioBufferSourceNode.playbackRate` —— 那等价于改采样率,
+ *    0.7 倍会掉约 6 个半音,变成低沉的"慢放磁带",听感和发音示范都不成立。
+ *    所以自带一个保音高的时间拉伸 `timeStretch`(WSOLA),纯本地算、零音频成本。
+ *
+ * ⚠️ **拆读档已弃用**(Aaron 2026-08-08 裁决)。
+ *    `vocab_words.syllable_audio_url` 那 4471 条**留在库里备查,前端不再引用**。
+ *    弃用原因:当初烧录送进 TTS 的文本是 `syllables.join(". ") + "."`
+ *    (由音频文件名的内容哈希反解证实,20/20 命中),即 `"cel. e. bra. ted."` ——
+ *    OpenAI TTS 把每个音节当成独立句子读,各带完整重音和句末降调,
+ *    `cel/e/bra/ted` 的 `e` 被读成**字母音 /iː/ 而不是音节音 /ə/**。
+ *    实测拆读时长普遍是整词的 2 倍上下,就是句间停顿堆出来的。
+ *    替代方案 = 整词音频 + 0.7 倍保音高慢放,一个开关搞定,不重烧。
+ *
+ * ⚠️ `syllables` 数组**保留**:它的切分是对的(20 词抽样全为标准词典切法),
+ *    将来做"视觉拆读"(边读整词边逐音节高亮)还用得上,只是不再配音频。
  *
  * ⚠️ 中文释义那一档**目前没有音频资产**(vocab_words 只有单词与拆读音频,
  *    def_zh 没有配音)。按"缺音频的元素跳过、不中断序列"处理,
@@ -37,30 +49,32 @@ const db = supabase as any;
 
 /* ── 序列元素 ─────────────────────────────────────────────────── */
 
-export type ElementKey = "word" | "syllable" | "gloss" | "example";
+export type ElementKey = "word" | "slow" | "gloss" | "example";
 
 export const ELEMENTS: { key: ElementKey; label: string; hint: string; fixed?: boolean; unavailable?: boolean }[] = [
   { key: "word", label: "单词", hint: "必读", fixed: true },
-  { key: "syllable", label: "拆读", hint: "re. gion. al." },
+  { key: "slow", label: "慢速跟读", hint: "整词 0.7 倍" },
   { key: "gloss", label: "中文释义", hint: "只显示不朗读", unavailable: true },
   { key: "example", label: "例句", hint: "第 1 条" },
 ];
 
 export type ElementToggles = Record<ElementKey, boolean>;
-export const DEFAULT_TOGGLES: ElementToggles = { word: true, syllable: true, gloss: false, example: true };
+export const DEFAULT_TOGGLES: ElementToggles = { word: true, slow: true, gloss: false, example: true };
+
+/** 慢速档的倍率。0.7 是"能听清每个音"与"还像正常说话"的折中。 */
+export const SLOW_RATE = 0.7;
 
 /** 元素之间 0.8s;单词之后额外 1.5s 供跟读(合计 2.3s)。 */
 const GAP_BETWEEN = 0.8;
 const GAP_AFTER_WORD = 1.5;
 
 /**
- * 磨耳朵要的词形 = 通用 VocabWord + 拆读音频。
- * ⚠️ 拆读那两列**不加进 data.ts 的共享 select** —— 词库页一次要拉 4470 条,
- *    每条多一个 ~90 字符的 URL 就是 ~400KB,而那个页面根本用不到。
- *    这里自己查自己的列。
+ * 磨耳朵要的词形 = 通用 VocabWord + 音节切分。
+ * ⚠️ `syllables` **不加进 data.ts 的共享 select** —— 词库页一次要拉 4470 条,
+ *    每条多带一个数组是白扔的流量,而那个页面根本用不到。这里自己查自己的列。
+ * ⚠️ `syllable_audio_url` 已弃用(见文件头),不再查、不再引用。
  */
 export type ListenWord = VocabWord & {
-  syllable_audio_url: string | null;
   syllables: string[] | null;
 };
 
@@ -124,7 +138,7 @@ export async function buildPlaylist(
 
 /** 带拆读音频的词。分片查,避免 in.(...) 把 URL 撑爆。 */
 async function listenWordsByIds(ids: string[]): Promise<ListenWord[]> {
-  const cols = "id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url,syllable_audio_url,syllables";
+  const cols = "id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url,syllables";
   const out: ListenWord[] = [];
   for (let i = 0; i < ids.length; i += 200) {
     const { data, error } = await db.from("vocab_words").select(cols).in("id", ids.slice(i, i + 200));
@@ -149,14 +163,23 @@ function shuffle<T>(a: T[]): T[] {
   return out;
 }
 
-/** 这个词按当前开关会用到哪些音频(缺的自动跳过)。 */
-export function clipUrlsFor(item: ListenItem, toggles: ElementToggles): string[] {
-  const urls: string[] = [];
-  if (item.word.audio_url) urls.push(item.word.audio_url);                       // 单词必读
-  if (toggles.syllable && item.word.syllable_audio_url) urls.push(item.word.syllable_audio_url);
+/** 序列里的一段:一条音频 + 播放倍率(1 = 原速)。 */
+export type ClipSpec = { url: string; rate: number };
+
+/**
+ * 这个词按当前开关会用到哪些片段(缺的自动跳过)。
+ * ⚠️ 慢速档**复用整词那条音频**,不是另一个资产 —— 它和「单词」档指向同一个
+ *    URL,只有 rate 不同。fetchBuffer 按 URL 缓存,所以这一档不产生额外网络请求。
+ */
+export function clipSpecsFor(item: ListenItem, toggles: ElementToggles): ClipSpec[] {
+  const specs: ClipSpec[] = [];
+  if (item.word.audio_url) {
+    specs.push({ url: item.word.audio_url, rate: 1 });                           // 单词必读
+    if (toggles.slow) specs.push({ url: item.word.audio_url, rate: SLOW_RATE });
+  }
   // gloss:没有音频资产,恒跳过(见文件头)
-  if (toggles.example && item.example?.audio_url) urls.push(item.example.audio_url);
-  return urls;
+  if (toggles.example && item.example?.audio_url) specs.push({ url: item.example.audio_url, rate: 1 });
+  return specs;
 }
 
 /* ── 拼接引擎 ─────────────────────────────────────────────────── */
@@ -216,7 +239,10 @@ async function fetchBuffer(url: string): Promise<AudioBuffer> {
  *    否则每换一个词都要等一次网络,听感上就是"卡一下"甚至像停了。
  * ⚠️ 失败静默吞掉:预热只是加速,失败了到时候正常路径再取一次就是。
  */
-export async function prefetchClip(urls: string[]): Promise<void> {
+export async function prefetchClip(specs: ClipSpec[]): Promise<void> {
+  /* 去重:慢速档和单词档是同一个 URL,不去重会白下一次(fetchBuffer 有缓存,
+     但两次 await 会并发发出两个请求,缓存来不及命中)。 */
+  const urls = [...new Set(specs.map(s => s.url))];
   try { await Promise.all(urls.map(fetchBuffer)); } catch { /* 预热失败不影响主流程 */ }
 }
 
@@ -225,15 +251,100 @@ export async function prefetchClip(urls: string[]): Promise<void> {
  * 返回可直接喂给 `<audio>.src` 的 object URL,以及总时长(秒)。
  * ⚠️ 调用方负责在换词时 revokeObjectURL,否则一轮 50 词会漏 50 个 blob。
  */
-export async function buildWordClip(urls: string[]): Promise<{ url: string; seconds: number }> {
-  if (!urls.length) {
-    diag("✗ 这个词没有任何可播音频(单词/拆读/例句都缺),将跳过", { urls });
+/**
+ * 保音高的时间拉伸(WSOLA:带相似度对齐的重叠相加)。
+ *
+ * 为什么不用 `AudioBufferSourceNode.playbackRate`:那等价于改采样率,
+ * 0.7 倍会把音高压低约 6 个半音(12·log2(1/0.7)),alloy 会变成低音怪。
+ * 发音示范必须保音高,所以自己做时间轴拉伸。
+ *
+ * 做法:按合成跳距 Hs 往输出里铺加窗帧,输入侧按 Ha = Hs·rate 前进,
+ * 于是输出比输入长 1/rate 倍。每帧起点在理想位置 ±R 内搜一次,
+ * 挑与"上一帧自然延续段"互相关最高的那个 —— 这一步是 WSOLA 与朴素 OLA
+ * 的唯一区别,没有它波形接缝处相位打架,人声会有明显的金属回声感。
+ *
+ * ⚠️ 纯函数(Float32Array 进出),不碰 Web Audio,好测。
+ */
+export function timeStretch(input: Float32Array, sampleRate: number, rate: number): Float32Array {
+  if (rate === 1 || input.length === 0) return input;
+  const N = Math.max(4, Math.round(0.04 * sampleRate));    // 窗长 40ms
+  const Hs = Math.max(1, Math.round(N / 2));               // 合成跳距 = 半窗,Hann 窗下正好常数叠加
+  const Ha = Math.max(1, Math.round(Hs * rate));           // 分析跳距
+  /* 搜索半径要 ≥ 最低基频的一个周期,否则搜不到相位对齐点、接缝处相位打架。
+     男声基频低到 ~85Hz(周期 11.8ms),所以取 12ms。 */
+  const R = Math.max(1, Math.round(0.012 * sampleRate));
+
+  const win = new Float32Array(N);
+  for (let i = 0; i < N; i++) win[i] = 0.5 - 0.5 * Math.cos((2 * Math.PI * i) / (N - 1));
+
+  const outLen = Math.ceil(input.length / rate) + N;
+  const out = new Float32Array(outLen);
+  const norm = new Float32Array(outLen);
+
+  let anaPrev = 0;      // 上一帧实际取用的输入起点
+  let outPos = 0;
+  let written = 0;      // 实际被写到的最远位置(尾部截断要用,见下)
+  for (let k = 0; ; k++) {
+    const ideal = k * Ha;
+    if (ideal + N > input.length) break;
+
+    let best = ideal;
+    if (k > 0) {
+      /* 上一帧若原速继续播,应当接到 anaPrev + Hs;在 ideal 附近找最像它的那段 */
+      const ref = anaPrev + Hs;
+      const lo = Math.max(0, ideal - R);
+      const hi = Math.min(input.length - N, ideal + R);
+      let bestScore = -Infinity;
+      for (let c = lo; c <= hi; c++) {
+        let s = 0;
+        // 每 4 点抽样即可:这是找对齐点,不是求精确相关值,省 4 倍时间
+        for (let i = 0; i + ref < input.length && i < N; i += 4) s += input[ref + i] * input[c + i];
+        if (s > bestScore) { bestScore = s; best = c; }
+      }
+    }
+
+    for (let i = 0; i < N; i++) {
+      const o = outPos + i;
+      if (o >= outLen) break;
+      out[o] += input[best + i] * win[i];
+      norm[o] += win[i];
+    }
+    anaPrev = best;
+    written = Math.min(outLen, outPos + N);
+    outPos += Hs;
+  }
+
+  // 归一化:窗叠加权重不恒等于 1(首尾帧、搜索导致的跳距抖动都会破坏它)
+  for (let i = 0; i < outLen; i++) if (norm[i] > 1e-6) out[i] /= norm[i];
+
+  /* ⚠️ 必须按**实际写到哪**截,不能按理论长度 input.length/rate 截。
+     循环在 `ideal + N > input.length` 就停,最后一帧只铺到 K·Hs+N,
+     比理论长度短约 N·(1/rate − 1)。按理论长度切会在尾巴补一段静音
+     (0.7 倍下约 17ms)。踩过:那段静音没有过零,把测音高用的过零率
+     压低 2.4%,一度被误判成"音高漂了"。 */
+  return out.slice(0, Math.max(1, Math.min(written, Math.round(input.length / rate))));
+}
+
+/** 把 AudioBuffer 按 rate 拉伸成新的 AudioBuffer(单声道,取第 0 声道)。 */
+function stretchBuffer(buf: AudioBuffer, rate: number): AudioBuffer {
+  const stretched = timeStretch(buf.getChannelData(0), buf.sampleRate, rate);
+  const out = audioCtx().createBuffer(1, stretched.length, buf.sampleRate);
+  out.getChannelData(0).set(stretched);
+  return out;
+}
+
+export async function buildWordClip(specs: ClipSpec[]): Promise<{ url: string; seconds: number }> {
+  if (!specs.length) {
+    diag("✗ 这个词没有任何可播音频(单词/例句都缺),将跳过", { specs });
     throw new Error("EMPTY_CLIP");
   }
-  diag("拼接开始", { 片段数: urls.length });
-  const bufs = await Promise.all(urls.map(fetchBuffer));
+  diag("拼接开始", { 片段数: specs.length });
+  const raw = await Promise.all(specs.map(s => fetchBuffer(s.url)));
 
-  const sr = bufs[0].sampleRate;
+  const sr = raw[0].sampleRate;
+  // 慢速档在这里就地拉伸成新波形;原速档原样用
+  const bufs = raw.map((b, i) => specs[i].rate === 1 ? b : stretchBuffer(b, specs[i].rate));
+
   const gaps = bufs.map((_, i) =>
     i === bufs.length - 1 ? 0 : (i === 0 ? GAP_AFTER_WORD + GAP_BETWEEN : GAP_BETWEEN));
   const total = bufs.reduce((s, b, i) => s + b.duration + gaps[i], 0);

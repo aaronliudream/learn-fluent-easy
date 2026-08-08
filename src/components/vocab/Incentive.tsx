@@ -272,9 +272,24 @@ export function ShareCard({ data, onClose }: {
  *    而首屏必须留给"学习进度 + 错题/复习"。里程碑是**回顾性**信息,
  *    不是每次打开都要看的东西 —— 折叠它换来的首屏空间,值。
  * ⚠️ 信息一个没少:展开后就是原来的 MilestoneStrip。
+ *
+ * ⚠️ **mastered 传的是全局累计掌握数,不是当前词库的**(Aaron 2026-08-07 裁决)。
+ *    里程碑是**成就系统**:跟着词库走的话,一切库徽章就归零,
+ *    用户读到的是"我的进度被清空了";全局累计则随着学的库越多一直涨。
+ *    彩带(useMilestoneCelebration)和分享卡必须用同一个数,否则会出现
+ *    "横幅说达成了、彩带不放"这种自相矛盾。
+ * ⚠️ mastered = null 表示还没就绪 → 骨架,**绝不渲染 0**(0 会让老用户看到"还没达成第一档")。
  */
-export function MilestoneSummary({ mastered, color }: { mastered: number; color: string }) {
+export function MilestoneSummary({ mastered, color }: { mastered: number | null; color: string }) {
   const [open, setOpen] = useState(false);
+  if (mastered === null) {
+    return (
+      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+        <div className="h-[20px] w-24 animate-pulse rounded bg-slate-100" />
+        <div className="mt-2 h-[16px] w-48 animate-pulse rounded bg-slate-100" />
+      </div>
+    );
+  }
   const reached = MILESTONES.filter(m => mastered >= m);
   const current = reached.length ? reached[reached.length - 1] : null;
   const next = MILESTONES.find(m => m > mastered) ?? null;

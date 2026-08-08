@@ -6,10 +6,12 @@
  * 其余全是白卡 + 细边 + 大留白。
  *
  * ── 统计分两层,两层的分母世界不一样,混了用户就看不懂 ──
- *   ① **当前词库**(随顶部下拉切换):进度 N/总数、圆环、错题本、今日复习、里程碑。
+ *   ① **当前词库**(随顶部下拉切换):进度 N/总数、圆环、错题本、今日复习。
  *      全部集中在页面上半部分、紧挨着下拉,视觉上归属明确。
- *   ② **全局累计**(跨所有词库、按 word_id 去重、永远只涨):累计学习/掌握/时长/积分。
- *      放在下方「我的数据」里,标题不带词库名,字号比上面小一档。
+ *   ② **全局累计**(跨所有词库、按 word_id 去重、永远只涨):
+ *      累计学习/掌握/时长/积分,**以及里程碑**。放在下方,标题不带词库名,字号小一档。
+ *      ⚠️ 里程碑归这一层是 Aaron 2026-08-07 的裁决:它是成就系统,
+ *         跟着词库走的话切一次库徽章就归零,用户读成"进度被清空"。
  *   ⚠️ 去重是 user_vocab_mastery 的表结构自带的((user_id, word_id) 唯一),
  *      同一个词同时属于托福和四级只算一次;各库进度那层才 join vocab_word_banks。
  *
@@ -136,8 +138,11 @@ export default function VocabCenter() {
   const bankMastered = p?.mastered ?? 0;
   const bankTotal = p?.total ?? 0;
 
-  /* 里程碑跟随**当前词库**的掌握数(与圆环同源)。 */
-  const celebrate = useMilestoneCelebration(bankMastered);
+  /* 里程碑跟随**全局累计**掌握数,不跟词库(Aaron 2026-08-07 裁决):
+   * 它是成就系统,切库归零会让用户觉得"进度被清空";全局累计随着学多个库一直涨。
+   * 彩带和分享卡必须用同一个数,否则会出现"横幅说达成了、彩带不放"。 */
+  const globalMastered = totals?.mastered ?? null;
+  const celebrate = useMilestoneCelebration(globalMastered ?? 0);
   const [confettiDone, setConfettiDone] = useState(false);
 
   return (
@@ -202,12 +207,14 @@ export default function VocabCenter() {
         {/* ↓↓↓ 以下不要求首屏可见 ↓↓↓ */}
 
         {/* 周报是"每周一才出、可关闭"的偶发块,放在这里大多数日子根本不占位 */}
+        {/* 分享卡上的「我的词汇量 N」也是全局累计 —— 与里程碑同一个数 */}
         <WeeklyBanner color={color} onShare={(w: WeeklySummary) => setShare({
-          mastered: bankMastered, streak: w.streak, points: uStats?.total_points ?? 0,
-          totalMs: uStats?.total_time_ms ?? 0, milestone: MILESTONES.filter(m => bankMastered >= m).pop() ?? null,
+          mastered: globalMastered ?? 0, streak: w.streak, points: uStats?.total_points ?? 0,
+          totalMs: uStats?.total_time_ms ?? 0,
+          milestone: MILESTONES.filter(m => (globalMastered ?? 0) >= m).pop() ?? null,
         })} />
 
-        <MilestoneSummary mastered={bankMastered} color={color} />
+        <MilestoneSummary mastered={globalMastered} color={color} />
 
         <MyDataPanel color={color}
           globalLearned={totals?.learned ?? null}

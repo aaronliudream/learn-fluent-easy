@@ -18,7 +18,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
 import { bankColor, FONT_STAT, MILESTONES, SCENE_COLOR } from "@/lib/vocab/theme";
-import { countScenePacks, readSeenScenes } from "@/lib/vocab/scenes";
+import { countScenePacks, countScenesDone } from "@/lib/vocab/scenes";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import {
   listBanks, getBankProgressFast, dueCount, mistakeCount, totalMastered,
@@ -289,12 +289,14 @@ function EntryCard({ icon, label, count, hint, to, extra }: { icon: React.ReactN
  */
 function SceneBanner() {
   const [total, setTotal] = useState(0);
-  const [seen, setSeen] = useState(0);
+  const [done, setDone] = useState(0);
 
   useEffect(() => {
     let alive = true;
     countScenePacks()
-      .then(n => { if (alive) { setTotal(n); setSeen(readSeenScenes().size); } })
+      /* 分子数的是 done 键,与场景列表页顶部那行「已学 N / 30」**同一个口径** ——
+         两处各算各的,迟早出现"横幅说 5、列表说 3"这种鬼故事 */
+      .then(n => { if (alive) { setTotal(n); setDone(countScenesDone()); } })
       .catch(() => { /* 场景没上线/读失败:横幅整条不出,不拦住中心页 */ });
     return () => { alive = false; };
   }, []);
@@ -315,9 +317,9 @@ function SceneBanner() {
         </div>
       </div>
       <span className="shrink-0 text-[13px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
-        {/* 已读数取本地记录与总数的较小值 —— 场景下架后本地那条记录还在,
+        {/* 已学数取本地记录与总数的较小值 —— 场景下架后本地那条记录还在,
             不夹一下会出现「31/30」 */}
-        {Math.min(seen, total)}/{total}
+        {Math.min(done, total)}/{total}
       </span>
       <ChevronRight className="h-[18px] w-[18px] shrink-0 text-slate-300" />
     </Link>

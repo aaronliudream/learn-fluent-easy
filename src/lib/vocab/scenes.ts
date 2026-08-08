@@ -168,26 +168,38 @@ export async function getScenePack(id: string): Promise<ScenePack | null> {
 }
 
 /**
- * 下一个场景(详情页底部「下一场景」)。按 sort_order 取紧邻的下一个;
- * 已经是最后一个时**回卷到第一个**,让 30 个场景连成一个可以一直走下去的环 ——
- * 走到末尾给个死胡同,用户就只能退回列表页重新找。
+ * 下一个**还没学完**的场景(详情页底部「下一场景」)。
+ *
+ * ⚠️ 不是 sort_order + 1 —— 那样会把用户送回一个他已经学完的场景,
+ *    "下一个"三个字就成了假的。这里从当前位置往后找第一个未学完的,
+ *    找不到再从头绕一圈(顺序仍是 sort_order,不打乱)。
+ * next = null 表示全部都学完了,调用方据此换文案。
+ * ⚠️ 同时返回 total —— 「你已学完全部 30 个场景」里的 30 必须来自库,
+ *    不能在文案里写死(写死的数字迟早和库对不上)。
+ *
+ * 一次轻查询:只取 id/title/sort_order 三列,不碰短文正文。
  */
-export async function getNextScenePack(
-  sortOrder: number,
+export async function getNextUnlearnedScene(
   currentId: string,
-): Promise<{ id: string; title_zh: string } | null> {
-  const pick = async (after: number | null) => {
-    let q = db.from("vocab_scene_packs").select("id,title_zh,sort_order").eq("is_published", true);
-    if (after !== null) q = q.gt("sort_order", after);
-    const { data, error } = await q.order("sort_order", { ascending: true }).limit(1);
-    if (error) throw error;
-    return ((data || [])[0] as { id: string; title_zh: string } | undefined) ?? null;
-  };
-  const next = await pick(sortOrder);
-  if (next) return next;
-  const first = await pick(null);
-  // 全库只有这一个场景时,别把「下一场景」指回自己
-  return first && first.id !== currentId ? first : null;
+): Promise<{ next: { id: string; title_zh: string } | null; total: number }> {
+  const { data, error } = await db
+    .from("vocab_scene_packs")
+    .select("id,title_zh,sort_order")
+    .eq("is_published", true)
+    .order("sort_order", { ascending: true });
+  if (error) throw error;
+  const all = (data || []) as { id: string; title_zh: string; sort_order: number }[];
+  if (!all.length) return { next: null, total: 0 };
+
+  const at = all.findIndex(p => p.id === currentId);
+  // 从当前之后开始绕一圈(at<0 时就是从头开始),跳过自己和所有已学完的
+  const start = at >= 0 ? at + 1 : 0;
+  for (let k = 0; k < all.length; k++) {
+    const p = all[(start + k) % all.length];
+    if (p.id === currentId) continue;
+    if (readSceneProgress(p.id).status !== "done") return { next: p, total: all.length };
+  }
+  return { next: null, total: all.length };
 }
 
 /** 某场景的链上节点,按 sort_order(**叙事顺序**,不是重要性顺序)。 */
@@ -267,28 +279,103 @@ export async function toggleSceneFavorite(
   return true;
 }
 
-/* ── 已学标记 / 首访逐步展开(localStorage)────────────────────────
- * 场景没有做题,也就没有掌握度可言 —— 「已学」的唯一可信信号就是
- * **用户把整条链看完过**。存本地即可,不值得为它建一张用户表。
- * ⚠️ 隐私模式下 localStorage 会抛,全部 try/catch —— 存不下就当没读过,不能冒到渲染层。
+/* ── 场景进度(localStorage)─────────────────────────────────────
+ *
+ * 「学完」的口径(轻量,不强制测验):
+ *   词链**全部节点展开过** 且 **完整版短文展开过**
+ * 两条都满足才算 done。只看完链没读完整版短文 = 学习中。
+ *
+ * 存法(Aaron 定):每个场景两个键
+ *   scene_done_<pack_id>   = "1"          学完
+ *   scene_nodes_<pack_id>  = "<n>"        看到第几环(复访恢复到这里)
+ *
+ * ⚠️ 现在只落 localStorage。要跨设备同步得建 user_scene_progress 表,
+ *    那是 PR-14 单词本立项时再决定的事 —— 这里的函数签名按"将来能换存储"写,
+ *    页面只认这几个函数,不直接摸 localStorage。
+ * ⚠️ 隐私模式下 localStorage 会抛,全部 try/catch —— 存不下就当没学过,不能冒到渲染层。
  */
-const SEEN_KEY = "vocab_scenes_seen";
+const DONE_PREFIX = "scene_done_";
+const NODES_PREFIX = "scene_nodes_";
+/** PR-12 首版用的整数组键。只为老数据迁移保留,不再写入。 */
+const LEGACY_SEEN_KEY = "vocab_scenes_seen";
 
-export function readSeenScenes(): Set<string> {
+export type SceneStatus = "new" | "learning" | "done";
+export type SceneProgress = { status: SceneStatus; nodesSeen: number };
+
+/**
+ * 老数据迁移:首版把"看完过"记在一个 JSON 数组里。
+ * 迁成 done 键(那一版的判据是"整条链亮完",与新口径的第一条一致),迁完删老键。
+ * ⚠️ 幂等:老键删掉后就不会再跑第二遍。
+ */
+function migrateLegacy(): void {
   try {
-    const raw = localStorage.getItem(SEEN_KEY);
-    const arr = raw ? JSON.parse(raw) : [];
-    return new Set(Array.isArray(arr) ? arr.filter(x => typeof x === "string") : []);
+    const raw = localStorage.getItem(LEGACY_SEEN_KEY);
+    if (!raw) return;
+    const arr = JSON.parse(raw);
+    if (Array.isArray(arr)) {
+      for (const id of arr) {
+        if (typeof id === "string" && id) localStorage.setItem(DONE_PREFIX + id, "1");
+      }
+    }
+    localStorage.removeItem(LEGACY_SEEN_KEY);
+  } catch { /* 迁不动就算了,大不了那几个场景回到"未学" */ }
+}
+
+export function readSceneProgress(packId: string): SceneProgress {
+  try {
+    migrateLegacy();
+    if (localStorage.getItem(DONE_PREFIX + packId) === "1") {
+      return { status: "done", nodesSeen: Number(localStorage.getItem(NODES_PREFIX + packId)) || 0 };
+    }
+    const n = Number(localStorage.getItem(NODES_PREFIX + packId)) || 0;
+    return { status: n > 0 ? "learning" : "new", nodesSeen: n };
   } catch {
-    return new Set();
+    return { status: "new", nodesSeen: 0 };
   }
 }
 
-export function markSceneSeen(packId: string): void {
+/** 一批场景的进度(列表页分三段用)。 */
+export function readSceneProgressFor(packIds: string[]): Record<string, SceneProgress> {
+  const out: Record<string, SceneProgress> = {};
+  for (const id of packIds) out[id] = readSceneProgress(id);
+  return out;
+}
+
+/**
+ * 记"看到第几环"。**只记单调增的最大值** —— 复访恢复到上次位置,不该被这次的
+ * 起始值 1 冲掉。
+ * ⚠️ 只有真的往前点过(n ≥ 2)才落库:光打开一个场景不算"学习中",
+ *    否则用户随手翻两页,列表里立刻多出一堆"已看 1/8 环",
+ *    而分段排序的全部意义就是"最上面是下一个该学的"。
+ */
+export function markSceneNodes(packId: string, n: number): void {
+  if (n < 2) return;
   try {
-    const seen = readSeenScenes();
-    if (seen.has(packId)) return;
-    seen.add(packId);
-    localStorage.setItem(SEEN_KEY, JSON.stringify([...seen]));
-  } catch { /* 存不了就算了,下次仍按首访走,不影响使用 */ }
+    const cur = Number(localStorage.getItem(NODES_PREFIX + packId)) || 0;
+    if (n > cur) localStorage.setItem(NODES_PREFIX + packId, String(n));
+  } catch { /* 存不了就算了,下次从头点 */ }
+}
+
+/** 标记学完(两条都满足时由详情页调用)。 */
+export function markSceneDone(packId: string): void {
+  try { localStorage.setItem(DONE_PREFIX + packId, "1"); } catch { /* 同上 */ }
+}
+
+/**
+ * 已学完的场景数 —— /vocab 入口横幅的分子。
+ * 直接数 localStorage 里的 done 键,不需要先把 30 个场景拉下来,
+ * 与列表页顶部那行「已学 N / 30」**同一个口径**。
+ */
+export function countScenesDone(): number {
+  try {
+    migrateLegacy();
+    let n = 0;
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(DONE_PREFIX) && localStorage.getItem(k) === "1") n++;
+    }
+    return n;
+  } catch {
+    return 0;
+  }
 }

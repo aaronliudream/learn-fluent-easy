@@ -23,7 +23,7 @@
 import { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
-  ArrowRight, ChevronDown, EyeOff, ListChecks, Loader2,
+  ArrowRight, ChevronDown, EyeOff, ListChecks, Loader2, PartyPopper,
   PenLine, Play, Square, Star, ThumbsDown, ThumbsUp, Volume2,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -32,8 +32,8 @@ import { FONT_SERIF, SCENE_COLOR } from "@/lib/vocab/theme";
 import { isChaining, playChain, playUrl, stopAudio, subscribePlaying } from "@/lib/vocab/audio";
 import { buildSceneHighlighter, splitContrast, type SceneSeg, type SceneTerm } from "@/lib/vocab/sceneHighlight";
 import {
-  countWords, getNextScenePack, getScenePack, listSceneFavorites, listSceneItems,
-  markSceneSeen, readSeenScenes, toggleSceneFavorite,
+  countWords, getNextUnlearnedScene, getScenePack, listSceneFavorites, listSceneItems,
+  markSceneDone, markSceneNodes, readSceneProgress, toggleSceneFavorite,
   type SceneItem, type ScenePack,
 } from "@/lib/vocab/scenes";
 
@@ -47,6 +47,8 @@ export default function VocabSceneDetail() {
   const [pack, setPack] = useState<ScenePack | null>(null);
   const [items, setItems] = useState<SceneItem[]>([]);
   const [next, setNext] = useState<{ id: string; title_zh: string } | null>(null);
+  /** 已发布场景总数 —— 「你已学完全部 N 个场景」的 N,来自库不写死。 */
+  const [sceneTotal, setSceneTotal] = useState(0);
   const [state, setState] = useState<"loading" | "ok" | "missing" | "error">("loading");
 
   /** 已亮到第几环(首访 1,复访全部)。 */
@@ -85,14 +87,19 @@ export default function VocabSceneDetail() {
         if (!alive) return;
         setItems(its);
 
-        /* 复访全展开。判据是"这个场景以前看完过",不是"以前打开过" ——
-           上次只点了两环就退出的人,这次该接着一环一环来。 */
-        setRevealed(readSeenScenes().has(id) ? Math.max(1, its.length) : 1);
+        /* 复访恢复到**上次看到的那一环**,不是一律从头。
+           学完过的直接全展开;看到第 3 环走掉的人,回来还在第 3 环。 */
+        const prog = readSceneProgress(id);
+        setRevealed(prog.status === "done"
+          ? Math.max(1, its.length)
+          : Math.min(Math.max(1, prog.nodesSeen || 1), its.length));
         setState("ok");
 
         // 收藏态和「下一场景」都不该拦住正文渲染,失败就当没有
         listSceneFavorites(its).then(f => { if (alive) setFavorites(f); }).catch(() => { /* 未登录/读失败:不显示收藏态 */ });
-        getNextScenePack(p.sort_order, p.id).then(n => { if (alive) setNext(n); }).catch(() => { /* 没有下一个就不显示 */ });
+        getNextUnlearnedScene(p.id)
+          .then(r => { if (alive) { setNext(r.next); setSceneTotal(r.total); } })
+          .catch(() => { /* 取不到就退回列表入口 */ });
       } catch {
         if (alive) setState("error");
       }
@@ -100,10 +107,20 @@ export default function VocabSceneDetail() {
     return () => { alive = false; };
   }, [id]);
 
-  /** 整条链亮完 = 这个场景算读过了。 */
+  /** 看到第几环 —— 复访恢复位置的唯一来源。 */
   useEffect(() => {
-    if (state === "ok" && items.length > 0 && revealed >= items.length) markSceneSeen(id);
+    if (state === "ok" && items.length > 0) markSceneNodes(id, Math.min(revealed, items.length));
   }, [state, items.length, revealed, id]);
+
+  /**
+   * 「学完」判据两条**同时**成立:整条链亮完 且 完整版短文展开过。
+   * ⚠️ 只看完链不算 —— 那篇完整版才是"把词串成一篇作文"这件事的落点,
+   *    不读它等于只背了一串词。
+   */
+  const finished = state === "ok" && items.length > 0 && revealed >= items.length && showFull;
+  useEffect(() => {
+    if (finished) markSceneDone(id);
+  }, [finished, id]);
 
   /* 短文高亮词条:contrast 的「A vs. B」必须拆开,整串在短文里永远不会原样出现。 */
   const terms: SceneTerm[] = useMemo(() => {
@@ -328,6 +345,8 @@ export default function VocabSceneDetail() {
         </div>
 
         {next ? (
+          /* 「下一场景」指的是下一个**还没学完**的,不是 sort_order+1 ——
+             把人送回一个已经学完的场景,这四个字就是假的 */
           <Link to={`/vocab/scenes/${next.id}`}
             className="flex items-center gap-2.5 rounded-2xl border border-black/[0.06] bg-white px-4 py-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:bg-slate-50">
             <ListChecks className="h-[18px] w-[18px] shrink-0" style={{ color: SCENE_COLOR }} />
@@ -338,10 +357,17 @@ export default function VocabSceneDetail() {
             <ArrowRight className="h-[18px] w-[18px] shrink-0 text-slate-300" />
           </Link>
         ) : (
+          /* 全部学完:这是个成就时刻,别只给一句冷冰冰的「回列表」 */
           <button type="button" onClick={() => navigate("/vocab/scenes")}
-            className="flex items-center gap-2.5 rounded-2xl border border-black/[0.06] bg-white px-4 py-4 text-left shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-            <ListChecks className="h-[18px] w-[18px] shrink-0" style={{ color: SCENE_COLOR }} />
-            <div className="min-w-0 flex-1 text-[15px] font-medium text-slate-800">回场景列表</div>
+            className="flex items-center gap-2.5 rounded-2xl border px-4 py-4 text-left"
+            style={{ borderColor: `${SCENE_COLOR}40`, background: `${SCENE_COLOR}0D` }}>
+            <PartyPopper className="h-[18px] w-[18px] shrink-0" style={{ color: SCENE_COLOR }} />
+            <div className="min-w-0 flex-1">
+              <div className="text-[15px] font-medium text-slate-800">
+                你已学完全部{sceneTotal > 0 ? ` ${sceneTotal} ` : ""}个场景
+              </div>
+              <div className="text-[12px] text-slate-500">回列表看看 →</div>
+            </div>
           </button>
         )}
       </div>

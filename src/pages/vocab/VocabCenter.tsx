@@ -72,7 +72,10 @@ export default function VocabCenter() {
   const [banks, setBanks] = useState<VocabBank[]>([]);
   const [selected, setSelected] = useState<VocabBank | null>(null);
   const [failed, setFailed] = useState(false);
-  const [signedIn, setSignedIn] = useState(false);
+  /* 三态:null = 还没问出来。
+   * ⚠️ 不能用 false 当初始值 —— 已登录用户在 auth 往返那 200ms 里会先看到
+   *    「登录后查看你的学习数据」,然后闪成真数据。假状态比转圈更糟。 */
+  const [signedIn, setSignedIn] = useState<boolean | null>(null);
 
   /** 当前词库那一层。null = 还没就绪 → 骨架屏,**绝不渲染 0**。 */
   const [bankStats, setBankStats] = useState<{ progress: BankProgress; due: number; mistakes: number } | null>(null);
@@ -188,9 +191,10 @@ export default function VocabCenter() {
             tested={bankMastered + (p?.learning ?? 0)}
             showDenominator={false}
             growthWordIds={undefined}
-            emptyHint={signedIn
-              ? "还没有学习记录。点上面的词库开始,答对的词会自动记进掌握度。"
-              : "登录后开始记录进度。未登录也可以先试做 20 题。"}
+            /* ⚠️ 这里**故意不传 emptyHint** —— 那个提示框在 SE 上占 86px,
+               把首屏的两张小卡挤到折线下。信息没丢,挪到卡外一行 12px 灰字
+               (见下方 EmptyHintLine),体积小 80%。
+               StatsPanel 的 emptyHint 参数保留原样,词库页还在用。 */
           />
         ) : (
           /* 骨架屏:**绝不渲染 0** —— 0 是合法值,老用户看到进度归零是事故级体验。
@@ -206,6 +210,16 @@ export default function VocabCenter() {
               </div>
             </div>
           </div>
+        )}
+
+        {/* 空态引导:一行 12px 灰字,不是一个框(见上方 StatsPanel 处的注释)。
+            只在真的还没有任何学习记录时出 —— 有数据的人不需要被教怎么开始。 */}
+        {bankStats && bankMastered === 0 && (p?.learning ?? 0) === 0 && signedIn !== null && (
+          <p className="mt-1.5 text-[12px] leading-snug text-slate-400">
+            {signedIn
+              ? "还没有学习记录,点上面的词库开始,答对的词会自动记进掌握度"
+              : "登录后开始记录进度,未登录也可先试做 20 题"}
+          </p>
         )}
 
         <div className="mt-2.5 grid grid-cols-2 gap-3">
@@ -235,7 +249,7 @@ export default function VocabCenter() {
 
         <MilestoneSummary mastered={globalMastered} color={color} />
 
-        <MyDataPanel color={color}
+        <MyDataPanel color={color} signedIn={signedIn}
           globalLearned={totals?.learned ?? null}
           globalMastered={totals?.mastered ?? null} />
 

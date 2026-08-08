@@ -8,7 +8,9 @@
  *    这条和词汇中心那次是同一个教训。
  */
 import { useEffect, useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Flame } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { ChevronLeft, ChevronRight, Flame, LogIn } from "lucide-react";
+import { saveRedirectPath } from "@/lib/authRedirect";
 import { cn } from "@/lib/utils";
 import { FONT_STAT } from "@/lib/vocab/theme";
 import {
@@ -35,10 +37,18 @@ type Props = {
    */
   globalLearned: number | null;
   globalMastered: number | null;
+  /**
+   * 三态登录位:null = 还没问出来(骨架),false = 未登录(引导),true = 已登录(正常)。
+   * ⚠️ 必须由调用方传三态,不能在这里拿 `!stats` 当"未登录" ——
+   *    getStats() 未登录返回 null、请求失败也返回 null,两者混在一起
+   *    就会把"网络抖了一下"渲染成"你没登录"。
+   */
+  signedIn: boolean | null;
 };
 
-export default function MyDataPanel({ color, globalLearned, globalMastered }: Props) {
+export default function MyDataPanel({ color, globalLearned, globalMastered, signedIn }: Props) {
   const today = bjToday();
+  const navigate = useNavigate();
   const [stats, setStats] = useState<UserStats | null>(null);
   const [days, setDays] = useState<StudyDay[] | null>(null);
   const [ym, setYm] = useState(today.slice(0, 7));
@@ -78,6 +88,29 @@ export default function MyDataPanel({ color, globalLearned, globalMastered }: Pr
   const metToday = todayAnswers >= goal;
   /* 断签鼓励:昨天没达标、今天也还没达标时才出。已经在学的人不需要被安慰。 */
   const brokeStreak = !!days && streak === 0 && totalAnswers > 0 && !metToday;
+
+  /**
+   * 未登录:给引导 + 登录钮,**不要挂骨架屏**。
+   * ⚠️ 由来:getStats() 未登录返回 null,而下面的就绪判断是 `!stats → 骨架`,
+   *    于是未登录用户看到的是一块**永远在闪的灰块** —— 像坏了,而不是像"需要登录"。
+   *    这是 PR-6 起就有的老 bug,2026-08-08 Aaron 指名在本 PR 一并修。
+   *    已扫过词汇板块其余组件:WeeklyBanner / HardestWords 未登录 return null,
+   *    VocabGrowth / VocabMistakes 拿到的是空数组(骨架会正常解除),只有这里中招。
+   */
+  if (signedIn === false) {
+    return (
+      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+        <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
+        <p className="mt-1 text-[13px] text-slate-500">登录后查看你的学习数据</p>
+        <button type="button" onClick={() => { saveRedirectPath(); navigate("/auth"); }}
+          className="mt-3 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[14px] font-medium text-white"
+          style={{ backgroundColor: color }}>
+          <LogIn className="h-[15px] w-[15px]" />
+          登录
+        </button>
+      </div>
+    );
+  }
 
   /* 全局累计没就绪也走骨架 —— 它和 stats 一样,渲染 0 就是"累计归零"的事故观感 */
   if (!stats || !days || globalLearned === null || globalMastered === null) {

@@ -334,15 +334,15 @@ export default function VocabSceneDetail() {
 
       {/* ── ⑤ 底部 ─────────────────────────────────────────────── */}
       <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        {/* 「不可点」和「看起来不可点」是两回事 —— 必须显式标出即将开放 */}
-        <div aria-disabled="true"
-          className="flex cursor-not-allowed select-none items-center gap-2.5 rounded-2xl border border-black/[0.06] bg-slate-50/60 px-4 py-4 opacity-70">
-          <PenLine className="h-[18px] w-[18px] shrink-0 text-slate-400" />
+        {/* PR-9 已上线,这颗从置灰改成真入口(带本场景的 pack 参数) */}
+        <Link to={`/vocab/dictation?from=scene&pack=${pack.id}`}
+          className="flex items-center gap-2.5 rounded-2xl border border-black/[0.06] bg-white px-4 py-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:bg-slate-50">
+          <PenLine className="h-[18px] w-[18px] shrink-0" style={{ color: SCENE_COLOR }} />
           <div className="min-w-0 flex-1">
-            <div className="text-[15px] font-medium text-slate-400">生成默写纸</div>
-            <div className="text-[12px] text-slate-400">即将开放</div>
+            <div className="text-[15px] font-medium text-slate-800">生成默写纸</div>
+            <div className="text-[12px] text-slate-500">这条链的词,可打印</div>
           </div>
-        </div>
+        </Link>
 
         {next ? (
           /* 「下一场景」指的是下一个**还没学完**的,不是 sort_order+1 ——

@@ -24,6 +24,7 @@ import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, optionText, type QuizQuestion } from "@/lib/vocab/quiz";
 import { recordAnswer, type VocabMode } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal } from "@/components/vocab/SessionParts";
+import { HardestWords } from "@/components/vocab/Incentive";
 import {
   listMistakes, getWordsByIds, listBankWords, getBankByCode, currentUserId,
   type MistakeRow, type VocabWord,
@@ -161,7 +162,13 @@ export default function VocabMistakes() {
             ← 词汇中心
           </BackLink>
           <h1 className="mb-1 text-[24px] font-bold tracking-tight text-slate-900">错题本</h1>
-          <p className="mb-4 text-[14px] text-slate-500">答错的词进这里,隔天连对 3 次自动移出</p>
+          <p className="text-[14px] text-slate-500">答错的词进这里,隔天连对 3 次自动移出</p>
+
+          {/* 「和 environment 大战了 4 回合」——**把错误说成较量,不是缺陷**。
+              原来挂在词汇中心的错题本入口卡上当第二行,那张卡单行化后没了位置;
+              这里才是它的主场:错题本天生带挫败感,页顶正需要这句把它翻成正向叙事。
+              ⚠️ 组件自己在无数据时 return null,不需要在这里再判一次空态。 */}
+          <div className="mb-4"><HardestWords color={color} /></div>
 
           {rows === null && !failed && (
             <div className="space-y-2">

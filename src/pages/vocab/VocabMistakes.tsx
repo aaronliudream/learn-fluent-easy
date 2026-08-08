@@ -14,8 +14,8 @@
  *   · 题型优先 last_wrong_mode —— 在哪种题型上栽的,就在哪种题型上补
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AlertCircle, Check, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { AlertCircle, Check, Printer, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor, CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
@@ -168,7 +168,12 @@ export default function VocabMistakes() {
               原来挂在词汇中心的错题本入口卡上当第二行,那张卡单行化后没了位置;
               这里才是它的主场:错题本天生带挫败感,页顶正需要这句把它翻成正向叙事。
               ⚠️ 组件自己在无数据时 return null,不需要在这里再判一次空态。 */}
-          <div className="mb-4"><HardestWords color={color} /></div>
+          <div className="mb-2"><HardestWords color={color} /></div>
+          {/* PR-9 默写纸:错题本是它最自然的来源之一 —— 错过的词正该拿去默写 */}
+          <Link to="/vocab/dictation?from=mistakes"
+            className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-black/[0.08] bg-white px-3 py-1.5 text-[13px] text-slate-600">
+            <Printer className="h-3.5 w-3.5" />把错题印成默写纸
+          </Link>
 
           {rows === null && !failed && (
             <div className="space-y-2">

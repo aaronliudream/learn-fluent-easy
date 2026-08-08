@@ -169,15 +169,39 @@ function audioCtx(): AudioContext {
   return ac;
 }
 
+/**
+ * 诊断日志 —— 用户报"没声音"时,让他截个控制台就能定位到底卡在哪一步。
+ * 前缀统一 `[磨耳朵]`,方便一眼筛出来。
+ */
+export function diag(step: string, detail?: unknown) {
+  console.log(`[磨耳朵] ${step}`, detail ?? "");
+}
+
 const bufCache = new Map<string, AudioBuffer>();
 
 async function fetchBuffer(url: string): Promise<AudioBuffer> {
   const hit = bufCache.get(url);
   if (hit) return hit;
-  const res = await fetch(url, { mode: "cors" });
-  if (!res.ok) throw new Error(`audio ${res.status}`);
+  let res: Response;
+  try {
+    res = await fetch(url, { mode: "cors" });
+  } catch (e) {
+    /* 走到这里通常是**跨域被拦**或断网 —— CDN 少了 Access-Control-Allow-Origin 就是这个表现 */
+    diag("✗ 取音频字节失败(跨域被拦/断网?)", { url, error: String(e) });
+    throw e;
+  }
+  if (!res.ok) {
+    diag("✗ 音频 HTTP 非 200", { url, status: res.status });
+    throw new Error(`audio ${res.status}`);
+  }
   const raw = await res.arrayBuffer();
-  const buf = await audioCtx().decodeAudioData(raw);
+  let buf: AudioBuffer;
+  try {
+    buf = await audioCtx().decodeAudioData(raw);
+  } catch (e) {
+    diag("✗ 解码失败(文件损坏/格式不支持?)", { url, bytes: raw.byteLength, error: String(e) });
+    throw e;
+  }
   /* 缓存上限:一轮最多 50 词 × 3 条 = 150 条,几十 MB。
      超了就整个清掉(简单可预测,比 LRU 省事,也不会在一轮里反复抖动)。 */
   if (bufCache.size > 200) bufCache.clear();
@@ -191,7 +215,11 @@ async function fetchBuffer(url: string): Promise<AudioBuffer> {
  * ⚠️ 调用方负责在换词时 revokeObjectURL,否则一轮 50 词会漏 50 个 blob。
  */
 export async function buildWordClip(urls: string[]): Promise<{ url: string; seconds: number }> {
-  if (!urls.length) throw new Error("EMPTY_CLIP");
+  if (!urls.length) {
+    diag("✗ 这个词没有任何可播音频(单词/拆读/例句都缺),将跳过", { urls });
+    throw new Error("EMPTY_CLIP");
+  }
+  diag("拼接开始", { 片段数: urls.length });
   const bufs = await Promise.all(urls.map(fetchBuffer));
 
   const sr = bufs[0].sampleRate;
@@ -214,7 +242,14 @@ export async function buildWordClip(urls: string[]): Promise<{ url: string; seco
   });
 
   const rendered = await off.startRendering();
-  return { url: URL.createObjectURL(encodeWav(rendered)), seconds: total };
+  const blob = encodeWav(rendered);
+  const url = URL.createObjectURL(blob);
+  if (!url.startsWith("blob:")) {
+    // 理论上不会发生;真发生了说明环境不支持 createObjectURL,必须让它可见
+    diag("✗ blob URL 生成异常", { url });
+  }
+  diag("✓ 拼接完成", { 时长秒: Math.round(total * 10) / 10, KB: Math.round(blob.size / 1024) });
+  return { url, seconds: total };
 }
 
 /** AudioBuffer → 16-bit PCM WAV Blob(单声道)。浏览器原生没有编码器,只能自己写头。 */

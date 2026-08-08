@@ -28,8 +28,9 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF, FONT_STAT, readSelectedBank } from "@/lib/vocab/theme";
 import { getBankByCode, type VocabBank } from "@/lib/vocab/data";
 import { startTracking } from "@/lib/vocab/timeTracker";
+import { getScenePack } from "@/lib/vocab/scenes";
 import {
-  buildPlaylist, buildWordClip, clipUrlsFor, recordListening,
+  buildPlaylist, buildWordClip, clipUrlsFor, diag, recordListening,
   DEFAULT_TOGGLES, ELEMENTS, SOURCES,
   type ElementKey, type ElementToggles, type ListenItem, type SourceKind,
 } from "@/lib/vocab/earTraining";
@@ -55,6 +56,21 @@ export default function VocabEarTraining() {
   const [showSettings, setShowSettings] = useState(false);
   const [done, setDone] = useState(false);             // 一轮听完 → 引导去测
 
+  /**
+   * 待播态。**进页面一律停在这里,不自动播**。
+   * ⚠️ 由来:真机反馈"进页面一片安静,像坏了"。根因是浏览器的 autoplay policy ——
+   *    没有用户手势就不允许出声,`play()` 直接被拒。
+   *    以前的界面只在底部控制条里有一个小播放键,和其它四个控件挤在一起,
+   *    用户根本不知道要点它。现在中央给一个大按钮,把"该干什么"说死。
+   * ⚠️ armed 一旦为 true 就不再回到待播态 —— 用户中途暂停不该又被盖一层遮罩。
+   */
+  const [armed, setArmed] = useState(false);
+  /** 第一条音频是否已拼好 —— 点下去必须立刻出声,不能点了还转圈 */
+  const [ready, setReady] = useState(false);
+  const [playError, setPlayError] = useState<string | null>(null);
+  /** 场景来源时显示场景名(如「网络购物 · 8 个词」) */
+  const [scenePackName, setScenePackName] = useState<string | null>(null);
+
   /* 单例 <audio>,**渲染进 DOM**(见 JSX 末尾),不要改成 new Audio()。
    * ⚠️ 两个原因:① 每次 new Audio() 会被 iOS 当成新的播放请求,锁屏基本必断;
    *    ② 游离(未挂载)的元素在 iOS 上媒体会话行为不稳,挂进 DOM 才是稳妥写法。 */
@@ -74,6 +90,16 @@ export default function VocabEarTraining() {
     getBankByCode(bankCode).then(b => { if (alive) setBank(b); }).catch(() => { /* 词库取不到不拦播放 */ });
     return () => { alive = false; };
   }, [bankCode]);
+
+  /* 带 ?pack= 进来的(从场景页点"听这条链")要能在待播态显示场景名 */
+  useEffect(() => {
+    if (!packId) { setScenePackName(null); return; }
+    let alive = true;
+    getScenePack(packId)
+      .then(p => { if (alive) setScenePackName(p?.title_zh ?? null); })
+      .catch(() => { /* 取不到就只显示词数,不拦播放 */ });
+    return () => { alive = false; };
+  }, [packId]);
 
   /* 选词。换来源就重建列表并回到第一个。 */
   useEffect(() => {
@@ -106,6 +132,14 @@ export default function VocabEarTraining() {
       objUrlRef.current = url;
       el.src = url;
       el.playbackRate = speed;
+      /* 装完立刻自查一次:src 空 = 后面点了必然没声,而且不会有任何报错,
+         是最难查的一类"静默失败",所以在这里就把它喊出来 */
+      if (!el.src || !el.src.startsWith("blob:")) {
+        diag("✗ audio.src 异常(为空或不是 blob)", { src: el.src });
+      } else {
+        diag("✓ 已装载,可以播了", { 第几个: i + 1, 词: it.word.headword });
+      }
+      setReady(true);
       return true;
     } catch {
       return false;                                     // 解码/取音频失败 → 跳过这个词,不中断整轮
@@ -216,7 +250,18 @@ export default function VocabEarTraining() {
     if (!el) return;
     if (playing) { el.pause(); return; }
     setDone(false);
-    el.play().catch(() => setPlaying(false));
+    setArmed(true);
+    setPlayError(null);
+    el.play().then(() => diag("▶ 开始播放")).catch((e: DOMException) => {
+      setPlaying(false);
+      /* NotAllowedError = autoplay policy 拦下(没有用户手势 / 手势已过期)。
+         这是"没声音"最常见的原因,必须让用户看得见,不能只在控制台。 */
+      const why = e?.name === "NotAllowedError"
+        ? "浏览器拦下了自动播放,请再点一次播放键"
+        : `播放失败:${e?.name || "未知错误"}`;
+      setPlayError(why);
+      diag("✗ play() 被拒", { name: e?.name, message: e?.message, src: el.src?.slice(0, 32) });
+    });
   };
 
   return (
@@ -309,6 +354,35 @@ export default function VocabEarTraining() {
             <p className="text-[15px] text-slate-500">
               {source === "mistakes" ? "错题本是空的,先去做几题" : "这个来源下没有可听的词"}
             </p>
+          ) : !armed ? (
+            /* ── 待播态:进页面一律停在这里 ──
+               中央一个 80px 的实心大按钮 + 「点击开始」,把"该干什么"说死。
+               上方显示即将播放的范围,从别处带参数进来的人一眼知道自己要听什么。 */
+            <>
+              <div className="mb-1 text-[15px] font-medium text-slate-700">
+                {scenePackName ?? bank?.name_zh ?? "词汇"}
+                <span className="text-slate-400"> · {total} 个词</span>
+              </div>
+              <div className="mb-6 text-[13px] text-slate-400">
+                {[
+                  toggles.syllable && "拆读",
+                  toggles.example && "例句",
+                ].filter(Boolean).join(" · ") || "只读单词"}
+                {repeat > 1 ? ` · 每词 ${repeat} 遍` : ""}
+              </div>
+
+              <button type="button" onClick={onPlayPause} aria-label="开始播放"
+                className="flex h-20 w-20 items-center justify-center rounded-full text-white shadow-xl transition-transform active:scale-95"
+                style={{ backgroundColor: color }}>
+                <Play className="h-9 w-9 translate-x-[2px]" />
+              </button>
+              <div className="mt-3 text-[14px] text-slate-500">点击开始</div>
+              {/* 预拼状态:点下去要立刻出声,所以把"还在准备"如实说出来 */}
+              <div className="mt-1 text-[12px] text-slate-400">
+                {ready ? "第一条已准备好" : "正在准备第一条…"}
+              </div>
+              {playError && <div className="mt-2 text-[13px] text-rose-600">{playError}</div>}
+            </>
           ) : (
             <>
               {reveal ? (
@@ -345,6 +419,10 @@ export default function VocabEarTraining() {
         </div>
 
         {/* 一轮听完 */}
+        {playError && armed && (
+          <div className="mb-3 rounded-xl bg-rose-50 px-3 py-2 text-center text-[13px] text-rose-700">{playError}</div>
+        )}
+
         {done && total > 0 && (
           <div className="mb-4 rounded-2xl border p-4 text-center"
             style={{ borderColor: `${color}40`, background: `${color}0D` }}>
@@ -359,7 +437,7 @@ export default function VocabEarTraining() {
         )}
 
         {/* 底部控制条 */}
-        {total > 0 && (
+        {total > 0 && armed && (
           /* ⚠️ 必须**坐在全站底部导航之上**,不能也用 bottom-0:
                 BottomTabBar 是 `fixed bottom-0 z-40 md:hidden`(高 4rem),
                 这条控制条原本 bottom-0/z-20 → 手机上播放键整个被导航盖住、点不到。

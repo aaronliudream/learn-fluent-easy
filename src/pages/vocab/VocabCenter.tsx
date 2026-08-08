@@ -589,7 +589,10 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
           name="场景串记" desc="把单词串成一篇作文"
           color={SCENE_COLOR} to="/vocab/scenes" status={sceneStatus}
         />
-        <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="听力浸泡" color={color} />
+        {/* ⚠️ 合并 main 时这里是真语义冲突,不是"两边各加一行":
+            main 上磨耳朵已通、音标还没通;本分支正相反。三个都该通,别只取一边。 */}
+        <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="边听边记,可锁屏"
+          color={color} to={bankCode ? `/vocab/listen?bank=${bankCode}` : "/vocab/listen"} />
         <ModeCard icon={<Mic className="h-[18px] w-[18px]" />} name="音标基础" desc="48 个音标" color={color} to="/vocab/phonics" />
         <ModeCard icon={<SpellCheck className="h-[18px] w-[18px]" />} name="自然拼读" desc="看词能读、听音能写" color={color} to="/vocab/phonics?tab=rules" />
         <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="测测你现在多少词" color={color} />

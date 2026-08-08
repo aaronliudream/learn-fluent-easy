@@ -1,7 +1,7 @@
 /**
  * 词汇作答会话的共用部件 —— 英汉选择 / 词汇配对 / 听音辨义 / 听写挑战 四个模式共用。
  *
- * ⚠️ 为什么抽出来:反馈弹层要展示"例句 1 + 自动朗读 + 查看全部 3 句",
+ * ⚠️ 为什么抽出来:反馈弹层要展示"三条例句全展开 + 自动朗读前 N 句",
  *    结果页要展示"本轮 N/M + 复习间隔说明",配额弹层要挡住 200 条 RLS 上限。
  *    这三件事在四个模式里**一模一样**,各写一份必然漂移 ——
  *    改了英汉选择的反馈文案、忘了改听写的,同一个产品出现两种说法。
@@ -10,29 +10,31 @@
  *    全在 vocabMastery.recordAnswer() 里,页面只负责问和显示。
  */
 import { useEffect, useRef, useState } from "react";
-import { Check, ChevronDown, Volume2, X } from "lucide-react";
+import { Check, Volume2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
-import { playUrl } from "@/lib/vocab/audio";
-import { readAutoplay, writeAutoplay } from "@/lib/vocab/quiz";
+import { playChain, playUrl } from "@/lib/vocab/audio";
+import { readAutoplay, readAutoplayCount, writeAutoplay, writeAutoplayCount, type AutoplayCount } from "@/lib/vocab/quiz";
 import { listExamples, type VocabExample, type VocabWord } from "@/lib/vocab/data";
 
 /**
- * 词卡卡体 —— **反馈层与配对结算页共用的唯一实现**。
+ * 词卡卡体 —— **反馈层的唯一实现**,由英汉选择/听音辨义/听写挑战/错题本闯关四处共用。
+ * ⚠️ 词汇配对(VocabMatch)**没有**用它:那个模式是翻牌配对,答完直接进结算页,
+ *    整个模式不存在逐词反馈层。别再按"四模式都有反馈层"去推断。
  *
  * 规格(Aaron 2026-08-06 封版):做题的反馈时刻是记忆黏合的黄金三秒,
  * 每一题的反馈都是一次**完整的微型词卡复习**,不是过场。
- * 所以这里必须给全:大字 + 音标 + 词性 + 中英释义 + 例句1 + 中译 + 朗读 + 折叠全部。
+ * 所以这里必须给全:大字 + 音标 + 词性 + 中英释义 + **三条例句全展开** + 中译 + 逐句朗读。
  *
  * ⚠️ 各模式**不许**再把单词大字/音标塞进自己的 subtitle 里 ——
  *    之前 Listen 和 Spell 各拼了一份,同一个信息三种写法,
  *    正是"只许有一个实现"要防的东西。
  * ⚠️ 没有音频的词(198 之外)**只隐藏朗读键**,文字反馈一字不少。
  */
-export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; defaultOpen?: boolean }) {
+export function WordCardBody({ word }: { word: VocabWord }) {
   const [rows, setRows] = useState<VocabExample[] | null>(null);
-  const [showAll, setShowAll] = useState(defaultOpen);
   const [autoplay, setAutoplay] = useState(readAutoplay());
+  const [count, setCount] = useState<AutoplayCount>(readAutoplayCount());
   const played = useRef(false);
 
   useEffect(() => {
@@ -40,14 +42,24 @@ export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; d
     listExamples(word.id).then(r => {
       if (!alive) return;
       setRows(r);
-      // played 防重放:折叠展开触发的重渲染不该再响一次
-      if (autoplay && !played.current && r[0]?.audio_url) { played.current = true; playUrl(r[0].audio_url, `e:${r[0].id}`); }
+      /* 自动朗读**前 count 条**。
+       * ⚠️ 复用 audio.ts 的 playChain(磨耳朵那条链)——**不要**在这里再写一个
+       *    setTimeout 串播:两套串播逻辑必然漂移,而且 playChain 已经处理好了
+       *    "中途点别的就中断"(它和 playUrl 共用同一个全局单曲不变量)。
+       * ⚠️ played 防重放:切换朗读条数/勾选框引发的重渲染不该再响一遍。 */
+      const clips = r.slice(0, count).filter(e => e.audio_url).map(e => ({ url: e.audio_url, key: `e:${e.id}` }));
+      if (autoplay && !played.current && clips.length) {
+        played.current = true;
+        void playChain(clips);
+      }
     }).catch(() => { if (alive) setRows([]); });
     return () => { alive = false; };
-  }, [word.id, autoplay]);
+  }, [word.id, autoplay, count]);
+
+  /* 换词就允许再自动读一次 —— 否则第二题起永远不响 */
+  useEffect(() => { played.current = false; }, [word.id]);
 
   const list = rows ?? [];
-  const shown = showAll ? list : list.slice(0, 1);
 
   return (
     <>
@@ -69,7 +81,10 @@ export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; d
       <div className="mb-1 text-[15px] font-medium text-slate-800">{word.def_zh}</div>
       {word.def_en && <div className="mb-2 text-[13px] leading-snug text-slate-500">{word.def_en}</div>}
 
-      {shown.map(ex => (
+      {/* ⚠️ 三条例句**全部展开**,不再折叠(Aaron 2026-08-09)。
+             原来只显示第 1 句 + 「查看全部 3 句」—— 反馈是记忆黏合的黄金三秒,
+             把另外两句藏在一次点击后面,等于绝大多数人永远看不到。 */}
+      {list.map(ex => (
         <div key={ex.id} className="border-t border-black/[0.06] py-2.5">
           {ex.collocation && <div className="mb-1 text-[12px] font-medium tracking-[0.02em] text-slate-400">{ex.collocation}</div>}
           <button type="button" onClick={() => playUrl(ex.audio_url, `e:${ex.id}`)} disabled={!ex.audio_url}
@@ -82,19 +97,29 @@ export function WordCardBody({ word, defaultOpen = false }: { word: VocabWord; d
         </div>
       ))}
 
-      {list.length > 1 && (
-        <button type="button" onClick={() => setShowAll(v => !v)}
-          className="mt-1 inline-flex items-center gap-1 text-[13px] text-slate-500">
-          {showAll ? "收起" : `查看全部 ${list.length} 句`}
-          <ChevronDown className={cn("h-3.5 w-3.5", showAll && "rotate-180")} />
-        </button>
-      )}
-
-      <label className="mt-3 flex items-center gap-2 text-[12px] text-slate-400">
-        <input type="checkbox" checked={autoplay}
-          onChange={e => { setAutoplay(e.target.checked); writeAutoplay(e.target.checked); }} />
-        自动朗读例句
-      </label>
+      {/* 自动朗读:总开关 + 读几条。两者并存 —— 开关管"要不要读",数量管"读几条"。 */}
+      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <label className="flex items-center gap-2 text-[12px] text-slate-400">
+          <input type="checkbox" checked={autoplay}
+            onChange={e => { setAutoplay(e.target.checked); writeAutoplay(e.target.checked); }} />
+          自动朗读例句
+        </label>
+        {autoplay && list.length > 1 && (
+          <div className="flex items-center gap-1.5">
+            <span className="text-[12px] text-slate-400">读</span>
+            {([1, 2, 3] as AutoplayCount[]).filter(n => n <= list.length).map(n => (
+              <button key={n} type="button"
+                onClick={() => { setCount(n); writeAutoplayCount(n); }}
+                aria-pressed={count === n}
+                className={cn("h-6 w-6 rounded-full border text-[12px]",
+                  count === n ? "border-transparent bg-slate-900 text-white" : "border-black/[0.08] text-slate-500")}>
+                {n}
+              </button>
+            ))}
+            <span className="text-[12px] text-slate-400">句</span>
+          </div>
+        )}
+      </div>
     </>
   );
 }
@@ -135,7 +160,7 @@ export function Feedback({ word, correct, onNext, lastOne, correctAnswer, spelle
   /* 挂载即滚进视野 —— 放在这里而不是各模式里,三个模式一次到位。
    * ⚠️ 手机上反馈层在选项下方,不自动滚的话用户每题都要手动下滑找它,
    *    而反馈是记忆黏合的黄金三秒,不该让用户先花两秒找它。
-   * block:"start" 让反馈层顶部对齐视口顶部,大字/音标/释义/例句1 一屏内可见。 */
+   * block:"start" 让反馈层顶部对齐视口顶部,大字/音标/释义/例句一屏内可见。 */
   const ref = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const el = ref.current;

@@ -117,6 +117,8 @@ const VocabListen = lazy(() => import("./pages/vocab/VocabListen.tsx"));
 const VocabSpell = lazy(() => import("./pages/vocab/VocabSpell.tsx"));
 const VocabMistakes = lazy(() => import("./pages/vocab/VocabMistakes.tsx"));
 const VocabPhonics = lazy(() => import("./pages/vocab/VocabPhonics.tsx"));
+const VocabEarTraining = lazy(() => import("./pages/vocab/VocabEarTraining.tsx"));
+const VocabDictation = lazy(() => import("./pages/vocab/VocabDictation.tsx"));
 const VocabScenes = lazy(() => import("./pages/vocab/VocabScenes.tsx"));
 const VocabSceneDetail = lazy(() => import("./pages/vocab/VocabSceneDetail.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
@@ -499,6 +501,11 @@ const App = () => (
               所以不会被词库路由抢走 —— 但别把它改成动态段。 */}
           {/* 音标基础 + 自然拼读(同页二级 tab) */}
           <Route path="/vocab/phonics" element={<ChineseOnlyRoute><VocabPhonics /></ChineseOnlyRoute>} />
+          {/* 磨耳朵。静态段,不会被 /vocab/:bankCode 抢走(react-router 按具体度排)。
+              ⚠️ 与 /vocab/:bankCode/listen(听音辨义做题)是两个页面,别搞混。 */}
+          <Route path="/vocab/listen" element={<ChineseOnlyRoute><VocabEarTraining /></ChineseOnlyRoute>} />
+          {/* 默写纸:纯前端 + window.print(),来源靠 query 参数 */}
+          <Route path="/vocab/dictation" element={<ChineseOnlyRoute><VocabDictation /></ChineseOnlyRoute>} />
           <Route path="/vocab/scenes" element={<ChineseOnlyRoute><VocabScenes /></ChineseOnlyRoute>} />
           <Route path="/vocab/scenes/:id" element={<ChineseOnlyRoute><VocabSceneDetail /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode/quiz" element={<ChineseOnlyRoute><VocabQuiz /></ChineseOnlyRoute>} />

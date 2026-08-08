@@ -13,7 +13,7 @@
  */
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { ChevronDown, Headphones, Layers, PenLine, Search, Sparkles, Volume2, X } from "lucide-react";
+import { ChevronDown, Headphones, Layers, PenLine, Printer, Search, Sparkles, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import WordCard from "@/components/vocab/WordCard";
 import { cn } from "@/lib/utils";
@@ -187,7 +187,14 @@ export default function VocabBank() {
             ))}
           </div>
 
-          <h2 id="vocab-wordlist" className="mb-3 mt-7 scroll-mt-4 text-[16px] font-semibold text-slate-900">词表</h2>
+          <div className="mb-3 mt-7 flex items-baseline justify-between">
+            <h2 id="vocab-wordlist" className="scroll-mt-4 text-[16px] font-semibold text-slate-900">词表</h2>
+            {/* PR-9 默写纸:词库页是第三个入口(另两个在错题本页和场景详情页) */}
+            <Link to={`/vocab/dictation?from=bank&bank=${bankCode}`}
+              className="inline-flex items-center gap-1.5 rounded-full border border-black/[0.08] bg-white px-3 py-1.5 text-[12px] text-slate-600">
+              <Printer className="h-3.5 w-3.5" />默写纸
+            </Link>
+          </div>
           {state === "loading" ? (
             <div className="space-y-2">
               {[0, 1, 2, 3, 4].map(i => <div key={i} className="h-[68px] animate-pulse rounded-xl border border-black/[0.06] bg-white" />)}

@@ -137,3 +137,22 @@ export function readAutoplay(): boolean {
 export function writeAutoplay(on: boolean) {
   try { localStorage.setItem(AUTOPLAY_KEY, on ? "1" : "0"); } catch { /* 隐私模式忽略 */ }
 }
+
+/**
+ * 自动朗读**几条**例句(1/2/3),默认 1。
+ * ⚠️ 与上面那个总开关**并存不互斥**:开关管"要不要自动读",这个管"读几条"。
+ *    关掉开关时这个值原样保留 —— 用户再打开时不该被重置回 1。
+ * ⚠️ 读到脏值(手改 localStorage / 老版本残留)一律回落 1,不要让它变成 NaN 条。
+ */
+const AUTOPLAY_COUNT_KEY = "vocab_autoplay_count";
+export type AutoplayCount = 1 | 2 | 3;
+
+export function readAutoplayCount(): AutoplayCount {
+  try {
+    const n = Number(localStorage.getItem(AUTOPLAY_COUNT_KEY));
+    return n === 2 || n === 3 ? n : 1;
+  } catch { return 1; }
+}
+export function writeAutoplayCount(n: AutoplayCount) {
+  try { localStorage.setItem(AUTOPLAY_COUNT_KEY, String(n)); } catch { /* 隐私模式忽略 */ }
+}

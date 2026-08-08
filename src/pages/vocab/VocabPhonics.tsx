@@ -22,7 +22,7 @@
  *    而该模型本就为短语优化,音标单读和示例词都只有几个音节,手机上听不出差别。
  *    **慢速版仍要单独烧一份 speed 0.75**(hash 含 speed,天然是另一个文件)。
  */
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -36,6 +36,18 @@ import { PHONICS_RULES, type SkillCardData } from "@/data/vocab/phonicsRules";
 type Tab = "sounds" | "rules";
 const say = (t: string, slow = false) => void speak(t, { accent: "UK", speed: slow ? 0.75 : 1 });
 
+/**
+ * 依次读一串词。`speak()` 的 Promise 在 `<audio>.onended` 时才 resolve
+ * (speak.ts:532),所以顺序 await 不会叠在一起。
+ * ⚠️ 词间补 260ms:紧挨着放两个词听起来像一个复合词,分不出边界。
+ */
+const sayAll = async (list: string[]) => {
+  for (const w of list) {
+    await speak(w, { accent: "UK", speed: 1 });
+    await new Promise(r => setTimeout(r, 260));
+  }
+};
+
 /** 8 个最易错音的补充信息(「你可能读成了 X」+ 动作口令),按 ipa 索引。 */
 const HARD_BY_IPA = new Map(HARD_8.map(h => [h.ipa, h]));
 
@@ -47,12 +59,17 @@ export default function VocabPhonics() {
 
   const card = PHONICS_48.find(c => c.id === id) ?? PHONICS_48[0];
 
-  /* 导航排序:8 个最易错的排最前(用户多半是为它们来的),其余保持原序。 */
-  const ordered = useMemo(() => {
-    const hard = PHONICS_48.filter(c => HARD_BY_IPA.has(c.ipa));
-    const rest = PHONICS_48.filter(c => !HARD_BY_IPA.has(c.ipa));
-    return [...hard, ...rest];
-  }, []);
+  /**
+   * 点音标 → 滚到卡片。
+   * ⚠️ 导航从横拉条改成网格后必须有这一步:48 个格子占了 8 行,
+   *    在 SE 上点最下面那个音标时,卡片整个在视口外,不滚的话看起来像"点了没反应"。
+   */
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const pick = (nextId: string) => {
+    setId(nextId);
+    // 等 React 把新卡片渲染出来再滚,否则量到的是旧卡片的位置
+    requestAnimationFrame(() => cardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  };
 
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
@@ -71,30 +88,64 @@ export default function VocabPhonics() {
           ))}
         </div>
 
-        {tab === "rules" ? <RulesTab /> : (
+        {tab === "rules" ? (
+          <RulesTab onGotoSound={ipa => {
+            const hit = PHONICS_48.find(c => c.ipa === ipa);
+            if (!hit) return;                 // ipaInSymbol 已保证有,这里只是兜底
+            setTab("sounds");
+            pick(hit.id);
+          }} />
+        ) : (
           <>
             <p className="mb-2 text-[13px] text-slate-400">
               {PHONICS_48.length} 个音标 · 标红的 8 个是中国学生最易错的,建议先练
             </p>
-            <div className="-mx-4 mb-3 overflow-x-auto px-4 pb-1">
-              <div className="flex gap-1.5">
-                {ordered.map((c, i) => (
-                  <button key={c.id} type="button" onClick={() => setId(c.id)}
-                    className={cn("shrink-0 rounded-lg border px-2.5 py-1.5 text-[15px] font-medium",
-                      c.id === card.id ? "border-transparent text-white"
-                        : i < HARD_8.length ? "border-rose-200 bg-rose-50 text-rose-700"
-                          : "border-black/[0.06] bg-white text-slate-700")}
-                    style={{ ...(c.id === card.id ? { backgroundColor: SCENE_COLOR } : {}), fontFamily: FONT_SERIF }}>
-                    {c.ipa}
-                  </button>
-                ))}
-              </div>
-            </div>
+            {/* ⚠️ 这里曾是横向拉条 —— 48 个音标一行排开,一屏只看得到五六个,
+                用户不知道后面还有多少、也找不到想要的那个。改成网格全部铺开,
+                元音 20 / 辅音 28 分两组,一眼看完不用横滑。 */}
+            <SoundGrid title="元音 20" items={VOWELS} curId={card.id} onPick={pick} />
+            <SoundGrid title="辅音 28" items={CONSONANTS} curId={card.id} onPick={pick} />
 
-            <SoundCard card={card} />
-            <Practice card={card} />
+            <div ref={cardRef} className="scroll-mt-3">
+              <SoundCard card={card} />
+              <Practice card={card} />
+            </div>
           </>
         )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * 音标选择网格。元音 / 辅音各一块,6 列铺开。
+ * ⚠️ 6 列是 iPhone SE(375px)下的上限:去掉页面左右各 16px padding 后剩 343px,
+ *    6 列 × 最小 44px 触控宽 + 5 × 6px 间距 = 294px,放得下且不挤。
+ *    再多一列就会掉到 44px 触控下限以下。
+ * ⚠️ 8 个最易错音标红 —— 按 IPA 判,不按下标,网格里顺序已不是"易错优先"了。
+ */
+function SoundGrid({ title, items, curId, onPick }: {
+  title: string; items: PhonicsCard[]; curId: string; onPick: (id: string) => void;
+}) {
+  return (
+    <div className="mb-3">
+      <div className="mb-1.5 text-[12px] text-slate-400">{title}</div>
+      <div className="grid grid-cols-6 gap-1.5">
+        {items.map(c => {
+          const on = c.id === curId;
+          const hard = HARD_BY_IPA.has(c.ipa);
+          return (
+            <button key={c.id} type="button" onClick={() => onPick(c.id)}
+              aria-current={on ? "true" : undefined}
+              className={cn("min-h-[44px] rounded-lg border px-1 py-1.5 text-[15px] font-medium leading-none",
+                on ? "border-transparent text-white"
+                  : hard ? "border-rose-200 bg-rose-50 text-rose-700"
+                    : "border-black/[0.06] bg-white text-slate-700")}
+              style={{ ...(on ? { backgroundColor: SCENE_COLOR } : {}), fontFamily: FONT_SERIF }}>
+              {c.ipa}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -153,15 +204,17 @@ function SoundCard({ card }: { card: PhonicsCard }) {
           <div className="mb-2 text-[12px] text-slate-500">最小对立对 —— 只差这一个音,听出区别就算过关</div>
           <div className="flex items-center gap-2">
             <button type="button" onClick={() => say(card.minimalPair![0])}
-              className="flex-1 rounded-lg border-2 bg-white px-3 py-2 text-[16px]"
+              className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border-2 bg-white px-3 py-2 text-[16px]"
               style={{ borderColor: SCENE_COLOR, color: SCENE_COLOR, fontFamily: FONT_SERIF }}>
               {card.minimalPair[0]}
+              <Volume2 className="h-3.5 w-3.5 opacity-60" />
             </button>
             <span className="text-[12px] text-slate-400">vs</span>
             <button type="button" onClick={() => say(card.minimalPair![1])}
-              className="flex-1 rounded-lg border border-black/[0.08] bg-white px-3 py-2 text-[16px] text-slate-600"
+              className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-black/[0.08] bg-white px-3 py-2 text-[16px] text-slate-600"
               style={{ fontFamily: FONT_SERIF }}>
               {card.minimalPair[1]}
+              <Volume2 className="h-3.5 w-3.5 text-slate-300" />
             </button>
           </div>
         </div>
@@ -411,7 +464,12 @@ function FindDrill({ card }: { card: PhonicsCard }) {
                 state === "wrong" && "border-rose-300 bg-rose-50 text-rose-700",
                 state === "idle" && "border-black/[0.08] bg-white text-slate-700")}
               style={{ ...(state === "on" ? { backgroundColor: SCENE_COLOR, borderColor: "transparent" } : {}), fontFamily: FONT_SERIF }}>
-              {it.word}
+              <span className="inline-flex items-center justify-center gap-1">
+                {it.word}
+                {/* ⚠️ 喇叭只在对完答案后出现:选词阶段这些格子是"选项",
+                    那时挂喇叭会让人以为点了是听音,而实际是在勾选。 */}
+                {checked && <Volume2 className="h-3 w-3 opacity-50" />}
+              </span>
             </button>
           );
         })}
@@ -435,36 +493,79 @@ function FindDrill({ card }: { card: PhonicsCard }) {
 
 /* ── 自然拼读 tab(PR-13,未改)───────────────────────────────── */
 
-function RulesTab() {
+/**
+ * 从规则的 symbol 里抠出音标(`c→/s/` → `/s/`),用来做"跳到那个音去听"。
+ * ⚠️ 只认 PHONICS_48 里真有的音 —— 抠出来但对不上任何一张卡就不给按钮,
+ *    宁可没有,也不要点了跳到一张空卡。
+ */
+function ipaInSymbol(symbol: string): string | null {
+  const m = symbol.match(/\/[^/]+\//);
+  if (!m) return null;
+  return PHONICS_48.some(c => c.ipa === m[0]) ? m[0] : null;
+}
+
+function RulesTab({ onGotoSound }: { onGotoSound: (ipa: string) => void }) {
   const [id, setId] = useState(PHONICS_RULES[0].id);
   const card: SkillCardData = PHONICS_RULES.find(r => r.id === id) ?? PHONICS_RULES[0];
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const pick = (nextId: string) => {
+    setId(nextId);
+    requestAnimationFrame(() => cardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  };
+  const jumpIpa = ipaInSymbol(card.symbol);
+
   return (
     <>
       <p className="mb-2.5 text-[13px] text-slate-400">
         {PHONICS_RULES.length} 条拼读规则,看词能读、听音能写(音标见「音标」tab:元音 {VOWELS.length} / 辅音 {CONSONANTS.length})
       </p>
-      <div className="-mx-4 mb-4 overflow-x-auto px-4 pb-1">
-        <div className="flex gap-1.5">
-          {PHONICS_RULES.map(r => (
-            <button key={r.id} type="button" onClick={() => setId(r.id)}
-              className={cn("shrink-0 rounded-lg border px-2.5 py-1.5 text-[14px] font-medium",
-                r.id === card.id ? "border-transparent text-white" : "border-black/[0.06] bg-white text-slate-700")}
-              style={r.id === card.id ? { backgroundColor: SCENE_COLOR } : undefined}>{r.symbol}</button>
-          ))}
-        </div>
+      {/* 与音标 tab 同样的理由:42 条横着排一屏只看得到几条,改网格全铺开。
+          这里用 4 列 —— symbol 比音标长(`c→/s/`、`-tion`),6 列会截断。 */}
+      <div className="mb-4 grid grid-cols-4 gap-1.5">
+        {PHONICS_RULES.map(r => (
+          <button key={r.id} type="button" onClick={() => pick(r.id)}
+            aria-current={r.id === card.id ? "true" : undefined}
+            className={cn("min-h-[44px] truncate rounded-lg border px-1.5 py-1.5 text-[13px] font-medium",
+              r.id === card.id ? "border-transparent text-white" : "border-black/[0.06] bg-white text-slate-700")}
+            style={r.id === card.id ? { backgroundColor: SCENE_COLOR } : undefined}>{r.symbol}</button>
+        ))}
       </div>
-      <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+      <div ref={cardRef} className="scroll-mt-3 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
         <div className="text-[22px] font-bold text-slate-900" style={{ fontFamily: FONT_SERIF }}>{card.title}</div>
-        <span className="mt-1 inline-block rounded-full bg-slate-100 px-2.5 py-1 text-[12px] text-slate-500">{card.group}</span>
+        <div className="mt-1 flex flex-wrap items-center gap-2">
+          <span className="inline-block rounded-full bg-slate-100 px-2.5 py-1 text-[12px] text-slate-500">{card.group}</span>
+          {/* ⚠️ 规则卡里的音标不能直接 TTS —— 送 "/s/" 给 TTS 出来的是音素噪音,
+              而且库里根本没有音素音频。改成跳到「音标」tab 那张卡,那里有真发音。 */}
+          {jumpIpa && (
+            <button type="button" onClick={() => onGotoSound(jumpIpa)}
+              className="inline-flex items-center gap-1 rounded-full border border-black/[0.08] px-2.5 py-1 text-[12px] text-slate-600 active:bg-slate-50">
+              <Volume2 className="h-3.5 w-3.5 text-slate-400" />听 {jumpIpa}
+            </button>
+          )}
+        </div>
         <p className="mt-3 text-[14px] leading-relaxed text-slate-700">{card.tip}</p>
         <p className="mt-2 rounded-xl bg-amber-50 px-3 py-2 text-[13px] leading-relaxed text-amber-800">
           例外提示:{card.cnError}
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
+
+        <div className="mt-4 flex items-center gap-2">
+          <span className="text-[12px] text-slate-400">示例词</span>
+          <button type="button" onClick={() => sayAll(card.words)}
+            className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-medium text-white"
+            style={{ backgroundColor: SCENE_COLOR }}>
+            <Volume2 className="h-3.5 w-3.5" />全部放一遍
+          </button>
+        </div>
+        {/* ⚠️ 这些词本来就能点,但没有喇叭图标 —— 看上去只是彩色标签,
+            用户不知道可以点。图标是"能不能被发现"的问题,不是装饰。 */}
+        <div className="mt-2 flex flex-wrap gap-2">
           {card.words.map((w, i) => (
             <button key={w + i} type="button" onClick={() => say(w)}
-              className="rounded-xl border border-black/[0.06] px-3 py-2 text-[16px] active:bg-slate-50"
-              style={{ fontFamily: FONT_SERIF }}>{mark(w, card.focus[i])}</button>
+              className="inline-flex items-center gap-1.5 rounded-xl border border-black/[0.06] px-3 py-2 text-[16px] active:bg-slate-50"
+              style={{ fontFamily: FONT_SERIF }}>
+              {mark(w, card.focus[i])}
+              <Volume2 className="h-3.5 w-3.5 text-slate-300" />
+            </button>
           ))}
         </div>
       </div>

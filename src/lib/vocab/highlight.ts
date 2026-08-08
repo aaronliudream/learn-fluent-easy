@@ -14,8 +14,12 @@
  * 不覆盖:shipwright 里的 wright —— 那是后缀不是词干,属于另一个词,g7 也是这么判的。
  */
 
-/** 屈折形推导(后缀规则,与 gates.mjs 的 inflectionsOf 保持一致)。 */
-function inflectionsOf(headword: string): Set<string> {
+/**
+ * 屈折形推导(后缀规则,与 gates.mjs 的 inflectionsOf 保持一致)。
+ * ⚠️ 导出给 sceneHighlight.ts 复用 —— 场景短文里要高亮的是「链上的说法」,
+ *    同样得认 browse → browsing。那边另写一套必然与这里漂移。
+ */
+export function inflectionsOf(headword: string): Set<string> {
   const hw = headword.toLowerCase();
   const forms = new Set<string>([hw]);
   const add = (f: string) => forms.add(f);

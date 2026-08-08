@@ -13,11 +13,12 @@
  */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AlertCircle, CalendarClock, ChevronRight, Lock, Sparkles } from "lucide-react";
+import { AlertCircle, CalendarClock, ChevronRight, Link2, Lock, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
-import { bankColor, FONT_STAT, MILESTONES } from "@/lib/vocab/theme";
+import { bankColor, FONT_STAT, MILESTONES, SCENE_COLOR } from "@/lib/vocab/theme";
+import { countScenePacks, countScenesDone } from "@/lib/vocab/scenes";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import {
   listBanks, getBankProgressFast, dueCount, mistakeCount, totalMastered,
@@ -188,6 +189,8 @@ export default function VocabCenter() {
           </p>
         </div>
 
+        <SceneBanner />
+
         <WeeklyBanner color={centerColor} onShare={(w: WeeklySummary) => setShare({
           mastered, streak: w.streak, points: uStats?.total_points ?? 0,
           totalMs: uStats?.total_time_ms ?? 0, milestone: MILESTONES.filter(m => mastered >= m).pop() ?? null,
@@ -274,6 +277,53 @@ function EntryCard({ icon, label, count, hint, to, extra }: { icon: React.ReactN
   return to
     ? <Link to={to} className={cn(cls, "bg-white active:bg-slate-50")}>{body}</Link>
     : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-slate-50/60 opacity-70")}>{body}</div>;
+}
+
+/**
+ * 场景串记入口 —— 里程碑卡下方的全宽横幅。
+ *
+ * ⚠️ 分母走 countScenePacks()(head 查询,只回一个数),不用 listScenePacks:
+ *    后者为了算"短文 N 词"会把 30 篇正文全拉下来,那是列表页才需要付的钱。
+ * ⚠️ 取数失败/一个场景都没有时**整条横幅不渲染** —— 与其挂一条点进去是空页的入口,
+ *    不如当它不存在。
+ */
+function SceneBanner() {
+  const [total, setTotal] = useState(0);
+  const [done, setDone] = useState(0);
+
+  useEffect(() => {
+    let alive = true;
+    countScenePacks()
+      /* 分子数的是 done 键,与场景列表页顶部那行「已学 N / 30」**同一个口径** ——
+         两处各算各的,迟早出现"横幅说 5、列表说 3"这种鬼故事 */
+      .then(n => { if (alive) { setTotal(n); setDone(countScenesDone()); } })
+      .catch(() => { /* 场景没上线/读失败:横幅整条不出,不拦住中心页 */ });
+    return () => { alive = false; };
+  }, []);
+
+  if (total <= 0) return null;
+
+  return (
+    <Link to="/vocab/scenes"
+      className="mt-4 flex items-center gap-3.5 rounded-2xl border border-black/[0.06] bg-white px-4 py-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:bg-slate-50">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
+        style={{ backgroundColor: `${SCENE_COLOR}1F` }}>
+        <Link2 className="h-5 w-5" style={{ color: SCENE_COLOR }} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="text-[15px] font-semibold text-slate-900">场景串记</div>
+        <div className="mt-0.5 truncate text-[13px] text-slate-500">
+          {total} 个生活场景,把单词串成一篇作文
+        </div>
+      </div>
+      <span className="shrink-0 text-[13px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
+        {/* 已学数取本地记录与总数的较小值 —— 场景下架后本地那条记录还在,
+            不夹一下会出现「31/30」 */}
+        {Math.min(done, total)}/{total}
+      </span>
+      <ChevronRight className="h-[18px] w-[18px] shrink-0 text-slate-300" />
+    </Link>
+  );
 }
 
 function BankCard({ bank }: { bank: BankRow }) {

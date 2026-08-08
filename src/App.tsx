@@ -116,6 +116,8 @@ const VocabMatch = lazy(() => import("./pages/vocab/VocabMatch.tsx"));
 const VocabListen = lazy(() => import("./pages/vocab/VocabListen.tsx"));
 const VocabSpell = lazy(() => import("./pages/vocab/VocabSpell.tsx"));
 const VocabMistakes = lazy(() => import("./pages/vocab/VocabMistakes.tsx"));
+const VocabScenes = lazy(() => import("./pages/vocab/VocabScenes.tsx"));
+const VocabSceneDetail = lazy(() => import("./pages/vocab/VocabSceneDetail.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
@@ -492,6 +494,10 @@ const App = () => (
           {/* 英汉选择与今日复习共用一个组件:复习只是把要考的词换成到期队列 */}
           <Route path="/vocab/review" element={<ChineseOnlyRoute><VocabQuiz mode="review" /></ChineseOnlyRoute>} />
           <Route path="/vocab/mistakes" element={<ChineseOnlyRoute><VocabMistakes /></ChineseOnlyRoute>} />
+          {/* 场景串记。静态段 scenes 优先于 :bankCode(react-router 按具体度排,不按书写顺序),
+              所以不会被词库路由抢走 —— 但别把它改成动态段。 */}
+          <Route path="/vocab/scenes" element={<ChineseOnlyRoute><VocabScenes /></ChineseOnlyRoute>} />
+          <Route path="/vocab/scenes/:id" element={<ChineseOnlyRoute><VocabSceneDetail /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode/quiz" element={<ChineseOnlyRoute><VocabQuiz /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode/match" element={<ChineseOnlyRoute><VocabMatch /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode/listen" element={<ChineseOnlyRoute><VocabListen /></ChineseOnlyRoute>} />

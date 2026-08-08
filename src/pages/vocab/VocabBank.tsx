@@ -12,7 +12,7 @@
  * ⚠️ 未知 bankCode 必须给"词库不存在"不能白屏(smoke 有 /vocab/__BOGUS__ 守这条)。
  */
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ChevronDown, Headphones, Layers, PenLine, Search, Sparkles, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import WordCard from "@/components/vocab/WordCard";
@@ -59,6 +59,12 @@ const GROUPS: { key: WordStatus; label: string; hint: string }[] = [
 export default function VocabBank() {
   const { bankCode = "" } = useParams();
   const navigate = useNavigate();
+  /* ?word=<headword> —— 场景串记的「查看词卡」跳过来时带上,
+   * 到了这里就是"把词表过滤到这一个词并展开它"。
+   * ⚠️ 用 headword 不用 word_id:词表本来就按前缀搜,headword 直接喂搜索框就行,
+   *    换成 id 还得先反查一次。 */
+  const [searchParams] = useSearchParams();
+  const deepLinkWord = searchParams.get("word") || "";
   const [bank, setBank] = useState<VocabBank | null>(null);
   const [words, setWords] = useState<VocabWord[]>([]);
   const [statuses, setStatuses] = useState<Record<string, WordStatus>>({});
@@ -189,7 +195,7 @@ export default function VocabBank() {
               这个词库还没有内容
             </div>
           ) : (
-            <WordList words={words} statuses={statuses} color={color} />
+            <WordList words={words} statuses={statuses} color={color} deepLinkWord={deepLinkWord} />
           )}
         </>
       )}
@@ -212,11 +218,25 @@ type Item =
   | { type: "header"; group: WordStatus; label: string; count: number; hint: string }
   | { type: "row"; word: VocabWord; first: boolean };
 
-function WordList({ words, statuses, color }: { words: VocabWord[]; statuses: Record<string, WordStatus>; color: string }) {
-  const [query, setQuery] = useState("");
-  // 已掌握默认折叠 —— 它只会越来越长,展开会把待学习顶出视野
-  const [collapsed, setCollapsed] = useState<Record<WordStatus, boolean>>({ new: false, learning: false, mastered: true });
+function WordList({ words, statuses, color, deepLinkWord = "" }: { words: VocabWord[]; statuses: Record<string, WordStatus>; color: string; deepLinkWord?: string }) {
+  const [query, setQuery] = useState(deepLinkWord);
+  /* 已掌握默认折叠 —— 它只会越来越长,展开会把待学习顶出视野。
+   * ⚠️ 但深链进来时必须全展开:目标词如果恰好在"已掌握"组里,
+   *    折叠状态下用户只看到一个组头,会以为这个词不在库里。 */
+  const [collapsed, setCollapsed] = useState<Record<WordStatus, boolean>>(
+    { new: false, learning: false, mastered: !deepLinkWord },
+  );
   const [openId, setOpenId] = useState<string | null>(null);
+
+  /* 深链:词表到位后展开目标词并滚到词表。
+   * 只在 deepLinkWord 变化时跑 —— 用户之后自己搜别的词不该被拽回来。 */
+  useEffect(() => {
+    if (!deepLinkWord || !words.length) return;
+    const hit = words.find(w => w.headword.toLowerCase() === deepLinkWord.toLowerCase());
+    if (!hit) return;
+    setOpenId(hit.id);
+    document.getElementById("vocab-wordlist")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [deepLinkWord, words]);
   const [, bump] = useState(0);
   const [viewH, setViewH] = useState(800);
   const listRef = useRef<HTMLDivElement | null>(null);

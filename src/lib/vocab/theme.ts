@@ -22,6 +22,13 @@ export const BANK_COLORS: Record<string, string> = {
   gmat: "#3B6D11",
 };
 
+/**
+ * 场景串记的身份色 —— 它不是词库(不在 vocab_banks 里),所以单列一个常量。
+ * ⚠️ 选青色是为了和上面 11 个词库色都拉开距离:场景串记横跨所有词库,
+ *    借用任何一个库的颜色都会让用户以为它属于那个库。
+ */
+export const SCENE_COLOR = "#0E8388";
+
 /** 取身份色;未知 code 回落中性灰(不抛错,新词库上线时页面不该崩)。 */
 export function bankColor(code: string | null | undefined): string {
   return BANK_COLORS[String(code || "")] || "#64748B";

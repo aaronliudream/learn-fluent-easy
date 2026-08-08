@@ -10,9 +10,9 @@
  *    未登录读到空数组,这是**预期行为**,页面必须能渲染 0 态,不能当异常处理。
  *
  * ⚠️ category / benefits / drawbacks 三列是 PR-12 才补的(SQLAA/vocab_scene_meta.sql)。
- *    这里对「列还没建」做了降级:PostgREST 报 42703(undefined column)时
- *    自动退回老列集重查,页面照常出,只是筛选钮全灰、好处/弊端卡不渲染。
- *    这样前端 PR 和那条 SQL **谁先上线都不会白屏**。
+ *    查询一律 select=*,所以那条 SQL **跑没跑都不会白屏、也不会报错**:
+ *    没跑时这三个字段读到 undefined → 筛选钮整行不渲染、好处/弊端卡整段不出,
+ *    正文照常。前端 PR 和 SQL 谁先上线都行。理由见下方 select=* 的长注释。
  */
 import { supabase } from "@/integrations/supabase/client";
 
@@ -64,17 +64,21 @@ export type ScenePackListRow = {
   essayWords: number;
 };
 
-/* ── 列集:新列在前,降级列在后 ─────────────────────────────────── */
-const PACK_COLS_NEW = "id,title_zh,theme_en,category,benefits,drawbacks,essay_short_en,essay_short_zh,essay_full_en,essay_full_zh,essay_short_audio_url,essay_full_audio_url,sort_order";
-const PACK_COLS_OLD = "id,title_zh,theme_en,essay_short_en,essay_short_zh,essay_full_en,essay_full_zh,essay_short_audio_url,essay_full_audio_url,sort_order";
-const LIST_COLS_NEW = "id,title_zh,theme_en,category,sort_order,essay_full_en";
-const LIST_COLS_OLD = "id,title_zh,theme_en,sort_order,essay_full_en";
+/* ── 为什么两个查询都用 select=* ────────────────────────────────
+ * category / benefits / drawbacks 三列是 PR-12 才补的
+ * (SQLAA/vocab_scene_meta.sql,由 Aaron 执行)。
+ *
+ * 一开始写的是"先按新列查,PostgREST 报 42703 再退回老列集重查"。
+ * 功能上能降级,但**每次加载都会先打一发 400**:代码 try/catch 得住,
+ * 浏览器控制台拦不住 —— 冒烟门当场判红(实测 /vocab/scenes 两条 400)。
+ *
+ * select=* 一发就够:列在就返回,列不在就当没有,永远不会 400。
+ * 代价是列表页顺带把两档短文的中英四列都拉下来(30 条约 120KB,gzip 后 ~35KB)。
+ * 这是**二级页**不是首屏,换掉"每次一发 400 + 两条往返 + 一堆降级分支"值。
+ */
 
-/** PostgREST 对不存在的列报 42703。只有这一种错才降级,其余照抛(别把真故障吞成空页)。 */
-function isUndefinedColumn(err: unknown): boolean {
-  const e = err as { code?: string; message?: string } | null;
-  return e?.code === "42703" || /column .* does not exist/i.test(e?.message || "");
-}
+/** UUID 形状。不是 uuid 的 id 直接当"不存在",别拿去查 —— PostgREST 会回 400 而不是空行。 */
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 /** 英文词数 —— 列表卡「短文 N 词」用。按空白切,够准且不依赖库里再存一列。 */
 export function countWords(text: string | null | undefined): number {
@@ -88,24 +92,14 @@ export function countWords(text: string | null | undefined): number {
  * 也比 PostgREST 嵌套聚合好排查(嵌套 count 的返回形状随版本变过)。
  */
 export async function listScenePacks(): Promise<ScenePackListRow[]> {
-  const fetchPacks = async (cols: string) => {
-    const { data, error } = await db
-      .from("vocab_scene_packs")
-      .select(cols)
-      .eq("is_published", true)
-      .order("sort_order", { ascending: true });
-    if (error) throw error;
-    return data || [];
-  };
-
   type RawPack = { id: string; title_zh: string; theme_en: string; category?: string | null; sort_order: number; essay_full_en: string };
-  let packs: RawPack[];
-  try {
-    packs = (await fetchPacks(LIST_COLS_NEW)) as RawPack[];
-  } catch (e) {
-    if (!isUndefinedColumn(e)) throw e;
-    packs = (await fetchPacks(LIST_COLS_OLD)) as RawPack[];
-  }
+  const { data, error } = await db
+    .from("vocab_scene_packs")
+    .select("*")
+    .eq("is_published", true)
+    .order("sort_order", { ascending: true });
+  if (error) throw error;
+  const packs = (data || []) as RawPack[];
   if (!packs.length) return [];
 
   const counts = await sceneNodeCounts(packs.map(p => p.id));
@@ -151,23 +145,19 @@ async function sceneNodeCounts(packIds: string[]): Promise<Record<string, number
 
 /** 单个场景。未发布/不存在都返回 null(详情页据此出「场景不存在」,不白屏)。 */
 export async function getScenePack(id: string): Promise<ScenePack | null> {
-  const fetchOne = async (cols: string) => {
-    const { data, error } = await db
-      .from("vocab_scene_packs")
-      .select(cols)
-      .eq("id", id)
-      .eq("is_published", true)
-      .maybeSingle();
-    if (error) throw error;
-    return data;
-  };
-  let row: Record<string, unknown> | null;
-  try {
-    row = (await fetchOne(PACK_COLS_NEW)) as Record<string, unknown> | null;
-  } catch (e) {
-    if (!isUndefinedColumn(e)) throw e;
-    row = (await fetchOne(PACK_COLS_OLD)) as Record<string, unknown> | null;
-  }
+  /* 手打错的 / 旧收藏里的坏链接会带来非 uuid 的 id。
+   * 直接拿去查,PostgREST 报的是 400「invalid input syntax for type uuid」——
+   * 页面会落到"加载失败"而不是"场景不存在",控制台还多一条红字。
+   * 形状不对就当没有,连请求都不发。 */
+  if (!UUID_RE.test(String(id || ""))) return null;
+  const { data, error } = await db
+    .from("vocab_scene_packs")
+    .select("*")
+    .eq("id", id)
+    .eq("is_published", true)
+    .maybeSingle();
+  if (error) throw error;
+  const row = data as Record<string, unknown> | null;
   if (!row) return null;
   return {
     ...(row as unknown as ScenePack),

@@ -94,27 +94,26 @@ function SoundCard({ sound }: { sound: Hard8 }) {
   const cfg = MOUTH[sound.key];
   return (
     <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      <div className="flex items-start gap-4">
-        <div>
-          <div className="text-[44px] font-bold leading-none text-slate-900" style={{ fontFamily: FONT_SERIF }}>
-            {sound.ipa}
-          </div>
-          <div className="mt-2 flex gap-1.5">
-            <button type="button" onClick={() => say(sound.words[0])}
-              className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[12px] font-medium text-white"
-              style={{ backgroundColor: SCENE_COLOR }}>
-              <Volume2 className="h-3.5 w-3.5" />常速
-            </button>
-            <button type="button" onClick={() => say(sound.words[0], true)}
-              className="inline-flex items-center gap-1 rounded-full border border-black/[0.08] px-3 py-1.5 text-[12px] text-slate-600">
-              <Volume2 className="h-3.5 w-3.5" />慢速
-            </button>
-          </div>
+      {/* 音标大字 + 两个速度键一行 */}
+      <div className="flex items-center gap-3">
+        <div className="text-[44px] font-bold leading-none text-slate-900" style={{ fontFamily: FONT_SERIF }}>
+          {sound.ipa}
         </div>
-        {/* 口型图是主视觉,占卡片上半的右侧大块 */}
-        <div className="min-w-0 flex-1">
-          {cfg ? <MouthDiagram config={cfg} /> : <div className="text-[12px] text-slate-400">(口型图待补)</div>}
-        </div>
+        <button type="button" onClick={() => say(sound.words[0])}
+          className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[12px] font-medium text-white"
+          style={{ backgroundColor: SCENE_COLOR }}>
+          <Volume2 className="h-3.5 w-3.5" />常速
+        </button>
+        <button type="button" onClick={() => say(sound.words[0], true)}
+          className="inline-flex items-center gap-1 rounded-full border border-black/[0.08] px-3 py-1.5 text-[12px] text-slate-600">
+          <Volume2 className="h-3.5 w-3.5" />慢速
+        </button>
+      </div>
+
+      {/* ⚠️ 口型图**必须独占一行铺满宽度**。第一版把它挤在音标大字旁边只有一半宽,
+          结构全糊在一起、红舌头看着像一支箭,完全达不到"一眼看懂舌头在哪"。 */}
+      <div className="mt-3 rounded-xl bg-slate-50/60 px-2 py-1">
+        {cfg ? <MouthDiagram config={cfg} /> : <div className="py-6 text-center text-[12px] text-slate-400">(口型图待补)</div>}
       </div>
 
       {cfg && (

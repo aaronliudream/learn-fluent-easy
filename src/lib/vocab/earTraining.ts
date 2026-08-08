@@ -210,6 +210,17 @@ async function fetchBuffer(url: string): Promise<AudioBuffer> {
 }
 
 /**
+ * 预热下一个词的音频字节(只下载+解码进缓存,不做拼接)。
+ * ⚠️ 拼接本身很快,慢的是**网络下载 + decodeAudioData**。当前这条还在播的时候
+ *    把下一条的字节先烤进 bufCache,换词时就几乎是瞬时的 ——
+ *    否则每换一个词都要等一次网络,听感上就是"卡一下"甚至像停了。
+ * ⚠️ 失败静默吞掉:预热只是加速,失败了到时候正常路径再取一次就是。
+ */
+export async function prefetchClip(urls: string[]): Promise<void> {
+  try { await Promise.all(urls.map(fetchBuffer)); } catch { /* 预热失败不影响主流程 */ }
+}
+
+/**
  * 把一个词的整段序列渲染成**一条**音频(间隔是真静音)。
  * 返回可直接喂给 `<audio>.src` 的 object URL,以及总时长(秒)。
  * ⚠️ 调用方负责在换词时 revokeObjectURL,否则一轮 50 词会漏 50 个 blob。

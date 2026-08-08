@@ -30,7 +30,7 @@ import { getBankByCode, type VocabBank } from "@/lib/vocab/data";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { getScenePack } from "@/lib/vocab/scenes";
 import {
-  buildPlaylist, buildWordClip, clipUrlsFor, diag, recordListening,
+  buildPlaylist, buildWordClip, clipUrlsFor, diag, prefetchClip, recordListening,
   DEFAULT_TOGGLES, ELEMENTS, SOURCES,
   type ElementKey, type ElementToggles, type ListenItem, type SourceKind,
 } from "@/lib/vocab/earTraining";
@@ -77,6 +77,15 @@ export default function VocabEarTraining() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const objUrlRef = useRef<string | null>(null);
   const repeatLeftRef = useRef(1);
+  /**
+   * **续播意图**——是不是"用户想让它一直放下去"。
+   * ⚠️ 这个必须是 ref、且**只由用户操作改写**,不能用 React 的 playing state 代替:
+   *    给 <audio> 换 src 时,HTML 载入算法会把 paused 置 true 并**派发一个 pause 事件**,
+   *    于是 onPause 把 playing 打成 false —— 下一条装好时判据已经没了,
+   *    表现就是"一个词读完就停,连播断在词与词之间"(真机实测到的那个 bug)。
+   *    playing state 从此只负责**显示**(按钮图标),不再当续播判据。
+   */
+  const wantPlayRef = useRef(false);
   const listenedRef = useRef(0);
 
   const packId = params.get("pack");
@@ -157,7 +166,16 @@ export default function VocabEarTraining() {
       if (!alive) return;
       repeatLeftRef.current = repeat;
       if (!ok) { advance(1); return; }                  // 这个词没音频,直接下一个
-      if (playing) audioRef.current?.play().catch(() => setPlaying(false));
+      if (wantPlayRef.current) {
+        audioRef.current?.play().catch((e: DOMException) => {
+          diag("✗ 续播失败", { name: e?.name });
+          wantPlayRef.current = false;
+        });
+      }
+      /* 当前这条已经在播了,趁机把**下一个词**的音频字节烤进缓存,
+         换词时就不用等网络(否则每换一词卡一下,像是断了) */
+      const nxt = items?.[idx + 1];
+      if (nxt) void prefetchClip(clipUrlsFor(nxt, toggles));
     })();
     return () => { alive = false; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -171,6 +189,7 @@ export default function VocabEarTraining() {
       const n = i + step;
       if (n >= total) {
         if (loop) return 0;
+        wantPlayRef.current = false;      // 整轮走完:不再续播
         setPlaying(false);
         setDone(true);
         return i;
@@ -232,6 +251,7 @@ export default function VocabEarTraining() {
 
   /* 离开页面:停播 + 回收 blob + 记一次听力量 */
   useEffect(() => () => {
+    wantPlayRef.current = false;
     audioRef.current?.pause();
     releaseUrl();
     void recordListening(listenedRef.current);
@@ -248,10 +268,11 @@ export default function VocabEarTraining() {
   const onPlayPause = () => {
     const el = audioRef.current;
     if (!el) return;
-    if (playing) { el.pause(); return; }
+    if (playing) { wantPlayRef.current = false; el.pause(); return; }
     setDone(false);
     setArmed(true);
     setPlayError(null);
+    wantPlayRef.current = true;   // 用户明确要听下去
     el.play().then(() => diag("▶ 开始播放")).catch((e: DOMException) => {
       setPlaying(false);
       /* NotAllowedError = autoplay policy 拦下(没有用户手势 / 手势已过期)。

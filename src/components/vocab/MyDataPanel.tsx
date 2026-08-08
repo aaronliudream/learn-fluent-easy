@@ -8,9 +8,7 @@
  *    这条和词汇中心那次是同一个教训。
  */
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Flame, LogIn } from "lucide-react";
-import { saveRedirectPath } from "@/lib/authRedirect";
+import { ChevronLeft, ChevronRight, Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FONT_STAT } from "@/lib/vocab/theme";
 import {
@@ -48,7 +46,6 @@ type Props = {
 
 export default function MyDataPanel({ color, globalLearned, globalMastered, signedIn }: Props) {
   const today = bjToday();
-  const navigate = useNavigate();
   const [stats, setStats] = useState<UserStats | null>(null);
   const [days, setDays] = useState<StudyDay[] | null>(null);
   const [ym, setYm] = useState(today.slice(0, 7));
@@ -98,16 +95,15 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
    *    VocabGrowth / VocabMistakes 拿到的是空数组(骨架会正常解除),只有这里中招。
    */
   if (signedIn === false) {
+    /* ⚠️ **不放登录按钮**。登录是全站行为、导航栏已有入口;
+     *    在板块内部再放一颗按钮,会让用户以为"这个板块要单独登录一次"。
+     *    这里只陈述事实,一行 12px 灰字。
+     *    (学习进度卡下面那行「未登录也可先试做 20 题」保留 —— 那是在讲产品规则,
+     *     不是催登录,两者性质不同。) */
     return (
       <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
         <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
-        <p className="mt-1 text-[13px] text-slate-500">登录后查看你的学习数据</p>
-        <button type="button" onClick={() => { saveRedirectPath(); navigate("/auth"); }}
-          className="mt-3 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[14px] font-medium text-white"
-          style={{ backgroundColor: color }}>
-          <LogIn className="h-[15px] w-[15px]" />
-          登录
-        </button>
+        <p className="mt-1 text-[12px] text-slate-400">登录后查看你的学习数据</p>
       </div>
     );
   }

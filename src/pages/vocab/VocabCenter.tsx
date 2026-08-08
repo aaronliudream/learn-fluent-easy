@@ -15,24 +15,37 @@
  *   ⚠️ 去重是 user_vocab_mastery 的表结构自带的((user_id, word_id) 唯一),
  *      同一个词同时属于托福和四级只算一次;各库进度那层才 join vocab_word_banks。
  *
- * ── 首屏一屏化(iPhone SE 375×667 不滚动可见)──
- *   标题+词库下拉 → 当前库细进度 → 学习进度卡(紧凑档) → 错题本/今日复习两小卡 → 露出下方一角。
- *   ⚠️ 词库从**卡片网格改成下拉**,省下的纵向空间是首屏的主要来源;
- *      里程碑改成一行折叠。别把它们改回去。
+ * ── 页面三层,对应用户的动线 ──
+ *   ① 我的状态:当前词库卡 → 学习进度(圆环/柱状)→ 错题本 + 今日复习  ← 看我在哪
+ *   ② 学习方式:词卡练习 / 场景串记 / 磨耳朵 / 音标基础 / 自然拼读 / 词汇量测试  ← 选今天怎么学
+ *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
+ *   ⚠️ 场景串记原来是页面**最底部一条横幅**,层级是错的 —— 它是背单词的一种方式,
+ *      不是词汇中心之外的附加功能。别再把它挪回底部。
+ *   ⚠️ 未上线的方式照样列出来、灰显不可点 —— 让用户看见这个板块在长。
+ *
+ * ── 首屏(iPhone SE 375×667)──
+ *   第一层要在不滚动时看完。实测底边(375×667):词库卡 205 / 学习进度卡 458 /
+ *   两张小卡 550(空态)。空态提示框本身占 86px,登录且有学习记录时它不渲染 → 收到 464。
+ *   ⚠️ 即真实用户装得下,**全新/未登录用户的两张小卡会被推到折线下一点**。
+ *   ⚠️ 词库卡是这一页的第一个决策点,分量是**故意**给足的;要再压首屏只能从别处找,
+ *      别把它压回一颗小胶囊。
  * ⚠️ 未登录/无数据必须正常渲染 0 态(RLS 让未登录读掌握度得到空数组,那是预期行为)。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { AlertCircle, CalendarClock, Check, ChevronDown, ChevronRight, Link2, Lock } from "lucide-react";
+import {
+  AlertCircle, CalendarClock, Check, ChevronDown, Gauge, Headphones,
+  Layers, Link2, Lock, Mic, SpellCheck,
+} from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
-import { bankColor, FONT_STAT, MILESTONES, readSelectedBank, SCENE_COLOR, writeSelectedBank } from "@/lib/vocab/theme";
+import { bankColor, FONT_STAT, MILESTONES, readSelectedBank, SCENE_COLOR, tintToWhite, writeSelectedBank } from "@/lib/vocab/theme";
 import { countScenePacks, countScenesDone } from "@/lib/vocab/scenes";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import {
   listBanks, getBankProgressFast, dueCountForBank, mistakeCountForBank, getGlobalTotals,
-  currentUserId, type VocabBank, type BankProgress,
+  bankWordCounts, currentUserId, type VocabBank, type BankProgress,
 } from "@/lib/vocab/data";
 import MyDataPanel from "@/components/vocab/MyDataPanel";
 import {
@@ -154,14 +167,13 @@ export default function VocabCenter() {
           ← 返回首页
         </BackLink>
 
-        {/* 标题 + 词库下拉同一行 —— 这一行省下的高度就是首屏的本钱 */}
-        <div className="mb-2.5 flex items-center gap-3">
-          <h1 className="shrink-0 text-[24px] font-bold tracking-tight text-slate-900">词汇</h1>
-          <BankPicker banks={banks} selected={selected} onPick={onPick} color={color} />
-        </div>
+        <h1 className="mb-2 text-[24px] font-bold tracking-tight text-slate-900">词汇</h1>
 
-        {/* 当前词库细进度:N / 总数。大卡不再显示分母,分母只活在这一条上 */}
-        <BankProgressLine progress={p ?? null} color={color} />
+        {/* ═══ 第一层「我的状态」:我在哪 ═══ */}
+        {/* 当前词库卡 —— 进入这一页的第一个决策点,视觉分量必须压得住。
+            该库进度(N/总数 + 细条)长在卡里,不再单列一行。 */}
+        <BankCard banks={banks} selected={selected} onPick={onPick}
+          color={color} progress={p ?? null} />
 
         {bankStats ? (
           <StatsPanel
@@ -196,7 +208,7 @@ export default function VocabCenter() {
           </div>
         )}
 
-        <div className="mt-3 grid grid-cols-2 gap-3">
+        <div className="mt-2.5 grid grid-cols-2 gap-3">
           <EntryCard icon={<AlertCircle className="h-[17px] w-[17px]" />} label="错题本"
             count={bankStats?.mistakes ?? null} hint="待清" to="/vocab/mistakes"
             extra={<HardestWords color={color} />} />
@@ -206,8 +218,15 @@ export default function VocabCenter() {
 
         {/* ↓↓↓ 以下不要求首屏可见 ↓↓↓ */}
 
-        {/* 周报是"每周一才出、可关闭"的偶发块,放在这里大多数日子根本不占位 */}
-        {/* 分享卡上的「我的词汇量 N」也是全局累计 —— 与里程碑同一个数 */}
+        {/* ═══ 第二层「学习方式」:今天怎么学 ═══ */}
+        <StudyModes bankCode={selected?.code ?? null} color={color} />
+
+        {/* ═══ 第三层「成就」:我攒了多少 ═══ */}
+        <h2 className="mb-2 mt-6 text-[13px] font-medium text-slate-400">成就</h2>
+
+        {/* 周报是"每周一才出、可关闭"的偶发块,大多数日子根本不占位。
+            它讲的是"上周攒了多少",归成就层比夹在方式层里更顺。
+            分享卡上的「我的词汇量 N」也是全局累计 —— 与里程碑同一个数。 */}
         <WeeklyBanner color={color} onShare={(w: WeeklySummary) => setShare({
           mastered: globalMastered ?? 0, streak: w.streak, points: uStats?.total_points ?? 0,
           totalMs: uStats?.total_time_ms ?? 0,
@@ -219,8 +238,6 @@ export default function VocabCenter() {
         <MyDataPanel color={color}
           globalLearned={totals?.learned ?? null}
           globalMastered={totals?.mastered ?? null} />
-
-        <SceneBanner />
 
         {failed && (
           <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-6 text-center">
@@ -239,24 +256,51 @@ export default function VocabCenter() {
   );
 }
 
-/* ── 词库下拉 ───────────────────────────────────────────────────── */
+/* ── 当前词库卡 ─────────────────────────────────────────────────── */
 
 /**
- * 词库选择器。可用的正常列,未上线的灰显标「敬请期待」且**不可选**。
- * ⚠️ 未上线的库仍然列出来 —— 那是产品路线图,提前让用户看见"以后有什么",
- *    但必须点不动,否则点进去是一张空页。
+ * 当前词库卡 —— 整块可点展开的选择器,不是系统原生 select。
+ *
+ * ⚠️ 由来:上一版是标题右侧一颗小胶囊下拉,视觉上像个次要控件;
+ *    但**它是用户进这一页的第一个决策点**(今天学哪个库),分量必须压得住。
+ *    现在:身份色 8% 淡染的卡 + 20px 粗体库名 + 该库进度长在卡里。
+ *
+ * ⚠️ 卡底那层"身份色淡染"用 **tintToWhite(color, 0.92)**,不是 8% 透明度。
+ *    实测把 `${color}14`(≈8% alpha)叠在暖白底 #FAF7F2 上算出来是 rgb(231,228,229)——
+ *    **就是一块灰**,身份色白染了。混色版是 rgb(236,240,245),同样浅但一眼看得出是蓝的。
+ *    (同理绝不能写 Tailwind 的 `bg-[#xxx]/8`:那套只有 5 的倍数才编得出来,/8 直接透明。)
+ * ⚠️ 圆角/细边/阴影沿用 VOCAB_DESIGN_SPEC 第 1 节那套(16px 圆角 + 1px 细边),
+ *    没有另起一套;卡本身不用渐变(全页唯一渐变位属于主 CTA)。
  */
-function BankPicker({ banks, selected, onPick, color }: {
+function BankCard({ banks, selected, onPick, color, progress }: {
   banks: VocabBank[];
   selected: VocabBank | null;
   onPick: (b: VocabBank) => void;
   color: string;
+  progress: BankProgress | null;
 }) {
   const [open, setOpen] = useState(false);
+  const [counts, setCounts] = useState<Record<string, number>>({});
   const boxRef = useRef<HTMLDivElement | null>(null);
 
-  /* 点外面收起。用 pointerdown 而不是 click —— click 在移动端要等 300ms 判定,
-     期间用户已经在滚动了,菜单还挂着很出戏。 */
+  const active = useMemo(() => banks.filter(b => b.is_active), [banks]);
+  const soon = useMemo(() => banks.filter(b => !b.is_active), [banks]);
+
+  /* 面板右侧那个词数:只给**已上线**的库数(未上线的显示「敬请期待」)。
+     展开时才拉 —— 没点开的人不该为它付一次往返。 */
+  useEffect(() => {
+    if (!open || !active.length) return;
+    let alive = true;
+    const missing = active.filter(b => counts[b.id] === undefined).map(b => b.id);
+    if (!missing.length) return;
+    bankWordCounts(missing)
+      .then(m => { if (alive) setCounts(prev => ({ ...prev, ...m })); })
+      .catch(() => { /* 数不出来就不显示那个数,面板照常能选 */ });
+    return () => { alive = false; };
+  }, [open, active, counts]);
+
+  /* 点外面收起。用 pointerdown 而不是 click —— click 在移动端要等一拍判定,
+     期间用户已经在滚动了,面板还挂着很出戏。 */
   useEffect(() => {
     if (!open) return;
     const onDown = (e: PointerEvent) => {
@@ -268,65 +312,6 @@ function BankPicker({ banks, selected, onPick, color }: {
     return () => { document.removeEventListener("pointerdown", onDown); document.removeEventListener("keydown", onKey); };
   }, [open]);
 
-  const active = useMemo(() => banks.filter(b => b.is_active), [banks]);
-  const soon = useMemo(() => banks.filter(b => !b.is_active), [banks]);
-
-  return (
-    <div ref={boxRef} className="relative min-w-0 flex-1">
-      <button type="button" onClick={() => setOpen(v => !v)}
-        aria-haspopup="listbox" aria-expanded={open}
-        disabled={!banks.length}
-        className="flex w-full items-center gap-1.5 rounded-full border border-black/[0.08] bg-white px-3 py-1.5 text-left shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
-        <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: color }} />
-        <span className="min-w-0 flex-1 truncate text-[15px] font-medium text-slate-800">
-          {selected?.name_zh ?? (banks.length ? "选择词库" : "加载中")}
-        </span>
-        {selected && needsUnlock(selected) && <Lock className="h-3.5 w-3.5 shrink-0 text-slate-400" />}
-        <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-400 transition-transform", open && "rotate-180")} />
-      </button>
-
-      {open && (
-        <div role="listbox"
-          className="absolute left-0 right-0 top-[calc(100%+6px)] z-30 max-h-[60vh] overflow-y-auto rounded-2xl border border-black/[0.08] bg-white p-1.5 shadow-[0_12px_32px_rgba(15,23,42,0.14)]">
-          {active.map(b => {
-            const c = bankColor(b.code);
-            const on = b.id === selected?.id;
-            return (
-              <button key={b.id} type="button" role="option" aria-selected={on}
-                onClick={() => { onPick(b); setOpen(false); }}
-                className={cn("flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left",
-                  on ? "bg-slate-50" : "active:bg-slate-50")}>
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: c }} />
-                <span className="min-w-0 flex-1 truncate text-[15px] text-slate-800">{b.name_zh}</span>
-                {needsUnlock(b) && <Lock className="h-3.5 w-3.5 shrink-0 text-slate-400" />}
-                {on && <Check className="h-4 w-4 shrink-0" style={{ color: c }} />}
-              </button>
-            );
-          })}
-
-          {soon.length > 0 && (
-            <>
-              <div className="mx-2.5 my-1 border-t border-black/[0.06]" />
-              {soon.map(b => (
-                /* 不可选:用 disabled 的 button,不是长得像却点不动的 div ——
-                   "不可点"和"看起来不可点"是两回事,两样都得给到 */
-                <button key={b.id} type="button" disabled aria-disabled
-                  className="flex w-full cursor-not-allowed items-center gap-2.5 rounded-xl px-2.5 py-2 text-left opacity-60">
-                  <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-slate-200" />
-                  <span className="min-w-0 flex-1 truncate text-[15px] text-slate-400">{b.name_zh}</span>
-                  <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-400">敬请期待</span>
-                </button>
-              ))}
-            </>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-/** 当前词库的一条细进度。分母只出现在这里(大卡里不再出现)。 */
-function BankProgressLine({ progress, color }: { progress: BankProgress | null; color: string }) {
   const total = progress?.total ?? 0;
   const mastered = progress?.mastered ?? 0;
   const learning = progress?.learning ?? 0;
@@ -334,25 +319,104 @@ function BankProgressLine({ progress, color }: { progress: BankProgress | null; 
   const pctReached = total > 0 ? ((mastered + learning) / total) * 100 : 0;
 
   return (
-    <div className="mb-3">
-      <div className="mb-1 flex items-baseline justify-between">
-        <span className="text-[12px] text-slate-400">本词库进度</span>
-        {progress ? (
-          <span className="text-[12px] text-slate-500" style={{ fontVariantNumeric: "tabular-nums" }}>
-            <b className="font-semibold text-slate-700">{mastered}</b> / {total}
+    <div ref={boxRef} className="relative">
+      <div className="mb-1 text-[12px] text-slate-400">当前词库</div>
+
+      <button type="button" onClick={() => setOpen(v => !v)}
+        aria-haspopup="listbox" aria-expanded={open} disabled={!banks.length}
+        className="block w-full rounded-2xl border p-3.5 text-left shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-transform duration-100 active:scale-[0.99]"
+        style={{ backgroundColor: tintToWhite(color, 0.92), borderColor: tintToWhite(color, 0.72) }}>
+        <div className="flex items-center gap-2.5">
+          <span className="h-3 w-3 shrink-0 rounded-full" style={{ backgroundColor: color }} />
+          <span className="min-w-0 flex-1 truncate text-[20px] font-bold tracking-tight text-slate-900">
+            {selected?.name_zh ?? (banks.length ? "选择词库" : "加载中")}
           </span>
-        ) : (
-          <span className="h-[14px] w-14 animate-pulse rounded bg-slate-100" />
+          {selected && needsUnlock(selected) && <Lock className="h-4 w-4 shrink-0 text-slate-400" />}
+          <ChevronDown className={cn("h-5 w-5 shrink-0 text-slate-400 transition-transform duration-150", open && "rotate-180")} />
+        </div>
+
+        {/* 进度靠右下 —— 数字先于条,条只是数字的可视化 */}
+        <div className="mt-2">
+          <div className="mb-1 flex justify-end">
+            {progress ? (
+              <span className="text-[12px] text-slate-500" style={{ fontVariantNumeric: "tabular-nums" }}>
+                <b className="font-semibold text-slate-700">{mastered}</b> / {total}
+              </span>
+            ) : (
+              <span className="block h-[14px] w-16 animate-pulse rounded bg-black/[0.06]" />
+            )}
+          </div>
+          <div className="relative h-1.5 overflow-hidden rounded-full bg-black/[0.06]">
+            {/* 浅段 = 已掌握 + 学习中;深段 = 已掌握。与圆环同一套两段口径。
+                最小可见宽度 3px —— 64/4470 = 1%,在 6px 高的条上等于不存在,
+                而"让努力看得见"最需要的恰恰是起步阶段。 */}
+            <div className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-500"
+              style={{ width: pctReached > 0 ? `max(3px, ${pctReached}%)` : 0, background: color, opacity: 0.4 }} />
+            <div className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-500"
+              style={{ width: pct > 0 ? `max(3px, ${pct}%)` : 0, background: color }} />
+          </div>
+        </div>
+      </button>
+
+      {/* 展开面板:150ms 高度 + 透明度过渡,不生硬闪现。
+          ⚠️ 高度动画用 grid-rows 0fr→1fr,不用 max-height ——
+             max-height 要猜一个够大的值,内容比它短时过渡会"先快后停"。
+          ⚠️ 绝对定位浮在上层,**不把下面的内容推下去**:
+             推下去的话一展开整页内容全跳,SE 上尤其难受。
+          ⚠️ 收起时 pointer-events-none,否则那层看不见却仍然挡着点击。 */}
+      <div
+        className={cn(
+          "absolute left-0 right-0 top-[calc(100%+6px)] z-30 grid transition-all duration-150 ease-out",
+          open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none grid-rows-[0fr] opacity-0",
         )}
-      </div>
-      <div className="relative h-1.5 overflow-hidden rounded-full bg-slate-100">
-        {/* 浅段 = 已掌握 + 学习中;深段 = 已掌握。与圆环同一套两段口径。
-            最小可见宽度 3px —— 64/4470 = 1%,在 6px 高的条上等于不存在,
-            而"让努力看得见"最需要的恰恰是起步阶段。 */}
-        <div className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-500"
-          style={{ width: pctReached > 0 ? `max(3px, ${pctReached}%)` : 0, background: color, opacity: 0.35 }} />
-        <div className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-500"
-          style={{ width: pct > 0 ? `max(3px, ${pct}%)` : 0, background: color }} />
+        aria-hidden={!open}
+      >
+        <div className="overflow-hidden">
+          <div role="listbox"
+            className="max-h-[60vh] overflow-y-auto rounded-2xl border border-black/[0.08] bg-white p-1.5 shadow-[0_12px_32px_rgba(15,23,42,0.14)]">
+            {active.map(b => {
+              const c = bankColor(b.code);
+              const on = b.id === selected?.id;
+              const n = counts[b.id];
+              return (
+                <button key={b.id} type="button" role="option" aria-selected={on}
+                  tabIndex={open ? 0 : -1}
+                  onClick={() => { onPick(b); setOpen(false); }}
+                  className={cn("relative flex w-full items-center gap-2.5 rounded-xl py-2.5 pl-3.5 pr-2.5 text-left",
+                    on ? "bg-slate-50" : "active:bg-slate-50")}>
+                  {/* 选中行:左侧一条身份色竖条 */}
+                  {on && <span className="absolute inset-y-1.5 left-0 w-[3px] rounded-full" style={{ backgroundColor: c }} />}
+                  <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: c }} />
+                  <span className="min-w-0 flex-1 truncate text-[15px] text-slate-800">{b.name_zh}</span>
+                  {needsUnlock(b) && <Lock className="h-3.5 w-3.5 shrink-0 text-slate-400" />}
+                  {typeof n === "number" && (
+                    <span className="shrink-0 text-[12px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
+                      {n} 词
+                    </span>
+                  )}
+                  {on && <Check className="h-4 w-4 shrink-0" style={{ color: c }} />}
+                </button>
+              );
+            })}
+
+            {soon.length > 0 && (
+              <>
+                <div className="mx-3 my-1 border-t border-black/[0.06]" />
+                {soon.map(b => (
+                  /* 不可选:用 disabled 的 button,不是长得像却点不动的 div ——
+                     "不可点"和"看起来不可点"是两回事,两样都得给到。
+                     40% 透明度是 Aaron 指定的档位。 */
+                  <button key={b.id} type="button" disabled aria-disabled tabIndex={-1}
+                    className="flex w-full cursor-not-allowed items-center gap-2.5 rounded-xl py-2.5 pl-3.5 pr-2.5 text-left opacity-40">
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-slate-300" />
+                    <span className="min-w-0 flex-1 truncate text-[15px] text-slate-600">{b.name_zh}</span>
+                    <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-500">敬请期待</span>
+                  </button>
+                ))}
+              </>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -396,49 +460,90 @@ function EntryCard({ icon, label, count, hint, to, extra }: {
     : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-slate-50/60 opacity-70")}>{body}</div>;
 }
 
+/* ── 第二层:学习方式 ───────────────────────────────────────────── */
+
 /**
- * 场景串记入口 —— 全宽横幅。
+ * 学习方式分组 —— 这一页最该突出的东西。
  *
- * ⚠️ 分母走 countScenePacks()(head 查询,只回一个数),不用 listScenePacks:
- *    后者为了算"短文 N 词"会把 30 篇正文全拉下来,那是列表页才需要付的钱。
- * ⚠️ 取数失败/一个场景都没有时**整条横幅不渲染** —— 与其挂一条点进去是空页的入口,
- *    不如当它不存在。
+ * ⚠️ 由来:场景串记原来是**页面最底部一条横幅**,层级放错了 ——
+ *    它是"背单词的一种方式",不是词汇中心之外的附加功能。
+ *    现在把所有方式并排放在一起,用户的动线才顺:
+ *    看我在哪(状态)→ 选今天怎么学(方式)→ 看我攒了多少(成就)。
+ * ⚠️ 未上线的方式**照样列出来、灰显不可点** —— 让用户看见这个板块在长。
+ *    但必须点不动(disabled 的 div,不是长得像却没反应的卡)。
+ * ⚠️ 场景串记的「已学 N/30」与 /vocab/scenes 顶部那行**同一个口径**(都数 done 键)。
  */
-function SceneBanner() {
-  const [total, setTotal] = useState(0);
-  const [done, setDone] = useState(0);
+function StudyModes({ bankCode, color }: { bankCode: string | null; color: string }) {
+  const [scene, setScene] = useState<{ done: number; total: number } | null>(null);
 
   useEffect(() => {
     let alive = true;
     countScenePacks()
-      /* 分子数的是 done 键,与场景列表页顶部那行「已学 N / 30」**同一个口径** ——
-         两处各算各的,迟早出现"横幅说 5、列表说 3"这种鬼故事 */
-      .then(n => { if (alive) { setTotal(n); setDone(countScenesDone()); } })
-      .catch(() => { /* 场景没上线/读失败:横幅整条不出,不拦住中心页 */ });
+      .then(n => { if (alive) setScene({ total: n, done: countScenesDone() }); })
+      .catch(() => { /* 场景取不到就不显示那行进度,卡片本身照常可点 */ });
     return () => { alive = false; };
   }, []);
 
-  if (total <= 0) return null;
+  const sceneStatus = scene && scene.total > 0
+    ? `已学 ${Math.min(scene.done, scene.total)}/${scene.total}`
+    : null;
 
   return (
-    <Link to="/vocab/scenes"
-      className="mt-4 flex items-center gap-3.5 rounded-2xl border border-black/[0.06] bg-white px-4 py-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:bg-slate-50">
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-        style={{ backgroundColor: `${SCENE_COLOR}1F` }}>
-        <Link2 className="h-5 w-5" style={{ color: SCENE_COLOR }} />
-      </span>
-      <div className="min-w-0 flex-1">
-        <div className="text-[15px] font-semibold text-slate-900">场景串记</div>
-        <div className="mt-0.5 truncate text-[13px] text-slate-500">
-          {total} 个生活场景,把单词串成一篇作文
-        </div>
+    <>
+      <h2 className="mb-2 mt-6 text-[13px] font-medium text-slate-400">学习方式</h2>
+      <div className="grid grid-cols-2 gap-3">
+        <ModeCard
+          icon={<Layers className="h-[18px] w-[18px]" />}
+          name="词卡练习" desc="四种模式练词卡" color={color}
+          /* 四模式入口在词库页;没选中库时不给链接(点进去是 /vocab/undefined) */
+          to={bankCode ? `/vocab/${bankCode}` : undefined}
+          status={bankCode ? "英汉/配对/听音/听写" : null}
+        />
+        <ModeCard
+          icon={<Link2 className="h-[18px] w-[18px]" />}
+          name="场景串记" desc="30 个生活场景,把单词串成一篇作文"
+          color={SCENE_COLOR} to="/vocab/scenes" status={sceneStatus}
+        />
+        <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="听力浸泡" color={color} />
+        <ModeCard icon={<Mic className="h-[18px] w-[18px]" />} name="音标基础" desc="48 个音标" color={color} />
+        <ModeCard icon={<SpellCheck className="h-[18px] w-[18px]" />} name="自然拼读" desc="看词能读、听音能写" color={color} />
+        <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="测测你现在多少词" color={color} />
       </div>
-      <span className="shrink-0 text-[13px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
-        {/* 已学数取本地记录与总数的较小值 —— 场景下架后本地那条记录还在,
-            不夹一下会出现「31/30」 */}
-        {Math.min(done, total)}/{total}
-      </span>
-      <ChevronRight className="h-[18px] w-[18px] shrink-0 text-slate-300" />
-    </Link>
+    </>
   );
+}
+
+/** 一张方式卡。没有 `to` = 未上线,灰显 + 显式标「即将开放」且点不动。 */
+function ModeCard({ icon, name, desc, color, to, status }: {
+  icon: React.ReactNode; name: string; desc: string; color: string;
+  to?: string; status?: string | null;
+}) {
+  const soon = !to;
+  const body = (
+    <>
+      <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-full"
+        style={{ backgroundColor: soon ? "#F1F5F9" : `${color}1F`, color: soon ? "#94A3B8" : color }}>
+        {icon}
+      </span>
+      <div className="flex items-center gap-1.5">
+        <span className={cn("text-[15px] font-semibold", soon ? "text-slate-400" : "text-slate-900")}>{name}</span>
+      </div>
+      {/* 一句话说明:两行封顶,别让长短不一把卡撑成参差不齐 */}
+      <p className={cn("mt-0.5 line-clamp-2 text-[12px] leading-snug", soon ? "text-slate-300" : "text-slate-500")}>
+        {desc}
+      </p>
+      <div className="mt-1.5 text-[12px] font-medium" style={{ fontVariantNumeric: "tabular-nums" }}>
+        {soon
+          ? <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-normal text-slate-400">即将开放</span>
+          : status
+            ? <span style={{ color }}>{status}</span>
+            /* 还没拿到状态时留一个等高的空行,避免数据到位时整排卡跳一下 */
+            : <span className="inline-block h-[16px]" />}
+      </div>
+    </>
+  );
+  const cls = "flex flex-col rounded-2xl border border-black/[0.06] px-3.5 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
+  return to
+    ? <Link to={to} className={cn(cls, "bg-white active:bg-slate-50")}>{body}</Link>
+    : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-slate-50/60")}>{body}</div>;
 }

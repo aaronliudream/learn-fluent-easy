@@ -458,6 +458,25 @@ export async function mistakeCountForBank(bankId: string): Promise<number> {
   return (await idsInBank(bankId, ids)).size;
 }
 
+/**
+ * 各词库**实际挂着的词数**(词库选择面板右侧那个数)。
+ *
+ * ⚠️ 用真实 count,不用 vocab_banks.total_words —— 后者是规划值(托福填 4473),
+ *    而库里实际可学 4470。面板显示 4473、卡片显示 4470,用户会以为哪边坏了。
+ * ⚠️ head 查询不拉数据;只给**已上线**的库调用(未上线的显示「敬请期待」,不需要数)。
+ */
+export async function bankWordCounts(bankIds: string[]): Promise<Record<string, number>> {
+  const entries = await Promise.all(bankIds.map(async id => {
+    const { count, error } = await db
+      .from("vocab_word_banks")
+      .select("word_id", { count: "exact", head: true })
+      .eq("bank_id", id);
+    if (error) return [id, 0] as const;    // 单个库数不出来不该拖垮整个面板
+    return [id, count ?? 0] as const;
+  }));
+  return Object.fromEntries(entries);
+}
+
 /** 某词库下的全部 word_id —— 成长图按库过滤要用。对外暴露的是这一个。 */
 export async function listBankWordIds(bankId: string): Promise<string[]> {
   return bankWordIds(bankId);

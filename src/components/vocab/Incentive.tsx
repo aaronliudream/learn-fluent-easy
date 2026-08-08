@@ -296,22 +296,19 @@ export function MilestoneSummary({ mastered, color }: { mastered: number | null;
 
   return (
     <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      {/* ⚠️ 摘要单独占一行,不跟标题挤在一行 —— 375px 宽下
-          「还没达成第一档 · 距 1600 还差 1600 词」必然被 truncate 砍掉尾巴,
-          而被砍掉的恰好是"还差多少"这个唯一有用的数字。 */}
+      {/* 一行排完(总原则:能一行说完的不许分两行)。
+          ⚠️ 摘要文案**刻意写短**:早先写成「还没达成第一档 · 距 1600 还差 1600 词」,
+             375px 下必然被 truncate 砍掉尾巴,而砍掉的恰好是"还差多少"这个唯一有用的数字。
+             现在未达成时只说"距 N 还差 M",达成后才加"已达 X"。truncate 仅作兜底。 */}
       <button type="button" onClick={() => setOpen(v => !v)} aria-expanded={open}
-        className="block w-full text-left">
-        <span className="flex items-center gap-2">
-          <Sparkles className="h-[17px] w-[17px] shrink-0 text-amber-500" />
-          <span className="flex-1 text-[15px] font-semibold text-slate-900">里程碑</span>
-          <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-300 transition-transform", open && "rotate-180")} />
+        className="flex w-full items-center gap-2 text-left">
+        <Sparkles className="h-[17px] w-[17px] shrink-0 text-amber-500" />
+        <span className="shrink-0 text-[15px] font-semibold text-slate-900">里程碑</span>
+        <span className="min-w-0 flex-1 truncate text-right text-[13px] text-slate-500">
+          {current && <>已达 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{current}</b>{next ? " · " : ""}</>}
+          {next && <>距 {next} 还差 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{next - mastered}</b> 词</>}
         </span>
-        <span className="mt-1 block text-[13px] text-slate-500">
-          {current
-            ? <>已达 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{current}</b></>
-            : <span className="text-slate-400">还没达成第一档</span>}
-          {next && <> · 距 {next} 还差 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{next - mastered}</b> 词</>}
-        </span>
+        <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-300 transition-transform", open && "rotate-180")} />
       </button>
       {open && <div className="mt-3"><MilestoneStrip mastered={mastered} color={color} /></div>}
     </div>

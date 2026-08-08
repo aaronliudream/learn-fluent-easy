@@ -172,15 +172,17 @@ export default function VocabBank() {
           </button>
           {/* PR-2 把这个按钮接到 5 步通关流程;现在先滚到词表,不做假入口。 */}
 
-          <div className="mt-4 grid grid-cols-2 gap-3">
+          {/* 四模式**一行排完**(原来是 2×2 方块、每张三行,吃掉近 200px)。
+              ⚠️ 图标在上、名称在下的竖排,不是横排胶囊 ——
+                 375px 下每格只有约 80px,横排「图标 + 四个汉字」实测要 82px,会挤爆换行。
+              ⚠️ desc(看词选义…)和「开始 →」一并去掉:名称本身已经说清了,
+                 这两行是纯装饰,占的却是真高度。 */}
+          <div className="mt-4 grid grid-cols-4 gap-2">
             {MODES.map(m => (
               <Link key={m.key} to={`/vocab/${bankCode}/${m.path}`}
-                className="rounded-2xl border border-black/[0.06] bg-white px-4 py-4">
-                <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-800">
-                  <m.icon className="h-[18px] w-[18px]" style={{ color }} />{m.label}
-                </div>
-                <div className="mt-0.5 text-[13px] text-slate-400">{m.desc}</div>
-                <div className="mt-2 text-[12px] font-medium" style={{ color }}>开始 →</div>
+                className="flex flex-col items-center gap-1 rounded-xl border border-black/[0.06] bg-white px-1 py-2.5 active:bg-slate-50">
+                <m.icon className="h-[18px] w-[18px]" style={{ color }} />
+                <span className="text-[12px] font-medium text-slate-700">{m.label}</span>
               </Link>
             ))}
           </div>

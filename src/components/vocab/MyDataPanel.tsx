@@ -131,16 +131,17 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
 
   return (
     <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      <div className="mb-1 flex items-center justify-between">
-        <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
+      {/* 标题 + 口径说明**同一行**(总原则:能一行说完的不许分两行)。
+          那句说明必须留着 —— 它是这块与上方"当前词库"那层唯一的区分标记。 */}
+      <div className="mb-3 flex items-baseline gap-2">
+        <h2 className="shrink-0 text-[16px] font-semibold text-slate-900">我的数据</h2>
+        <span className="min-w-0 flex-1 truncate text-[12px] text-slate-400">跨词库累计,不随切换变</span>
         {streak > 0 && (
-          <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-[13px] font-semibold text-amber-700">
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-[13px] font-semibold text-amber-700">
             <Flame className="h-3.5 w-3.5" />连续 {streak} 天
           </span>
         )}
       </div>
-      {/* 说清这一整块是"跨词库总计",与上方那块"当前词库"分开 */}
-      <p className="mb-3 text-[12px] text-slate-400">跨所有词库累计,不随上方词库切换</p>
 
       {/* 四宫格:全部是**全局累计**口径 */}
       <div className="grid grid-cols-2 gap-3">

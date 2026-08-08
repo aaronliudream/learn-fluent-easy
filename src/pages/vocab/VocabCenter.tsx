@@ -34,8 +34,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, Gauge, Headphones,
-  Layers, Link2, Lock, Mic, SpellCheck,
+  AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
+  Gauge, Headphones, Layers, Link2, Lock, Mic, SpellCheck,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -49,7 +49,7 @@ import {
 } from "@/lib/vocab/data";
 import MyDataPanel from "@/components/vocab/MyDataPanel";
 import {
-  HardestWords, WeeklyBanner, Confetti, ShareCard, MilestoneSummary,
+  WeeklyBanner, Confetti, ShareCard, MilestoneSummary,
   useMilestoneCelebration, type WeeklySummary,
 } from "@/components/vocab/Incentive";
 import { getStats, type UserStats } from "@/lib/vocab/stats";
@@ -223,9 +223,11 @@ export default function VocabCenter() {
         )}
 
         <div className="mt-2.5 grid grid-cols-2 gap-3">
+          {/* ⚠️ 原来错题本卡里还挂着 <HardestWords>(「和 environment 大战了 4 回合」)当第二行,
+              单行化之后没位置了,已摘掉。组件本身还在 Incentive.tsx,
+              要保留这条激励文案建议挪到 /vocab/mistakes 页顶 —— 那里才是它的主场。 */}
           <EntryCard icon={<AlertCircle className="h-[17px] w-[17px]" />} label="错题本"
-            count={bankStats?.mistakes ?? null} hint="待清" to="/vocab/mistakes"
-            extra={<HardestWords color={color} />} />
+            count={bankStats?.mistakes ?? null} hint="待清" to="/vocab/mistakes" />
           <EntryCard icon={<CalendarClock className="h-[17px] w-[17px]" />} label="今日复习"
             count={bankStats?.due ?? null} hint="到期" to="/vocab/review" />
         </div>
@@ -388,11 +390,13 @@ function BankCard({ banks, selected, onPick, color, progress }: {
 
           {/* ① 有形态的胶囊。span 不是 button —— 外层整张卡已经是 button 了,
               嵌套交互元素是非法 HTML。按压态靠 group-active 从父级传下来。 */}
+          {/* 字号 14px 加粗、内边距左右 +4 上下 +2、图标放大一档 ——
+              目标是视觉重量接近旁边「托福词汇」那行标题,不能读成一个附属小标签。 */}
           <span className={cn(
-            "inline-flex shrink-0 items-center gap-1 rounded-full border bg-white px-2.5 py-1 text-[12px] font-medium",
+            "inline-flex shrink-0 items-center gap-1.5 rounded-full border bg-white px-3.5 py-1.5 text-[14px] font-semibold",
             "transition-transform duration-100 group-active:scale-95",
           )} style={{ borderColor: tintToWhite(color, 0.55), color }}>
-            <ArrowLeftRight className="h-3.5 w-3.5" />
+            <ArrowLeftRight className="h-4 w-4" />
             切换词库
           </span>
           <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-400 transition-transform duration-150", open && "rotate-180")} />
@@ -464,22 +468,25 @@ function BankCard({ banks, selected, onPick, color, progress }: {
               const on = b.id === selected?.id;
               const n = counts[b.id];
               return (
+                /* ⚠️ 词库名 20px 加粗 —— 与卡片上「托福词汇」**同级**。
+                   面板是做选择的地方,选项和"当前选中项"是同一组东西,
+                   字号有等级差会让用户觉得"切过去就降级了"。 */
                 <button key={b.id} type="button" role="option" aria-selected={on}
                   tabIndex={open ? 0 : -1}
                   onClick={() => { onPick(b); setOpen(false); }}
-                  className={cn("relative flex w-full items-center gap-2.5 rounded-xl py-2.5 pl-3.5 pr-2.5 text-left",
+                  className={cn("relative flex min-h-[56px] w-full items-center gap-3 rounded-xl py-2.5 pl-4 pr-2.5 text-left",
                     on ? "bg-slate-50" : "active:bg-slate-50")}>
                   {/* 选中行:左侧一条身份色竖条 */}
-                  {on && <span className="absolute inset-y-1.5 left-0 w-[3px] rounded-full" style={{ backgroundColor: c }} />}
-                  <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: c }} />
-                  <span className="min-w-0 flex-1 truncate text-[15px] text-slate-800">{b.name_zh}</span>
-                  {needsUnlock(b) && <Lock className="h-3.5 w-3.5 shrink-0 text-slate-400" />}
+                  {on && <span className="absolute inset-y-2 left-0 w-[3px] rounded-full" style={{ backgroundColor: c }} />}
+                  <span className="h-3 w-3 shrink-0 rounded-full" style={{ backgroundColor: c }} />
+                  <span className="min-w-0 flex-1 truncate text-[20px] font-bold tracking-tight text-slate-900">{b.name_zh}</span>
+                  {needsUnlock(b) && <Lock className="h-4 w-4 shrink-0 text-slate-400" />}
                   {typeof n === "number" && (
                     <span className="shrink-0 text-[12px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
                       {n} 词
                     </span>
                   )}
-                  {on && <Check className="h-4 w-4 shrink-0" style={{ color: c }} />}
+                  {on && <Check className="h-5 w-5 shrink-0" style={{ color: c }} />}
                 </button>
               );
             })}
@@ -491,11 +498,14 @@ function BankCard({ banks, selected, onPick, color, progress }: {
                   /* 不可选:用 disabled 的 button,不是长得像却点不动的 div ——
                      "不可点"和"看起来不可点"是两回事,两样都得给到。
                      40% 透明度是 Aaron 指定的档位。 */
+                  /* ⚠️ 未上线的库**字号与已上线完全一致**,只用 40% 透明度表达不可选。
+                     靠缩小字号表达禁用会让人读成"次要内容",而它们是同一组选项。
+                     「敬请期待」保持 12px 小字 —— 它是状态,不是选项本身。 */
                   <button key={b.id} type="button" disabled aria-disabled tabIndex={-1}
-                    className="flex w-full cursor-not-allowed items-center gap-2.5 rounded-xl py-2.5 pl-3.5 pr-2.5 text-left opacity-40">
-                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-slate-300" />
-                    <span className="min-w-0 flex-1 truncate text-[15px] text-slate-600">{b.name_zh}</span>
-                    <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-500">敬请期待</span>
+                    className="flex min-h-[56px] w-full cursor-not-allowed items-center gap-3 rounded-xl py-2.5 pl-4 pr-2.5 text-left opacity-40">
+                    <span className="h-3 w-3 shrink-0 rounded-full bg-slate-400" />
+                    <span className="min-w-0 flex-1 truncate text-[20px] font-bold tracking-tight text-slate-900">{b.name_zh}</span>
+                    <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[12px] text-slate-600">敬请期待</span>
                   </button>
                 ))}
               </>
@@ -509,41 +519,29 @@ function BankCard({ banks, selected, onPick, color, progress }: {
 }
 
 /**
- * 入口卡。没有 `to` 的卡必须显式标"即将开放"。
+ * 入口卡 —— **一行排完**:图标 + 名称 + 大字 + 单位。
  *
- * ⚠️ 由来:错题本卡原来只是不给 `to`,渲染成 `div` —— 技术上确实点不动,
- *    但它和旁边**可点的「今日复习」卡长得一模一样**,用户当然会去点,
- *    点了没反应。"不可点"和"看起来不可点"是两回事。
+ * ⚠️ 原来是两行(名称一行、数字一行),两张卡就吃掉 76px。
+ *    总原则:凡能一行说完的不许分两行。
+ * ⚠️ 「即将开放」那条灰标和不可点分支已删 —— 错题本(PR-4)和今日复习都已上线,
+ *    两个调用点都带 `to`,那条分支是死代码。真有新的未上线入口再按需加回。
  * ⚠️ count = null 表示还没就绪,显示灰块而不是 0(同"绝不渲染 0"那条)。
  */
-function EntryCard({ icon, label, count, hint, to, extra }: {
-  icon: React.ReactNode; label: string; count: number | null; hint: string; to?: string; extra?: React.ReactNode;
+function EntryCard({ icon, label, count, hint, to }: {
+  icon: React.ReactNode; label: string; count: number | null; hint: string; to: string;
 }) {
-  const soon = !to;
-  const body = (
-    <>
-      <div className="flex items-center gap-1.5 text-[14px] font-medium text-slate-700">
-        <span className="text-slate-400">{icon}</span>{label}
-        {soon && (
-          <span className="ml-auto rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-normal text-slate-400">
-            即将开放
-          </span>
-        )}
-      </div>
-      <div className="mt-0.5 flex items-baseline gap-1">
-        {count === null
-          ? <span className="my-1 block h-[24px] w-10 animate-pulse rounded bg-slate-100" />
-          : <span className={cn("text-[24px] font-bold", soon ? "text-slate-400" : "text-slate-900")}
-              style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>}
-        <span className="text-[13px] text-slate-400">{hint}</span>
-      </div>
-      {extra}
-    </>
+  return (
+    <Link to={to}
+      className="flex items-center gap-1.5 rounded-2xl border border-black/[0.06] bg-white px-3.5 py-2.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:bg-slate-50">
+      <span className="shrink-0 text-slate-400">{icon}</span>
+      <span className="shrink-0 text-[14px] font-medium text-slate-700">{label}</span>
+      {count === null
+        ? <span className="ml-auto h-[22px] w-8 animate-pulse rounded bg-slate-100" />
+        : <span className="ml-auto text-[22px] font-bold leading-none text-slate-900"
+            style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>}
+      <span className="shrink-0 text-[12px] text-slate-400">{hint}</span>
+    </Link>
   );
-  const cls = "block rounded-2xl border border-black/[0.06] px-4 py-3 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
-  return to
-    ? <Link to={to} className={cn(cls, "bg-white active:bg-slate-50")}>{body}</Link>
-    : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-slate-50/60 opacity-70")}>{body}</div>;
 }
 
 /* ── 第二层:学习方式 ───────────────────────────────────────────── */
@@ -577,17 +575,18 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
   return (
     <>
       <h2 className="mb-2 mt-6 text-[13px] font-medium text-slate-400">学习方式</h2>
-      <div className="grid grid-cols-2 gap-3">
+      {/* 单列纵向、每行约 56px。**不要改回 2 列方块卡** ——
+          那版每张三行,六项吃掉近 500px,一屏放不下。 */}
+      <div className="space-y-2">
         <ModeCard
           icon={<Layers className="h-[18px] w-[18px]" />}
           name="词卡练习" desc="四种模式练词卡" color={color}
           /* 四模式入口在词库页;没选中库时不给链接(点进去是 /vocab/undefined) */
           to={bankCode ? `/vocab/${bankCode}` : undefined}
-          status={bankCode ? "英汉/配对/听音/听写" : null}
         />
         <ModeCard
           icon={<Link2 className="h-[18px] w-[18px]" />}
-          name="场景串记" desc="30 个生活场景,把单词串成一篇作文"
+          name="场景串记" desc="把单词串成一篇作文"
           color={SCENE_COLOR} to="/vocab/scenes" status={sceneStatus}
         />
         <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="听力浸泡" color={color} />
@@ -599,7 +598,13 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
   );
 }
 
-/** 一张方式卡。没有 `to` = 未上线,灰显 + 显式标「即将开放」且点不动。 */
+/**
+ * 一行方式卡:图标 + 名称 + 一句话灰字(同一行接在名称后)+ 右侧状态 + chevron。
+ * 没有 `to` = 未上线:整行 40% 透明度 + 「即将开放」灰标,且点不动。
+ *
+ * ⚠️ 说明文字 `truncate` 单行截断,不换行 —— 一换行整行就变两行,
+ *    六项加起来又回到近 500px。文案本身也要短(长的在写的时候就该缩)。
+ */
 function ModeCard({ icon, name, desc, color, to, status }: {
   icon: React.ReactNode; name: string; desc: string; color: string;
   to?: string; status?: string | null;
@@ -607,29 +612,23 @@ function ModeCard({ icon, name, desc, color, to, status }: {
   const soon = !to;
   const body = (
     <>
-      <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-full"
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
         style={{ backgroundColor: soon ? "#F1F5F9" : `${color}1F`, color: soon ? "#94A3B8" : color }}>
         {icon}
       </span>
-      <div className="flex items-center gap-1.5">
-        <span className={cn("text-[15px] font-semibold", soon ? "text-slate-400" : "text-slate-900")}>{name}</span>
-      </div>
-      {/* 一句话说明:两行封顶,别让长短不一把卡撑成参差不齐 */}
-      <p className={cn("mt-0.5 line-clamp-2 text-[12px] leading-snug", soon ? "text-slate-300" : "text-slate-500")}>
-        {desc}
-      </p>
-      <div className="mt-1.5 text-[12px] font-medium" style={{ fontVariantNumeric: "tabular-nums" }}>
-        {soon
-          ? <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-normal text-slate-400">即将开放</span>
-          : status
-            ? <span style={{ color }}>{status}</span>
-            /* 还没拿到状态时留一个等高的空行,避免数据到位时整排卡跳一下 */
-            : <span className="inline-block h-[16px]" />}
-      </div>
+      <span className="shrink-0 text-[15px] font-semibold text-slate-900">{name}</span>
+      <span className="min-w-0 flex-1 truncate text-[12px] text-slate-400">{desc}</span>
+      {soon
+        ? <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-500">即将开放</span>
+        : status
+          ? <span className="shrink-0 text-[12px] font-medium" style={{ color, fontVariantNumeric: "tabular-nums" }}>{status}</span>
+          : null}
+      {!soon && <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" />}
     </>
   );
-  const cls = "flex flex-col rounded-2xl border border-black/[0.06] px-3.5 py-3.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
+  // 每行约 56px:8px 上下内边距 + 32px 图标 + 边框
+  const cls = "flex items-center gap-2 rounded-2xl border border-black/[0.06] px-3 py-2.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]";
   return to
     ? <Link to={to} className={cn(cls, "bg-white active:bg-slate-50")}>{body}</Link>
-    : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-slate-50/60")}>{body}</div>;
+    : <div aria-disabled="true" className={cn(cls, "cursor-not-allowed select-none bg-white opacity-40")}>{body}</div>;
 }

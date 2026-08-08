@@ -15,7 +15,7 @@
  */
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { FONT_STAT, readStatsView, writeStatsView, type StatsView } from "@/lib/vocab/theme";
+import { FONT_STAT, readStatsView, tintToWhite, writeStatsView, type StatsView } from "@/lib/vocab/theme";
 import VocabGrowth from "@/components/vocab/VocabGrowth";
 
 function prefersReduced(): boolean {
@@ -103,21 +103,19 @@ export default function StatsPanel({
    *    掉到 30% 之后是 rgb(178,193,209) —— **色相基本没了,就是个浅灰蓝**,
    *    和 #EFF1F5 的轨道放一起,肉眼(和截图)读出来就是"全灰"。
    *    环画了、数据也对,但用户看到的是没生效。
-   *    混色保住色相:同样的浅,但一眼能看出是蓝的。 */
-  const tint = (hex: string, toWhite: number) => {
-    const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
-    if (!m) return hex;
-    const n = parseInt(m[1], 16);
-    const mix = (c: number) => Math.round(c + (255 - c) * toWhite);
-    return `rgb(${mix((n >> 16) & 255)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
-  };
-  const lightColor = tint(color, 0.62);
+   *    混色保住色相:同样的浅,但一眼能看出是蓝的。
+   * ⚠️ 实现搬到 theme.ts 的 tintToWhite —— 这套混色现在中心页的词库卡也要用,
+   *    两处各写一份必然漂移。 */
+  const lightColor = tintToWhite(color, 0.62);
 
-  /* 紧凑档的几何:环 96px(R=40),常规 128px(R=54)。
-   * 描边宽度同步下调,否则小环配 11px 粗边看起来是个"甜甜圈糊了"。 */
-  const BOX = compact ? 96 : 128;
-  const R = compact ? 40 : 54;
-  const SW = compact ? 9 : 11;
+  /* 紧凑档的几何:环 80px(R=33),常规 128px(R=54)。
+   * 描边宽度同步下调,否则小环配 11px 粗边看起来是个"甜甜圈糊了"。
+   * ⚠️ R 要留出描边半宽 + 圆头端点的余量:33 + 8/2 = 37 ≤ 40,不会被 viewBox 切边。
+   * ⚠️ 96→80 是 Aaron 2026-08-08 定的:词库卡是决策入口,学习进度只是状态展示,
+   *    该让路的是后者。实测这一档在手机上几乎看不出差别。 */
+  const BOX = compact ? 80 : 128;
+  const R = compact ? 33 : 54;
+  const SW = compact ? 8 : 11;
   const C = 2 * Math.PI * R;
   /* 空态不画纯灰圈:给一段浅身份色引导弧(12% 周长),
    * 让空环看起来是"还没走到"而不是"坏了"。 */
@@ -126,7 +124,9 @@ export default function StatsPanel({
   return (
     <div ref={boxRef} className={cn(
       "rounded-2xl border border-black/[0.06] bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)]",
-      compact ? "p-4" : "p-5",
+      /* 紧凑档上下内边距 16→8(左右不动)。首屏要把位置让给上面的词库卡,
+         而上下留白是这张卡里唯一能省又不丢信息的东西。 */
+      compact ? "px-4 py-2" : "p-5",
     )}>
       <div className={cn("flex items-center justify-between", compact ? "mb-3" : "mb-4")}>
         <h2 className="text-[16px] font-semibold text-slate-900">学习进度</h2>
@@ -213,7 +213,7 @@ export default function StatsPanel({
       )}
 
       {view === "ring" && isEmpty && emptyHint && (
-        <p className="mt-4 rounded-xl bg-slate-50 px-3.5 py-3 text-[14px] leading-relaxed text-slate-500">
+        <p className={cn("rounded-xl bg-slate-50 px-3.5 text-[14px] leading-relaxed text-slate-500", compact ? "mt-3 py-2.5" : "mt-4 py-3")}>
           {emptyHint}
         </p>
       )}

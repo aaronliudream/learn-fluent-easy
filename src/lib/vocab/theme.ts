@@ -65,6 +65,23 @@ export function writeStatsView(v: StatsView) {
 }
 
 /**
+ * 身份色**向白混色**得到的浅色。`toWhite` 0→原色,1→纯白。
+ *
+ * ⚠️ 要浅色一律用它,**不要用 opacity / 十六进制 alpha**。
+ *    身份色多是深色(托福 #0C447C 是深海军蓝),掉透明度之后色相基本没了:
+ *    8% 的深蓝叠在暖白底 #FAF7F2 上算出来是 rgb(231,228,229) —— 肉眼就是灰,
+ *    "染上了身份色"这件事用户根本看不到。混色则保住色相:同样的浅,一眼能看出是蓝的。
+ * ⚠️ 认不出的色值原样返回,不抛错 —— 新词库上线时页面不该因为一个色值崩掉。
+ */
+export function tintToWhite(hex: string, toWhite: number): string {
+  const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || "").trim());
+  if (!m) return hex;
+  const n = parseInt(m[1], 16);
+  const mix = (c: number) => Math.round(c + (255 - c) * toWhite);
+  return `rgb(${mix((n >> 16) & 255)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
+}
+
+/**
  * 中心页当前选中的词库(下拉记忆)。存 code 不存 id ——
  * code 稳定、可读,而且万一那个库下线了,回落逻辑按 code 找不到就取第一个可用库。
  */

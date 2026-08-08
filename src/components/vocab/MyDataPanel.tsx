@@ -35,9 +35,16 @@ type Props = {
    */
   globalLearned: number | null;
   globalMastered: number | null;
+  /**
+   * 三态登录位:null = 还没问出来(骨架),false = 未登录(引导),true = 已登录(正常)。
+   * ⚠️ 必须由调用方传三态,不能在这里拿 `!stats` 当"未登录" ——
+   *    getStats() 未登录返回 null、请求失败也返回 null,两者混在一起
+   *    就会把"网络抖了一下"渲染成"你没登录"。
+   */
+  signedIn: boolean | null;
 };
 
-export default function MyDataPanel({ color, globalLearned, globalMastered }: Props) {
+export default function MyDataPanel({ color, globalLearned, globalMastered, signedIn }: Props) {
   const today = bjToday();
   const [stats, setStats] = useState<UserStats | null>(null);
   const [days, setDays] = useState<StudyDay[] | null>(null);
@@ -79,6 +86,28 @@ export default function MyDataPanel({ color, globalLearned, globalMastered }: Pr
   /* 断签鼓励:昨天没达标、今天也还没达标时才出。已经在学的人不需要被安慰。 */
   const brokeStreak = !!days && streak === 0 && totalAnswers > 0 && !metToday;
 
+  /**
+   * 未登录:给引导 + 登录钮,**不要挂骨架屏**。
+   * ⚠️ 由来:getStats() 未登录返回 null,而下面的就绪判断是 `!stats → 骨架`,
+   *    于是未登录用户看到的是一块**永远在闪的灰块** —— 像坏了,而不是像"需要登录"。
+   *    这是 PR-6 起就有的老 bug,2026-08-08 Aaron 指名在本 PR 一并修。
+   *    已扫过词汇板块其余组件:WeeklyBanner / HardestWords 未登录 return null,
+   *    VocabGrowth / VocabMistakes 拿到的是空数组(骨架会正常解除),只有这里中招。
+   */
+  if (signedIn === false) {
+    /* ⚠️ **不放登录按钮**。登录是全站行为、导航栏已有入口;
+     *    在板块内部再放一颗按钮,会让用户以为"这个板块要单独登录一次"。
+     *    这里只陈述事实,一行 12px 灰字。
+     *    (学习进度卡下面那行「未登录也可先试做 20 题」保留 —— 那是在讲产品规则,
+     *     不是催登录,两者性质不同。) */
+    return (
+      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+        <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
+        <p className="mt-1 text-[12px] text-slate-400">登录后查看你的学习数据</p>
+      </div>
+    );
+  }
+
   /* 全局累计没就绪也走骨架 —— 它和 stats 一样,渲染 0 就是"累计归零"的事故观感 */
   if (!stats || !days || globalLearned === null || globalMastered === null) {
     return (
@@ -98,16 +127,17 @@ export default function MyDataPanel({ color, globalLearned, globalMastered }: Pr
 
   return (
     <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      <div className="mb-1 flex items-center justify-between">
-        <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
+      {/* 标题 + 口径说明**同一行**(总原则:能一行说完的不许分两行)。
+          那句说明必须留着 —— 它是这块与上方"当前词库"那层唯一的区分标记。 */}
+      <div className="mb-3 flex items-baseline gap-2">
+        <h2 className="shrink-0 text-[16px] font-semibold text-slate-900">我的数据</h2>
+        <span className="min-w-0 flex-1 truncate text-[12px] text-slate-400">跨词库累计,不随切换变</span>
         {streak > 0 && (
-          <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-[13px] font-semibold text-amber-700">
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-[13px] font-semibold text-amber-700">
             <Flame className="h-3.5 w-3.5" />连续 {streak} 天
           </span>
         )}
       </div>
-      {/* 说清这一整块是"跨词库总计",与上方那块"当前词库"分开 */}
-      <p className="mb-3 text-[12px] text-slate-400">跨所有词库累计,不随上方词库切换</p>
 
       {/* 四宫格:全部是**全局累计**口径 */}
       <div className="grid grid-cols-2 gap-3">

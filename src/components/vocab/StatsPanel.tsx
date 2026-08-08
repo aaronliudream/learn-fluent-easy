@@ -54,11 +54,18 @@ type Props = {
   growthWordIds?: string[];
   /** false = 只显示「已掌握 N」,不显示 /总数(中心页)。 */
   showDenominator?: boolean;
+  /**
+   * 紧凑档:内边距、圆环直径、大字全下调一档。
+   * ⚠️ 中心页首屏要在 iPhone SE(375×667)不滚动就装下
+   *    标题+词库下拉+本卡+两张小卡,这卡是唯一还能压的大块。
+   *    压的是**留白和字号**,不是信息 —— 一个数字都没少。
+   */
+  compact?: boolean;
 };
 
 export default function StatsPanel({
   mastered, learning, untouched, tested, color = "#0F172A",
-  emptyHint, growthWordIds, showDenominator = true,
+  emptyHint, growthWordIds, showDenominator = true, compact = false,
 }: Props) {
   const [view, setView] = useState<StatsView>("ring");
   const [shown, setShown] = useState(false);
@@ -106,14 +113,22 @@ export default function StatsPanel({
   };
   const lightColor = tint(color, 0.62);
 
-  const R = 54, C = 2 * Math.PI * R;
+  /* 紧凑档的几何:环 96px(R=40),常规 128px(R=54)。
+   * 描边宽度同步下调,否则小环配 11px 粗边看起来是个"甜甜圈糊了"。 */
+  const BOX = compact ? 96 : 128;
+  const R = compact ? 40 : 54;
+  const SW = compact ? 9 : 11;
+  const C = 2 * Math.PI * R;
   /* 空态不画纯灰圈:给一段浅身份色引导弧(12% 周长),
    * 让空环看起来是"还没走到"而不是"坏了"。 */
   const emptyArc = C * 0.12;
 
   return (
-    <div ref={boxRef} className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      <div className="mb-4 flex items-center justify-between">
+    <div ref={boxRef} className={cn(
+      "rounded-2xl border border-black/[0.06] bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)]",
+      compact ? "p-4" : "p-5",
+    )}>
+      <div className={cn("flex items-center justify-between", compact ? "mb-3" : "mb-4")}>
         <h2 className="text-[16px] font-semibold text-slate-900">学习进度</h2>
         <div className="flex rounded-full border border-black/[0.08] p-0.5" role="tablist" aria-label="统计视图">
           {(["ring", "bar"] as StatsView[]).map(v => (
@@ -129,22 +144,22 @@ export default function StatsPanel({
       </div>
 
       {view === "ring" ? (
-        <div className="flex items-center gap-5">
-          <svg width="128" height="128" viewBox="0 0 128 128" className="shrink-0" aria-hidden>
-            <circle cx="64" cy="64" r={R} fill="none" stroke="#EFF1F5" strokeWidth="11" />
+        <div className={cn("flex items-center", compact ? "gap-4" : "gap-5")}>
+          <svg width={BOX} height={BOX} viewBox={`0 0 ${BOX} ${BOX}`} className="shrink-0" aria-hidden>
+            <circle cx={BOX / 2} cy={BOX / 2} r={R} fill="none" stroke="#EFF1F5" strokeWidth={SW} />
             {isEmpty ? (
               /* 空态引导弧:浅身份色,提示"从这里开始" */
               <circle
-                cx="64" cy="64" r={R} fill="none" stroke={color} strokeOpacity={0.25} strokeWidth="11"
-                strokeLinecap="round" transform="rotate(-90 64 64)"
+                cx={BOX / 2} cy={BOX / 2} r={R} fill="none" stroke={color} strokeOpacity={0.25} strokeWidth={SW}
+                strokeLinecap="round" transform={`rotate(-90 ${BOX / 2} ${BOX / 2})`}
                 style={{ strokeDasharray: `${emptyArc} ${C}`, strokeDashoffset: 0 }}
               />
             ) : (
               <>
                 {/* 浅段 = 已掌握 + 学习中(先画,被深段盖住前半) */}
                 <circle
-                  cx="64" cy="64" r={R} fill="none" stroke={lightColor} strokeWidth="11"
-                  strokeLinecap="round" transform="rotate(-90 64 64)"
+                  cx={BOX / 2} cy={BOX / 2} r={R} fill="none" stroke={lightColor} strokeWidth={SW}
+                  strokeLinecap="round" transform={`rotate(-90 ${BOX / 2} ${BOX / 2})`}
                   style={{
                     strokeDasharray: C,
                     strokeDashoffset: shown ? C * (1 - pctReached) : C,
@@ -153,8 +168,8 @@ export default function StatsPanel({
                 />
                 {/* 深段 = 已掌握。mastered 为 0 时这段自然不显示,浅段独自撑起环身 */}
                 <circle
-                  cx="64" cy="64" r={R} fill="none" stroke={color} strokeWidth="11" strokeLinecap="round"
-                  transform="rotate(-90 64 64)"
+                  cx={BOX / 2} cy={BOX / 2} r={R} fill="none" stroke={color} strokeWidth={SW} strokeLinecap="round"
+                  transform={`rotate(-90 ${BOX / 2} ${BOX / 2})`}
                   style={{
                     strokeDasharray: C,
                     strokeDashoffset: shown ? C * (1 - pct) : C,
@@ -171,12 +186,18 @@ export default function StatsPanel({
               <CountUp
                 value={mastered}
                 className="text-slate-900"
-                style={{ fontFamily: FONT_STAT, fontSize: "clamp(44px, 13vw, 56px)", fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em" }}
+                style={{
+                  fontFamily: FONT_STAT, fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em",
+                  fontSize: compact ? "clamp(34px, 10vw, 44px)" : "clamp(44px, 13vw, 56px)",
+                }}
               />
               {showDenominator && <span className="text-[14px] text-slate-400">/ {total}</span>}
             </div>
-            <div className="mt-1.5 text-[14px] font-medium text-slate-600">已掌握</div>
-            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-slate-500">
+            <div className={cn("text-[14px] font-medium text-slate-600", compact ? "mt-1" : "mt-1.5")}>已掌握</div>
+            <div className={cn(
+              "flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-slate-500",
+              compact ? "mt-2" : "mt-3",
+            )}>
               <span>学习中 <b className="font-semibold text-slate-800" style={{ fontVariantNumeric: "tabular-nums" }}>{learning}</b></span>
               {typeof tested === "number"
                 ? <span>已测 <b className="font-semibold text-slate-800" style={{ fontVariantNumeric: "tabular-nums" }}>{tested}</b></span>

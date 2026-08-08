@@ -382,6 +382,87 @@ export async function getBankProgressFast(
   return { mastered, learning, untouched: Math.max(0, total - mastered - learning), total };
 }
 
+/* ── 统计两层口径 ────────────────────────────────────────────────
+ * 中心页要同时显示**两组数字**,两组的分母世界不一样,混了用户就看不懂:
+ *
+ *   ① 全局累计(跨所有词库,永远只涨)—— 用户的"总资产",不随下拉切库而变
+ *   ② 当前词库(随下拉切换)—— 该库进度 / 圆环 / 错题 / 到期 / 里程碑
+ *
+ * ⚠️ 全局那层**直接聚合 user_vocab_mastery 就是对的**,不要另建表:
+ *    那张表本来就按 word_id 存、天生跨库,而且 (user_id, word_id) 唯一 ——
+ *    所以"同一个词同时属于托福和四级只算一次"是**表结构自带的**,
+ *    不需要在代码里再去重。各库进度那层才需要 join vocab_word_banks 过滤。
+ */
+
+/** 全局累计(跨库去重)。学过 = 作答过;掌握 = isMasteredRow 三条同时成立。 */
+export type GlobalTotals = { learned: number; mastered: number };
+
+export async function getGlobalTotals(): Promise<GlobalTotals> {
+  const rows = await listMasteryRows();
+  let learned = 0, mastered = 0;
+  for (const r of rows) {
+    if (isMasteredRow(r)) { mastered++; learned++; }
+    else if ((r.tested_count ?? 0) > 0) learned++;
+  }
+  return { learned, mastered };
+}
+
+/**
+ * 这批 word_id 里哪些属于该词库。
+ * ⚠️ 入参永远是**用户那几百条记录**的 id,不是词库全量词 ——
+ *    方向反了就是 getBankProgressFast 注释里那个 28 次往返的老错误。
+ */
+async function idsInBank(bankId: string, wordIds: string[]): Promise<Set<string>> {
+  const out = new Set<string>();
+  if (!wordIds.length) return out;
+  for (let i = 0; i < wordIds.length; i += 200) {
+    const { data, error } = await db
+      .from("vocab_word_banks")
+      .select("word_id")
+      .eq("bank_id", bankId)
+      .in("word_id", wordIds.slice(i, i + 200));
+    if (error) throw error;
+    for (const r of (data || []) as { word_id: string }[]) out.add(r.word_id);
+  }
+  return out;
+}
+
+/** 某词库的到期待复习词数。未登录返回 0。 */
+export async function dueCountForBank(bankId: string): Promise<number> {
+  const uid = await currentUserId();
+  if (!uid) return 0;
+  const now = new Date().toISOString();
+  const { data, error } = await db
+    .from("user_vocab_mastery")
+    .select("word_id")
+    .eq("user_id", uid)
+    .lte("next_review_at", now);
+  if (error) throw error;
+  const ids = ((data || []) as { word_id: string }[]).map(r => r.word_id);
+  if (!ids.length) return 0;
+  return (await idsInBank(bankId, ids)).size;
+}
+
+/** 某词库的待清错题数。未登录返回 0。 */
+export async function mistakeCountForBank(bankId: string): Promise<number> {
+  const uid = await currentUserId();
+  if (!uid) return 0;
+  const { data, error } = await db
+    .from("vocab_mistake_book")
+    .select("word_id")
+    .eq("user_id", uid)
+    .eq("status", "active");
+  if (error) throw error;
+  const ids = ((data || []) as { word_id: string }[]).map(r => r.word_id);
+  if (!ids.length) return 0;
+  return (await idsInBank(bankId, ids)).size;
+}
+
+/** 某词库下的全部 word_id —— 成长图按库过滤要用。对外暴露的是这一个。 */
+export async function listBankWordIds(bankId: string): Promise<string[]> {
+  return bankWordIds(bankId);
+}
+
 /** 错题本一行(待清列表 + 闯关选词都用它)。 */
 export type MistakeRow = {
   word_id: string;

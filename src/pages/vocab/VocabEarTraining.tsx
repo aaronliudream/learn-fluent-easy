@@ -53,6 +53,10 @@ export default function VocabEarTraining() {
   const [repeat, setRepeat] = useState<number>(1);
   const [loop, setLoop] = useState(false);
   const [reveal, setReveal] = useState(true);          // 先听后看:关掉就只剩进度
+  /* 中文单独一根开关,和 reveal 是两根轴:reveal 管"看不看得见这个词",
+     showZh 管"看不看得见中文"。想练"听音辨义"的人会保留英文只藏中文,
+     那是 reveal 做不到的。中文永远只显示不朗读(不烧中文音频)。 */
+  const [showZh, setShowZh] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [done, setDone] = useState(false);             // 一轮听完 → 引导去测
 
@@ -418,12 +422,17 @@ export default function VocabEarTraining() {
                       /{cur.word.ipa.replace(/^\/+|\/+$/g, "")}/
                     </div>
                   )}
-                  {cur?.word.def_zh && (
+                  {cur?.word.def_zh && showZh && (
                     <div className="mt-3 max-w-[420px] text-[15px] leading-relaxed text-slate-600">{cur.word.def_zh}</div>
                   )}
                   {toggles.example && cur?.example && (
-                    <div className="mt-4 max-w-[420px] text-[14px] leading-relaxed text-slate-400" style={{ fontFamily: FONT_SERIF }}>
-                      {cur.example.sentence}
+                    <div className="mt-4 max-w-[420px] space-y-1">
+                      <div className="text-[14px] leading-relaxed text-slate-400" style={{ fontFamily: FONT_SERIF }}>
+                        {cur.example.sentence}
+                      </div>
+                      {showZh && cur.example.translation_zh && (
+                        <div className="text-[13px] leading-relaxed text-slate-400">{cur.example.translation_zh}</div>
+                      )}
                     </div>
                   )}
                 </>
@@ -432,7 +441,14 @@ export default function VocabEarTraining() {
                 <div className="text-[40px] font-bold tracking-[0.2em] text-slate-200">· · ·</div>
               )}
 
-              <div className="mt-6 text-[13px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
+              {reveal && (
+                <button type="button" onClick={() => setShowZh(v => !v)}
+                  className="mt-4 rounded-full border border-black/[0.08] px-3 py-1 text-[12px] text-slate-500 active:bg-slate-50">
+                  {showZh ? "隐藏中文" : "显示中文"}
+                </button>
+              )}
+
+              <div className="mt-4 text-[13px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
                 {Math.min(idx + 1, total)} / {total}
               </div>
             </>

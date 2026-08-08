@@ -42,7 +42,7 @@ export type ElementKey = "word" | "syllable" | "gloss" | "example";
 export const ELEMENTS: { key: ElementKey; label: string; hint: string; fixed?: boolean; unavailable?: boolean }[] = [
   { key: "word", label: "单词", hint: "必读", fixed: true },
   { key: "syllable", label: "拆读", hint: "re. gion. al." },
-  { key: "gloss", label: "中文释义", hint: "音频待生成", unavailable: true },
+  { key: "gloss", label: "中文释义", hint: "只显示不朗读", unavailable: true },
   { key: "example", label: "例句", hint: "第 1 条" },
 ];
 

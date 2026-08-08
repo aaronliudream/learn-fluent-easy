@@ -7,7 +7,7 @@
  * 判据 = 过零率(每秒过零次数 ≈ 2×基频),拉伸前后必须基本一致。
  */
 import { describe, expect, it } from "vitest";
-import { timeStretch } from "./earTraining";
+import { clipSpecsFor, DEFAULT_TOGGLES, SLOW_RATE, timeStretch, type ListenItem } from "./earTraining";
 
 const SR = 24000;   // OpenAI TTS 出的 mp3 就是这个采样率量级
 
@@ -66,5 +66,47 @@ describe("timeStretch", () => {
     let peak = 0;
     for (const v of y) peak = Math.max(peak, Math.abs(v));
     expect(peak).toBeLessThan(1.2);
+  });
+});
+
+/**
+ * 慢速档必须**恒定 0.7**,不跟全局倍速走。
+ * 判据 = 有效倍率(烧进波形的拉伸率 × 元素层 playbackRate),而不是单看某一层 ——
+ * 只看拉伸率会漏掉"两层叠乘"这个真问题(全局 0.7 时慢速档变 0.49,拖沓到没法听)。
+ */
+describe("clipSpecsFor · 慢速档不吃全局倍速", () => {
+  const item = {
+    word: { audio_url: "https://cdn/word.mp3" },
+    example: { audio_url: "https://cdn/ex.mp3" },
+  } as unknown as ListenItem;
+
+  const slowSpec = (globalSpeed: number) => {
+    const specs = clipSpecsFor(item, { ...DEFAULT_TOGGLES, slow: true }, globalSpeed);
+    return specs[1];   // [0]=单词原速, [1]=慢速档
+  };
+
+  it.each([0.7, 1.0, 1.25])("全局 %s 倍时,慢速档的有效倍率仍是 0.7", g => {
+    const effective = slowSpec(g).rate * g;
+    expect(effective).toBeCloseTo(SLOW_RATE, 2);
+  });
+
+  it("全局 0.7 时不做无谓的拉伸(补偿后正好 1.0,走原样快路径)", () => {
+    expect(slowSpec(0.7).rate).toBe(1);
+  });
+
+  it("慢速档复用整词那条 URL,不额外取资源", () => {
+    const specs = clipSpecsFor(item, { ...DEFAULT_TOGGLES, slow: true }, 1);
+    expect(specs[1].url).toBe(specs[0].url);
+  });
+
+  it("关掉慢速档就没有这一段", () => {
+    const specs = clipSpecsFor(item, { ...DEFAULT_TOGGLES, slow: false }, 1);
+    expect(specs.every(s => s.rate === 1)).toBe(true);
+    expect(specs).toHaveLength(2);   // 单词 + 例句
+  });
+
+  it("globalSpeed 传 0 / NaN 不产生除零,回落到 1", () => {
+    expect(slowSpec(0).rate).toBe(SLOW_RATE);
+    expect(slowSpec(NaN as number).rate).toBe(SLOW_RATE);
   });
 });

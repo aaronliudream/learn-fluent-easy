@@ -138,7 +138,7 @@ export default function VocabEarTraining() {
     const el = audioRef.current;
     const it = items?.[i];
     if (!el || !it) return false;
-    const specs = clipSpecsFor(it, toggles);
+    const specs = clipSpecsFor(it, toggles, speed);
     if (!specs.length) return false;                    // 整词无音频 → 交给调用方跳过
     setLoadingClip(true);
     try {
@@ -163,6 +163,16 @@ export default function VocabEarTraining() {
     }
   }, [items, toggles, speed]);
 
+  /**
+   * 换全局倍速时**要不要重烧这条音频**。
+   * ⚠️ 慢速档是预补偿烧进波形的(拉伸率 = 0.7/globalSpeed,见 clipSpecsFor),
+   *    所以全局倍速一变,那一档就得按新倍速重烧,否则补偿量对不上、
+   *    慢速档又会跟着全局倍速漂。
+   * ⚠️ 慢速档关着的时候恒为 0 —— 这时波形与倍速无关,重烧纯属浪费,
+   *    而且会让"调个速度当前这个词从头再来"这种难受的事白白发生。
+   */
+  const bakeKey = toggles.slow ? speed : 0;
+
   /* 换词 / 换开关 → 重新装载。playing 为真则接着播。 */
   useEffect(() => {
     if (!items || !items.length) return;
@@ -181,14 +191,15 @@ export default function VocabEarTraining() {
       /* 当前这条已经在播了,趁机把**下一个词**的音频字节烤进缓存,
          换词时就不用等网络(否则每换一词卡一下,像是断了) */
       const nxt = items?.[idx + 1];
-      if (nxt) void prefetchClip(clipSpecsFor(nxt, toggles));
+      if (nxt) void prefetchClip(clipSpecsFor(nxt, toggles, speed));
     })();
     return () => { alive = false; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [idx, items, toggles]);
+  }, [idx, items, toggles, bakeKey]);
 
-  /* 速度实时生效,不用重新渲染音频(元素层变速,保音高) */
+  /* 全局倍速实时生效,不用重新渲染音频(元素层变速,保音高) */
   useEffect(() => { if (audioRef.current) audioRef.current.playbackRate = speed; }, [speed]);
+
 
   const advance = useCallback((step: number) => {
     setIdx(i => {

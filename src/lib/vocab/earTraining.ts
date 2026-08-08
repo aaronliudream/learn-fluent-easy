@@ -168,14 +168,28 @@ export type ClipSpec = { url: string; rate: number };
 
 /**
  * 这个词按当前开关会用到哪些片段(缺的自动跳过)。
+ *
  * ⚠️ 慢速档**复用整词那条音频**,不是另一个资产 —— 它和「单词」档指向同一个
  *    URL,只有 rate 不同。fetchBuffer 按 URL 缓存,所以这一档不产生额外网络请求。
+ *
+ * ⚠️ **慢速档不吃全局倍速**(Aaron 2026-08-08 定):
+ *    实际听到的倍率 = 烧进波形的拉伸率 × 元素层 playbackRate(= globalSpeed)。
+ *    要让这一档恒为 0.7,烧进去的就得是 `0.7 / globalSpeed` —— 做预补偿。
+ *    不补偿的话两者叠乘:全局 0.7 时慢速档变成 0.49 倍,拖沓到没法听。
+ *    · globalSpeed=0.7  → 烧 1.0(压根不拉伸,元素层那 0.7 正好就是要的)
+ *    · globalSpeed=1.0  → 烧 0.7
+ *    · globalSpeed=1.25 → 烧 0.56(先多拉长,再被元素层提速抵回来)
  */
-export function clipSpecsFor(item: ListenItem, toggles: ElementToggles): ClipSpec[] {
+export function clipSpecsFor(item: ListenItem, toggles: ElementToggles, globalSpeed = 1): ClipSpec[] {
   const specs: ClipSpec[] = [];
   if (item.word.audio_url) {
     specs.push({ url: item.word.audio_url, rate: 1 });                           // 单词必读
-    if (toggles.slow) specs.push({ url: item.word.audio_url, rate: SLOW_RATE });
+    if (toggles.slow) {
+      const g = Number(globalSpeed) > 0 ? Number(globalSpeed) : 1;
+      /* 四舍五入到千分位:浮点除法会让 0.7/0.7 算出 0.9999999999999999,
+         那样 `rate === 1` 的快路径就白判了,平白多跑一次 WSOLA。 */
+      specs.push({ url: item.word.audio_url, rate: Math.round((SLOW_RATE / g) * 1000) / 1000 });
+    }
   }
   // gloss:没有音频资产,恒跳过(见文件头)
   if (toggles.example && item.example?.audio_url) specs.push({ url: item.example.audio_url, rate: 1 });

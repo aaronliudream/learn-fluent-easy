@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF } from "@/lib/vocab/theme";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
-import { AnonNote, QuotaModal, Result } from "@/components/vocab/SessionParts";
+import { AnonNote, QuotaModal, Result, WordCardBody } from "@/components/vocab/SessionParts";
 import {
   getBankByCode, listBankWords, getWordStatusMap, currentUserId,
   type VocabBank, type VocabWord, type WordStatus,
@@ -174,9 +174,40 @@ export default function VocabMatch() {
         )}
 
         {done && (
-          <Result total={words.length} correct={correctCount} color={color}
-            onAgain={() => setSeed(s => s + 1)} onBack={() => navigate(`/vocab/${bankCode}`)}
-            note="一次配对成功才算答对;配错过的词已进错题本,连对 3 天自动移出。" />
+          <>
+            <Result total={words.length} correct={correctCount} color={color}
+              onAgain={() => setSeed(s => s + 1)} onBack={() => navigate(`/vocab/${bankCode}`)}
+              note="一次配对成功才算答对;配错过的词已进错题本,连对 3 天自动移出。" />
+
+            {/* ── 逐词回顾 ──
+                配对模式**故意不做逐题弹层**(那会打断连续消卡的手感),
+                代价是整轮下来一次完整词卡都没看过 —— 所以这份回顾就是它的反馈层,
+                规格上一直有,是实现漏了(2026-08-09 补)。
+                ⚠️ 复用 WordCardBody:大字/音标/词性/中英释义/三条例句/句数选择器/朗读
+                   与其余三个模式**同一个实现**,不在这里另拼一份。 */}
+            <h2 className="mb-2 mt-6 text-[16px] font-semibold text-slate-900">逐词回顾</h2>
+            <p className="mb-3 text-[13px] text-slate-400">
+              本轮 {words.length} 个词
+              {missed.size > 0 && <> · <b className="font-semibold text-rose-600">{missed.size}</b> 个配错过(已标红)</>}
+            </p>
+            <div className="space-y-3">
+              {words.map(w => {
+                const wrong = missed.has(w.id);
+                return (
+                  <div key={w.id}
+                    className={cn("rounded-2xl border bg-white p-4",
+                      wrong ? "border-rose-200 bg-rose-50/30" : "border-black/[0.06]")}>
+                    {wrong && (
+                      <div className="mb-2 inline-flex items-center rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-medium text-rose-700">
+                        配错过 · 已进错题本
+                      </div>
+                    )}
+                    <WordCardBody word={w} />
+                  </div>
+                );
+              })}
+            </div>
+          </>
         )}
 
         {anon && state === "ok" && <AnonNote />}

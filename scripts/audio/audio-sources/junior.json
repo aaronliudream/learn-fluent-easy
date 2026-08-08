@@ -50,6 +50,13 @@
       ],
       "why": "src/data 顶层散文件，均属小学侧/通用文案，不经 junior 的任何播放入口（junior 只读 src/data/juniorHub 与 DB）",
       "status": "confirmed"
+    },
+    {
+      "paths": [
+        "src/data/vocab"
+      ],
+      "why": "词汇板块(/vocab)的发音基础内容:48 音标卡 + 42 自然拼读规则(PR-10/PR-13)。**朗读入口是明确的,但走运行时 TTS**(全站 speak(),UK 音),不依赖预生成音频文件,所以不进音频管线的枚举范围。⚠️ 待办:真人音频已列入下一批攒批(与磨耳朵缺的中文释义配音同批);那一批落地时要把本条从 outOfScope 移出、改为正式 dataRoots 或单独 section。",
+      "status": "confirmed"
     }
   ],
   "outOfScopeNote": "反向哨兵：管线会枚举 contentParents 下的实际条目，任何既不在 dataRoots、也不在 outOfScope 里的游离目录/文件都会让管线报错退出。",

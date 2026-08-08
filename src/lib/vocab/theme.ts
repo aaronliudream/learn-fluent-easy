@@ -64,5 +64,17 @@ export function writeStatsView(v: StatsView) {
   try { localStorage.setItem(STATS_VIEW_KEY, v); } catch { /* 存不了就算了,不影响使用 */ }
 }
 
+/**
+ * 中心页当前选中的词库(下拉记忆)。存 code 不存 id ——
+ * code 稳定、可读,而且万一那个库下线了,回落逻辑按 code 找不到就取第一个可用库。
+ */
+const SELECTED_BANK_KEY = "vocab_selected_bank";
+export function readSelectedBank(): string | null {
+  try { return localStorage.getItem(SELECTED_BANK_KEY); } catch { return null; }
+}
+export function writeSelectedBank(code: string) {
+  try { localStorage.setItem(SELECTED_BANK_KEY, code); } catch { /* 隐私模式:记不住就每次默认库 */ }
+}
+
 /** 里程碑档位(spec 第 5 节:仅这些点位放 confetti)。PR-6 用,这里先作单一事实来源。 */
 export const MILESTONES = [1600, 3500, 4500, 5500, 8000, 10000];

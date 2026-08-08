@@ -5,7 +5,7 @@
  * 不新建表、不新增口径 —— 连续天数一律用 stats.ts 的 computeStreak。
  */
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Flame, Share2, Sparkles, X } from "lucide-react";
+import { ChevronDown, Flame, Share2, Sparkles, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CTA_SHADOW, FONT_STAT, GRAD_CTA, MILESTONES } from "@/lib/vocab/theme";
 import {
@@ -261,6 +261,59 @@ export function ShareCard({ data, onClose }: {
         <button onClick={onClose}
           className="mt-3 w-full rounded-2xl bg-white/10 px-5 py-3 text-[15px] text-white">关闭</button>
       </div>
+    </div>
+  );
+}
+
+/**
+ * 里程碑**折叠态**:一行「当前档位 + 下一档还差 N 词」,点开才铺全部档位。
+ *
+ * ⚠️ 由来:六个胶囊 + 一行说明在 iPhone SE 上占掉近 120px,
+ *    而首屏必须留给"学习进度 + 错题/复习"。里程碑是**回顾性**信息,
+ *    不是每次打开都要看的东西 —— 折叠它换来的首屏空间,值。
+ * ⚠️ 信息一个没少:展开后就是原来的 MilestoneStrip。
+ *
+ * ⚠️ **mastered 传的是全局累计掌握数,不是当前词库的**(Aaron 2026-08-07 裁决)。
+ *    里程碑是**成就系统**:跟着词库走的话,一切库徽章就归零,
+ *    用户读到的是"我的进度被清空了";全局累计则随着学的库越多一直涨。
+ *    彩带(useMilestoneCelebration)和分享卡必须用同一个数,否则会出现
+ *    "横幅说达成了、彩带不放"这种自相矛盾。
+ * ⚠️ mastered = null 表示还没就绪 → 骨架,**绝不渲染 0**(0 会让老用户看到"还没达成第一档")。
+ */
+export function MilestoneSummary({ mastered, color }: { mastered: number | null; color: string }) {
+  const [open, setOpen] = useState(false);
+  if (mastered === null) {
+    return (
+      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+        <div className="h-[20px] w-24 animate-pulse rounded bg-slate-100" />
+        <div className="mt-2 h-[16px] w-48 animate-pulse rounded bg-slate-100" />
+      </div>
+    );
+  }
+  const reached = MILESTONES.filter(m => mastered >= m);
+  const current = reached.length ? reached[reached.length - 1] : null;
+  const next = MILESTONES.find(m => m > mastered) ?? null;
+
+  return (
+    <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+      {/* ⚠️ 摘要单独占一行,不跟标题挤在一行 —— 375px 宽下
+          「还没达成第一档 · 距 1600 还差 1600 词」必然被 truncate 砍掉尾巴,
+          而被砍掉的恰好是"还差多少"这个唯一有用的数字。 */}
+      <button type="button" onClick={() => setOpen(v => !v)} aria-expanded={open}
+        className="block w-full text-left">
+        <span className="flex items-center gap-2">
+          <Sparkles className="h-[17px] w-[17px] shrink-0 text-amber-500" />
+          <span className="flex-1 text-[15px] font-semibold text-slate-900">里程碑</span>
+          <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-300 transition-transform", open && "rotate-180")} />
+        </span>
+        <span className="mt-1 block text-[13px] text-slate-500">
+          {current
+            ? <>已达 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{current}</b></>
+            : <span className="text-slate-400">还没达成第一档</span>}
+          {next && <> · 距 {next} 还差 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{next - mastered}</b> 词</>}
+        </span>
+      </button>
+      {open && <div className="mt-3"><MilestoneStrip mastered={mastered} color={color} /></div>}
     </div>
   );
 }

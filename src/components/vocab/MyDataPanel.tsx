@@ -25,7 +25,19 @@ function monthMeta(ym: string) {
   return { firstWeekday: first.getUTCDay(), days };
 }
 
-export default function MyDataPanel({ color }: { color: string }) {
+type Props = {
+  color: string;
+  /**
+   * 全局累计(**跨所有词库**,按 word_id 去重)。null = 还没就绪 → 走骨架屏。
+   * ⚠️ 这两个数**不随上方词库下拉切换而变** —— 它们是用户的"总资产"。
+   *    所以标题只写「累计学习 / 累计掌握」,绝不带词库名;
+   *    字号也刻意比上方当前词库的大字小一档,避免两层口径被读成同一个。
+   */
+  globalLearned: number | null;
+  globalMastered: number | null;
+};
+
+export default function MyDataPanel({ color, globalLearned, globalMastered }: Props) {
   const today = bjToday();
   const [stats, setStats] = useState<UserStats | null>(null);
   const [days, setDays] = useState<StudyDay[] | null>(null);
@@ -67,7 +79,8 @@ export default function MyDataPanel({ color }: { color: string }) {
   /* 断签鼓励:昨天没达标、今天也还没达标时才出。已经在学的人不需要被安慰。 */
   const brokeStreak = !!days && streak === 0 && totalAnswers > 0 && !metToday;
 
-  if (!stats || !days) {
+  /* 全局累计没就绪也走骨架 —— 它和 stats 一样,渲染 0 就是"累计归零"的事故观感 */
+  if (!stats || !days || globalLearned === null || globalMastered === null) {
     return (
       <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5">
         <div className="mb-4 h-[22px] w-24 animate-pulse rounded bg-slate-100" />
@@ -85,7 +98,7 @@ export default function MyDataPanel({ color }: { color: string }) {
 
   return (
     <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      <div className="mb-3.5 flex items-center justify-between">
+      <div className="mb-1 flex items-center justify-between">
         <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
         {streak > 0 && (
           <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-[13px] font-semibold text-amber-700">
@@ -93,20 +106,25 @@ export default function MyDataPanel({ color }: { color: string }) {
           </span>
         )}
       </div>
+      {/* 说清这一整块是"跨词库总计",与上方那块"当前词库"分开 */}
+      <p className="mb-3 text-[12px] text-slate-400">跨所有词库累计,不随上方词库切换</p>
 
-      {/* 四宫格 */}
+      {/* 四宫格:全部是**全局累计**口径 */}
       <div className="grid grid-cols-2 gap-3">
-        <Cell label="今日学习" value={`${todayAnswers}`} unit="词" color={color} />
-        <Cell label="累计学习" value={`${totalAnswers}`} unit="词" color={color} />
-        <Cell label="今日时长" value={fmtDuration(todayMs).split(" ")[0]} unit={fmtDuration(todayMs).split(" ")[1]} color={color} />
+        <Cell label="累计学习" value={`${globalLearned}`} unit="词" color={color} />
+        <Cell label="累计掌握" value={`${globalMastered}`} unit="词" color={color} />
         <Cell label="累计时长" value={fmtDuration(stats.total_time_ms).split(" ")[0]} unit={fmtDuration(stats.total_time_ms).split(" ")[1]} color={color} />
+        <Cell label="积分" value={`${stats.total_points}`} unit="分" color={color} />
       </div>
 
-      {/* 每日目标 */}
+      {/* 每日目标(今日两个数收在这里,不再单独占宫格) */}
       <div className="mt-4 border-t border-black/[0.06] pt-4">
         <div className="mb-2 flex items-center justify-between">
           <span className="text-[14px] text-slate-600">
-            今日目标　<b className="font-semibold text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>{todayAnswers}/{goal}</b>
+            {/* 这里原本用的是全角空格,eslint 的 no-irregular-whitespace 一直在报;
+                改成 margin,视觉一样、错误消掉 */}
+            今日目标<b className="ml-2 font-semibold text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>{todayAnswers}/{goal}</b>
+            <span className="ml-2 text-[13px] text-slate-400">今日 {fmtDuration(todayMs)}</span>
             {metToday && <span className="ml-2 text-[13px] font-medium text-emerald-600">已达标</span>}
           </span>
           <select value={goal} aria-label="每天背多少个词"

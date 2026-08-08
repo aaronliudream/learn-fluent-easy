@@ -590,8 +590,8 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
           color={SCENE_COLOR} to="/vocab/scenes" status={sceneStatus}
         />
         <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="听力浸泡" color={color} />
-        <ModeCard icon={<Mic className="h-[18px] w-[18px]" />} name="音标基础" desc="48 个音标" color={color} />
-        <ModeCard icon={<SpellCheck className="h-[18px] w-[18px]" />} name="自然拼读" desc="看词能读、听音能写" color={color} />
+        <ModeCard icon={<Mic className="h-[18px] w-[18px]" />} name="音标基础" desc="48 个音标" color={color} to="/vocab/phonics" />
+        <ModeCard icon={<SpellCheck className="h-[18px] w-[18px]" />} name="自然拼读" desc="看词能读、听音能写" color={color} to="/vocab/phonics?tab=rules" />
         <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="测测你现在多少词" color={color} />
       </div>
     </>

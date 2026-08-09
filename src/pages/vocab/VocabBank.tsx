@@ -143,6 +143,7 @@ export default function VocabBank() {
       ) : (
         <>
           <StatsPanel
+            loading={state === "loading"}
             mastered={progress.mastered}
             learning={progress.learning}
             untouched={progress.untouched}

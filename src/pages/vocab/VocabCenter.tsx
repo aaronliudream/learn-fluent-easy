@@ -17,7 +17,7 @@
  *
  * ── 页面三层,对应用户的动线 ──
  *   ① 我的状态:当前词库卡 → 学习进度(圆环/柱状)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:词卡练习 / 快筛 / 场景串记 / 磨耳朵 / 词汇量测试(整理中)  ← 选今天怎么学
+ *   ② 学习方式:词卡练习 / 快筛 / 场景串记 / 磨耳朵  ← 选今天怎么学
  *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
  *   ⚠️ 场景串记原来是页面**最底部一条横幅**,层级是错的 —— 它是背单词的一种方式,
  *      不是词汇中心之外的附加功能。别再把它挪回底部。
@@ -35,7 +35,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
-  Filter, Gauge, Headphones, Layers, Link2, Lock,
+  Filter, Headphones, Layers, Link2, Lock,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -178,39 +178,22 @@ export default function VocabCenter() {
         <BankCard banks={banks} selected={selected} onPick={onPick}
           color={color} progress={p ?? null} />
 
-        {bankStats ? (
-          <StatsPanel
-            compact
-            mastered={bankMastered}
-            learning={p?.learning ?? 0}
-            untouched={p?.untouched ?? 0}
-            color={color}
-            /* 「已测」= 掌握 + 学习中 = 作答过的词数。它**只涨不跌**,
-               与只涨也会跌的掌握数构成「实力 + 努力」双成就:
-               哪怕掌握数因答错回落,努力的痕迹也还在。 */
-            tested={bankMastered + (p?.learning ?? 0)}
-            showDenominator={false}
-            growthWordIds={undefined}
-            /* ⚠️ 这里**故意不传 emptyHint** —— 那个提示框在 SE 上占 86px,
-               把首屏的两张小卡挤到折线下。信息没丢,挪到卡外一行 12px 灰字
-               (见下方 EmptyHintLine),体积小 80%。
-               StatsPanel 的 emptyHint 参数保留原样,词库页还在用。 */
-          />
-        ) : (
-          /* 骨架屏:**绝不渲染 0** —— 0 是合法值,老用户看到进度归零是事故级体验。
-             宁可多显示 200ms 灰块,也不能显示一个会自己变的假数字。
-             高度对齐紧凑档(96 环 + p-4),避免数据到位时整页跳动。 */
-          <div className="rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-            <div className="mb-3 h-[22px] w-24 animate-pulse rounded bg-slate-100" />
-            <div className="flex items-center gap-4">
-              <div className="h-[96px] w-[96px] shrink-0 animate-pulse rounded-full bg-slate-100" />
-              <div className="min-w-0 flex-1 space-y-3">
-                <div className="h-[36px] w-28 animate-pulse rounded bg-slate-100" />
-                <div className="h-[16px] w-full animate-pulse rounded bg-slate-100" />
-              </div>
-            </div>
-          </div>
-        )}
+        {/* ⚠️ 骨架屏交给 StatsPanel 自己(loading 属性)—— 之前这里手写了一份
+            "环 + 大字"形状的骨架,而卡片改成四条横条后那个形状对不上了,
+            会先闪一个圆环再变成四条。骨架必须和真身同形,否则它只是另一种跳动。 */}
+        <StatsPanel
+          compact
+          loading={!bankStats}
+          mastered={bankMastered}
+          learning={p?.learning ?? 0}
+          untouched={p?.untouched ?? 0}
+          color={color}
+          growthWordIds={undefined}
+          /* ⚠️ 这里**故意不传 emptyHint** —— 那个提示框在 SE 上占 86px,
+             把首屏的两张小卡挤到折线下。信息没丢,挪到卡外一行 12px 灰字
+             (见下方 EmptyHintLine),体积小 80%。
+             StatsPanel 的 emptyHint 参数保留原样,词库页还在用。 */
+        />
 
         {/* 空态引导:一行 12px 灰字,不是一个框(见上方 StatsPanel 处的注释)。
             只在真的还没有任何学习记录时出 —— 有数据的人不需要被教怎么开始。 */}
@@ -601,12 +584,10 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
         {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
             PR #321/#323 关闭不合并)。别再加回来。
             ⚠️ 与**小学**板块的自然拼读(/primary 下的 PrimaryHubPhonics)无关,那个继续在。 */}
-        {/* ⚠️ 与上面的「快筛」不是一回事,文案必须把差别说清楚:
-            快筛 = 托福词表内部你认识哪些(已上线);
-            词汇量测试 = 绝对词汇量 + 跨考试对标(**整理中**)。
-            后者的前置是内容工程:导入通用词频表 + 中考/高考/四级/六级词表 ——
-            现在库里那几张表是 0 行,对标算不出来,所以不点亮。 */}
-        <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="跨考试对标 · 整理中" color={color} />
+        {/* ⚰️「词汇量测试」占位卡已删(Aaron 2026-08-09):
+            与上面的「快筛」两张都叫"测词汇量",必然混淆;而它的前置
+            (导入通用词频表 + 中考/高考/四级/六级词表)是内容工程、短期不做。
+            挂一张遥遥无期的占位不如不挂,真做出来时再加回来。 */}
       </div>
     </>
   );

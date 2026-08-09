@@ -57,7 +57,15 @@ export function WordCardBody({ word, allowAutoplay = true }: { word: VocabWord; 
        *    setTimeout 串播:两套串播逻辑必然漂移,而且 playChain 已经处理好了
        *    "中途点别的就中断"(它和 playUrl 共用同一个全局单曲不变量)。
        * ⚠️ played 防重放:切换朗读条数/勾选框引发的重渲染不该再响一遍。 */
-      const clips = r.slice(0, count).filter(e => e.audio_url).map(e => ({ url: e.audio_url, key: `e:${e.id}` }));
+      /* 顺序:**先读单词 → 停 0.6s → 再按句数设置读例句**(Aaron 2026-08-09 定)。
+       * ⚠️ 踩过:这里原先只由例句构造链条,`word.audio_url` **从头到尾没进过这个数组** ——
+       *    表现就是"答对后直接读例句、单词没读"。不是被例句覆盖,是压根没加进去。
+       * ⚠️ 0.6s 停顿交给 playChain(它带 gapAfterMs),别在这里套 setTimeout:
+       *    链外的定时器不受 chainToken 管辖,用户若在停顿期间点了别的,
+       *    这条链会在停顿结束后诈尸再读一句。 */
+      const clips: { url: string | null | undefined; key: string; gapAfterMs?: number }[] = [];
+      if (word.audio_url) clips.push({ url: word.audio_url, key: `w:${word.id}`, gapAfterMs: 600 });
+      clips.push(...r.slice(0, count).filter(e => e.audio_url).map(e => ({ url: e.audio_url, key: `e:${e.id}` })));
       if (autoplay && allowAutoplay && !played.current && clips.length) {
         played.current = true;
         void playChain(clips);

@@ -41,7 +41,10 @@ import {
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
-import { bankColor, FONT_STAT, readSelectedBank, SCENE_COLOR, tintToWhite, writeSelectedBank } from "@/lib/vocab/theme";
+/* ⚠️ 合并 main 时这里冲突过:本分支要 CTA_SHADOW/GRAD_CTA(今日学习按钮用),
+   main 删掉了 MILESTONES(里程碑整层已撤)。两边**各取正确的一半**,
+   别整行取一边 —— 取 HEAD 会把已删的 MILESTONES 带回来。 */
+import { bankColor, CTA_SHADOW, FONT_STAT, GRAD_CTA, readSelectedBank, SCENE_COLOR, tintToWhite, writeSelectedBank } from "@/lib/vocab/theme";
 import { countScenePacks, countScenesDone } from "@/lib/vocab/scenes";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import {
@@ -53,6 +56,7 @@ import {
   WeeklyBanner, ShareCard, type WeeklySummary,
 } from "@/components/vocab/Incentive";
 import { getStats, type UserStats } from "@/lib/vocab/stats";
+import { buildTodayPlan, type TodayPlan } from "@/lib/vocab/todayPlan";
 import { readStatsCache, writeStatsCache } from "@/lib/vocab/statsCache";
 
 /** 默认词库 —— 托福是首发库。找不到就退到第一个可用库(见 pickInitialBank)。 */
@@ -179,6 +183,11 @@ export default function VocabCenter() {
             该库进度(N/总数 + 细条)长在卡里,不再单列一行。 */}
         <BankCard banks={banks} selected={selected} onPick={onPick}
           color={color} progress={p ?? null} />
+
+        {/* 今日学习 —— 词库卡正下方最显眼位置。
+            ⚠️ 这是给"不想想、直接学"的用户的主路径;学习方式组那五项**全部保留**,
+               给想自己挑的用户。两条路并存,别为了突出这个去砍那五项。 */}
+        <TodayButton bankId={selected?.id ?? null} color={color} signedIn={signedIn} />
 
         {/* ⚠️ 骨架屏交给 StatsPanel 自己(loading 属性)—— 之前这里手写了一份
             "环 + 大字"形状的骨架,而卡片改成四条横条后那个形状对不上了,
@@ -583,6 +592,69 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
             别再往这一组里加"测词汇量"类的入口,除非那两件事有了结论。 */}
       </div>
     </>
+  );
+}
+
+/**
+ * 「今日学习」主按钮。
+ *
+ * 三态(规格第五节):
+ *   有任务 → 「今日学习 · N 词」+ 一行「复习 X · 新词 Y · 错题 Z」
+ *   全做完 → 「今天已完成 · 再来 10 个新词」
+ *   未登录 → 按钮仍在,点进去能试做(不写库)
+ *
+ * ⚠️ 数字**不许写死也不许估**:一律来自 `buildTodayPlan`,与点进去之后的序列
+ *    是同一份计划、同一套排序。按钮说 35 词、进去发现 40 题,是这功能最致命的失信。
+ * ⚠️ 算不出来时**不渲染按钮**,而不是渲染一个「今日学习 · 0 词」——
+ *    后者会让人以为今天真没任务。
+ */
+function TodayButton({ bankId, color, signedIn }: {
+  bankId: string | null; color: string; signedIn: boolean | null;
+}) {
+  const [plan, setPlan] = useState<TodayPlan | null>(null);
+
+  useEffect(() => {
+    if (!bankId) return;
+    let alive = true;
+    setPlan(null);
+    buildTodayPlan(bankId)
+      .then(p => { if (alive) setPlan(p); })
+      .catch(() => { /* 排不出来就不显示按钮,不给假数字 */ });
+    return () => { alive = false; };
+  }, [bankId]);
+
+  if (!bankId) return null;
+
+  /* 加载中给一块与真身同高的占位,避免数据到位时整页跳动 */
+  if (!plan) return <div className="mt-3 h-[68px] animate-pulse rounded-2xl bg-black/[0.04]" />;
+
+  const { counts, deferred } = plan;
+  const empty = counts.total === 0;
+
+  return (
+    <Link to="/vocab/today"
+      className="mt-3 block rounded-2xl px-5 py-3.5 text-white"
+      style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-[17px] font-semibold">
+          {/* ⚠️「今天已完成」只对**登录且真的清完了**的用户说。
+              未登录时 buildTodayPlan 会派 20 个试做词,走不到这个分支;
+              万一走到(词库为空),也不该说已完成。 */}
+          {empty ? (signedIn === false ? "今日学习" : "今天已完成 · 再来 10 个新词") : `今日学习 · ${counts.total} 词`}
+        </span>
+        <ChevronRight className="h-5 w-5 shrink-0 opacity-80" />
+      </div>
+      {!empty && (
+        <div className="mt-0.5 text-[12px] opacity-85" style={{ fontVariantNumeric: "tabular-nums" }}>
+          复习 {counts.review} · 新词 {counts.new} · 错题 {counts.mistake}
+          {/* 截断必须说出来,不能静默丢 */}
+          {deferred > 0 && ` · 另有 ${deferred} 词顺延到明天`}
+        </div>
+      )}
+      {signedIn === false && (
+        <div className="mt-0.5 text-[12px] opacity-85">未登录也可先试做,登录后才记录进度</div>
+      )}
+    </Link>
   );
 }
 

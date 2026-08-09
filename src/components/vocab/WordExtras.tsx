@@ -75,7 +75,9 @@ export default function WordExtras({ wordId, onPickWord }: {
   }, [wordId]);
 
   /* ⚠️ 没就绪时**什么都不渲染**(不是骨架屏):这一块是锦上添花,
-        先给一块灰占位反而会让卡片在数据到位时跳一下。 */
+        先给一块灰占位反而会让卡片在数据到位时跳一下。
+     ⚠️ 现在三段默认展开,这块的高度比以前大 —— 但它渲染在**例句之后**,
+        不影响"反馈层首屏要看到第一条例句"那条判据(已实测)。 */
   if (!ready || isEmptyExtras(data)) return null;
 
   const { collocations, confusion, antonyms } = data;

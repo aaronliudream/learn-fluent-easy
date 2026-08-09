@@ -533,6 +533,40 @@ export async function listMistakes(): Promise<MistakeRow[]> {
 }
 
 /** 按 word_id 取词详情(闯关出题要完整词卡)。≤200 个一次查得完。 */
+/**
+ * **干扰项池**:从某个词库取一小撮词,只够出四选一用。
+ *
+ * ── 为什么不复用 listBankWords ────────────────────────────────
+ * `listBankWords` 会把整库 4470 词全拉下来:1 次取 id + **23 次** 200 一片的串行查询。
+ * 错题本页实测(2026-08-09,SE):打开页面到网络静默 **10.9 秒**,
+ * `vocab_words` 打了 **24 次**;而这一页真正需要词库词的地方只有一个 ——
+ * 给 10 道题凑 30 个干扰项。这和今日学习 #336 那次是**同一个方向错误**:
+ * 该从"这次要用多少"出发,不该从"词库有多少"出发。
+ *
+ * ⚠️ 取 `limit` 个就够:`buildQuestions` 每题挑 3 个同词性干扰项,
+ *    400 个词足够覆盖各词性(不够时它自己会放宽到同库任意词,不会出不了题)。
+ *    别为了"更真实"把它调回全量 —— 那就是把 24 次请求又请回来了。
+ * ⚠️ 这里**不做缓存**:池子是随机性来源之一,缓存会让每次闯关的干扰项完全一样。
+ */
+export async function listBankWordsSample(bankId: string, limit = 400): Promise<VocabWord[]> {
+  const { data: idRows, error: idErr } = await db
+    .from("vocab_word_banks").select("word_id").eq("bank_id", bankId).limit(limit);
+  if (idErr) throw idErr;
+  const ids = ((idRows || []) as { word_id: string }[]).map(r => r.word_id);
+  if (!ids.length) return [];
+  const out: VocabWord[] = [];
+  for (let i = 0; i < ids.length; i += 200) {
+    const { data, error } = await db
+      .from("vocab_words")
+      .select("id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url")
+      .in("id", ids.slice(i, i + 200))
+      .not("def_zh", "is", null);
+    if (error) throw error;
+    out.push(...((data || []) as VocabWord[]));
+  }
+  return out;
+}
+
 export async function getWordsByIds(ids: string[]): Promise<VocabWord[]> {
   if (!ids.length) return [];
   const out: VocabWord[] = [];

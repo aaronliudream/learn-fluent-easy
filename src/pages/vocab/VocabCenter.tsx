@@ -16,11 +16,13 @@
  *      同一个词同时属于托福和四级只算一次;各库进度那层才 join vocab_word_banks。
  *
  * ── 页面三层,对应用户的动线 ──
- *   ① 我的状态:当前词库卡 → 学习进度(圆环/柱状)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:词卡练习 / 快筛 / 场景串记 / 磨耳朵  ← 选今天怎么学
+ *   ⓪ 场景串记横幅(独立学习方式,不属于任何词库)→ 分隔线
+ *   ① 我的状态:当前词库卡 → 学习进度(四条横条)→ 错题本 + 今日复习  ← 看我在哪
+ *   ② 学习方式:单词学习 / 快筛 / 磨耳朵 …  ← 选今天怎么学
  *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
- *   ⚠️ 场景串记原来是页面**最底部一条横幅**,层级是错的 —— 它是背单词的一种方式,
- *      不是词汇中心之外的附加功能。别再把它挪回底部。
+ *   ⚠️ 场景串记的位置改过两次:最初在页面**最底部**(层级太低),
+ *      后来并进学习方式组(会让人以为它在学当前词库),
+ *      2026-08-09 定版为**最顶部独立横幅 + 分隔线**。别再挪。
  *   ⚠️ 未上线的方式照样列出来、灰显不可点 —— 让用户看见这个板块在长。
  *
  * ── 首屏(iPhone SE 375×667)──
@@ -171,6 +173,11 @@ export default function VocabCenter() {
         </BackLink>
 
         <h1 className="mb-2 text-[24px] font-bold tracking-tight text-slate-900">词汇</h1>
+
+        {/* 场景串记 —— 独立学习方式,放在最顶上并与下方明确切开。
+            ⚠️ 它**不属于**下面那套"当前词库"的层级,别把它挪回学习方式组或下拉里,
+               理由见 SceneBanner 组件注释。 */}
+        <SceneBanner />
 
         {/* ═══ 第一层「我的状态」:我在哪 ═══ */}
         {/* 当前词库卡 —— 进入这一页的第一个决策点,视觉分量必须压得住。
@@ -541,29 +548,21 @@ function EntryCard({ icon, label, count, hint, to }: {
  * ⚠️ 场景串记的「已学 N/30」与 /vocab/scenes 顶部那行**同一个口径**(都数 done 键)。
  */
 function StudyModes({ bankCode, color }: { bankCode: string | null; color: string }) {
-  const [scene, setScene] = useState<{ done: number; total: number } | null>(null);
-
-  useEffect(() => {
-    let alive = true;
-    countScenePacks()
-      .then(n => { if (alive) setScene({ total: n, done: countScenesDone() }); })
-      .catch(() => { /* 场景取不到就不显示那行进度,卡片本身照常可点 */ });
-    return () => { alive = false; };
-  }, []);
-
-  const sceneStatus = scene && scene.total > 0
-    ? `已学 ${Math.min(scene.done, scene.total)}/${scene.total}`
-    : null;
-
   return (
     <>
       <h2 className="mb-2 mt-6 text-[13px] font-medium text-slate-400">学习方式</h2>
       {/* 单列纵向、每行约 56px。**不要改回 2 列方块卡** ——
           那版每张三行,六项吃掉近 500px,一屏放不下。 */}
       <div className="space-y-2">
+        {/* ⚠️ 副标题把四个模式**列出来**(Aaron 2026-08-09):
+            它们藏在下一层(点进词库页才看得到),叫"四种模式练词卡"等于没说 ——
+            用户根本不知道有听音辨义和听写挑战。名字也从"词卡练习"改成"单词学习":
+            "词卡"是我们的实现细节,用户想的是"学单词"。 */}
         <ModeCard
           icon={<Layers className="h-[18px] w-[18px]" />}
-          name="词卡练习" desc="四种模式练词卡" color={color}
+          name="单词学习" desc="四种模式练词卡"
+          sub="英汉选择 · 词汇配对 · 听音辨义 · 听写挑战"
+          color={color}
           /* 四模式入口在词库页;没选中库时不给链接(点进去是 /vocab/undefined) */
           to={bankCode ? `/vocab/${bankCode}` : undefined}
         />
@@ -574,11 +573,10 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
           icon={<Filter className="h-[18px] w-[18px]" />}
           name="快筛" desc="测测你已经会哪些" color={color} to="/vocab/screening"
         />
-        <ModeCard
-          icon={<Link2 className="h-[18px] w-[18px]" />}
-          name="场景串记" desc="把单词串成一篇作文"
-          color={SCENE_COLOR} to="/vocab/scenes" status={sceneStatus}
-        />
+        {/* ⚰️「场景串记」已从本组提出,改成页面**最顶部**的独立横幅
+            (Aaron 2026-08-09)。理由:它是独立的学习方式,不从属于托福词汇;
+            但也不是词库,不能进下拉(下拉里全是"一批词",它没有掌握度概念)。
+            别再加回这一组里。 */}
         <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="边听边记,可锁屏"
           color={color} to={bankCode ? `/vocab/listen?bank=${bankCode}` : "/vocab/listen"} />
         {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
@@ -594,14 +592,71 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
 }
 
 /**
+ * 场景串记横幅 —— 页面**最顶部**,在词库卡之上(Aaron 2026-08-09)。
+ *
+ * ⚠️ 为什么不在「学习方式」组里、也不在词库下拉里:
+ *    · 它是独立的学习方式,不从属于托福词汇 —— 放进学习方式组会让人以为
+ *      它是在学当前这个词库;
+ *    · 但它也不是词库,不能进下拉 —— 下拉里每一项都是"一批词、有掌握度",
+ *      场景串记没有掌握度这个概念,混进去口径就乱了。
+ *    所以给它一个自己的位置:最顶上,并与下方那套用底色和分隔线明确切开。
+ * ⚠️ 「已学 N/30」与 /vocab/scenes 顶部那行**同一个口径**(都数 done 键)。
+ * ⚠️ 高度压到一行:SE 首屏要保证「本横幅 + 词库卡 + 进度条前几行」都看得见。
+ */
+function SceneBanner() {
+  const [scene, setScene] = useState<{ done: number; total: number } | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    countScenePacks()
+      .then(n => { if (alive) setScene({ total: n, done: countScenesDone() }); })
+      .catch(() => { /* 取不到就不显示进度,横幅本身照常可点 */ });
+    return () => { alive = false; };
+  }, []);
+
+  const status = scene && scene.total > 0
+    ? `已学 ${Math.min(scene.done, scene.total)}/${scene.total}`
+    : null;
+
+  return (
+    <>
+      <Link to="/vocab/scenes"
+        className="flex items-center gap-2.5 rounded-2xl border px-3.5 py-2.5 active:brightness-[0.98]"
+        style={{ borderColor: `${SCENE_COLOR}33`, backgroundColor: `${SCENE_COLOR}0F` }}>
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
+          style={{ backgroundColor: `${SCENE_COLOR}26`, color: SCENE_COLOR }}>
+          <Link2 className="h-[18px] w-[18px]" />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-[15px] font-semibold leading-tight text-slate-900">场景串记</span>
+          <span className="mt-0.5 block truncate text-[12px] leading-tight text-slate-500">
+            30 个生活场景,把单词串成一篇作文
+          </span>
+        </span>
+        {status && (
+          <span className="shrink-0 text-[12px] font-medium"
+            style={{ color: SCENE_COLOR, fontVariantNumeric: "tabular-nums" }}>{status}</span>
+        )}
+        <ChevronRight className="h-4 w-4 shrink-0" style={{ color: SCENE_COLOR }} />
+      </Link>
+      {/* 分隔线:让用户一眼看出上面那张是**另一类东西**,
+          下面才是"当前词库"那一整套(词库卡 + 进度 + 学习方式)。 */}
+      <div className="my-3 border-t border-black/[0.06]" />
+    </>
+  );
+}
+
+/**
  * 一行方式卡:图标 + 名称 + 一句话灰字(同一行接在名称后)+ 右侧状态 + chevron。
  * 没有 `to` = 未上线:整行 40% 透明度 + 「即将开放」灰标,且点不动。
  *
  * ⚠️ 说明文字 `truncate` 单行截断,不换行 —— 一换行整行就变两行,
  *    六项加起来又回到近 500px。文案本身也要短(长的在写的时候就该缩)。
  */
-function ModeCard({ icon, name, desc, color, to, status }: {
+function ModeCard({ icon, name, desc, sub, color, to, status }: {
   icon: React.ReactNode; name: string; desc: string; color: string;
+  /** 第二行小字:用于把藏在下一层的子模式**列出来**,让用户知道它们存在。 */
+  sub?: string;
   to?: string; status?: string | null;
 }) {
   const soon = !to;
@@ -611,8 +666,18 @@ function ModeCard({ icon, name, desc, color, to, status }: {
         style={{ backgroundColor: soon ? "#F1F5F9" : `${color}1F`, color: soon ? "#94A3B8" : color }}>
         {icon}
       </span>
-      <span className="shrink-0 text-[15px] font-semibold text-slate-900">{name}</span>
-      <span className="min-w-0 flex-1 truncate text-[12px] text-slate-400">{desc}</span>
+      {/* 有副标题时名称与副标题竖排;没有则保持原来的一行式,不改其它卡的高度 */}
+      {sub ? (
+        <span className="min-w-0 flex-1">
+          <span className="block text-[15px] font-semibold leading-tight text-slate-900">{name}</span>
+          <span className="mt-0.5 block truncate text-[12px] leading-tight text-slate-400">{sub}</span>
+        </span>
+      ) : (
+        <>
+          <span className="shrink-0 text-[15px] font-semibold text-slate-900">{name}</span>
+          <span className="min-w-0 flex-1 truncate text-[12px] text-slate-400">{desc}</span>
+        </>
+      )}
       {soon
         ? <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-500">即将开放</span>
         : status

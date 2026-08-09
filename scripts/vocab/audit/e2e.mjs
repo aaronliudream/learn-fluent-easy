@@ -4,11 +4,11 @@ import { loadEnv } from '../env.mjs';
 const env = loadEnv(process.cwd(), { quiet: true });
 const U = env.VITE_SUPABASE_URL, K = env.VITE_SUPABASE_PUBLISHABLE_KEY;
 const BASE = process.env.BASE;
-const EMAIL='cc-audit@bigmooneducation.com', PASS='AuditRun!2026x';
+const EMAIL=process.env.EMAIL, PASS=process.env.PASS;
 let r = await fetch(`${U}/auth/v1/signup`, {method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({email:EMAIL,password:PASS})});
 let s = await r.json();
 if(!s.access_token){ r=await fetch(`${U}/auth/v1/token?grant_type=password`,{method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({email:EMAIL,password:PASS})}); s=await r.json(); }
-if(!s.access_token){ console.error('登录失败'); process.exit(1); }
+if(!s?.access_token) { console.error('✗ 登录失败,整轮作废:', JSON.stringify(s).slice(0,200)); process.exit(1); }
 console.log('测试用户', s.user.id, '\n');
 
 const b = await chromium.launch();
@@ -22,7 +22,13 @@ page.on('response', res => { if (res.url().includes('/rest/v1/') && res.status()
 
 await page.goto(BASE,{waitUntil:'commit',timeout:120000});
 const key=`sb-${new URL(U).hostname.split('.')[0]}-auth-token`;
-await page.evaluate(([k,sess])=>localStorage.setItem(k,JSON.stringify({access_token:sess.access_token,refresh_token:sess.refresh_token,expires_at:Math.floor(Date.now()/1000)+sess.expires_in,expires_in:sess.expires_in,token_type:'bearer',user:sess.user})),[key,s]);
+await page.evaluate(([k,sess])=>localStorage.setItem(k,JSON.stringify(sess)),[key,s]);
+await page.goto(BASE+'/vocab',{waitUntil:'networkidle',timeout:120000});
+await page.waitForTimeout(4000);
+/* ⚠️ 硬校验登录态。上一轮就是登录没成功却照跑,14 条全 ✓ 但那是未登录的世界。 */
+const loggedIn = await page.evaluate(()=>!document.body.innerText.includes('未登录状态下'));
+console.log(loggedIn ? '✓ 已登录态' : '✗ 仍是未登录态 —— 整轮作废');
+if (!loggedIn) { await b.close(); process.exit(1); }
 
 const PATHS = [
   ['/vocab','词汇中心'], ['/vocab/today','今日学习'], ['/vocab/scenes','场景列表'],

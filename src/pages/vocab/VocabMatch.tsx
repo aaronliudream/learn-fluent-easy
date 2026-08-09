@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF } from "@/lib/vocab/theme";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
+import { playUrl } from "@/lib/vocab/audio";
 import { AnonNote, QuotaModal, Result, WordCardBody } from "@/components/vocab/SessionParts";
 import {
   getBankByCode, listBankWords, getWordStatusMap, currentUserId,
@@ -105,6 +106,13 @@ export default function VocabMatch() {
     if (sel.wordId === t.wordId) {
       setCleared(prev => new Set(prev).add(t.wordId));
       setSel(null);
+      /* 配对成功就朗读该词:既是正反馈,也是这个模式里唯一一次听到读音的机会
+         (配对模式没有逐题反馈层)。Aaron 2026-08-09 定。
+         ⚠️ 与结算页那 6 张卡的自动朗读是两回事,别混:
+            这里是**一次一个词**、由用户的点击直接触发;
+            那里是 6 张卡同时挂载各自开播,会互相抢占,所以关掉。 */
+      const w = words.find(x => x.id === t.wordId);
+      if (w?.audio_url) void playUrl(w.audio_url, `w:${w.id}`);
       // 之前配错过就记错 —— 判据是"第一次尝试对不对",不是"最后有没有配上"
       void write(t.wordId, !missed.has(t.wordId));
     } else {

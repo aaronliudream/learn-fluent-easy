@@ -22,7 +22,7 @@ import { startTracking } from "@/lib/vocab/timeTracker";
 import { ShareCard } from "@/components/vocab/Incentive";
 import {
   buildScreening, estimate, saveScreening, POOL_SIZE, TOTAL_ITEMS, STRATA,
-  type ScreenAnswer, type ScreenItem, type ScreenResult,
+  type SaveOutcome, type ScreenAnswer, type ScreenItem, type ScreenResult,
 } from "@/lib/vocab/screening";
 
 export default function VocabScreening() {
@@ -38,7 +38,7 @@ export default function VocabScreening() {
   /** 当前题已点「认识」、正在追问验真的那一步 */
   const [verifying, setVerifying] = useState(false);
   const [result, setResult] = useState<ScreenResult | null>(null);
-  const [saved, setSaved] = useState<boolean | null>(null);
+  const [saved, setSaved] = useState<SaveOutcome | null>(null);
   const [share, setShare] = useState(false);
 
   useEffect(() => startTracking(), []);
@@ -64,10 +64,17 @@ export default function VocabScreening() {
     if (!items) return;
     const r = estimate(items, final);
     setResult(r);
-    /* 落库失败(未登录 / 表没建 / RLS)**不拦结果显示** —— 结果是用户刚花两分钟挣来的 */
-    const ok = bank ? await saveScreening(bank.id, items, final).catch(() => false) : false;
-    setSaved(ok);
-  }, [items, bank]);
+    /* 落库失败(未登录 / 取不到词库 / RLS)**不拦结果显示** —— 结果是用户刚花两分钟挣来的。
+       ⚠️ 不再写成 `bank ? save(...) : false`:bank 是异步 state,拿它当写库前提
+          会让"词库还没加载完"直接变成"永远不写",而且一声不吭。
+          bankId 传 null 时 saveScreening 会自己按 code 兜底查。 */
+    const out = await saveScreening(bank?.id ?? null, bankCode, items, final)
+      .catch((e): SaveOutcome => {
+        console.log("[快筛] ✗ 落库抛异常", e);
+        return { ok: false, reason: "db", detail: String(e) };
+      });
+    setSaved(out);
+  }, [items, bank, bankCode]);
 
   const answer = useCallback((known: boolean) => {
     if (!items || !cur) return;
@@ -183,7 +190,7 @@ export default function VocabScreening() {
 /* ── 结果页 ────────────────────────────────────────────────── */
 
 function ResultView({ result, color, saved, onRetry, onShare, share, onCloseShare, onGoLearn }: {
-  result: ScreenResult; color: string; saved: boolean | null;
+  result: ScreenResult; color: string; saved: SaveOutcome | null;
   onRetry: () => void; onShare: () => void; share: boolean; onCloseShare: () => void; onGoLearn: () => void;
 }) {
   const start = STRATA.find(s => s.id === result.startAt);
@@ -256,9 +263,17 @@ function ResultView({ result, color, saved, onRetry, onShare, share, onCloseShar
           </button>
         </div>
 
-        {saved === false && (
+        {/* ⚠️ 三种失败说三种话 —— 笼统一句"保存失败"既帮不了用户,
+               也帮不了排查(我自己就因此查了一轮)。 */}
+        {saved?.ok === false && saved.reason === "anon" && (
           <p className="mt-3 text-center text-[12px] leading-relaxed text-slate-400">
-            结果未能保存(未登录或网络问题)。<Link to="/auth" className="underline">登录</Link>后重筛可留存记录。
+            结果未保存 —— 你还没登录。<Link to="/auth" className="underline">登录</Link>后重筛即可留存记录。
+          </p>
+        )}
+        {saved?.ok === false && saved.reason !== "anon" && (
+          <p className="mt-3 text-center text-[12px] leading-relaxed text-rose-500">
+            结果未能保存({saved.reason === "no-bank" ? "取不到词库" : "写入失败"})。
+            控制台里有以 <code>[快筛]</code> 开头的详细日志。
           </p>
         )}
 

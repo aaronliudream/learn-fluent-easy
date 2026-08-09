@@ -207,25 +207,59 @@ export async function buildScreening(): Promise<ScreenItem[]> {
   return items;
 }
 
+/** 落库为什么没成 —— 结果页要据此说人话,而不是笼统一句"保存失败"。 */
+export type SaveOutcome =
+  | { ok: true; rows: number }
+  | { ok: false; reason: "anon" | "no-bank" | "db"; detail?: string };
+
+/** 诊断日志。用户报"没写库"时让他截控制台就能定位,前缀统一 `[快筛]`。 */
+function diag(step: string, detail?: unknown) {
+  console.log(`[快筛] ${step}`, detail ?? "");
+}
+
 /**
- * 落库:一次快筛 40 行。
+ * 落库:一次快筛 40 行,**结果页出来时一次性写**(不是每题写)。
+ *
  * ⚠️ **不写 user_vocab_mastery** —— 快筛是自评不是作答,不占掌握度、
  *    也不占 user_vocab_mastery 那 200 条 RLS 配额。
- * ⚠️ 未登录静默跳过(返回 false),结果页照常显示 —— 不能因为没登录就不让人看结果。
+ * ⚠️ 失败**不拦结果显示**,但必须把原因喊出来。
+ *    踩过:这里原先是 `if (!uid) return false;` 一句静默返回,调用方又是
+ *    `bank ? save(...) : false` —— 两条路径都不打日志,库里 0 行而控制台一片安静,
+ *    根本无从判断是没登录、没取到词库、还是被 RLS 挡了。
+ * ⚠️ bankId 允许传 null:调用方的 bank 是个异步 state,拿它当写库前提会让
+ *    "词库还没加载完"变成"永远不写"。这里自己按 code 兜底查一次。
  */
 export async function saveScreening(
-  bankId: string,
+  bankId: string | null,
+  bankCode: string,
   items: ScreenItem[],
   answers: Map<number, ScreenAnswer>,
-): Promise<boolean> {
+): Promise<SaveOutcome> {
   const uid = await currentUserId();
-  if (!uid) return false;
+  diag("准备落库", { uid: uid ? `${uid.slice(0, 8)}…` : null, bankId, bankCode, 题数: items.length });
+  if (!uid) {
+    diag("✗ 未登录,跳过落库(结果照常显示)");
+    return { ok: false, reason: "anon" };
+  }
+
+  let bid = bankId;
+  if (!bid) {
+    /* 兜底:调用方没拿到 bank 也要能写 —— 别让一个 UI state 决定数据写不写 */
+    const { data, error } = await db.from("vocab_banks").select("id").eq("code", bankCode).maybeSingle();
+    if (error || !data?.id) {
+      diag("✗ 取不到词库 id,无法落库", { bankCode, error });
+      return { ok: false, reason: "no-bank", detail: error?.message };
+    }
+    bid = data.id as string;
+    diag("兜底查到词库 id", bid);
+  }
+
   const sessionId = crypto.randomUUID();
   const rows = items.map((it, i) => {
     const a = answers.get(i);
     return {
       user_id: uid,
-      bank_id: bankId,
+      bank_id: bid,
       word_id: it.word.id,
       known: !!a?.known,
       verified_correct: a?.verifiedCorrect ?? null,
@@ -233,13 +267,19 @@ export async function saveScreening(
       session_id: sessionId,
     };
   });
+
   const { error } = await db
     .from("vocab_pre_known")
     .upsert(rows, { onConflict: "user_id,bank_id,word_id" });
   if (error) {
-    /* 表没建好/RLS 拦了都不该让用户看不到结果 —— 记一笔,继续 */
-    console.warn("[快筛] 落库失败,结果仍照常显示", error);
-    return false;
+    /* PostgREST 的四个字段都要打全:code 分得清 RLS(42501)、缺列(42703)、
+       约束不匹配(42P10);只打 message 经常是一句没头没尾的话 */
+    diag("✗ 落库失败", {
+      code: error.code, message: error.message, details: error.details, hint: error.hint,
+      行数: rows.length, 样例: rows[0],
+    });
+    return { ok: false, reason: "db", detail: `${error.code ?? ""} ${error.message ?? ""}`.trim() };
   }
-  return true;
+  diag("✓ 落库成功", { 行数: rows.length, session: sessionId.slice(0, 8) });
+  return { ok: true, rows: rows.length };
 }

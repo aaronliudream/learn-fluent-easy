@@ -1,7 +1,27 @@
 # 托福词库:8 组词共用同一条英文释义 —— 送审件
 
-**日期**:2026-08-09 · **状态**:⏳ 待 Aaron 审,**审过再跑 SQL**
-**对应 SQL**:`SQLAA/20260809_vocab_def_en_dedupe.sql`(已写好,**先别跑**)
+**日期**:2026-08-09 · **状态**:✅ **Aaron 已审通过,SQL 可跑**
+**对应 SQL**:`SQLAA/20260809_vocab_def_en_dedupe.sql`
+
+## 审核结果(Aaron 2026-08-09)
+
+- **① millennia:选方案 A** —— 从 `vocab_word_banks` 摘掉托福归属,词条留在 `vocab_words` **不删**。
+  理由:`pos` 为空坐实了导入时把屈折形当独立词条收了;托福词表不该有两个条目教同一个词的单复数。
+- **②~⑧ 七组全部批准**,只改一处措辞:**satiric 的 `def_zh` → 「讽刺的(书面)」**
+  (原「讽刺的(较少用,多见于文学评论)」括号太长会挤前端选项区;详细说明留在 `def_en` 里)。
+- **第四节那 559 组**:单独立项,先从 17 组"必然同框"的开始,本次不碰。
+  清单已存进记忆 `vocab-content-debt`。
+- **第五节影响面核对**三条(无配音 / 不需置空 `audio_url` / 用户数据按 `word_id` 存不受影响)确认无误。
+
+## ⚠️ 三份 SQL 的跑法顺序
+
+```
+1) 20260809_vocab_def_en_dedupe.sql        ← 本文件对应的这份
+2) 20260809_vocab_orphan_word_fagot.sql    ← 删孤儿词(带硬闸,有挂靠即回滚)
+3) 20260809_vocab_bank_total_words_fix.sql ← 最后跑,它是幂等的,把两次改动一起对平
+```
+第 1 步把 millennia 从托福摘掉(实挂 4470 → 4469),第 2 步删掉 fagot(`vocab_words` 4471 → 4470),
+两步都会让 `total_words` 对不上 —— 所以第 3 步**必须放在最后**,它现场 `count(*)` 重算,一次对平。
 
 ---
 
@@ -41,24 +61,26 @@
 `millennia` 是 `millennium` 的复数形。它 `pos` 是空的,基本可以确定是词表导入时
 把一个屈折形当成独立词条收了进来。
 
-**建议(三选一,请你定)**:
-- **A(推荐)**:把 `millennia` 从托福库摘掉(`vocab_word_banks` 删这一条),
-  词条本身留在 `vocab_words` 里不删 —— 万一别的库要用还在。
-  理由:让学生把"复数形"当成一个要背的新词,是在教一个不存在的知识点。
-- **B**:留着,但释义写清它是复数:
-  `def_en = "plural of millennium; periods of one thousand years."` / `def_zh = "千年(millennium 的复数)"`,并补 `pos = "n."`。
-- **C**:不动。
+**✅ 定案:方案 A**(Aaron 2026-08-09)。
+从 `vocab_word_banks` 摘掉托福归属,词条本身留在 `vocab_words` **不删** —— 万一别的库要用还在。
+理由:让学生把"复数形"当成一个要背的新词,是在教一个不存在的知识点。
 
-⚠️ SQL 里我按 **B** 写(最保守、不动词库归属),**你要 A 的话告诉我,我改**。
+⚠️ 词条既然留着,顺手把释义写清是复数(`plural of millennium…` / `千年(millennium 的复数)`)
+并补上 `pos = "n."` —— 不能留一条和 `millennium` 一字不差的释义在库里,那正是本次要消灭的东西。
+⚠️ 摘掉后托福实挂 4470 → 4469,所以 `total_words` 对账 SQL **要放到最后跑**(见上方顺序)。
 
 ### ② 🟩 satiric / satirical —— 同义,但常用度差一个数量级
 
 | | 建议 def_en | 建议 def_zh |
 | --- | --- | --- |
 | satirical | using humor, irony, or exaggeration to criticize or mock. | 讽刺的 |
-| satiric | the same as *satirical*, but far less common and mostly used in literary criticism. | 讽刺的（较少用，多见于文学评论） |
+| satiric | the same as *satirical*, but far less common and mostly used in literary criticism. | 讽刺的（书面） |
 
 这一组的差别本来就只在"用不用",释义写成一样不算错 —— 但学生需要知道**该用哪个**。
+
+⚠️ `def_zh` 用**短括号**「(书面)」而不是「(较少用,多见于文学评论)」:
+选项区只显示 `def_zh` 分号前那一段(见 `optionText`),长括号会把选项挤变形。
+详细说明留在 `def_en` 里 —— 那里不进选项。
 
 ### ③ 🟩 sporadic / intermittent
 

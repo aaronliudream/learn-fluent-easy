@@ -1,8 +1,13 @@
 -- 8 组词共用同一条英文释义 —— 拆开。
 --
--- ⛔ **先别跑。** 这是教学内容,按落库前审核铁律必须先过 Aaron 那一关。
---    送审件:REVIEWAA/vocab_def_en_duplicates.md(逐组给了差别说明和改法)
---    审完确认哪几条要改、①millennia 选 A/B/C 哪个方案,再跑这份。
+-- ✅ **Aaron 2026-08-09 已审通过,可以跑。**
+--    · ① millennia:选 **方案 A** —— 从 vocab_word_banks 摘掉托福归属,
+--      词条本身留在 vocab_words **不删**(pos 为空坐实了导入时把屈折形当独立词条收了;
+--      托福词表不该有两个条目教同一个词的单复数)。
+--    · ②~⑧ 七组全部批准,只改一处措辞:satiric 的 def_zh 改成「讽刺的(书面)」——
+--      原来那句「(较少用,多见于文学评论)」括号太长,会挤前端选项区;
+--      详细说明留在 def_en 里(选项区只显示 def_zh 分号前那段,见 optionText)。
+--    送审件留档:REVIEWAA/vocab_def_en_duplicates.md
 --
 -- ══ 库内实证(2026-08-09 现查)══════════════════════════════════
 --   全表 4471 行,按 lower(trim(def_en)) 分组:8 组完全相同,涉及 16 词。
@@ -27,12 +32,17 @@ WHERE headword IN ('millennium','millennia','satirical','satiric','sporadic','in
                    'trifling','trivial','nutritious','nourishing')
 ORDER BY headword;
 
--- ① millennia / millennium ——【方案 B:留着,但写明是复数】
---    ⚠️ Aaron 若选方案 A(把 millennia 从托福库摘掉),**删掉下面这两句**,改跑:
---        DELETE FROM vocab_word_banks
---        WHERE word_id = (SELECT id FROM vocab_words WHERE headword='millennia')
---          AND bank_id = (SELECT id FROM vocab_banks WHERE code='toefl');
---       (词条本身保留在 vocab_words,别删 —— 别的库将来可能要用)
+-- ①【方案 A · Aaron 定】millennia 从**托福库**摘掉,词条留在 vocab_words 不删。
+--    ⚠️ 不删词条:别的库将来可能要用,而且删了会连带影响 vocab_words 计数与
+--       20260809_vocab_bank_total_words_fix.sql 里那条 4470 的断言。
+--    ⚠️ 摘掉之后 toefl 实挂 4470 → 4469。**跑完这份要重跑一次 total_words 对账 SQL**
+--       (那份是幂等的,重复跑安全),否则 total_words 又对不上了。
+--    ⚠️ 顺手把它的释义写清楚是复数 —— 词条既然留着,就别留一条和 millennium
+--       一字不差的释义在库里(那正是本次要消灭的东西)。
+DELETE FROM vocab_word_banks
+WHERE word_id = (SELECT id FROM vocab_words WHERE headword = 'millennia')
+  AND bank_id = (SELECT id FROM vocab_banks  WHERE code = 'toefl');
+
 UPDATE vocab_words SET
   def_en = 'plural of millennium; periods of one thousand years.',
   def_zh = '千年(millennium 的复数)',
@@ -42,7 +52,7 @@ WHERE headword = 'millennia' AND def_en = 'a period of one thousand years.';
 -- ② satiric / satirical(同义,差在常用度)
 UPDATE vocab_words SET
   def_en = 'the same as satirical, but far less common and mostly used in literary criticism.',
-  def_zh = '讽刺的(较少用,多见于文学评论)'
+  def_zh = '讽刺的(书面)'          -- Aaron 2026-08-09:括号太长会挤选项区,细节留在 def_en
 WHERE headword = 'satiric' AND def_en = 'using humor, irony, or exaggeration to criticize or mock.';
 
 -- ③ sporadic / intermittent(零散无规律 vs 停停走走)

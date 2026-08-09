@@ -7,7 +7,7 @@
  * 所以口径必须钉死。
  */
 import { describe, expect, it } from "vitest";
-import { orderTasks, normalizeMode, REVIEW_CAP } from "./todayPlan";
+import { orderTasks, normalizeMode, REVIEW_CAP, ANON_TRIAL, EMPTY_PLAN } from "./todayPlan";
 import type { VocabWord } from "./data";
 
 const w = (id: string, freq: number | null = 1000): VocabWord =>
@@ -127,5 +127,18 @@ describe("normalizeMode", () => {
   });
   it.each([null, undefined, "", "bogus"])("认不出的退回 zh_choice(%s)", m => {
     expect(normalizeMode(m as string)).toBe("zh_choice");
+  });
+});
+
+describe("未登录不能返回空计划", () => {
+  /* ⚠️ 这条是真机 preview 上撞出来的:未登录首页显示「今天已完成 · 再来 10 个新词」——
+     一个什么都没做的新用户被告知"已完成"。根因是空计划被入口按钮读成了"全做完"。
+     这里钉住"空计划 ≠ 未登录状态"这个区分。 */
+  it("EMPTY_PLAN 的 total 为 0 —— 它只代表「真的没任务」,不代表「未登录」", () => {
+    expect(EMPTY_PLAN.counts.total).toBe(0);
+  });
+
+  it("ANON_TRIAL 是正数,未登录才有词可试做", () => {
+    expect(ANON_TRIAL).toBeGreaterThan(0);
   });
 });

@@ -22,6 +22,9 @@ const db = supabase as any;
 /** 一天最多派多少复习词。超出按"最久未复习优先"截断,其余顺延到明天。 */
 export const REVIEW_CAP = 50;
 
+/** 未登录时派多少个新词试做(规格第五节)。 */
+export const ANON_TRIAL = 20;
+
 export type TaskKind = "review" | "mistake" | "new";
 
 export type TodayTask = {
@@ -107,13 +110,30 @@ export function normalizeMode(raw: string | null | undefined): VocabMode {
 
 /**
  * 组今天的计划。
- * ⚠️ 未登录返回空计划但**不抛错** —— 按钮仍要在,点了才提示登录(规格第五节)。
+ * ⚠️ 未登录**给试做词而不是空计划** —— 空计划会被入口按钮读成"今天已完成"。
+ *    真机 preview 上撞到过:未登录首页显示「今天已完成 · 再来 10 个新词」。
  */
 export async function buildTodayPlan(bankId: string): Promise<TodayPlan> {
   const uid = await currentUserId();
   const pool = await listBankWords(bankId);
   const byId = new Map(pool.map(w => [w.id, w]));
-  if (!uid) return { ...EMPTY_PLAN, tasks: [], counts: { review: 0, mistake: 0, new: 0, total: 0 } };
+
+  /* ⚠️ 未登录**不能返回空计划**。空计划会被入口按钮读成"今天已完成" ——
+     一个什么都没做的新用户被告知"已完成",是明确的错误信息。
+     规格第五节:未登录允许试做 20 题。所以给 ANON_TRIAL 个高频新词,
+     按钮照常显示「今日学习 · 20 词」,点进去能做,只是不写库。 */
+  if (!uid) {
+    const trial = [...pool]
+      .sort((a, b) => (a.freq_rank ?? Number.MAX_SAFE_INTEGER) - (b.freq_rank ?? Number.MAX_SAFE_INTEGER))
+      .slice(0, ANON_TRIAL)
+      .map(w => ({ word: w, kind: "new" as const, mode: "zh_choice" as const, showCardFirst: true }));
+    return {
+      tasks: trial,
+      counts: { review: 0, mistake: 0, new: trial.length, total: trial.length },
+      deferred: 0,
+      goal: EMPTY_PLAN.goal,
+    };
+  }
 
   const [stats, mastRes, mistakes] = await Promise.all([
     getStats().catch(() => null),

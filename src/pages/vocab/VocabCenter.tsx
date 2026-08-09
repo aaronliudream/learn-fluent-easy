@@ -637,7 +637,10 @@ function TodayButton({ bankId, color, signedIn }: {
       style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
       <div className="flex items-center justify-between gap-2">
         <span className="text-[17px] font-semibold">
-          {empty ? "今天已完成 · 再来 10 个新词" : `今日学习 · ${counts.total} 词`}
+          {/* ⚠️「今天已完成」只对**登录且真的清完了**的用户说。
+              未登录时 buildTodayPlan 会派 20 个试做词,走不到这个分支;
+              万一走到(词库为空),也不该说已完成。 */}
+          {empty ? (signedIn === false ? "今日学习" : "今天已完成 · 再来 10 个新词") : `今日学习 · ${counts.total} 词`}
         </span>
         <ChevronRight className="h-5 w-5 shrink-0 opacity-80" />
       </div>

@@ -13,7 +13,7 @@
  */
 import { REVIEW_INTERVALS, type VocabMode } from "@/lib/vocab/vocabMastery";
 import { supabase } from "@/integrations/supabase/client";
-import { currentUserId, listBankWords, listMistakes, type VocabWord } from "@/lib/vocab/data";
+import { currentUserId, listMistakes, type VocabWord } from "@/lib/vocab/data";
 import { getStats } from "@/lib/vocab/stats";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,6 +24,9 @@ export const REVIEW_CAP = 50;
 
 /** 未登录时派多少个新词试做(规格第五节)。 */
 export const ANON_TRIAL = 20;
+
+/** 取词详情时的列。与 data.ts 的 listBankWords 同一套,别在这里少列或多列。 */
+const WORD_COLS = "id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url";
 
 export type TaskKind = "review" | "mistake" | "new";
 
@@ -115,52 +118,81 @@ export function normalizeMode(raw: string | null | undefined): VocabMode {
  */
 export async function buildTodayPlan(bankId: string): Promise<TodayPlan> {
   const uid = await currentUserId();
-  const pool = await listBankWords(bankId);
-  const byId = new Map(pool.map(w => [w.id, w]));
 
-  /* ⚠️ 未登录**不能返回空计划**。空计划会被入口按钮读成"今天已完成" ——
-     一个什么都没做的新用户被告知"已完成",是明确的错误信息。
-     规格第五节:未登录允许试做 20 题。所以给 ANON_TRIAL 个高频新词,
-     按钮照常显示「今日学习 · 20 词」,点进去能做,只是不写库。 */
+  /* ⚠️ **不要 listBankWords(bankId)**。
+   *    它把整库 4470 词全拉下来:23 次 200 一片的**串行**查询,实测 5.7 秒
+   *    (并发化能到 2.5 秒、直接翻页 2.0 秒,但那只是把不该做的事做快一点)。
+   *    今日学习真正需要的只有三小撮:**到期的 + 错题的 + 补新词用的高频若干**,
+   *    实测 586ms —— 快约 10 倍。
+   *    ⚠️ 这是 /vocab/today 首屏卡在「正在排今天的任务…」十几秒的根因(2026-08-09 体检查实)。 */
+
   if (!uid) {
-    const trial = [...pool]
-      .sort((a, b) => (a.freq_rank ?? Number.MAX_SAFE_INTEGER) - (b.freq_rank ?? Number.MAX_SAFE_INTEGER))
-      .slice(0, ANON_TRIAL)
-      .map(w => ({ word: w, kind: "new" as const, mode: "zh_choice" as const, showCardFirst: true }));
+    /* 未登录:只取高频前 ANON_TRIAL 个,不碰全库。
+       ⚠️ 不能返回空计划 —— 空计划会被入口按钮读成"今天已完成",
+          一个什么都没做的新用户被告知"已完成"是明确的错误信息。 */
+    const { data } = await db.from("vocab_words").select(WORD_COLS)
+      .not("def_zh", "is", null).order("freq_rank", { ascending: true, nullsFirst: false })
+      .limit(ANON_TRIAL);
+    const trial = ((data || []) as VocabWord[]).map(w => ({
+      word: w, kind: "new" as const, mode: "zh_choice" as const, showCardFirst: true,
+    }));
     return {
       tasks: trial,
       counts: { review: 0, mistake: 0, new: trial.length, total: trial.length },
-      deferred: 0,
-      goal: EMPTY_PLAN.goal,
+      deferred: 0, goal: EMPTY_PLAN.goal,
     };
   }
 
-  const [stats, mastRes, mistakes] = await Promise.all([
-    getStats().catch(() => null),
+  const nowIso = new Date().toISOString();
+  const [stats, dueRes, mistakes] = await Promise.all([
+    getStats().catch(e => { console.log("[今日学习] ✗ 取 stats 失败,回落默认目标", e); return null; }),
+    /* 只要**到期的**,不要全部掌握度行 */
     db.from("user_vocab_mastery")
-      .select("word_id,next_review_at,review_interval_idx,tested_count")
-      .eq("user_id", uid).limit(5000),
-    listMistakes().catch(() => []),
+      .select("word_id,next_review_at")
+      .eq("user_id", uid).lte("next_review_at", nowIso).limit(2000),
+    listMistakes().catch(e => { console.log("[今日学习] ✗ 取错题失败,本轮不含错题", e); return []; }),
   ]);
   const goal = stats?.daily_goal ?? EMPTY_PLAN.goal;
-  const mast = ((mastRes?.data || []) as MasteryLite[]).filter(m => byId.has(m.word_id));
-  const touched = new Set(mast.map(m => m.word_id));
 
-  const nowIso = new Date().toISOString();
-  const due = mast
-    .filter(m => m.next_review_at && m.next_review_at <= nowIso)
-    .map(m => ({ word: byId.get(m.word_id)!, nextReviewAt: m.next_review_at }));
+  const dueRows = ((dueRes?.data || []) as { word_id: string; next_review_at: string | null }[]);
+  const mistakeRows = (mistakes as { word_id: string; last_wrong_mode: string | null }[]);
+  const mistakeIds = new Set(mistakeRows.map(m => m.word_id));
 
-  /* 错题:只取本词库里的;它们可能同时也到期复习 —— 去重时**错题优先**,
-     因为错题要用它错过的那种题型练,信息量更大。 */
-  const dueIds = new Set(due.map(d => d.word.id));
-  const mistakeList = (mistakes as { word_id: string; last_wrong_mode: string | null }[])
+  /* 一次取齐"到期 + 错题"这两小撮的词详情(实测约 11 条 / 377ms) */
+  const needIds = [...new Set([...dueRows.map(d => d.word_id), ...mistakeIds])];
+  const byId = new Map<string, VocabWord>();
+  if (needIds.length) {
+    for (let i = 0; i < needIds.length; i += 200) {
+      const { data } = await db.from("vocab_words").select(WORD_COLS).in("id", needIds.slice(i, i + 200));
+      for (const w of ((data || []) as VocabWord[])) byId.set(w.id, w);
+    }
+  }
+
+  /* 补新词:只取高频前若干。
+     ⚠️ 取 goal + 已排量 + 余量 是为了**扣掉已学过的**之后仍够用 ——
+        直接取 goal 个会在用户学过前几十个高频词后越取越不够。 */
+  const freshNeed = Math.max(0, goal) + needIds.length + 60;
+  const { data: freshRaw } = await db.from("vocab_words").select(WORD_COLS)
+    .not("def_zh", "is", null).order("freq_rank", { ascending: true, nullsFirst: false })
+    .limit(Math.min(500, freshNeed));
+  /* 已作答过的词不能当新词。只查这一小批的掌握度,不拉全表。 */
+  const freshIds = ((freshRaw || []) as VocabWord[]).map(w => w.id);
+  const touched = new Set<string>();
+  if (freshIds.length) {
+    const { data } = await db.from("user_vocab_mastery").select("word_id")
+      .eq("user_id", uid).in("word_id", freshIds);
+    for (const r of ((data || []) as { word_id: string }[])) touched.add(r.word_id);
+  }
+  const fresh = ((freshRaw || []) as VocabWord[])
+    .filter(w => !touched.has(w.id) && !byId.has(w.id));
+
+  /* 同一个词既到期又在错题本 → 只出一次,算错题(用它当初错的题型练,信息量更大) */
+  const dueOnly = dueRows
+    .filter(d => !mistakeIds.has(d.word_id) && byId.has(d.word_id))
+    .map(d => ({ word: byId.get(d.word_id)!, nextReviewAt: d.next_review_at }));
+  const mistakeList = mistakeRows
     .filter(m => byId.has(m.word_id))
     .map(m => ({ word: byId.get(m.word_id)!, mode: normalizeMode(m.last_wrong_mode) }));
-  const mistakeIds = new Set(mistakeList.map(m => m.word.id));
-  const dueOnly = due.filter(d => !mistakeIds.has(d.word.id));
-
-  const fresh = pool.filter(w => !touched.has(w.id) && !mistakeIds.has(w.id) && !dueIds.has(w.id));
 
   const { tasks, deferred } = orderTasks(dueOnly, mistakeList, fresh, goal);
   return {
@@ -176,18 +208,24 @@ export async function buildTodayPlan(bankId: string): Promise<TodayPlan> {
   };
 }
 
-/** 明天会有多少词到期 —— 结算页要显示,让用户知道明天还得来。 */
-export async function countDueTomorrow(bankId: string): Promise<number> {
+/**
+ * 明天会有多少词到期 —— 结算页显示,让用户知道明天还得来。
+ * ⚠️ 同样**不拉全库**:只数掌握度表里落在"现在 → 明天 23:59"区间的行。
+ *    原实现先 listBankWords(4470 词)再取交集,为了一个计数付 5 秒,不值。
+ *    代价:不再按词库过滤。当前只有托福一个库有词,结果一致;
+ *    第二个库上线后这个数会变成"跨库到期总数" —— 到那时再按 bank 收窄。
+ */
+export async function countDueTomorrow(_bankId: string): Promise<number> {
   const uid = await currentUserId();
   if (!uid) return 0;
-  const pool = await listBankWords(bankId);
-  const ids = new Set(pool.map(w => w.id));
   const end = new Date(); end.setDate(end.getDate() + 1); end.setHours(23, 59, 59, 999);
-  const { data } = await db.from("user_vocab_mastery")
-    .select("word_id,next_review_at").eq("user_id", uid).lte("next_review_at", end.toISOString());
-  const now = new Date().toISOString();
-  return ((data || []) as MasteryLite[])
-    .filter(m => ids.has(m.word_id) && m.next_review_at && m.next_review_at > now).length;
+  const { data, error } = await db.from("user_vocab_mastery")
+    .select("word_id", { count: "exact" })
+    .eq("user_id", uid)
+    .gt("next_review_at", new Date().toISOString())
+    .lte("next_review_at", end.toISOString());
+  if (error) { console.log("[今日学习] ✗ 数明日到期失败", error); return 0; }
+  return (data || []).length;
 }
 
 /** 间隔表对外暴露一份,结算页说"下次 N 天后再见"时用,别在 UI 里另写一份。 */

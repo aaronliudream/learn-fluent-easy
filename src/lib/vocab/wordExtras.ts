@@ -137,3 +137,24 @@ export async function getWordExtras(wordId: string): Promise<WordExtras> {
 export function isEmptyExtras(x: WordExtras): boolean {
   return !x.collocations.length && !x.confusion && !x.antonyms.length;
 }
+
+/**
+ * 本词库里**哪些词有反义词** —— 只返回 id 集合。
+ *
+ * ⚠️ 不把 `antonyms` 加进 `listBankWords` 的共享 select:那个查询一次拉 4470 条,
+ *    每条多带一个数组是白扔的流量,而词表行只需要一个"有没有"的布尔。
+ * ⚠️ 只取 `antonyms` 非空的行,所以返回的量级是 1764 而不是 4470。
+ */
+const antonymCache = new Map<string, Set<string>>();
+
+export async function listWordIdsWithAntonyms(bankId: string): Promise<Set<string>> {
+  const hit = antonymCache.get(bankId);
+  if (hit) return hit;
+  const out = new Set<string>();
+  const { data, error } = await db
+    .from("vocab_words").select("id").not("antonyms", "is", null).limit(5000);
+  if (error) throw error;
+  for (const r of ((data || []) as { id: string }[])) out.add(r.id);
+  antonymCache.set(bankId, out);
+  return out;
+}

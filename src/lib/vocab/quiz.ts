@@ -122,6 +122,29 @@ export function buildQuestions(pool: VocabWord[], targets: VocabWord[], defMode:
   return out;
 }
 
+/**
+ * 取 n 个**互不相同、且不等于正确项**的干扰项。
+ *
+ * ⚠️ 这道去重不是洁癖,是**答案唯一性**:托福库里 559 组词的中文首义项完全相同
+ *    (heritage/legacy、initially/originally、depict/portray…),干扰项不去重就会
+ *    出现两个一模一样的选项 —— 学生选了"另一个对的"却被判错。
+ * ⚠️ 判据用的是**选项文本**不是 word_id:两个不同的词共享同一条释义时,
+ *    按 id 去重完全拦不住 —— 这正是踩过的那个坑。
+ *
+ * `buildQuestions` 内部另有一套等价逻辑(带打分排序),没有合并到这里:
+ * 那边要先按"长度相近 + 具象度同类"打分再去重,顺序不能颠倒。两处判据一致即可。
+ */
+export function dedupeTake(candidates: string[], correct: string, n: number): string[] {
+  const seen = new Set<string>([correct]);
+  const out: string[] = [];
+  for (const c of candidates) {
+    if (!c || seen.has(c)) continue;
+    seen.add(c); out.push(c);
+    if (out.length === n) break;
+  }
+  return out;
+}
+
 /** 从词库里挑本轮要考的词:优先没学过的,按 freq_rank 靠前。 */
 export function pickTargets(pool: VocabWord[], count: number, statuses: Record<string, string>): VocabWord[] {
   const fresh = pool.filter(w => (statuses[w.id] ?? "new") === "new");
@@ -155,4 +178,20 @@ export function readAutoplayCount(): AutoplayCount {
 }
 export function writeAutoplayCount(n: AutoplayCount) {
   try { localStorage.setItem(AUTOPLAY_COUNT_KEY, String(n)); } catch { /* 隐私模式忽略 */ }
+}
+
+/* ── 先想后翻(PR-8)────────────────────────────────────────────
+ * 词卡默认只显英文,点一下才翻出中文。
+ * ⚠️ 这是**回忆**而不是**辨认**:看着中英并排读一遍,大脑只做了辨认;
+ *    先自己想一遍再翻,才是真的在取回记忆。默认关(不打扰老用户),
+ *    开了之后全站词卡一致 —— 与「自动朗读」同一套持久化写法。
+ */
+export const THINK_FIRST_KEY = "vocab_think_first";
+
+export function readThinkFirst(): boolean {
+  try { return localStorage.getItem(THINK_FIRST_KEY) === "1"; } catch { return false; }
+}
+
+export function writeThinkFirst(on: boolean) {
+  try { localStorage.setItem(THINK_FIRST_KEY, on ? "1" : "0"); } catch { /* 隐私模式:不持久化也不报错 */ }
 }

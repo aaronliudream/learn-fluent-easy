@@ -75,7 +75,22 @@ export default function VocabMatch() {
       const usable = pool.filter(w => optionText(w, "zh"));
       const fresh = usable.filter(w => (statuses[w.id] ?? "new") === "new");
       const rest = usable.filter(w => (statuses[w.id] ?? "new") !== "new");
-      const picked = shuffle([...fresh, ...rest].slice(0, ROUND * 4), seed).slice(0, ROUND);
+      /* ⚠️ 按**中文牌面文本**去重再取 ROUND 个。
+       *    配对是按 word_id 判对错的,而牌面显示的是释义 —— 两个词的首义项相同时
+       *    棋盘上会出现两张一模一样的中文牌,用户点"另一张对的"被判错,
+       *    且 missed 会把**两个词**都记成错、经 recordAnswer 写进掌握度。
+       *    这不是理论风险:托福库里 559 组词首义项完全相同,其中 17 组两词下标
+       *    相距不到一个取词窗口(heritage#90 / legacy#91 就是挨着的),必然同框。
+       *    去重代价是偶尔少一两张牌,远小于"配对正确却被判错"。 */
+      const window = shuffle([...fresh, ...rest].slice(0, ROUND * 4), seed);
+      const seenText = new Set<string>();
+      const picked: VocabWord[] = [];
+      for (const w of window) {
+        const t = optionText(w, "zh");
+        if (seenText.has(t)) continue;
+        seenText.add(t); picked.push(w);
+        if (picked.length === ROUND) break;
+      }
       if (picked.length < 2) { setState("empty"); return; }
       setWords(picked);
       setTiles(shuffle(picked.flatMap(w => ([

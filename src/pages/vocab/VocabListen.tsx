@@ -21,7 +21,7 @@ import { bankColor } from "@/lib/vocab/theme";
 import { playUrl, stopAudio } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { fallback } from "@/lib/vocab/report";
-import { optionText } from "@/lib/vocab/quiz";
+import { dedupeTake, optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
 import {
@@ -232,16 +232,4 @@ export default function VocabListen() {
       {quotaHit && <QuotaModal onClose={() => setQuotaHit(false)} />}
     </div>
   );
-}
-
-/** 取 n 个互不相同、且不等于正确项的干扰项。 */
-function dedupeTake(candidates: string[], correct: string, n: number): string[] {
-  const seen = new Set<string>([correct]);
-  const out: string[] = [];
-  for (const c of candidates) {
-    if (!c || seen.has(c)) continue;
-    seen.add(c); out.push(c);
-    if (out.length === n) break;
-  }
-  return out;
 }

@@ -16,7 +16,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import WordCard from "@/components/vocab/WordCard";
 import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA, readSelectedBank } from "@/lib/vocab/theme";
-import { getBankByCode, listExamples, type VocabBank, type VocabExample, type VocabWord } from "@/lib/vocab/data";
+import { currentUserId, getBankByCode, listExamples, type VocabBank, type VocabExample, type VocabWord } from "@/lib/vocab/data";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { startTracking } from "@/lib/vocab/timeTracker";
@@ -51,6 +51,7 @@ export default function VocabToday() {
   const [submitted, setSubmitted] = useState(false);
   const [right, setRight] = useState(0);
   const [quotaHit, setQuotaHit] = useState(false);
+  const [anon, setAnon] = useState(false);
   const [doneInfo, setDoneInfo] = useState<{ dueTomorrow: number; streak: number } | null>(null);
   const wrote = useRef<Set<number>>(new Set());
 
@@ -62,8 +63,9 @@ export default function VocabToday() {
       const b = await getBankByCode(bankCode);
       setBank(b);
       if (!b) { setFailed(true); return; }
-      const p = await buildTodayPlan(b.id);
+      const [p, uid] = await Promise.all([buildTodayPlan(b.id), currentUserId()]);
       setPlan(p);
+      setAnon(!uid);
       setIdx(0); setRight(0); setDoneInfo(null); wrote.current = new Set();
       setReading(p.tasks[0]?.showCardFirst ?? false);
     } catch {
@@ -274,7 +276,10 @@ export default function VocabToday() {
         </>
       ) : null}
 
-      <AnonNote />
+      {/* ⚠️ 必须带条件。写成无条件的话,**登录用户也会被告知"未登录状态下答题不会保存进度"** ——
+          体检时在真 preview 上撞到的:登录态账号做题,底下却写着未登录。
+          其它模式都是 {anon && <AnonNote />},这里当初漏了条件。 */}
+      {anon && <AnonNote />}
       {quotaHit && <QuotaModal onClose={() => setQuotaHit(false)} />}
     </Shell>
   );

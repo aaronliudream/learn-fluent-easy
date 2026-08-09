@@ -18,7 +18,7 @@
  * ── 页面三层,对应用户的动线 ──
  *   ⓪ 场景串记横幅(独立学习方式,不属于任何词库)→ 分隔线
  *   ① 我的状态:当前词库卡 → 学习进度(四条横条)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:单词学习 / 快筛 / 磨耳朵 …  ← 选今天怎么学
+ *   ② 学习方式:单词学习 / 快筛 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析  ← 选今天怎么学
  *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
  *   ⚠️ 场景串记的位置改过两次:最初在页面**最底部**(层级太低),
  *      后来并进学习方式组(会让人以为它在学当前词库),
@@ -37,7 +37,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
-  Filter, Headphones, Layers, Link2, Lock,
+  Blocks, Filter, Headphones, Layers, Link2, Lock, MessageSquareQuote, Shuffle,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -579,6 +579,14 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
             别再加回这一组里。 */}
         <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="边听边记,可锁屏"
           color={color} to={bankCode ? `/vocab/listen?bank=${bankCode}` : "/vocab/listen"} />
+        {/* PR-8c:三批已审内容上架。它们**不依赖当前词库**(词块/习语/中文表达/辨析组
+            都是全库级内容),所以不带 bankCode 参数。 */}
+        <ModeCard icon={<Blocks className="h-[18px] w-[18px]" />} name="词块与习语" desc="整块记,含直译陷阱"
+          color={color} to="/vocab/chunks" />
+        <ModeCard icon={<MessageSquareQuote className="h-[18px] w-[18px]" />} name="中文这样说" desc="一句中文,分场合三种说法"
+          color={color} to="/vocab/expressions" />
+        <ModeCard icon={<Shuffle className="h-[18px] w-[18px]" />} name="易混词辨析" desc="看句子选词,专治总记混"
+          color={color} to="/vocab/confusion" />
         {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
             PR #321/#323 关闭不合并)。别再加回来。
             ⚠️ 与**小学**板块的自然拼读(/primary 下的 PrimaryHubPhonics)无关,那个继续在。 */}

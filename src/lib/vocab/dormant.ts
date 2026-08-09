@@ -1,0 +1,208 @@
+/**
+ * 「沉睡数据」三页的数据层:词块与习语 / 中文这样说 / 易混词辨析。
+ *
+ * 这批内容早已入库且已审,但前端一处都没显示。实测存量(2026-08-09):
+ *   · vocab_chunks            150 条 = idiom 50 + phrasal_verb 35 + collocation_ext 30 + frame 20 + connector 15
+ *   · vocab_cn_expressions     51 条 / vocab_cn_renditions 133 条(casual 48 / neutral 50 / formal 35)
+ *   · vocab_confusion_groups  429 组 / vocab_confusion_members 978 词
+ *
+ * ⚠️ **只读**:不写库、不改内容。这批是审过的,前端只负责显示和出题。
+ * ⚠️ 规格里写的数字(428 组 / 100 词块 + 50 习语两张表 / 1766 词)与库里不符,
+ *    一律**以实测为准**(Aaron 2026-08-09 确认规格里那几个数是凭记忆写的)。
+ *    习语没有独立表,就在 vocab_chunks 里靠 type='idiom' 区分。
+ */
+import { supabase } from "@/integrations/supabase/client";
+import { blankOut } from "@/lib/vocab/blankOut";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const db = supabase as any;
+
+/* ── 词块与习语 ─────────────────────────────────────────────── */
+
+export type ChunkType = "idiom" | "phrasal_verb" | "frame" | "connector" | "collocation_ext";
+
+export type Chunk = {
+  id: string;
+  chunk: string;
+  translation_zh: string | null;
+  example_en: string | null;
+  example_zh: string | null;
+  audio_url: string | null;
+  example_audio_url: string | null;
+  type: ChunkType | null;
+  scene: string | null;
+  /** 直译陷阱 —— 只有习语有,是这批内容的卖点 */
+  literal_trap: string | null;
+};
+
+/** 非习语的四个分组,顺序即页面上的显示顺序。 */
+export const CHUNK_GROUPS: { type: ChunkType; label: string; hint: string }[] = [
+  { type: "phrasal_verb", label: "短语动词", hint: "动词 + 小品词,整体一个意思" },
+  { type: "frame", label: "句式框架", hint: "套进自己的内容就能用" },
+  { type: "connector", label: "逻辑连接", hint: "写作里承上启下的固定说法" },
+  { type: "collocation_ext", label: "高频搭配延伸", hint: "地道的词与词组合" },
+];
+
+export async function listChunks(): Promise<Chunk[]> {
+  const { data, error } = await db
+    .from("vocab_chunks")
+    .select("id,chunk,translation_zh,example_en,example_zh,audio_url,example_audio_url,type,scene,literal_trap")
+    .order("freq_rank", { ascending: true, nullsFirst: false })
+    .limit(500);
+  if (error) throw error;
+  return (data || []) as Chunk[];
+}
+
+/* ── 中文这样说 ─────────────────────────────────────────────── */
+
+export type Register = "casual" | "neutral" | "formal";
+
+export const REGISTER_LABEL: Record<Register, string> = {
+  casual: "随意",
+  neutral: "中性",
+  formal: "正式",
+};
+
+export type Rendition = {
+  id: string;
+  expression_id: string;
+  rendition: string;
+  register: Register | null;
+  scene_hint: string | null;
+  example_en: string | null;
+  example_zh: string | null;
+  audio_url: string | null;
+  example_audio_url: string | null;
+  sort_order: number | null;
+};
+
+export type CnExpression = {
+  id: string;
+  cn_phrase: string;
+  cn_note: string | null;
+  category: string | null;
+  renditions: Rendition[];
+};
+
+/** category 分两组。库里实测取值是 daily / proverb。 */
+export const EXPR_GROUPS: { key: string; label: string }[] = [
+  { key: "daily", label: "日常口语" },
+  { key: "proverb", label: "汉语谚语" },
+];
+
+export async function listExpressions(): Promise<CnExpression[]> {
+  const [{ data: exprs, error: e1 }, { data: rends, error: e2 }] = await Promise.all([
+    db.from("vocab_cn_expressions").select("id,cn_phrase,cn_note,category,sort_order")
+      .order("sort_order", { ascending: true }).limit(200),
+    db.from("vocab_cn_renditions")
+      .select("id,expression_id,rendition,register,scene_hint,example_en,example_zh,audio_url,example_audio_url,sort_order")
+      .order("sort_order", { ascending: true }).limit(500),
+  ]);
+  if (e1) throw e1;
+  if (e2) throw e2;
+  const byExpr = new Map<string, Rendition[]>();
+  for (const r of ((rends || []) as Rendition[])) {
+    (byExpr.get(r.expression_id) ?? byExpr.set(r.expression_id, []).get(r.expression_id)!).push(r);
+  }
+  return ((exprs || []) as Omit<CnExpression, "renditions">[])
+    .map(e => ({ ...e, renditions: byExpr.get(e.id) ?? [] }))
+    /* 一个说法都没有的条目不显示 —— 展开是空的比不显示更让人困惑 */
+    .filter(e => e.renditions.length > 0);
+}
+
+/* ── 易混词辨析 ─────────────────────────────────────────────── */
+
+export type ConfusionQuestion = {
+  groupId: string;
+  groupTitle: string;
+  /** 挖空后的句子 */
+  stem: string;
+  answer: string;
+  /** 选项(含答案),已打乱。**长度 = 组内词数**,不是固定 4 —— 见下方说明 */
+  options: string[];
+  /** 每个选项的一句话区分要点,答完显示 */
+  hints: Record<string, string>;
+};
+
+/**
+ * 抽一批辨析题。
+ *
+ * ⚠️ **选项数随组大小走,不是固定四选一**。实测组大小分布:
+ *      2 词 341 组 · 3 词 63 组 · 4 词 18 组 · 5 词 7 组
+ *    79% 的组只有两个词,凑不出四选一。
+ *    而**跨组补干扰项会毁掉这个练习**:辨析的全部价值在于区分一组容易混的词,
+ *    从别的组抓词进来,学生一眼就能排除,题目退化成普通词汇题。
+ *    所以两词组就出二选一 —— 那本来就是"这两个到底填哪个"的真实任务。
+ *
+ * ⚠️ 题干来自该词的例句,用 blankOut 挖空(容忍屈折)。挖不出就换下一个词;
+ *    整组都挖不出就跳过这组,**不硬造题干**。
+ */
+export async function buildConfusionQuiz(count = 10): Promise<ConfusionQuestion[]> {
+  const { data: groups, error: e1 } = await db
+    .from("vocab_confusion_groups").select("id,title_zh").limit(600);
+  if (e1) throw e1;
+  const all = ((groups || []) as { id: string; title_zh: string }[]);
+  if (!all.length) return [];
+
+  // 随机挑比 count 多一些的组:有些组会因为挖不出空而被跳过
+  const picked = [...all].sort(() => Math.random() - 0.5).slice(0, count * 3);
+
+  const { data: members, error: e2 } = await db
+    .from("vocab_confusion_members").select("group_id,word_id,feel_zh,contrast_hint")
+    .in("group_id", picked.map(g => g.id));
+  if (e2) throw e2;
+  const rows = (members || []) as { group_id: string; word_id: string; feel_zh: string | null; contrast_hint: string | null }[];
+  const wordIds = [...new Set(rows.map(r => r.word_id))];
+  if (!wordIds.length) return [];
+
+  const [{ data: words }, { data: examples }] = await Promise.all([
+    db.from("vocab_words").select("id,headword").in("id", wordIds),
+    db.from("vocab_examples").select("word_id,sentence,sort_order").in("word_id", wordIds).order("sort_order", { ascending: true }),
+  ]);
+  const headById = new Map(((words || []) as { id: string; headword: string }[]).map(w => [w.id, w.headword]));
+  const exByWord = new Map<string, string[]>();
+  for (const e of ((examples || []) as { word_id: string; sentence: string }[])) {
+    (exByWord.get(e.word_id) ?? exByWord.set(e.word_id, []).get(e.word_id)!).push(e.sentence);
+  }
+
+  const byGroup = new Map<string, typeof rows>();
+  for (const r of rows) (byGroup.get(r.group_id) ?? byGroup.set(r.group_id, []).get(r.group_id)!).push(r);
+
+  const out: ConfusionQuestion[] = [];
+  for (const g of picked) {
+    if (out.length >= count) break;
+    const mem = byGroup.get(g.id) ?? [];
+    if (mem.length < 2) continue;                    // 一个词的组没有"辨析"可言
+
+    /* 在组内找一个**挖得出空**的词当答案 */
+    const shuffled = [...mem].sort(() => Math.random() - 0.5);
+    let made: ConfusionQuestion | null = null;
+    for (const m of shuffled) {
+      const head = headById.get(m.word_id);
+      if (!head) continue;
+      for (const sentence of (exByWord.get(m.word_id) ?? [])) {
+        const stem = blankOut(sentence, head);
+        if (!stem) continue;
+        const options = mem.map(x => headById.get(x.word_id)).filter((x): x is string => !!x);
+        if (options.length < 2) break;
+        const hints: Record<string, string> = {};
+        for (const x of mem) {
+          const h = headById.get(x.word_id);
+          if (h) hints[h] = x.contrast_hint || x.feel_zh || "";
+        }
+        made = {
+          groupId: g.id,
+          groupTitle: g.title_zh,
+          stem,
+          answer: head,
+          options: [...options].sort(() => Math.random() - 0.5),
+          hints,
+        };
+        break;
+      }
+      if (made) break;
+    }
+    if (made) out.push(made);
+  }
+  return out;
+}

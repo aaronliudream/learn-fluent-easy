@@ -89,6 +89,27 @@ async function bankWordIds() {
   return links.map(l => l.word_id);
 }
 
+/**
+ * 账户级错误:重试多少次都没用,整轮必须立刻停。
+ *
+ * ⚠️ 为什么要专门认它:OpenAI 余额耗尽回的是 **429**,edge 又把它包成 **502**,
+ *    和真限流长得一模一样 —— 但**响应体**里写着 `credit_balance_exhausted`。
+ *    不看体就退避重试的话,每条白等 2+4+8+16+32=62 秒,还会被 per-item 的
+ *    catch 吞掉继续下一条:4470 条能空跑一整夜,日志里全是"限流,重试中"。
+ *    2026-08-08 真踩过 —— 我把余额耗尽误报成了限流。
+ */
+const FATAL_PATTERNS = ['credit_balance_exhausted', 'insufficient_quota', 'billing_hard_limit_reached'];
+function fatalIfAccountError(status, body) {
+  if (!FATAL_PATTERNS.some(p => body.includes(p))) return;
+  const e = new Error(
+    `TTS 账户不可用(HTTP ${status})—— 重试无效,已中止整轮。\n` +
+    `   多半是余额用尽,去 https://platform.openai.com/settings/organization/billing/ 充值。\n` +
+    `   原文:${body.slice(0, 300)}`
+  );
+  e.fatal = true;
+  throw e;
+}
+
 /** 合成一条。返回 edge 实际给的 audioUrl。 */
 async function synth(text) {
   for (let backoff = 0; backoff < 5; backoff++) {
@@ -98,12 +119,19 @@ async function synth(text) {
       body: JSON.stringify({ text, voiceId: VOICE, speed: SPEED, accent: ACCENT, format: 'url' }),
     });
     if (res.status === 429 || res.status >= 500) {
+      /* ⚠️ 必须先读体再决定退避 —— 账户级错误和限流同样是 429/502,只有体能区分 */
+      const body = await res.text();
+      fatalIfAccountError(res.status, body);
       const wait = 2000 * 2 ** backoff;
       process.stdout.write(`   · HTTP ${res.status},${wait}ms 后重试\n`);
       await sleep(wait);
       continue;
     }
-    if (!res.ok) throw new Error(`tts edge HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`);
+    if (!res.ok) {
+      const body = await res.text();
+      fatalIfAccountError(res.status, body);
+      throw new Error(`tts edge HTTP ${res.status}: ${body.slice(0, 160)}`);
+    }
     const data = await res.json();
     if (!data?.audioUrl) throw new Error(`tts edge 没返回 audioUrl: ${JSON.stringify(data).slice(0, 160)}`);
     return { audioUrl: data.audioUrl, provider: data.provider, cached: !!data.cached };
@@ -163,6 +191,8 @@ async function main() {
       done++; if (r.cached) cached++;
       process.stdout.write(`  ✓ [${done}/${total}] 词 ${w.headword}${r.cached ? ' (命中缓存)' : ''}\n`);
     } catch (e) {
+      /* ⚠️ 账户级错误不能吞:吞了就会带着"每条都失败"把 4470 条跑完 */
+      if (e.fatal) { save(); throw e; }
       process.stdout.write(`  ✗ 词 ${w.headword}: ${e.message}\n`);
     }
     save();
@@ -176,6 +206,7 @@ async function main() {
       done++; if (r.cached) cached++;
       process.stdout.write(`  ✓ [${done}/${total}] 例句 ${ex.sentence.slice(0, 44)}…${r.cached ? ' (命中缓存)' : ''}\n`);
     } catch (e) {
+      if (e.fatal) { save(); throw e; }
       process.stdout.write(`  ✗ 例句 ${ex.id}: ${e.message}\n`);
     }
     save();

@@ -1,5 +1,5 @@
 /**
- * PR-6 剩余四件:最难的词 top3 / 周报横幅 / 里程碑 confetti / 分享卡。
+ * 最难的词 top3 / 周报横幅 / 分享卡。(里程碑 confetti 已于 2026-08-09 整套删除)
  *
  * 数据源全部是已建的 vocab_user_stats + vocab_study_days + vocab_mistake_book,
  * 不新建表、不新增口径 —— 连续天数一律用 stats.ts 的 computeStreak。
@@ -7,7 +7,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, Flame, Share2, Sparkles, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { CTA_SHADOW, FONT_STAT, GRAD_CTA, MILESTONES } from "@/lib/vocab/theme";
+import { CTA_SHADOW, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
 import {
   bjToday, shiftDay, listStudyDays, getStats, computeStreak, fmtDuration,
   type StudyDay, type UserStats,
@@ -129,68 +129,14 @@ export function WeeklyBanner({ color, onShare }: { color: string; onShare: (s: W
   );
 }
 
-/* ───────────────── 里程碑 confetti ───────────────── */
+/* ⚰️ 里程碑整套已删(Aaron 2026-08-09):`useMilestoneCelebration`、`Confetti`、
+ * `MilestoneSummary`、`MilestoneStrip`、`MILESTONE_SEEN` 键、以及 theme.ts 的 `MILESTONES` 常量。
+ * 词汇板块不再有"成就/徽章"这一层;打卡月历与我的数据四宫格保留 —— 那是数据不是成就。
+ * ⚠️ 这里删掉的 `Confetti` 是**词汇板块自己那份**;
+ *    全站其它板块用的是 `lib/feedback` 的 `fireEmojiConfetti`,与本次无关,别一起动。 */
 
-const MILESTONE_SEEN = "vocab_milestone_seen";
-
-/**
- * 里程碑跨线时撒彩带 —— **只在跨线那一刻**,不是每次达到都撒。
- * ⚠️ 用 localStorage 记已庆祝过的档位:刷新页面不该重放,
- *    否则"仪式感"变成"又来了"。
- * ⚠️ 打卡达标只做轻量祝贺(不撒彩带),彩带只留给里程碑 —— Aaron 定的分级。
- */
-export function useMilestoneCelebration(mastered: number): number | null {
-  const [fire, setFire] = useState<number | null>(null);
-  useEffect(() => {
-    if (!mastered) return;
-    const reached = MILESTONES.filter(m => mastered >= m);
-    if (!reached.length) return;
-    const top = reached[reached.length - 1];
-    try {
-      const seen = Number(localStorage.getItem(MILESTONE_SEEN) ?? "0");
-      if (top > seen) { localStorage.setItem(MILESTONE_SEEN, String(top)); setFire(top); }
-    } catch { /* 隐私模式:不庆祝也不报错 */ }
-  }, [mastered]);
-  return fire;
-}
-
-/** 极简彩带:纯 CSS,不引第三方库(包体优先)。prefers-reduced-motion 时不放。 */
-export function Confetti({ onDone }: { onDone: () => void }) {
-  const reduced = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  useEffect(() => {
-    const t = window.setTimeout(onDone, reduced ? 0 : 2200);
-    return () => window.clearTimeout(t);
-  }, [onDone, reduced]);
-  if (reduced) return null;
-  const bits = Array.from({ length: 36 }, (_, i) => i);
-  return (
-    <div className="pointer-events-none fixed inset-0 z-[60] overflow-hidden" aria-hidden>
-      {bits.map(i => (
-        <span key={i}
-          className="absolute block h-2 w-1.5 rounded-[1px]"
-          style={{
-            left: `${(i * 37) % 100}%`,
-            top: "-12px",
-            background: ["#0C447C", "#F59E0B", "#10B981", "#EF4444"][i % 4],
-            animation: `vconf 2.2s cubic-bezier(.2,.6,.4,1) ${(i % 9) * 0.08}s forwards`,
-          }} />
-      ))}
-      <style>{`@keyframes vconf{to{transform:translateY(105vh) rotate(${540}deg);opacity:0}}`}</style>
-    </div>
-  );
-}
-
-/* ───────────────── 分享卡 ───────────────── */
-
-/**
- * 分享卡:1080×1440 深海蓝,大数字主角,底部二维码位。
- * ⚠️ 用 canvas 直接画而不是截图 DOM:微信里长按保存要的是**一张真图片**,
- *    html2canvas 那条路在移动端字体和圆角上不稳,且要引一个不小的库。
- * ⚠️ 二维码这一版画的是**占位方块 + 站点文字** —— 生成真二维码要引库,
- *    等 PR-7 落地正式落地页地址后再补,现在画个假二维码是骗人。
- */
 export function ShareCard({ data, onClose }: {
-  data: { mastered: number; streak: number; points: number; totalMs: number; milestone?: number | null };
+  data: { mastered: number; streak: number; points: number; totalMs: number };
   onClose: () => void;
 }) {
   const ref = useRef<HTMLCanvasElement | null>(null);
@@ -221,10 +167,9 @@ export function ShareCard({ data, onClose }: {
     g.font = "500 36px system-ui, -apple-system, sans-serif";
     g.fillText("个单词已掌握", W / 2, 580);
 
-    // 胶囊:连续天数 + 里程碑
+    // 胶囊:连续天数
     const pills: string[] = [];
     if (data.streak > 0) pills.push(`🔥 连续 ${data.streak} 天`);
-    if (data.milestone) pills.push(`🏅 ${data.milestone} 里程碑`);
     if (data.points > 0) pills.push(`⭐ ${data.points} 积分`);
     g.font = "600 34px system-ui, -apple-system, sans-serif";
     let y = 700;
@@ -265,78 +210,3 @@ export function ShareCard({ data, onClose }: {
   );
 }
 
-/**
- * 里程碑**折叠态**:一行「当前档位 + 下一档还差 N 词」,点开才铺全部档位。
- *
- * ⚠️ 由来:六个胶囊 + 一行说明在 iPhone SE 上占掉近 120px,
- *    而首屏必须留给"学习进度 + 错题/复习"。里程碑是**回顾性**信息,
- *    不是每次打开都要看的东西 —— 折叠它换来的首屏空间,值。
- * ⚠️ 信息一个没少:展开后就是原来的 MilestoneStrip。
- *
- * ⚠️ **mastered 传的是全局累计掌握数,不是当前词库的**(Aaron 2026-08-07 裁决)。
- *    里程碑是**成就系统**:跟着词库走的话,一切库徽章就归零,
- *    用户读到的是"我的进度被清空了";全局累计则随着学的库越多一直涨。
- *    彩带(useMilestoneCelebration)和分享卡必须用同一个数,否则会出现
- *    "横幅说达成了、彩带不放"这种自相矛盾。
- * ⚠️ mastered = null 表示还没就绪 → 骨架,**绝不渲染 0**(0 会让老用户看到"还没达成第一档")。
- */
-export function MilestoneSummary({ mastered, color }: { mastered: number | null; color: string }) {
-  const [open, setOpen] = useState(false);
-  if (mastered === null) {
-    return (
-      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-        <div className="h-[20px] w-24 animate-pulse rounded bg-slate-100" />
-        <div className="mt-2 h-[16px] w-48 animate-pulse rounded bg-slate-100" />
-      </div>
-    );
-  }
-  const reached = MILESTONES.filter(m => mastered >= m);
-  const current = reached.length ? reached[reached.length - 1] : null;
-  const next = MILESTONES.find(m => m > mastered) ?? null;
-
-  return (
-    <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-      {/* 一行排完(总原则:能一行说完的不许分两行)。
-          ⚠️ 摘要文案**刻意写短**:早先写成「还没达成第一档 · 距 1600 还差 1600 词」,
-             375px 下必然被 truncate 砍掉尾巴,而砍掉的恰好是"还差多少"这个唯一有用的数字。
-             现在未达成时只说"距 N 还差 M",达成后才加"已达 X"。truncate 仅作兜底。 */}
-      <button type="button" onClick={() => setOpen(v => !v)} aria-expanded={open}
-        className="flex w-full items-center gap-2 text-left">
-        <Sparkles className="h-[17px] w-[17px] shrink-0 text-amber-500" />
-        <span className="shrink-0 text-[15px] font-semibold text-slate-900">里程碑</span>
-        <span className="min-w-0 flex-1 truncate text-right text-[13px] text-slate-500">
-          {current && <>已达 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{current}</b>{next ? " · " : ""}</>}
-          {next && <>距 {next} 还差 <b className="font-semibold text-slate-700" style={{ fontVariantNumeric: "tabular-nums" }}>{next - mastered}</b> 词</>}
-        </span>
-        <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-300 transition-transform", open && "rotate-180")} />
-      </button>
-      {open && <div className="mt-3"><MilestoneStrip mastered={mastered} color={color} /></div>}
-    </div>
-  );
-}
-
-/** 里程碑徽章卡:达成的高亮,**同时显示下一站** —— 只显示已达成会让人觉得到顶了。 */
-export function MilestoneStrip({ mastered, color }: { mastered: number; color: string }) {
-  const next = MILESTONES.find(m => m > mastered) ?? null;
-  return (
-    <div className="flex flex-wrap items-center gap-2">
-      {MILESTONES.map(m => (
-        <span key={m}
-          className={cn("inline-flex min-w-[64px] items-center justify-center rounded-xl border px-3 py-2 text-[15px] font-bold",
-            mastered >= m ? "border-emerald-200 bg-emerald-50 text-emerald-700"
-              : m === next ? "bg-white" : "border-black/[0.06] bg-slate-50 text-slate-300")}
-          style={m === next && mastered < m ? { borderColor: color, color } : undefined}
-          aria-label={mastered >= m ? `已达成 ${m}` : m === next ? `下一站 ${m}` : `未达成 ${m}`}>
-          {m}
-        </span>
-      ))}
-      {next && (
-        <span className="ml-1 inline-flex items-center gap-1 text-[13px] text-slate-500">
-          <Sparkles className="h-3.5 w-3.5 text-amber-500" />下一站还差 {next - mastered}
-        </span>
-      )}
-    </div>
-  );
-}
-
-export { GRAD_CTA, CTA_SHADOW, FONT_STAT };

@@ -34,6 +34,11 @@
 --   那就**别跑这份 SQL**,改成给它补 def_zh/def_en 并明确挂到某个库上 ——
 --   但请注意上面那条:凡进了词库的词都会被自动朗读出来。
 --
+-- ⚠️ 2026-08-09 第一次跑报 42601 syntax error:别名 `AS vocab_words 行数` 带空格却没加引号,
+--    Postgres 把 `vocab_words` 当别名、后面的 `行数` 就成了语法错误。
+--    **别名里只要有空格就必须双引号**(不带空格的中文别名不用,PostgreSQL 认)。
+--    已加 scripts/vocab/audit/sql-lint.mjs 机械卡这一类,不靠人眼。
+
 BEGIN;
 
 -- ① 前置**硬闸**:有任何一条挂靠就整笔回滚,不删。
@@ -68,7 +73,7 @@ BEGIN
 END $$;
 
 -- ② 改前计数
-SELECT '改前' AS 阶段, count(*) AS vocab_words 行数 FROM vocab_words;
+SELECT '改前' AS 阶段, count(*) AS "vocab_words 行数" FROM vocab_words;
 
 -- ③ 删。⚠️ 带 headword 双重限定,避免 id 抄错时误删别的词。
 DELETE FROM vocab_words
@@ -77,8 +82,8 @@ WHERE id = 'fec57aa7-5629-4033-bb6f-6c1818844ce0'
   AND def_zh IS NULL;
 
 -- ④ 改后计数:应为 4470,且 def_zh IS NULL 归零
-SELECT '改后' AS 阶段, count(*) AS vocab_words 行数 FROM vocab_words;
-SELECT count(*) AS 仍缺 def_zh 的行数 FROM vocab_words WHERE def_zh IS NULL;
+SELECT '改后' AS 阶段, count(*) AS "vocab_words 行数" FROM vocab_words;
+SELECT count(*) AS "仍缺 def_zh 的行数" FROM vocab_words WHERE def_zh IS NULL;
 
 -- ⑤ 硬断言:只该删掉 1 行,且不再有缺释义的词
 DO $$

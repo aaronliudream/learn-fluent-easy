@@ -15,6 +15,7 @@
  */
 import { chromium } from "playwright";
 import { loadEnv } from "../env.mjs";
+import { arrive, verdict } from "./_arrive.mjs";
 
 const env = loadEnv(process.cwd(), { quiet: true });
 const U = env.VITE_SUPABASE_URL, K = env.VITE_SUPABASE_PUBLISHABLE_KEY;
@@ -44,7 +45,7 @@ await page.goto(BASE, { waitUntil: "commit", timeout: 120000 });
 await page.evaluate(([k, sess]) => localStorage.setItem(k, JSON.stringify(sess)),
   [`sb-${new URL(U).hostname.split(".")[0]}-auth-token`, s]);
 
-let ok = true;
+let ok = true, pass = 0, fail = 0, skipped = 0;
 for (const c of CASES) {
   await page.goto(BASE + c.path, { waitUntil: "networkidle", timeout: 120000 });
   await page.waitForTimeout(3000);
@@ -55,9 +56,8 @@ for (const c of CASES) {
      探针根本没进测验就报了 FAIL。**报应用坏之前先怀疑探针**(已踩四次)。 */
   await page.getByRole("button", { name: /^测一测/ }).first().click({ timeout: 15000 }).catch(() => {});
   await page.waitForTimeout(2200);
-  /* 硬校验:确实进了测验(测验里有「第 N / M 题」这类计数或退出入口) */
-  const inQuiz = await page.evaluate(() => /\d+\s*\/\s*\d+/.test(document.body.innerText));
-  if (!inQuiz) { console.log(`?  ${"".padEnd(0)}(没进入测验,本条作废)`); }
+  /* 到达校验:确实进了测验(题号计数是测验独有的)。没到位 → 本条作废,不是应用坏 */
+  if (!await arrive(page, { label: c.name, marker: /\d+\s*\/\s*\d+/ })) { skipped++; continue; }
 
   const q = await page.evaluate(() => {
     /* 选项 = 同一父节点下 ≥2 个并列 button 且都有文字 */
@@ -80,12 +80,12 @@ for (const c of CASES) {
     return { stem, options };
   });
 
-  if (!q) { console.log(`?  ${c.name.padEnd(12)} 没找到测验题(入口文案可能变了)`); ok = false; continue; }
+  if (!q) { console.log(`⊘ ${c.name.padEnd(12)} 没找到选项组,本条作废(探针问题)`); skipped++; continue; }
   const stemZh = CJK.test(q.stem);
   const optZh = q.options.map(o => CJK.test(o));
   const allOptZh = optZh.every(Boolean);
   const bad = stemZh && allOptZh;
-  if (bad) ok = false;
+  if (bad) { ok = false; fail++; } else pass++;
   console.log(`${bad ? "✗" : "✓"} ${c.name.padEnd(12)} 题干${stemZh ? "中文" : "英文"} · 选项${allOptZh ? "全中文" : optZh.some(Boolean) ? "中英混" : "全英文"}`);
   console.log(`     题干:${q.stem.replace(/\s+/g, " ").slice(0, 60)}`);
   console.log(`     选项:${q.options.map(o => o.slice(0, 14)).join(" | ")}`);
@@ -93,5 +93,7 @@ for (const c of CASES) {
 }
 
 await b.close();
-console.log(`\nGATE_VERDICT ${ok ? "PASS" : "FAIL"}`);
-process.exit(ok ? 0 : 1);
+/* ⚠️ 作废条数**单独报**,不混进 PASS/FAIL —— "3 通过 0 失败" 与
+   "3 通过 0 失败 + 5 作废" 是完全不同的结论。 */
+const green = verdict({ pass, fail, skipped });
+process.exit(green ? 0 : 1);

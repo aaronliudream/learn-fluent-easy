@@ -11,7 +11,7 @@
  * ⚠️ 按 word_id 去重拦不住这个 —— 它们本来就是不同的词。判据必须是**选项文本**。
  */
 import { describe, expect, it } from "vitest";
-import { buildQuestions, dedupeTake, optionText } from "./quiz";
+import { buildQuestions, dedupeTake, optionText, tooSimilar } from "./quiz";
 import type { VocabWord } from "./data";
 
 const w = (id: string, headword: string, def_zh: string, pos = "n."): VocabWord => ({
@@ -37,6 +37,46 @@ describe("dedupeTake", () => {
 
   it("候选不足时返回**能给多少给多少**,由调用方决定跳不跳这道题", () => {
     expect(dedupeTake(["甲"], "乙", 3)).toEqual(["甲"]);
+  });
+});
+
+describe("tooSimilar · 同族不同框", () => {
+  it("互为子串 → 同族(Aaron 报的那一对)", () => {
+    expect(tooSimilar("as a result", "as a result of")).toBe(true);
+    expect(tooSimilar("减轻", "减轻程度")).toBe(true);
+  });
+
+  it("⚠️ 中文一字之差**不算**同族 —— 那往往正是考点", () => {
+    /* 「高估 / 低估」编辑距离 1、比例 0.50,和「减轻 / 减轻程度」一样;
+       按距离判会把一对真正的对立选项判成同族。所以中文只判子串。 */
+    expect(tooSimilar("高估", "低估")).toBe(false);
+    expect(tooSimilar("一针见血", "一针见效")).toBe(false);
+    expect(tooSimilar("打破僵局", "打破困局")).toBe(false);
+  });
+
+  it("拉丁字母:只拦拼写几乎一样的长串,短词不判", () => {
+    expect(tooSimilar("commitment", "commitments")).toBe(true);   // 子串
+    expect(tooSimilar("affect", "effect")).toBe(false);           // 长度 <8,不判
+    expect(tooSimilar("in addition", "in particular")).toBe(false);
+  });
+
+  it("大小写/空格/标点归一后再比", () => {
+    expect(tooSimilar("As a Result.", "as  a result")).toBe(true);
+  });
+
+  it("空串不参与判定", () => {
+    expect(tooSimilar("", "任意")).toBe(false);
+  });
+});
+
+describe("dedupeTake · 同族不同框", () => {
+  it("与答案同族的候选被跳过,换下一个", () => {
+    expect(dedupeTake(["as a result of", "in addition", "however"], "as a result", 2))
+      .toEqual(["in addition", "however"]);
+  });
+
+  it("干扰项彼此同族也只留一个", () => {
+    expect(dedupeTake(["减轻", "减轻程度", "加重"], "缓和", 3)).toEqual(["减轻", "加重"]);
   });
 });
 

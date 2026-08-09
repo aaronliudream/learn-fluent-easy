@@ -25,6 +25,7 @@ import { startTracking } from "@/lib/vocab/timeTracker";
 import { fallback, logFail } from "@/lib/vocab/report";
 import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
+import { dedupeTake } from "@/lib/vocab/quiz";
 import { listChunks, listFavorites, toggleFavorite, CHUNK_GROUPS, type Chunk } from "@/lib/vocab/dormant";
 
 /**
@@ -130,7 +131,10 @@ export default function VocabChunks() {
   /** 词块题:给中文选英文。干扰项从**同型**里取,不跨型 —— 跨型一眼能排除。 */
   const buildChunkQuiz = (): QuizItem[] => shuffle(chunks.filter(c => c.translation_zh)).slice(0, 10).map(c => {
     const pool = chunks.filter(x => x.id !== c.id && x.type === c.type);
-    const distractors = shuffle(pool).slice(0, 3).map(x => x.chunk);
+    /* ⚠️ 走共用件 dedupeTake —— 它内含"同族不同框"判据。
+       改造前是 `.slice(0,3)` 直接取,抽到过 `as a result` 与 `as a result of` 并排:
+       同一个短语的两种形态当四选一,答对答错都说明不了什么。 */
+    const distractors = dedupeTake(shuffle(pool).map(x => x.chunk), c.chunk, 3);
     return { stem: `「${c.translation_zh}」用英文怎么说?`, options: shuffle([c.chunk, ...distractors]), answer: c.chunk };
   }).filter(q => q.options.length >= 2);
 
@@ -156,14 +160,10 @@ export default function VocabChunks() {
     /* 直译义排第一位;不够 3 个再从别的习语的真义里补。
        ⚠️ 去重按**文本**:直译义偶尔与答案相同(实测 50 条里有 1 条),
           不去重就会出现两个一模一样的选项 —— 与 #340 修的是同一类错。 */
-    const seen = new Set<string>([answer]);
-    const distractors: string[] = [];
-    if (lit && !seen.has(lit)) { seen.add(lit); distractors.push(lit); }
-    for (const t of shuffle(idioms.filter(x => x.id !== c.id && x.translation_zh).map(x => x.translation_zh as string))) {
-      if (seen.has(t)) continue;
-      seen.add(t); distractors.push(t);
-      if (distractors.length === 3) break;
-    }
+    /* 直译义排第一位,再用共用件补齐 —— dedupeTake 内含"同族不同框"判据,
+       所以「减轻」与「减轻程度」这类不会同框(见 quiz.ts 的 tooSimilar)。 */
+    const rest = shuffle(idioms.filter(x => x.id !== c.id && x.translation_zh).map(x => x.translation_zh as string));
+    const distractors = dedupeTake(lit ? [lit, ...rest] : rest, answer, 3);
     return {
       tag: "习语 · 选出正确的中文意思",
       stem: c.chunk,

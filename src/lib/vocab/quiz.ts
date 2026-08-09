@@ -110,6 +110,9 @@ export function buildQuestions(pool: VocabWord[], targets: VocabWord[], defMode:
     const seen = new Set<string>([correct]);
     for (const { t } of scored) {
       if (seen.has(t)) continue;                // 选项去重:两个词释义撞了会出现两个"正确答案"
+      /* 同族不同框 —— 与 dedupeTake 同一套判据,别在这里另写一份 */
+      if (tooSimilar(t, correct)) continue;
+      if (picked.some(x => tooSimilar(t, x))) continue;
       seen.add(t); picked.push(t);
       if (picked.length === 3) break;
     }
@@ -120,6 +123,53 @@ export function buildQuestions(pool: VocabWord[], targets: VocabWord[], defMode:
   });
 
   return out;
+}
+
+/* ── 干扰项"同族不同框" ───────────────────────────────────────
+ * Aaron 2026-08-09:干扰项与正确答案若**互为子串**或**过于相似**,不许同框。
+ * 起因是词块题抽到过 `as a result` 与 `as a result of` 并排 —— 同一个短语的两种形态,
+ * 学生答对答错都说明不了什么。
+ *
+ * ⚠️ **判据分语种,不能一把尺子量到底**。实测这几对:
+ *      as a result / as a result of   互为子串 ✓   编辑距离 3(比例 0.21)
+ *      减轻       / 减轻程度          互为子串 ✓   编辑距离 2(比例 0.50)
+ *      高估       / 低估              互为子串 ✗   编辑距离 1(比例 **0.50**)
+ *      一针见血   / 一针见效          互为子串 ✗   编辑距离 1(比例 0.25)
+ *    **「高估 / 低估」是一对真正的对立选项**,却和「减轻 / 减轻程度」拿到同样的 0.50。
+ *    也就是说:对中文,一个字的差别往往**正是考点**,按编辑距离判会把好题判成同族。
+ *    → 所以:**中文只判互为子串,不判编辑距离**;编辑距离只用在拉丁字母上,
+ *      且门槛压得很死(长度 ≥8 且距离 ≤1,只拦拼写几乎一样的)。
+ *    这是第九条的应用:分不清的那一半干脆不判,宁可漏也不误伤。
+ */
+function normalizeForCompare(s: string): string {
+  return s.toLowerCase().trim().replace(/\s+/g, " ").replace(/[.,;:!?()（）。,、;:!?]/g, "");
+}
+
+function levenshtein(a: string, b: string): number {
+  const m = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 0; j <= b.length; j++) m[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      m[i][j] = Math.min(m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+  }
+  return m[a.length][b.length];
+}
+
+const HAS_CJK = /[㐀-鿿぀-ヿ가-힯]/;
+
+/** 两个选项是不是"同族",同族则不许同框。判据见上方注释。 */
+export function tooSimilar(a: string, b: string): boolean {
+  const x = normalizeForCompare(a), y = normalizeForCompare(b);
+  if (!x || !y) return false;
+  if (x === y) return true;
+  /* ① 互为子串 —— 中英都用。`as a result` ⊂ `as a result of`;`减轻` ⊂ `减轻程度` */
+  if (x.includes(y) || y.includes(x)) return true;
+  /* ② 编辑距离 —— **只对纯拉丁**,且只拦拼写几乎一样的。
+       含中日韩字符一律跳过(见上方「高估/低估」那条)。 */
+  if (HAS_CJK.test(x) || HAS_CJK.test(y)) return false;
+  if (Math.max(x.length, y.length) < 8) return false;
+  return levenshtein(x, y) <= 1;
 }
 
 /**
@@ -139,6 +189,9 @@ export function dedupeTake(candidates: string[], correct: string, n: number): st
   const out: string[] = [];
   for (const c of candidates) {
     if (!c || seen.has(c)) continue;
+    /* 同族不同框:与答案或已选干扰项过于相似的一律跳过(见 tooSimilar 注释) */
+    if (tooSimilar(c, correct)) continue;
+    if (out.some(x => tooSimilar(c, x))) continue;
     seen.add(c); out.push(c);
     if (out.length === n) break;
   }

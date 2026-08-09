@@ -9,9 +9,8 @@
  *   ① **当前词库**(随顶部下拉切换):进度 N/总数、圆环、错题本、今日复习。
  *      全部集中在页面上半部分、紧挨着下拉,视觉上归属明确。
  *   ② **全局累计**(跨所有词库、按 word_id 去重、永远只涨):
- *      累计学习/掌握/时长/积分,**以及里程碑**。放在下方,标题不带词库名,字号小一档。
- *      ⚠️ 里程碑归这一层是 Aaron 2026-08-07 的裁决:它是成就系统,
- *         跟着词库走的话切一次库徽章就归零,用户读成"进度被清空"。
+ *      累计学习/掌握/时长/积分。放在下方,标题不带词库名,字号小一档。
+ *      ⚠️ 里程碑已于 2026-08-09 整块删除(连同「成就」标题层),别再加回来。
  *   ⚠️ 去重是 user_vocab_mastery 的表结构自带的((user_id, word_id) 唯一),
  *      同一个词同时属于托福和四级只算一次;各库进度那层才 join vocab_word_banks。
  *
@@ -19,7 +18,7 @@
  *   ⓪ 场景串记横幅(独立学习方式,不属于任何词库)→ 分隔线
  *   ① 我的状态:当前词库卡 → 学习进度(四条横条)→ 错题本 + 今日复习  ← 看我在哪
  *   ② 学习方式:单词学习 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析  ← 选今天怎么学
- *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
+ *   ③ 周报横幅 → 我的数据四宫格 + 打卡月历(**未登录整块不渲染**)  ← 看我攒了多少
  *   ⚠️ 场景串记的位置改过两次:最初在页面**最底部**(层级太低),
  *      后来并进学习方式组(会让人以为它在学当前词库),
  *      2026-08-09 定版为**最顶部独立横幅 + 分隔线**。别再挪。
@@ -42,7 +41,10 @@ import {
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
-import { bankColor, CTA_SHADOW, FONT_STAT, GRAD_CTA, MILESTONES, readSelectedBank, SCENE_COLOR, tintToWhite, writeSelectedBank } from "@/lib/vocab/theme";
+/* ⚠️ 合并 main 时这里冲突过:本分支要 CTA_SHADOW/GRAD_CTA(今日学习按钮用),
+   main 删掉了 MILESTONES(里程碑整层已撤)。两边**各取正确的一半**,
+   别整行取一边 —— 取 HEAD 会把已删的 MILESTONES 带回来。 */
+import { bankColor, CTA_SHADOW, FONT_STAT, GRAD_CTA, readSelectedBank, SCENE_COLOR, tintToWhite, writeSelectedBank } from "@/lib/vocab/theme";
 import { countScenePacks, countScenesDone } from "@/lib/vocab/scenes";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import {
@@ -51,8 +53,7 @@ import {
 } from "@/lib/vocab/data";
 import MyDataPanel from "@/components/vocab/MyDataPanel";
 import {
-  WeeklyBanner, Confetti, ShareCard, MilestoneSummary,
-  useMilestoneCelebration, type WeeklySummary,
+  WeeklyBanner, ShareCard, type WeeklySummary,
 } from "@/components/vocab/Incentive";
 import { getStats, type UserStats } from "@/lib/vocab/stats";
 import { buildTodayPlan, type TodayPlan } from "@/lib/vocab/todayPlan";
@@ -85,7 +86,7 @@ export default function VocabCenter() {
   /** 全局累计那一层(与词库无关,只加载一次)。 */
   const [totals, setTotals] = useState<{ learned: number; mastered: number } | null>(null);
   const [uStats, setUStats] = useState<UserStats | null>(null);
-  const [share, setShare] = useState<null | { mastered: number; streak: number; points: number; totalMs: number; milestone?: number | null }>(null);
+  const [share, setShare] = useState<null | { mastered: number; streak: number; points: number; totalMs: number }>(null);
 
   /* ① 词库列表 + 全局累计:与选哪个库无关,只跑一次 */
   useEffect(() => {
@@ -157,12 +158,9 @@ export default function VocabCenter() {
   const bankMastered = p?.mastered ?? 0;
   const bankTotal = p?.total ?? 0;
 
-  /* 里程碑跟随**全局累计**掌握数,不跟词库(Aaron 2026-08-07 裁决):
-   * 它是成就系统,切库归零会让用户觉得"进度被清空";全局累计随着学多个库一直涨。
-   * 彩带和分享卡必须用同一个数,否则会出现"横幅说达成了、彩带不放"。 */
+  /* 全局累计掌握数 —— 分享卡上的「我的词汇量 N」用它。
+     ⚠️ 里程碑已删,这个数不再驱动任何徽章/彩带。 */
   const globalMastered = totals?.mastered ?? null;
-  const celebrate = useMilestoneCelebration(globalMastered ?? 0);
-  const [confettiDone, setConfettiDone] = useState(false);
 
   return (
     /* 暖底 #FAF7F2 = index.css 的 --background(warm ivory,注释写着 low blue-light,
@@ -233,19 +231,14 @@ export default function VocabCenter() {
         {/* ═══ 第二层「学习方式」:今天怎么学 ═══ */}
         <StudyModes bankCode={selected?.code ?? null} color={color} />
 
-        {/* ═══ 第三层「成就」:我攒了多少 ═══ */}
-        <h2 className="mb-2 mt-6 text-[13px] font-medium text-slate-400">成就</h2>
-
-        {/* 周报是"每周一才出、可关闭"的偶发块,大多数日子根本不占位。
-            它讲的是"上周攒了多少",归成就层比夹在方式层里更顺。
-            分享卡上的「我的词汇量 N」也是全局累计 —— 与里程碑同一个数。 */}
+        {/* ⚰️「成就」整层已删(Aaron 2026-08-09):标题、里程碑卡(六个档位 +
+            「距下一档还差 N 词」)、彩带触发、分享卡里的里程碑字段,凡只服务这块的一并删除。
+            **打卡月历和我的数据四宫格保留** —— 那是数据不是成就。
+            周报横幅也保留:它讲的是"上周学了多少",是数据回顾,不是徽章。 */}
         <WeeklyBanner color={color} onShare={(w: WeeklySummary) => setShare({
           mastered: globalMastered ?? 0, streak: w.streak, points: uStats?.total_points ?? 0,
           totalMs: uStats?.total_time_ms ?? 0,
-          milestone: MILESTONES.filter(m => (globalMastered ?? 0) >= m).pop() ?? null,
         })} />
-
-        <MilestoneSummary mastered={globalMastered} color={color} />
 
         <MyDataPanel color={color} signedIn={signedIn}
           globalLearned={totals?.learned ?? null}
@@ -262,7 +255,6 @@ export default function VocabCenter() {
         )}
       </div>
 
-      {celebrate && !confettiDone && <Confetti onDone={() => setConfettiDone(true)} />}
       {share && <ShareCard data={share} onClose={() => setShare(null)} />}
     </div>
   );
@@ -548,7 +540,7 @@ function EntryCard({ icon, label, count, hint, to }: {
  * ⚠️ 由来:场景串记原来是**页面最底部一条横幅**,层级放错了 ——
  *    它是"背单词的一种方式",不是词汇中心之外的附加功能。
  *    现在把所有方式并排放在一起,用户的动线才顺:
- *    看我在哪(状态)→ 选今天怎么学(方式)→ 看我攒了多少(成就)。
+ *    看我在哪(状态)→ 选今天怎么学(方式)→ 看我攒了多少(数据)。
  * ⚠️ 未上线的方式**照样列出来、灰显不可点** —— 让用户看见这个板块在长。
  *    但必须点不动(disabled 的 div,不是长得像却没反应的卡)。
  * ⚠️ 场景串记的「已学 N/30」与 /vocab/scenes 顶部那行**同一个口径**(都数 done 键)。

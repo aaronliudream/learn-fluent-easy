@@ -93,5 +93,4 @@ export function writeSelectedBank(code: string) {
   try { localStorage.setItem(SELECTED_BANK_KEY, code); } catch { /* 隐私模式:记不住就每次默认库 */ }
 }
 
-/** 里程碑档位(spec 第 5 节:仅这些点位放 confetti)。PR-6 用,这里先作单一事实来源。 */
-export const MILESTONES = [1600, 3500, 4500, 5500, 8000, 10000];
+/* ⚰️ MILESTONES 已删(Aaron 2026-08-09):词汇板块不再有里程碑/成就层。 */

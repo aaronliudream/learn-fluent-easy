@@ -95,17 +95,12 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
    *    VocabGrowth / VocabMistakes 拿到的是空数组(骨架会正常解除),只有这里中招。
    */
   if (signedIn === false) {
-    /* ⚠️ **不放登录按钮**。登录是全站行为、导航栏已有入口;
-     *    在板块内部再放一颗按钮,会让用户以为"这个板块要单独登录一次"。
-     *    这里只陈述事实,一行 12px 灰字。
-     *    (学习进度卡下面那行「未登录也可先试做 20 题」保留 —— 那是在讲产品规则,
-     *     不是催登录,两者性质不同。) */
-    return (
-      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
-        <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
-        <p className="mt-1 text-[12px] text-slate-400">登录后查看你的学习数据</p>
-      </div>
-    );
+    /* ⚠️ 未登录**整块不渲染**(Aaron 2026-08-09)。
+     *    此前给的是「我的数据 / 登录后查看你的学习数据」一行灰字 ——
+     *    用户没登录就不该看到这个区块存在,一句提示也是多余的:
+     *    它既没提供信息,又让首页多出一块空壳。
+     *    登录后正常显示四宫格 + 打卡月历。 */
+    return null;
   }
 
   /* 全局累计没就绪也走骨架 —— 它和 stats 一样,渲染 0 就是"累计归零"的事故观感 */

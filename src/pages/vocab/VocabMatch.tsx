@@ -18,7 +18,8 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF } from "@/lib/vocab/theme";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
-import { AnonNote, QuotaModal, Result } from "@/components/vocab/SessionParts";
+import { playUrl } from "@/lib/vocab/audio";
+import { AnonNote, QuotaModal, Result, WordCardBody } from "@/components/vocab/SessionParts";
 import {
   getBankByCode, listBankWords, getWordStatusMap, currentUserId,
   type VocabBank, type VocabWord, type WordStatus,
@@ -105,6 +106,13 @@ export default function VocabMatch() {
     if (sel.wordId === t.wordId) {
       setCleared(prev => new Set(prev).add(t.wordId));
       setSel(null);
+      /* 配对成功就朗读该词:既是正反馈,也是这个模式里唯一一次听到读音的机会
+         (配对模式没有逐题反馈层)。Aaron 2026-08-09 定。
+         ⚠️ 与结算页那 6 张卡的自动朗读是两回事,别混:
+            这里是**一次一个词**、由用户的点击直接触发;
+            那里是 6 张卡同时挂载各自开播,会互相抢占,所以关掉。 */
+      const w = words.find(x => x.id === t.wordId);
+      if (w?.audio_url) void playUrl(w.audio_url, `w:${w.id}`);
       // 之前配错过就记错 —— 判据是"第一次尝试对不对",不是"最后有没有配上"
       void write(t.wordId, !missed.has(t.wordId));
     } else {
@@ -174,9 +182,45 @@ export default function VocabMatch() {
         )}
 
         {done && (
-          <Result total={words.length} correct={correctCount} color={color}
-            onAgain={() => setSeed(s => s + 1)} onBack={() => navigate(`/vocab/${bankCode}`)}
-            note="一次配对成功才算答对;配错过的词已进错题本,连对 3 天自动移出。" />
+          <>
+            <Result total={words.length} correct={correctCount} color={color}
+              onAgain={() => setSeed(s => s + 1)} onBack={() => navigate(`/vocab/${bankCode}`)}
+              note="一次配对成功才算答对;配错过的词已进错题本,连对 3 天自动移出。" />
+
+            {/* ── 逐词回顾 ──
+                配对模式**故意不做逐题弹层**(那会打断连续消卡的手感),
+                代价是整轮下来一次完整词卡都没看过 —— 所以这份回顾就是它的反馈层,
+                规格上一直有,是实现漏了(2026-08-09 补)。
+                ⚠️ 复用 WordCardBody:大字/音标/词性/中英释义/三条例句 + 各自的 🔊,
+                   与其余三个模式**同一个实现**,不在这里另拼一份。
+                   (自动朗读的开关与句数选择器在这一屏不显示,理由见下方 allowAutoplay) */}
+            <h2 className="mb-2 mt-6 text-[16px] font-semibold text-slate-900">逐词回顾</h2>
+            <p className="mb-3 text-[13px] text-slate-400">
+              本轮 {words.length} 个词
+              {missed.size > 0 && <> · <b className="font-semibold text-rose-600">{missed.size}</b> 个配错过(已标红)</>}
+            </p>
+            <div className="space-y-3">
+              {words.map(w => {
+                const wrong = missed.has(w.id);
+                return (
+                  <div key={w.id}
+                    className={cn("rounded-2xl border bg-white p-4",
+                      wrong ? "border-rose-200 bg-rose-50/30" : "border-black/[0.06]")}>
+                    {wrong && (
+                      <div className="mb-2 inline-flex items-center rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-medium text-rose-700">
+                        配错过 · 已进错题本
+                      </div>
+                    )}
+                    {/* ⚠️ allowAutoplay={false} 是必须的:WordCardBody 一挂载就按
+                        全局设置自动朗读,而这一屏同时挂 6 张 —— 不关就是 6 条朗读链
+                        同时启动互相抢占。进回顾列表也本来就不该有声音自己响起来,
+                        要听点每条例句自己的 🔊。 */}
+                    <WordCardBody word={w} allowAutoplay={false} />
+                  </div>
+                );
+              })}
+            </div>
+          </>
         )}
 
         {anon && state === "ok" && <AnonNote />}

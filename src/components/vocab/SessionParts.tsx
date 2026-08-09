@@ -31,8 +31,18 @@ import { listExamples, type VocabExample, type VocabWord } from "@/lib/vocab/dat
  *    正是"只许有一个实现"要防的东西。
  * ⚠️ 没有音频的词(198 之外)**只隐藏朗读键**,文字反馈一字不少。
  */
-export function WordCardBody({ word }: { word: VocabWord }) {
+/**
+ * @param allowAutoplay 允许自动朗读吗。默认 true = 沿用全局「自动朗读例句」设置。
+ *   ⚠️ **列表场景必须传 false**。这个组件一挂载就自动朗读,答题反馈层里同屏只有
+ *      一张卡所以没问题;但配对结算页的「逐词回顾」一次挂 6 张 —— 6 条朗读链
+ *      同时启动互相抢占,落地就是一串卡顿噪音。
+ *      而且语义上也不对:进一个回顾列表不该有任何声音自己响起来。
+ */
+export function WordCardBody({ word, allowAutoplay = true }: { word: VocabWord; allowAutoplay?: boolean }) {
   const [rows, setRows] = useState<VocabExample[] | null>(null);
+  /* ⚠️ 这里存的是**全局设置的真值**,不掺 allowAutoplay ——
+     勾选框要如实反映用户的全局设置,不能因为"这一屏不自动播"就显示成关。
+     场景差异只作用在"要不要自动触发"和"要不要显示这组控件"上。 */
   const [autoplay, setAutoplay] = useState(readAutoplay());
   const [count, setCount] = useState<AutoplayCount>(readAutoplayCount());
   const played = useRef(false);
@@ -48,13 +58,13 @@ export function WordCardBody({ word }: { word: VocabWord }) {
        *    "中途点别的就中断"(它和 playUrl 共用同一个全局单曲不变量)。
        * ⚠️ played 防重放:切换朗读条数/勾选框引发的重渲染不该再响一遍。 */
       const clips = r.slice(0, count).filter(e => e.audio_url).map(e => ({ url: e.audio_url, key: `e:${e.id}` }));
-      if (autoplay && !played.current && clips.length) {
+      if (autoplay && allowAutoplay && !played.current && clips.length) {
         played.current = true;
         void playChain(clips);
       }
     }).catch(() => { if (alive) setRows([]); });
     return () => { alive = false; };
-  }, [word.id, autoplay, count]);
+  }, [word.id, autoplay, count, allowAutoplay]);
 
   /* 换词就允许再自动读一次 —— 否则第二题起永远不响 */
   useEffect(() => { played.current = false; }, [word.id]);
@@ -97,7 +107,11 @@ export function WordCardBody({ word }: { word: VocabWord }) {
         </div>
       ))}
 
-      {/* 自动朗读:总开关 + 读几条。两者并存 —— 开关管"要不要读",数量管"读几条"。 */}
+      {/* 自动朗读:总开关 + 读几条。两者并存 —— 开关管"要不要读",数量管"读几条"。
+          ⚠️ allowAutoplay=false 的列表场景整组不渲染:这两个是**全局**设置,
+             在同屏 6 张卡的回顾列表里会变成 6 份一模一样的开关,既冗余又
+             让人以为是"这张卡的设置"。那一屏本来也不自动播,控件没有意义。 */}
+      {allowAutoplay && (
       <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
         <label className="flex items-center gap-2 text-[12px] text-slate-400">
           <input type="checkbox" checked={autoplay}
@@ -120,6 +134,7 @@ export function WordCardBody({ word }: { word: VocabWord }) {
           </div>
         )}
       </div>
+      )}
     </>
   );
 }

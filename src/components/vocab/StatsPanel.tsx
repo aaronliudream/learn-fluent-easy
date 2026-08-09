@@ -64,7 +64,11 @@ function Bar({ label, value, total, barColor, shown, pct, hidePct = false }: {
           }}
         />
       </div>
-      <span className="w-[78px] shrink-0 text-right text-[12px] text-slate-500"
+      {/* ⚠️ 宽度按**最长的那种串**留:「4470 词 · 100%」。
+             78px 装不下它,会折成两行,那一行就比其它三行高一截 ——
+             真机截图上一眼能看出来,而数据是全对的。
+             whitespace-nowrap 是第二道保险:词库放量到五位数时宁可挤出去也别换行。 */}
+      <span className="w-[96px] shrink-0 whitespace-nowrap text-right text-[12px] text-slate-500"
         style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>
         {value} 词{hidePct ? "" : ` · ${shownPct}%`}
       </span>
@@ -137,7 +141,7 @@ export default function StatsPanel({
             <div key={i} className="flex items-center gap-2.5">
               <div className="h-3 w-[52px] shrink-0 animate-pulse rounded bg-black/[0.06]" />
               <div className="h-2 min-w-0 flex-1 animate-pulse rounded-full bg-black/[0.05]" />
-              <div className="h-3 w-[78px] shrink-0 animate-pulse rounded bg-black/[0.06]" />
+              <div className="h-3 w-[96px] shrink-0 animate-pulse rounded bg-black/[0.06]" />
             </div>
           ))}
         </div>

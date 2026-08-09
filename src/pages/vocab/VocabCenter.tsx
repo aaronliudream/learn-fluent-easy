@@ -17,7 +17,7 @@
  *
  * ── 页面三层,对应用户的动线 ──
  *   ① 我的状态:当前词库卡 → 学习进度(圆环/柱状)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:词卡练习 / 场景串记 / 磨耳朵 / 音标基础 / 自然拼读 / 词汇量测试  ← 选今天怎么学
+ *   ② 学习方式:词卡练习 / 场景串记 / 磨耳朵 / 词汇量测试  ← 选今天怎么学
  *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
  *   ⚠️ 场景串记原来是页面**最底部一条横幅**,层级是错的 —— 它是背单词的一种方式,
  *      不是词汇中心之外的附加功能。别再把它挪回底部。
@@ -35,7 +35,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
-  Gauge, Headphones, Layers, Link2, Lock, Mic, SpellCheck,
+  Gauge, Headphones, Layers, Link2, Lock,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -591,8 +591,9 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
         />
         <ModeCard icon={<Headphones className="h-[18px] w-[18px]" />} name="磨耳朵" desc="边听边记,可锁屏"
           color={color} to={bankCode ? `/vocab/listen?bank=${bankCode}` : "/vocab/listen"} />
-        <ModeCard icon={<Mic className="h-[18px] w-[18px]" />} name="音标基础" desc="48 个音标" color={color} />
-        <ModeCard icon={<SpellCheck className="h-[18px] w-[18px]" />} name="自然拼读" desc="看词能读、听音能写" color={color} />
+        {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
+            PR #321/#323 关闭不合并)。别再加回来。
+            ⚠️ 与**小学**板块的自然拼读(/primary 下的 PrimaryHubPhonics)无关,那个继续在。 */}
         <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="测测你现在多少词" color={color} />
       </div>
     </>

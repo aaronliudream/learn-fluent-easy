@@ -183,8 +183,9 @@ export default function VocabMatch() {
                 配对模式**故意不做逐题弹层**(那会打断连续消卡的手感),
                 代价是整轮下来一次完整词卡都没看过 —— 所以这份回顾就是它的反馈层,
                 规格上一直有,是实现漏了(2026-08-09 补)。
-                ⚠️ 复用 WordCardBody:大字/音标/词性/中英释义/三条例句/句数选择器/朗读
-                   与其余三个模式**同一个实现**,不在这里另拼一份。 */}
+                ⚠️ 复用 WordCardBody:大字/音标/词性/中英释义/三条例句 + 各自的 🔊,
+                   与其余三个模式**同一个实现**,不在这里另拼一份。
+                   (自动朗读的开关与句数选择器在这一屏不显示,理由见下方 allowAutoplay) */}
             <h2 className="mb-2 mt-6 text-[16px] font-semibold text-slate-900">逐词回顾</h2>
             <p className="mb-3 text-[13px] text-slate-400">
               本轮 {words.length} 个词
@@ -202,7 +203,11 @@ export default function VocabMatch() {
                         配错过 · 已进错题本
                       </div>
                     )}
-                    <WordCardBody word={w} />
+                    {/* ⚠️ allowAutoplay={false} 是必须的:WordCardBody 一挂载就按
+                        全局设置自动朗读,而这一屏同时挂 6 张 —— 不关就是 6 条朗读链
+                        同时启动互相抢占。进回顾列表也本来就不该有声音自己响起来,
+                        要听点每条例句自己的 🔊。 */}
+                    <WordCardBody word={w} allowAutoplay={false} />
                   </div>
                 );
               })}

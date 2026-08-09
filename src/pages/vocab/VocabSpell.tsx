@@ -19,6 +19,7 @@ import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA } from "@/lib/vocab/theme";
 import { playUrl, stopAudio } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { optionText } from "@/lib/vocab/quiz";
+import { fallback, logFail } from "@/lib/vocab/report";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
 import {
@@ -67,13 +68,16 @@ export default function VocabSpell() {
       setAnon(!uid);
       const audible = pool.filter(w => w.audio_url && optionText(w, "zh"));
       if (!audible.length) { setState("empty"); return; }
-      const statuses = await getWordStatusMap(audible.map(w => w.id)).catch(() => ({} as Record<string, WordStatus>));
+      /* 同 VocabQuiz:退化成"未学优先失效",用户无感 → 只补日志,不做失败态 UI */
+      const statuses = await getWordStatusMap(audible.map(w => w.id))
+        .catch(fallback("VocabSpell/getWordStatusMap", {} as Record<string, WordStatus>));
       const fresh = audible.filter(w => (statuses[w.id] ?? "new") === "new");
       const rest = audible.filter(w => (statuses[w.id] ?? "new") !== "new");
       setWords(shuffle([...fresh, ...rest].slice(0, ROUND * 3), seed).slice(0, ROUND));
       setIdx(0); setInput(""); setReveal(null); setHintLevel(1); setCorrectCount(0); setDone(false);
       setState("ok");
-    } catch {
+    } catch (e) {
+      logFail("VocabSpell/load", e);
       setState("error");
     }
   }, [bankCode, seed]);

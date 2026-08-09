@@ -23,6 +23,7 @@ import { startTracking } from "@/lib/vocab/timeTracker";
 import { AnonNote, Feedback, LetterDiff, QuotaModal } from "@/components/vocab/SessionParts";
 import { buildTodayPlan, countDueTomorrow, EMPTY_PLAN, type TodayPlan, type TodayTask } from "@/lib/vocab/todayPlan";
 import { getStats } from "@/lib/vocab/stats";
+import { fallback, logFail } from "@/lib/vocab/report";
 
 const KIND_LABEL: Record<TodayTask["kind"], string> = {
   review: "复习", mistake: "错题", new: "新词",
@@ -51,7 +52,8 @@ export default function VocabToday() {
   const [submitted, setSubmitted] = useState(false);
   const [right, setRight] = useState(0);
   const [quotaHit, setQuotaHit] = useState(false);
-  const [doneInfo, setDoneInfo] = useState<{ dueTomorrow: number; streak: number } | null>(null);
+  /** 结算页的两个数。**字段 null = 那一项没取到**(渲染成「—」),不是 0。 */
+  const [doneInfo, setDoneInfo] = useState<{ dueTomorrow: number | null; streak: number | null } | null>(null);
   const wrote = useRef<Set<number>>(new Set());
 
   useEffect(() => startTracking(), []);
@@ -66,7 +68,8 @@ export default function VocabToday() {
       setPlan(p);
       setIdx(0); setRight(0); setDoneInfo(null); wrote.current = new Set();
       setReading(p.tasks[0]?.showCardFirst ?? false);
-    } catch {
+    } catch (e) {
+      logFail("VocabToday/buildTodayPlan", e);
       setFailed(true);
     }
   }, [bankCode]);
@@ -80,7 +83,10 @@ export default function VocabToday() {
   useEffect(() => {
     if (!cur || !reading) { setExamples([]); return; }
     let alive = true;
-    listExamples(cur.word.id).then(r => { if (alive) setExamples(r); }).catch(() => { /* 没例句照样能看 */ });
+    /* 没例句照样能看卡 —— 正确降级,不做失败态 UI,但要留日志 */
+    listExamples(cur.word.id)
+      .then(r => { if (alive) setExamples(r); })
+      .catch(fallback("VocabToday/listExamples", [] as VocabExample[]));
     return () => { alive = false; };
   }, [cur, reading]);
 
@@ -120,12 +126,19 @@ export default function VocabToday() {
     const n = idx + 1;
     setPicked(null); setTyped(""); setSubmitted(false);
     if (n >= total) {
-      /* 结算:明天待复习 + 连续打卡。取不到就给 0,不拦结算页 */
-      const [dueTomorrow, stats] = await Promise.all([
-        bank ? countDueTomorrow(bank.id).catch(() => 0) : Promise.resolve(0),
-        getStats().catch(() => null),
+      /* 结算:明天待复习 + 连续打卡。取不到**不拦结算页**,但也不许给 0 ——
+       * 「明日待复习 0」和「连续打卡 0 天」都是具体的数字断言,写错了比不写更糟
+       * (用户会以为自己断签了)。所以取不到就给 null,渲染成「—」。 */
+      const [dt, st] = await Promise.allSettled([
+        bank ? countDueTomorrow(bank.id) : Promise.resolve(0),
+        getStats(),
       ]);
-      setDoneInfo({ dueTomorrow, streak: stats?.current_streak ?? 0 });
+      if (dt.status === "rejected") logFail("VocabToday/countDueTomorrow", dt.reason);
+      if (st.status === "rejected") logFail("VocabToday/getStats", st.reason);
+      setDoneInfo({
+        dueTomorrow: dt.status === "fulfilled" ? dt.value : null,
+        streak: st.status === "fulfilled" ? (st.value?.current_streak ?? 0) : null,
+      });
       return;
     }
     setIdx(n);
@@ -147,16 +160,21 @@ export default function VocabToday() {
           <div className="rounded-xl bg-slate-50 px-3.5 py-3">
             <div className="text-[12px] text-slate-400">明日待复习</div>
             <div className="mt-0.5 text-[20px] font-semibold text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>
-              {doneInfo.dueTomorrow}
+              {doneInfo.dueTomorrow ?? <span className="text-slate-300">—</span>}
             </div>
           </div>
           <div className="rounded-xl bg-slate-50 px-3.5 py-3">
             <div className="text-[12px] text-slate-400">连续打卡</div>
             <div className="mt-0.5 text-[20px] font-semibold text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>
-              {doneInfo.streak} 天
+              {doneInfo.streak === null ? <span className="text-slate-300">—</span> : `${doneInfo.streak} 天`}
             </div>
           </div>
         </div>
+        {/* 「—」自己说不清是"没取到"还是"没有" —— 补一句。
+            两个数都拿到时这行不出,不给正常路径添噪音。 */}
+        {(doneInfo.dueTomorrow === null || doneInfo.streak === null) && (
+          <p className="mt-2 text-[12px] text-slate-400">「—」是这次没取到,不是 0;你刚才的作答已经记上了</p>
+        )}
         <div className="mt-5 flex gap-2">
           <button onClick={load} className="flex-1 rounded-xl border border-black/[0.08] py-2.5 text-[14px] text-slate-700">
             再来一组

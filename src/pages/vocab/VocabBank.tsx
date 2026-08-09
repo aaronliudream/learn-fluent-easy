@@ -18,6 +18,7 @@ import BackLink from "@/components/BackLink";
 import WordCard from "@/components/vocab/WordCard";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
+import { logFail } from "@/lib/vocab/report";
 import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA } from "@/lib/vocab/theme";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
@@ -68,8 +69,9 @@ export default function VocabBank() {
   const [bank, setBank] = useState<VocabBank | null>(null);
   const [words, setWords] = useState<VocabWord[]>([]);
   const [statuses, setStatuses] = useState<Record<string, WordStatus>>({});
-  const [progress, setProgress] = useState({ mastered: 0, learning: 0, untouched: 0, total: 0 });
-  const [due, setDue] = useState(0);
+  /** null = 这一项**没取到**(不是 0)。渲染层据此画失败态,别再兜底成 0。 */
+  const [progress, setProgress] = useState<{ mastered: number; learning: number; untouched: number; total: number } | null>(null);
+  const [due, setDue] = useState<number | null>(0);
   const [state, setState] = useState<"loading" | "ok" | "missing" | "error">("loading");
 
   useEffect(() => {
@@ -84,15 +86,25 @@ export default function VocabBank() {
         const ws = await listBankWords(b.id);
         if (!alive) return;
         setWords(ws);
-        const [pg, d, st] = await Promise.all([
-          getBankProgress(b.id, b.total_words).catch(() => ({ mastered: 0, learning: 0, untouched: ws.length, total: ws.length })),
-          dueCount().catch(() => 0),
-          getWordStatusMap(ws.map(w => w.id)).catch(() => ({} as Record<string, WordStatus>)),
+        /* ⚠️ 与 VocabCenter 同一处病因(第五条:修一处扫全库)——
+         *    原来三项各自 `.catch(兜底 0)`,查询挂了和"真的是 0"在 UI 上完全一样。
+         *    改 allSettled 保留成败:失败的那一项给 null,由渲染层画失败态。 */
+        const [pr, dr, sr] = await Promise.allSettled([
+          getBankProgress(b.id, b.total_words),
+          dueCount(),
+          getWordStatusMap(ws.map(w => w.id)),
         ]);
+        if (pr.status === "rejected") logFail("VocabBank/getBankProgress", pr.reason);
+        if (dr.status === "rejected") logFail("VocabBank/dueCount", dr.reason);
+        if (sr.status === "rejected") logFail("VocabBank/getWordStatusMap", sr.reason);
         if (!alive) return;
-        setProgress(pg); setDue(d); setStatuses(st);
+        setProgress(pr.status === "fulfilled" ? pr.value : null);
+        setDue(dr.status === "fulfilled" ? dr.value : null);
+        /* 词表分组取不到 → 全按"待学习"分组,这是无感退化,不做失败态 UI */
+        setStatuses(sr.status === "fulfilled" ? sr.value : {});
         setState("ok");
-      } catch {
+      } catch (e) {
+        logFail("VocabBank/load", e);
         if (alive) setState("error");
       }
     })();
@@ -144,15 +156,19 @@ export default function VocabBank() {
         <>
           <StatsPanel
             loading={state === "loading"}
-            mastered={progress.mastered}
-            learning={progress.learning}
-            untouched={progress.untouched}
+            /* 进度取不到 → 失败态,而不是四条 0 值横条("你一个词都没学") */
+            failed={state === "ok" && progress === null}
+            mastered={progress?.mastered ?? 0}
+            learning={progress?.learning ?? 0}
+            untouched={progress?.untouched ?? 0}
             color={color}
             growthWordIds={words.map(w => w.id)}
             emptyHint="还没开始学这个词库。下面可以先浏览词表,点喇叭听发音。"
           />
 
-          {due > 0 && (
+          {/* ⚠️ 到期数取不到时**整条不出**(不是出「有 0 个词到复习时间」)——
+              条件本来就是 due > 0,null 天然不满足;写在这里是提醒别改成 `?? 0`。 */}
+          {due !== null && due > 0 && (
             <Link to="/vocab/review"
               className="mt-4 flex items-center justify-between rounded-2xl border border-black/[0.06] bg-white px-4 py-3.5">
               <span className="text-[14px] text-slate-600">
@@ -485,7 +501,11 @@ function ExamplePanel({ word }: { word: VocabWord }) {
   const [rows, setRows] = useState<VocabExample[] | null>(null);
   useEffect(() => {
     let alive = true;
-    listExamples(word.id).then(r => { if (alive) setRows(r); }).catch(() => { if (alive) setRows([]); });
+    /* 取不到 → 显示「暂无例句」。这句和真的没例句长得一样,但例句是**锦上添花**、
+       用户不会据此判断自己的学习状态,所以只补日志不另做失败态。 */
+    listExamples(word.id)
+      .then(r => { if (alive) setRows(r); })
+      .catch(e => { logFail("VocabBank/ExamplePanel:listExamples", e); if (alive) setRows([]); });
     return () => { alive = false; };
   }, [word.id]);
 

@@ -40,9 +40,10 @@
 import { supabase } from "@/integrations/supabase/client";
 import {
   currentUserId, listBankWordIds, listMasteryRows, listMistakes,
-  listExamplesFor, type VocabWord, type VocabExample,
+  listExamplesFor, type MasteryRow, type VocabWord, type VocabExample,
 } from "@/lib/vocab/data";
 import { listSceneItems } from "@/lib/vocab/scenes";
+import { fallback, logFail } from "@/lib/vocab/report";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const db = supabase as any;
@@ -117,7 +118,9 @@ export async function buildPlaylist(
     const all = await listBankWordIds(opts.bankId);
     /* 「未学优先」:把用户已经作答过的词排到后面。
        未登录读到空数组 → 顺序即原序,这是预期不是异常。 */
-    const touched = new Set((await listMasteryRows().catch(() => [])).filter(r => (r.tested_count ?? 0) > 0).map(r => r.word_id));
+    /* 取不到 → 顺序退回原序,用户完全无感 ——正因为无感,更要留一行日志 */
+    const touched = new Set((await listMasteryRows().catch(fallback("earTraining/listMasteryRows", [] as MasteryRow[])))
+      .filter(r => (r.tested_count ?? 0) > 0).map(r => r.word_id));
     const fresh = all.filter(id => !touched.has(id));
     const rest = all.filter(id => touched.has(id));
     ids = [...fresh, ...rest];
@@ -439,5 +442,5 @@ export async function recordListening(words: number): Promise<void> {
     const reviewed = ((data as { reviewed: number } | null)?.reviewed ?? 0) + words;
     await db.from("vocab_review_daily")
       .upsert({ user_id: uid, day, reviewed, updated_at: new Date().toISOString() }, { onConflict: "user_id,day" });
-  } catch { /* 统计写失败不该打断听力 */ }
+  } catch (e) { logFail("earTraining/bumpReviewDaily", e); /* 统计写失败不该打断听力 */ }
 }

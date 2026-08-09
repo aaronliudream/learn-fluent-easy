@@ -21,6 +21,7 @@ import { buildQuestions, pickTargets, type QuizQuestion } from "@/lib/vocab/quiz
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { dueQueue } from "@/lib/vocab/vocabMastery";
+import { fallback, logFail } from "@/lib/vocab/report";
 import {
   getBankByCode, listBankWords, listExamples, getWordStatusMap, currentUserId,
   type VocabBank, type VocabWord, type WordStatus,
@@ -53,7 +54,10 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
       setBank(b);
       const [pool, uid] = await Promise.all([listBankWords(b.id), currentUserId()]);
       setAnon(!uid);
-      const statuses = await getWordStatusMap(pool.map(w => w.id)).catch(() => ({} as Record<string, WordStatus>));
+      /* 取不到 → 全词按"新词"挑,题照出、用户无感;所以这里**不做失败态 UI**,
+         但必须留日志 —— 无感的退化最容易躺几个月没人发现。 */
+      const statuses = await getWordStatusMap(pool.map(w => w.id))
+        .catch(fallback("VocabQuiz/getWordStatusMap", {} as Record<string, WordStatus>));
 
       let targets: VocabWord[];
       if (mode === "review") {
@@ -69,7 +73,8 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
       if (!qs.length) { setState("empty"); return; }
       setQuestions(qs); setIdx(0); setPicked(null); setCorrectCount(0); setDone(false);
       setState("ok");
-    } catch {
+    } catch (e) {
+      logFail("VocabQuiz/load", e);
       setState("error");
     }
   }, [bankCode, mode]);

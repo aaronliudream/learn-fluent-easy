@@ -16,6 +16,7 @@ import {
   bjToday, shiftDay, fmtDuration, GOAL_OPTIONS,
   type UserStats, type StudyDay,
 } from "@/lib/vocab/stats";
+import { logFail } from "@/lib/vocab/report";
 
 /** 某月第一天 / 天数(纯字符串日历,不碰时区)。 */
 function monthMeta(ym: string) {
@@ -48,11 +49,19 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
   const today = bjToday();
   const [stats, setStats] = useState<UserStats | null>(null);
   const [days, setDays] = useState<StudyDay[] | null>(null);
+  /**
+   * 取失败。**这一态原来根本不存在**,于是失败走到了 `!stats` 那条判断上 ——
+   * 表现是一块**永远在闪的骨架屏**,用户既等不到数据也不知道出了什么事。
+   * 和「未登录停在骨架」是同一个病(那个已修),只是触发条件换成了查询挂掉。
+   */
+  const [failed, setFailed] = useState(false);
+  const [reload, setReload] = useState(0);
   const [ym, setYm] = useState(today.slice(0, 7));
   const [monthDays, setMonthDays] = useState<StudyDay[]>([]);
 
   useEffect(() => {
     let alive = true;
+    setFailed(false);
     (async () => {
       try {
         const [s, d] = await Promise.all([
@@ -61,10 +70,13 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
         ]);
         if (!alive) return;
         setStats(s); setDays(d);
-      } catch { if (alive) { setStats(null); setDays([]); } }
+      } catch (e) {
+        logFail("MyDataPanel/getStats+listStudyDays", e);
+        if (alive) { setStats(null); setDays(null); setFailed(true); }
+      }
     })();
     return () => { alive = false; };
-  }, [today]);
+  }, [today, reload]);
 
   useEffect(() => {
     let alive = true;
@@ -72,7 +84,9 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
     const { days: n } = monthMeta(ym);
     listStudyDays(from, `${ym}-${String(n).padStart(2, "0")}`)
       .then(r => { if (alive) setMonthDays(r); })
-      .catch(() => { if (alive) setMonthDays([]); });
+      /* 月历这一格取不到 → 那个月全画成"没学过"。它不是主数据,
+         不为它把整块改成失败态;但必须留日志,否则"某个月空了"永远查不动。 */
+      .catch(e => { logFail("MyDataPanel/listStudyDays(month)", e); if (alive) setMonthDays([]); });
     return () => { alive = false; };
   }, [ym]);
 
@@ -101,6 +115,23 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
      *    它既没提供信息,又让首页多出一块空壳。
      *    登录后正常显示四宫格 + 打卡月历。 */
     return null;
+  }
+
+  /* 失败态先判 —— 否则它会掉进下面那条 `!stats` 的骨架分支里,永远闪下去。
+     文案要把"没取到"和"你没有数据"讲开:老用户看到「累计 0 分钟」是事故级体验,
+     看到一块永远在闪的灰块同样是 —— 两者都不是"我今天还没学"。 */
+  if (failed) {
+    return (
+      <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5">
+        <h2 className="text-[16px] font-semibold text-slate-900">我的数据</h2>
+        <p className="mt-1.5 text-[14px] text-slate-500">这次没能加载出来</p>
+        <p className="mt-0.5 text-[12px] text-slate-400">你的学习记录还在,只是这次没取到</p>
+        <button type="button" onClick={() => setReload(n => n + 1)}
+          className="mt-3 rounded-full border border-black/[0.08] px-4 py-1.5 text-[14px] text-slate-700 active:scale-95">
+          重试
+        </button>
+      </div>
+    );
   }
 
   /* 全局累计没就绪也走骨架 —— 它和 stats 一样,渲染 0 就是"累计归零"的事故观感 */

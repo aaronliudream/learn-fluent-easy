@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF, readSelectedBank } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
+import { fallback, logFail } from "@/lib/vocab/report";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
 import {
   listExpressions, listFavorites, toggleFavorite, EXPR_GROUPS, REGISTER_LABEL,
@@ -111,7 +112,7 @@ export default function VocabExpressions() {
   useEffect(() => startTracking(), []);
   const load = useCallback(() => {
     setFailed(false); setRows(null);
-    listExpressions().then(setRows).catch(() => setFailed(true));
+    listExpressions().then(setRows).catch(e => { logFail("VocabExpressions/listExpressions", e); setFailed(true); });
   }, []);
   useEffect(() => { load(); }, [load]);
 
@@ -123,7 +124,8 @@ export default function VocabExpressions() {
     let alive = true;
     listFavorites(rows.flatMap(e => e.renditions.map(r => r.rendition)))
       .then(s => { if (alive) setFavs(s); })
-      .catch(() => { /* 查不到收藏不影响浏览 */ });
+      /* 查不到收藏不影响浏览 —— 正确降级,记一行 */
+      .catch(fallback("VocabExpressions/listFavorites", undefined));
     return () => { alive = false; };
   }, [rows]);
 

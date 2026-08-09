@@ -3,7 +3,7 @@
  *
  * 掌握度仪表盘 → 复习提醒条 → 主 CTA(**全屏唯一渐变位**)→ 四模式入口 → 词表。
  *
- * 词表结构化:搜索框 + 按学习状态分三组(待学习 / 学习中 / 已掌握)+ 右侧 A-Z 快滚条,
+ * 词表结构化:按学习状态分三组(待学习 / 学习中 / 已掌握)+ 右侧 A-Z 快滚条,
  * 全程窗口化渲染(要扛放量后的 4471 词),不做分页。
  *
  * ⚠️ 窗口化用「顶部占位 + 正常流 + 底部占位」,**不要改回绝对定位**。
@@ -13,7 +13,7 @@
  */
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { ChevronDown, Headphones, Layers, PenLine, Printer, Search, Sparkles, Volume2, X } from "lucide-react";
+import { ChevronDown, Headphones, Layers, PenLine, Printer, Sparkles, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import WordCard from "@/components/vocab/WordCard";
 import { cn } from "@/lib/utils";
@@ -346,27 +346,27 @@ function WordList({ words, statuses, color, deepLinkWord = "" }: { words: VocabW
 
   return (
     <div className="relative">
-      {/* 搜索框 */}
-      <div className="mb-3 flex items-center gap-2 rounded-xl border border-black/[0.06] bg-white px-3 py-2.5">
-        <Search className="h-4 w-4 shrink-0 text-slate-400" />
-        <input
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          placeholder="搜索单词(按开头字母)"
-          className="min-w-0 flex-1 bg-transparent text-[15px] text-slate-800 outline-none placeholder:text-slate-300"
-          autoCapitalize="none" autoCorrect="off" spellCheck={false}
-        />
-        {query && (
-          <button type="button" onClick={() => setQuery("")} aria-label="清空搜索" className="shrink-0 text-slate-300">
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
+      {/* ⚰️ 搜索输入框已删(Aaron 2026-08-09:用户不会来这里搜词,省下的空间给词表)。
+          ⚠️ 但**过滤逻辑保留**,因为它不只服务搜索框 ——
+             场景串记的「查看词卡」是 `/vocab/:code?word=<headword>` 跳过来的
+             (见 VocabSceneDetail.tsx),靠这个过滤把词表收敛到那一个词。
+             连过滤一起删的话,那条入口会把用户丢进 4470 词的全表里,不知道该看哪个。
+          深链生效时给一枚可关闭的标签,让用户知道"现在只看着一个词"、也能一键看回全表。 */}
+      {query && (
+        <div className="mb-3 flex items-center gap-2">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-black/[0.08] bg-white px-3 py-1.5 text-[13px] text-slate-600">
+            只看:<b className="font-semibold text-slate-800">{query}</b>
+            <button type="button" onClick={() => setQuery("")} aria-label="显示全部词" className="text-slate-300">
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </span>
+        </div>
+      )}
 
       <div className="flex gap-1.5">
         <div ref={listRef} className="min-w-0 flex-1 overflow-hidden rounded-2xl border border-black/[0.06] bg-white">
           {items.length === 0 ? (
-            <div className="px-4 py-10 text-center text-[14px] text-slate-400">没有以「{query}」开头的词</div>
+            <div className="px-4 py-10 text-center text-[14px] text-slate-400">词表里没有「{query}」</div>
           ) : (
             <>
               <div style={{ height: offsets[start] }} aria-hidden />

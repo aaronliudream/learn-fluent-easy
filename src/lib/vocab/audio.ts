@@ -83,23 +83,34 @@ function playToEnd(url: string, key: string): Promise<void> {
 }
 
 /**
- * 按顺序连播一串(场景串记的「连读整链」)。
+ * 按顺序连播一串(场景串记的「连读整链」、答题反馈层的「先单词后例句」)。
  * 中途调 stopAudio() 或再开一次连播即中断。没有 url 的条目直接跳过。
  * onKey 用来给 UI 报"现在读到哪一环了"。
+ *
+ * @param list 每条可带 `gapAfterMs`:读完这条后停多久再读下一条。
+ *   ⚠️ 停顿必须**长在链里**、并且受同一个 token 管辖 —— 写成外面套 setTimeout
+ *      的话,用户在停顿期间点了别的,这条链会在停顿结束后诈尸再读一句。
+ *   ⚠️ 最后一条的 gapAfterMs 无意义(后面没有东西了),这里也不会去等。
  */
 export async function playChain(
-  list: { url: string | null | undefined; key: string }[],
+  list: { url: string | null | undefined; key: string; gapAfterMs?: number }[],
   onKey?: (key: string | null) => void,
 ): Promise<void> {
   const token = ++chainToken;   // 先占令牌:掐掉上一条链,再开始自己这条
   stopCurrent();
   chainActive = true;
   try {
-    for (const it of list) {
+    for (let i = 0; i < list.length; i++) {
+      const it = list[i];
       if (token !== chainToken) return;   // 被中断
       if (!it.url) continue;
       onKey?.(it.key);
       await playToEnd(it.url, it.key);
+      const gap = it.gapAfterMs ?? 0;
+      if (gap > 0 && i < list.length - 1) {
+        await new Promise(r => setTimeout(r, gap));
+        if (token !== chainToken) return;  // 停顿期间被打断
+      }
     }
   } finally {
     if (token === chainToken) {

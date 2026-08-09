@@ -16,7 +16,11 @@
 --   `listBankWords` 带 `.not("def_zh","is",null)` 过滤,而且它一个库都没挂 ——
 --   **任何页面都取不到它**。所以这不是线上事故,是一条对不上账的脏数据。
 --
--- ══ 为什么建议删而不是补释义 ═══════════════════════════════════
+-- ✅ **Aaron 2026-08-09 已裁决:删,不补释义。**(理由见下,他认同)
+--    并要求「先查用户记录,无记录直接删」—— 所以下面第 ① 段不只是打印出来给人看,
+--    而是**硬闸**:只要有任何一条用户记录 / 库归属 / 例句,整笔 RAISE 回滚,不会删掉。
+--
+-- ══ 为什么删而不是补释义 ═══════════════════════════════════════
 --   `fagot` 是 `faggot` 的异体拼写。它确有一个古旧义项(一捆柴),
 --   但在现代英语里,这个词首先是一个**针对同性恋者的侮辱语**。
 --   这是一个面向中国 K-12 学生的英语产品:
@@ -30,11 +34,12 @@
 --   那就**别跑这份 SQL**,改成给它补 def_zh/def_en 并明确挂到某个库上 ——
 --   但请注意上面那条:凡进了词库的词都会被自动朗读出来。
 --
--- ⚠️ 删之前先确认它没有任何用户学习记录(下面第一段查询)。有的话先别删,叫我。
-
 BEGIN;
 
--- ① 前置:它有没有被任何用户学过 / 进过错题本 / 被收藏
+-- ① 前置**硬闸**:有任何一条挂靠就整笔回滚,不删。
+--    先 SELECT 一份给人看,再用 DO 块把它变成真的闸 ——
+--    只打印不拦的话,跑的人一眼扫过去照样会往下执行(这类"看着像检查其实没拦"
+--    的事本仓库踩过:一道永远绿的门)。
 SELECT 'user_vocab_mastery' AS 表, count(*) AS 行数
 FROM user_vocab_mastery WHERE word_id = 'fec57aa7-5629-4033-bb6f-6c1818844ce0'
 UNION ALL
@@ -46,6 +51,21 @@ FROM vocab_word_banks WHERE word_id = 'fec57aa7-5629-4033-bb6f-6c1818844ce0'
 UNION ALL
 SELECT 'vocab_examples', count(*)
 FROM vocab_examples WHERE word_id = 'fec57aa7-5629-4033-bb6f-6c1818844ce0';
+
+DO $$
+DECLARE wid uuid := 'fec57aa7-5629-4033-bb6f-6c1818844ce0';
+        m int; b int; k int; e int;
+BEGIN
+  SELECT count(*) INTO m FROM user_vocab_mastery  WHERE word_id = wid;
+  SELECT count(*) INTO b FROM vocab_mistake_book  WHERE word_id = wid;
+  SELECT count(*) INTO k FROM vocab_word_banks    WHERE word_id = wid;
+  SELECT count(*) INTO e FROM vocab_examples      WHERE word_id = wid;
+  IF (m + b + k + e) > 0 THEN
+    RAISE EXCEPTION
+      '不删:fagot 还有挂靠(掌握度 % / 错题本 % / 库归属 % / 例句 %)。已回滚,把这行发给我。',
+      m, b, k, e;
+  END IF;
+END $$;
 
 -- ② 改前计数
 SELECT '改前' AS 阶段, count(*) AS vocab_words 行数 FROM vocab_words;

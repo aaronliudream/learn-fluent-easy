@@ -9,12 +9,21 @@
  *
  * ⚠️ **有数据才显示**。三段全空则整个组件不渲染 —— 不留空标题、不占高度。
  *    22065 条搭配听着多,摊到 4470 个词上仍有不少词一条都没有。
- * ⚠️ 折叠区默认全收起:词卡的主体是释义和例句,增区是"想深挖时才展开"的,
- *    默认展开会把例句挤出首屏。
+ * ⚠️ **三段一律默认展开,不折叠**(Aaron 2026-08-09 改)。
+ *    原来是"标题常驻 + 内容默认收起",理由写的是"默认展开会把例句挤出首屏" ——
+ *    那个理由**不成立**:增区渲染在例句**之后**,展开它只会把它自己下面的东西往下推,
+ *    动不到例句的位置(反馈层挂载时还会 scrollIntoView 到顶)。
+ *    而收起的代价是实打实的:三段内容默认零曝光,绝大多数人永远点不开。
+ * ⚠️ 折叠**只在超过阈值时**才出现,不做默认收起:
+ *    · 高频搭配 → 先列 6 条,超过才给「查看全部 N 条」;
+ *    · 易混词 / 反义词 → 直接全列,不给折叠。
+ *    实测(2026-08-09)库里 **4414 个有搭配的词里 4412 个恰好 5 条,超过 6 条的一个都没有**;
+ *    反义词每词最多 3 个(分布 1/2/3 条 = 303/388/1073)。
+ *    也就是说「查看全部」那条分支**当前数据下永远不会出现** —— 留着是给将来放量用的,
+ *    不是现在就在起作用的东西,别以为它在挡什么。
  */
 import { useEffect, useState } from "react";
-import { ChevronDown, Volume2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Volume2 } from "lucide-react";
 import { FONT_SERIF } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { logFail } from "@/lib/vocab/report";
@@ -23,26 +32,24 @@ import {
   EMPTY_EXTRAS, type WordExtras as Extras,
 } from "@/lib/vocab/wordExtras";
 
-/** 可折叠的一节。标题行常驻,内容默认收起。 */
+/**
+ * 一节 —— **标题 + 内容,常驻展开**。
+ *
+ * ⚠️ 这里原来是个可折叠件(`useState(false)` + ChevronDown + grid-rows 过渡),
+ *    已整个拆掉。别"顺手"加回折叠:一旦默认收起,这三段就等于不存在。
+ *    要控制长度请用**阈值 + 查看全部**(见 collocations 那段),不要用默认收起。
+ * ⚠️ 标题不再是 <button>:它现在不可点,做成按钮会让读屏器报一个点了没反应的控件。
+ */
 function Section({ title, count, children }: { title: string; count?: number; children: React.ReactNode }) {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="border-t border-black/[0.06]">
-      <button type="button" onClick={() => setOpen(v => !v)} aria-expanded={open}
-        className="flex w-full items-center justify-between py-2.5 text-left">
+    <div className="border-t border-black/[0.06] pb-3">
+      <div className="py-2.5">
         <span className="text-[13px] font-medium text-slate-600">
           {title}
           {typeof count === "number" && <span className="ml-1.5 text-[12px] font-normal text-slate-400">{count}</span>}
         </span>
-        <ChevronDown className={cn("h-4 w-4 text-slate-400 transition-transform", open && "rotate-180")} />
-      </button>
-      {/* grid-rows 0fr→1fr:纯 CSS 的高度过渡,不用测量元素高度。
-          ⚠️ 别改成 max-height 那套 —— 内容高度未知时要么截断要么过渡时长不对。 */}
-      <div className={cn("grid transition-[grid-template-rows] duration-200", open ? "grid-rows-[1fr]" : "grid-rows-[0fr]")}>
-        <div className="overflow-hidden">
-          <div className="pb-3">{children}</div>
-        </div>
       </div>
+      {children}
     </div>
   );
 }
@@ -68,7 +75,9 @@ export default function WordExtras({ wordId, onPickWord }: {
   }, [wordId]);
 
   /* ⚠️ 没就绪时**什么都不渲染**(不是骨架屏):这一块是锦上添花,
-        先给一块灰占位反而会让卡片在数据到位时跳一下。 */
+        先给一块灰占位反而会让卡片在数据到位时跳一下。
+     ⚠️ 现在三段默认展开,这块的高度比以前大 —— 但它渲染在**例句之后**,
+        不影响"反馈层首屏要看到第一条例句"那条判据(已实测)。 */
   if (!ready || isEmptyExtras(data)) return null;
 
   const { collocations, confusion, antonyms } = data;

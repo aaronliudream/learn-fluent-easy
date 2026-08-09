@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 import WordCard from "@/components/vocab/WordCard";
 import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA, readSelectedBank } from "@/lib/vocab/theme";
 import { getBankByCode, listExamples, type VocabBank, type VocabExample, type VocabWord } from "@/lib/vocab/data";
-import { optionText } from "@/lib/vocab/quiz";
+import { dedupeTake, optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { AnonNote, Feedback, LetterDiff, QuotaModal } from "@/components/vocab/SessionParts";
@@ -90,13 +90,19 @@ export default function VocabToday() {
     return () => { alive = false; };
   }, [cur, reading]);
 
-  /** 选择题的四个选项:答案 + 同库干扰项。与其它模式同一套口径(optionText)。 */
+  /** 选择题的四个选项:答案 + 同库干扰项。与其它模式同一套口径(optionText + dedupeTake)。 */
   const options = useMemo(() => {
     if (!cur || cur.mode === "spell") return [];
     const answer = optionText(cur.word, "zh");
-    const pool = tasks.map(t => t.word).filter(w => w.id !== cur.word.id && optionText(w, "zh"));
-    const distractors = shuffle(pool).slice(0, 3).map(w => optionText(w, "zh"));
-    return shuffle([answer, ...distractors]);
+    /* ⚠️ 干扰项必须**按文本**去重、并排除与答案同文的词,不能只按 word_id 排除自己。
+     *    托福库里 559 组词的中文首义项完全相同(heritage/legacy、initially/originally…),
+     *    只排除 id 的话会出现两个一模一样的选项 —— 学生选了"另一个对的"却被判错,
+     *    而且这一错会经 recordAnswer 写进掌握度。实测 17 组词的下标相距 < 一个取词窗口,
+     *    也就是**迟早必然同框**,不是理论风险。
+     * ⚠️ 先 map 成文本再去重,不要先 slice(0,3):先切三个再去重会剩两个。 */
+    const texts = shuffle(tasks.map(t => t.word).filter(w => w.id !== cur.word.id))
+      .map(w => optionText(w, "zh"));
+    return shuffle([answer, ...dedupeTake(texts, answer, 3)]);
   }, [cur, tasks]);
 
   const answer = cur ? optionText(cur.word, "zh") : "";

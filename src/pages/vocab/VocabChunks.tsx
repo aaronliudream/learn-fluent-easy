@@ -9,19 +9,20 @@
  *    · 词块:给中文选英文(常规词汇题)
  *    · 习语:给直译陷阱猜真义 —— 这才用得上 literal_trap,
  *      用同一套出题会把习语的价值浪费掉。
- * ⚠️ ☆ 收藏**暂未接**:user_vocab_wordbook.source_kind 的 CHECK 是否允许 'chunk'
- *    无法在本地验证(匿名写会先被 RLS 挡住,约束错误被盖住)。
- *    SQLAA/wordbook_source_kind_extend.sql 跑完再接,不上一个会 400 的按钮。
+ * ⚠️ ☆ 收藏写 user_vocab_wordbook,source_kind='chunk'。
+ *    这个值是 2026-08-09 由 SQLAA/wordbook_source_kind_extend.sql 扩进 CHECK 的 ——
+ *    在 Aaron 跑那条 SQL 之前**故意没上这个按钮**,因为无法在本地验证约束
+ *    (匿名写会先被 RLS 挡住 42501,约束错误被盖住),会 400 的按钮比没有按钮更糟。
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Volume2 } from "lucide-react";
+import { Star, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF, readSelectedBank } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
-import { listChunks, CHUNK_GROUPS, type Chunk } from "@/lib/vocab/dormant";
+import { listChunks, listFavorites, toggleFavorite, CHUNK_GROUPS, type Chunk } from "@/lib/vocab/dormant";
 
 type Tab = "chunk" | "idiom";
 
@@ -31,7 +32,9 @@ function shuffle<T>(a: T[]): T[] {
   return o;
 }
 
-function Row({ c, color }: { c: Chunk; color: string }) {
+function Row({ c, color, faved, onFav }: {
+  c: Chunk; color: string; faved: boolean; onFav: (c: Chunk) => void;
+}) {
   return (
     <div className="rounded-2xl border border-black/[0.06] bg-white p-4">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -40,6 +43,11 @@ function Row({ c, color }: { c: Chunk; color: string }) {
           <button type="button" onClick={() => playUrl(c.audio_url, `k:${c.id}`)} aria-label="朗读"
             className="text-slate-400"><Volume2 className="h-4 w-4" /></button>
         )}
+        <button type="button" onClick={() => onFav(c)} aria-label={faved ? "取消收藏" : "收藏"}
+          className="ml-auto shrink-0">
+          <Star className={cn("h-[18px] w-[18px]", faved ? "fill-current" : "")}
+            style={{ color: faved ? color : "#CBD5E1" }} />
+        </button>
       </div>
       {c.translation_zh && <p className="mt-1 text-[14px] leading-relaxed text-slate-700">{c.translation_zh}</p>}
 
@@ -72,6 +80,8 @@ export default function VocabChunks() {
   const [failed, setFailed] = useState(false);
   const [tab, setTab] = useState<Tab>("chunk");
   const [quiz, setQuiz] = useState<QuizItem[] | null>(null);
+  const [favs, setFavs] = useState<Set<string>>(new Set());
+  const [needLogin, setNeedLogin] = useState(false);
 
   useEffect(() => startTracking(), []);
 
@@ -80,6 +90,28 @@ export default function VocabChunks() {
     listChunks().then(setRows).catch(() => setFailed(true));
   }, []);
   useEffect(() => { load(); }, [load]);
+
+  /* 列表到位后再查收藏状态:未登录读到空集,那是预期不是异常 */
+  useEffect(() => {
+    if (!rows?.length) return;
+    let alive = true;
+    listFavorites(rows.map(r => r.chunk))
+      .then(s => { if (alive) setFavs(s); })
+      .catch(() => { /* 查不到收藏不影响浏览 */ });
+    return () => { alive = false; };
+  }, [rows]);
+
+  const onFav = async (c: Chunk) => {
+    const was = favs.has(c.chunk);
+    /* 乐观更新:收藏是高频轻动作,等一个往返再变色会显得迟钝。失败再回滚。 */
+    setFavs(p => { const n = new Set(p); if (was) n.delete(c.chunk); else n.add(c.chunk); return n; });
+    try {
+      await toggleFavorite("chunk", c.chunk, c.translation_zh, c.id, was);
+    } catch (e) {
+      setFavs(p => { const n = new Set(p); if (was) n.add(c.chunk); else n.delete(c.chunk); return n; });
+      if ((e as Error).message === "NOT_SIGNED_IN") setNeedLogin(true);
+    }
+  };
 
   const idioms = useMemo(() => (rows ?? []).filter(r => r.type === "idiom"), [rows]);
   const chunks = useMemo(() => (rows ?? []).filter(r => r.type !== "idiom"), [rows]);
@@ -146,7 +178,7 @@ export default function VocabChunks() {
 
                 {tab === "idiom" ? (
                   <div className="space-y-2.5">
-                    {idioms.map(c => <Row key={c.id} c={c} color={color} />)}
+                    {idioms.map(c => <Row key={c.id} c={c} color={color} faved={favs.has(c.chunk)} onFav={onFav} />)}
                   </div>
                 ) : (
                   /* 词块按 type 分四组;每组标题带一句话说明它是什么 */
@@ -160,7 +192,7 @@ export default function VocabChunks() {
                         </h2>
                         <p className="mb-2 text-[12px] text-slate-400">{g.hint}</p>
                         <div className="space-y-2.5">
-                          {items.map(c => <Row key={c.id} c={c} color={color} />)}
+                          {items.map(c => <Row key={c.id} c={c} color={color} faved={favs.has(c.chunk)} onFav={onFav} />)}
                         </div>
                       </div>
                     );
@@ -169,6 +201,11 @@ export default function VocabChunks() {
               </>
             )}
           </>
+        )}
+        {needLogin && (
+          <p className="mt-3 text-center text-[12px] text-slate-400">
+            收藏需要先登录。<a href="/auth" className="underline">去登录</a>
+          </p>
         )}
       </div>
     </div>

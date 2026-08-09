@@ -18,7 +18,7 @@
  * ── 页面三层,对应用户的动线 ──
  *   ⓪ 场景串记横幅(独立学习方式,不属于任何词库)→ 分隔线
  *   ① 我的状态:当前词库卡 → 学习进度(四条横条)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:单词学习 / 快筛 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析  ← 选今天怎么学
+ *   ② 学习方式:单词学习 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析  ← 选今天怎么学
  *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
  *   ⚠️ 场景串记的位置改过两次:最初在页面**最底部**(层级太低),
  *      后来并进学习方式组(会让人以为它在学当前词库),
@@ -37,7 +37,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
-  Blocks, Filter, Headphones, Layers, Link2, Lock, MessageSquareQuote, Shuffle,
+  Blocks, Headphones, Layers, Link2, Lock, MessageSquareQuote, Shuffle,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -566,13 +566,9 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
           /* 四模式入口在词库页;没选中库时不给链接(点进去是 /vocab/undefined) */
           to={bankCode ? `/vocab/${bankCode}` : undefined}
         />
-        {/* 快筛紧跟词卡练习:新用户的正确动线是"先摸清自己会哪些,再决定从哪学起"。
-            ⚠️ 文案不写"词汇量测试" —— 它测的是托福词表内部的掌握情况,不是绝对词汇量,
-               名字含糊会让用户拿这个数去对标四六级(那个算不出来,见 screening.ts)。 */}
-        <ModeCard
-          icon={<Filter className="h-[18px] w-[18px]" />}
-          name="快筛" desc="测测你已经会哪些" color={color} to="/vocab/screening"
-        />
+        {/* ⚰️「快筛」整条线已撤(Aaron 2026-08-09):页面、路由、screening.ts
+            与测试全部删除。vocab_pre_known 表**保留不删**(将来若重启这条线还能用),
+            但前端不再引用它。别再加回这一行。 */}
         {/* ⚰️「场景串记」已从本组提出,改成页面**最顶部**的独立横幅
             (Aaron 2026-08-09)。理由:它是独立的学习方式,不从属于托福词汇;
             但也不是词库,不能进下拉(下拉里全是"一批词",它没有掌握度概念)。
@@ -590,10 +586,12 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
         {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
             PR #321/#323 关闭不合并)。别再加回来。
             ⚠️ 与**小学**板块的自然拼读(/primary 下的 PrimaryHubPhonics)无关,那个继续在。 */}
-        {/* ⚰️「词汇量测试」占位卡已删(Aaron 2026-08-09):
-            与上面的「快筛」两张都叫"测词汇量",必然混淆;而它的前置
-            (导入通用词频表 + 中考/高考/四级/六级词表)是内容工程、短期不做。
-            挂一张遥遥无期的占位不如不挂,真做出来时再加回来。 */}
+        {/* ⚰️「词汇量测试」占位卡已删、「快筛」整条线也已撤(Aaron 2026-08-09)。
+            两者都是"测你会多少词",先后都被判定为现在不做:
+            · 词汇量测试的前置是内容工程(导入通用词频表 + 中考/高考/四级/六级词表);
+            · 快筛做出来了,但随后整条线撤掉,页面/路由/screening.ts/测试全部删除。
+            `vocab_pre_known` 表**保留不删**(将来若重启这条线还能用),前端不再引用。
+            别再往这一组里加"测词汇量"类的入口,除非那两件事有了结论。 */}
       </div>
     </>
   );

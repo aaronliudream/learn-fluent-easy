@@ -206,3 +206,72 @@ export async function buildConfusionQuiz(count = 10): Promise<ConfusionQuestion[
   }
   return out;
 }
+
+/* ── ☆ 收藏 ────────────────────────────────────────────────────
+ *
+ * 写 user_vocab_wordbook,与场景串记同一张表、同一套口径。
+ * source_kind:词块/习语 = 'chunk',中文表达的说法 = 'expression'。
+ * ⚠️ 这两个值是 2026-08-09 由 SQLAA/wordbook_source_kind_extend.sql 扩进 CHECK 的
+ *    (跑之前只有 word/scene_node…),Aaron 已跑并回报约束现含六值。
+ *    在那之前**故意没上收藏按钮** —— 会 400 的按钮比没有按钮更糟。
+ * ⚠️ 唯一约束是 (user_id, text_en),所以同一句话在不同来源收藏是同一条;
+ *    取消收藏按 text_en 删,不用带 source_ref。
+ * ⚠️ 一律 upsert 不用裸 insert:同一个说法可能已从别处收藏过,
+ *    裸 insert 会撞唯一约束,用户看到的是"收藏失败"。
+ */
+
+export type FavKind = "chunk" | "expression";
+
+/** 这批文本里哪些已收藏(返回 text_en 集合)。未登录 → 空集,这是预期不是异常。 */
+export async function listFavorites(texts: string[]): Promise<Set<string>> {
+  const out = new Set<string>();
+  if (!texts.length) return out;
+  const { data: auth } = await supabase.auth.getUser();
+  const uid = auth?.user?.id;
+  if (!uid) return out;
+  for (let i = 0; i < texts.length; i += 200) {
+    const { data, error } = await db
+      .from("user_vocab_wordbook").select("text_en")
+      .eq("user_id", uid).in("text_en", texts.slice(i, i + 200));
+    if (error) throw error;
+    for (const r of (data || []) as { text_en: string }[]) out.add(r.text_en);
+  }
+  return out;
+}
+
+/**
+ * 收藏 / 取消收藏。返回操作后的状态(true = 已收藏)。
+ * 未登录抛 NOT_SIGNED_IN,由调用方提示登录 —— 静默失败会让用户以为收藏成功了。
+ */
+export async function toggleFavorite(
+  kind: FavKind,
+  textEn: string,
+  textZh: string | null,
+  sourceRef: string,
+  currentlyFavorited: boolean,
+): Promise<boolean> {
+  const { data: auth } = await supabase.auth.getUser();
+  const uid = auth?.user?.id;
+  if (!uid) throw new Error("NOT_SIGNED_IN");
+
+  if (currentlyFavorited) {
+    const { error } = await db
+      .from("user_vocab_wordbook").delete().eq("user_id", uid).eq("text_en", textEn);
+    if (error) throw error;
+    return false;
+  }
+  const { error } = await db
+    .from("user_vocab_wordbook")
+    .upsert({
+      user_id: uid,
+      /* word_id 为 null:词块和中文表达**不是** vocab_words 里的词,
+         硬塞一个 word_id 会让单词本以为它是个词条。 */
+      word_id: null,
+      text_en: textEn,
+      text_zh: textZh,
+      source_kind: kind,
+      source_ref: sourceRef,
+    }, { onConflict: "user_id,text_en" });
+  if (error) throw error;
+  return true;
+}

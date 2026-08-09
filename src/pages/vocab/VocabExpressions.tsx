@@ -6,10 +6,16 @@
  * 只给一个"标准答案"就把它降级成了普通词表。
  *
  * ⚠️ 按 category 分两组:daily(日常口语)/ proverb(汉语谚语)。
- * ⚠️ ☆ 收藏暂未接,理由同词块页(见 SQLAA/wordbook_source_kind_extend.sql)。
+ * ⚠️ ☆ 收藏落在**每个说法**上(不是每个中文条目):用户想收的是
+ *    "这句英文",不是"这个中文意图"。source_kind='expression'。
+ *
+ * ⚠️ 记档(三份评审的共识,本轮不改):强行给每个中文配 casual/neutral/formal
+ *    三档,导致部分 formal 是"同一句换大词"而非"另一种场合的说法"。
+ *    将来做第二批中文表达时,改为「一个中文意图 → 若干真实说法 +
+ *    语用标签(everyday/casual/business/written)」,不强行三档。
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChevronDown, Volume2 } from "lucide-react";
+import { ChevronDown, Star, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF, readSelectedBank } from "@/lib/vocab/theme";
@@ -17,7 +23,7 @@ import { playUrl } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
 import {
-  listExpressions, EXPR_GROUPS, REGISTER_LABEL,
+  listExpressions, listFavorites, toggleFavorite, EXPR_GROUPS, REGISTER_LABEL,
   type CnExpression, type Register,
 } from "@/lib/vocab/dormant";
 
@@ -34,7 +40,9 @@ const REG_STYLE: Record<Register, string> = {
   formal: "bg-sky-50 text-sky-700",
 };
 
-function Card({ e, color }: { e: CnExpression; color: string }) {
+function Card({ e, color, favs, onFav }: {
+  e: CnExpression; color: string; favs: Set<string>; onFav: (text: string, zh: string | null, ref: string) => void;
+}) {
   const [open, setOpen] = useState(false);
   return (
     <div className="rounded-2xl border border-black/[0.06] bg-white">
@@ -64,6 +72,11 @@ function Card({ e, color }: { e: CnExpression; color: string }) {
                     <button type="button" onClick={() => playUrl(r.audio_url, `r:${r.id}`)} aria-label="朗读"
                       className="text-slate-400"><Volume2 className="h-4 w-4" /></button>
                   )}
+                  <button type="button" onClick={() => onFav(r.rendition, e.cn_phrase, r.id)}
+                    aria-label={favs.has(r.rendition) ? "取消收藏" : "收藏"} className="ml-auto shrink-0">
+                    <Star className={cn("h-4 w-4", favs.has(r.rendition) ? "fill-current" : "")}
+                      style={{ color: favs.has(r.rendition) ? color : "#CBD5E1" }} />
+                  </button>
                 </div>
                 {r.scene_hint && <p className="mt-1 text-[12px] leading-relaxed text-slate-500">{r.scene_hint}</p>}
                 {r.example_en && (
@@ -92,6 +105,8 @@ export default function VocabExpressions() {
   const [rows, setRows] = useState<CnExpression[] | null>(null);
   const [failed, setFailed] = useState(false);
   const [quiz, setQuiz] = useState<QuizItem[] | null>(null);
+  const [favs, setFavs] = useState<Set<string>>(new Set());
+  const [needLogin, setNeedLogin] = useState(false);
 
   useEffect(() => startTracking(), []);
   const load = useCallback(() => {
@@ -101,6 +116,28 @@ export default function VocabExpressions() {
   useEffect(() => { load(); }, [load]);
 
   const all = rows ?? [];
+
+  /* 列表到位后查收藏状态。未登录读到空集,那是预期不是异常。 */
+  useEffect(() => {
+    if (!rows?.length) return;
+    let alive = true;
+    listFavorites(rows.flatMap(e => e.renditions.map(r => r.rendition)))
+      .then(s => { if (alive) setFavs(s); })
+      .catch(() => { /* 查不到收藏不影响浏览 */ });
+    return () => { alive = false; };
+  }, [rows]);
+
+  const onFav = async (text: string, zh: string | null, ref: string) => {
+    const was = favs.has(text);
+    /* 乐观更新:收藏是高频轻动作,等往返再变色显得迟钝。失败回滚。 */
+    setFavs(p => { const n = new Set(p); if (was) n.delete(text); else n.add(text); return n; });
+    try {
+      await toggleFavorite("expression", text, zh, ref, was);
+    } catch (err) {
+      setFavs(p => { const n = new Set(p); if (was) n.add(text); else n.delete(text); return n; });
+      if ((err as Error).message === "NOT_SIGNED_IN") setNeedLogin(true);
+    }
+  };
 
   /**
    * 出题:给中文 + **指定语域**,四选一。
@@ -160,11 +197,16 @@ export default function VocabExpressions() {
                         {g.label} <span className="text-[12px] font-normal text-slate-400">{items.length}</span>
                       </h2>
                       <div className="space-y-2">
-                        {items.map(e => <Card key={e.id} e={e} color={color} />)}
+                        {items.map(e => <Card key={e.id} e={e} color={color} favs={favs} onFav={onFav} />)}
                       </div>
                     </div>
                   );
                 })}
+                {needLogin && (
+                  <p className="mt-3 text-center text-[12px] text-slate-400">
+                    收藏需要先登录。<a href="/auth" className="underline">去登录</a>
+                  </p>
+                )}
               </>
             )}
           </>

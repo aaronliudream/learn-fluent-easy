@@ -118,7 +118,6 @@ const VocabSpell = lazy(() => import("./pages/vocab/VocabSpell.tsx"));
 const VocabMistakes = lazy(() => import("./pages/vocab/VocabMistakes.tsx"));
 const VocabEarTraining = lazy(() => import("./pages/vocab/VocabEarTraining.tsx"));
 const VocabDictation = lazy(() => import("./pages/vocab/VocabDictation.tsx"));
-const VocabScreening = lazy(() => import("./pages/vocab/VocabScreening.tsx"));
 const VocabChunks = lazy(() => import("./pages/vocab/VocabChunks.tsx"));
 const VocabExpressions = lazy(() => import("./pages/vocab/VocabExpressions.tsx"));
 const VocabConfusion = lazy(() => import("./pages/vocab/VocabConfusion.tsx"));
@@ -507,9 +506,6 @@ const App = () => (
           <Route path="/vocab/listen" element={<ChineseOnlyRoute><VocabEarTraining /></ChineseOnlyRoute>} />
           {/* 默写纸:纯前端 + window.print(),来源靠 query 参数 */}
           <Route path="/vocab/dictation" element={<ChineseOnlyRoute><VocabDictation /></ChineseOnlyRoute>} />
-          {/* 托福词表快筛。静态段,不会被 /vocab/:bankCode 抢走(react-router 按具体度排)。
-              ⚠️ 它测的是"托福 4470 词里你认识哪些",不是绝对词汇量 —— 见 screening.ts 文件头。 */}
-          <Route path="/vocab/screening" element={<ChineseOnlyRoute><VocabScreening /></ChineseOnlyRoute>} />
           {/* PR-8c 沉睡数据三页。全是静态段,不会被 /vocab/:bankCode 抢走。 */}
           <Route path="/vocab/chunks" element={<ChineseOnlyRoute><VocabChunks /></ChineseOnlyRoute>} />
           <Route path="/vocab/expressions" element={<ChineseOnlyRoute><VocabExpressions /></ChineseOnlyRoute>} />

@@ -2,8 +2,9 @@
  * 词汇中心(/vocab)· 纯展示,零写入。
  *
  * 版式照 docs/vocab-bank/VOCAB_DESIGN_SPEC.md,一句话审美目标是**克制**:
- * 唯一渐变位属于主 CTA —— 本页没有主 CTA,所以本页一处渐变都没有;
+ * 唯一渐变位属于主 CTA —— 本页的主 CTA 是「今日学习」主卡,所以**全页只有它一处渐变**;
  * 其余全是白卡 + 细边 + 大留白。
+ * ⚠️ 别的地方想上渐变 = 先把主卡的渐变撤掉。同屏两处渐变,主次就没了。
  *
  * ── 统计分两层,两层的分母世界不一样,混了用户就看不懂 ──
  *   ① **当前词库**(随顶部下拉切换):进度 N/总数、圆环、错题本、今日复习。
@@ -14,23 +15,34 @@
  *   ⚠️ 去重是 user_vocab_mastery 的表结构自带的((user_id, word_id) 唯一),
  *      同一个词同时属于托福和四级只算一次;各库进度那层才 join vocab_word_banks。
  *
- * ── 页面三层,对应用户的动线 ──
+ * ── 页面顺序(2026-08-09 IA 重排后定版)────────────────────────
  *   ⓪ 场景串记横幅(独立学习方式,不属于任何词库)→ 分隔线
- *   ① 我的状态:当前词库卡 → 学习进度(四条横条)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:单词学习 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析  ← 选今天怎么学
- *   ③ 周报横幅 → 我的数据四宫格 + 打卡月历(**未登录整块不渲染**)  ← 看我攒了多少
- *   ⚠️ 场景串记的位置改过两次:最初在页面**最底部**(层级太低),
- *      后来并进学习方式组(会让人以为它在学当前词库),
- *      2026-08-09 定版为**最顶部独立横幅 + 分隔线**。别再挪。
+ *   ① 当前词库卡                                    ← 今天学哪个库
+ *   ② **今日学习主卡 —— 全页唯一主 CTA**             ← 今天点这里
+ *   ③ 其他训练:单词学习 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析
+ *   ④ 学习进度四条横条 + 词汇成长图
+ *   ⑤ 错题本 + 今日复习
+ *   ⑥ 周报横幅 → 我的数据四宫格 + 打卡月历(**未登录整块不渲染**)
+ *
+ *   ⚠️ **重排的核心是 ②③ 提到 ④ 之前**(Aaron 2026-08-09,三份独立评审共识):
+ *      上一版把学习进度/成长图/我的数据全堆在首屏,数据图表吃掉 60%+ 的纵向空间。
+ *      但**数据是学完之后看的反馈,不是进门时的触发动作** —— 新用户 3 秒内
+ *      不知道该点哪里。现在数据类模块(④⑤⑥)全部下沉到主 CTA 之后。
+ *      别再把任何图表/进度条往主 CTA 之前挪。
+ *   ⚠️ 场景串记的位置改过三次,2026-08-09 定版在最顶部,别再挪
+ *      (理由见 SceneBanner 组件注释)。
  *   ⚠️ 未上线的方式照样列出来、灰显不可点 —— 让用户看见这个板块在长。
  *
- * ── 首屏(iPhone SE 375×667)──
- *   第一层要在不滚动时看完。实测底边(375×667):词库卡 205 / 学习进度卡 458 /
- *   两张小卡 550(空态)。空态提示框本身占 86px,登录且有学习记录时它不渲染 → 收到 464。
- *   ⚠️ 即真实用户装得下,**全新/未登录用户的两张小卡会被推到折线下一点**。
- *   ⚠️ 词库卡是这一页的第一个决策点,分量是**故意**给足的;要再压首屏只能从别处找,
- *      别把它压回一颗小胶囊。
+ * ── 首屏(iPhone SE 375×667,BottomTabBar 吃掉底部 64px → 可视 603)──
+ *   判据:**词库卡 + 今日学习主卡(含动作按钮)必须完整可见**,登录/未登录都要成立。
+ *   实测见 PR 描述;要再加东西进主 CTA 之前,先把这两块的底边重新量一次。
+ *
+ * ── 空态 ≠ 失败态 ──────────────────────────────────────────────
  * ⚠️ 未登录/无数据必须正常渲染 0 态(RLS 让未登录读掌握度得到空数组,那是预期行为)。
+ * ⚠️ 但**加载失败不许伪装成 0 态**:错题本躺了几个月就是因为 400 被 catch 吞掉、
+ *    渲染成"空",和真的没错题一模一样。所以本页每一层的数据都是
+ *    `null = 这一层没取到` 而不是 `0`,渲染时分三支:骨架 / 失败 / 真值。
+ *    catch 一律走 `logFail`(见 lib/vocab/report.ts),不许空 catch。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -58,6 +70,7 @@ import {
 import { getStats, type UserStats } from "@/lib/vocab/stats";
 import { buildTodayPlan, type TodayPlan } from "@/lib/vocab/todayPlan";
 import { readStatsCache, writeStatsCache } from "@/lib/vocab/statsCache";
+import { fallback, logFail } from "@/lib/vocab/report";
 
 /** 默认词库 —— 托福是首发库。找不到就退到第一个可用库(见 pickInitialBank)。 */
 const DEFAULT_BANK = "toefl";
@@ -81,8 +94,16 @@ export default function VocabCenter() {
    *    「登录后查看你的学习数据」,然后闪成真数据。假状态比转圈更糟。 */
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
 
-  /** 当前词库那一层。null = 还没就绪 → 骨架屏,**绝不渲染 0**。 */
-  const [bankStats, setBankStats] = useState<{ progress: BankProgress; due: number; mistakes: number } | null>(null);
+  /**
+   * 当前词库那一层。
+   *
+   * ⚠️ **外层 null = 还没就绪(骨架);字段 null = 那一项取失败(失败态)**。
+   *    三件事各自成败,不能一个挂了就把另外两个也抹成 0 ——
+   *    更不能把失败渲染成 0(那正是"坏长得像空")。
+   */
+  const [bankStats, setBankStats] = useState<
+    { progress: BankProgress | null; due: number | null; mistakes: number | null } | null
+  >(null);
   /** 全局累计那一层(与词库无关,只加载一次)。 */
   const [totals, setTotals] = useState<{ learned: number; mastered: number } | null>(null);
   const [uStats, setUStats] = useState<UserStats | null>(null);
@@ -103,11 +124,16 @@ export default function VocabCenter() {
         setSelected(pickInitialBank(list));
 
         /* 全局累计只有登录才有意义;未登录直接给 0 是**正确值**不是占位 */
-        const t = uid ? await getGlobalTotals().catch(() => ({ learned: 0, mastered: 0 })) : { learned: 0, mastered: 0 };
+        const t = uid
+          ? await getGlobalTotals().catch(fallback("VocabCenter/getGlobalTotals", { learned: 0, mastered: 0 }))
+          : { learned: 0, mastered: 0 };
         if (!alive) return;
         setTotals(t);
-        getStats().then(v => { if (alive) setUStats(v); }).catch(() => { /* 激励数据缺失不该拦住中心页 */ });
-      } catch {
+        getStats()
+          .then(v => { if (alive) setUStats(v); })
+          .catch(fallback("VocabCenter/getStats", null));   // 激励数据缺失不该拦住中心页
+      } catch (e) {
+        logFail("VocabCenter/listBanks", e);
         if (alive) setFailed(true);
       }
     })();
@@ -130,19 +156,34 @@ export default function VocabCenter() {
     (async () => {
       try {
         const uid = await currentUserId();
-        const [progress, due, mistakes] = await Promise.all([
-          getBankProgressFast(selected.id, selected.total_words, uid)
-            .catch(() => ({ mastered: 0, learning: 0, untouched: 0, total: 0 } as BankProgress)),
-          uid ? dueCountForBank(selected.id).catch(() => 0) : Promise.resolve(0),
-          uid ? mistakeCountForBank(selected.id).catch(() => 0) : Promise.resolve(0),
+        /* ⚠️ allSettled 而不是 all + 逐个 catch 兜底值:
+         *    兜底成 0 的话"查询挂了"和"真的是 0"在 UI 上就再也分不开了。
+         *    这里保留每一项的成败,由渲染层分别画失败态。 */
+        const [pr, dr, mr] = await Promise.allSettled([
+          getBankProgressFast(selected.id, selected.total_words, uid),
+          uid ? dueCountForBank(selected.id) : Promise.resolve(0),
+          uid ? mistakeCountForBank(selected.id) : Promise.resolve(0),
         ]);
+        if (pr.status === "rejected") logFail("VocabCenter/getBankProgressFast", pr.reason);
+        if (dr.status === "rejected") logFail("VocabCenter/dueCountForBank", dr.reason);
+        if (mr.status === "rejected") logFail("VocabCenter/mistakeCountForBank", mr.reason);
         if (!alive) return;
+
+        const progress = pr.status === "fulfilled" ? pr.value : null;
+        const due = dr.status === "fulfilled" ? dr.value : null;
+        const mistakes = mr.status === "fulfilled" ? mr.value : null;
         setBankStats({ progress, due, mistakes });
-        writeStatsCache(selected.code, {
-          due, mistakes, mastered: progress.mastered, learning: progress.learning, total: progress.total,
-        });
-      } catch {
-        if (alive) setBankStats({ progress: { mastered: 0, learning: 0, untouched: 0, total: 0 }, due: 0, mistakes: 0 });
+
+        /* 缓存只写**全都成功**的那次 —— 把一次半残的结果写进缓存,
+           下次进来会拿它当"上次的数字"秒显,等于把一次抖动变成长期错值。 */
+        if (progress && due !== null && mistakes !== null) {
+          writeStatsCache(selected.code, {
+            due, mistakes, mastered: progress.mastered, learning: progress.learning, total: progress.total,
+          });
+        }
+      } catch (e) {
+        logFail("VocabCenter/bankStats", e);
+        if (alive) setBankStats({ progress: null, due: null, mistakes: null });
       }
     })();
     return () => { alive = false; };
@@ -154,9 +195,10 @@ export default function VocabCenter() {
   }, []);
 
   const color = bankColor(selected?.code ?? DEFAULT_BANK);
-  const p = bankStats?.progress;
+  const p = bankStats?.progress ?? null;
+  /** 进度这一项**取失败**(不是还没到、也不是真的 0)→ 渲染失败态而不是四条 0 值横条。 */
+  const progressFailed = !!bankStats && p === null;
   const bankMastered = p?.mastered ?? 0;
-  const bankTotal = p?.total ?? 0;
 
   /* 全局累计掌握数 —— 分享卡上的「我的词汇量 N」用它。
      ⚠️ 里程碑已删,这个数不再驱动任何徽章/彩带。 */
@@ -178,37 +220,44 @@ export default function VocabCenter() {
                理由见 SceneBanner 组件注释。 */}
         <SceneBanner />
 
-        {/* ═══ 第一层「我的状态」:我在哪 ═══ */}
-        {/* 当前词库卡 —— 进入这一页的第一个决策点,视觉分量必须压得住。
+        {/* ① 当前词库卡 —— 进入这一页的第一个决策点,视觉分量必须压得住。
             该库进度(N/总数 + 细条)长在卡里,不再单列一行。 */}
         <BankCard banks={banks} selected={selected} onPick={onPick}
-          color={color} progress={p ?? null} />
+          color={color} progress={p} progressFailed={progressFailed} />
 
-        {/* 今日学习 —— 词库卡正下方最显眼位置。
-            ⚠️ 这是给"不想想、直接学"的用户的主路径;学习方式组那五项**全部保留**,
+        {/* ② 今日学习主卡 —— **全页唯一主 CTA**,首屏必须完整可见(含底部动作按钮)。
+            ⚠️ 这是给"不想想、直接学"的用户的主路径;下面「其他训练」那五项**全部保留**,
                给想自己挑的用户。两条路并存,别为了突出这个去砍那五项。 */}
-        <TodayButton bankId={selected?.id ?? null} color={color} signedIn={signedIn} />
+        <FirstVisitTip />
+        <TodayCard bankId={selected?.id ?? null} signedIn={signedIn} />
 
-        {/* ⚠️ 骨架屏交给 StatsPanel 自己(loading 属性)—— 之前这里手写了一份
+        {/* ③ 其他训练 —— 提到数据模块之前(IA 重排的另一半)。 */}
+        <StudyModes bankCode={selected?.code ?? null} color={color} />
+
+        {/* ↓↓↓ 以下全是**数据回顾**,一律不要求首屏可见,也别再往上挪 ↓↓↓ */}
+
+        {/* ④ 学习进度 + 词汇成长图。
+            ⚠️ 骨架屏交给 StatsPanel 自己(loading 属性)—— 之前这里手写了一份
             "环 + 大字"形状的骨架,而卡片改成四条横条后那个形状对不上了,
             会先闪一个圆环再变成四条。骨架必须和真身同形,否则它只是另一种跳动。 */}
         <StatsPanel
           compact
           loading={!bankStats}
+          failed={progressFailed}
           mastered={bankMastered}
           learning={p?.learning ?? 0}
           untouched={p?.untouched ?? 0}
           color={color}
           growthWordIds={undefined}
-          /* ⚠️ 这里**故意不传 emptyHint** —— 那个提示框在 SE 上占 86px,
-             把首屏的两张小卡挤到折线下。信息没丢,挪到卡外一行 12px 灰字
-             (见下方 EmptyHintLine),体积小 80%。
+          /* ⚠️ 这里**故意不传 emptyHint** —— 那个提示框在 SE 上占 86px。
+             信息没丢,挪到卡外一行 12px 灰字(见下方),体积小 80%。
              StatsPanel 的 emptyHint 参数保留原样,词库页还在用。 */
         />
 
         {/* 空态引导:一行 12px 灰字,不是一个框(见上方 StatsPanel 处的注释)。
-            只在真的还没有任何学习记录时出 —— 有数据的人不需要被教怎么开始。 */}
-        {bankStats && bankMastered === 0 && (p?.learning ?? 0) === 0 && signedIn !== null && (
+            只在真的还没有任何学习记录时出 —— 有数据的人不需要被教怎么开始。
+            ⚠️ 取失败时**不出这句** —— 那会把"没取到"讲成"你还没学过"。 */}
+        {bankStats && !progressFailed && bankMastered === 0 && (p?.learning ?? 0) === 0 && signedIn !== null && (
           <p className="mt-1.5 text-[12px] leading-snug text-slate-400">
             {signedIn
               ? "还没有学习记录,点上面的词库开始,答对的词会自动记进掌握度"
@@ -216,22 +265,21 @@ export default function VocabCenter() {
           </p>
         )}
 
+        {/* ⑤ 错题本 + 今日复习 */}
         <div className="mt-2.5 grid grid-cols-2 gap-3">
           {/* ⚠️ 原来错题本卡里还挂着 <HardestWords>(「和 environment 大战了 4 回合」)当第二行,
               单行化之后没位置了,已摘掉。组件本身还在 Incentive.tsx,
               要保留这条激励文案建议挪到 /vocab/mistakes 页顶 —— 那里才是它的主场。 */}
           <EntryCard icon={<AlertCircle className="h-[17px] w-[17px]" />} label="错题本"
-            count={bankStats?.mistakes ?? null} hint="待清" to="/vocab/mistakes" />
+            count={bankStats?.mistakes ?? null} failed={!!bankStats && bankStats.mistakes === null}
+            hint="待清" to="/vocab/mistakes" />
           <EntryCard icon={<CalendarClock className="h-[17px] w-[17px]" />} label="今日复习"
-            count={bankStats?.due ?? null} hint="到期" to="/vocab/review" />
+            count={bankStats?.due ?? null} failed={!!bankStats && bankStats.due === null}
+            hint="到期" to="/vocab/review" />
         </div>
 
-        {/* ↓↓↓ 以下不要求首屏可见 ↓↓↓ */}
-
-        {/* ═══ 第二层「学习方式」:今天怎么学 ═══ */}
-        <StudyModes bankCode={selected?.code ?? null} color={color} />
-
-        {/* ⚰️「成就」整层已删(Aaron 2026-08-09):标题、里程碑卡(六个档位 +
+        {/* ⑥ 我的数据。
+            ⚰️「成就」整层已删(Aaron 2026-08-09):标题、里程碑卡(六个档位 +
             「距下一档还差 N 词」)、彩带触发、分享卡里的里程碑字段,凡只服务这块的一并删除。
             **打卡月历和我的数据四宫格保留** —— 那是数据不是成就。
             周报横幅也保留:它讲的是"上周学了多少",是数据回顾,不是徽章。 */}
@@ -290,12 +338,14 @@ export default function VocabCenter() {
  * ⚠️ 文案里的 N 一律来自 banks 实际条数,不写死 —— 写死的数字迟早和库对不上。
  */
 const SWITCH_HINT_KEY = "vocab_bank_switch_hinted";
-function BankCard({ banks, selected, onPick, color, progress }: {
+function BankCard({ banks, selected, onPick, color, progress, progressFailed }: {
   banks: VocabBank[];
   selected: VocabBank | null;
   onPick: (b: VocabBank) => void;
   color: string;
   progress: BankProgress | null;
+  /** true = 进度查询失败(不是还没到)。骨架屏会一直闪,必须换成一句人话。 */
+  progressFailed?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const [counts, setCounts] = useState<Record<string, number>>({});
@@ -331,7 +381,9 @@ function BankCard({ banks, selected, onPick, color, progress }: {
     if (!missing.length) return;
     bankWordCounts(missing)
       .then(m => { if (alive) setCounts(prev => ({ ...prev, ...m })); })
-      .catch(() => { /* 数不出来就不显示那个数,面板照常能选 */ });
+      /* 数不出来就不显示那个数,面板照常能选 —— 这是**正确降级**(少一个辅助数字,
+         不会让人把"坏"读成"空"),所以走 fallback 记一行就够,不另做失败态。 */
+      .catch(fallback("VocabCenter/bankWordCounts", undefined));
     return () => { alive = false; };
   }, [open, active, counts]);
 
@@ -355,7 +407,10 @@ function BankCard({ banks, selected, onPick, color, progress }: {
   const pctReached = total > 0 ? ((mastered + learning) / total) * 100 : 0;
 
   return (
-    <div ref={boxRef} className="relative">
+    /* data-probe 是给 scripts/vocab/audit/measure-fold.mjs 量首屏用的锚点。
+       ⚠️ 别改成靠文案选中 —— 文案一改探针就静默失效,而"没找到"和"在折线内"
+          在报告里长得太像(Playwright 假阴性已踩过四次)。 */
+    <div ref={boxRef} data-probe="bank-card" className="relative">
       <div className="mb-1 text-[12px] text-slate-400">当前词库</div>
 
       {/* 呼吸动效的 keyframes 就地注入(与 Incentive 的彩带同一套做法,不进全局 css) */}
@@ -392,11 +447,16 @@ function BankCard({ banks, selected, onPick, color, progress }: {
 
         {/* 进度靠右下 —— 数字先于条,条只是数字的可视化 */}
         <div className="mt-2">
+          {/* 三支:真值 / 失败 / 还没到。
+              ⚠️ 失败**不许继续闪骨架** —— 一块永远在闪的灰块看起来像坏了,
+                 而用户读不出"坏在哪";一句「进度没能加载」至少是可诉说的。 */}
           <div className="mb-1 flex justify-end">
             {progress ? (
               <span className="text-[12px] text-slate-500" style={{ fontVariantNumeric: "tabular-nums" }}>
                 <b className="font-semibold text-slate-700">{mastered}</b> / {total}
               </span>
+            ) : progressFailed ? (
+              <span className="text-[12px] text-slate-400">进度没能加载</span>
             ) : (
               <span className="block h-[14px] w-16 animate-pulse rounded bg-black/[0.06]" />
             )}
@@ -514,41 +574,50 @@ function BankCard({ banks, selected, onPick, color, progress }: {
  * ⚠️ 「即将开放」那条灰标和不可点分支已删 —— 错题本(PR-4)和今日复习都已上线,
  *    两个调用点都带 `to`,那条分支是死代码。真有新的未上线入口再按需加回。
  * ⚠️ count = null 表示还没就绪,显示灰块而不是 0(同"绝不渲染 0"那条)。
+ * ⚠️ `failed` 与 count=null 是**两回事**:没就绪继续闪骨架,取失败要换成
+ *    「—」+「没能加载」。错题本躺了几个月正是因为这两态长得一样 ——
+ *    查询 400 → 渲染 0 → 和"没有错题"完全无法区分。卡片本身照常可点进去。
  */
-function EntryCard({ icon, label, count, hint, to }: {
+function EntryCard({ icon, label, count, hint, to, failed = false }: {
   icon: React.ReactNode; label: string; count: number | null; hint: string; to: string;
+  failed?: boolean;
 }) {
   return (
     <Link to={to}
       className="flex items-center gap-1.5 rounded-2xl border border-black/[0.06] bg-white px-3.5 py-2.5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] active:bg-slate-50">
       <span className="shrink-0 text-slate-400">{icon}</span>
       <span className="shrink-0 text-[14px] font-medium text-slate-700">{label}</span>
-      {count === null
-        ? <span className="ml-auto h-[22px] w-8 animate-pulse rounded bg-slate-100" />
-        : <span className="ml-auto text-[22px] font-bold leading-none text-slate-900"
-            style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>}
-      <span className="shrink-0 text-[12px] text-slate-400">{hint}</span>
+      {failed
+        ? <span className="ml-auto text-[22px] font-bold leading-none text-slate-300"
+            style={{ fontFamily: FONT_STAT }}>—</span>
+        : count === null
+          ? <span className="ml-auto h-[22px] w-8 animate-pulse rounded bg-slate-100" />
+          : <span className="ml-auto text-[22px] font-bold leading-none text-slate-900"
+              style={{ fontFamily: FONT_STAT, fontVariantNumeric: "tabular-nums" }}>{count}</span>}
+      <span className="shrink-0 text-[12px] text-slate-400">{failed ? "没能加载" : hint}</span>
     </Link>
   );
 }
 
-/* ── 第二层:学习方式 ───────────────────────────────────────────── */
+/* ── ③ 其他训练 ─────────────────────────────────────────────────── */
 
 /**
- * 学习方式分组 —— 这一页最该突出的东西。
+ * 「其他训练」分组 —— 给想自己挑内容的用户。
  *
- * ⚠️ 由来:场景串记原来是**页面最底部一条横幅**,层级放错了 ——
- *    它是"背单词的一种方式",不是词汇中心之外的附加功能。
- *    现在把所有方式并排放在一起,用户的动线才顺:
- *    看我在哪(状态)→ 选今天怎么学(方式)→ 看我攒了多少(数据)。
+ * ⚠️ 标题从「学习方式」改成「**其他训练**」(Aaron 2026-08-09 IA 重排):
+ *    上面已经有了主 CTA,这一组的语义就变成了"主路径之外的选择"。
+ *    还叫"学习方式"会读成"这里才是选怎么学的地方",与主卡抢位。
+ *    小标题下那行灰字是这个从属关系的**唯一说明**,别删。
  * ⚠️ 未上线的方式**照样列出来、灰显不可点** —— 让用户看见这个板块在长。
  *    但必须点不动(disabled 的 div,不是长得像却没反应的卡)。
- * ⚠️ 场景串记的「已学 N/30」与 /vocab/scenes 顶部那行**同一个口径**(都数 done 键)。
  */
 function StudyModes({ bankCode, color }: { bankCode: string | null; color: string }) {
   return (
     <>
-      <h2 className="mb-2 mt-6 text-[13px] font-medium text-slate-400">学习方式</h2>
+      <h2 data-probe="study-modes" className="mb-1 mt-6 text-[13px] font-medium text-slate-400">其他训练</h2>
+      <p className="mb-2 text-[12px] leading-snug text-slate-400">
+        今日学习已按遗忘曲线为你排好;想自己挑内容就用下面这些
+      </p>
       {/* 单列纵向、每行约 56px。**不要改回 2 列方块卡** ——
           那版每张三行,六项吃掉近 500px,一屏放不下。 */}
       <div className="space-y-2">
@@ -596,64 +665,136 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
 }
 
 /**
- * 「今日学习」主按钮。
+ * 首次进入的一次性提示 —— 一行,不是教程。
  *
- * 三态(规格第五节):
- *   有任务 → 「今日学习 · N 词」+ 一行「复习 X · 新词 Y · 错题 Z」
- *   全做完 → 「今天已完成 · 再来 10 个新词」
- *   未登录 → 按钮仍在,点进去能试做(不写库)
+ * ⚠️ **不做多步引导、不做遮罩、不加帮助页**(Aaron 2026-08-09,三份评审一致):
+ *    说明文字用户不读,遮罩教程只会被无脑点掉,还挡住第一眼要看的东西。
+ *    所以只留一句话 + 一个「知道了」,点掉写 localStorage 永不再来。
+ * ⚠️ 它长在主卡**上方**,高度必须压住(一行 + 12px 上下内边距 ≈ 44px)——
+ *    首屏预算里已经算进去了,别让它变成两行。
+ * ⚠️ 隐私模式读不到 localStorage → **当作已看过**(不显示)。
+ *    反过来"存不了就每次都演"比不演烦人得多。
+ */
+const TODAY_TIP_KEY = "vocab_today_cta_hinted";
+function FirstVisitTip() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    try { setShow(localStorage.getItem(TODAY_TIP_KEY) !== "1"); } catch { setShow(false); }
+  }, []);
+
+  if (!show) return null;
+  return (
+    <div className="mt-3 flex items-center gap-2 rounded-xl border border-amber-200/70 bg-amber-50 px-3 py-2">
+      <p className="min-w-0 flex-1 text-[12px] leading-snug text-amber-900">
+        👋 第一次来?从「今日学习」开始,系统会带你完成今天的全部训练
+      </p>
+      <button type="button"
+        onClick={() => { setShow(false); try { localStorage.setItem(TODAY_TIP_KEY, "1"); } catch { /* 存不了也别再演,本次会话内已收起 */ } }}
+        className="shrink-0 rounded-full border border-amber-300 bg-white px-2.5 py-1 text-[12px] font-medium text-amber-800 active:scale-95">
+        知道了
+      </button>
+    </div>
+  );
+}
+
+/**
+ * 「今日学习」主卡 —— **这一页唯一的主 CTA**。
+ *
+ * ── 为什么是一张 150px 的卡而不是一个横条(Aaron 2026-08-09)──
+ *    上一版是 68px 的横条,和下面五张「其他训练」行卡视觉重量相当,
+ *    读者根本分不出主次。判据很硬:**首屏视觉重量必须明显压过页面上任何其他元素**。
+ *    所以:满宽 + 高饱和渐变 + 三行文案 + 一个白底实心动作按钮。
+ * ⚠️ 全页唯一渐变位就是这里(见 theme.ts 第一条约定)。别的地方要渐变 = 先删这里。
+ *
+ * 三态:
+ *   有任务 → 大字「今日学习 · N 词」+ 一行「复习 X · 新词 Y · 错题 Z」
+ *   全做完 → 大字「今天已完成」+ 按钮「再来 10 个新词 →」
+ *   未登录 → 卡仍在,点进去能试做(不写库)
  *
  * ⚠️ 数字**不许写死也不许估**:一律来自 `buildTodayPlan`,与点进去之后的序列
- *    是同一份计划、同一套排序。按钮说 35 词、进去发现 40 题,是这功能最致命的失信。
- * ⚠️ 算不出来时**不渲染按钮**,而不是渲染一个「今日学习 · 0 词」——
- *    后者会让人以为今天真没任务。
+ *    是同一份计划、同一套排序。卡上说 35 词、进去发现 40 题,是这功能最致命的失信。
+ * ⚠️ 排不出来时给**失败态**,不是继续闪骨架、也不是「今日学习 · 0 词」:
+ *    前者永远在闪(看起来像坏了但说不出坏在哪),后者会让人以为今天真没任务。
+ *    这两条都是"坏长得像空"的老毛病,本页统一按 report.ts 文件头那套做。
  */
-function TodayButton({ bankId, color, signedIn }: {
-  bankId: string | null; color: string; signedIn: boolean | null;
-}) {
+function TodayCard({ bankId, signedIn }: { bankId: string | null; signedIn: boolean | null }) {
   const [plan, setPlan] = useState<TodayPlan | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [tick, setTick] = useState(0);          // 重试用:改它触发 effect 重跑
 
   useEffect(() => {
     if (!bankId) return;
     let alive = true;
     setPlan(null);
+    setFailed(false);
     buildTodayPlan(bankId)
       .then(p => { if (alive) setPlan(p); })
-      .catch(() => { /* 排不出来就不显示按钮,不给假数字 */ });
+      .catch(e => { logFail("VocabCenter/buildTodayPlan", e); if (alive) setFailed(true); });
     return () => { alive = false; };
-  }, [bankId]);
+  }, [bankId, tick]);
 
   if (!bankId) return null;
 
-  /* 加载中给一块与真身同高的占位,避免数据到位时整页跳动 */
-  if (!plan) return <div className="mt-3 h-[68px] animate-pulse rounded-2xl bg-black/[0.04]" />;
+  /* 高度与真身一致(150px),避免数据到位时整页跳动 —— 主卡跳动尤其刺眼 */
+  if (failed) {
+    return (
+      <div className="mt-3 flex min-h-[150px] flex-col justify-center gap-2 rounded-2xl border border-black/[0.06] bg-white px-5 py-4 text-center">
+        <p className="text-[15px] font-medium text-slate-700">今日学习没能加载</p>
+        <p className="text-[12px] text-slate-400">不是"今天没有任务",是这次没取到</p>
+        <button type="button" onClick={() => setTick(n => n + 1)}
+          className="mx-auto mt-1 rounded-full border border-black/[0.08] px-4 py-1.5 text-[14px] text-slate-700 active:scale-95">
+          重试
+        </button>
+      </div>
+    );
+  }
+  if (!plan) return <div className="mt-3 h-[150px] animate-pulse rounded-2xl bg-black/[0.04]" />;
 
   const { counts, deferred } = plan;
+  /* ⚠️「今天已完成」只对**登录且真的清完了**的用户说。
+     未登录时 buildTodayPlan 会派 20 个试做词,走不到这个分支;
+     万一走到(词库为空),也不该说已完成。 */
   const empty = counts.total === 0;
+  const done = empty && signedIn !== false;
 
   return (
-    <Link to="/vocab/today"
-      className="mt-3 block rounded-2xl px-5 py-3.5 text-white"
+    <Link to="/vocab/today" data-probe="today-card"
+      className="mt-3 flex min-h-[150px] flex-col justify-between rounded-2xl px-5 py-3.5 text-white active:scale-[0.995]"
       style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
-      <div className="flex items-center justify-between gap-2">
-        <span className="text-[17px] font-semibold">
-          {/* ⚠️「今天已完成」只对**登录且真的清完了**的用户说。
-              未登录时 buildTodayPlan 会派 20 个试做词,走不到这个分支;
-              万一走到(词库为空),也不该说已完成。 */}
-          {empty ? (signedIn === false ? "今日学习" : "今天已完成 · 再来 10 个新词") : `今日学习 · ${counts.total} 词`}
-        </span>
-        <ChevronRight className="h-5 w-5 shrink-0 opacity-80" />
-      </div>
-      {!empty && (
-        <div className="mt-0.5 text-[12px] opacity-85" style={{ fontVariantNumeric: "tabular-nums" }}>
-          复习 {counts.review} · 新词 {counts.new} · 错题 {counts.mistake}
-          {/* 截断必须说出来,不能静默丢 */}
-          {deferred > 0 && ` · 另有 ${deferred} 词顺延到明天`}
+      <div>
+        {/* ⚠️ 未登录那句提示挤在这一行,**不另起第四行** ——
+            四行会把卡撑到 183px,规格给的是 140–160px。信息一个字没少。 */}
+        <div className="text-[12px] opacity-90">
+          {done ? "今天的任务已经清完了"
+            : signedIn === false ? "未登录也可先试做 · 进度登录后才记录"
+              : "今天的学习已准备好"}
         </div>
-      )}
-      {signedIn === false && (
-        <div className="mt-0.5 text-[12px] opacity-85">未登录也可先试做,登录后才记录进度</div>
-      )}
+        {/* 大字比其它任何标题大一档(26px vs 20px 的词库名) —— 视觉重量就压在这一行 */}
+        <div className="mt-1 text-[26px] font-bold leading-tight tracking-tight"
+          style={{ fontVariantNumeric: "tabular-nums" }}>
+          {done ? "今天已完成" : empty ? "今日学习" : `今日学习 · ${counts.total} 词`}
+        </div>
+        <div className="mt-1 text-[12px] opacity-90" style={{ fontVariantNumeric: "tabular-nums" }}>
+          {done
+            ? "想再练可以加 10 个新词"
+            : empty
+              ? "未登录也可先试做,登录后才记录进度"
+              : <>
+                  复习 {counts.review} · 新词 {counts.new} · 错题 {counts.mistake}
+                  {/* 截断必须说出来,不能静默丢 */}
+                  {deferred > 0 && ` · 另有 ${deferred} 词顺延到明天`}
+                </>}
+        </div>
+      </div>
+
+      {/* 动作按钮:白底深字,与卡片底色强对比。
+          ⚠️ 是 <span> 不是 <button> —— 整张卡已经是 <Link>,里面再嵌交互元素是非法 HTML。
+             它只负责"长得像按钮",点卡任意处行为完全一致。 */}
+      <span data-probe="today-cta" className="mt-3 inline-flex items-center justify-center gap-1 self-stretch rounded-xl bg-white px-4 py-2.5 text-[15px] font-semibold text-[#C2540A] shadow-[0_2px_8px_rgba(15,23,42,0.12)]">
+        {done ? "再来 10 个新词" : "开始今天的学习"}
+        <ChevronRight className="h-4 w-4" />
+      </span>
     </Link>
   );
 }
@@ -677,7 +818,8 @@ function SceneBanner() {
     let alive = true;
     countScenePacks()
       .then(n => { if (alive) setScene({ total: n, done: countScenesDone() }); })
-      .catch(() => { /* 取不到就不显示进度,横幅本身照常可点 */ });
+      /* 取不到就不显示进度,横幅本身照常可点 —— 正确降级,记一行即可 */
+      .catch(fallback("VocabCenter/countScenePacks", undefined));
     return () => { alive = false; };
   }, []);
 

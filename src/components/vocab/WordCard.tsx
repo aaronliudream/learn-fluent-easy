@@ -59,21 +59,24 @@ export default function WordCard({ word, examples, hideExamples, defMode = "zh",
           {word.headword}
         </h1>
 
-        {(word.ipa || word.audio_url) && (
+        {/* ⚠️ 同 VocabQuiz:这个控件**同时承载音标**,没音频不能整个不渲染。
+            有音频 → 可点的喇叭 + 音标;没音频 → 纯音标,**不画喇叭**
+            (原来是 opacity-60 的喇叭 + cursor-default,看着仍像个控件)。 */}
+        {word.audio_url ? (
           <button
             type="button"
             onClick={() => playUrl(word.audio_url, `w:${word.id}`)}
-            disabled={!word.audio_url}
             aria-label={`朗读 ${word.headword}`}
-            className={cn(
-              "mt-2 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12px] text-slate-500",
-              word.audio_url ? "hover:bg-slate-100 active:bg-slate-200" : "cursor-default opacity-60",
-            )}
+            className="mt-2 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12px] text-slate-500 hover:bg-slate-100 active:bg-slate-200"
           >
             <Volume2 className={cn("h-3.5 w-3.5", playing === `w:${word.id}` && "text-slate-900")} />
             {word.ipa && <span className="tracking-wide">{word.ipa}</span>}
           </button>
-        )}
+        ) : word.ipa ? (
+          <span className="mt-2 inline-flex items-center rounded-full px-2.5 py-1 text-[12px] tracking-wide text-slate-500">
+            {word.ipa}
+          </span>
+        ) : null}
 
         {word.pos && (
           <div className="mt-1.5 text-[12px] font-medium tracking-[0.02em] text-slate-400">{word.pos}</div>

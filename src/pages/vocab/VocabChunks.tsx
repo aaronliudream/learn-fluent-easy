@@ -5,10 +5,11 @@
  *   idiom 50 · phrasal_verb 35 · collocation_ext 30 · frame 20 · connector 15
  * 习语那 50 条**全部**带 literal_trap(直译陷阱)—— 那是这批内容的卖点,必须醒目。
  *
- * ⚠️ 两个 tab 各带一个测验,但**出题方式不同**:
- *    · 词块:给中文选英文(常规词汇题)
- *    · 习语:给直译陷阱猜真义 —— 这才用得上 literal_trap,
- *      用同一套出题会把习语的价值浪费掉。
+ * ⚠️ 两个 tab 各带一个测验,方向**都必须一边中文一边英文**:
+ *    · 词块:中文题干 + 英文选项(考"会不会说")
+ *    · 习语:英文题干 + 中文选项(考"看不看得懂"),直译义当干扰项
+ * ⚠️ **硬判据:题干与选项不得同为中文**(Aaron 2026-08-09 立)。
+ *    两边都是中文,说明这道题没在考英语。习语题改造前正是这样,还连带泄题。
  * ⚠️ ☆ 收藏写 user_vocab_wordbook,source_kind='chunk'。
  *    这个值是 2026-08-09 由 SQLAA/wordbook_source_kind_extend.sql 扩进 CHECK 的 ——
  *    在 Aaron 跑那条 SQL 之前**故意没上这个按钮**,因为无法在本地验证约束
@@ -25,6 +26,19 @@ import { fallback, logFail } from "@/lib/vocab/report";
 import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
 import { listChunks, listFavorites, toggleFavorite, CHUNK_GROUPS, type Chunk } from "@/lib/vocab/dormant";
+
+/**
+ * 从 literal_trap「字面“X”,实为“Y”」里抽出**直译义 X**,给习语题当干扰项。
+ *
+ * ⚠️ 抽不出来返回 null,**绝不拿整句当干扰项** —— 整句里含着答案(见 buildIdiomQuiz)。
+ *    实测 50 条习语 50 条都抽得出;这条守卫是给将来新内容留的
+ *    (第九条:判不了的宁可少一个干扰项,也不要塞一个泄题的进去)。
+ */
+const LITERAL_RE = /^字面[“"]([^”"]+)[”"]/;
+function literalMeaning(trap: string | null | undefined): string | null {
+  const m = LITERAL_RE.exec(String(trap || ""));
+  return m ? m[1] : null;
+}
 
 type Tab = "chunk" | "idiom";
 
@@ -120,15 +134,45 @@ export default function VocabChunks() {
     return { stem: `「${c.translation_zh}」用英文怎么说?`, options: shuffle([c.chunk, ...distractors]), answer: c.chunk };
   }).filter(q => q.options.length >= 2);
 
-  /** 习语题:给直译陷阱猜真义 —— 用得上 literal_trap 才叫上架了这批内容。 */
-  const buildIdiomQuiz = (): QuizItem[] => shuffle(idioms.filter(c => c.literal_trap && c.translation_zh)).slice(0, 10).map(c => {
-    const pool = idioms.filter(x => x.id !== c.id && x.translation_zh);
-    const distractors = shuffle(pool).slice(0, 3).map(x => x.translation_zh as string);
+  /**
+   * 习语题:**英文题干 + 中文选项**,直译义当干扰项。
+   *
+   * ── 改造前两件事一起错(Aaron 2026-08-09 指出)──────────────────
+   * ① **方向反了**:题干是 literal_trap(中文),选项是 translation_zh(中文)——
+   *    两边都是中文,考的是中文阅读不是英语。
+   * ② **题干直接泄题**:literal_trap 不是"直译义",是一整句解释
+   *    「字面"打破冰",实为"打破僵局"」—— 答案原文就印在题干上。
+   *    实测 **48/50 条** 的 literal_trap 里含 translation_zh 全文。
+   *    改造前这道题不用懂英语也不用懂习语,照抄就能满分。
+   *
+   * ── 现在 ──────────────────────────────────────────────────────
+   * 题干 = 英文习语;选项 = 中文含义;**干扰项优先放该习语自己的直译义**
+   * (break the ice → 干扰项「打破冰」),直译陷阱仍被考到,方向却对了。
+   * 完整的 literal_trap 挪进 hints,**答完才显示** —— 教学价值不丢,又不泄题。
+   */
+  const buildIdiomQuiz = (): QuizItem[] => shuffle(idioms.filter(c => c.translation_zh)).slice(0, 10).map(c => {
+    const answer = c.translation_zh as string;
+    const lit = literalMeaning(c.literal_trap);
+    /* 直译义排第一位;不够 3 个再从别的习语的真义里补。
+       ⚠️ 去重按**文本**:直译义偶尔与答案相同(实测 50 条里有 1 条),
+          不去重就会出现两个一模一样的选项 —— 与 #340 修的是同一类错。 */
+    const seen = new Set<string>([answer]);
+    const distractors: string[] = [];
+    if (lit && !seen.has(lit)) { seen.add(lit); distractors.push(lit); }
+    for (const t of shuffle(idioms.filter(x => x.id !== c.id && x.translation_zh).map(x => x.translation_zh as string))) {
+      if (seen.has(t)) continue;
+      seen.add(t); distractors.push(t);
+      if (distractors.length === 3) break;
+    }
     return {
-      tag: c.chunk,
-      stem: `直译陷阱:${c.literal_trap}\n它真正的意思是?`,
-      options: shuffle([c.translation_zh as string, ...distractors]),
-      answer: c.translation_zh as string,
+      tag: "习语 · 选出正确的中文意思",
+      stem: c.chunk,
+      options: shuffle([answer, ...distractors]),
+      answer,
+      hints: {
+        [answer]: c.literal_trap || "",
+        ...(lit && lit !== answer ? { [lit]: "这是字面直译 —— 习语的意思不能按字面拆开理解。" } : {}),
+      },
     };
   }).filter(q => q.options.length >= 2);
 
@@ -170,7 +214,7 @@ export default function VocabChunks() {
                 <button type="button"
                   onClick={() => setQuiz(tab === "idiom" ? buildIdiomQuiz() : buildChunkQuiz())}
                   className="mb-3 w-full rounded-xl py-3 text-[15px] font-medium text-white" style={{ backgroundColor: color }}>
-                  {tab === "idiom" ? "测一测:看直译陷阱猜真义" : "测一测:给中文选英文"}
+                  {tab === "idiom" ? "测一测:看英文习语猜中文意思" : "测一测:给中文选英文"}
                 </button>
 
                 {tab === "idiom" ? (

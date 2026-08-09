@@ -21,6 +21,7 @@ import { dedupeTake, optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { AnonNote, Feedback, LetterDiff, QuotaModal } from "@/components/vocab/SessionParts";
+import { OptionGrid } from "@/components/vocab/OptionGrid";
 import { buildTodayPlan, countDueTomorrow, EMPTY_PLAN, type TodayPlan, type TodayTask } from "@/lib/vocab/todayPlan";
 import { getStats } from "@/lib/vocab/stats";
 import { fallback, logFail } from "@/lib/vocab/report";
@@ -272,19 +273,18 @@ export default function VocabToday() {
                 <div className="mb-3 text-[32px] font-bold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>
                   {cur.word.headword}
                 </div>
-                <div className="space-y-2">
-                  {options.map(o => (
-                    <button key={o} type="button" disabled={submitted} onClick={() => void submit(o)}
-                      className={cn("w-full rounded-xl border px-3.5 py-3 text-left text-[15px]",
-                        !submitted && "border-black/[0.08] bg-white active:bg-slate-50",
-                        submitted && o === answer && "border-emerald-300 bg-emerald-50",
-                        submitted && o === picked && o !== answer && "border-rose-300 bg-rose-50",
-                        submitted && o !== answer && o !== picked && "opacity-50",
-                      )}>
-                      {o}
-                    </button>
-                  ))}
-                </div>
+                {/* 共用件,短选项自动 2×2。
+                    ⚠️ 今日学习**不在 Aaron 那条清单里**(他列的是英汉选择/听音辨义/错题本闯关),
+                       但它也是四选一、也有"页面被拉长"这个毛病,单独留一套会让主路径
+                       和其余三处长得不一样。改了,他要否掉很容易(删这一处即可)。
+                    ⚠️ 这里原本按**选项文本**索引(o === answer),共用件按下标 ——
+                       所以在这层做一次 string↔index 转换,不去改共用件的接口。 */}
+                <OptionGrid
+                  options={options}
+                  answerIndex={options.indexOf(answer)}
+                  picked={submitted ? options.indexOf(picked ?? "") : null}
+                  onPick={(i) => void submit(options[i])}
+                />
               </>
             )}
           </div>

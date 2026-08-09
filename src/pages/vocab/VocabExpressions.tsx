@@ -22,6 +22,7 @@ import { bankColor, FONT_SERIF, readSelectedBank } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { fallback, logFail } from "@/lib/vocab/report";
+import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
 import {
   listExpressions, listFavorites, toggleFavorite, EXPR_GROUPS, REGISTER_LABEL,
@@ -80,17 +81,13 @@ function Card({ e, color, favs, onFav }: {
                   </button>
                 </div>
                 {r.scene_hint && <p className="mt-1 text-[12px] leading-relaxed text-slate-500">{r.scene_hint}</p>}
+                {/* 共用件 ExampleBlock(small 档)。
+                    ⚠️ 原来这里的中译是 12px/slate-400、喇叭 h-3.5,比别处又小一档 ——
+                       统一之后略大一点点,换来的是五处版式一致。 */}
                 {r.example_en && (
-                  <div className="mt-1.5">
-                    <button type="button" onClick={() => playUrl(r.example_audio_url, `re:${r.id}`)}
-                      disabled={!r.example_audio_url} className="flex w-full items-start gap-2 text-left">
-                      {r.example_audio_url
-                        ? <Volume2 className="mt-1 h-3.5 w-3.5 shrink-0 text-slate-300" />
-                        : <span className="mt-1 h-3.5 w-3.5 shrink-0" />}
-                      <span className="text-[14px] leading-relaxed text-slate-700">{r.example_en}</span>
-                    </button>
-                    {r.example_zh && <p className="mt-0.5 pl-5.5 text-[12px] leading-relaxed text-slate-400">{r.example_zh}</p>}
-                  </div>
+                  <ExampleBlock className="mt-1" size="small"
+                    en={r.example_en} zh={r.example_zh}
+                    audioUrl={r.example_audio_url} audioKey={`re:${r.id}`} />
                 )}
               </div>
             ))}

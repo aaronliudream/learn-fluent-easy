@@ -12,6 +12,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, Volume2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import { CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
 import { playChain, playUrl } from "@/lib/vocab/audio";
 import { readAutoplay, readAutoplayCount, writeAutoplay, writeAutoplayCount, type AutoplayCount } from "@/lib/vocab/quiz";
@@ -103,17 +104,13 @@ export function WordCardBody({ word, allowAutoplay = true }: { word: VocabWord; 
       {/* ⚠️ 三条例句**全部展开**,不再折叠(Aaron 2026-08-09)。
              原来只显示第 1 句 + 「查看全部 3 句」—— 反馈是记忆黏合的黄金三秒,
              把另外两句藏在一次点击后面,等于绝大多数人永远看不到。 */}
+      {/* 例句块抽成共用件 ExampleBlock:英文一行 + 中译紧贴其下,行距压紧。
+          ⚠️ 五处(反馈层/词卡/词块页/中文这样说/场景短文)共用同一份版式,
+             别在这里另写 —— 改造前那五处的中译字号是 13/14/12 各写各的。 */}
       {list.map(ex => (
-        <div key={ex.id} className="border-t border-black/[0.06] py-2.5">
-          {ex.collocation && <div className="mb-1 text-[12px] font-medium tracking-[0.02em] text-slate-400">{ex.collocation}</div>}
-          <button type="button" onClick={() => playUrl(ex.audio_url, `e:${ex.id}`)} disabled={!ex.audio_url}
-            className="flex w-full items-start gap-2 text-left">
-            {/* 无音频只隐藏喇叭,句子照常显示 */}
-            {ex.audio_url ? <Volume2 className="mt-1 h-4 w-4 shrink-0 text-slate-400" /> : <span className="mt-1 h-4 w-4 shrink-0" />}
-            <span className="text-[16px] leading-relaxed text-slate-800">{ex.sentence}</span>
-          </button>
-          <p className="mt-1 pl-6 text-[13px] leading-relaxed text-slate-500">{ex.translation_zh}</p>
-        </div>
+        <ExampleBlock key={ex.id} className="border-t border-black/[0.06]"
+          en={ex.sentence} zh={ex.translation_zh}
+          audioUrl={ex.audio_url} audioKey={`e:${ex.id}`} label={ex.collocation} />
       ))}
 
       {/* 词卡增区:高频搭配 / 易混词 / 反义词。**一处实现四处生效**,别在这里另拼。

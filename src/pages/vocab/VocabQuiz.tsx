@@ -19,6 +19,7 @@ import { playUrl, stopAudio } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, pickTargets, type QuizQuestion } from "@/lib/vocab/quiz";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
+import { OptionGrid } from "@/components/vocab/OptionGrid";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { dueQueue } from "@/lib/vocab/vocabMastery";
 import { fallback, logFail } from "@/lib/vocab/report";
@@ -166,29 +167,11 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
               </button>
             </div>
 
-            <div className="mt-3 space-y-2">
-              {q.options.map((opt, i) => {
-                const isAnswer = i === q.answerIndex;
-                const isPicked = picked === i;
-                const reveal = picked !== null;
-                return (
-                  <button key={i} type="button" onClick={() => choose(i)} disabled={reveal}
-                    className={cn(
-                      /* 选项:汉字提到 17px,四项等高(min-h)——
-                         等高避免长短不一时用排除法猜,也让一屏排布可预测。 */
-                      "flex min-h-[58px] w-full items-center gap-3 rounded-2xl border px-4 py-3 text-left text-[17px] leading-snug transition",
-                      !reveal && "border-black/[0.08] bg-white active:bg-slate-50",
-                      reveal && isAnswer && "border-emerald-300 bg-emerald-50 text-emerald-900",
-                      reveal && isPicked && !isAnswer && "border-rose-300 bg-rose-50 text-rose-900",
-                      reveal && !isAnswer && !isPicked && "border-black/[0.06] bg-white text-slate-400",
-                    )}>
-                    <span className="min-w-0 flex-1">{opt}</span>
-                    {reveal && isAnswer && <Check className="h-5 w-5 shrink-0 text-emerald-600" />}
-                    {reveal && isPicked && !isAnswer && <X className="h-5 w-5 shrink-0 text-rose-500" />}
-                  </button>
-                );
-              })}
-            </div>
+            {/* 选项区已抽成共用件 OptionGrid(短选项自动 2×2,长的退回单列)。
+                ⚠️ 别在这里重写一份:改造前英汉选择/听音辨义/错题本/今日学习
+                   各有一份近乎相同的实现,四处慢慢漂开。 */}
+            <OptionGrid options={q.options} answerIndex={q.answerIndex}
+              picked={picked} onPick={choose} />
 
             {picked !== null && (
               <Feedback word={q.word} correct={picked === q.answerIndex} onNext={next}

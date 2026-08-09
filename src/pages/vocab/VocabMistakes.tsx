@@ -93,10 +93,20 @@ export default function VocabMistakes() {
         // 保持 listMistakes 的排序(最久未清在前),getWordsByIds 不保证顺序
         setOrdered(list.map(r => byId.get(r.word_id)).filter(Boolean) as VocabWord[]);
       }
-    } catch {
+    } catch (e) {
+      /* ⚠️ 别再裸 catch。这个页面从上线起就一直「加载失败」,而错误被这里
+         整个吞掉,控制台一片安静 —— 根因(listMistakes 用了不存在的列 updated_at,
+         PostgREST 回 42703)因此藏了很久。
+         PostgREST 的 code/message/details/hint 四个字段都要打:只打 message
+         经常是一句没头没尾的话。 */
+      const err = e as { code?: string; message?: string; details?: string; hint?: string };
+      console.log("[错题本] ✗ 加载失败", {
+        code: err?.code, message: err?.message, details: err?.details, hint: err?.hint,
+      });
       setFailed(true);
     }
-  }, []);
+    /* ⚠️ 依赖必须带 bankCode:漏了它就是闭包过期 —— 切库后这里还用着旧的 code。 */
+  }, [bankCode]);
   const [ordered, setOrdered] = useState<VocabWord[]>([]);
 
   useEffect(() => { load(); }, [load]);

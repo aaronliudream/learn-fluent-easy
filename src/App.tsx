@@ -118,6 +118,7 @@ const VocabSpell = lazy(() => import("./pages/vocab/VocabSpell.tsx"));
 const VocabMistakes = lazy(() => import("./pages/vocab/VocabMistakes.tsx"));
 const VocabEarTraining = lazy(() => import("./pages/vocab/VocabEarTraining.tsx"));
 const VocabDictation = lazy(() => import("./pages/vocab/VocabDictation.tsx"));
+const VocabToday = lazy(() => import("./pages/vocab/VocabToday.tsx"));
 const VocabChunks = lazy(() => import("./pages/vocab/VocabChunks.tsx"));
 const VocabExpressions = lazy(() => import("./pages/vocab/VocabExpressions.tsx"));
 const VocabConfusion = lazy(() => import("./pages/vocab/VocabConfusion.tsx"));
@@ -506,6 +507,8 @@ const App = () => (
           <Route path="/vocab/listen" element={<ChineseOnlyRoute><VocabEarTraining /></ChineseOnlyRoute>} />
           {/* 默写纸:纯前端 + window.print(),来源靠 query 参数 */}
           <Route path="/vocab/dictation" element={<ChineseOnlyRoute><VocabDictation /></ChineseOnlyRoute>} />
+          {/* 今日学习:一键继续。静态段。 */}
+          <Route path="/vocab/today" element={<ChineseOnlyRoute><VocabToday /></ChineseOnlyRoute>} />
           {/* PR-8c 沉睡数据三页。全是静态段,不会被 /vocab/:bankCode 抢走。 */}
           <Route path="/vocab/chunks" element={<ChineseOnlyRoute><VocabChunks /></ChineseOnlyRoute>} />
           <Route path="/vocab/expressions" element={<ChineseOnlyRoute><VocabExpressions /></ChineseOnlyRoute>} />

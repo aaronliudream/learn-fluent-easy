@@ -19,7 +19,7 @@
  *   ⓪ 场景串记横幅(独立学习方式,不属于任何词库)→ 分隔线
  *   ① 当前词库卡                                    ← 今天学哪个库
  *   ② **今日学习主卡 —— 全页唯一主 CTA**             ← 今天点这里
- *   ③ 其他训练:单词学习 / 磨耳朵 / 词块与习语 / 中文这样说 / 易混词辨析
+ *   ③ 其他训练:单词学习 / 磨耳朵 / 词块与习语 / 中文这样说(易混词辨析已下架)
  *   ④ 学习进度四条横条 + 词汇成长图
  *   ⑤ 错题本 + 今日复习
  *   ⑥ 周报横幅 → 我的数据四宫格 + 打卡月历(**未登录整块不渲染**)
@@ -48,7 +48,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
-  Blocks, Headphones, Layers, Link2, Lock, MessageSquareQuote, Shuffle,
+  Blocks, Headphones, Layers, Link2, Lock, MessageSquareQuote,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -648,8 +648,10 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
           color={color} to="/vocab/chunks" />
         <ModeCard icon={<MessageSquareQuote className="h-[18px] w-[18px]" />} name="中文这样说" desc="一句中文,分场合三种说法"
           color={color} to="/vocab/expressions" />
-        <ModeCard icon={<Shuffle className="h-[18px] w-[18px]" />} name="易混词辨析" desc="看句子选词,专治总记混"
-          color={color} to="/vocab/confusion" />
+        {/* ⚰️「易混词辨析」整条下架(Aaron 2026-08-09):这一行、/vocab/confusion 路由与页面、
+            词卡增区里的那一段、dormant.ts 的出题函数全部删除。
+            `vocab_confusion_groups`(429 组)/ `vocab_confusion_members`(978 词)
+            **留在库里不删**,前端不再引用。别再加回这一行。 */}
         {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
             PR #321/#323 关闭不合并)。别再加回来。
             ⚠️ 与**小学**板块的自然拼读(/primary 下的 PrimaryHubPhonics)无关,那个继续在。 */}

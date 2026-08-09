@@ -1,22 +1,26 @@
 /**
- * 词卡增区 —— 高频搭配 / 易混词 / 反义词。
+ * 词卡增区 —— 高频搭配 / 反义词。
+ *
+ * ⚠️ **「易混词」那一段已于 2026-08-09 整条下架**(Aaron 决定),连同 /vocab/confusion
+ *    页面与路由一并删除。`vocab_confusion_groups`(429 组)/ `vocab_confusion_members`
+ *    (978 词)**留在库里不删**,前端不再引用。别再加回这一段。
  *
  * **一处实现,四处生效**:四模式答题反馈层、词库列表点开的词卡,
  * 以及将来的点词查词弹卡、单词本条目。
- * ⚠️ 别在任何调用处再拼一份 —— 这三段的排布顺序、折叠规则、空态判断
+ * ⚠️ 别在任何调用处再拼一份 —— 这两段的排布顺序、阈值规则、空态判断
  *    一旦各写各的,同一个产品就会出现几种说法(反馈层和词表页的搭配数不一样、
  *    一处折叠一处不折叠)。这正是 SessionParts 抽出来时踩过的那个坑。
  *
- * ⚠️ **有数据才显示**。三段全空则整个组件不渲染 —— 不留空标题、不占高度。
+ * ⚠️ **有数据才显示**。两段全空则整个组件不渲染 —— 不留空标题、不占高度。
  *    22065 条搭配听着多,摊到 4470 个词上仍有不少词一条都没有。
- * ⚠️ **三段一律默认展开,不折叠**(Aaron 2026-08-09 改)。
+ * ⚠️ **两段一律默认展开,不折叠**(Aaron 2026-08-09 改)。
  *    原来是"标题常驻 + 内容默认收起",理由写的是"默认展开会把例句挤出首屏" ——
  *    那个理由**不成立**:增区渲染在例句**之后**,展开它只会把它自己下面的东西往下推,
  *    动不到例句的位置(反馈层挂载时还会 scrollIntoView 到顶)。
  *    而收起的代价是实打实的:三段内容默认零曝光,绝大多数人永远点不开。
  * ⚠️ 折叠**只在超过阈值时**才出现,不做默认收起:
  *    · 高频搭配 → 先列 6 条,超过才给「查看全部 N 条」;
- *    · 易混词 / 反义词 → 直接全列,不给折叠。
+ *    · 反义词 → 直接全列,不给折叠。
  *    实测(2026-08-09)库里 **4414 个有搭配的词里 4412 个恰好 5 条,超过 6 条的一个都没有**;
  *    反义词每词最多 3 个(分布 1/2/3 条 = 303/388/1073)。
  *    也就是说「查看全部」那条分支**当前数据下永远不会出现** —— 留着是给将来放量用的,
@@ -54,11 +58,9 @@ function Section({ title, count, children }: { title: string; count?: number; ch
   );
 }
 
-export default function WordExtras({ wordId, onPickWord }: {
-  wordId: string;
-  /** 点易混词跳过去。不传则易混词只展示不可点(反馈层里跳走会打断答题)。 */
-  onPickWord?: (wordId: string, headword: string) => void;
-}) {
+export default function WordExtras({ wordId }: { wordId: string }) {
+  /* ⚠️ 原来有个 `onPickWord`(点易混词跳过去),随易混词整段下架已删 ——
+     全仓零调用方。要给搭配/反义词加"点词跳转"是另一件事,别复活这个签名。 */
   const [data, setData] = useState<Extras>(EMPTY_EXTRAS);
   const [ready, setReady] = useState(false);
   const [allColl, setAllColl] = useState(false);
@@ -80,7 +82,7 @@ export default function WordExtras({ wordId, onPickWord }: {
         不影响"反馈层首屏要看到第一条例句"那条判据(已实测)。 */
   if (!ready || isEmptyExtras(data)) return null;
 
-  const { collocations, confusion, antonyms } = data;
+  const { collocations, antonyms } = data;
   const shownColl = allColl ? collocations : collocations.slice(0, COLLOCATION_PREVIEW);
 
   return (
@@ -108,34 +110,6 @@ export default function WordExtras({ wordId, onPickWord }: {
               查看全部 {collocations.length} 条
             </button>
           )}
-        </Section>
-      )}
-
-      {confusion && (
-        <Section title="易混词" count={confusion.peers.length}>
-          <p className="mb-2 text-[12px] text-slate-400">同组:{confusion.groupTitle}</p>
-          <div className="space-y-2">
-            {confusion.peers.map(p => {
-              const body = (
-                <>
-                  <div className="flex flex-wrap items-baseline gap-x-2">
-                    <span className="text-[15px] font-medium text-slate-900" style={{ fontFamily: FONT_SERIF }}>{p.headword}</span>
-                    {p.def_zh && <span className="text-[13px] text-slate-500">{p.def_zh}</span>}
-                  </div>
-                  {/* 区分要点才是这一节的价值 —— 只列同组的词等于让用户自己去悟 */}
-                  {(p.contrast_hint || p.feel_zh) && (
-                    <p className="mt-0.5 text-[12px] leading-relaxed text-slate-500">{p.contrast_hint || p.feel_zh}</p>
-                  )}
-                </>
-              );
-              return onPickWord ? (
-                <button key={p.word_id} type="button" onClick={() => onPickWord(p.word_id, p.headword)}
-                  className="block w-full rounded-lg px-1 py-1 text-left active:bg-slate-50">{body}</button>
-              ) : (
-                <div key={p.word_id} className="px-1 py-1">{body}</div>
-              );
-            })}
-          </div>
         </Section>
       )}
 

@@ -121,7 +121,6 @@ const VocabDictation = lazy(() => import("./pages/vocab/VocabDictation.tsx"));
 const VocabToday = lazy(() => import("./pages/vocab/VocabToday.tsx"));
 const VocabChunks = lazy(() => import("./pages/vocab/VocabChunks.tsx"));
 const VocabExpressions = lazy(() => import("./pages/vocab/VocabExpressions.tsx"));
-const VocabConfusion = lazy(() => import("./pages/vocab/VocabConfusion.tsx"));
 const VocabScenes = lazy(() => import("./pages/vocab/VocabScenes.tsx"));
 const VocabSceneDetail = lazy(() => import("./pages/vocab/VocabSceneDetail.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
@@ -511,8 +510,12 @@ const App = () => (
           <Route path="/vocab/today" element={<ChineseOnlyRoute><VocabToday /></ChineseOnlyRoute>} />
           {/* PR-8c 沉睡数据三页。全是静态段,不会被 /vocab/:bankCode 抢走。 */}
           <Route path="/vocab/chunks" element={<ChineseOnlyRoute><VocabChunks /></ChineseOnlyRoute>} />
+          {/* ⚰️ 易混词辨析已下架(Aaron 2026-08-09)。这条**重定向必须留着**:
+              删掉路由之后 /vocab/confusion 会被下面的 /vocab/:bankCode 兜底接走,
+              页面显示「词库不存在」—— 老书签点进来会以为是词库坏了,
+              而不是"这个功能没了"。重定向回中心页才是实话。 */}
+          <Route path="/vocab/confusion" element={<Navigate to="/vocab" replace />} />
           <Route path="/vocab/expressions" element={<ChineseOnlyRoute><VocabExpressions /></ChineseOnlyRoute>} />
-          <Route path="/vocab/confusion" element={<ChineseOnlyRoute><VocabConfusion /></ChineseOnlyRoute>} />
           <Route path="/vocab/scenes" element={<ChineseOnlyRoute><VocabScenes /></ChineseOnlyRoute>} />
           <Route path="/vocab/scenes/:id" element={<ChineseOnlyRoute><VocabSceneDetail /></ChineseOnlyRoute>} />
           <Route path="/vocab/:bankCode/quiz" element={<ChineseOnlyRoute><VocabQuiz /></ChineseOnlyRoute>} />

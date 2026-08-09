@@ -91,6 +91,26 @@ for (const [path, name] of [["/vocab/toefl/quiz", "英汉选择"], ["/vocab/toef
       headword: q("span[style]") ? rect(q("span[style]")) : null,
       firstZh: ps[0] ? { ...rect(ps[0]), text: ps[0].textContent.trim().slice(0, 18) } : null,
       zhCount: ps.length,
+      /* 单条例句块的高度 —— 改造前后**唯一可比**的数:
+         反馈层总高会随单词/例句长短浮动,而每条例句块的版式是固定的。
+         取的是中译 <p> 的父容器(改造前是 .py-2.5 的 div,改造后是 ExampleBlock 的 .py-2)。 */
+      exBlockHs: ps.map(el => el.parentElement ? Math.round(el.parentElement.getBoundingClientRect().height) : 0),
+      /* ⚠️ 高度**不可比** —— 每次抽到的例句长短不同,块高跟着变。
+         真正可比的是**计算样式**:内边距/行高/字号与文本内容无关,改前改后一一对应。
+         (踩过:先拿块高比,英汉选择 120→101 看着变矮了,听音辨义却 120→141 "变高了",
+          其实只是抽到的句子更长。) */
+      css: (() => {
+        const blk = ps[0]?.parentElement;
+        const en = blk?.querySelector("span.flex-1, span.min-w-0");
+        const cs = el => el ? getComputedStyle(el) : null;
+        const b = cs(blk), e = cs(en), z = cs(ps[0]);
+        return {
+          blockPadY: b ? `${b.paddingTop} / ${b.paddingBottom}` : null,
+          enFont: e ? `${e.fontSize} · line-height ${e.lineHeight}` : null,
+          zhFont: z ? `${z.fontSize} · line-height ${z.lineHeight}` : null,
+          zhMarginTop: z ? z.marginTop : null,
+        };
+      })(),
     };
   });
 
@@ -98,6 +118,8 @@ for (const [path, name] of [["/vocab/toefl/quiz", "英汉选择"], ["/vocab/toef
   console.log(`  反馈层高 ${fb.cardH}px`);
   console.log(`  单词行     top ${fb.headword?.top} bottom ${fb.headword?.bottom}`);
   console.log(`  第 1 条中译 top ${fb.firstZh?.top} bottom ${fb.firstZh?.bottom} 「${fb.firstZh?.text}」(共 ${fb.zhCount} 条例句)`);
+  console.log(`  例句块高度  ${JSON.stringify(fb.exBlockHs)}(⚠️ 随句子长短变,不可比)`);
+  console.log(`  ▸ 计算样式(可比):内边距 ${fb.css?.blockPadY} · 英文 ${fb.css?.enFont} · 中译 ${fb.css?.zhFont} · 中译上边距 ${fb.css?.zhMarginTop}`);
   const pass = fb.firstZh && fb.firstZh.bottom <= FOLD && fb.firstZh.bottom > 0;
   console.log(`  → ${pass ? "✓" : "✗"} 单词+音标+释义+第一条例句(含中译)在折线 ${FOLD} 内`);
   if (!pass) ok = false;

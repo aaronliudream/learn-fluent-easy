@@ -12,6 +12,7 @@
 import { useEffect, useState } from "react";
 import { Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import { FONT_SERIF } from "@/lib/vocab/theme";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
 import { highlightSegments, HILITE } from "@/lib/vocab/highlight";
@@ -110,33 +111,23 @@ export default function WordCard({ word, examples, hideExamples, defMode = "zh",
                     isPlaying ? "opacity-100" : "opacity-0",
                   )}
                 />
-                {ex.collocation && (
-                  <div className="mb-1 text-[12px] font-medium tracking-[0.02em] text-slate-400">
-                    {ex.collocation}
-                  </div>
-                )}
-                <button
-                  type="button"
-                  onClick={() => playUrl(ex.audio_url, key)}
-                  disabled={!ex.audio_url}
-                  className="flex w-full items-start gap-2 text-left"
-                  aria-label={`朗读例句 ${i + 1}`}
-                >
-                  <Volume2
-                    className={cn(
-                      "mt-1 h-4 w-4 shrink-0",
-                      ex.audio_url ? (isPlaying ? "text-slate-900" : "text-slate-400") : "text-slate-200",
-                    )}
-                  />
-                  <span className="text-[17px] leading-relaxed text-slate-800">
-                    {highlightSegments(ex.sentence, word.headword).map((s, si) =>
-                      s.hit
-                        ? <b key={si} style={{ color: HILITE, fontWeight: 700 }}>{s.text}</b>
-                        : <span key={si}>{s.text}</span>,
-                    )}
-                  </span>
-                </button>
-                <p className="mt-1 pl-6 text-[14px] leading-relaxed text-slate-500">{ex.translation_zh}</p>
+                {/* 共用件 ExampleBlock:版式与反馈层/词块页/中文这样说完全一致。
+                    命中词高亮是**内容差异**,走 enContent 传进去 ——
+                    不该为了高亮把行距/字号也另写一套(那正是五处漂开的由来)。 */}
+                <ExampleBlock
+                  en={ex.sentence}
+                  zh={ex.translation_zh}
+                  audioUrl={ex.audio_url}
+                  audioKey={key}
+                  label={ex.collocation}
+                  playing={isPlaying}
+                  className="py-0"
+                  enContent={highlightSegments(ex.sentence, word.headword).map((s, si) =>
+                    s.hit
+                      ? <b key={si} style={{ color: HILITE, fontWeight: 700 }}>{s.text}</b>
+                      : <span key={si}>{s.text}</span>,
+                  )}
+                />
               </div>
             );
           })}

@@ -24,6 +24,7 @@ import { fallback } from "@/lib/vocab/report";
 import { dedupeTake, optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
+import { OptionGrid } from "@/components/vocab/OptionGrid";
 import {
   getBankByCode, listBankWords, listExamples, getWordStatusMap, currentUserId,
   type VocabBank, type VocabExample, type VocabWord, type WordStatus,
@@ -190,27 +191,10 @@ export default function VocabListen() {
                   文字一律留到反馈层。原则:考察通道之外的信息才允许出现在题面。 */}
             </div>
 
-            <div className="mt-4 space-y-2.5">
-              {q.options.map((opt, i) => {
-                const isAnswer = i === q.answerIndex;
-                const isPicked = picked === i;
-                const reveal = picked !== null;
-                return (
-                  <button key={i} type="button" onClick={() => choose(i)} disabled={reveal}
-                    className={cn(
-                      "flex w-full items-center gap-3 rounded-2xl border px-4 py-4 text-left text-[16px] transition",
-                      !reveal && "border-black/[0.08] bg-white active:bg-slate-50",
-                      reveal && isAnswer && "border-emerald-300 bg-emerald-50 text-emerald-900",
-                      reveal && isPicked && !isAnswer && "border-rose-300 bg-rose-50 text-rose-900",
-                      reveal && !isAnswer && !isPicked && "border-black/[0.06] bg-white text-slate-400",
-                    )}>
-                    <span className="min-w-0 flex-1">{opt}</span>
-                    {reveal && isAnswer && <Check className="h-5 w-5 shrink-0 text-emerald-600" />}
-                    {reveal && isPicked && !isAnswer && <X className="h-5 w-5 shrink-0 text-rose-500" />}
-                  </button>
-                );
-              })}
-            </div>
+            {/* 共用件,短选项自动 2×2。原来这里的间距是 space-y-2.5、字号 16px,
+                与英汉选择的 space-y-2 / 17px 不一致 —— 统一到 OptionGrid 一套。 */}
+            <OptionGrid options={q.options} answerIndex={q.answerIndex}
+              picked={picked} onPick={choose} />
 
             {picked !== null && (
               /* 单词大字/音标/词性由 Feedback 统一给,这里不再自拼 subtitle。

@@ -22,6 +22,7 @@ import { bankColor, FONT_SERIF, readSelectedBank } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { fallback, logFail } from "@/lib/vocab/report";
+import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
 import { listChunks, listFavorites, toggleFavorite, CHUNK_GROUPS, type Chunk } from "@/lib/vocab/dormant";
 
@@ -59,17 +60,11 @@ function Row({ c, color, faved, onFav }: {
         </p>
       )}
 
+      {/* 共用件 ExampleBlock(small 档)—— 与反馈层/词卡同一套版式,中译贴紧英文 */}
       {c.example_en && (
-        <div className="mt-2.5 border-t border-black/[0.06] pt-2.5">
-          <button type="button" onClick={() => playUrl(c.example_audio_url, `ke:${c.id}`)}
-            disabled={!c.example_audio_url} className="flex w-full items-start gap-2 text-left">
-            {c.example_audio_url
-              ? <Volume2 className="mt-1 h-4 w-4 shrink-0 text-slate-400" />
-              : <span className="mt-1 h-4 w-4 shrink-0" />}
-            <span className="text-[15px] leading-relaxed text-slate-800">{c.example_en}</span>
-          </button>
-          {c.example_zh && <p className="mt-1 pl-6 text-[13px] leading-relaxed text-slate-500">{c.example_zh}</p>}
-        </div>
+        <ExampleBlock className="mt-2.5 border-t border-black/[0.06]" size="small"
+          en={c.example_en} zh={c.example_zh}
+          audioUrl={c.example_audio_url} audioKey={`ke:${c.id}`} />
       )}
     </div>
   );

@@ -22,6 +22,7 @@ import { bankColor, CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA, readSelectedBan
 import { stopAudio } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, optionText, type QuizQuestion } from "@/lib/vocab/quiz";
+import { OptionGrid } from "@/components/vocab/OptionGrid";
 import { recordAnswer, type VocabMode } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal } from "@/components/vocab/SessionParts";
 import { HardestWords } from "@/components/vocab/Incentive";
@@ -281,27 +282,9 @@ export default function VocabMistakes() {
                 {q.word.headword}
               </h2>
             </div>
-            <div className="mt-3 space-y-2">
-              {q.options.map((opt, i) => {
-                const isAnswer = i === q.answerIndex;
-                const isPicked = picked === i;
-                const reveal = picked !== null;
-                return (
-                  <button key={i} type="button" onClick={() => choose(i)} disabled={reveal}
-                    className={cn(
-                      "flex min-h-[58px] w-full items-center gap-3 rounded-2xl border px-4 py-3 text-left text-[17px] leading-snug transition",
-                      !reveal && "border-black/[0.08] bg-white active:bg-slate-50",
-                      reveal && isAnswer && "border-emerald-300 bg-emerald-50 text-emerald-900",
-                      reveal && isPicked && !isAnswer && "border-rose-300 bg-rose-50 text-rose-900",
-                      reveal && !isAnswer && !isPicked && "border-black/[0.06] bg-white text-slate-400",
-                    )}>
-                    <span className="min-w-0 flex-1">{opt}</span>
-                    {reveal && isAnswer && <Check className="h-5 w-5 shrink-0 text-emerald-600" />}
-                    {reveal && isPicked && !isAnswer && <X className="h-5 w-5 shrink-0 text-rose-500" />}
-                  </button>
-                );
-              })}
-            </div>
+            {/* 共用件,短选项自动 2×2 */}
+            <OptionGrid options={q.options} answerIndex={q.answerIndex}
+              picked={picked} onPick={choose} />
             {picked !== null && (
               <Feedback word={q.word} correct={picked === q.answerIndex} onNext={next}
                 lastOne={idx + 1 >= qs.length}

@@ -530,6 +530,8 @@ function Essay({
   // 段落按空行切 —— 库里的短文是"引入/好处/弊端/结论"的多段结构,连成一坨没法读
   const paras = useMemo(() => en.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean), [en]);
   const parasZh = useMemo(() => zh.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean), [zh]);
+  /** 段数一致才逐段配对。见下方渲染处的注释:配错比不配更糟。 */
+  const pairable = paras.length > 0 && paras.length === parasZh.length;
 
   return (
     <div className="rounded-2xl border border-black/[0.06] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
@@ -549,28 +551,43 @@ function Essay({
         </button>
       </div>
 
+      {/* ── 译文**逐段紧跟**英文,不再"整篇英文 + 整篇中文"两大块 ──
+          这一处是五处里**唯一真的分两块**的(其余四处本来就贴着,只是不够紧凑)。
+          分两块的坏处很实在:读到第三段想对一下译文,要滚到下面数第三段。
+
+          ⚠️ 只有**段数一致**时才配对。段数对不上就退回两块 ——
+             硬配会让第 2 段英文配上第 3 段中文,那比分两块糟得多。
+             实测 30 个场景包的速览版/完整版段数**全部一致(30/30)**,
+             所以正常情况走的都是逐段配对;这条守卫是给将来新内容留的。 */}
       <div className="space-y-2.5" style={{ fontFamily: FONT_SERIF }}>
         {paras.map((p, i) => (
-          <p key={i} className="text-[15px] leading-[1.75] text-slate-800">
-            {segment(p).map((s, j) =>
-              s.itemId ? (
-                <button key={j} type="button" onClick={() => onTermClick(s.itemId as string)}
-                  className="rounded px-0.5 font-semibold underline decoration-dotted underline-offset-2"
-                  style={{ color: SCENE_COLOR, backgroundColor: `${SCENE_COLOR}14` }}>
-                  {s.text}
-                </button>
-              ) : (
-                <span key={j}>{s.text}</span>
-              ),
+          <div key={i}>
+            <p className="text-[15px] leading-[1.75] text-slate-800">
+              {segment(p).map((s, j) =>
+                s.itemId ? (
+                  <button key={j} type="button" onClick={() => onTermClick(s.itemId as string)}
+                    className="rounded px-0.5 font-semibold underline decoration-dotted underline-offset-2"
+                    style={{ color: SCENE_COLOR, backgroundColor: `${SCENE_COLOR}14` }}>
+                    {s.text}
+                  </button>
+                ) : (
+                  <span key={j}>{s.text}</span>
+                ),
+              )}
+            </p>
+            {showZh && pairable && (
+              /* 贴紧上一段:mt-1 + leading-snug,小一号灰字 —— 与 ExampleBlock 同一套观感 */
+              <p className="mt-1 text-[13px] leading-snug text-slate-500">{parasZh[i]}</p>
             )}
-          </p>
+          </div>
         ))}
       </div>
 
-      {showZh && (
+      {/* 段数对不上时的退路:整篇中文另起一块(改造前的老样子) */}
+      {showZh && !pairable && (
         <div className="mt-3 space-y-2 border-t border-black/[0.06] pt-3">
           {parasZh.map((p, i) => (
-            <p key={i} className="text-[14px] leading-[1.8] text-slate-500">{p}</p>
+            <p key={i} className="text-[14px] leading-snug text-slate-500">{p}</p>
           ))}
         </div>
       )}

@@ -27,7 +27,7 @@ import { recordAnswer, type VocabMode } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal } from "@/components/vocab/SessionParts";
 import { HardestWords } from "@/components/vocab/Incentive";
 import {
-  listMistakes, getWordsByIds, listBankWords, getBankByCode, currentUserId,
+  listMistakes, getWordsByIds, listBankWordsSample, getBankByCode, currentUserId,
   type MistakeRow, type VocabWord,
 } from "@/lib/vocab/data";
 
@@ -73,6 +73,18 @@ export default function VocabMistakes() {
   const [roundOver, setRoundOver] = useState(false);
   const [quotaHit, setQuotaHit] = useState(false);
   const topRef = useRef<HTMLDivElement | null>(null);
+  /**
+   * 「正在出题」态。⚠️ 这不是装饰:
+   * 改造前 `startRound` 在词池还没到位时是**静默 return** —— 点了什么都不发生,
+   * 用户只能连点。实测(SE,脏账号):按钮 1.9s 就出现了,但要到 8.9s 才出得了题,
+   * 中间那 7 秒里点几次都没反应。
+   * ⚠️ 所以修法有两半:一半是把池子缩小(见 load),另一半是**点了必须立刻有反应**,
+   *    即使数据没到也要显示"正在出题"而不是假装没被点。
+   */
+  const [starting, setStarting] = useState(false);
+  const [slow, setSlow] = useState(false);          // 超 1.5s 才补一句进度提示
+  /** 首次 load 的在飞 promise —— 点击时 await 它,而不是"没数据就 return"。 */
+  const loadingRef = useRef<Promise<void> | null>(null);
 
   const load = useCallback(async () => {
     try {
@@ -87,7 +99,9 @@ export default function VocabMistakes() {
         const bank = await getBankByCode(bankCode);
         const [words, bankPool] = await Promise.all([
           getWordsByIds(list.map(r => r.word_id)),
-          bank ? listBankWords(bank.id) : Promise.resolve([] as VocabWord[]),
+          /* ⚠️ 有界池,不是整库。原来这里是 listBankWords → 24 次分片、10.9 秒。
+             这一页只需要给 10 道题凑 30 个干扰项,400 个足够(见 data.ts 注释)。 */
+          bank ? listBankWordsSample(bank.id) : Promise.resolve([] as VocabWord[]),
         ]);
         const byId = new Map(words.map(w => [w.id, w]));
         setPool(bankPool.length ? bankPool : words);
@@ -110,7 +124,7 @@ export default function VocabMistakes() {
   }, [bankCode]);
   const [ordered, setOrdered] = useState<VocabWord[]>([]);
 
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { loadingRef.current = load(); }, [load]);
   useEffect(() => () => stopAudio(), []);
   /* 学习时长:做题期间累计活跃时长,切后台/失焦/久不操作自动暂停。
    * 挂在页面级而不是每道题 —— 时长是这一段时间在学,不是答了几题。 */
@@ -118,6 +132,24 @@ export default function VocabMistakes() {
 
   const active = rows ?? [];
   const byWordId = useMemo(() => new Map(active.map(r => [r.word_id, r])), [active]);
+
+  /**
+   * 点「开始闯关」的入口:**先给反馈,再等数据,最后出题**。
+   * ⚠️ 与 startRound 分开:startRound 是纯同步的"用现有数据出题",
+   *    这一层负责"数据还没到怎么办"。混在一起会让下一轮(答完继续)也去 await。
+   */
+  async function beginRound() {
+    if (starting) return;                       // 防连点
+    setStarting(true); setSlow(false);
+    const t = window.setTimeout(() => setSlow(true), 1500);
+    try {
+      await loadingRef.current;                 // 首次 load 还在飞就等它
+      startRound(1);
+    } finally {
+      window.clearTimeout(t);
+      setStarting(false); setSlow(false);
+    }
+  }
 
   function startRound(nextRoundNo: number) {
     /* 本轮取词:沿用 listMistakes 的排序(最久未清 → 错次多)。
@@ -217,11 +249,18 @@ export default function VocabMistakes() {
 
           {active.length > 0 && (
             <>
-              <button type="button" onClick={() => startRound(1)}
-                className="mb-4 w-full rounded-2xl px-5 py-3.5 text-[16px] font-semibold text-white"
+              {/* ⚠️ 点击后**立刻**进 loading 并禁用 —— 防连点,也让用户知道点上了。
+                  disabled 同时挡住"连点触发多轮 startRound"。 */}
+              <button type="button" onClick={() => void beginRound()} disabled={starting}
+                aria-busy={starting}
+                className="mb-1 w-full rounded-2xl px-5 py-3.5 text-[16px] font-semibold text-white disabled:opacity-80"
                 style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
-                开始闯关 · 本轮 {Math.min(ROUND, active.length)} 词
+                {starting ? "正在出题…" : `开始闯关 · 本轮 ${Math.min(ROUND, active.length)} 词`}
               </button>
+              {/* 超 1.5 秒才出,免得快的时候闪一下反而更吵 */}
+              <p className="mb-4 h-4 text-center text-[12px] text-slate-400">
+                {starting && slow ? "正在准备题目和干扰项,马上好…" : ""}
+              </p>
 
               <div className="space-y-2">
                 {active.map(r => {

@@ -490,7 +490,9 @@ export type MistakeRow = {
   last_wrong_mode: string | null;
   streak_days: number;
   last_streak_date: string | null;
-  updated_at: string | null;
+  /** ⚠️ 是 `entered_at` 不是 `updated_at` —— 这张表**没有** updated_at 列。
+   *    写错列名会让整条查询 400(42703),而 catch 一吞就变成「加载失败」。 */
+  entered_at: string | null;
 };
 
 /**
@@ -500,20 +502,27 @@ export type MistakeRow = {
  * 错次多说明难,但久不复习的词是真的在流失;难词多练一轮还在,忘掉的词就没了。
  * ⚠️ 一次拉完(有 vmb_active_idx 索引,且待清词本来就不该多),
  *    不做分批 —— 从"用户的少量记录"出发,别再犯反方向的错。
+ *
+ * ⚠️ **踩过(2026-08-09,线上一直坏着)**:这里原本 select/order 用的是 `updated_at`,
+ *    而 vocab_mistake_book **没有这一列** → 每次都 400(42703
+ *    "column vocab_mistake_book.updated_at does not exist")。
+ *    实际列是 `entered_at`(进错题本的时间),"最久未清在前"正好就是它升序。
+ *    为什么没人早发现:错题为 0 的用户同样 400,但调用方 catch 之后 list 为空、
+ *    渲染空态,**看起来是好的**;只有真有错题的用户才会看到「加载失败」。
  */
 export async function listMistakes(): Promise<MistakeRow[]> {
   const uid = await currentUserId();
   if (!uid) return [];
   const { data, error } = await db
     .from("vocab_mistake_book")
-    .select("word_id,headword_snapshot,wrong_total,last_wrong_mode,streak_days,last_streak_date,updated_at")
+    .select("word_id,headword_snapshot,wrong_total,last_wrong_mode,streak_days,last_streak_date,entered_at")
     .eq("user_id", uid)
     .eq("status", "active")
-    .order("updated_at", { ascending: true })
+    .order("entered_at", { ascending: true })
     .limit(500);
   if (error) throw error;
   return ((data || []) as MistakeRow[]).sort((a, b) => {
-    const da = a.updated_at ?? "", dbb = b.updated_at ?? "";
+    const da = a.entered_at ?? "", dbb = b.entered_at ?? "";
     if (da !== dbb) return da < dbb ? -1 : 1;          // 久未清在前
     return (b.wrong_total ?? 0) - (a.wrong_total ?? 0); // 同期则错次多在前
   });

@@ -17,7 +17,7 @@
  *
  * ── 页面三层,对应用户的动线 ──
  *   ① 我的状态:当前词库卡 → 学习进度(圆环/柱状)→ 错题本 + 今日复习  ← 看我在哪
- *   ② 学习方式:词卡练习 / 场景串记 / 磨耳朵 / 词汇量测试  ← 选今天怎么学
+ *   ② 学习方式:词卡练习 / 快筛 / 场景串记 / 磨耳朵 / 词汇量测试(整理中)  ← 选今天怎么学
  *   ③ 成就:周报 → 里程碑(全局)→ 我的数据四宫格 + 打卡月历  ← 看我攒了多少
  *   ⚠️ 场景串记原来是页面**最底部一条横幅**,层级是错的 —— 它是背单词的一种方式,
  *      不是词汇中心之外的附加功能。别再把它挪回底部。
@@ -35,7 +35,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AlertCircle, ArrowLeftRight, CalendarClock, Check, ChevronDown, ChevronRight,
-  Gauge, Headphones, Layers, Link2, Lock,
+  Filter, Gauge, Headphones, Layers, Link2, Lock,
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -584,6 +584,13 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
           /* 四模式入口在词库页;没选中库时不给链接(点进去是 /vocab/undefined) */
           to={bankCode ? `/vocab/${bankCode}` : undefined}
         />
+        {/* 快筛紧跟词卡练习:新用户的正确动线是"先摸清自己会哪些,再决定从哪学起"。
+            ⚠️ 文案不写"词汇量测试" —— 它测的是托福词表内部的掌握情况,不是绝对词汇量,
+               名字含糊会让用户拿这个数去对标四六级(那个算不出来,见 screening.ts)。 */}
+        <ModeCard
+          icon={<Filter className="h-[18px] w-[18px]" />}
+          name="快筛" desc="测测你已经会哪些" color={color} to="/vocab/screening"
+        />
         <ModeCard
           icon={<Link2 className="h-[18px] w-[18px]" />}
           name="场景串记" desc="把单词串成一篇作文"
@@ -594,7 +601,12 @@ function StudyModes({ bankCode, color }: { bankCode: string | null; color: strin
         {/* ⚰️「音标基础」「自然拼读」两行已移除(Aaron 2026-08-08 裁决:整条线撤销,
             PR #321/#323 关闭不合并)。别再加回来。
             ⚠️ 与**小学**板块的自然拼读(/primary 下的 PrimaryHubPhonics)无关,那个继续在。 */}
-        <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="测测你现在多少词" color={color} />
+        {/* ⚠️ 与上面的「快筛」不是一回事,文案必须把差别说清楚:
+            快筛 = 托福词表内部你认识哪些(已上线);
+            词汇量测试 = 绝对词汇量 + 跨考试对标(**整理中**)。
+            后者的前置是内容工程:导入通用词频表 + 中考/高考/四级/六级词表 ——
+            现在库里那几张表是 0 行,对标算不出来,所以不点亮。 */}
+        <ModeCard icon={<Gauge className="h-[18px] w-[18px]" />} name="词汇量测试" desc="跨考试对标 · 整理中" color={color} />
       </div>
     </>
   );

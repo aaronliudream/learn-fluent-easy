@@ -113,8 +113,8 @@ export function WordCardBody({ word, allowAutoplay = true }: { word: VocabWord; 
           audioUrl={ex.audio_url} audioKey={`e:${ex.id}`} label={ex.collocation} />
       ))}
 
-      {/* 词卡增区:高频搭配 / 易混词 / 反义词。**一处实现四处生效**,别在这里另拼。
-          ⚠️ 不传 onPickWord:答题过程中跳去看别的词会打断这一题。 */}
+      {/* 词卡增区:高频搭配 / 反义词。**一处实现多处生效**,别在这里另拼。
+          (「易混词」那一段已于 2026-08-09 整条下架) */}
       <WordExtras wordId={word.id} />
 
       {/* 自动朗读:总开关 + 读几条。两者并存 —— 开关管"要不要读",数量管"读几条"。

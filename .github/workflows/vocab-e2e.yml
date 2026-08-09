@@ -1,0 +1,114 @@
+# `/vocab` 全路径冒烟闸 —— 每个 PR 合并前至少有人(机器)打开过每一页。
+#
+# ★为什么需要★
+# 错题本从 PR-4 上线起一直是「加载失败 · 重试」,躺了几个月。事后复盘,漏洞不在
+# 技术上而在流程上:**没有任何一个环节会去打开它**。Aaron 验的是他刚提的需求,
+# CC 验的是刚改的文件 —— 错题本既不在任何一次需求里,也不在任何一次改动里。
+# 这道门换的就是这一句:每个 PR,14 条路径全部被真的打开一次。
+#
+# ★卡什么★
+# 只判三件事,判据全在 scripts/vocab/audit/e2e.mjs,CI 只负责保证它一定被执行:
+#   ① 能不能开(导航不超时、去掉全站壳之后正文不少于 40 字)
+#   ② 有没有 4xx/5xx(只看 /rest/v1/,即 PostgREST)
+#   ③ 有没有失败文案(「加载失败」「没能加载出来」「词库不存在」…)
+#
+# ★不卡什么★
+# 不判内容对不对、不判版式、不判掌握度算得准不准。那些靠单测 + 真机。
+# 这道门的价值在**广度**:一次覆盖 14 条路径,而不是深度。
+#
+# ★为什么打本地 preview 而不是 Vercel preview★
+#   · 不用等部署、不用 bypass token、不受部署保护 302 影响;
+#   · 时序确定(构建产物就在本 runner 上),不会"deploy 还没好就开跑";
+#   · 代价:测不到 Vercel 的重写/头部配置。那部分由真机验收兜。
+#
+# ★登录态★
+# 给了 VOCAB_E2E_EMAIL / VOCAB_E2E_PASS 两个 secret 才跑登录那一半。
+# **没配 = 少跑一半,脚本会大声打印出来**,不做成静默满分。
+# ⚠️ 那个账号应该是**脏的**(有错题/掌握度/收藏)。零数据账号只走空态分支,
+#    "空"和"坏"长得一样的 bug 它永远碰不到 —— 这是本板块体检的最大教训。
+#    现成的脏账号是 cc-audit2@bigmooneducation.com(造它的脚本 scripts/vocab/audit/seed.mjs)。
+#
+# ★两个静默失效点(与 typecheck.yml 同源,改本文件前必读)★
+#   1) 改下面 job 的 `name:` 会让分支保护静默失效 —— 保护规则绑的是
+#      `vocab-e2e-smoke` 这个字符串,不是 workflow 名。改名后规则指向一个
+#      不存在的检查 → "没有必需的检查" → PR 一路畅通。
+#   2) `pull_request` 事件跑的是 **PR 分支上的** workflow 文件。一个 PR 只要
+#      删掉/改弱本文件,这次 CI 就不再拦它,而分支保护仍显示"已通过"。
+#      → 任何改 `.github/workflows/` 的 PR 必须**人工看 diff**,不能只看绿灯。
+
+name: vocab-e2e
+
+on:
+  pull_request:
+    branches: [main]
+    # 只在动到词汇板块时跑 —— 全站每个 PR 都跑一遍 Playwright 太贵,
+    # 而这道门的判据本来就只覆盖 /vocab。
+    paths:
+      - 'src/pages/vocab/**'
+      - 'src/components/vocab/**'
+      - 'src/lib/vocab/**'
+      - 'src/components/charts/**'          # 成长图渲染层,词汇页在用
+      - 'scripts/vocab/audit/e2e.mjs'
+      - '.github/workflows/vocab-e2e.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/pages/vocab/**'
+      - 'src/components/vocab/**'
+      - 'src/lib/vocab/**'
+      - 'src/components/charts/**'
+
+concurrency:
+  group: vocab-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    # ⚠️ 见文件头 ①:这个 name 就是分支保护里要勾的 status check 名,改名 = 保护静默失效
+    name: vocab-e2e-smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      # 这两个值随前端 bundle 公开(anon key),用 repository **variables** 不用 secrets,
+      # 与 audio-audit.yml 同一套做法。缺了脚本会直接报错退出,不会假绿。
+      VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+      VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 安装 Chromium
+        # 只装 chromium:三个浏览器全装要多花两三分钟,而判据与浏览器无关
+        run: npx playwright install --with-deps chromium
+
+      - name: 构建
+        run: npm run build
+
+      - name: 起本地 preview 并等它真的能响应
+        # ⚠️ 不能只 sleep 一个固定秒数 —— 机器慢的时候会在服务器还没起来时开跑,
+        #    表现成"14 条全部导航超时",看起来像代码坏了。
+        run: |
+          npx vite preview --port 4173 --strictPort > /tmp/preview.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -sf -o /dev/null http://localhost:4173/; then echo "preview 就绪(第 ${i} 次探测)"; exit 0; fi
+            sleep 1
+          done
+          echo "✗ preview 60 秒内没起来"; cat /tmp/preview.log; exit 1
+
+      - name: 14 条路径冒烟
+        env:
+          BASE: http://localhost:4173
+          # 没配这两个 secret 时脚本只跑匿名那一半,并**打印出来说少跑了什么**
+          EMAIL: ${{ secrets.VOCAB_E2E_EMAIL }}
+          PASS: ${{ secrets.VOCAB_E2E_PASS }}
+        run: node scripts/vocab/audit/e2e.mjs

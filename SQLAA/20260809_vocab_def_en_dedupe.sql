@@ -19,6 +19,14 @@
 --   · 用户数据:掌握度/错题本按 word_id 存 → 一条都不受影响。
 --   · 前端:选项文本取 def_zh 分号前第一段(optionText),改完 ②~⑧ 七组首义项互不相同。
 --
+-- ══ 2026-08-09 第一次跑失败的原因(已修,记在这里别再犯)══════════
+--   第一版的 WHERE 写的是 `def_en = 'a claim that someone has...'`(全小写),
+--   而库里实际是**句首大写**的 `'A claim that someone has...'` ——
+--   16 条 UPDATE **一条都没匹配上**,断言照常拦住并整笔回滚(库里没有任何改动)。
+--   根因:我把探针**为了分组而小写归一化过**的展示值,当成精确匹配条件喂了回来。
+--   修法:比对一律走 `lower(btrim(def_en))`,对大小写与首尾空白免疫。
+--   ⚠️ 教训通用:**规范化只用于比较/分组,不能反向当成数据本身**。
+--
 -- ⚠️ 全部按 headword 定位并**双重限定当前 def_en**:
 --    如果某一条已经被别人改过,那一条就不会被匹配到(而不是覆盖掉别人的修订)。
 --    跑完看最后那段断言,它会告诉你实际改了几条。
@@ -47,79 +55,79 @@ UPDATE vocab_words SET
   def_en = 'plural of millennium; periods of one thousand years.',
   def_zh = '千年(millennium 的复数)',
   pos    = COALESCE(NULLIF(pos, ''), 'n.')          -- 它的 pos 是空的,顺手补上
-WHERE headword = 'millennia' AND def_en = 'a period of one thousand years.';
+WHERE headword = 'millennia' AND lower(btrim(def_en)) = 'a period of one thousand years.';
 
 -- ② satiric / satirical(同义,差在常用度)
 UPDATE vocab_words SET
   def_en = 'the same as satirical, but far less common and mostly used in literary criticism.',
   def_zh = '讽刺的(书面)'          -- Aaron 2026-08-09:括号太长会挤选项区,细节留在 def_en
-WHERE headword = 'satiric' AND def_en = 'using humor, irony, or exaggeration to criticize or mock.';
+WHERE headword = 'satiric' AND lower(btrim(def_en)) = 'using humor, irony, or exaggeration to criticize or mock.';
 
 -- ③ sporadic / intermittent(零散无规律 vs 停停走走)
 UPDATE vocab_words SET
   def_en = 'happening occasionally, at scattered and unpredictable times.',
   def_zh = '零星的；偶发的'
-WHERE headword = 'sporadic' AND def_en = 'occurring at irregular intervals; not continuous or steady.';
+WHERE headword = 'sporadic' AND lower(btrim(def_en)) = 'occurring at irregular intervals; not continuous or steady.';
 
 UPDATE vocab_words SET
   def_en = 'stopping and starting again repeatedly, often at fairly regular intervals.',
   def_zh = '间歇的；断断续续的'
-WHERE headword = 'intermittent' AND def_en = 'occurring at irregular intervals; not continuous or steady.';
+WHERE headword = 'intermittent' AND lower(btrim(def_en)) = 'occurring at irregular intervals; not continuous or steady.';
 
 -- ④ concomitant / simultaneous(伴随/因果 vs 纯时间重合)
 UPDATE vocab_words SET
   def_en = 'happening at exactly the same moment.',
   def_zh = '同时发生的'
-WHERE headword = 'simultaneous' AND def_en = 'occurring at the same time as something else.';
+WHERE headword = 'simultaneous' AND lower(btrim(def_en)) = 'occurring at the same time as something else.';
 
 UPDATE vocab_words SET
   def_en = 'naturally accompanying something else, often as a side effect of it.',
   def_zh = '伴随的；随之而来的'
-WHERE headword = 'concomitant' AND def_en = 'occurring at the same time as something else.';
+WHERE headword = 'concomitant' AND lower(btrim(def_en)) = 'occurring at the same time as something else.';
 
 -- ⑤ accusation / allegation(已证实 vs 尚未证实)
 UPDATE vocab_words SET
   def_en = 'a direct charge that someone has done something wrong.',
   def_zh = '指责；控告'
-WHERE headword = 'accusation' AND def_en = 'a claim that someone has done something illegal or wrong.';
+WHERE headword = 'accusation' AND lower(btrim(def_en)) = 'a claim that someone has done something illegal or wrong.';
 
 UPDATE vocab_words SET
   def_en = 'a claim of wrongdoing that has not yet been proved, typically in a legal or news context.',
   def_zh = '指称；(未经证实的)指控'
-WHERE headword = 'allegation' AND def_en = 'a claim that someone has done something illegal or wrong.';
+WHERE headword = 'allegation' AND lower(btrim(def_en)) = 'a claim that someone has done something illegal or wrong.';
 
 -- ⑥ annihilate / exterminate(宾语可以是任何东西 vs 必须是活的成群的)
 UPDATE vocab_words SET
   def_en = 'to destroy something completely, leaving nothing behind.',
   def_zh = '彻底摧毁；歼灭'
-WHERE headword = 'annihilate' AND def_en = 'to completely destroy or eliminate something.';
+WHERE headword = 'annihilate' AND lower(btrim(def_en)) = 'to completely destroy or eliminate something.';
 
 UPDATE vocab_words SET
   def_en = 'to kill off an entire population of living things, especially pests.',
   def_zh = '灭绝；根除(害虫等)'
-WHERE headword = 'exterminate' AND def_en = 'to completely destroy or eliminate something.';
+WHERE headword = 'exterminate' AND lower(btrim(def_en)) = 'to completely destroy or eliminate something.';
 
 -- ⑦ trifling / trivial(量少 vs 不重要)
 UPDATE vocab_words SET
   def_en = 'of little importance; not worth serious attention.',
   def_zh = '微不足道的；不重要的'
-WHERE headword = 'trivial' AND def_en = 'of little value or importance; insignificant.';
+WHERE headword = 'trivial' AND lower(btrim(def_en)) = 'of little value or importance; insignificant.';
 
 UPDATE vocab_words SET
   def_en = 'very small in amount or value, especially of a sum of money.',
   def_zh = '微薄的；(数额)极小的'
-WHERE headword = 'trifling' AND def_en = 'of little value or importance; insignificant.';
+WHERE headword = 'trifling' AND lower(btrim(def_en)) = 'of little value or importance; insignificant.';
 
 -- ⑧ nutritious / nourishing(成分客观描述 vs 滋养作用,后者可比喻)
 UPDATE vocab_words SET
   def_en = 'containing the nutrients the body needs.',
   def_zh = '有营养的'
-WHERE headword = 'nutritious' AND def_en = 'providing essential nutrients for growth and health.';
+WHERE headword = 'nutritious' AND lower(btrim(def_en)) = 'providing essential nutrients for growth and health.';
 
 UPDATE vocab_words SET
   def_en = 'giving the body what it needs to grow and stay healthy; also used figuratively of things that sustain the mind.',
   def_zh = '滋养的；养人的(也可比喻)'
-WHERE headword = 'nourishing' AND def_en = 'providing essential nutrients for growth and health.';
+WHERE headword = 'nourishing' AND lower(btrim(def_en)) = 'providing essential nutrients for growth and health.';
 
 SELECT '改后' AS 阶段, headword, pos, def_en, def_zh
 FROM vocab_words

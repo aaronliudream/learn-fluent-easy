@@ -448,12 +448,14 @@ const NodeRow = forwardRef<HTMLLIElement, NodeRowProps>(function NodeRow(
         </div>
 
         <div className="flex shrink-0 items-center gap-0.5">
-          <button type="button" onClick={() => playUrl(item.audio_url, item.id)}
-            disabled={!item.audio_url}
-            aria-label="朗读"
-            className={cn("rounded-full p-2 transition-colors", playing ? "bg-slate-100" : "active:bg-slate-100", !item.audio_url && "opacity-30")}>
-            <Volume2 className="h-[17px] w-[17px]" style={{ color: playing ? accent : "#94A3B8" }} />
-          </button>
+          {/* 没音频不渲染喇叭(同短文那条)。这一行右侧还有收藏按钮,少一个图标不影响对齐。 */}
+          {item.audio_url && (
+            <button type="button" onClick={() => playUrl(item.audio_url, item.id)}
+              aria-label="朗读"
+              className={cn("rounded-full p-2 transition-colors", playing ? "bg-slate-100" : "active:bg-slate-100")}>
+              <Volume2 className="h-[17px] w-[17px]" style={{ color: playing ? accent : "#94A3B8" }} />
+            </button>
+          )}
           <button type="button" onClick={onToggleFav} disabled={pending}
             aria-label={favorited ? "取消收藏" : "收藏"} aria-pressed={favorited}
             className="rounded-full p-2 active:bg-slate-100">
@@ -540,13 +542,23 @@ function Essay({
         <span className="text-[12px] text-slate-400" style={{ fontVariantNumeric: "tabular-nums" }}>
           {countWords(en)} 词
         </span>
-        <button type="button" onClick={() => playUrl(audioUrl, audioKey)} disabled={!audioUrl}
-          aria-label="朗读短文"
-          className={cn("ml-auto rounded-full p-1.5", playing ? "bg-slate-100" : "active:bg-slate-100", !audioUrl && "opacity-30")}>
-          <Volume2 className="h-[16px] w-[16px]" style={{ color: playing ? SCENE_COLOR : "#94A3B8" }} />
-        </button>
+        {/* ⚠️ 没音频就**整个不渲染**,不留一个 30% 透明度的死按钮。
+            用户点了没反应,只会以为"坏了",而不会想到"这篇没配音"。
+            实测(2026-08-09):30 个场景包里只有「租房搬家」两篇为空 ——
+            那是改冠词(a apartment → an apartment)时按"改英文就作废旧音频"主动置空的,
+            重烧之前这里就该什么都不显示。
+            ⚠️ `ml-auto` 原来挂在喇叭上;喇叭一藏,「看译文」就不再靠右了。
+               所以把 ml-auto 交给下一个元素 —— 这类"隐藏一个元素顺带打断布局"
+               是隐藏类改动最容易漏的地方。 */}
+        {audioUrl && (
+          <button type="button" onClick={() => playUrl(audioUrl, audioKey)}
+            aria-label="朗读短文"
+            className={cn("ml-auto rounded-full p-1.5", playing ? "bg-slate-100" : "active:bg-slate-100")}>
+            <Volume2 className="h-[16px] w-[16px]" style={{ color: playing ? SCENE_COLOR : "#94A3B8" }} />
+          </button>
+        )}
         <button type="button" onClick={() => setShowZh(v => !v)}
-          className="rounded-full border border-black/[0.08] px-2.5 py-1 text-[12px] text-slate-500">
+          className={cn("rounded-full border border-black/[0.08] px-2.5 py-1 text-[12px] text-slate-500", !audioUrl && "ml-auto")}>
           {showZh ? "隐藏译文" : "看译文"}
         </button>
       </div>

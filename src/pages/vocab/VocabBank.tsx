@@ -473,10 +473,17 @@ function Row({ word, open, first, color, onToggle }: { word: VocabWord; open: bo
   const hasMore = (word.def_zh || "").includes("；");
   return (
     <div className={cn("flex h-[68px] items-center gap-3 px-4", !first && "border-t border-black/[0.06]")}>
-      <button type="button" onClick={e => { e.stopPropagation(); playUrl(word.audio_url, key); }}
-        disabled={!word.audio_url} aria-label={`朗读 ${word.headword}`} className="shrink-0 rounded-full p-1.5">
-        <Volume2 className={cn("h-[18px] w-[18px]", playing === key ? "text-slate-900" : word.audio_url ? "text-slate-300" : "text-slate-200")} />
-      </button>
+      {/* ⚠️ 没音频不画喇叭,但**留一个同尺寸占位** —— 这是长列表,
+          直接不渲染会让缺音频那几行的词头左移一格,整列参差。
+          (与场景那两处不同:那两处是单个卡片内部,少一个图标没有对齐问题。) */}
+      {word.audio_url ? (
+        <button type="button" onClick={e => { e.stopPropagation(); playUrl(word.audio_url, key); }}
+          aria-label={`朗读 ${word.headword}`} className="shrink-0 rounded-full p-1.5">
+          <Volume2 className={cn("h-[18px] w-[18px]", playing === key ? "text-slate-900" : "text-slate-300")} />
+        </button>
+      ) : (
+        <span className="shrink-0 p-1.5" aria-hidden><span className="block h-[18px] w-[18px]" /></span>
+      )}
       <button type="button" onClick={onToggle} className="flex min-w-0 flex-1 items-center gap-3 text-left">
         <span className="min-w-0 flex-1">
           <span className="block truncate text-[18px] text-slate-900" style={{ fontFamily: FONT_SERIF, fontWeight: 600 }}>

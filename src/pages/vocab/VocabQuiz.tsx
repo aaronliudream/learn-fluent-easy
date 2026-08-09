@@ -160,11 +160,17 @@ export default function VocabQuiz({ mode = "bank" }: { mode?: "bank" | "review" 
               <h1 className="text-slate-900" style={{ fontFamily: FONT_SERIF, fontSize: "clamp(32px, 10vw, 40px)", fontWeight: 600, lineHeight: 1.1 }}>
                 {q.word.headword}
               </h1>
-              <button type="button" onClick={() => playUrl(q.word.audio_url, `w:${q.word.id}`)}
-                disabled={!q.word.audio_url} aria-label="朗读"
-                className="mt-1 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[13px] text-slate-500">
-                <Volume2 className="h-4 w-4" />{q.word.ipa}
-              </button>
+              {/* ⚠️ 这个控件**同时承载音标** —— 没音频时不能整个不渲染(音标会跟着没了),
+                  降级成不带喇叭的纯文本。有音标没音频的词是存在的。 */}
+              {q.word.audio_url ? (
+                <button type="button" onClick={() => playUrl(q.word.audio_url, `w:${q.word.id}`)}
+                  aria-label="朗读"
+                  className="mt-1 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[13px] text-slate-500">
+                  <Volume2 className="h-4 w-4" />{q.word.ipa}
+                </button>
+              ) : q.word.ipa ? (
+                <span className="mt-1 inline-flex items-center rounded-full px-2.5 py-0.5 text-[13px] text-slate-500">{q.word.ipa}</span>
+              ) : null}
             </div>
 
             {/* 选项区已抽成共用件 OptionGrid(短选项自动 2×2,长的退回单列)。

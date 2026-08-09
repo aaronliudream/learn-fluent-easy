@@ -24,6 +24,7 @@ import { startTracking } from "@/lib/vocab/timeTracker";
 import { fallback, logFail } from "@/lib/vocab/report";
 import { ExampleBlock } from "@/components/vocab/ExampleBlock";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
+import { dedupeTake } from "@/lib/vocab/quiz";
 import {
   listExpressions, listFavorites, toggleFavorite, EXPR_GROUPS, REGISTER_LABEL,
   type CnExpression, type Register,
@@ -147,7 +148,10 @@ export default function VocabExpressions() {
     const flat = all.flatMap(e => e.renditions.filter(r => r.register).map(r => ({ e, r })));
     return shuffle(flat).slice(0, 10).map(({ e, r }) => {
       const pool = flat.filter(x => x.r.id !== r.id && x.r.register === r.register);
-      const distractors = shuffle(pool).slice(0, 3).map(x => x.r.rendition);
+      /* 走共用件 dedupeTake —— 内含"同族不同框"。中文这样说尤其需要:
+         同一个中文意图下的几种说法本来就相近(I'm not sure / I'm not really sure),
+         直接 slice 很容易把两个近乎一样的说法排在一起。 */
+      const distractors = dedupeTake(shuffle(pool).map(x => x.r.rendition), r.rendition, 3);
       return {
         tag: `${REGISTER_LABEL[r.register as Register]}场合`,
         stem: `「${e.cn_phrase}」这时候英文怎么说?`,

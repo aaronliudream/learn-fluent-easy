@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
-import { FONT_SERIF, SCENE_COLOR } from "@/lib/vocab/theme";
+import { FONT_SERIF, readSelectedBank, SCENE_COLOR } from "@/lib/vocab/theme";
 import { isChaining, playChain, playUrl, stopAudio, subscribePlaying } from "@/lib/vocab/audio";
 import { buildSceneHighlighter, splitContrast, type SceneSeg, type SceneTerm } from "@/lib/vocab/sceneHighlight";
 import {
@@ -437,7 +437,7 @@ const NodeRow = forwardRef<HTMLLIElement, NodeRowProps>(function NodeRow(
 
           {/* 挂了 word_id 的才给跳词卡入口 —— 生活高频词多数不在托福词表里,挂不上属正常 */}
           {item.word_id && !cloze && (
-            <Link to={`/vocab/toefl?word=${encodeURIComponent(item.text_en)}`}
+            <Link to={`/vocab/${readSelectedBank() || "toefl"}?word=${encodeURIComponent(item.text_en)}`}
               className="mt-1 inline-block text-[12px] font-medium" style={{ color: SCENE_COLOR }}>
               查看词卡 →
             </Link>

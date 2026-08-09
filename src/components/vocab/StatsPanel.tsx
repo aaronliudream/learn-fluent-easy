@@ -188,8 +188,10 @@ export default function StatsPanel({
       {/* 成长图单独一行,不再和进度卡挤在一起(Aaron 2026-08-09)。
           它回答的是"这几天有没有在往前走",与上面的存量分布是两个问题,
           共处一张卡里、还共用一个切换器,只会让两个都说不清。 */}
+      {/* ⚠️ 这张卡**不给标题**(Aaron 2026-08-09):图内左上角已经有
+          「词汇成长 · 本周新掌握 +N」那一行,再加一个「每日成长」大标题
+          就是同一件事说两遍,还白占一行高度。 */}
       <div className={cn(shell, "mt-3")}>
-        <h2 className={cn("text-[16px] font-semibold text-slate-900", compact ? "mb-3" : "mb-4")}>每日成长</h2>
         <VocabGrowth wordIds={growthWordIds} />
       </div>
     </>

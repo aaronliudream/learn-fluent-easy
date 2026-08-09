@@ -18,7 +18,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AlertCircle, Check, Printer, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
-import { bankColor, CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
+import { bankColor, CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA, readSelectedBank } from "@/lib/vocab/theme";
 import { stopAudio } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, optionText, type QuizQuestion } from "@/lib/vocab/quiz";
@@ -48,7 +48,11 @@ function StreakDots({ n }: { n: number }) {
 
 export default function VocabMistakes() {
   const navigate = useNavigate();
-  const color = bankColor("toefl");
+  /* ⚠️ 跟随当前所选词库,**不许写死 toefl**。
+     错题本本身是跨库的(listMistakes 不带 bank 过滤,错题按 word_id 存),
+     但身份色和下面的干扰项池必须跟着用户此刻在学的库走。 */
+  const bankCode = readSelectedBank() || "toefl";
+  const color = bankColor(bankCode);
 
   const [rows, setRows] = useState<MistakeRow[] | null>(null);
   const [pool, setPool] = useState<VocabWord[]>([]);
@@ -77,7 +81,9 @@ export default function VocabMistakes() {
       if (list.length) {
         /* 干扰项要从**整个词库**抽,不能只从错题里抽 ——
          * 只从错题抽的话,选项全是自己做错过的词,难度失真且很快就眼熟。 */
-        const bank = await getBankByCode("toefl");
+        /* ⚠️ 干扰项池跟随当前词库。写死 toefl 的话,四级库上线后用户做四级错题,
+           四个选项里三个是托福词 —— 难度和语感全错位。 */
+        const bank = await getBankByCode(bankCode);
         const [words, bankPool] = await Promise.all([
           getWordsByIds(list.map(r => r.word_id)),
           bank ? listBankWords(bank.id) : Promise.resolve([] as VocabWord[]),

@@ -16,6 +16,7 @@ import { FONT_SERIF } from "@/lib/vocab/theme";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
 import { highlightSegments, HILITE } from "@/lib/vocab/highlight";
 import type { VocabWord, VocabExample } from "@/lib/vocab/data";
+import WordExtras from "@/components/vocab/WordExtras";
 
 type Props = {
   word: VocabWord;
@@ -141,6 +142,10 @@ export default function WordCard({ word, examples, hideExamples, defMode = "zh",
           })}
         </div>
       )}
+
+      {/* 词卡增区 —— 与答题反馈层**同一个组件**(见 WordExtras 文件头)。
+          ⚠️ hideExamples 的测试模式下不出:那一屏刻意只给词头,增区会泄题。 */}
+      {!hideExamples && <WordExtras wordId={word.id} />}
     </article>
   );
 }

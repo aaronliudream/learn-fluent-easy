@@ -16,6 +16,7 @@ import { CTA_SHADOW, FONT_SERIF, FONT_STAT, GRAD_CTA } from "@/lib/vocab/theme";
 import { playChain, playUrl } from "@/lib/vocab/audio";
 import { readAutoplay, readAutoplayCount, writeAutoplay, writeAutoplayCount, type AutoplayCount } from "@/lib/vocab/quiz";
 import { listExamples, type VocabExample, type VocabWord } from "@/lib/vocab/data";
+import WordExtras from "@/components/vocab/WordExtras";
 
 /**
  * 词卡卡体 —— **反馈层的唯一实现**,由英汉选择/听音辨义/听写挑战/错题本闯关四处共用。
@@ -114,6 +115,10 @@ export function WordCardBody({ word, allowAutoplay = true }: { word: VocabWord; 
           <p className="mt-1 pl-6 text-[13px] leading-relaxed text-slate-500">{ex.translation_zh}</p>
         </div>
       ))}
+
+      {/* 词卡增区:高频搭配 / 易混词 / 反义词。**一处实现四处生效**,别在这里另拼。
+          ⚠️ 不传 onPickWord:答题过程中跳去看别的词会打断这一题。 */}
+      <WordExtras wordId={word.id} />
 
       {/* 自动朗读:总开关 + 读几条。两者并存 —— 开关管"要不要读",数量管"读几条"。
           ⚠️ allowAutoplay=false 的列表场景整组不渲染:这两个是**全局**设置,

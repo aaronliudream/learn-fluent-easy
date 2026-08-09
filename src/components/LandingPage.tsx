@@ -36,6 +36,16 @@ type CourseCardData = {
   spanFull?: boolean;
   /** true = 标题/副文案/去学习整体提一档。全宽卡文字相对卡宽偏小,放大后更好读。 */
   emphasis?: boolean;
+  /**
+   * true = **整卡居中版式**:图标 → 大标题 → 副标题 → 说明 → 标签 → 去学习,全部水平居中。
+   *
+   * ⚠️ 目前**只有词汇卡开**(Aaron 2026-08-09:先看这一张的效果,好再统一)。
+   *    别顺手给别的卡打开 —— 首页四张卡现在是左对齐的一套版式,
+   *    一次只改一张才看得出是不是变好了。
+   * ⚠️ 居中卡**不画左上角那个小图标**:图标下移到标题正上方、与标题同一垂直轴,
+   *    两处都画就成了一张卡两个图标。右上角 badge 保留(它是角标不是内容)。
+   */
+  centered?: boolean;
 };
 
 /** 入口卡:前 4 张学段卡(桌面 2×2,行优先自然排 → 左列 小学/高中,右列 初中/美语),
@@ -96,15 +106,20 @@ const COURSE_CARDS: CourseCardData[] = [
   {
     // 词汇入口(/vocab)。按考试分的词库,与图书馆的"收藏生词"不是一回事。
     // ⚠️ 文案里不写词数/库数 —— 那些数字只活在 DB 里,写死必然长歪(见 qa:cards 的铁律)。
+    // ⚠️ 标题 2026-08-09 由「考试词汇」改为「词汇学习」(Aaron):
+    //    这一版把托福/中考/高考都收进来了,"考试"限定得太窄;
+    //    而且板块里已经有磨耳朵、词块、场景串记这些不为考试服务的练法。
+    //    全仓当时只有这一处写着「考试词汇」(导航/面包屑/meta/sitemap 都没有),已扫过。
     to: "/vocab",
     icon: SpellCheck,
-    title: "考试词汇",
+    title: "词汇学习",
     desc: "中考到托福 · 例句带发音",
     tag: "全学段",
     gradient: "linear-gradient(135deg, #1b2a4a 0%, #2f4d7a 55%, #e2600f 150%)",
     badge: "词汇",
     spanFull: true,
     emphasis: true,
+    centered: true,     // 只此一张,见 CourseCardData.centered 注释
   },
 ];
 
@@ -146,10 +161,15 @@ function CourseCard({
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/50 to-slate-900/20" />
 
       <div className="relative z-10 flex h-full flex-col p-4 text-white">
-        <div className="flex items-start justify-between gap-2">
-          <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
-            <Icon className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
-          </span>
+        {/* 顶行。居中卡这里**只留右上角 badge** —— 图标下移到标题正上方,
+            两处都画会变成一张卡两个图标(见 CourseCardData.centered)。
+            用 justify-end 而不是删掉整行:badge 的位置在两种版式下必须一致。 */}
+        <div className={`flex items-start gap-2 ${c.centered ? "justify-end" : "justify-between"}`}>
+          {!c.centered && (
+            <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
+              <Icon className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
+            </span>
+          )}
           {c.badge && (
             <span className="rounded-full bg-black/30 px-2 py-0.5 text-[10px] font-medium backdrop-blur-sm">
               {c.badge}
@@ -157,8 +177,30 @@ function CourseCard({
           )}
         </div>
 
-        <div className="mt-auto space-y-1.5">
-          <h3 className={`font-bold leading-snug ${c.emphasis ? "text-[19px]" : "text-[15px]"}`}>
+        {/* 左对齐版:mt-auto 把内容压到卡底(原样保留)。
+            居中版:my-auto 让整块在上下留白里居中 —— 只居中标题、正文仍靠底
+            会出现"标题居中、正文左对齐"那种割裂感,Aaron 明确要整卡一致。 */}
+        <div className={
+          c.centered
+            ? "my-auto flex flex-col items-center space-y-2 text-center"
+            : "mt-auto space-y-1.5"
+        }>
+          {/* 居中卡的图标:与标题同一垂直轴,尺寸提一档撑住那片留白(要求 5)。 */}
+          {c.centered && (
+            <span className="inline-flex size-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+              <Icon className="size-6 shrink-0" strokeWidth={2.2} aria-hidden />
+            </span>
+          )}
+          {/* 标题字号:居中卡放大到左对齐版(19px)的 2~2.5 倍。
+              ⚠️ 手机 38px / 电脑 46px,**不做 5 倍** —— 那会占掉大半张卡、
+                 把说明文字挤没,也和其余三张卡完全脱节(Aaron 2026-08-09 定)。
+              ⚠️ 手机最窄 375px 时卡内可用宽约 311px,「词汇学习」4 字 ×38px ≈ 152px,装得下。
+                 换更长的标题前先重新量,别想当然。 */}
+          <h3 className={
+            c.centered
+              ? "text-[38px] font-bold leading-tight tracking-tight sm:text-[46px]"
+              : `font-bold leading-snug ${c.emphasis ? "text-[19px]" : "text-[15px]"}`
+          }>
             <T>{c.title}</T>
           </h3>
           <p className={`leading-relaxed text-white/85 ${c.emphasis ? "text-sm" : "text-xs"}`}>
@@ -169,6 +211,7 @@ function CourseCard({
               <T>{c.coverage}</T>
             </p>
           )}
+          {/* w-fit 在居中容器里靠 items-center 自然居中,不用改成 mx-auto */}
           <span className={`inline-block w-fit rounded-md bg-white/15 px-2 py-0.5 font-semibold text-white/90 ${c.emphasis ? "text-[11px]" : "text-[10px]"}`}>
             {c.tag}
           </span>
@@ -229,7 +272,12 @@ export default function LandingPage() {
                 c={c}
                 admin={isAdmin}
                 className={c.spanFull ? "sm:col-span-2" : ""}
-                heightClass={c.spanFull ? "min-h-[160px]" : "min-h-[200px]"}
+                /* ⚠️ 居中卡要更高:38-46px 的标题 + 上方图标塞不进 160px,
+                   硬塞会把「去学习」挤出卡外。只加高**这一张**,其余三张原样。 */
+                heightClass={
+                  c.centered ? "min-h-[248px] sm:min-h-[268px]"
+                    : c.spanFull ? "min-h-[160px]" : "min-h-[200px]"
+                }
               />
             ))}
           </div>

@@ -32,9 +32,13 @@ function prefersReduced(): boolean {
   try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch { return false; }
 }
 
-/** 未开始那条的灰 / 汇总行的中性色。抽成常量,免得两处各写一个色号慢慢漂开。 */
-const GREY_UNTOUCHED = "#CBD5E1";
-const GREY_TOTAL = "#94A3B8";
+/** 未开始那条的灰 / 汇总行的中性色。抽成常量,免得两处各写一个色号慢慢漂开。
+ *  ⚠️ 别再调浅:轨道是 rgba(0,0,0,0.05)(在白卡上约 rgb(242,242,242))。
+ *     原来用 slate-300 #CBD5E1,一条 100% 的灰条和空轨道肉眼几乎分不出来 ——
+ *     用户看到的是"这一行没有数据",而不是"这一行是满的"。
+ *     现在 slate-400 / slate-500,与轨道拉开足够对比。 */
+const GREY_UNTOUCHED = "#94A3B8";
+const GREY_TOTAL = "#64748B";
 /** 0 值时的最小可见宽度 */
 const MIN_BAR_PX = 3;
 
@@ -98,7 +102,15 @@ export default function StatsPanel({
   const [shown, setShown] = useState(false);
   const boxRef = useRef<HTMLDivElement | null>(null);
 
+  /* ⚠️ 依赖里必须有 loading。
+   *    loading 时组件**提前 return 骨架屏**,boxRef 压根没挂上,
+   *    这个 effect 拿到 null 就走了;依赖写成 [] 的话 loading 变 false 后
+   *    它不会重跑,shown 永远停在 false ——
+   *    表现是**四条进度条全部停在 3px 的保底宽度**,数据全对但一条都没画出来。
+   *    截图上还很难看出来:浅灰填充和浅灰轨道几乎同色,肉眼以为"就是这样"。
+   *    是量了 getComputedStyle 的实际 width 才抓到的。 */
   useEffect(() => {
+    if (loading) return;                    // 骨架屏阶段没有 ref 可观察,等它过去
     const el = boxRef.current;
     if (!el) return;
     if (prefersReduced()) { setShown(true); return; }
@@ -110,7 +122,7 @@ export default function StatsPanel({
       io.observe(el);
     } catch { setShown(true); }
     return () => io?.disconnect();
-  }, []);
+  }, [loading]);
 
   const total = Math.max(0, mastered + learning + untouched);
   const isEmpty = mastered === 0 && learning === 0;

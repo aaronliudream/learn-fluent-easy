@@ -30,6 +30,7 @@ import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import { FONT_SERIF, readSelectedBank, SCENE_COLOR } from "@/lib/vocab/theme";
 import { isChaining, playChain, playUrl, stopAudio, subscribePlaying } from "@/lib/vocab/audio";
+import { fallback, logFail } from "@/lib/vocab/report";
 import { buildSceneHighlighter, splitContrast, type SceneSeg, type SceneTerm } from "@/lib/vocab/sceneHighlight";
 import {
   countWords, getNextUnlearnedScene, getScenePack, listSceneFavorites, listSceneItems,
@@ -96,11 +97,13 @@ export default function VocabSceneDetail() {
         setState("ok");
 
         // 收藏态和「下一场景」都不该拦住正文渲染,失败就当没有
-        listSceneFavorites(its).then(f => { if (alive) setFavorites(f); }).catch(() => { /* 未登录/读失败:不显示收藏态 */ });
+        listSceneFavorites(its).then(f => { if (alive) setFavorites(f); })
+          .catch(fallback("VocabSceneDetail/listSceneFavorites", undefined));   // 未登录/读失败:不显示收藏态
         getNextUnlearnedScene(p.id)
           .then(r => { if (alive) { setNext(r.next); setSceneTotal(r.total); } })
-          .catch(() => { /* 取不到就退回列表入口 */ });
-      } catch {
+          .catch(fallback("VocabSceneDetail/getNextUnlearnedScene", undefined));   // 取不到就退回列表入口
+      } catch (e) {
+        logFail("VocabSceneDetail/load", e);
         if (alive) setState("error");
       }
     })();

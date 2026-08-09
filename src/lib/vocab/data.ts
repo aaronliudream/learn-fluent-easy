@@ -12,6 +12,7 @@
  *    现在托福库 198 词看不出问题,放量到 4471 词时裸查会**静默截断**,查都难查。
  */
 import { supabase } from "@/integrations/supabase/client";
+import { fallback } from "@/lib/vocab/report";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const db = supabase as any;
@@ -282,7 +283,10 @@ export async function getWordStatusMap(wordIds: string[]): Promise<Record<string
    *    和 getBankProgressFast 是同一个方向错误:该从"用户的少量记录"出发,
    *    不该从"词库的全量词"出发。上次只修了那一处,没回头扫同类,这次补上。 */
   const want = new Set(wordIds);
-  const all = await listMasteryRows().catch(() => [] as MasteryRow[]);
+  /* ⚠️ 取不到就当"全是新词"是**正确降级**(页面照常能用),但绝不能悄悄降级:
+   *    掌握度整个取不到时,词表会把已掌握的词全画成"待学习",
+   *    用户看到的是"我的进度没了",而控制台一个字都没有。记一行才查得动。 */
+  const all = await listMasteryRows().catch(fallback("data/getWordStatusMap:listMasteryRows", [] as MasteryRow[]));
   const rows = all.filter(r => want.has(r.word_id));
   for (const r of rows) {
     map[r.word_id] = isMasteredRow(r) ? "mastered" : ((r.tested_count ?? 0) > 0 ? "learning" : "new");

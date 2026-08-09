@@ -25,6 +25,7 @@ import {
   axisKeys, bjToday as bjTodayOf, bucketOf, GRAN, mondayOf, type RangeKey,
 } from "@/lib/charts/growthBuckets";
 import { isMasteredRow, listMasteryRows, type MasteryRow } from "@/lib/vocab/data";
+import { logFail } from "@/lib/vocab/report";
 
 const BLUE = "#3B82F6";   // 新增
 const ORANGE = "#F59E0B"; // 复习
@@ -33,12 +34,21 @@ const GREEN = "#22C55E";  // 掌握
 export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
   const [range, setRange] = useState<RangeKey>("1W");
   const [rows, setRows] = useState<MasteryRow[]>([]);
+  /**
+   * 取失败。**这一态原来是被当成"空"处理的** —— `catch(() => setRows([]))`
+   * 之后图是空的,于是打出 emptyHint「开始学习后这里会记录你的成长」。
+   * 对一个学了三个月的用户说这句话,就是把"坏"讲成了"空"。
+   */
+  const [failed, setFailed] = useState(false);
   const today = bjTodayOf();
   const g = GRAN[range];
 
   useEffect(() => {
     let alive = true;
-    listMasteryRows(wordIds).then(r => { if (alive) setRows(r); }).catch(() => { if (alive) setRows([]); });
+    setFailed(false);
+    listMasteryRows(wordIds)
+      .then(r => { if (alive) setRows(r); })
+      .catch(e => { logFail("VocabGrowth/listMasteryRows", e); if (alive) { setRows([]); setFailed(true); } });
     return () => { alive = false; };
   }, [wordIds]);
 
@@ -99,7 +109,10 @@ export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
       range={range}
       onRange={setRange}
       headerRight={
-        weekMastered > 0 ? (
+        failed ? (
+          /* 失败时右上角**不写「+0」** —— 那是一个具体的数字断言,而我们没有数字 */
+          <span className="text-[13px] text-slate-400">本周新掌握 —</span>
+        ) : weekMastered > 0 ? (
           <span className="text-[13px] font-semibold text-emerald-600" style={{ fontVariantNumeric: "tabular-nums" }}>
             本周新掌握 +{weekMastered}
           </span>
@@ -111,7 +124,9 @@ export default function VocabGrowth({ wordIds }: { wordIds?: string[] }) {
         const b = data.get(k);
         return [b?.added ?? 0, b?.reviewed ?? 0, b?.mastered ?? 0];
       }}
-      emptyHint="开始学习后这里会记录你的成长"
+      /* ⚠️ 空态与失败态**说两句不同的话**。同一句「开始学习后…」两边都用,
+         就等于告诉学了三个月的用户"你还没开始",而真相是这次没取到。 */
+      emptyHint={failed ? "成长数据没能加载 —— 不是没有记录,是这次没取到" : "开始学习后这里会记录你的成长"}
     />
   );
 }

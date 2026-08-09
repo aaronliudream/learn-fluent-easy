@@ -20,12 +20,13 @@ import { cn } from "@/lib/utils";
 import { bankColor } from "@/lib/vocab/theme";
 import { playUrl, stopAudio } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
+import { fallback } from "@/lib/vocab/report";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { AnonNote, Feedback, Progress, QuotaModal, Result } from "@/components/vocab/SessionParts";
 import {
   getBankByCode, listBankWords, listExamples, getWordStatusMap, currentUserId,
-  type VocabBank, type VocabWord, type WordStatus,
+  type VocabBank, type VocabExample, type VocabWord, type WordStatus,
 } from "@/lib/vocab/data";
 
 const ROUND = 10;
@@ -69,7 +70,9 @@ export default function VocabListen() {
       // 有音频的词才可能出题 —— 单词模式看词音频,短语模式看例句音频(下面再筛)
       const audible = pool.filter(w => w.audio_url && optionText(w, "zh"));
       if (audible.length < 4) { setState("empty"); return; }
-      const statuses = await getWordStatusMap(audible.map(w => w.id)).catch(() => ({} as Record<string, WordStatus>));
+      /* 与 VocabQuiz/VocabSpell/VocabMatch 同一处病因:退化成"未学优先失效",用户无感 → 补日志 */
+      const statuses = await getWordStatusMap(audible.map(w => w.id))
+        .catch(fallback("VocabListen/getWordStatusMap", {} as Record<string, WordStatus>));
       const fresh = audible.filter(w => (statuses[w.id] ?? "new") === "new");
       const rest = audible.filter(w => (statuses[w.id] ?? "new") !== "new");
       const targets = shuffle([...fresh, ...rest].slice(0, ROUND * 3), seed).slice(0, ROUND);
@@ -87,7 +90,8 @@ export default function VocabListen() {
         }).filter(Boolean) as Q[];
       } else {
         // 短语模式要例句音频:逐词取例句,只留有音频的那条
-        const rows = await Promise.all(targets.map(w => listExamples(w.id).catch(() => [])));
+        const rows = await Promise.all(targets.map(w =>
+        listExamples(w.id).catch(fallback("VocabListen/listExamples", [] as VocabExample[]))));
         const pairs = targets.map((w, i) => ({ w, ex: rows[i].find(e => e.audio_url) })).filter(p => p.ex);
         const allTr = pairs.map(p => p.ex!.translation_zh);
         built = pairs.map(({ w, ex }, i) => {

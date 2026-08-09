@@ -19,6 +19,7 @@ import { bankColor, FONT_SERIF } from "@/lib/vocab/theme";
 import { optionText } from "@/lib/vocab/quiz";
 import { recordAnswer } from "@/lib/vocab/vocabMastery";
 import { playUrl } from "@/lib/vocab/audio";
+import { fallback } from "@/lib/vocab/report";
 import { AnonNote, QuotaModal, Result, WordCardBody } from "@/components/vocab/SessionParts";
 import {
   getBankByCode, listBankWords, getWordStatusMap, currentUserId,
@@ -67,7 +68,9 @@ export default function VocabMatch() {
       setBank(b);
       const [pool, uid] = await Promise.all([listBankWords(b.id), currentUserId()]);
       setAnon(!uid);
-      const statuses = await getWordStatusMap(pool.map(w => w.id)).catch(() => ({} as Record<string, WordStatus>));
+      /* 同 VocabQuiz:退化成"挑词口径失效",用户无感 → 补日志,不做失败态 UI */
+      const statuses = await getWordStatusMap(pool.map(w => w.id))
+        .catch(fallback("VocabMatch/getWordStatusMap", {} as Record<string, WordStatus>));
       // 优先没学过的,和英汉选择同一套挑词口径
       const usable = pool.filter(w => optionText(w, "zh"));
       const fresh = usable.filter(w => (statuses[w.id] ?? "new") === "new");

@@ -13,6 +13,7 @@ import {
   type StudyDay, type UserStats,
 } from "@/lib/vocab/stats";
 import { listMistakes, type MistakeRow } from "@/lib/vocab/data";
+import { fallback, logFail } from "@/lib/vocab/report";
 
 /* ───────────────── 最难的词 top3 ───────────────── */
 
@@ -30,7 +31,12 @@ export function HardestWords({ color }: { color: string }) {
     let alive = true;
     listMistakes()
       .then(r => { if (alive) setRows([...r].sort((a, b) => (b.wrong_total ?? 0) - (a.wrong_total ?? 0)).slice(0, 3)); })
-      .catch(() => { if (alive) setRows([]); });
+      /* ⚠️ 这里**整行不渲染是正确降级**,不做失败态 UI:
+       *    这条是一句锦上添花的激励文案,失败时它消失,用户看到的是"没有这句话",
+       *    而不是一个可能被误读成数据的空壳 —— 空态与失败态在这里天然不会混淆
+       *    (对比 VocabGrowth:那里失败会打出"你还没开始学",那才必须分开)。
+       *    但仍然要留日志:静默消失查不动。 */
+      .catch(e => { logFail("Incentive/HardestWords:listMistakes", e); if (alive) setRows([]); });
     return () => { alive = false; };
   }, []);
 
@@ -87,7 +93,9 @@ export function WeeklyBanner({ color, onShare }: { color: string; onShare: (s: W
     (async () => {
       try {
         const [days, stats, mistakes] = await Promise.all([
-          listStudyDays(shiftDay(from, -400), to), getStats(), listMistakes().catch(() => [] as MistakeRow[]),
+          listStudyDays(shiftDay(from, -400), to), getStats(),
+          /* 错题取不到 → 周报少一句"最难缠的是 X",其余照出。正确降级,记一行 */
+          listMistakes().catch(fallback("Incentive/WeeklyBanner:listMistakes", [] as MistakeRow[])),
         ]);
         if (!alive) return;
         const week = days.filter(d => d.day >= from && d.day <= to);
@@ -101,7 +109,13 @@ export function WeeklyBanner({ color, onShare }: { color: string; onShare: (s: W
           hardest: hardest?.headword_snapshot ?? null,
           from, to,
         });
-      } catch { if (alive) setSum(null); }
+      } catch (e) {
+        /* ⚠️ 同样**不做失败态 UI**:这条横幅本来就"上周没数据就不出"
+         *    (见函数注释),用户根本不指望它一定在 —— 失败时消失不会被误读成
+         *    "我上周学了 0 个词"。日志照留。 */
+        logFail("Incentive/WeeklyBanner", e);
+        if (alive) setSum(null);
+      }
     })();
     return () => { alive = false; };
   }, [from, to, hidden]);

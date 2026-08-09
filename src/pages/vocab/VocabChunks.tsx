@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF, readSelectedBank } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
 import { startTracking } from "@/lib/vocab/timeTracker";
+import { fallback, logFail } from "@/lib/vocab/report";
 import DormantQuiz, { type QuizItem } from "@/components/vocab/DormantQuiz";
 import { listChunks, listFavorites, toggleFavorite, CHUNK_GROUPS, type Chunk } from "@/lib/vocab/dormant";
 
@@ -87,7 +88,7 @@ export default function VocabChunks() {
 
   const load = useCallback(() => {
     setFailed(false); setRows(null);
-    listChunks().then(setRows).catch(() => setFailed(true));
+    listChunks().then(setRows).catch(e => { logFail("VocabChunks/listChunks", e); setFailed(true); });
   }, []);
   useEffect(() => { load(); }, [load]);
 
@@ -97,7 +98,8 @@ export default function VocabChunks() {
     let alive = true;
     listFavorites(rows.map(r => r.chunk))
       .then(s => { if (alive) setFavs(s); })
-      .catch(() => { /* 查不到收藏不影响浏览 */ });
+      /* 查不到收藏不影响浏览(星星显示为未收藏)——正确降级,记一行 */
+      .catch(fallback("VocabChunks/listFavorites", undefined));
     return () => { alive = false; };
   }, [rows]);
 

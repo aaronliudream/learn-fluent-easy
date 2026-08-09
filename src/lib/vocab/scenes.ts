@@ -330,6 +330,8 @@ export function readSceneProgress(packId: string): SceneProgress {
     const n = Number(localStorage.getItem(NODES_PREFIX + packId)) || 0;
     return { status: n > 0 ? "learning" : "new", nodesSeen: n };
   } catch {
+    /* 隐私模式 localStorage 抛 —— 故意忽略。场景进度本来就只存在本地,
+       读不到就当没学过,不影响进场景学习。 */
     return { status: "new", nodesSeen: 0 };
   }
 }
@@ -376,6 +378,6 @@ export function countScenesDone(): number {
     }
     return n;
   } catch {
-    return 0;
+    return 0;   // 同上:隐私模式读不到 → 已学 0,故意忽略
   }
 }

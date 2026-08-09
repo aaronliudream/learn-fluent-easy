@@ -12,6 +12,7 @@
  *    这条决定统计的可信度:翻一遍词卡不能算学过。
  */
 import { supabase } from "@/integrations/supabase/client";
+import { logFail } from "@/lib/vocab/report";
 import { bumpAnswer } from "@/lib/vocab/stats";
 import { bjToday } from "@/lib/charts/growthBuckets";
 import { currentUserId, isMasteredRow } from "@/lib/vocab/data";
@@ -218,7 +219,7 @@ async function bumpReviewDaily(uid: string, day: string): Promise<void> {
     const reviewed = ((data as { reviewed: number } | null)?.reviewed ?? 0) + 1;
     await db.from("vocab_review_daily")
       .upsert({ user_id: uid, day, reviewed, updated_at: new Date().toISOString() }, { onConflict: "user_id,day" });
-  } catch { /* 统计写失败不该拦住用户做题 */ }
+  } catch (e) { logFail("vocabMastery/bumpReviewDaily", e); /* 统计写失败不该拦住用户做题 */ }
 }
 
 /**

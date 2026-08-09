@@ -17,6 +17,7 @@ import { ChevronDown, Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FONT_SERIF } from "@/lib/vocab/theme";
 import { playUrl } from "@/lib/vocab/audio";
+import { logFail } from "@/lib/vocab/report";
 import {
   getWordExtras, isEmptyExtras, COLLOCATION_PREVIEW,
   EMPTY_EXTRAS, type WordExtras as Extras,
@@ -60,7 +61,9 @@ export default function WordExtras({ wordId, onPickWord }: {
     setReady(false); setAllColl(false); setData(EMPTY_EXTRAS);
     getWordExtras(wordId)
       .then(x => { if (alive) { setData(x); setReady(true); } })
-      .catch(() => { if (alive) setReady(true); });   // 失败就当没有增区,不打扰用户
+      /* 失败就当没有增区,不打扰用户 —— 增区是锦上添花,空和失败都表现为"这块不出现",
+         用户不会据此判断学习状态,所以不做失败态 UI;但要留日志。 */
+      .catch(e => { logFail("WordExtras/getWordExtras", e); if (alive) setReady(true); });
     return () => { alive = false; };
   }, [wordId]);
 

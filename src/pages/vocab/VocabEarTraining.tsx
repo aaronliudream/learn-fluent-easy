@@ -30,6 +30,7 @@ import { cn } from "@/lib/utils";
 import { bankColor, FONT_SERIF, FONT_STAT, readSelectedBank } from "@/lib/vocab/theme";
 import { getBankByCode, type VocabBank } from "@/lib/vocab/data";
 import { startTracking } from "@/lib/vocab/timeTracker";
+import { fallback, logFail } from "@/lib/vocab/report";
 import { getScenePack } from "@/lib/vocab/scenes";
 import {
   buildPlaylist, buildWordClip, clipSpecsFor, diag, prefetchClip, recordListening,
@@ -102,7 +103,8 @@ export default function VocabEarTraining() {
 
   useEffect(() => {
     let alive = true;
-    getBankByCode(bankCode).then(b => { if (alive) setBank(b); }).catch(() => { /* 词库取不到不拦播放 */ });
+    getBankByCode(bankCode).then(b => { if (alive) setBank(b); })
+      .catch(fallback("VocabEarTraining/getBankByCode", undefined));   // 词库取不到不拦播放
     return () => { alive = false; };
   }, [bankCode]);
 
@@ -112,7 +114,7 @@ export default function VocabEarTraining() {
     let alive = true;
     getScenePack(packId)
       .then(p => { if (alive) setScenePackName(p?.title_zh ?? null); })
-      .catch(() => { /* 取不到就只显示词数,不拦播放 */ });
+      .catch(fallback("VocabEarTraining/getScenePack", undefined));   // 取不到就只显示词数,不拦播放
     return () => { alive = false; };
   }, [packId]);
 
@@ -122,7 +124,7 @@ export default function VocabEarTraining() {
     setItems(null); setFailed(false); setIdx(0); setDone(false);
     buildPlaylist(source, { bankId: bank?.id ?? null, packId })
       .then(list => { if (alive) setItems(list); })
-      .catch(() => { if (alive) setFailed(true); });
+      .catch(e => { logFail("VocabEarTraining/buildPlaylist", e); if (alive) setFailed(true); });
     return () => { alive = false; };
   }, [source, bank?.id, packId]);
 

@@ -91,13 +91,23 @@ type Props = {
   growthWordIds?: string[];
   /** true = 数据还没到位,走骨架屏。**绝不用 0 冒充"还没加载"**。 */
   loading?: boolean;
+  /**
+   * true = 这次**取失败**了(不是还没到、也不是真的 0)→ 渲染失败态。
+   *
+   * ⚠️ 三态必须分开,少一态就会出事:
+   *    还没到 = 骨架 / 取失败 = 一句人话 + 重试 / 真值 = 四条横条(哪怕全 0)。
+   *    把失败画成四条 0 值横条,用户读到的是"我一个词都没学",
+   *    而真相是查询挂了 —— 错题本躺了几个月就是这个机制。
+   * ⚠️ 默认 false:词库页没传这个 prop,行为完全不变。
+   */
+  failed?: boolean;
   /** 紧凑档:内边距下调一档(中心页首屏要给上面的词库卡让位)。 */
   compact?: boolean;
 };
 
 export default function StatsPanel({
   mastered, learning, untouched, color = "#0F172A",
-  emptyHint, growthWordIds, loading = false, compact = false,
+  emptyHint, growthWordIds, loading = false, failed = false, compact = false,
 }: Props) {
   const [shown, setShown] = useState(false);
   const boxRef = useRef<HTMLDivElement | null>(null);
@@ -144,6 +154,28 @@ export default function StatsPanel({
     compact ? "px-4 py-3" : "p-5",
   );
 
+  /* 失败态先于骨架判断:两者同时为真时(调用方把 loading 也传了 true)
+     应该说"没能加载"而不是继续闪 —— 闪下去用户永远等不到结果。 */
+  if (failed) {
+    return (
+      <>
+        <div className={cn(shell, "mt-3")}>
+          <h2 className={cn("text-[16px] font-semibold text-slate-900", compact ? "mb-2" : "mb-3")}>学习进度</h2>
+          <p className="text-[14px] text-slate-500">这次没能加载出来</p>
+          <p className="mt-0.5 text-[12px] text-slate-400">不是"你还没学过" —— 是进度查询失败了</p>
+          <button type="button" onClick={() => window.location.reload()}
+            className="mt-3 rounded-full border border-black/[0.08] px-4 py-1.5 text-[14px] text-slate-700 active:scale-95">
+            重试
+          </button>
+        </div>
+        {/* 成长图自己有独立数据源,进度挂了不代表它也挂了 —— 照常渲染 */}
+        <div className={cn(shell, "mt-3")}>
+          <VocabGrowth wordIds={growthWordIds} />
+        </div>
+      </>
+    );
+  }
+
   if (loading) {
     return (
       <div className={cn(shell, "mt-3")} aria-busy="true" aria-label="学习进度加载中">
@@ -163,7 +195,8 @@ export default function StatsPanel({
 
   return (
     <>
-      <div ref={boxRef} className={cn(shell, "mt-3")}>
+      {/* data-probe:给 scripts/vocab/audit/measure-fold.mjs 当锚点(判"数据模块在折线外") */}
+      <div ref={boxRef} data-probe="stats-panel" className={cn(shell, "mt-3")}>
         <h2 className={cn("text-[16px] font-semibold text-slate-900", compact ? "mb-3" : "mb-4")}>学习进度</h2>
 
         <div className="space-y-2">

@@ -69,6 +69,23 @@ export const LANDING_EN_FALLBACKS: Record<string, string> = {
     "AI Mei Mei generates variants from wrong answers — students fill gaps without me hovering.",
   "公立中学英语老师 · 成都": "Public school English teacher · Chengdu",
   "课后效率 ×3": "3× after-class efficiency",
+  /* ── 三张较新的入口卡(图书馆 / 美语 / 词汇)────────────────────────
+   * ⚠️ 这三张原本**一条兜底都没有**,只有最早那四张学段卡有。
+   *    英文用户看它们走的是 dynamic translate 边缘函数,而那条路径的 CORS
+   *    目前是坏的(体检报告 2026-08-09)—— 结果就是**看到原文中文或空白**。
+   *    所以这不是锦上添花,是补一个真窟窿(Aaron 2026-08-09 定:三张一起补)。
+   * ⚠️ 只补 <T> 包着的 title / desc / coverage。badge 与 tag 在 CourseCard 里是
+   *    **裸渲染不过 <T>**,写进来也不会生效 —— 别为了"看起来齐全"往里加死条目。
+   * ⚠️ 美语课名读自 lib/american/brand.ts 的常量。**那边改名了,这里的 key 要同步改**,
+   *    否则兜底静默失效(key 对不上就回落到 dynamic translate,也就是回落到坏路径)。 */
+  "英文图书馆": "English Library",
+  "读英文原著 · 点词即懂": "Read the originals · tap any word",
+  "现代版美语新概念英语1-4册": "New Concept English 1–4 · American Edition",
+  "地道美语 从零开始": "Real American English, from scratch",
+  "涵盖新概念1-4册全部词汇与核心知识点": "Covers all vocabulary and key points of Books 1–4",
+  "词汇学习": "Vocabulary",
+  "中考到托福 · 例句带发音": "Zhongkao to TOEFL · examples with audio",
+
   "登录 / 注册": "Log in / Sign up",
   "关于我们": "About us",
   "美式俚语": "American slang",

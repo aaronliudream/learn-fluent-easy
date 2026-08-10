@@ -1,0 +1,63 @@
+{
+  "_readme": [
+    "人工撰写的词条内容。只放**模型反复写不出来**的那几个词,不是给内容开后门。",
+    "由 apply-manual-content.mjs 合并进 <bank>-content.json,合并前**照样过 runAllGates**——",
+    "手写不等于免检,写错了一样被拦。",
+    "每条必须写 _why:为什么模型做不到、我改了什么。",
+    "⚠️ 手写内容在送审件里会单独标出来,请 Aaron 重点看这几条。"
+  ],
+  "morality": {
+    "_why": "模型三轮都把搭配写成 moral values / moral standards(g7+g13:用同根派生词冒充搭配),例句里也只出现 moral 不出现 morality。改成三个真含 morality 的搭配。",
+    "bank": "cet6",
+    "ipa": "/məˈrælɪti/",
+    "def_zh": "道德；道德观念",
+    "def_en": "Beliefs about which kinds of human behaviour are right or wrong.",
+    "examples": [
+      {
+        "collocation": "public morality",
+        "scene": "culture",
+        "sentence": "Public morality has changed a great deal over the past century.",
+        "translation_zh": "过去一个世纪里，公众的道德观念发生了很大变化。"
+      },
+      {
+        "collocation": "question the morality",
+        "scene": "news",
+        "sentence": "Many readers questioned the morality of the newspaper's decision.",
+        "translation_zh": "许多读者质疑那家报纸这一决定的道德性。"
+      },
+      {
+        "collocation": "morality of war",
+        "scene": "academic",
+        "sentence": "Students debated the morality of war in their philosophy seminar.",
+        "translation_zh": "学生们在哲学研讨课上辩论战争的道德问题。"
+      }
+    ]
+  },
+  "mustard": {
+    "_why": "模型三轮都写成 \"...made from ground mustard seeds\"(g12 循环定义)。芥末的常识定义几乎必然想提 mustard seeds,改成不提目标词的写法。",
+    "bank": "cet6",
+    "ipa": "/ˈmʌstərd/",
+    "def_zh": "芥末；芥菜",
+    "def_en": "A spicy yellow paste eaten with meat, made from ground seeds.",
+    "examples": [
+      {
+        "collocation": "mustard sauce",
+        "scene": "daily_life",
+        "sentence": "She spread mustard sauce on the sandwich before eating it.",
+        "translation_zh": "她在三明治上抹了芥末酱，然后才吃。"
+      },
+      {
+        "collocation": "Dijon mustard",
+        "scene": "culture",
+        "sentence": "French cooking often relies on Dijon mustard for extra flavor.",
+        "translation_zh": "法国菜常常靠第戎芥末来增添风味。"
+      },
+      {
+        "collocation": "mustard seeds",
+        "scene": "environment",
+        "sentence": "Farmers plant mustard seeds in early spring across these fields.",
+        "translation_zh": "农民在早春时节在这些田地里播种芥菜籽。"
+      }
+    ]
+  }
+}

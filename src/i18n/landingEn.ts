@@ -91,6 +91,10 @@ export const LANDING_EN_FALLBACKS: Record<string, string> = {
   "美式俚语": "American slang",
   "隐私": "Privacy",
   "条款": "Terms",
+  // 性格测评入口卡(首页学段卡之下)
+  "你是哪一种人？16 型人格测评": "Which type are you? A 16-type personality assessment",
+  "免费 · 不用注册。测完给你四字母类型、大五人格分数，以及一份为你这种性格写的英语学习法。":
+    "Free, no sign-up. You'll get your four-letter type, your Big Five scores, and a way of learning English written for your type.",
   "实时数据": "Live stats",
   "题 已练 / 今日": "Questions practiced today",
   "人 在线学习": "Learners online",

@@ -15,10 +15,16 @@
  *
  * 退出码:0=零红字;1=有红字或页面崩了。
  */
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from 'playwright';
 
-const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`))?.split('=')[1]) ?? d;
+// ★只在第一个 = 处切★ 用 split('=')[1] 会把带查询串的 URL 拦腰截断:
+// `--routes=/,/personality?lang=en,/junior` 会变成 `/,/personality?lang`,
+// 后面几条路由**静默消失**,清单看着写了其实没测(2026-08-09 踩到)。
+const arg = (k, d) => {
+  const hit = process.argv.find((a) => a.startsWith(`--${k}=`));
+  return hit === undefined ? d : hit.slice(`--${k}=`.length);
+};
 // ★默认清单常驻三条「故意的坏 id」★ 它们专守兜底路径 —— 真实用户手打错、点旧收藏才会走到,
 // 除了自动化没有别的办法能测到。2026-07-27 高中册页崩就是这类路径没人测。
 const DEFAULT_ROUTES = [
@@ -53,16 +59,42 @@ async function waitServer(url, tries = 60) {
   return false;
 }
 
+/**
+ * ★端口上有别人的 preview = 这道门的结论全部作废★
+ * 2026-08-09:另一个工作树留下 78 个没杀干净的 `vite preview`(不带 --strictPort 时
+ * vite 会自动往后找端口,于是占了 4173、4179-4217 一整片)。本脚本 --strictPort
+ * 抢不到端口就悄悄退出,而 waitServer 却能连上**别人的旧 dist** ——
+ * 门于是对着另一个分支的构建打分,报出的 404 是假的,报出的绿也是假的。
+ * 所以:端口已经有人就直接退出,绝不将就复用。
+ */
 let server = null;
 if (!EXTERNAL) {
+  let occupied = false;
+  try { occupied = (await fetch(BASE)).ok; } catch { occupied = false; }
+  if (occupied) {
+    console.log(`SMOKE_VERDICT: FAIL(端口 ${PORT} 上已经有服务在跑 —— 多半是上次没杀干净的 preview,`);
+    console.log(`  它服务的可能是别的 dist,继续跑出来的红绿都不作数。先杀掉它,或换 --port=xxxx)`);
+    process.exit(2);
+  }
   server = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], {
     stdio: 'ignore', shell: true,
   });
   if (!(await waitServer(BASE))) {
     console.log(`SMOKE_VERDICT: FAIL(preview 起不来 @ ${BASE})`);
-    server.kill();
+    stopServer();
     process.exit(1);
   }
+}
+
+/** Windows 上 shell:true 的 kill 只杀 cmd 外壳,vite 子进程会活下来占住端口 —— 必须连进程树一起杀。 */
+function stopServer() {
+  if (!server) return;
+  if (process.platform === 'win32' && server.pid) {
+    try {
+      spawnSync('taskkill', ['/pid', String(server.pid), '/T', '/F'], { stdio: 'ignore', shell: true });
+    } catch { /* 尽力而为 */ }
+  }
+  server.kill();
 }
 
 const browser = await chromium.launch();
@@ -97,7 +129,7 @@ for (const route of ROUTES) {
 }
 
 await browser.close();
-if (server) server.kill();
+stopServer();
 
 if (problems.length) {
   console.log('\n  明细:');

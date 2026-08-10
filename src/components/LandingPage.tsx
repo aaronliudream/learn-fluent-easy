@@ -2,9 +2,15 @@ import { Link } from "react-router-dom";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
-import { ArrowRight, Backpack, BookOpen, GraduationCap, Library, Sparkles, SpellCheck } from "lucide-react";
+import { useI18n } from "@/i18n/I18nProvider";
+import { ArrowRight, Backpack, BookOpen, Fingerprint, GraduationCap, Library, Sparkles, SpellCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
+import {
+  PERSONALITY_ITEM_COUNT,
+  PERSONALITY_MINUTES,
+  PERSONALITY_PATH,
+} from "@/lib/personality/meta";
 import {
   AMERICAN_COURSE_NAME,
   AMERICAN_COURSE_SUBTITLE,
@@ -239,6 +245,74 @@ function CourseCard({
   );
 }
 
+/**
+ * 性格测评入口 —— 唯一一张**不是整卡链接**的入口卡。
+ *
+ * 为什么单独写而不塞进 COURSE_CARDS:CourseCard 整张卡是一个 <Link>,
+ * 而这里必须给出**两个**出口(中文版 / 英文版),嵌套链接是非法 HTML。
+ * 语言不是页内开关而是入口分叉,是因为测评页有自己的语言状态(不接全站 i18n),
+ * 首页把这个选择显式摆出来,用户点进去就是他要的那一版。
+ *
+ * ⚠️ 题量/用时两个数字来自 lib/personality/meta.ts,由单测钉住与真实题库一致 ——
+ *    卡片文案不许凭记忆写数字(见 docs 与 qa:cards 的同名规约)。
+ */
+function PersonalityCard() {
+  const { lang } = useI18n();
+  const zh = lang === "zh" || lang === "zh-TW";
+  const meta = zh
+    ? `${PERSONALITY_ITEM_COUNT} 道题 · 约 ${PERSONALITY_MINUTES} 分钟`
+    : `${PERSONALITY_ITEM_COUNT} questions · ~${PERSONALITY_MINUTES} min`;
+
+  return (
+    <div className="relative mt-4 overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)]">
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(135deg, #1a1633 0%, #3a2d63 55%, #8a6fc4 150%)" }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/45 to-slate-900/20" />
+
+      <div className="relative z-10 flex flex-col gap-4 p-5 text-white sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
+              <Fingerprint className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
+            </span>
+            <span className="rounded-full bg-black/30 px-2 py-0.5 text-[10px] font-medium backdrop-blur-sm">
+              {meta}
+            </span>
+          </div>
+          <h3 className="mt-3 text-[19px] font-bold leading-snug">
+            <T>你是哪一种人？16 型人格测评</T>
+          </h3>
+          <p className="mt-1 text-sm leading-relaxed text-white/85">
+            <T>免费 · 不用注册。测完给你四字母类型、大五人格分数，以及一份为你这种性格写的英语学习法。</T>
+          </p>
+        </div>
+
+        {/* 两个出口:中文版 / 英文版。按钮文字本身就是语言名,不进 <T>;
+            data-i18n-skip 让 dev 的语言泄漏探测器放行(英文界面里出现「中文测试」是故意的)。 */}
+        <div data-i18n-skip className="flex shrink-0 gap-2 sm:flex-col md:flex-row">
+          <Link
+            to={`${PERSONALITY_PATH}?lang=zh`}
+            className="inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-[#e5b567] px-4 py-2.5 text-sm font-bold text-[#0a1628] transition hover:brightness-105 sm:flex-none"
+          >
+            中文测试
+            <ArrowRight className="size-4 shrink-0" aria-hidden />
+          </Link>
+          <Link
+            to={`${PERSONALITY_PATH}?lang=en`}
+            className="inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-lg border border-white/45 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 sm:flex-none"
+          >
+            English
+            <ArrowRight className="size-4 shrink-0" aria-hidden />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function LandingPage() {
   // 高中(/gaokao、/senior)整理中对普通用户的锁由 SOON_HREFS 控制;管理员(aaron)可点进。
   const { isAdmin } = useIsAdmin();
@@ -281,6 +355,9 @@ export default function LandingPage() {
               />
             ))}
           </div>
+
+          {/* 性格测评入口 —— 排在学段卡之下,与全宽卡同宽 */}
+          <PersonalityCard />
         </div>
       </section>
     </main>

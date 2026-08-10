@@ -176,6 +176,8 @@ const MasteryList = lazy(() => import("./pages/MasteryList.tsx"));
 const GrammarMastery = lazy(() => import("./pages/GrammarMastery.tsx"));
 const Me = lazy(() => import("./pages/Me.tsx"));
 const Cet = lazy(() => import("./pages/Cet.tsx"));
+// 性格测评(/personality)。全语言可访问 —— 页面自带中/英切换,**不要**包 ChineseOnlyRoute。
+const PersonalityTest = lazy(() => import("./pages/PersonalityTest.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import ResumeFab from "@/components/ResumeFab";
 import FeedbackWidget from "@/components/FeedbackWidget";
@@ -618,6 +620,8 @@ const App = () => (
           <Route path="/kids" element={<Navigate to="/primary" replace />} />
           <Route path="/senior" element={<Navigate to="/gaokao" replace />} />
           <Route path="/cet" element={<Cet />} />
+          {/* 性格测评。?lang=zh|en 决定页面语言(与全站语言解耦,首页给的是两个入口)。 */}
+          <Route path="/personality" element={<PersonalityTest />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -21,7 +21,8 @@ import path from "node:path";
 import { runAllGates, LENGTH_BY_TIER, ngrams } from "./gates.mjs";
 
 const GEN = path.join(process.cwd(), "scripts", "vocab", "data", "generated");
-const BANKS = ["toefl", "cet4", "cet6"];
+/* ⚠️ 新词库做完要加进来 —— 漏加不会报错,只会**悄悄少覆盖一个库**。 */
+const BANKS = ["toefl", "cet4", "cet6", "zhongkao"];
 
 console.log("当前各档句长范围:", JSON.stringify(LENGTH_BY_TIER), "\n");
 

@@ -59,5 +59,302 @@
         "translation_zh": "农民在早春时节在这些田地里播种芥菜籽。"
       }
     ]
+  },
+  "night": {
+    "_why": "模型三轮都把搭配写成 midnight —— 那是一个独立的词,不是 night 的搭配(g7)。改成三个真含 night 的搭配。",
+    "bank": "zhongkao",
+    "ipa": "/naɪt/",
+    "def_zh": "夜晚；晚上",
+    "def_en": "The period of darkness between sunset and sunrise.",
+    "examples": [
+      {
+        "collocation": "last night",
+        "scene": "daily_life",
+        "sentence": "We watched a movie together last night at home.",
+        "translation_zh": "我们昨晚在家一起看了一部电影。"
+      },
+      {
+        "collocation": "at night",
+        "scene": "environment",
+        "sentence": "Owls hunt for food at night in the forest.",
+        "translation_zh": "猫头鹰在夜里到森林中捕食。"
+      },
+      {
+        "collocation": "night shift",
+        "scene": "work",
+        "sentence": "Many nurses work the night shift at this hospital.",
+        "translation_zh": "这家医院有很多护士上夜班。"
+      }
+    ]
+  },
+  "room": {
+    "_why": "模型的例句里出现的是 bedroom / classroom 这类复合词,g1 判定目标词缺席;三句场景也重复。改成三个独立用法。",
+    "bank": "zhongkao",
+    "ipa": "/ruːm/",
+    "def_zh": "房间；空间",
+    "def_en": "A part of a building with walls, or available space.",
+    "examples": [
+      {
+        "collocation": "living room",
+        "scene": "daily_life",
+        "sentence": "The living room feels warm and bright every morning.",
+        "translation_zh": "客厅每天早上都显得温暖又明亮。"
+      },
+      {
+        "collocation": "make room",
+        "scene": "travel",
+        "sentence": "Passengers made room in the bus for the elderly.",
+        "translation_zh": "乘客们在公交车上给老人腾出了位置。"
+      },
+      {
+        "collocation": "room for improvement",
+        "scene": "education",
+        "sentence": "Her essay still has room for improvement in structure.",
+        "translation_zh": "她的作文在结构上仍有改进的余地。"
+      }
+    ]
+  },
+  "both": {
+    "_why": "虚词:三句都自然地以 both 开头,撞 g9(三句首词必须互异)。手写时把 both 放到句中。",
+    "bank": "zhongkao",
+    "ipa": "/boʊθ/",
+    "def_zh": "两者都；双方",
+    "def_en": "The two people or things together, not just one.",
+    "examples": [
+      {
+        "collocation": "both sides",
+        "scene": "work",
+        "sentence": "Both sides agreed to sign the contract this week.",
+        "translation_zh": "双方同意在本周签署这份合同。"
+      },
+      {
+        "collocation": "both hands",
+        "scene": "daily_life",
+        "sentence": "She carried the heavy box with both hands carefully.",
+        "translation_zh": "她用双手小心地搬着那个沉重的箱子。"
+      },
+      {
+        "collocation": "both of them",
+        "scene": "education",
+        "sentence": "I invited both of them to the school concert.",
+        "translation_zh": "我邀请他们两个人一起去听学校的音乐会。"
+      }
+    ]
+  },
+  "sometimes": {
+    "_why": "虚词:三句都以 sometimes 开头,撞 g9。手写时把它放到主语之后。",
+    "bank": "zhongkao",
+    "ipa": "/ˈsʌmtaɪmz/",
+    "def_zh": "有时；间或",
+    "def_en": "On some occasions but not always.",
+    "examples": [
+      {
+        "collocation": "sometimes feel",
+        "scene": "education",
+        "sentence": "Students sometimes feel nervous before an important oral exam.",
+        "translation_zh": "学生在重要的口语考试前有时会感到紧张。"
+      },
+      {
+        "collocation": "sometimes rains",
+        "scene": "environment",
+        "sentence": "It sometimes rains heavily here during the summer months.",
+        "translation_zh": "这里在夏季的几个月里有时会下大雨。"
+      },
+      {
+        "collocation": "sometimes forget",
+        "scene": "daily_life",
+        "sentence": "My grandfather sometimes forgets where he put his glasses.",
+        "translation_zh": "我爷爷有时会忘记自己把眼镜放在哪里了。"
+      }
+    ]
+  },
+  "west": {
+    "_why": "模型把搭配写成 western countries / the western part —— western 是派生词不是 west 本身(g7),例句里也只出现 western。",
+    "bank": "zhongkao",
+    "ipa": "/west/",
+    "def_zh": "西；西方",
+    "def_en": "The direction where the sun goes down.",
+    "examples": [
+      {
+        "collocation": "in the west",
+        "scene": "environment",
+        "sentence": "The sun sets in the west every single evening.",
+        "translation_zh": "太阳每天傍晚都从西边落下。"
+      },
+      {
+        "collocation": "west coast",
+        "scene": "work",
+        "sentence": "Many tech companies are based on the west coast.",
+        "translation_zh": "许多科技公司把总部设在西海岸。"
+      },
+      {
+        "collocation": "drove west",
+        "scene": "travel",
+        "sentence": "They drove west for hours to reach the canyon.",
+        "translation_zh": "他们向西开了好几个小时才到达峡谷。"
+      }
+    ]
+  },
+  "ball": {
+    "_why": "模型把搭配写成 basketball game —— basketball 是独立的词不是 ball 的搭配(g7),例句里也没出现 ball 本身。",
+    "bank": "zhongkao",
+    "ipa": "/bɔːl/",
+    "def_zh": "球；舞会",
+    "def_en": "A round object used in games, or a formal dance.",
+    "examples": [
+      {
+        "collocation": "throw the ball",
+        "scene": "daily_life",
+        "sentence": "He threw the ball across the field to me.",
+        "translation_zh": "他把球从场地那头扔给了我。"
+      },
+      {
+        "collocation": "ball game",
+        "scene": "culture",
+        "sentence": "Our whole family watched the ball game on television.",
+        "translation_zh": "我们全家一起在电视上看了那场球赛。"
+      },
+      {
+        "collocation": "tennis ball",
+        "scene": "health",
+        "sentence": "She bought a new tennis ball before morning practice.",
+        "translation_zh": "她在晨练之前买了一个新的网球。"
+      }
+    ]
+  },
+  "nobody": {
+    "_why": "虚词:三句都以 nobody 开头,撞 g9。手写时只让一句以它开头。",
+    "bank": "zhongkao",
+    "ipa": "/ˈnoʊbədi/",
+    "def_zh": "没有一个人",
+    "def_en": "Not a single person.",
+    "examples": [
+      {
+        "collocation": "nobody knows",
+        "scene": "environment",
+        "sentence": "Nobody knows exactly when the storm will finally arrive.",
+        "translation_zh": "没有人确切知道这场风暴究竟什么时候到来。"
+      },
+      {
+        "collocation": "nobody else",
+        "scene": "health",
+        "sentence": "There was nobody else waiting outside the clinic today.",
+        "translation_zh": "今天诊所外面没有别的人在等候。"
+      },
+      {
+        "collocation": "nobody answered",
+        "scene": "daily_life",
+        "sentence": "I rang twice but nobody answered the front door.",
+        "translation_zh": "我按了两次门铃，但是没有人来开前门。"
+      }
+    ]
+  },
+  "twenty": {
+    "_why": "数词:模型的释义必然写成 the number after nineteen and before twenty-one,twenty-one 里含 twenty 被判循环定义(g12)。改成不提它本身的写法。",
+    "bank": "zhongkao",
+    "ipa": "/ˈtwenti/",
+    "def_zh": "二十",
+    "def_en": "The number that comes after nineteen.",
+    "examples": [
+      {
+        "collocation": "twenty minutes",
+        "scene": "travel",
+        "sentence": "The bus arrives in about twenty minutes from now.",
+        "translation_zh": "公交车大约再过二十分钟就到。"
+      },
+      {
+        "collocation": "twenty years",
+        "scene": "education",
+        "sentence": "She has taught at this school for twenty years.",
+        "translation_zh": "她已经在这所学校教了二十年书。"
+      },
+      {
+        "collocation": "twenty dollars",
+        "scene": "daily_life",
+        "sentence": "He paid twenty dollars for that old leather jacket.",
+        "translation_zh": "他花二十美元买下了那件旧皮夹克。"
+      }
+    ]
+  },
+  "fifty": {
+    "_why": "同 twenty:释义写成 …before fifty-one 撞 g12 循环定义,三句场景也重复。",
+    "bank": "zhongkao",
+    "ipa": "/ˈfɪfti/",
+    "def_zh": "五十",
+    "def_en": "The number that comes after forty-nine.",
+    "examples": [
+      {
+        "collocation": "fifty percent",
+        "scene": "news",
+        "sentence": "About fifty percent of the seats were still empty.",
+        "translation_zh": "大约有百分之五十的座位仍然空着。"
+      },
+      {
+        "collocation": "fifty years",
+        "scene": "work",
+        "sentence": "The factory has been running for over fifty years.",
+        "translation_zh": "这家工厂已经运转了五十多年。"
+      },
+      {
+        "collocation": "fifty people",
+        "scene": "education",
+        "sentence": "Nearly fifty people signed up for the science club.",
+        "translation_zh": "将近五十个人报名参加了科学社团。"
+      }
+    ]
+  },
+  "bell": {
+    "_why": "模型把搭配写成 doorbell —— 那是一个独立的词,不是 bell 的搭配(g7),例句里也没出现 bell 本身。",
+    "bank": "zhongkao",
+    "ipa": "/bel/",
+    "def_zh": "铃；钟",
+    "def_en": "A hollow metal object that rings when struck.",
+    "examples": [
+      {
+        "collocation": "school bell",
+        "scene": "education",
+        "sentence": "The school bell rang and the students rushed out.",
+        "translation_zh": "校铃响了，学生们一下子涌了出去。"
+      },
+      {
+        "collocation": "ring the bell",
+        "scene": "work",
+        "sentence": "Please ring the bell before you enter the office.",
+        "translation_zh": "进办公室之前请先按铃。"
+      },
+      {
+        "collocation": "bell tower",
+        "scene": "travel",
+        "sentence": "Tourists climbed the old bell tower for a view.",
+        "translation_zh": "游客们爬上那座古老的钟楼去看风景。"
+      }
+    ]
+  },
+  "bye": {
+    "_why": "感叹词:模型三句例句里一次都没真正用上 bye(g1),搭配也不含它。手写成三个真的说 bye 的场景。",
+    "bank": "zhongkao",
+    "ipa": "/baɪ/",
+    "def_zh": "再见",
+    "def_en": "A casual way of saying farewell.",
+    "examples": [
+      {
+        "collocation": "said bye",
+        "scene": "education",
+        "sentence": "She said bye and walked toward the school gate.",
+        "translation_zh": "她说了再见，然后朝校门口走去。"
+      },
+      {
+        "collocation": "bye for now",
+        "scene": "daily_life",
+        "sentence": "I really have to leave now, so bye for now.",
+        "translation_zh": "我现在真的得走了，那就先说再见吧。"
+      },
+      {
+        "collocation": "waved bye",
+        "scene": "travel",
+        "sentence": "The children waved bye as the bus drove away.",
+        "translation_zh": "公交车开走时，孩子们挥手道别。"
+      }
+    ]
   }
 }

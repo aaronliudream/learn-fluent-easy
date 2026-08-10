@@ -391,9 +391,29 @@ async function main() {
     let done; try { done = JSON.parse(readFileSync(path.join(GEN, f), 'utf8')); } catch { continue; }
     for (const k of Object.keys(done)) if (failed[k]) { delete failed[k]; stale.push(k); }
   }
+  /* ⚠️ 光对账本地 JSON **还不够**。有些词是 Aaron 直接在库里手写补的
+     (electric / sixty / seventy / adverb / miner),它们不在任何 content JSON 里,
+     但库里早有释义 —— 本地对账看不见,于是它们**永远**留在 failed.json 里,
+     我每次汇报"还剩 N 个失败词"就每次都虚高 5 个。已经因此报错过两轮数字。
+     → 判据以**库**为准:剩下的失败词逐个查 def_zh,有释义的一律清掉。 */
+  const remaining = Object.keys(failed);
+  if (remaining.length) {
+    const H = { apikey: ANON, Authorization: `Bearer ${ANON}` };
+    for (let i = 0; i < remaining.length; i += 120) {
+      const chunk = remaining.slice(i, i + 120);
+      const q = chunk.map(w => `"${w.replace(/"/g, '')}"`).join(',');
+      const res = await fetch(`${SUPA_URL}/rest/v1/vocab_words?select=headword,def_zh&headword=in.(${encodeURIComponent(q)})`, { headers: H });
+      const rows = await res.json();
+      if (!Array.isArray(rows)) continue;              // 查不到就别乱清(第三态)
+      for (const r of rows) {
+        const k = r.headword.toLowerCase();
+        if (r.def_zh && failed[k]) { delete failed[k]; stale.push(k); }
+      }
+    }
+  }
   if (stale.length) {
     writeFileSync(failedPath, JSON.stringify(failed, null, 2), 'utf8');
-    process.stdout.write(`· 清掉 ${stale.length} 条陈旧失败记录(这些词其实已生成):${stale.slice(0, 12).join(' ')}${stale.length > 12 ? ' …' : ''}\n`);
+    process.stdout.write(`· 清掉 ${stale.length} 条陈旧失败记录(这些词其实已有内容):${stale.slice(0, 12).join(' ')}${stale.length > 12 ? ' …' : ''}\n`);
   }
 
   // g4 全局语料:所有历史已接受句子
@@ -687,7 +707,11 @@ $gate$;
 COMMIT;
 `;
   /* 增量单独出文件,**不覆盖**已经跑过的 batch1 —— 覆盖了就分不清哪份跑过了 */
-  const name = DELTA ? `vocab_content_delta.sql` : `vocab_${bank}_content_batch1.sql`;   // delta 跨库合成一份,不带 bank 名
+  /* delta 文件名带上**这一轮是在收哪个库的尾**。
+     内容仍然是跨库合成的(vocab_words 全局唯一),但文件名必须唯一 ——
+     一律叫 vocab_content_delta.sql 的话,上一轮跑过的那份会被下一轮覆盖,
+     谁跑过谁没跑过就分不清了。 */
+  const name = DELTA ? `vocab_content_delta_${bank}.sql` : `vocab_${bank}_content_batch1.sql`;
   const out = path.join(REPO, 'SQLAA', name);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, sql, 'utf8');

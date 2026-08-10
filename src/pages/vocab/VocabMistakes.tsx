@@ -32,6 +32,28 @@ import {
 } from "@/lib/vocab/data";
 
 const ROUND = 10;
+
+/**
+ * 本轮取哪些词 —— **抽成纯函数是为了能单测**(组件里的 useState 测不了)。
+ *
+ * ⚠️ 修的是这个 bug:原来是 `ordered.slice(0, ROUND)`,**完全不看轮次**,
+ *    每轮都取前 10 个。而答对只让 streak_days +1,词仍留在错题本、仍排前面 ——
+ *    于是第二轮抽到的还是那批。Aaron 反馈的"同一批词反复出现"就是它。
+ *
+ * 规则:**优先出这一场还没被抽到过的词**;全部覆盖过一遍之后才允许回头再测
+ * (那时说明确实需要第二遍),并把已测集合清空、重新开一轮覆盖 ——
+ * 不清空的话会永远停在"没有未测词",退化回原来的重复。
+ */
+export function pickRoundTargets<T extends { id: string }>(
+  ordered: T[], tested: Set<string>, round: number,
+): { targets: T[]; nextTested: Set<string> } {
+  const untested = ordered.filter(w => !tested.has(w.id));
+  const targets = (untested.length ? untested : ordered).slice(0, round);
+  const nextTested = new Set(tested);
+  for (const t of targets) nextTested.add(t.id);
+  /* 覆盖满一轮就清零重来 */
+  return { targets, nextTested: nextTested.size >= ordered.length ? new Set<string>() : nextTested };
+}
 const PASS = 6;              // 达标线:10 题对 6 题
 const KEEP_GOING = 0.6;      // 累计正确率低于此值自动续轮
 const SOFT_STOP_ROUNDS = 3;  // 连续 3 轮未达标 → 软保护
@@ -123,6 +145,11 @@ export default function VocabMistakes() {
     /* ⚠️ 依赖必须带 bankCode:漏了它就是闭包过期 —— 切库后这里还用着旧的 code。 */
   }, [bankCode]);
   const [ordered, setOrdered] = useState<VocabWord[]>([]);
+  /**
+   * 本"场"里已经出过题的词 id。**不持久化** —— 一次进入页面算一场,
+   * 跨天再来本来就该重新覆盖一遍。用途见 startRound 里的说明。
+   */
+  const [sessionTested, setSessionTested] = useState<Set<string>>(() => new Set<string>());
 
   useEffect(() => { loadingRef.current = load(); }, [load]);
   useEffect(() => () => stopAudio(), []);
@@ -154,8 +181,19 @@ export default function VocabMistakes() {
   function startRound(nextRoundNo: number) {
     /* 本轮取词:沿用 listMistakes 的排序(最久未清 → 错次多)。
      * 不足 10 个就有几个考几个 —— 剩 3 个错题时不该硬凑到 10。 */
-    const targets = ordered.slice(0, ROUND);
+    /* ── ⚠️ 这里原来是 `ordered.slice(0, ROUND)`,是个真 bug ──────────────
+     * 它**完全不看 nextRoundNo**,每一轮都取前 10 个。而答对只是让
+     * streak_days +1,词仍留在错题本、仍排在前面 —— 于是第二轮抽到的还是那批。
+     * Aaron 反馈的"同一批词反复出现"就是这个。
+     *
+     * 现在:**本轮优先出这一场里还没被抽到过的词**;只有当所有词都覆盖过一遍,
+     * 才允许回头再测(那时说明确实需要第二遍)。
+     * ⚠️ 用 sessionTested(一次进入页面算一场)而不是持久化 —— 跨天再来
+     *    本来就该重新覆盖一遍,不该记住"上次测过"。 */
+    const { targets, nextTested } = pickRoundTargets(ordered, sessionTested, ROUND);
     if (!targets.length) return;
+    /* ⚠️ 出题时就记,不等答完 —— 用户中途退出重进也算测过,否则又会从头重复。 */
+    setSessionTested(nextTested);
     /* 题型优先 last_wrong_mode:在哪种题型上栽的就在哪种上补。
      * ⚠️ 目前闯关只实现了选择型(zh/en),listen/spell/match 的交互不同,
      *    落到 zh_choice 兜底。这不是偷懒 —— 把四种交互塞进闯关会让

@@ -1,6 +1,6 @@
--- 词汇内容 batch1:40 词 · 120 例句
--- 生成: node scripts/vocab/generate-content.mjs --bank=cet6 --emit-sql
--- 模型: gpt-4o-mini · 六道机器闸门全过
+-- 词汇内容(增量:只补库里还缺释义的词):40 词 · 120 例句
+-- 生成: node scripts/vocab/generate-content.mjs --bank=cet6 --emit-sql --delta
+-- 模型: gpt-4o-mini · 九道机器闸门全过
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
 -- 幂等: vocab_words 按 lower(headword) 定位更新;

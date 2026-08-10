@@ -591,9 +591,9 @@ function writeSql(list) {
   ).join(',\n');
   const exCount = list.reduce((n, w) => n + w.examples.length, 0);
 
-  const sql = `-- 词汇内容 batch1:${list.length} 词 · ${exCount} 例句
--- 生成: node scripts/vocab/generate-content.mjs --bank=${bank} --emit-sql
--- 模型: ${list[0]._model || 'gpt-4o-mini'} · 六道机器闸门全过
+  const sql = `-- 词汇内容${DELTA ? '(增量:只补库里还缺释义的词)' : ' batch1'}:${list.length} 词 · ${exCount} 例句
+-- 生成: node scripts/vocab/generate-content.mjs --bank=${bank} --emit-sql${DELTA ? ' --delta' : ''}
+-- 模型: ${list[0]._model || 'gpt-4o-mini'} · 九道机器闸门全过
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
 -- 幂等: vocab_words 按 lower(headword) 定位更新;

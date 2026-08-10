@@ -454,14 +454,45 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_word_banks
          WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) AS bank_links;
 
--- ── count-validate:两行都必须是 t,否则 ROLLBACK ──
--- 预期(首次跑,两表都是空的): words = ${batch.length},${BANK}_links = ${batch.length}
-SELECT 'words = ${batch.length}' AS expect,
-       (SELECT count(*) FROM vocab_words) = ${batch.length} AS ok
-UNION ALL
-SELECT '${BANK}_links = ${batch.length}',
-       (SELECT count(*) FROM vocab_word_banks
-         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) = ${batch.length};
+-- ── 断言:**只判本批这 ${batch.length} 个词**,不判全表 ──────
+-- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words) = 本批词数。
+--    那只在**第一个词库**(全表就是这一批)时成立。从 cet6 起每次都报 f,
+--    Aaron 每次都得自己心算"哦这是没算共用词" —— **断言变成噪音就等于没有断言**。
+--    真正要判的是:本批的词是不是都进表了、是不是都挂上了本库。
+-- ⚠️ 用 DO + RAISE:不过直接抛异常整笔回滚,不靠人眼看 t/f。
+DO $gate$
+DECLARE
+  n_batch    int := ${batch.length};
+  n_missing  int;
+  n_unlinked int;
+  n_links    int;
+BEGIN
+  SELECT count(*) INTO n_missing
+    FROM (VALUES ${batch.map(w => `('${esc(w.headword)}')`).join(', ')}) AS v(headword)
+    LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE w.id IS NULL;
+
+  SELECT count(*) INTO n_unlinked
+    FROM (VALUES ${batch.map(w => `('${esc(w.headword)}')`).join(', ')}) AS v(headword)
+    JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE NOT EXISTS (
+     SELECT 1 FROM vocab_word_banks wb
+      WHERE wb.word_id = w.id
+        AND wb.bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}'));
+
+  SELECT count(*) INTO n_links
+    FROM vocab_word_banks
+   WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}');
+
+  RAISE NOTICE '本批 % 词:未进表 % · 未挂库 % · ${BANK} 链接总数 %',
+    n_batch, n_missing, n_unlinked, n_links;
+
+  IF n_missing > 0 OR n_unlinked > 0 OR n_links <> n_batch THEN
+    RAISE EXCEPTION '断言不过:未进表 % · 未挂库 % · 链接 %/% —— 已回滚,库里没有任何改动',
+      n_missing, n_unlinked, n_links, n_batch;
+  END IF;
+END
+$gate$;
 
 COMMIT;
 `;

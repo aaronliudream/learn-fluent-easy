@@ -29694,5 +29694,1157 @@
     ],
     "_attempts": 1,
     "_model": "gpt-4o-mini"
+  },
+  "culture": {
+    "word_id": "c936b122-a3cc-4e20-9aa7-726fa83bd23b",
+    "headword": "culture",
+    "pos": "n./v.",
+    "freq_rank": 611,
+    "cefr": "A2",
+    "ipa": "/ˈkʌl.tʃɚ/",
+    "def_zh": "文化",
+    "def_en": "The ideas, customs, and social behavior of a particular people or society.",
+    "examples": [
+      {
+        "collocation": "popular culture",
+        "scene": "daily_life",
+        "sentence": "Popular culture influences many young people's choices.",
+        "translation_zh": "流行文化影响了许多年轻人的选择。"
+      },
+      {
+        "collocation": "academic culture",
+        "scene": "education",
+        "sentence": "Students thrive in an academic culture that values learning.",
+        "translation_zh": "学生在重视学习的学术文化中茁壮成长。"
+      },
+      {
+        "collocation": "business culture",
+        "scene": "work",
+        "sentence": "A positive business culture improves employee satisfaction.",
+        "translation_zh": "积极的商业文化提高了员工的满意度。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "capital": {
+    "word_id": "4221deca-1402-4b47-ace5-d7abc6eac703",
+    "headword": "capital",
+    "pos": "n./adj.",
+    "freq_rank": 1061,
+    "cefr": "A2",
+    "ipa": "/ˈkæpɪtəl/",
+    "def_zh": "首都；资金",
+    "def_en": "A city where a government is based or money for investment.",
+    "examples": [
+      {
+        "collocation": "capital city",
+        "scene": "travel",
+        "sentence": "Tokyo is the capital city of Japan.",
+        "translation_zh": "东京是日本的首都。"
+      },
+      {
+        "collocation": "capital investment",
+        "scene": "work",
+        "sentence": "The company is seeking capital investment for new projects.",
+        "translation_zh": "该公司正在寻求对新项目的资金投资。"
+      },
+      {
+        "collocation": "capital gains",
+        "scene": "news",
+        "sentence": "Many investors are concerned about capital gains taxes this year.",
+        "translation_zh": "许多投资者对今年的资本利得税感到担忧。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "conduct": {
+    "word_id": "b7bf7cbd-d442-4ed0-b18e-89b4de903e34",
+    "headword": "conduct",
+    "pos": "n./v.",
+    "freq_rank": 1162,
+    "cefr": "A2",
+    "ipa": "/kənˈdʌkt/",
+    "def_zh": "行为；举止",
+    "def_en": "The way a person behaves in a situation.",
+    "examples": [
+      {
+        "collocation": "conduct research",
+        "scene": "science_tech",
+        "sentence": "Scientists conduct research to find new treatments.",
+        "translation_zh": "科学家进行研究以寻找新的治疗方法。"
+      },
+      {
+        "collocation": "conduct a meeting",
+        "scene": "work",
+        "sentence": "Managers conduct a meeting to discuss projects.",
+        "translation_zh": "经理召开会议讨论项目。"
+      },
+      {
+        "collocation": "conduct a survey",
+        "scene": "daily_life",
+        "sentence": "They conduct a survey to understand public opinions.",
+        "translation_zh": "他们进行调查以了解公众意见。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "coastal": {
+    "word_id": "4595d741-1e3b-4148-9df7-2aeb0b601957",
+    "headword": "coastal",
+    "pos": "adj.",
+    "freq_rank": 4039,
+    "cefr": "B2",
+    "ipa": "/ˈkoʊ.stəl/",
+    "def_zh": "沿海的",
+    "def_en": "Relating to or situated by the sea coast.",
+    "examples": [
+      {
+        "collocation": "coastal areas",
+        "scene": "environment",
+        "sentence": "Many species thrive in coastal areas where land meets the sea.",
+        "translation_zh": "许多物种在陆地与海洋交汇的沿海地区繁衍生息。"
+      },
+      {
+        "collocation": "coastal cities",
+        "scene": "travel",
+        "sentence": "Coastal cities often attract tourists due to their beautiful beaches.",
+        "translation_zh": "沿海城市因美丽的海滩而常吸引游客。"
+      },
+      {
+        "collocation": "coastal ecosystems",
+        "scene": "science_tech",
+        "sentence": "Researchers study coastal ecosystems to understand their unique biodiversity.",
+        "translation_zh": "研究人员研究沿海生态系统以了解其独特的生物多样性。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "alongside": {
+    "word_id": "f29b420a-828d-46f9-ae6e-ab02a505c7ba",
+    "headword": "alongside",
+    "pos": "adv./prep.",
+    "freq_rank": 4203,
+    "cefr": "B2",
+    "ipa": "/əˈlɔːŋ.saɪd/",
+    "def_zh": "在旁边；与...一起",
+    "def_en": "Next to or in conjunction with something or someone.",
+    "examples": [
+      {
+        "collocation": "alongside others",
+        "scene": "education",
+        "sentence": "Students often work alongside others to enhance their learning experience.",
+        "translation_zh": "学生们常常与他人一起学习，以提高他们的学习体验。"
+      },
+      {
+        "collocation": "alongside research",
+        "scene": "science_tech",
+        "sentence": "The study was conducted alongside research in related fields.",
+        "translation_zh": "该研究是在相关领域的研究同时进行的。"
+      },
+      {
+        "collocation": "alongside developments",
+        "scene": "news",
+        "sentence": "New policies were introduced alongside developments in technology.",
+        "translation_zh": "这些新政策是在科技发展的同时推出的。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "momentum": {
+    "word_id": "5b7ba07a-9c39-4c86-82de-382251dbd3f9",
+    "headword": "momentum",
+    "pos": "n.",
+    "freq_rank": 4335,
+    "cefr": "B2",
+    "ipa": "/moʊˈmɛn.təm/",
+    "def_zh": "势头；动量",
+    "def_en": "The quantity of motion an object has, depending on mass and velocity.",
+    "examples": [
+      {
+        "collocation": "gain momentum",
+        "scene": "news",
+        "sentence": "The movement has gained significant momentum in recent months.",
+        "translation_zh": "这个运动在最近几个月取得了显著的势头。"
+      },
+      {
+        "collocation": "build momentum",
+        "scene": "work",
+        "sentence": "Teams can build momentum by celebrating small wins throughout a project.",
+        "translation_zh": "团队可以通过庆祝项目中的小胜利来建立势头。"
+      },
+      {
+        "collocation": "momentum shifts",
+        "scene": "science_tech",
+        "sentence": "Momentum shifts can drastically alter the trajectory of a spacecraft.",
+        "translation_zh": "动量的变化可以极大地改变航天器的轨道。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "caution": {
+    "word_id": "16b71549-6bea-46eb-920b-b46c18d6907c",
+    "headword": "caution",
+    "pos": "n./v.",
+    "freq_rank": 5286,
+    "cefr": "B2",
+    "ipa": "/ˈkɔː.ʃən/",
+    "def_zh": "小心；谨慎",
+    "def_en": "Carefulness to avoid danger or mistakes.",
+    "examples": [
+      {
+        "collocation": "exercise caution",
+        "scene": "work",
+        "sentence": "Employees must exercise caution when using heavy machinery.",
+        "translation_zh": "员工在使用重型机械时必须小心。"
+      },
+      {
+        "collocation": "proceed with caution",
+        "scene": "news",
+        "sentence": "Scientists warn to proceed with caution in climate change discussions.",
+        "translation_zh": "科学家警告在气候变化讨论中要谨慎行事。"
+      },
+      {
+        "collocation": "show caution",
+        "scene": "daily_life",
+        "sentence": "You should always show caution when crossing the street.",
+        "translation_zh": "过马路时你应该始终保持小心。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "retention": {
+    "word_id": "ea56d425-2e24-4a0c-861b-3552dcaf13f8",
+    "headword": "retention",
+    "pos": "n.",
+    "freq_rank": 6542,
+    "cefr": "B2",
+    "ipa": "/rɪˈtɛn.ʃən/",
+    "def_zh": "保留；保持",
+    "def_en": "The act of keeping or retaining something.",
+    "examples": [
+      {
+        "collocation": "information retention",
+        "scene": "education",
+        "sentence": "Students benefit from information retention when using effective study techniques.",
+        "translation_zh": "学生在使用有效的学习技巧时，受益于信息保留。"
+      },
+      {
+        "collocation": "memory retention",
+        "scene": "science_tech",
+        "sentence": "Research shows that sleep enhances memory retention significantly after learning.",
+        "translation_zh": "研究表明，睡眠显著提高学习后的记忆保留。"
+      },
+      {
+        "collocation": "employee retention",
+        "scene": "work",
+        "sentence": "Companies often implement benefits to improve employee retention rates and satisfaction.",
+        "translation_zh": "公司通常实施福利以提高员工保留率和满意度。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "diagnostic": {
+    "word_id": "b0cb5a4a-639f-4006-8c71-cb89623e3c31",
+    "headword": "diagnostic",
+    "pos": "adj./n.",
+    "freq_rank": 6657,
+    "cefr": "B2",
+    "ipa": "/ˌdaɪ.əɡˈnɒs.tɪk/",
+    "def_zh": "诊断的；诊断性",
+    "def_en": "Related to the identification of a condition or problem.",
+    "examples": [
+      {
+        "collocation": "diagnostic tests",
+        "scene": "health",
+        "sentence": "Healthcare providers use diagnostic tests to determine patient conditions.",
+        "translation_zh": "医疗提供者使用诊断测试来确定患者的病情。"
+      },
+      {
+        "collocation": "diagnostic criteria",
+        "scene": "science_tech",
+        "sentence": "Researchers established diagnostic criteria for various diseases to aid in identification.",
+        "translation_zh": "研究人员制定了各种疾病的诊断标准以帮助识别。"
+      },
+      {
+        "collocation": "diagnostic tools",
+        "scene": "education",
+        "sentence": "Teachers utilize diagnostic tools to assess students' learning progress effectively.",
+        "translation_zh": "教师利用诊断工具有效评估学生的学习进展。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "interim": {
+    "word_id": "63a6f04e-fb1d-4f38-941e-6fc94414a411",
+    "headword": "interim",
+    "pos": "adj./n.",
+    "freq_rank": 6845,
+    "cefr": "B2",
+    "ipa": "/ˈɪn.tə.rɪm/",
+    "def_zh": "临时的；过渡的",
+    "def_en": "Temporary or provisional, often serving a transitional purpose.",
+    "examples": [
+      {
+        "collocation": "interim report",
+        "scene": "academic",
+        "sentence": "Researchers submitted an interim report detailing their findings thus far.",
+        "translation_zh": "研究人员提交了临时报告，详细介绍了他们迄今的发现。"
+      },
+      {
+        "collocation": "interim period",
+        "scene": "work",
+        "sentence": "During the interim period, the company evaluated new strategies for growth.",
+        "translation_zh": "在过渡期间，公司评估了新的增长策略。"
+      },
+      {
+        "collocation": "interim management",
+        "scene": "news",
+        "sentence": "The board appointed interim management to oversee operations until a new director is chosen.",
+        "translation_zh": "董事会任命临时管理层来监督运营，直到新主任被选出。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "confidential": {
+    "word_id": "588c33fd-40c0-4ea7-ae58-7d54b21e60c0",
+    "headword": "confidential",
+    "pos": "adj.",
+    "freq_rank": 7010,
+    "cefr": "B2",
+    "ipa": "/ˌkɒn.fɪˈdɛn.ʃəl/",
+    "def_zh": "秘密的；机密的",
+    "def_en": "Not intended to be known or seen by others.",
+    "examples": [
+      {
+        "collocation": "confidential information",
+        "scene": "work",
+        "sentence": "Employees must handle confidential information with utmost care.",
+        "translation_zh": "员工必须非常小心地处理机密信息。"
+      },
+      {
+        "collocation": "confidential report",
+        "scene": "academic",
+        "sentence": "I submitted a confidential report to the committee for review.",
+        "translation_zh": "我向委员会提交了一份机密报告以供审查。"
+      },
+      {
+        "collocation": "confidential meeting",
+        "scene": "daily_life",
+        "sentence": "We scheduled a confidential meeting to discuss sensitive issues.",
+        "translation_zh": "我们安排了一次机密会议以讨论敏感问题。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "pyjamas": {
+    "word_id": "3db4122a-fc7c-4b17-8b9e-be9df3ef8d9d",
+    "headword": "pyjamas",
+    "pos": "n.",
+    "freq_rank": 9126,
+    "cefr": "B2",
+    "ipa": "/pɪˈdʒɑː.məz/",
+    "def_zh": "睡衣",
+    "def_en": "Clothing worn for sleeping or lounging at home.",
+    "examples": [
+      {
+        "collocation": "wearing pyjamas",
+        "scene": "daily_life",
+        "sentence": "Children enjoy wearing pyjamas while watching cartoons on weekends.",
+        "translation_zh": "孩子们喜欢在周末看动画片时穿着睡衣。"
+      },
+      {
+        "collocation": "comfortable pyjamas",
+        "scene": "health",
+        "sentence": "Wearing comfortable pyjamas can improve your sleep quality at night.",
+        "translation_zh": "穿着舒适的睡衣可以提高你晚上的睡眠质量。"
+      },
+      {
+        "collocation": "fashionable pyjamas",
+        "scene": "culture",
+        "sentence": "Many people now choose fashionable pyjamas for their online video calls.",
+        "translation_zh": "许多人现在选择时尚的睡衣参加线上视频通话。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "kin": {
+    "word_id": "dd8f91a0-a78c-4520-a84c-8f6b4042e86c",
+    "headword": "kin",
+    "pos": "n./adj.",
+    "freq_rank": 7340,
+    "cefr": "B2",
+    "ipa": "/kɪn/",
+    "def_zh": "亲属；家人",
+    "def_en": "Relatives or family members, often used to denote blood relations.",
+    "examples": [
+      {
+        "collocation": "next of kin",
+        "scene": "daily_life",
+        "sentence": "In case of emergency, he designated his spouse as his next of kin.",
+        "translation_zh": "在紧急情况下，他指定配偶为他的直系亲属。"
+      },
+      {
+        "collocation": "kin relationships",
+        "scene": "culture",
+        "sentence": "Many cultures emphasize the importance of kin relationships in community life.",
+        "translation_zh": "许多文化强调亲属关系在社区生活中的重要性。"
+      },
+      {
+        "collocation": "kin by blood",
+        "scene": "education",
+        "sentence": "Students learned about the concept of being kin by blood in family studies.",
+        "translation_zh": "学生在家庭研究中学习了血缘关系的概念。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "mast": {
+    "word_id": "7f33a65f-9f93-417b-9973-780c08bd764b",
+    "headword": "mast",
+    "pos": "n./v.",
+    "freq_rank": 11745,
+    "cefr": "C1",
+    "ipa": "/mæst/",
+    "def_zh": "桅杆；旗杆",
+    "def_en": "A tall vertical structure used to support sails or flags.",
+    "examples": [
+      {
+        "collocation": "sail on a mast",
+        "scene": "travel",
+        "sentence": "Sailboats often rely on a sturdy mast to catch the wind effectively.",
+        "translation_zh": "帆船通常依靠坚固的桅杆有效捕风。"
+      },
+      {
+        "collocation": "flag on a mast",
+        "scene": "culture",
+        "sentence": "During national holidays, many buildings display the flag proudly atop a mast.",
+        "translation_zh": "在国庆假期，许多建筑物都会自豪地在桅杆上悬挂国旗。"
+      },
+      {
+        "collocation": "install a mast",
+        "scene": "work",
+        "sentence": "Technicians will install a new mast to enhance the signal strength in the area.",
+        "translation_zh": "技术人员将安装新的桅杆，以增强该地区的信号强度。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "watery": {
+    "word_id": "669f79bc-757b-4873-9274-6a197b7ed9fd",
+    "headword": "watery",
+    "pos": "adj.",
+    "freq_rank": 10596,
+    "cefr": "C1",
+    "ipa": "/ˈwɔː.tər.i/",
+    "def_zh": "水状的；稀薄的",
+    "def_en": "Containing a large amount of water; not solid or thick.",
+    "examples": [
+      {
+        "collocation": "watery eyes",
+        "scene": "health",
+        "sentence": "After crying, her eyes looked particularly watery and swollen.",
+        "translation_zh": "哭过后，她的眼睛看起来特别水汪汪而肿胀。"
+      },
+      {
+        "collocation": "watery grave",
+        "scene": "culture",
+        "sentence": "Many sailors feared ending up in a watery grave during storms at sea.",
+        "translation_zh": "许多水手害怕在海上暴风雨中结束在水下。"
+      },
+      {
+        "collocation": "watery soup",
+        "scene": "daily_life",
+        "sentence": "The chef's special today was a watery soup that lacked flavor and richness.",
+        "translation_zh": "今天厨师的特餐是一碗缺乏风味和浓郁的水状汤。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "thereof": {
+    "word_id": "4ceaf376-adea-4209-be90-51bfd0605a84",
+    "headword": "thereof",
+    "pos": "adv.",
+    "freq_rank": 12522,
+    "cefr": "C1",
+    "ipa": "/ðɛəˈrʌv/",
+    "def_zh": "因此；由此",
+    "def_en": "As a result of that; from that point.",
+    "examples": [
+      {
+        "collocation": "in relation to thereof",
+        "scene": "academic",
+        "sentence": "Researchers presented evidence in relation to thereof in their recent study.",
+        "translation_zh": "研究人员在最近的研究中提出了与此相关的证据。"
+      },
+      {
+        "collocation": "the consequences thereof",
+        "scene": "news",
+        "sentence": "The report outlined the consequences thereof for the local community.",
+        "translation_zh": "报告概述了对此社区的后果。"
+      },
+      {
+        "collocation": "the legality thereof",
+        "scene": "work",
+        "sentence": "Employees must understand the legality thereof in their contracts before signing.",
+        "translation_zh": "员工在签字前必须了解其合同的合法性。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "excessively": {
+    "word_id": "34180778-b162-4f7a-94d5-474fd3a6f6cb",
+    "headword": "excessively",
+    "pos": "adv.",
+    "freq_rank": 12532,
+    "cefr": "C1",
+    "ipa": "/ɪkˈsɛs.ɪv.li/",
+    "def_zh": "过度地；过分地",
+    "def_en": "In a manner that is more than is necessary or desirable.",
+    "examples": [
+      {
+        "collocation": "excessively high standards",
+        "scene": "academic",
+        "sentence": "Students often face excessively high standards set by their teachers.",
+        "translation_zh": "学生们常常面临教师设定的过高标准。"
+      },
+      {
+        "collocation": "excessively strict rules",
+        "scene": "work",
+        "sentence": "Employees may feel restricted by excessively strict rules at the workplace.",
+        "translation_zh": "员工可能会因为工作场所的过于严格的规则而感到受限。"
+      },
+      {
+        "collocation": "excessively loud noises",
+        "scene": "daily_life",
+        "sentence": "People living nearby complained about excessively loud noises late at night.",
+        "translation_zh": "住在附近的人抱怨深夜的噪音过于响亮。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "fright": {
+    "word_id": "86350e93-d425-4ede-93d9-82cca4f9ab70",
+    "headword": "fright",
+    "pos": "n.",
+    "freq_rank": 12606,
+    "cefr": "C1",
+    "ipa": "/fraɪt/",
+    "def_zh": "惊恐",
+    "def_en": "A feeling of fear or anxiety.",
+    "examples": [
+      {
+        "collocation": "fright of my life",
+        "scene": "daily_life",
+        "sentence": "She experienced the fright of her life when the car suddenly stopped.",
+        "translation_zh": "当汽车突然停下时，她经历了她一生中最大的惊恐。"
+      },
+      {
+        "collocation": "fright from a nightmare",
+        "scene": "health",
+        "sentence": "Many children wake up in fright from a nightmare, needing reassurance from parents.",
+        "translation_zh": "许多孩子在噩梦中惊醒，需要父母的安慰。"
+      },
+      {
+        "collocation": "fright in the dark",
+        "scene": "culture",
+        "sentence": "He felt a fright in the dark as he heard strange noises outside.",
+        "translation_zh": "当他听到外面传来奇怪的声音时，他在黑暗中感到了一阵惊恐。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "commonwealth": {
+    "word_id": "fa66174a-c9cb-4e28-b020-829a4e0ad81d",
+    "headword": "commonwealth",
+    "pos": "n.",
+    "freq_rank": 14121,
+    "cefr": "C1",
+    "ipa": "/ˈkɑː.mən.wɛlθ/",
+    "def_zh": "联邦；英联邦",
+    "def_en": "A political unit or community governed by elected representatives.",
+    "examples": [
+      {
+        "collocation": "commonwealth countries",
+        "scene": "news",
+        "sentence": "Many commonwealth countries are collaborating on climate change initiatives.",
+        "translation_zh": "许多英联邦国家正在合作应对气候变化倡议。"
+      },
+      {
+        "collocation": "commonwealth of nations",
+        "scene": "academic",
+        "sentence": "The commonwealth of nations promotes cooperation among its member states.",
+        "translation_zh": "英联邦促进其成员国之间的合作。"
+      },
+      {
+        "collocation": "commonwealth legislation",
+        "scene": "work",
+        "sentence": "New commonwealth legislation aims to improve workers' rights across Australia.",
+        "translation_zh": "新颁布的联邦立法旨在改善澳大利亚工人的权利。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "henceforth": {
+    "word_id": "3d64db2c-6cab-4790-be12-e511fa276a07",
+    "headword": "henceforth",
+    "pos": "adv.",
+    "freq_rank": 17401,
+    "cefr": "C1",
+    "ipa": "/ˈhɛnsˌfɔrθ/",
+    "def_zh": "从此以后",
+    "def_en": "From this time on or from now on.",
+    "examples": [
+      {
+        "collocation": "henceforth known as",
+        "scene": "academic",
+        "sentence": "The subject will henceforth be known as a critical issue in research.",
+        "translation_zh": "该主题从此以后将被称为研究中的一个关键问题。"
+      },
+      {
+        "collocation": "henceforth applicable",
+        "scene": "work",
+        "sentence": "This policy is henceforth applicable to all employees in the company.",
+        "translation_zh": "该政策从此适用于公司所有员工。"
+      },
+      {
+        "collocation": "henceforth required",
+        "scene": "education",
+        "sentence": "Students are henceforth required to submit their assignments electronically.",
+        "translation_zh": "学生从此以后必须以电子方式提交作业。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "therein": {
+    "word_id": "6a82804f-7094-4176-b266-720d7c3efc26",
+    "headword": "therein",
+    "pos": "adv.",
+    "freq_rank": 12928,
+    "cefr": "C1",
+    "ipa": "/ðɛrˈɪn/",
+    "def_zh": "其中；在其中",
+    "def_en": "In that place or document; specifically stated within.",
+    "examples": [
+      {
+        "collocation": "mentioned therein",
+        "scene": "academic",
+        "sentence": "Many researchers stress the importance of theories mentioned therein for future studies.",
+        "translation_zh": "许多研究人员强调，未来研究中提到的理论的重要性。"
+      },
+      {
+        "collocation": "discussed therein",
+        "scene": "news",
+        "sentence": "The policy changes discussed therein have sparked widespread debate among citizens.",
+        "translation_zh": "其中讨论的政策变更引发了公民间广泛的争论。"
+      },
+      {
+        "collocation": "included therein",
+        "scene": "work",
+        "sentence": "All relevant documents included therein must be submitted by the deadline.",
+        "translation_zh": "所有包含在内的相关文件必须在截止日期前提交。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "telex": {
+    "word_id": "59a6b2ae-7e10-48f9-b69f-37e8c48e35f7",
+    "headword": "telex",
+    "pos": "n.",
+    "freq_rank": 33037,
+    "cefr": "C1",
+    "ipa": "/ˈtɛl.ɛks/",
+    "def_zh": "电传机",
+    "def_en": "A system for transmitting typed messages over telecommunication lines.",
+    "examples": [
+      {
+        "collocation": "telex machine",
+        "scene": "work",
+        "sentence": "Many companies still rely on a telex machine for sending important documents.",
+        "translation_zh": "许多公司仍依赖电传机发送重要文件。"
+      },
+      {
+        "collocation": "telex communication",
+        "scene": "news",
+        "sentence": "Effective telex communication was essential during the crisis to keep everyone informed.",
+        "translation_zh": "在危机期间，有效的电传通信对保持大家知情至关重要。"
+      },
+      {
+        "collocation": "international telex",
+        "scene": "culture",
+        "sentence": "An international telex service helped businesses connect across different countries easily.",
+        "translation_zh": "国际电传服务帮助企业轻松联系不同国家。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "lord": {
+    "word_id": "a14346aa-c727-4aaa-827b-28667f48dca6",
+    "headword": "lord",
+    "pos": "n./v.",
+    "freq_rank": 31607,
+    "cefr": "C1",
+    "ipa": "/lɔrd/",
+    "def_zh": "领主；上帝",
+    "def_en": "A figure of authority or power, often in a feudal context.",
+    "examples": [
+      {
+        "collocation": "the Lord",
+        "scene": "daily_life",
+        "sentence": "Many people turn to the Lord for guidance during difficult times.",
+        "translation_zh": "许多人在困难时期向上帝寻求指引。"
+      },
+      {
+        "collocation": "Lord of the Rings",
+        "scene": "culture",
+        "sentence": "J.R.R. Tolkien's Lord of the Rings has influenced countless fantasy works.",
+        "translation_zh": "J.R.R.托尔金的《指环王》影响了无数的奇幻作品。"
+      },
+      {
+        "collocation": "my lord",
+        "scene": "work",
+        "sentence": "The lawyer addressed the judge as my lord in the courtroom.",
+        "translation_zh": "律师在法庭上称法官为我的领主。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "site": {
+    "word_id": "6c008413-1dc4-4a8c-8c60-7b1666419228",
+    "headword": "site",
+    "pos": "n./v.",
+    "freq_rank": 532,
+    "cefr": "A2",
+    "ipa": "/saɪt/",
+    "def_zh": "地点；场所",
+    "def_en": "A location or area designated for a specific purpose.",
+    "examples": [
+      {
+        "collocation": "site visit",
+        "scene": "work",
+        "sentence": "The team conducted a site visit to assess the project.",
+        "translation_zh": "团队进行了现场考察以评估项目。"
+      },
+      {
+        "collocation": "construction site",
+        "scene": "daily_life",
+        "sentence": "They are building a new park at the construction site.",
+        "translation_zh": "他们在施工现场建设一个新公园。"
+      },
+      {
+        "collocation": "historic site",
+        "scene": "travel",
+        "sentence": "We explored the historic site during our vacation.",
+        "translation_zh": "我们在假期期间游览了那个历史遗址。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "mud": {
+    "word_id": "3953f2df-69d6-4c4b-b586-cd917039ca45",
+    "headword": "mud",
+    "pos": "n./v.",
+    "freq_rank": 3610,
+    "cefr": "B1",
+    "ipa": "/mʌd/",
+    "def_zh": "泥土；污泥",
+    "def_en": "Wet, soft earth or a mixture of water and soil.",
+    "examples": [
+      {
+        "collocation": "stuck in the mud",
+        "scene": "daily_life",
+        "sentence": "Children often get stuck in the mud while playing outside.",
+        "translation_zh": "孩子们在外面玩的时候，常常会陷入泥土中。"
+      },
+      {
+        "collocation": "mud on shoes",
+        "scene": "work",
+        "sentence": "Employees should clean the mud on their shoes before entering the office.",
+        "translation_zh": "员工们在进办公室前应该清理鞋子上的泥土。"
+      },
+      {
+        "collocation": "mud flowing",
+        "scene": "environment",
+        "sentence": "The heavy rain caused mud flowing down the hills into the valley.",
+        "translation_zh": "大雨导致泥土从山上流向山谷。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "statistics": {
+    "word_id": "345bd2f6-3c0b-4fef-aff4-df0d62c38bfa",
+    "headword": "statistics",
+    "pos": "n.",
+    "freq_rank": 2709,
+    "cefr": "B1",
+    "ipa": "/stəˈtɪs.tɪks/",
+    "def_zh": "统计数据",
+    "def_en": "The study of data collection, analysis, interpretation, and presentation.",
+    "examples": [
+      {
+        "collocation": "statistics show",
+        "scene": "news",
+        "sentence": "Statistics show that many people prefer online shopping now.",
+        "translation_zh": "统计数据显示，现在很多人更喜欢网上购物。"
+      },
+      {
+        "collocation": "official statistics",
+        "scene": "academic",
+        "sentence": "Researchers rely on official statistics for accurate data analysis.",
+        "translation_zh": "研究人员依赖官方统计数据进行准确的数据分析。"
+      },
+      {
+        "collocation": "use statistics",
+        "scene": "work",
+        "sentence": "You should use statistics to support your arguments in the report.",
+        "translation_zh": "你应该在报告中使用统计数据来支持你的论点。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "fare": {
+    "word_id": "5d16c336-5980-4a6a-a9e5-45d250c46215",
+    "headword": "fare",
+    "pos": "n./v.",
+    "freq_rank": 4776,
+    "cefr": "B2",
+    "ipa": "/fɛr/",
+    "def_zh": "费用；票价",
+    "def_en": "The price paid for a journey or transportation.",
+    "examples": [
+      {
+        "collocation": "bus fare",
+        "scene": "daily_life",
+        "sentence": "Many people rely on public transport to save on bus fare.",
+        "translation_zh": "许多人依靠公共交通来节省公交费用。"
+      },
+      {
+        "collocation": "air fare",
+        "scene": "travel",
+        "sentence": "Travelers should compare air fare before booking their flights.",
+        "translation_zh": "旅客在预订航班前应比较机票价格。"
+      },
+      {
+        "collocation": "fare increases",
+        "scene": "news",
+        "sentence": "Local authorities announced fare increases for public transport next month.",
+        "translation_zh": "地方当局宣布下个月公共交通费用将上涨。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "respectively": {
+    "word_id": "e4949ed9-b00c-4092-80dc-48f763c367ac",
+    "headword": "respectively",
+    "pos": "adv.",
+    "freq_rank": 3726,
+    "cefr": "B1",
+    "ipa": "/rɪˈspɛktɪvli/",
+    "def_zh": "分别；各自",
+    "def_en": "In the order mentioned; in the same sequence.",
+    "examples": [
+      {
+        "collocation": "respectively named",
+        "scene": "education",
+        "sentence": "John and Mary received top scores, respectively named valedictorian and salutatorian.",
+        "translation_zh": "约翰和玛丽的分数最高，分别被称为毕业生代表和致辞代表。"
+      },
+      {
+        "collocation": "respectively reported",
+        "scene": "news",
+        "sentence": "The two companies achieved profits of 1 million and 2 million dollars, respectively reported.",
+        "translation_zh": "这两家公司分别报告了100万美元和200万美元的利润。"
+      },
+      {
+        "collocation": "respectively ranked",
+        "scene": "work",
+        "sentence": "Employees were respectively ranked first, second, and third in the performance review.",
+        "translation_zh": "在绩效评审中，员工分别被评为第一、第二和第三名。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "tub": {
+    "word_id": "7c8f5a66-6bb8-465f-8f1f-05daf69f504a",
+    "headword": "tub",
+    "pos": "n./v.",
+    "freq_rank": 5418,
+    "cefr": "B2",
+    "ipa": "/tʌb/",
+    "def_zh": "浴缸；桶",
+    "def_en": "A large container for water, used for bathing.",
+    "examples": [
+      {
+        "collocation": "fill the tub",
+        "scene": "daily_life",
+        "sentence": "Many people enjoy filling the tub with warm water.",
+        "translation_zh": "许多人喜欢把浴缸装满温水。"
+      },
+      {
+        "collocation": "hot tub",
+        "scene": "health",
+        "sentence": "Relaxing in a hot tub can relieve stress and tension.",
+        "translation_zh": "在热水浴缸中放松可以缓解压力和紧张。"
+      },
+      {
+        "collocation": "tub of ice cream",
+        "scene": "culture",
+        "sentence": "Kids often ask for a tub of ice cream on special occasions.",
+        "translation_zh": "孩子们通常在特别的场合要求一桶冰淇淋。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "dorm": {
+    "word_id": "8f4568f0-fcdf-44a3-a7b9-6a3d2d79380e",
+    "headword": "dorm",
+    "pos": "n.",
+    "freq_rank": 8314,
+    "cefr": "B2",
+    "ipa": "/dɔrm/",
+    "def_zh": "宿舍",
+    "def_en": "A building providing sleeping accommodations for students.",
+    "examples": [
+      {
+        "collocation": "student dorm",
+        "scene": "education",
+        "sentence": "Many universities offer both single and shared student dorm options.",
+        "translation_zh": "许多大学提供单人和共享学生宿舍选项。"
+      },
+      {
+        "collocation": "dorm life",
+        "scene": "daily_life",
+        "sentence": "Adjusting to dorm life can be challenging for many freshmen.",
+        "translation_zh": "适应宿舍生活对许多新生来说可能很有挑战。"
+      },
+      {
+        "collocation": "in the dorms",
+        "scene": "culture",
+        "sentence": "Social gatherings often happen in the dorms during weekends.",
+        "translation_zh": "社交活动通常在周末发生在宿舍里。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "volt": {
+    "word_id": "1276ea7b-2290-414b-80e8-f1f2f3450892",
+    "headword": "volt",
+    "pos": "n.",
+    "freq_rank": 12526,
+    "cefr": "C1",
+    "ipa": "/voʊlt/",
+    "def_zh": "伏特",
+    "def_en": "Unit of electric potential or electromotive force.",
+    "examples": [
+      {
+        "collocation": "230 volts",
+        "scene": "science_tech",
+        "sentence": "The device requires a supply of 230 volts to operate efficiently.",
+        "translation_zh": "该设备需要230伏特的电源才能高效运行。"
+      },
+      {
+        "collocation": "volts of power",
+        "scene": "work",
+        "sentence": "Understanding how many volts of power are needed is crucial for this project.",
+        "translation_zh": "了解该项目需要多少伏特的电力至关重要。"
+      },
+      {
+        "collocation": "nine volts",
+        "scene": "daily_life",
+        "sentence": "Many standard batteries provide nine volts for common electronic devices.",
+        "translation_zh": "许多标准电池为常见电子设备提供九伏特的电压。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "yard": {
+    "word_id": "5c4a01fe-ded7-4348-aad8-0dfb6796c195",
+    "headword": "yard",
+    "pos": "n.",
+    "freq_rank": 1035,
+    "cefr": "A2",
+    "ipa": "/jɑrd/",
+    "def_zh": "院子；场地",
+    "def_en": "An area of land next to a building, often used for outdoor activities.",
+    "examples": [
+      {
+        "collocation": "front yard",
+        "scene": "daily_life",
+        "sentence": "She spends time in the front yard every day.",
+        "translation_zh": "她每天都在前院里待着。"
+      },
+      {
+        "collocation": "back yard",
+        "scene": "environment",
+        "sentence": "Kids often play in the back yard during summer.",
+        "translation_zh": "孩子们在夏天常常在后院里玩。"
+      },
+      {
+        "collocation": "yard sale",
+        "scene": "culture",
+        "sentence": "They held a yard sale to clear out old items.",
+        "translation_zh": "他们举行了一个 yard sale，清理旧物品。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "worm": {
+    "word_id": "a93b0a84-6965-4a0a-b10d-39d4979b950a",
+    "headword": "worm",
+    "pos": "n./v.",
+    "freq_rank": 4993,
+    "cefr": "B2",
+    "ipa": "/wɜːrm/",
+    "def_zh": "蠕虫；虫子",
+    "def_en": "A long, thin creature that moves by twisting and turning.",
+    "examples": [
+      {
+        "collocation": "fishing worms",
+        "scene": "daily_life",
+        "sentence": "Many fishermen prefer using live fishing worms as bait.",
+        "translation_zh": "许多钓鱼者更喜欢用活的钓鱼虫作为饵料。"
+      },
+      {
+        "collocation": "worm holes",
+        "scene": "science_tech",
+        "sentence": "Scientists study worm holes to understand the fabric of space-time.",
+        "translation_zh": "科学家研究虫洞以理解时空的结构。"
+      },
+      {
+        "collocation": "computer worms",
+        "scene": "work",
+        "sentence": "The company implemented security measures against computer worms invading their system.",
+        "translation_zh": "公司采取安全措施以防止计算机虫侵入他们的系统。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "opium": {
+    "word_id": "8cde141b-873a-441d-af9e-4f6c5e345f0d",
+    "headword": "opium",
+    "pos": "n.",
+    "freq_rank": 11885,
+    "cefr": "C1",
+    "ipa": "/ˈoʊ.pi.əm/",
+    "def_zh": "鸦片",
+    "def_en": "A narcotic drug derived from the poppy plant.",
+    "examples": [
+      {
+        "collocation": "opium trade",
+        "scene": "news",
+        "sentence": "The opium trade has significantly influenced the economy of certain regions in Asia.",
+        "translation_zh": "鸦片贸易对亚洲某些地区的经济产生了重大影响。"
+      },
+      {
+        "collocation": "opium addiction",
+        "scene": "health",
+        "sentence": "Many individuals struggle with opium addiction, leading to severe health consequences.",
+        "translation_zh": "许多人面临鸦片成瘾问题，导致严重的健康后果。"
+      },
+      {
+        "collocation": "opium production",
+        "scene": "culture",
+        "sentence": "Historical records indicate that opium production was widespread in the 19th century.",
+        "translation_zh": "历史记录表明，19世纪鸦片生产十分普遍。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "morality": {
+    "word_id": "e3f19ccc-0cf0-422d-b37e-c12ba68276f5",
+    "headword": "morality",
+    "pos": "n.",
+    "freq_rank": 5115,
+    "cefr": "B2",
+    "ipa": "/məˈrælɪti/",
+    "def_zh": "道德；道德观念",
+    "def_en": "Beliefs about which kinds of human behaviour are right or wrong.",
+    "examples": [
+      {
+        "collocation": "public morality",
+        "scene": "culture",
+        "sentence": "Public morality has changed a great deal over the past century.",
+        "translation_zh": "过去一个世纪里，公众的道德观念发生了很大变化。"
+      },
+      {
+        "collocation": "question the morality",
+        "scene": "news",
+        "sentence": "Many readers questioned the morality of the newspaper's decision.",
+        "translation_zh": "许多读者质疑那家报纸这一决定的道德性。"
+      },
+      {
+        "collocation": "morality of war",
+        "scene": "academic",
+        "sentence": "Students debated the morality of war in their philosophy seminar.",
+        "translation_zh": "学生们在哲学研讨课上辩论战争的道德问题。"
+      }
+    ],
+    "_manual": true,
+    "_why": "模型三轮都把搭配写成 moral values / moral standards(g7+g13:用同根派生词冒充搭配),例句里也只出现 moral 不出现 morality。改成三个真含 morality 的搭配。"
+  },
+  "mustard": {
+    "word_id": "00c247b4-ca0b-4d5e-a80d-fe984c5c2383",
+    "headword": "mustard",
+    "pos": "n.",
+    "freq_rank": 6095,
+    "cefr": "B2",
+    "ipa": "/ˈmʌstərd/",
+    "def_zh": "芥末；芥菜",
+    "def_en": "A spicy yellow paste eaten with meat, made from ground seeds.",
+    "examples": [
+      {
+        "collocation": "mustard sauce",
+        "scene": "daily_life",
+        "sentence": "She spread mustard sauce on the sandwich before eating it.",
+        "translation_zh": "她在三明治上抹了芥末酱，然后才吃。"
+      },
+      {
+        "collocation": "Dijon mustard",
+        "scene": "culture",
+        "sentence": "French cooking often relies on Dijon mustard for extra flavor.",
+        "translation_zh": "法国菜常常靠第戎芥末来增添风味。"
+      },
+      {
+        "collocation": "mustard seeds",
+        "scene": "environment",
+        "sentence": "Farmers plant mustard seeds in early spring across these fields.",
+        "translation_zh": "农民在早春时节在这些田地里播种芥菜籽。"
+      }
+    ],
+    "_manual": true,
+    "_why": "模型三轮都写成 \"...made from ground mustard seeds\"(g12 循环定义)。芥末的常识定义几乎必然想提 mustard seeds,改成不提目标词的写法。"
   }
 }

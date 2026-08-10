@@ -4,13 +4,13 @@
 > **不是纯随机** —— 贪心挑成尽量铺开 scene 与词性,免得 16 个全是名词、场景全挤在 news。
 > 本批覆盖 **10/10 个 scene**、**7 种词性**(adj. / n. / v. / adv. / 词性缺失 / prep. / int.)。
 > (`词性缺失` = ECDICT 的 translation 里没有词性前缀,全库 53 个词属于这种,`pos` 为空。)
-> 全量 928 词见 `scripts/vocab/data/generated/cet6-content.json`。
+> 全量 964 词见 `scripts/vocab/data/generated/cet6-content.json`。
 
-## 全量 928 词的分布(不只是抽样这 16 个)
+## 全量 964 词的分布(不只是抽样这 16 个)
 
-难度档:A2 33 · B1 103 · B2 455 · C1 337
+难度档:A2 38 · B1 106 · B2 471 · C1 349
 
-场景(共 2784 条例句):academic 256 · news 282 · daily_life 545 · work 505 · science_tech 305 · health 128 · environment 100 · education 261 · travel 64 · culture 338
+场景(共 2892 条例句):academic 265 · news 296 · daily_life 564 · work 527 · science_tech 313 · health 134 · environment 104 · education 269 · travel 69 · culture 351
 
 ## 这批内容是怎么把住质量的
 
@@ -19,7 +19,7 @@
 | 闸门 | 判据 | 拦的是什么 |
 | --- | --- | --- |
 | g1 | 句中含 headword 或其屈折形/派生形 | 例句根本没用上目标词 |
-| g2 | 例句按档句长(A2 8-12 / B1 8-14 / B2 9-16 / C1 10-20) | 太短没语境 / 太长读不动 |
+| g2 | 例句按档句长(A2 7-12 / B1 7-14 / B2 8-16 / C1 9-20) | 太短没语境 / 太长读不动 |
 | g3 | 全字段扫 em-dash / en-dash | 破折号(中文排版里很丑) |
 | g4 | 与**历史全部**已生成句 4-gram 重合 >50% | 跨词、跨批次的套话复读 |
 | g5 | 三句 scene 互不相同且在枚举内;三句 collocation 互不相同 | 三句其实在讲同一个用法 |

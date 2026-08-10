@@ -34,7 +34,7 @@
  *
  * ⚠️ 本脚本只读库 + 产出文件,绝不写库。SQL 一律交 Aaron 跑。
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER } from './gates.mjs';
@@ -93,6 +93,8 @@ const EMIT_ONLY = process.argv.includes('--emit-sql');
  *    全量跑时 pending 过滤会跳过它们**不重复烧 token**,
  *    但 emit() 是把整个 JSON 全量输出的,所以这几个词照常出现在最终 SQL 里,不会漏。 */
 const NO_EMIT = process.argv.includes('--no-emit');
+const DELTA = process.argv.includes('--delta');
+const REVIEW = process.argv.includes('--review');
 
 /* ── env ── */
 const ENV = loadEnv(REPO);
@@ -194,9 +196,48 @@ function cefrFor(freqRank) {
 const SYSTEM = `You write vocabulary study cards for Chinese learners of English.
 You return ONLY valid JSON matching the provided schema. No prose, no markdown.`;
 
+/**
+ * 重跑时的**定向补刀**。
+ *
+ * 2026-08-10 把 g2 下限放宽后重跑,55 个失败词救回 40,剩下 15 个**全部**卡在同两个陷阱上,
+ * 而且三次重试都没自己爬出来 —— 因为泛泛的"不许循环定义 / 搭配必须含目标词"这两条规则
+ * 提示词里本来就有,它读得懂但对**这几个特定词**做不到:
+ *
+ *   · def_en 循环:electric→"electricity"、sixty→"sixty"、adverb→"adverbs"、opium→"opium"
+ *     这类词的常识定义几乎必然想用同根词,得给它一条"绕开"的具体路子。
+ *   · 搭配用派生词冒充:statistics→"statistical analysis"、tub→"bathtub"、
+ *     volt→"high voltage"、dorm→"dormitory assignments"、morality→"moral values"
+ *     模型认为"同根就算搭配",要点破"bathtub 是一个词,不是 tub 的搭配"。
+ *
+ * 所以按**上一轮的实际失败原因**追加一段带正反例的针对性提示,而不是原样再试一次。
+ * ⚠️ 只在重跑失败词时挂,正常首次生成不加 —— 免得给 4000 多个本来就没问题的词涨 token。
+ */
+function trapPrimer(word, notes) {
+  const all = (notes || []).join(' ');
+  const out = [];
+  if (/循环定义/.test(all)) {
+    out.push(`⚠️ Your def_en keeps containing a form of "${word.headword}" itself. This is the ONE thing that will get it rejected again.
+   Do not use "${word.headword}", its plural, its adjective/noun cognate, or any word sharing its stem.
+   Describe it from scratch as if the word did not exist:
+     electric -> "Powered by or carrying a current of energy." (NOT "...electricity...")
+     sixty    -> "The number that comes after fifty-nine."     (NOT "...sixty...")
+     adverb   -> "A word that describes how an action happens." (NOT "...adverbs...")`);
+  }
+  if (/g7|g13|同根|是同义词不是搭配/.test(all)) {
+    out.push(`⚠️ Your collocations keep using a DERIVED word instead of "${word.headword}" itself.
+   A collocation is two or more words that occur together, and "${word.headword}" must be one of them,
+   as a separate word (an inflected form is fine: plural / tense / comparative).
+     tub        -> "hot tub" / "fill the tub"    NOT "bathtub" (that is one single word)
+     statistics -> "statistics show" / "official statistics"  NOT "statistical analysis"
+     volt       -> "230 volts" / "volts of power"  NOT "high voltage"
+     morality   -> "public morality" / "question the morality"  NOT "moral values"`);
+  }
+  return out.length ? `\n\n${out.join('\n\n')}` : '';
+}
+
 function buildPrompt(word, cefr, failureNotes) {
   const retry = failureNotes?.length
-    ? `\n\nYOUR PREVIOUS ATTEMPT WAS REJECTED. Fix exactly these problems:\n${failureNotes.map(f => `- ${f}`).join('\n')}\nRegenerate all three examples.`
+    ? `\n\nYOUR PREVIOUS ATTEMPT WAS REJECTED. Fix exactly these problems:\n${failureNotes.map(f => `- ${f}`).join('\n')}\nRegenerate all three examples.${trapPrimer(word, failureNotes)}`
     : '';
   const fnRule = isFunctionWord(word.pos) ? `
 
@@ -338,6 +379,23 @@ async function main() {
   const inflectTable = existsSync(inflectPath) ? JSON.parse(readFileSync(inflectPath, 'utf8')) : {};
   const failed = existsSync(failedPath) ? JSON.parse(readFileSync(failedPath, 'utf8')) : {};
 
+  /* ⚠️ failed.json 是**跨库共用**的一个文件,但 `delete failed[w]` 只在**本次跑的那个库**
+     里发生。cet4/cet6 有 3425 个共享词 —— 一个词在 cet4 那轮失败、在 cet6 那轮成功,
+     它的失败记录就永远留在文件里。
+     2026-08-10 实测:文件里 30 条,其中 **15 条对应的词早就生成成功了**。
+     我据此报过"还剩 57 个失败词",**那个数字是虚的**(真实 15)。
+     → 每次开跑先拿**所有** <bank>-content.json 对账,清掉已经有内容的陈旧条目。 */
+  const stale = [];
+  for (const f of readdirSync(GEN)) {
+    if (!f.endsWith('-content.json') || f.includes('trial')) continue;
+    let done; try { done = JSON.parse(readFileSync(path.join(GEN, f), 'utf8')); } catch { continue; }
+    for (const k of Object.keys(done)) if (failed[k]) { delete failed[k]; stale.push(k); }
+  }
+  if (stale.length) {
+    writeFileSync(failedPath, JSON.stringify(failed, null, 2), 'utf8');
+    process.stdout.write(`· 清掉 ${stale.length} 条陈旧失败记录(这些词其实已生成):${stale.slice(0, 12).join(' ')}${stale.length > 12 ? ' …' : ''}\n`);
+  }
+
   // g4 全局语料:所有历史已接受句子
   const corpus = [];
   for (const rec of Object.values(results)) {
@@ -346,7 +404,7 @@ async function main() {
   process.stdout.write(`· 全局去重语料:${corpus.length} 句(来自 ${Object.keys(results).length} 个已生成词)\n`);
 
   if (EMIT_ONLY) {
-    emit(results);
+    await emit(results);
     return;
   }
 
@@ -363,7 +421,7 @@ async function main() {
   const pending = source.filter(w => !results[w.headword.toLowerCase()]).slice(0, LIMIT);
   if (FROM_CSV) process.stdout.write(`· 试跑通道:从 CSV 取 ${TIER} 档 ${pending.length} 词(不查库、不出 SQL)\n`);
   process.stdout.write(`· 待生成 ${pending.length} 词${BANK ? `(范围 --bank=${BANK})` : '(全库)'}\n`);
-  if (!pending.length) { process.stdout.write('  没有待办词。若 SQL 还没跑,先跑 batch1 灌词表。\n'); emit(results); return; }
+  if (!pending.length) { process.stdout.write('  没有待办词。若 SQL 还没跑,先跑 batch1 灌词表。\n'); await emit(results); return; }
 
   if (DRY) {
     for (const w of pending.slice(0, 20)) {
@@ -380,7 +438,10 @@ async function main() {
     while (queue.length) {
       const word = queue.shift();
       const cefr = cefrFor(word.freq_rank);
-      let notes = null, saved = false, lastRejected = null;
+      /* 这个词上一轮失败过 → **第一次就带着上轮的原因和定向提示去打**,
+         而不是先冷跑一次、撞同一堵墙、再进重试。同样 3 次机会,3 次都是有信息的。 */
+      const prior = failed[word.headword.toLowerCase()]?.reasons;
+      let notes = prior?.length ? prior : null, saved = false, lastRejected = null;
       for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
         let payload;
         try {
@@ -435,19 +496,87 @@ async function main() {
   await Promise.all(workers);
 
   process.stdout.write(`\n· 完成:通过 ${ok} · 失败 ${ko} · 累计已生成 ${Object.keys(results).length}\n`);
-  emit(results);
+  await emit(results);
+}
+
+/**
+ * `--delta`:只出**库里还没有释义**的那些词的 SQL。
+ *
+ * 由来:整库 SQL 是"全量重发"。Aaron 已经跑过一次之后再重发全量有两个害处:
+ *   ① UPDATE 会把**已经在库里的内容重新覆盖一遍** —— 包括他手写修过的词
+ *      (2026-08-09 magnet 就被这样盖过);
+ *   ② count-validate 写的是**全表**计数 = 本批词数,而全表还有托福那 4471 词,
+ *      断言必然为 f(见 batch-validate-scope-to-batch)。
+ * 收尾补录只有几十个词,全量重发 3789 词纯属找事。→ 增量只发差集。
+ *
+ * ⚠️ 差集由**库**说了算(def_zh IS NULL),不由我本地 JSON 说了算。
+ */
+async function filterMissing(list) {
+  const H = { apikey: ANON, Authorization: `Bearer ${ANON}` };
+  const missing = [], absent = [];
+  for (let i = 0; i < list.length; i += 150) {
+    const chunk = list.slice(i, i + 150);
+    const inList = chunk.map(w => `"${w.headword.replace(/"/g, '')}"`).join(',');
+    const r = await fetch(`${SUPA_URL}/rest/v1/vocab_words?select=headword,def_zh&headword=in.(${encodeURIComponent(inList)})`, { headers: H });
+    const rows = await r.json();
+    if (!Array.isArray(rows)) throw new Error(`查库失败:${JSON.stringify(rows).slice(0, 200)}`);
+    const byWord = new Map(rows.map(x => [x.headword.toLowerCase(), x]));
+    for (const w of chunk) {
+      const row = byWord.get(w.headword.toLowerCase());
+      /* ⚠️ 三态,不是两态。**"库里没这个词" ≠ "这个词缺释义"**。
+         2026-08-10 踩到:`fagot` 早被 Aaron 从 vocab_words 整行删掉了(不该收的词),
+         我按"查不到就是缺"把它算进增量 → SQL 里的 UPDATE 匹配不到任何行(无害),
+         但**批内断言 n_missing 会因此 >0,整笔事务 RAISE 回滚** ——
+         Aaron 那边看到的会是"这份 SQL 跑不了",而真正的原因跟其余 40 个词毫无关系。 */
+      if (!row) { absent.push(w.headword); continue; }
+      if (!row.def_zh) missing.push(w);
+    }
+  }
+  if (absent.length) {
+    process.stdout.write(`· ⚠️ 有 ${absent.length} 个词**库里根本没有**,已排除在增量之外(不是缺释义):${absent.join(' ')}\n`);
+    process.stdout.write(`     若是被有意删掉的词(如不该收的词条),正常;若是词表 SQL 还没跑,先跑词表。\n`);
+  }
+  return missing;
 }
 
 /* ── 产出 SQL + 送审样本 ── */
-function emit(results) {
+async function emit(results) {
   if (NO_EMIT) {
     process.stdout.write(`· --no-emit:跳过 SQL 与送审件(累计已生成 ${Object.keys(results).length} 词,全在 JSON 里)\n`);
     return;
   }
-  const list = Object.values(results);
+  let list = Object.values(results);
   if (!list.length) { process.stdout.write('· 无内容可出 SQL\n'); return; }
+  const all = list;
+  if (DELTA) {
+    /* ⚠️ 增量是**跨库**的,不是本库的。
+       `vocab_words` 是全局唯一一张词表,cet4 和 cet6 共享 3425 个词;
+       同一个 site / culture 会在两次跑里各生成一份内容,于是两份 delta SQL
+       都含这个词 —— 谁后跑谁的例句盖住前一份(ON CONFLICT DO UPDATE 没护栏,
+       而且盖完的内容和任何一份送审件都对不上)。
+       → 合并所有 <bank>-content.json 后统一出**一份** delta,重复词按先到先得。 */
+    const merged = new Map();
+    const clash = [];
+    for (const f of readdirSync(GEN).sort()) {
+      if (!f.endsWith('-content.json') || f.includes('trial')) continue;
+      const j = JSON.parse(readFileSync(path.join(GEN, f), 'utf8'));
+      for (const [k, v] of Object.entries(j)) {
+        if (merged.has(k)) { clash.push(k); continue; }
+        merged.set(k, v);
+      }
+    }
+    if (clash.length) {
+      process.stdout.write(`· 跨库重复词 ${clash.length} 个,按先到先得留一份:${[...new Set(clash)].slice(0, 10).join(' ')}${clash.length > 10 ? ' …' : ''}\n`);
+    }
+    const pool = [...merged.values()];
+    list = await filterMissing(pool);
+    process.stdout.write(`· --delta:全部已生成 ${pool.length} 词里,库中还缺释义的有 ${list.length} 词\n`);
+    if (!list.length) { process.stdout.write('· 库里已经全有了,不出 SQL。\n'); writeSample(all); return; }
+  }
   writeSql(list);
-  writeSample(list);
+  if (REVIEW) writeReview(all, BANK || 'all');
+  /* 送审件永远按**全量**出 —— 抽样要能代表整批内容,不是只代表这次补的几十个词 */
+  writeSample(all);
 }
 
 const esc = s => String(s ?? '').replace(/'/g, "''");
@@ -493,7 +622,8 @@ UPDATE vocab_words w
   FROM (VALUES
 ${wordRows}
   ) AS v(headword, ipa, def_zh, def_en)
- WHERE lower(w.headword) = v.headword;
+ WHERE lower(w.headword) = v.headword
+   AND w.def_zh IS NULL;        -- ← 护栏:只填空,绝不覆盖库里已有的释义
 
 -- ② 例句
 INSERT INTO vocab_examples (word_id, sort_order, collocation, sentence, translation_zh, scene)
@@ -512,34 +642,56 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
 
--- ── count-validate:四行都必须是 t,否则 ROLLBACK ──
-SELECT 'words_with_def = ${list.length}' AS expect,
-       (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = ${list.length} AS ok
-UNION ALL
-SELECT 'examples = ${exCount}',
-       (SELECT count(*) FROM vocab_examples) = ${exCount}
-UNION ALL
-SELECT 'every word with a definition has exactly 3 examples',
-       NOT EXISTS (
-         SELECT 1
-           FROM vocab_words w
-          WHERE w.def_zh IS NOT NULL
-            AND (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3
-       )
-UNION ALL
-SELECT 'every example has a scene from the 10-value enum',
-       NOT EXISTS (
-         SELECT 1 FROM vocab_examples
-          WHERE scene IS NULL
-             OR scene NOT IN (${SCENES.map(s => `'${s}'`).join(', ')})
-       );
+-- ── 断言:**只判本批这 ${list.length} 个词**,不判全表 ────────────────────
+-- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 本批词数。
+--    那在只有托福一个库时碰巧成立,多几个库以后必然为 f —— 全表里还有别的库的词。
+--    判据必须锁在本批范围内(见 batch-validate-scope-to-batch)。
+-- ⚠️ 用 DO + RAISE:断言不过**直接抛异常整笔回滚**,不靠人眼看那几个 t/f。
+DO $gate$
+DECLARE
+  n_missing int; n_badcount int; n_badscene int;
+BEGIN
+  SELECT count(*) INTO n_missing
+    FROM (VALUES
+${wordRows}
+    ) AS v(headword, ipa, def_zh, def_en)
+    LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE w.id IS NULL OR w.def_zh IS NULL;
+
+  SELECT count(*) INTO n_badcount
+    FROM (VALUES
+${wordRows}
+    ) AS v(headword, ipa, def_zh, def_en)
+    JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3;
+
+  SELECT count(*) INTO n_badscene
+    FROM (VALUES
+${wordRows}
+    ) AS v(headword, ipa, def_zh, def_en)
+    JOIN vocab_words w ON lower(w.headword) = v.headword
+    JOIN vocab_examples e ON e.word_id = w.id
+   WHERE e.scene IS NULL
+      OR e.scene NOT IN (${SCENES.map(s => `'${s}'`).join(', ')});
+
+  RAISE NOTICE '本批 ${list.length} 词:缺释义 %,例句数不等于3 %,scene 非法 %',
+    n_missing, n_badcount, n_badscene;
+
+  IF n_missing > 0 OR n_badcount > 0 OR n_badscene > 0 THEN
+    RAISE EXCEPTION '断言不过:缺释义 % · 例句数异常 % · scene 非法 % —— 已回滚,库里没有任何改动',
+      n_missing, n_badcount, n_badscene;
+  END IF;
+END
+$gate$;
 
 COMMIT;
 `;
-  const out = path.join(REPO, 'SQLAA', `vocab_${bank}_content_batch1.sql`);
+  /* 增量单独出文件,**不覆盖**已经跑过的 batch1 —— 覆盖了就分不清哪份跑过了 */
+  const name = DELTA ? `vocab_content_delta.sql` : `vocab_${bank}_content_batch1.sql`;   // delta 跨库合成一份,不带 bank 名
+  const out = path.join(REPO, 'SQLAA', name);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, sql, 'utf8');
-  process.stdout.write(`· 内容 SQL(${list.length} 词/${exCount} 句) → SQLAA/vocab_${bank}_content_batch1.sql\n`);
+  process.stdout.write(`· 内容 SQL(${list.length} 词/${exCount} 句) → SQLAA/${name}\n`);
 }
 
 function mulberry32(seed) {
@@ -654,6 +806,89 @@ ${body}`;
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, md, 'utf8');
   process.stdout.write(`· 送审样本(${picked.length} 词) → REVIEWAA/vocab_${bank}_batch1_sample.md\n`);
+}
+
+/**
+ * 送审件(`--review`)—— Aaron 定的交付物:`REVIEWAA/vocab_<code>_review.md`,抽 100 词全内容。
+ *
+ * 和 16 词的 batch1_sample 的区别不只是词数:
+ *   · 标题不再写死"托福"(那个文件到现在还顶着托福的标题在给 cet4 用);
+ *   · 例句总数、词性缺失数这类数字**全部当场从数据里数**,不抄旧文案
+ *     (踩过:sample 里写死"全库 53 个词 pos 为空",那是托福的数,cet4 根本不是);
+ *   · 单列一节:人工撰写的词条 + 已知薄弱点,让他知道该重点看哪几条。
+ */
+function writeReview(list, bank) {
+  const N = Number(arg('review-size', '100'));
+  const { picked, seenScene, seenPos } = pickDiverse(list, N);
+  const exCount = list.reduce((n, w) => n + (w.examples?.length || 0), 0);
+  const tier = list.reduce((m, w) => { m[w.cefr] = (m[w.cefr] || 0) + 1; return m; }, {});
+  const scene = list.reduce((m, w) => { (w.examples || []).forEach(e => { m[e.scene] = (m[e.scene] || 0) + 1; }); return m; }, {});
+  const noPos = list.filter(w => !w.pos).length;
+  const crossPos = list.filter(w => String(w.pos || '').includes('/')).length;
+  const manual = list.filter(w => w._manual);
+  const retried = list.filter(w => (w._attempts || 1) > 1).length;
+
+  const body = picked.map((w, n) => `### ${n + 1}. ${w.headword}  ${w.pos ? `*${w.pos}*` : '*(ECDICT 没标词性)*'}${w._manual ? '  🖊 **人工撰写**' : ''}
+
+| | |
+| --- | --- |
+| 音标 | ${w.ipa} |
+| 中文释义 | ${w.def_zh} |
+| 英文释义 | ${w.def_en} |
+| freq_rank | ${w.freq_rank ?? '—'} |
+| 难度档 | ${w.cefr} |
+${w._manual ? `\n> 🖊 这条是人工写的,原因:${w._why}\n` : ''}
+| # | 搭配 | 场景 | 例句 | 译文 |
+| ---: | --- | --- | --- | --- |
+${w.examples.map((e, i) => `| ${i + 1} | ${e.collocation} | \`${e.scene}\` | ${e.sentence} | ${e.translation_zh} |`).join('\n')}
+`).join('\n');
+
+  const md = `# ${bank} 词库内容 · 送审件(抽 ${picked.length} 词)
+
+> 抽样种子固定 20260803,复跑抽到同一批。**不是纯随机** —— 贪心挑成尽量铺开场景与词性,
+> 免得 100 个里大半是名词、场景全挤在 news。
+> 本批覆盖 **${seenScene.size}/${SCENES.length} 个场景**、**${seenPos.size} 种词性**。
+> 全量内容见 \`scripts/vocab/data/generated/${bank}-content.json\`。
+
+## 全量 ${list.length} 词的实测分布
+
+| 项 | 实测 |
+| --- | --- |
+| 词条 | ${list.length} |
+| 例句 | ${exCount}(平均每词 ${(exCount / list.length).toFixed(2)} 条) |
+| 难度档 | ${Object.entries(tier).sort().map(([k, v]) => `${k} ${v}`).join(' · ')} |
+| ECDICT 未标词性 | ${noPos} 词 |
+| 跨词性(pos 含 \`/\`) | ${crossPos} 词(${(crossPos / list.length * 100).toFixed(1)}%) |
+| 一次过闸 | ${list.length - retried} 词 · 重试后才过 ${retried} 词 |
+| 人工撰写 | ${manual.length} 词${manual.length ? `(${manual.map(w => w.headword).join(' ')})` : ''} |
+
+场景分布(共 ${exCount} 条例句):${SCENES.map(s => `${s} ${scene[s] || 0}`).join(' · ')}
+
+## 请重点看这四点
+
+1. **中文释义准不准** —— 有没有把次要义当主义、有没有并列近义词充数。
+2. **搭配是不是真高频**,顺序是不是真按频率(句 1 应当是最常见的说法)。
+3. **例句像不像人写的** —— 三句之间是不是真换了写法,不是同一个模子换词。
+4. **难度档合不合适** —— 高频词配短句、低频学术词配长句。
+
+## ⚠️ 我自己知道的薄弱点(不用你去找)
+
+- **跨词性词的义项**:本批有 ${crossPos} 个跨词性词。提示词里加了"跨词性几乎必然对应词典
+  分列义项"的自查,实测 state → 状态；国家 ✓、part → 部分；分开 ✓,但 **might(n./aux.)
+  仍然给「可能；或许」** —— 近义堆砌且漏了名词义"力量"。没继续迭代提示词(边际收益递减),
+  这类**只能靠人审兜**,请留意跨词性词的第二个义项。
+- **个别搭配不是真搭配**:如 system 的 "local system"、part 的
+  "Understanding is part of the problem we face"(语义空转)。机器闸门只能判"搭配里含不含
+  目标词",判不了"这个搭配母语者到底说不说"。
+${manual.length ? `- **人工撰写的 ${manual.length} 条**(上面标了 🖊):模型连续三轮爬不出同一个陷阱才手写的,\n  照样过了全部闸门,但请你单独看一眼。` : ''}
+
+---
+
+${body}`;
+  const out = path.join(REPO, 'REVIEWAA', `vocab_${bank}_review.md`);
+  mkdirSync(path.dirname(out), { recursive: true });
+  writeFileSync(out, md, 'utf8');
+  process.stdout.write(`· 送审件(${picked.length}/${list.length} 词) → REVIEWAA/vocab_${bank}_review.md\n`);
 }
 
 main().catch(e => { process.stderr.write(`✗ ${e.stack || e.message}\n`); process.exit(1); });

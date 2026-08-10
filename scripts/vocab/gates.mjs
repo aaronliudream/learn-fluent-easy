@@ -116,8 +116,23 @@ function targetTokens(sentence) {
  *    属于误杀。屈折表和 -s/-ed/-ing 那套后缀规则覆盖不到 -ary/-al/-ous 这类派生后缀。
  * 限定 headword 至少 5 个字母,避免短词过度放行(band → bandit 这种)。
  */
-function matchesForm(token, headword, forms) {
+/**
+ * token 是不是 headword 的屈折形/派生形。
+ *
+ * ⚠️ `strict` 存在的理由 —— **同一个判据在不同闸门里方向是反的**:
+ *   · g1「句中有没有目标词」:判成"是" → **放行**。宽松只会多放行,代价可接受,
+ *     所以用"前缀 + ≤4 个字母尾巴"兜底(inflectionsOf 的注释写的"宁松勿严"就是这个意思)。
+ *   · g12「def_en 有没有循环定义」:判成"是" → **拒绝**。宽松在这里直接变成**误伤**。
+ *
+ * 2026-08-10 实测的误伤:`miner` 的释义 "A person who works in extracting minerals
+ * from the earth." 被判循环 —— `minerals` 只是**恰好以 miner 开头**,和 miner 是两个词。
+ * 这个词因此三轮重试全废、始终没有内容。
+ *
+ * → strict 只认屈折表和标准后缀(inflectionsOf 给的那套),不认前缀兜底。
+ */
+function matchesForm(token, headword, forms, strict = false) {
   if (forms.has(token)) return true;
+  if (strict) return false;
   if (headword.length >= 5 && token.length > headword.length && token.startsWith(headword)) {
     const tail = token.slice(headword.length);
     if (tail.length <= 4 && /^[a-z]+$/.test(tail)) return true;
@@ -348,7 +363,8 @@ export function g12_defEnNotCircular(defEn, headword, table) {
   const forms = inflectionsOf(hw, table);
   const toks = String(defEn || '').toLowerCase().split(/[\s\-–—/]+/)
     .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
-  const hit = toks.find(t => matchesForm(t, hw, forms));
+  /* strict:这道门判"是"就是拒绝,不能用 g1 那套宽松前缀兜底(见 matchesForm 注释)。 */
+  const hit = toks.find(t => matchesForm(t, hw, forms, true));
   return hit ? `def_en 循环定义:释义里出现了目标词本身("${hit}")` : null;
 }
 

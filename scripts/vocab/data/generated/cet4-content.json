@@ -120670,5 +120670,581 @@
     ],
     "_attempts": 1,
     "_model": "gpt-4o-mini"
+  },
+  "church": {
+    "word_id": "ace4cd4b-cc20-4d01-ac4e-82b9f3046851",
+    "headword": "church",
+    "pos": "n./v./adj.",
+    "freq_rank": 648,
+    "cefr": "A2",
+    "ipa": "/tʃɜːrtʃ/",
+    "def_zh": "教堂",
+    "def_en": "A building used for public Christian worship.",
+    "examples": [
+      {
+        "collocation": "go to church",
+        "scene": "daily_life",
+        "sentence": "Many people go to church on Sundays.",
+        "translation_zh": "很多人周日去教堂。"
+      },
+      {
+        "collocation": "church service",
+        "scene": "culture",
+        "sentence": "The church service starts at ten in the morning.",
+        "translation_zh": "教堂的礼拜服务在早上十点开始。"
+      },
+      {
+        "collocation": "church choir",
+        "scene": "education",
+        "sentence": "She sings in the church choir every week.",
+        "translation_zh": "她每周在教堂合唱团唱歌。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "yard": {
+    "word_id": "5c4a01fe-ded7-4348-aad8-0dfb6796c195",
+    "headword": "yard",
+    "pos": "n.",
+    "freq_rank": 1035,
+    "cefr": "A2",
+    "ipa": "/jɑrd/",
+    "def_zh": "院子",
+    "def_en": "An area of land surrounding a house.",
+    "examples": [
+      {
+        "collocation": "front yard",
+        "scene": "daily_life",
+        "sentence": "She planted flowers in her front yard last spring.",
+        "translation_zh": "她在前院里种了花，去年春天。"
+      },
+      {
+        "collocation": "back yard",
+        "scene": "environment",
+        "sentence": "The children played safely in the back yard every afternoon.",
+        "translation_zh": "孩子们每天下午在后院安全地玩耍。"
+      },
+      {
+        "collocation": "yard sale",
+        "scene": "culture",
+        "sentence": "We organized a yard sale to declutter our home.",
+        "translation_zh": "我们举办了一个车库出售活动以清理家里。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "capital": {
+    "word_id": "4221deca-1402-4b47-ace5-d7abc6eac703",
+    "headword": "capital",
+    "pos": "n./adj.",
+    "freq_rank": 1061,
+    "cefr": "A2",
+    "ipa": "/ˈkæp.ɪ.təl/",
+    "def_zh": "首都；资金",
+    "def_en": "The city where a government is based or financial resources.",
+    "examples": [
+      {
+        "collocation": "capital city",
+        "scene": "travel",
+        "sentence": "Beijing is the capital city of China.",
+        "translation_zh": "北京是中国的首都。"
+      },
+      {
+        "collocation": "capital investment",
+        "scene": "work",
+        "sentence": "Companies need capital investment to grow and succeed.",
+        "translation_zh": "公司需要资金投资以发展和成功。"
+      },
+      {
+        "collocation": "human capital",
+        "scene": "education",
+        "sentence": "Education improves a person's human capital and skills.",
+        "translation_zh": "教育提高一个人的人力资本和技能。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "culture": {
+    "word_id": "c936b122-a3cc-4e20-9aa7-726fa83bd23b",
+    "headword": "culture",
+    "pos": "n./v.",
+    "freq_rank": 611,
+    "cefr": "A2",
+    "ipa": "/ˈkʌl.tʃər/",
+    "def_zh": "文化",
+    "def_en": "The ideas, customs, and social behavior of a particular people.",
+    "examples": [
+      {
+        "collocation": "popular culture",
+        "scene": "daily_life",
+        "sentence": "Many young people enjoy popular culture today.",
+        "translation_zh": "今天，许多年轻人喜欢流行文化。"
+      },
+      {
+        "collocation": "different cultures",
+        "scene": "education",
+        "sentence": "We learn a lot from different cultures around the world.",
+        "translation_zh": "我们从世界各地不同的文化中学到很多。"
+      },
+      {
+        "collocation": "business culture",
+        "scene": "work",
+        "sentence": "Understanding business culture is important for success.",
+        "translation_zh": "了解商业文化对成功很重要。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "site": {
+    "word_id": "6c008413-1dc4-4a8c-8c60-7b1666419228",
+    "headword": "site",
+    "pos": "n./v.",
+    "freq_rank": 532,
+    "cefr": "A2",
+    "ipa": "/saɪt/",
+    "def_zh": "场所",
+    "def_en": "A location or place for a specific purpose.",
+    "examples": [
+      {
+        "collocation": "construction site",
+        "scene": "work",
+        "sentence": "Workers are busy on the construction site today.",
+        "translation_zh": "今天工地上的工人们很忙。"
+      },
+      {
+        "collocation": "historical site",
+        "scene": "culture",
+        "sentence": "They visited a famous historical site last weekend.",
+        "translation_zh": "他们上周末参观了一个著名的历史遗址。"
+      },
+      {
+        "collocation": "website site",
+        "scene": "science_tech",
+        "sentence": "You can find information on the official website site.",
+        "translation_zh": "你可以在官方网站上找到信息。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "conduct": {
+    "word_id": "b7bf7cbd-d442-4ed0-b18e-89b4de903e34",
+    "headword": "conduct",
+    "pos": "n./v.",
+    "freq_rank": 1162,
+    "cefr": "A2",
+    "ipa": "/kənˈdʌkt/",
+    "def_zh": "行为；举止",
+    "def_en": "The manner in which a person behaves or acts.",
+    "examples": [
+      {
+        "collocation": "conduct research",
+        "scene": "academic",
+        "sentence": "Scientists conduct research to find new medicines.",
+        "translation_zh": "科学家进行研究以寻找新药。"
+      },
+      {
+        "collocation": "conduct a survey",
+        "scene": "work",
+        "sentence": "The team will conduct a survey next week.",
+        "translation_zh": "团队将在下周进行调查。"
+      },
+      {
+        "collocation": "conduct oneself",
+        "scene": "daily_life",
+        "sentence": "You should conduct yourself with dignity and respect.",
+        "translation_zh": "你应该保持尊严和尊重的举止。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "acre": {
+    "word_id": "d4506d6c-bb1f-4b7c-8a0e-bd4978ae75cf",
+    "headword": "acre",
+    "pos": "n.",
+    "freq_rank": 3286,
+    "cefr": "B1",
+    "ipa": "/ˈeɪ.kɚ/",
+    "def_zh": "英亩",
+    "def_en": "A unit of area equal to 4,840 square yards.",
+    "examples": [
+      {
+        "collocation": "acres of land",
+        "scene": "environment",
+        "sentence": "Many farmers own hundreds of acres of land for crops.",
+        "translation_zh": "许多农民拥有数百英亩的土地用于种植作物。"
+      },
+      {
+        "collocation": "a few acres",
+        "scene": "daily_life",
+        "sentence": "She bought a house with a few acres of garden.",
+        "translation_zh": "她买了一栋带有几英亩花园的房子。"
+      },
+      {
+        "collocation": "one acre",
+        "scene": "education",
+        "sentence": "One acre is approximately the size of a football field.",
+        "translation_zh": "一英亩大约是一个足球场的大小。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "pig": {
+    "word_id": "04b82a1c-adf6-4fbd-adb2-98e0093a31fc",
+    "headword": "pig",
+    "pos": "n./v.",
+    "freq_rank": 3488,
+    "cefr": "B1",
+    "ipa": "/pɪɡ/",
+    "def_zh": "猪",
+    "def_en": "A domesticated animal raised for food or other products.",
+    "examples": [
+      {
+        "collocation": "pig farms",
+        "scene": "daily_life",
+        "sentence": "Farmers often raise large numbers of pigs on their farms.",
+        "translation_zh": "农民通常在他们的农场养殖大量的猪。"
+      },
+      {
+        "collocation": "pig production",
+        "scene": "work",
+        "sentence": "The country has increased its pig production in recent years.",
+        "translation_zh": "该国近年来增加了猪的生产。"
+      },
+      {
+        "collocation": "wild pigs",
+        "scene": "environment",
+        "sentence": "Wild pigs can be found in many forests across the country.",
+        "translation_zh": "野猪可以在全国许多森林中找到。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "fare": {
+    "word_id": "5d16c336-5980-4a6a-a9e5-45d250c46215",
+    "headword": "fare",
+    "pos": "n./v.",
+    "freq_rank": 4776,
+    "cefr": "B2",
+    "ipa": "/fɛr/",
+    "def_zh": "费用；票价",
+    "def_en": "The cost of a journey or transportation.",
+    "examples": [
+      {
+        "collocation": "fare price",
+        "scene": "travel",
+        "sentence": "Travelers often compare fare prices to find the best deal.",
+        "translation_zh": "旅客经常比较票价以寻找最优惠的交易。"
+      },
+      {
+        "collocation": "fare poorly",
+        "scene": "news",
+        "sentence": "Many students fare poorly on standardized tests due to various factors.",
+        "translation_zh": "由于各种因素，许多学生在标准化考试中表现不佳。"
+      },
+      {
+        "collocation": "fare well",
+        "scene": "education",
+        "sentence": "Students who study regularly tend to fare well in their exams.",
+        "translation_zh": "定期学习的学生通常在考试中表现良好。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "respectively": {
+    "word_id": "e4949ed9-b00c-4092-80dc-48f763c367ac",
+    "headword": "respectively",
+    "pos": "adv.",
+    "freq_rank": 3726,
+    "cefr": "B1",
+    "ipa": "/rɪˈspɛk.tɪv.li/",
+    "def_zh": "分别；各自",
+    "def_en": "In the order mentioned; in the same sequence as before.",
+    "examples": [
+      {
+        "collocation": "respectively, the results showed improvement",
+        "scene": "science_tech",
+        "sentence": "Researchers found the drugs effective, respectively, in 60% and 75% of cases.",
+        "translation_zh": "研究人员发现这两种药物在60%和75%的病例中有效。"
+      },
+      {
+        "collocation": "the candidates, respectively",
+        "scene": "news",
+        "sentence": "The two candidates finished the race in first and second place, respectively.",
+        "translation_zh": "这两位候选人分别获得了第一和第二名。"
+      },
+      {
+        "collocation": "the students scored, respectively",
+        "scene": "education",
+        "sentence": "Eighty percent and ninety percent of the students scored, respectively, on the test.",
+        "translation_zh": "这两组学生的考试成绩分别为80%和90%。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "ache": {
+    "word_id": "59400897-6fbf-498a-a23c-8c4ffaf8ea0a",
+    "headword": "ache",
+    "pos": "n./v.",
+    "freq_rank": 7717,
+    "cefr": "B2",
+    "ipa": "/eɪk/",
+    "def_zh": "疼痛；痛苦",
+    "def_en": "A continuous or prolonged pain in a part of the body.",
+    "examples": [
+      {
+        "collocation": "chronic ache",
+        "scene": "health",
+        "sentence": "Chronic aches can significantly affect one's quality of life.",
+        "translation_zh": "慢性疼痛会严重影响生活质量。"
+      },
+      {
+        "collocation": "sharp ache",
+        "scene": "daily_life",
+        "sentence": "Suddenly, a sharp ache appeared in her lower back while lifting.",
+        "translation_zh": "她在搬东西时，突然感到下背部有剧烈的疼痛。"
+      },
+      {
+        "collocation": "muscle ache",
+        "scene": "work",
+        "sentence": "After a long day, many employees complain of muscle aches from sitting too long.",
+        "translation_zh": "经过漫长的一天，许多员工抱怨因久坐而感到肌肉疼痛。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "statistics": {
+    "word_id": "345bd2f6-3c0b-4fef-aff4-df0d62c38bfa",
+    "headword": "statistics",
+    "pos": "n.",
+    "freq_rank": 2709,
+    "cefr": "B1",
+    "ipa": "/stəˈtɪs.tɪks/",
+    "def_zh": "统计；统计学",
+    "def_en": "The study of collecting, analyzing, and interpreting numerical data.",
+    "examples": [
+      {
+        "collocation": "statistics show",
+        "scene": "news",
+        "sentence": "Statistics show that crime rates have decreased this year.",
+        "translation_zh": "统计显示，今年犯罪率有所下降。"
+      },
+      {
+        "collocation": "official statistics",
+        "scene": "academic",
+        "sentence": "Researchers often rely on official statistics for accurate data.",
+        "translation_zh": "研究人员通常依赖官方统计数据以获取准确的信息。"
+      },
+      {
+        "collocation": "descriptive statistics",
+        "scene": "science_tech",
+        "sentence": "Descriptive statistics summarize the main features of a dataset.",
+        "translation_zh": "描述性统计总结了数据集的主要特征。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "dorm": {
+    "word_id": "8f4568f0-fcdf-44a3-a7b9-6a3d2d79380e",
+    "headword": "dorm",
+    "pos": "n.",
+    "freq_rank": 8314,
+    "cefr": "B2",
+    "ipa": "/dɔrm/",
+    "def_zh": "宿舍",
+    "def_en": "A building providing sleeping accommodations for students.",
+    "examples": [
+      {
+        "collocation": "living in a dorm",
+        "scene": "education",
+        "sentence": "Many students enjoy living in a dorm during their college years.",
+        "translation_zh": "许多学生在大学期间喜欢住在宿舍里。"
+      },
+      {
+        "collocation": "dorm activities",
+        "scene": "daily_life",
+        "sentence": "Residents organized various dorm activities to foster community engagement.",
+        "translation_zh": "居民们组织了各种宿舍活动，以促进社区参与。"
+      },
+      {
+        "collocation": "dorm regulations",
+        "scene": "academic",
+        "sentence": "Students must follow the dorm regulations set by the university administration.",
+        "translation_zh": "学生必须遵守学校管理部门制定的宿舍规定。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "tub": {
+    "word_id": "7c8f5a66-6bb8-465f-8f1f-05daf69f504a",
+    "headword": "tub",
+    "pos": "n./v.",
+    "freq_rank": 5418,
+    "cefr": "B2",
+    "ipa": "/tʌb/",
+    "def_zh": "浴缸；桶",
+    "def_en": "A round container used for holding liquids.",
+    "examples": [
+      {
+        "collocation": "hot tub",
+        "scene": "daily_life",
+        "sentence": "Relaxing in the hot tub can relieve stress after a long day.",
+        "translation_zh": "在热水浴缸中放松能缓解一天的压力。"
+      },
+      {
+        "collocation": "fill the tub",
+        "scene": "health",
+        "sentence": "To ensure a comfortable bath, fill the tub with warm water first.",
+        "translation_zh": "为了确保舒适的沐浴，先将浴缸装满温水。"
+      },
+      {
+        "collocation": "tub of ice cream",
+        "scene": "culture",
+        "sentence": "She brought a tub of ice cream to the picnic for everyone to enjoy.",
+        "translation_zh": "她带了一桶冰淇淋去野餐，供大家享用。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "mud": {
+    "word_id": "3953f2df-69d6-4c4b-b586-cd917039ca45",
+    "headword": "mud",
+    "pos": "n./v.",
+    "freq_rank": 3610,
+    "cefr": "B1",
+    "ipa": "/mʌd/",
+    "def_zh": "泥；泥浆",
+    "def_en": "Wet, soft earth that is mixed with water.",
+    "examples": [
+      {
+        "collocation": "play in the mud",
+        "scene": "daily_life",
+        "sentence": "Children love to play in the mud after it rains.",
+        "translation_zh": "下雨后，孩子们喜欢在泥里玩。"
+      },
+      {
+        "collocation": "mud slides",
+        "scene": "environment",
+        "sentence": "Heavy rain can cause dangerous mud slides in the mountains.",
+        "translation_zh": "大雨可能会导致山区发生危险的泥石流。"
+      },
+      {
+        "collocation": "mud bath",
+        "scene": "health",
+        "sentence": "Many spas offer a relaxing mud bath for skin treatment.",
+        "translation_zh": "许多水疗中心提供放松的泥浴，以进行皮肤护理。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "lord": {
+    "word_id": "a14346aa-c727-4aaa-827b-28667f48dca6",
+    "headword": "lord",
+    "pos": "n./v.",
+    "freq_rank": 31607,
+    "cefr": "C1",
+    "ipa": "/lɔrd/",
+    "def_zh": "领主；贵族",
+    "def_en": "A person of high rank or authority, often in feudal times.",
+    "examples": [
+      {
+        "collocation": "lord of the manor",
+        "scene": "daily_life",
+        "sentence": "The lord of the manor held great power over the local villagers.",
+        "translation_zh": "庄园的领主对当地村民拥有很大的权力。"
+      },
+      {
+        "collocation": "lord it over",
+        "scene": "work",
+        "sentence": "She tends to lord it over her coworkers, expecting them to follow her orders.",
+        "translation_zh": "她常常在同事面前摆架子，期望他们听从她的命令。"
+      },
+      {
+        "collocation": "lordly manner",
+        "scene": "culture",
+        "sentence": "He spoke with a lordly manner that impressed everyone at the gala.",
+        "translation_zh": "他以一种贵族气派的方式讲话，给晚会上的每个人留下了深刻的印象。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "worm": {
+    "word_id": "a93b0a84-6965-4a0a-b10d-39d4979b950a",
+    "headword": "worm",
+    "pos": "n./v.",
+    "freq_rank": 4993,
+    "cefr": "B2",
+    "ipa": "/wɜrm/",
+    "def_zh": "虫；蠕虫",
+    "def_en": "A long, slender, soft-bodied invertebrate.",
+    "examples": [
+      {
+        "collocation": "fishing for worms",
+        "scene": "daily_life",
+        "sentence": "Children enjoy fishing for worms in the backyard.",
+        "translation_zh": "孩子们喜欢在后院钓虫。"
+      },
+      {
+        "collocation": "intestinal worms",
+        "scene": "health",
+        "sentence": "Many people around the world suffer from intestinal worms.",
+        "translation_zh": "世界上许多人都受到肠道虫的困扰。"
+      },
+      {
+        "collocation": "worm species",
+        "scene": "science_tech",
+        "sentence": "Researchers discovered new worm species in the deep ocean.",
+        "translation_zh": "研究人员在深海发现了新的虫类。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "volt": {
+    "word_id": "1276ea7b-2290-414b-80e8-f1f2f3450892",
+    "headword": "volt",
+    "pos": "n.",
+    "freq_rank": 12526,
+    "cefr": "C1",
+    "ipa": "/voʊlt/",
+    "def_zh": "伏特",
+    "def_en": "Unit of electric potential or electromotive force.",
+    "examples": [
+      {
+        "collocation": "230 volts",
+        "scene": "science_tech",
+        "sentence": "The device requires a power supply of 230 volts to operate efficiently.",
+        "translation_zh": "该设备需要230伏特的电源才能高效运作。"
+      },
+      {
+        "collocation": "volts of power",
+        "scene": "work",
+        "sentence": "Engineers measured the volts of power flowing through the circuit during the test.",
+        "translation_zh": "工程师在测试期间测量了电路中流动的电压。"
+      },
+      {
+        "collocation": "high voltage volt",
+        "scene": "academic",
+        "sentence": "High voltage volt systems are crucial for efficient power transmission in modern grids.",
+        "translation_zh": "高电压伏特系统对于现代电网高效输电至关重要。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
   }
 }

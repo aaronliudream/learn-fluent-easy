@@ -42,6 +42,33 @@ import { tierRangeText } from './spec.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
 import { DEF_ZH_RULE, FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
 
+/**
+ * 跨词性词的义项提示。
+ *
+ * ⚠️ 由来(2026-08-09,cet4 试跑发现):DEF_ZH_RULE 的默认倾向是"给 1 个义项",
+ *    那是**照托福那批词调的** —— 托福多是高级单义词(annihilate / concomitant)。
+ *    但 cet4 有 **1652/3812(43.3%)** 跨词性(state n./adj./v.、part、might、point、
+ *    issue、power、line…),不同词性本来就是词典分列义项。
+ *    试跑实测:state(freq_rank 137)只给了「状态;情况」——
+ *    那其实是两个近义词,而且漏掉了**国家/州**和**陈述**。对四级考生是硬伤。
+ *
+ * ⚠️ 这条**不放宽反同义堆砌的约束**:近义词仍然只留一个。
+ *    只是把"是不是还漏了别的真义项"这个自查,在跨词性时提成硬要求。
+ *    判据取 ECDICT 的 pos 是否含 "/" —— 数据里现成的信号,不用另猜。
+ */
+function crossPosClause(word) {
+  const pos = String(word.pos || '');
+  if (!pos.includes('/')) return '';
+  return [
+    `   ⚠️ ECDICT 标注该词跨词性(pos = ${pos})—— 跨词性几乎必然对应**词典分列的不同义项**。`,
+    `   请确认是否漏掉了另一个常用义,若有则一并给出(仍最多 2 个、仍不许并列近义词)。`,
+    `   例:state(n./adj./v.)-> 状态；国家    ❌ 只写「状态；情况」(两个近义词,且漏了"国家")`,
+    `       part (n./v.)      -> 部分；分开`,
+    `   ⚠️ 第一个义项必须是**最常用**的那个 —— 前端四选一只取第一个义项。`,
+  ].join(String.fromCharCode(10));
+}
+
+
 /** 账户/凭据级错误 —— 重试一万次也不会好,必须整轮中止。 */
 class FatalLlmError extends Error {}
 const FATAL_LLM = ['缺少环境变量', 'invalid_api_key', 'Incorrect API key',
@@ -182,6 +209,7 @@ Produce a study card with these HARD requirements:
 1. ipa: American English IPA for "${word.headword}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
 2. def_zh: 中文释义.
 ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
+${crossPosClause(word)}
 3. def_en: English definition, AT MOST 15 words.
    ⚠️ NEVER use "${word.headword}" (or any inflected/derived form of it) inside def_en.
    A definition that contains the word being defined teaches nothing.

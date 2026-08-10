@@ -23,9 +23,33 @@ export const ENV = loadEnv(REPO);
 export const arg = (k, d) => process.argv.find(a => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=') ?? d;
 export const flag = k => process.argv.includes(`--${k}`);
 
+/**
+ * 致命错误:**账户级/凭据级问题,重试一万次也不会好**。
+ *
+ * ⚠️ 由来(2026-08-09):本机没有 OPENAI_API_KEY 时跑 generate-content,
+ *    `requireKeys` 抛出的错被上层当成"这一词生成失败"接住,
+ *    重试三次后记进 failed.json,最后报「通过 0 · 失败 2」——
+ *    **把"没有密钥"报成了"内容三次没过闸"**。
+ *    真放量 3812 词的话,会烧完整个列表然后告诉你"闸门拒绝率 100%"。
+ *    与烧音频那边的 credit_balance_exhausted 是同一类:
+ *    **账户级错误必须立刻中止整轮,不能退化成逐条失败。**
+ */
+export class FatalLlmError extends Error {}
+
+const FATAL_PATTERNS = [
+  '缺少环境变量',                       // 本地没配 key
+  'invalid_api_key', 'Incorrect API key',
+  'insufficient_quota', 'credit_balance_exhausted', 'billing_hard_limit_reached',
+  'account_deactivated',
+];
+
 /** 调模型,强制 JSON schema 输出。限流/5xx 指数退避,最多 5 次。 */
 export async function callJson({ system, user, schemaName, schema, model = 'gpt-4o-mini', temperature = 0.7 }) {
-  requireKeys(ENV, ['OPENAI_API_KEY']);
+  try {
+    requireKeys(ENV, ['OPENAI_API_KEY']);
+  } catch (e) {
+    throw new FatalLlmError(e.message);   // ← 不是"这一词失败",是整轮没法跑
+  }
   const body = {
     model, temperature,
     messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
@@ -43,7 +67,14 @@ export async function callJson({ system, user, schemaName, schema, model = 'gpt-
       await new Promise(r => setTimeout(r, wait));
       continue;
     }
-    if (!res.ok) throw new Error(`OpenAI HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
+    if (!res.ok) {
+      const body = (await res.text()).slice(0, 300);
+      /* 401/403 或体里带账户级关键词 → 致命,立即中止,别一条条重试到天亮 */
+      if (res.status === 401 || res.status === 403 || FATAL_PATTERNS.some(p => body.includes(p))) {
+        throw new FatalLlmError(`OpenAI HTTP ${res.status}(账户/凭据级,已中止): ${body}`);
+      }
+      throw new Error(`OpenAI HTTP ${res.status}: ${body}`);
+    }
     return JSON.parse((await res.json()).choices[0].message.content);
   }
   throw new Error('OpenAI 连续限流,放弃');

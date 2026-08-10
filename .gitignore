@@ -25,6 +25,10 @@ dist-ssr
 
 # Local env / deployment
 .env
+# ⚠️ .env 只匹配这一个确切文件名,不覆盖 .env.local / .env.production.local。
+#    2026-08-09 差点让 DATABASE_URL(生产库直连串)进版本库,补上通配。
+.env.local
+.env*.local
 supabase/.temp/
 
 # Design prototypes (separate projects)

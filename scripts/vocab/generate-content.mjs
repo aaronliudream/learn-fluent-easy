@@ -42,6 +42,11 @@ import { tierRangeText } from './spec.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
 import { DEF_ZH_RULE, FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
 
+/** 账户/凭据级错误 —— 重试一万次也不会好,必须整轮中止。 */
+class FatalLlmError extends Error {}
+const FATAL_LLM = ['缺少环境变量', 'invalid_api_key', 'Incorrect API key',
+  'insufficient_quota', 'credit_balance_exhausted', 'billing_hard_limit_reached', 'account_deactivated'];
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
 const DATA = path.join(HERE, 'data');
@@ -238,7 +243,13 @@ const SCHEMA = {
 };
 
 async function callModel(word, cefr, failureNotes) {
-  requireKeys(ENV, ['OPENAI_API_KEY']);
+  /* ⚠️ 账户/凭据级错误必须**整轮中止**,不能退化成"这一词失败"。
+     踩过(2026-08-09):本机没配 OPENAI_API_KEY,错误被下游 catch 接住、
+     重试三次、记进 failed.json,最后报「通过 0 · 失败 2」——
+     把"没有密钥"报成了"内容三次没过闸"。放量跑就是烧完 3812 词
+     再告诉你"闸门拒绝率 100%"。与烧音频那边的 credit_balance_exhausted 同一类。 */
+  try { requireKeys(ENV, ['OPENAI_API_KEY']); }
+  catch (e) { throw new FatalLlmError(e.message); }
   const key = ENV.OPENAI_API_KEY;
   const body = {
     model: MODEL,
@@ -264,7 +275,13 @@ async function callModel(word, cefr, failureNotes) {
       await new Promise(r => setTimeout(r, wait));
       continue;
     }
-    if (!res.ok) throw new Error(`OpenAI HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
+    if (!res.ok) {
+      const body = (await res.text()).slice(0, 300);
+      if (res.status === 401 || res.status === 403 || FATAL_LLM.some(p => body.includes(p))) {
+        throw new FatalLlmError(`OpenAI HTTP ${res.status}(账户/凭据级): ${body}`);
+      }
+      throw new Error(`OpenAI HTTP ${res.status}: ${body}`);
+    }
     const data = await res.json();
     return JSON.parse(data.choices[0].message.content);
   }
@@ -341,6 +358,14 @@ async function main() {
         try {
           payload = await callModel(word, cefr, notes);
         } catch (e) {
+          /* ⚠️ 账户/凭据级 → **整轮中止**,不是"这一词失败"(见 FatalLlmError 注释) */
+          if (e instanceof FatalLlmError) {
+            process.stdout.write(`
+✗✗ 账户/凭据级错误,**整轮中止**(不是内容问题):
+   ${e.message}
+`);
+            process.exit(2);
+          }
           notes = [`API 错误:${e.message}`];
           process.stdout.write(`  ✗ ${word.headword} 第${attempt}次 API 失败:${e.message}\n`);
           continue;

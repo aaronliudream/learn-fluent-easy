@@ -31,7 +31,7 @@
  *   scripts/vocab/data/toefl.csv              headword,pos,freq_rank
  *   scripts/vocab/data/toefl-inflections.json 屈折形表(喂第二步 g1 闸门)
  *   scripts/vocab/data/skipped.json           被清洗掉的条目 + 原因
- *   REVIEWAA/vocab_toefl_wordlist_sample.md   随机 50 词送审
+ *   REVIEWAA/vocab_<bank>_wordlist_sample.md  随机 50 词送审(文件名跟 --bank 走)
  *
  * ── 用法 ─────────────────────────────────────────────────────────
  *   node scripts/vocab/ingest-toefl.mjs                 # 摄取 + 出送审样本
@@ -331,10 +331,12 @@ ${EXCLUDE_TAGS.size ? '' : `1. **⚠️ 首批取哪 200 词**(见上面的对�
 2. **屈折形是否算独立词条**:ECDICT 把 \`abandon\` / \`abandoned\` / \`abandonment\` 都打了 toefl 标,本脚本**全部保留**为独立词条(\`abandoned\` 有独立的形容词义"被抛弃的",托福词表通常也这么收)。如果你要按原形合并,说一声,清洗规则加一条即可。
 3. **total_words 要不要从 8000 改成 ${kept.length}**(这个数会显示在词库中心的卡片上)。
 `;
-  const out = path.join(REPO, 'REVIEWAA', 'vocab_toefl_wordlist_sample.md');
+  /* ⚠️ 文件名**必须跟 --bank 走**。原来写死 'toefl',跑 --bank=cet4 会把托福那份
+     送审样本整个覆盖掉(2026-08-09 踩过一次,靠 git checkout 救回)。SQL 同理。 */
+  const out = path.join(REPO, 'REVIEWAA', `vocab_${BANK}_wordlist_sample.md`);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, md, 'utf8');
-  process.stdout.write(`· 送审样本 → REVIEWAA/vocab_toefl_wordlist_sample.md\n`);
+  process.stdout.write(`· 送审样本 → REVIEWAA/vocab_${BANK}_wordlist_sample.md\n`);
 }
 
 /** ⚠️ 首批选词的实质问题:ECDICT 的 toefl 标签是"托福里出现过",不是"托福难度"。
@@ -382,8 +384,8 @@ function writeSql(batch) {
   const esc = s => String(s).replace(/'/g, "''");
   const val = w => `('${esc(w.headword)}', ${w.pos ? `'${esc(w.pos)}'` : 'NULL'}, ${w.freq_rank ?? 'NULL'})`;
 
-  const sql = `-- 托福词库 batch1:freq_rank 前 ${batch.length} 词
--- 生成: node scripts/vocab/ingest-toefl.mjs --emit-sql
+  const sql = `-- ${BANK} 词库 batch1:freq_rank 前 ${batch.length} 词
+-- 生成: node scripts/vocab/ingest-toefl.mjs --bank=${BANK} --limit=${batch.length} --emit-sql
 -- 数据源: skywind3000/ECDICT · MIT License (c) 2025 Linwei
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
@@ -397,7 +399,7 @@ BEGIN;
 SELECT 'BEFORE' AS stage,
        (SELECT count(*) FROM vocab_words) AS words,
        (SELECT count(*) FROM vocab_word_banks
-         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = 'toefl')) AS toefl_links;
+         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) AS bank_links;
 
 -- ① 词条
 INSERT INTO vocab_words (headword, pos, freq_rank) VALUES
@@ -407,11 +409,11 @@ ON CONFLICT (lower(headword)) DO UPDATE
       freq_rank  = COALESCE(EXCLUDED.freq_rank, vocab_words.freq_rank),
       updated_at = now();
 
--- ② 挂到 toefl 词库
+-- ② 挂到 ${BANK} 词库
 INSERT INTO vocab_word_banks (word_id, bank_id)
 SELECT w.id, b.id
   FROM vocab_words w
-  CROSS JOIN (SELECT id FROM vocab_banks WHERE code = 'toefl') b
+  CROSS JOIN (SELECT id FROM vocab_banks WHERE code = '${BANK}') b
  WHERE lower(w.headword) IN (${batch.map(w => `'${esc(w.headword)}'`).join(', ')})
 ON CONFLICT (word_id, bank_id) DO NOTHING;
 
@@ -419,23 +421,23 @@ ON CONFLICT (word_id, bank_id) DO NOTHING;
 SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words) AS words,
        (SELECT count(*) FROM vocab_word_banks
-         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = 'toefl')) AS toefl_links;
+         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) AS bank_links;
 
 -- ── count-validate:两行都必须是 t,否则 ROLLBACK ──
--- 预期(首次跑,两表都是空的): words = ${batch.length},toefl_links = ${batch.length}
+-- 预期(首次跑,两表都是空的): words = ${batch.length},${BANK}_links = ${batch.length}
 SELECT 'words = ${batch.length}' AS expect,
        (SELECT count(*) FROM vocab_words) = ${batch.length} AS ok
 UNION ALL
-SELECT 'toefl_links = ${batch.length}',
+SELECT '${BANK}_links = ${batch.length}',
        (SELECT count(*) FROM vocab_word_banks
-         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = 'toefl')) = ${batch.length};
+         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) = ${batch.length};
 
 COMMIT;
 `;
-  const out = path.join(REPO, 'SQLAA', 'vocab_toefl_words_batch1.sql');
+  const out = path.join(REPO, 'SQLAA', `vocab_${BANK}_words_batch1.sql`);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, sql, 'utf8');
-  process.stdout.write(`· batch1 SQL(${batch.length} 词) → SQLAA/vocab_toefl_words_batch1.sql\n`);
+  process.stdout.write(`· batch1 SQL(${batch.length} 词) → SQLAA/vocab_${BANK}_words_batch1.sql\n`);
 }
 
 main().catch(e => { process.stderr.write(`✗ ${e.stack || e.message}\n`); process.exit(1); });

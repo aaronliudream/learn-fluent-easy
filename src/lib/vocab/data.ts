@@ -13,6 +13,7 @@
  */
 import { supabase } from "@/integrations/supabase/client";
 import { fallback } from "@/lib/vocab/report";
+import { byLearnOrder } from "@/lib/vocab/functionWords";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const db = supabase as any;
@@ -193,7 +194,10 @@ export async function listBankWords(bankId: string): Promise<VocabWord[]> {
     if (error) throw error;
     out.push(...((data || []) as VocabWord[]));
   }
-  out.sort((a, b) => (a.freq_rank ?? 1e9) - (b.freq_rank ?? 1e9) || a.headword.localeCompare(b.headword));
+  /* ⚠️ 不是纯按 freq_rank:**虚词沉到末尾**(Aaron 2026-08-10 定,见 functionWords.ts)。
+     这个列表既是浏览词表,也是 `pickTargets` 抽题的池子 —— 它按顺序取前 N 个当本轮目标词,
+     所以这一行同时决定了"闯关先考哪些词"。不改这里的话,中考库前几关全在考 the / of / a。 */
+  out.sort(byLearnOrder);
   bankWordsCache.set(bankId, out);
   return out;
 }

@@ -1,0 +1,3042 @@
+{
+  "pickup": {
+    "word_id": "655b579a-4df8-4934-a5ca-a871f58360c6",
+    "headword": "pickup",
+    "pos": "n.",
+    "freq_rank": 3802,
+    "cefr": "B1",
+    "ipa": "/ˈpɪk.ʌp/",
+    "def_zh": "拾起；接送",
+    "def_en": "An act of lifting or collecting something, or a vehicle for transportation.",
+    "examples": [
+      {
+        "collocation": "pickup truck",
+        "scene": "daily_life",
+        "sentence": "He bought a new pickup truck for his weekend trips.",
+        "translation_zh": "他买了一辆新货车用于周末旅行。"
+      },
+      {
+        "collocation": "pickup line",
+        "scene": "culture",
+        "sentence": "She rolled her eyes at his cheesy pickup line during the party.",
+        "translation_zh": "她在派对上对他那老套的搭讪话感到无奈。"
+      },
+      {
+        "collocation": "pickup game",
+        "scene": "work",
+        "sentence": "They often play a pickup game of basketball after work.",
+        "translation_zh": "他们经常在下班后玩一场便装篮球赛。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "labor": {
+    "word_id": "66c9c1d7-1320-49a3-8765-9dee8c5c7ed6",
+    "headword": "labor",
+    "pos": "n./v.",
+    "freq_rank": 1123,
+    "cefr": "A2",
+    "ipa": "/ˈleɪ.bɚ/",
+    "def_zh": "劳动；工作",
+    "def_en": "Physical or mental effort to achieve a result.",
+    "examples": [
+      {
+        "collocation": "heavy labor",
+        "scene": "work",
+        "sentence": "Workers often perform heavy labor for long hours.",
+        "translation_zh": "工人们经常进行长时间的重体力劳动。"
+      },
+      {
+        "collocation": "manual labor",
+        "scene": "daily_life",
+        "sentence": "Many people still rely on manual labor for their livelihoods.",
+        "translation_zh": "许多人仍然依靠体力劳动来谋生。"
+      },
+      {
+        "collocation": "labor market",
+        "scene": "news",
+        "sentence": "The labor market is changing rapidly due to technology.",
+        "translation_zh": "由于技术的原因，劳动力市场正在迅速变化。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "rape": {
+    "word_id": "def4c61e-7ad0-4119-94f2-df06b888e0d1",
+    "headword": "rape",
+    "pos": "n./v.",
+    "freq_rank": 3416,
+    "cefr": "B1",
+    "ipa": "/reɪp/",
+    "def_zh": "强奸；侵犯",
+    "def_en": "A violent act involving non-consensual sexual intercourse.",
+    "examples": [
+      {
+        "collocation": "rape victim",
+        "scene": "news",
+        "sentence": "The police interviewed the rape victim to gather evidence.",
+        "translation_zh": "警方对强奸受害者进行了采访，以收集证据。"
+      },
+      {
+        "collocation": "date rape",
+        "scene": "daily_life",
+        "sentence": "Many universities offer support for those affected by date rape.",
+        "translation_zh": "许多大学为受到约会强奸影响的人提供支持。"
+      },
+      {
+        "collocation": "acquaintance rape",
+        "scene": "academic",
+        "sentence": "Research indicates that acquaintance rape is often underreported in surveys.",
+        "translation_zh": "研究表明，熟人强奸在调查中常常被低估。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "syndrome": {
+    "word_id": "08d78b4e-bfb4-4081-a7e5-fdf299fb08cb",
+    "headword": "syndrome",
+    "pos": "n.",
+    "freq_rank": 4281,
+    "cefr": "B2",
+    "ipa": "/ˈsɪn.droʊm/",
+    "def_zh": "综合症",
+    "def_en": "A set of medical signs or symptoms grouped together.",
+    "examples": [
+      {
+        "collocation": "autism spectrum syndrome",
+        "scene": "health",
+        "sentence": "Many children with autism spectrum syndrome require special educational support.",
+        "translation_zh": "许多自闭症谱系综合症的儿童需要特殊的教育支持。"
+      },
+      {
+        "collocation": "down syndrome",
+        "scene": "science_tech",
+        "sentence": "Research continues to improve the lives of individuals with down syndrome.",
+        "translation_zh": "研究持续改善唐氏综合症患者的生活。"
+      },
+      {
+        "collocation": "chronic fatigue syndrome",
+        "scene": "academic",
+        "sentence": "Chronic fatigue syndrome poses significant challenges for both patients and healthcare providers.",
+        "translation_zh": "慢性疲劳综合症给患者和医疗提供者带来了重大挑战。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "bloody": {
+    "word_id": "78df2fe8-2ffb-4b9d-b9f1-35a72804db96",
+    "headword": "bloody",
+    "pos": "adj.",
+    "freq_rank": 4127,
+    "cefr": "B2",
+    "ipa": "/ˈblʌd.i/",
+    "def_zh": "血腥的；可怕的",
+    "def_en": "Involving bloodshed; very unpleasant or bad.",
+    "examples": [
+      {
+        "collocation": "bloody conflict",
+        "scene": "news",
+        "sentence": "Many nations are affected by the ongoing bloody conflict in the region.",
+        "translation_zh": "许多国家受到该地区持续的血腥冲突的影响。"
+      },
+      {
+        "collocation": "bloody mess",
+        "scene": "daily_life",
+        "sentence": "After the party, there was a bloody mess left in the kitchen.",
+        "translation_zh": "聚会结束后，厨房里留下了血腥的烂摊子。"
+      },
+      {
+        "collocation": "bloody battle",
+        "scene": "culture",
+        "sentence": "The documentary detailed the bloody battle that changed the course of history.",
+        "translation_zh": "这部纪录片详细介绍了改变历史进程的血腥战役。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "gut": {
+    "word_id": "253dfe25-6a4c-49bb-a48c-f9a7270e2c30",
+    "headword": "gut",
+    "pos": "n./v.",
+    "freq_rank": 4297,
+    "cefr": "B2",
+    "ipa": "/ɡʌt/",
+    "def_zh": "肠；勇气",
+    "def_en": "The digestive tract or intestinal canal; also, courage or bravery.",
+    "examples": [
+      {
+        "collocation": "gut feeling",
+        "scene": "daily_life",
+        "sentence": "Many people trust their gut feelings when making important decisions.",
+        "translation_zh": "许多人在做出重要决定时相信自己的直觉。"
+      },
+      {
+        "collocation": "gut instinct",
+        "scene": "work",
+        "sentence": "She relied on her gut instinct to lead the team during the project.",
+        "translation_zh": "在项目期间，她依靠自己的直觉来领导团队。"
+      },
+      {
+        "collocation": "gut health",
+        "scene": "health",
+        "sentence": "Maintaining good gut health is essential for overall well-being.",
+        "translation_zh": "保持良好的肠道健康对整体健康至关重要。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "eyebrow": {
+    "word_id": "f5d898b2-395c-4345-98ab-8219d2c37740",
+    "headword": "eyebrow",
+    "pos": "n.",
+    "freq_rank": 4465,
+    "cefr": "B2",
+    "ipa": "/ˈaɪ.braʊ/",
+    "def_zh": "眉毛",
+    "def_en": "A strip of hair growing above the eye.",
+    "examples": [
+      {
+        "collocation": "plucked eyebrows",
+        "scene": "daily_life",
+        "sentence": "Many people choose to maintain perfectly plucked eyebrows for beauty.",
+        "translation_zh": "许多人选择保持完美的修眉来提升美感。"
+      },
+      {
+        "collocation": "eyebrow shape",
+        "scene": "culture",
+        "sentence": "Artists often emphasize the eyebrow shape in their portraits.",
+        "translation_zh": "艺术家们常常在肖像中强调眉形。"
+      },
+      {
+        "collocation": "raise eyebrows",
+        "scene": "news",
+        "sentence": "The politician's comments raised eyebrows among his colleagues.",
+        "translation_zh": "这位政治家的言论引起了同事们的关注。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "prosecutor": {
+    "word_id": "1bd75690-eaf6-44e7-b9b6-f2c3e56c354a",
+    "headword": "prosecutor",
+    "pos": "n.",
+    "freq_rank": 2124,
+    "cefr": "B1",
+    "ipa": "/ˈprɒs.ɪ.kjuː.tər/",
+    "def_zh": "检察官",
+    "def_en": "A legal official who conducts criminal prosecutions on behalf of the government.",
+    "examples": [
+      {
+        "collocation": "district prosecutors",
+        "scene": "news",
+        "sentence": "District prosecutors have filed several charges against the suspect.",
+        "translation_zh": "地区检察官已对该嫌疑人提出多项指控。"
+      },
+      {
+        "collocation": "assistant prosecutor",
+        "scene": "work",
+        "sentence": "An assistant prosecutor helped with the case preparations last week.",
+        "translation_zh": "一名助理检察官上周协助进行了案件准备工作。"
+      },
+      {
+        "collocation": "senior prosecutors",
+        "scene": "academic",
+        "sentence": "Senior prosecutors often provide guidance for younger attorneys in court.",
+        "translation_zh": "高级检察官通常为年轻律师在法庭上提供指导。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "doorway": {
+    "word_id": "48d37558-3948-44fa-b46d-8c7d46ae5aac",
+    "headword": "doorway",
+    "pos": "n.",
+    "freq_rank": 3866,
+    "cefr": "B1",
+    "ipa": "/ˈdɔr.weɪ/",
+    "def_zh": "门口；门道",
+    "def_en": "An entrance or passageway to a building or room.",
+    "examples": [
+      {
+        "collocation": "doorway to success",
+        "scene": "work",
+        "sentence": "She found a doorway to success through her hard work.",
+        "translation_zh": "她通过努力工作找到成功的门道。"
+      },
+      {
+        "collocation": "doorway of opportunity",
+        "scene": "daily_life",
+        "sentence": "Many people see education as a doorway of opportunity.",
+        "translation_zh": "许多人视教育为机遇的门道。"
+      },
+      {
+        "collocation": "doorway into another world",
+        "scene": "culture",
+        "sentence": "The art museum serves as a doorway into another world of creativity.",
+        "translation_zh": "这座艺术博物馆是通往创意另一个世界的门道。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "mortality": {
+    "word_id": "0913c940-42bb-46ac-8e09-896c7ec9db49",
+    "headword": "mortality",
+    "pos": "n.",
+    "freq_rank": 4662,
+    "cefr": "B2",
+    "ipa": "/mɔːrˈtæl.ɪ.ti/",
+    "def_zh": "死亡率",
+    "def_en": "The state of being subject to death; the incidence of death.",
+    "examples": [
+      {
+        "collocation": "infant mortality",
+        "scene": "health",
+        "sentence": "Infant mortality rates have declined significantly in many countries recently.",
+        "translation_zh": "许多国家的婴儿死亡率最近显著下降。"
+      },
+      {
+        "collocation": "mortality rate",
+        "scene": "news",
+        "sentence": "The mortality rate from the disease has increased over the past year.",
+        "translation_zh": "该疾病的死亡率在过去一年中有所上升。"
+      },
+      {
+        "collocation": "overall mortality",
+        "scene": "science_tech",
+        "sentence": "Researchers are studying the effects of air pollution on overall mortality rates.",
+        "translation_zh": "研究人员正在研究空气污染对整体死亡率的影响。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "theological": {
+    "word_id": "5ae94ae5-7f58-41ec-873f-edf722fdfdea",
+    "headword": "theological",
+    "pos": "adj.",
+    "freq_rank": 4732,
+    "cefr": "B2",
+    "ipa": "/ˌθiː.əˈlɒdʒ.ɪ.kəl/",
+    "def_zh": "神学的",
+    "def_en": "Relating to the study of religious beliefs and practices.",
+    "examples": [
+      {
+        "collocation": "theological studies",
+        "scene": "academic",
+        "sentence": "Students often engage in various theological studies to deepen their understanding.",
+        "translation_zh": "学生们常常参与各种神学研究，以加深他们的理解。"
+      },
+      {
+        "collocation": "theological debates",
+        "scene": "culture",
+        "sentence": "Scholars frequently hold theological debates to address contemporary moral issues.",
+        "translation_zh": "学者们经常举行神学辩论，以讨论当代道德问题。"
+      },
+      {
+        "collocation": "theological perspectives",
+        "scene": "education",
+        "sentence": "Different theological perspectives can influence how history is interpreted in schools.",
+        "translation_zh": "不同的神学观点会影响学校对历史的解读。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "peanut": {
+    "word_id": "eda86bc2-3ff4-44b8-84d3-7f98849f7fa6",
+    "headword": "peanut",
+    "pos": "n./adj.",
+    "freq_rank": 4627,
+    "cefr": "B2",
+    "ipa": "/ˈpiː.nʌt/",
+    "def_zh": "花生",
+    "def_en": "A small, edible seed often used in snacks and cooking.",
+    "examples": [
+      {
+        "collocation": "peanut butter",
+        "scene": "daily_life",
+        "sentence": "Many people enjoy spreading peanut butter on their toast for breakfast.",
+        "translation_zh": "许多人喜欢在吐司上涂抹花生酱作为早餐。"
+      },
+      {
+        "collocation": "peanut allergy",
+        "scene": "health",
+        "sentence": "A peanut allergy can cause severe reactions in some individuals.",
+        "translation_zh": "花生过敏会导致一些人出现严重反应。"
+      },
+      {
+        "collocation": "peanut crop",
+        "scene": "culture",
+        "sentence": "Farmers are increasingly focused on the peanut crop due to its high demand.",
+        "translation_zh": "农民们越来越关注花生作物，因为其需求量很大。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "compelling": {
+    "word_id": "f08cf330-685d-4253-90c4-f8d606ff4896",
+    "headword": "compelling",
+    "pos": "adj.",
+    "freq_rank": 4879,
+    "cefr": "B2",
+    "ipa": "/kəmˈpɛl.ɪŋ/",
+    "def_zh": "引人注目的；令人信服的",
+    "def_en": "Evoking interest, attention, or admiration in a powerful way.",
+    "examples": [
+      {
+        "collocation": "compelling evidence",
+        "scene": "academic",
+        "sentence": "The researchers presented compelling evidence to support their theory.",
+        "translation_zh": "研究人员提出了引人注目的证据来支持他们的理论。"
+      },
+      {
+        "collocation": "compelling argument",
+        "scene": "culture",
+        "sentence": "She made a compelling argument for the importance of art in education.",
+        "translation_zh": "她提出了引人注目的论点，强调艺术在教育中的重要性。"
+      },
+      {
+        "collocation": "compelling story",
+        "scene": "daily_life",
+        "sentence": "Everyone found the author's compelling story hard to put down.",
+        "translation_zh": "每个人都觉得作者引人注目的故事令人难以放下。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "capitalism": {
+    "word_id": "df79a46d-a67a-43bb-989b-5f43d7e216d9",
+    "headword": "capitalism",
+    "pos": "n.",
+    "freq_rank": 5107,
+    "cefr": "B2",
+    "ipa": "/ˈkæp.ɪ.təl.ɪ.zəm/",
+    "def_zh": "资本主义",
+    "def_en": "An economic system based on private ownership and free markets.",
+    "examples": [
+      {
+        "collocation": "free market capitalism",
+        "scene": "academic",
+        "sentence": "Free market capitalism often promotes competition and innovation within economies.",
+        "translation_zh": "自由市场资本主义通常促进经济中的竞争和创新。"
+      },
+      {
+        "collocation": "market-based capitalism",
+        "scene": "news",
+        "sentence": "Many countries are shifting towards market-based capitalism for better economic growth.",
+        "translation_zh": "许多国家正在转向市场导向的资本主义以实现更好的经济增长。"
+      },
+      {
+        "collocation": "global capitalism",
+        "scene": "culture",
+        "sentence": "Global capitalism has transformed how we view trade and international relations.",
+        "translation_zh": "全球资本主义改变了我们对贸易和国际关系的看法。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "paradigm": {
+    "word_id": "3c877210-86a6-404f-a2fc-95480172c6c3",
+    "headword": "paradigm",
+    "pos": "n.",
+    "freq_rank": 5201,
+    "cefr": "B2",
+    "ipa": "/ˈpær.ə.daɪm/",
+    "def_zh": "范式",
+    "def_en": "A typical example or pattern of something.",
+    "examples": [
+      {
+        "collocation": "the dominant paradigm",
+        "scene": "academic",
+        "sentence": "Many researchers challenge the dominant paradigm in their fields.",
+        "translation_zh": "许多研究人员质疑他们领域内的主流范式。"
+      },
+      {
+        "collocation": "shift in paradigm",
+        "scene": "science_tech",
+        "sentence": "A shift in paradigm could revolutionize our approach to energy.",
+        "translation_zh": "范式的转变可能会彻底改变我们对能源的看法。"
+      },
+      {
+        "collocation": "paradigm of excellence",
+        "scene": "work",
+        "sentence": "Our company aims to be a paradigm of excellence in customer service.",
+        "translation_zh": "我们公司致力于成为客户服务的范式。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "witch": {
+    "word_id": "9b503944-ff27-4970-8496-c0296c55ef83",
+    "headword": "witch",
+    "pos": "n./v.",
+    "freq_rank": 5294,
+    "cefr": "B2",
+    "ipa": "/wɪtʃ/",
+    "def_zh": "女巫；巫师",
+    "def_en": "A person believed to have magical powers, especially evil ones.",
+    "examples": [
+      {
+        "collocation": "witch hunt",
+        "scene": "news",
+        "sentence": "Authorities are often accused of conducting a witch hunt against dissenters.",
+        "translation_zh": "当局常常被指控进行针对异议人士的猎巫行动。"
+      },
+      {
+        "collocation": "black witch",
+        "scene": "culture",
+        "sentence": "In folklore, a black witch is often associated with dark magic and malevolence.",
+        "translation_zh": "在民间传说中，黑女巫通常与黑暗魔法和恶意相关联。"
+      },
+      {
+        "collocation": "witch trial",
+        "scene": "education",
+        "sentence": "Historically, witch trials were infamous for their unjust proceedings and persecution.",
+        "translation_zh": "在历史上，猎巫审判因其不公的程序和迫害而臭名昭著。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "apologise": {
+    "word_id": "e2b6e332-d77e-411e-aa8f-3495bb980c02",
+    "headword": "apologise",
+    "pos": "v.",
+    "freq_rank": 5315,
+    "cefr": "B2",
+    "ipa": "/əˈpɒlədʒaɪz/",
+    "def_zh": "道歉",
+    "def_en": "Express regret for an action or statement made.",
+    "examples": [
+      {
+        "collocation": "apologise for a mistake",
+        "scene": "work",
+        "sentence": "Our team must apologise for the mistake made in the report.",
+        "translation_zh": "我们的团队必须为报告中犯下的错误道歉。"
+      },
+      {
+        "collocation": "apologise sincerely",
+        "scene": "daily_life",
+        "sentence": "She decided to apologise sincerely for her earlier remarks.",
+        "translation_zh": "她决定真诚地为之前的言论道歉。"
+      },
+      {
+        "collocation": "apologise to someone",
+        "scene": "education",
+        "sentence": "Teachers often have to apologise to students for misunderstandings.",
+        "translation_zh": "老师们经常不得不为误解向学生道歉。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "bin": {
+    "word_id": "86ccf2e1-f88c-402b-a4a1-97e3d447ce40",
+    "headword": "bin",
+    "pos": "n.",
+    "freq_rank": 5370,
+    "cefr": "B2",
+    "ipa": "/bɪn/",
+    "def_zh": "垃圾箱",
+    "def_en": "A container for waste or discarded items.",
+    "examples": [
+      {
+        "collocation": "recycling bin",
+        "scene": "environment",
+        "sentence": "Many households have a separate recycling bin for paper and plastics.",
+        "translation_zh": "许多家庭都有一个单独的纸张和塑料回收箱。"
+      },
+      {
+        "collocation": "garbage bin",
+        "scene": "daily_life",
+        "sentence": "She placed the empty boxes in the garbage bin outside.",
+        "translation_zh": "她把空箱子放进了外面的垃圾箱里。"
+      },
+      {
+        "collocation": "storage bin",
+        "scene": "work",
+        "sentence": "Each office has a designated storage bin for supplies and documents.",
+        "translation_zh": "每个办公室都有一个指定的存储箱，用于存放物品和文件。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "holder": {
+    "word_id": "983774c9-366d-4eb8-a218-253567b1c5ee",
+    "headword": "holder",
+    "pos": "n.",
+    "freq_rank": 5440,
+    "cefr": "B2",
+    "ipa": "/ˈhoʊl.dɚ/",
+    "def_zh": "持有者",
+    "def_en": "A person or thing that holds something.",
+    "examples": [
+      {
+        "collocation": "certificate holder",
+        "scene": "education",
+        "sentence": "Students must submit their applications to the certificate holders by next week.",
+        "translation_zh": "学生必须在下周之前将申请提交给证书持有者。"
+      },
+      {
+        "collocation": "card holder",
+        "scene": "daily_life",
+        "sentence": "Every card holder needs to ensure their information is secure.",
+        "translation_zh": "每个卡片持有者都需要确保他们的信息安全。"
+      },
+      {
+        "collocation": "title holder",
+        "scene": "culture",
+        "sentence": "The title holders of the competition will be announced later this month.",
+        "translation_zh": "这个比赛的持有者将在本月晚些时候公布。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "sip": {
+    "word_id": "77335731-0257-4a9e-951d-0c6891101444",
+    "headword": "sip",
+    "pos": "n./v.",
+    "freq_rank": 5716,
+    "cefr": "B2",
+    "ipa": "/sɪp/",
+    "def_zh": "啜饮；小口喝",
+    "def_en": "To drink a small amount, usually slowly.",
+    "examples": [
+      {
+        "collocation": "sip tea",
+        "scene": "daily_life",
+        "sentence": "She likes to sip tea while reading her favorite book.",
+        "translation_zh": "她喜欢在阅读自己喜欢的书时啜饮茶。"
+      },
+      {
+        "collocation": "sip coffee",
+        "scene": "work",
+        "sentence": "Many people sip coffee during their morning meetings to stay awake.",
+        "translation_zh": "很多人在早晨的会议上啜饮咖啡以保持清醒。"
+      },
+      {
+        "collocation": "sip water",
+        "scene": "health",
+        "sentence": "It is important to sip water regularly throughout the day to stay hydrated.",
+        "translation_zh": "在一天中定期啜饮水，以保持水分充足是很重要的。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "machinery": {
+    "word_id": "4ddb7c14-c6a5-4374-99cc-7d440e08b93a",
+    "headword": "machinery",
+    "pos": "n.",
+    "freq_rank": 5774,
+    "cefr": "B2",
+    "ipa": "/məˈʃin.ər.i/",
+    "def_zh": "机械；机器",
+    "def_en": "The components of a machine or the system of machines.",
+    "examples": [
+      {
+        "collocation": "heavy machinery",
+        "scene": "work",
+        "sentence": "Construction sites often use heavy machinery to complete tasks quickly.",
+        "translation_zh": "建筑工地通常使用重型机械快速完成任务。"
+      },
+      {
+        "collocation": "machinery industry",
+        "scene": "news",
+        "sentence": "The machinery industry has seen significant growth this year due to demand.",
+        "translation_zh": "由于需求，今年机械行业经历了显著增长。"
+      },
+      {
+        "collocation": "manufacturing machinery",
+        "scene": "science_tech",
+        "sentence": "Advancements in technology improve manufacturing machinery efficiency and precision.",
+        "translation_zh": "技术的进步提高了制造机械的效率和精度。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "reasoning": {
+    "word_id": "26f0731b-4d59-4726-9b38-802624a2aaca",
+    "headword": "reasoning",
+    "pos": "n.",
+    "freq_rank": 5805,
+    "cefr": "B2",
+    "ipa": "/ˈriː.zən.ɪŋ/",
+    "def_zh": "推理；推断",
+    "def_en": "The process of thinking logically about something.",
+    "examples": [
+      {
+        "collocation": "logical reasoning",
+        "scene": "academic",
+        "sentence": "Students must develop logical reasoning to solve complex problems.",
+        "translation_zh": "学生必须培养逻辑推理能力以解决复杂问题。"
+      },
+      {
+        "collocation": "critical reasoning",
+        "scene": "education",
+        "sentence": "Teachers encourage students to enhance their critical reasoning skills in discussions.",
+        "translation_zh": "教师鼓励学生在讨论中提高他们的批判性推理能力。"
+      },
+      {
+        "collocation": "reasoning skills",
+        "scene": "work",
+        "sentence": "Effective teamwork requires strong reasoning skills to address challenges.",
+        "translation_zh": "有效的团队合作需要强大的推理能力来应对挑战。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "heroin": {
+    "word_id": "11e35da9-0801-4b6b-86e5-0fb7f239acd4",
+    "headword": "heroin",
+    "pos": "n.",
+    "freq_rank": 5859,
+    "cefr": "B2",
+    "ipa": "/ˈhɛr.oʊ.ɪn/",
+    "def_zh": "海洛因",
+    "def_en": "A powerful and addictive narcotic derived from morphine.",
+    "examples": [
+      {
+        "collocation": "heroin addiction",
+        "scene": "health",
+        "sentence": "Many individuals struggle with heroin addiction and need support to recover.",
+        "translation_zh": "许多人在与海洛因成瘾斗争，亟需支持以恢复。"
+      },
+      {
+        "collocation": "heroin use",
+        "scene": "news",
+        "sentence": "Authorities reported a rise in heroin use among young adults this year.",
+        "translation_zh": "当局报告称，今年年轻人中海洛因使用增加。"
+      },
+      {
+        "collocation": "heroin overdose",
+        "scene": "daily_life",
+        "sentence": "She survived a heroin overdose and is now in rehabilitation.",
+        "translation_zh": "她经历了海洛因过量，现已在康复中。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "laptop": {
+    "word_id": "c12e1a98-6bba-449f-bd73-caffc168f654",
+    "headword": "laptop",
+    "pos": null,
+    "freq_rank": 5866,
+    "cefr": "B2",
+    "ipa": "/ˈlæp.tɑːp/",
+    "def_zh": "笔记本电脑",
+    "def_en": "A portable personal computer with a clamshell form factor.",
+    "examples": [
+      {
+        "collocation": "use a laptop",
+        "scene": "work",
+        "sentence": "Many professionals use a laptop for remote work tasks.",
+        "translation_zh": "许多专业人士使用笔记本电脑进行远程工作。"
+      },
+      {
+        "collocation": "laptop screen",
+        "scene": "education",
+        "sentence": "Students often take notes directly on their laptop screens during lectures.",
+        "translation_zh": "学生们经常在讲座中直接在笔记本电脑屏幕上记笔记。"
+      },
+      {
+        "collocation": "laptop charger",
+        "scene": "daily_life",
+        "sentence": "Make sure to pack your laptop charger before traveling.",
+        "translation_zh": "旅行前一定要记得带上你的笔记本电脑充电器。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "sophomore": {
+    "word_id": "ce87cacb-b7bf-47dd-b36f-4f9faaa75825",
+    "headword": "sophomore",
+    "pos": "n./adj.",
+    "freq_rank": 5932,
+    "cefr": "B2",
+    "ipa": "/ˈsɒf.mɔːr/",
+    "def_zh": "大二学生",
+    "def_en": "A second-year student in a U.S. college or high school.",
+    "examples": [
+      {
+        "collocation": "sophomore year",
+        "scene": "education",
+        "sentence": "Many students struggle during their sophomore year in college.",
+        "translation_zh": "许多学生在大学的大二阶段感到困难。"
+      },
+      {
+        "collocation": "sophomore class",
+        "scene": "daily_life",
+        "sentence": "She enjoyed the camaraderie in her sophomore class during lunch.",
+        "translation_zh": "她在午餐时享受和大二班同学之间的友谊。"
+      },
+      {
+        "collocation": "sophomore project",
+        "scene": "work",
+        "sentence": "Completing a sophomore project can help improve research skills.",
+        "translation_zh": "完成一个大二项目可以帮助提高研究技能。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "copyright": {
+    "word_id": "59401aac-d1f7-470b-b44f-5e1355c6b9f5",
+    "headword": "copyright",
+    "pos": "n.",
+    "freq_rank": 6066,
+    "cefr": "B2",
+    "ipa": "/ˈkɑː.pi.raɪt/",
+    "def_zh": "版权",
+    "def_en": "Legal right to control reproduction and distribution of creative works.",
+    "examples": [
+      {
+        "collocation": "copyright law",
+        "scene": "work",
+        "sentence": "Copyright law protects the rights of creators and their works.",
+        "translation_zh": "版权法保护创作者及其作品的权利。"
+      },
+      {
+        "collocation": "copyright infringement",
+        "scene": "culture",
+        "sentence": "Artists often face copyright infringement issues in the digital age.",
+        "translation_zh": "艺术家在数字时代常常面临版权侵权问题。"
+      },
+      {
+        "collocation": "copyright holder",
+        "scene": "academic",
+        "sentence": "A copyright holder can license their work to others for use.",
+        "translation_zh": "版权持有人可以将其作品授权给他人使用。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "fishery": {
+    "word_id": "d18f4b98-96be-4110-8b0d-2fa0bb45c116",
+    "headword": "fishery",
+    "pos": "n.",
+    "freq_rank": 5973,
+    "cefr": "B2",
+    "ipa": "/ˈfɪʃ.ər.i/",
+    "def_zh": "渔场",
+    "def_en": "A place where fish are cultivated or caught.",
+    "examples": [
+      {
+        "collocation": "sustainable fishery",
+        "scene": "environment",
+        "sentence": "Sustainable fisheries are essential for maintaining ocean biodiversity.",
+        "translation_zh": "可持续渔场对维持海洋生物多样性至关重要。"
+      },
+      {
+        "collocation": "commercial fishery",
+        "scene": "work",
+        "sentence": "The commercial fishery industry faces many regulatory challenges this year.",
+        "translation_zh": "今年商业渔业面临许多监管挑战。"
+      },
+      {
+        "collocation": "fishery management",
+        "scene": "academic",
+        "sentence": "Effective fishery management ensures the longevity of aquatic resources.",
+        "translation_zh": "有效的渔业管理确保水生资源的持久性。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "affiliation": {
+    "word_id": "15db6792-45b6-4a1a-a134-c74e5d03a96c",
+    "headword": "affiliation",
+    "pos": "n.",
+    "freq_rank": 6180,
+    "cefr": "B2",
+    "ipa": "/əˌfɪl.iˈeɪ.ʃən/",
+    "def_zh": "隶属关系；联合",
+    "def_en": "A connection or association with a group or organization.",
+    "examples": [
+      {
+        "collocation": "academic affiliation",
+        "scene": "academic",
+        "sentence": "Many researchers are proud of their academic affiliations with prestigious institutions.",
+        "translation_zh": "许多研究人员为自己与知名机构的学术隶属关系感到自豪。"
+      },
+      {
+        "collocation": "political affiliation",
+        "scene": "news",
+        "sentence": "Voters often reveal their political affiliations during elections and surveys.",
+        "translation_zh": "选民在选举和调查中常常透露他们的政治隶属关系。"
+      },
+      {
+        "collocation": "business affiliation",
+        "scene": "work",
+        "sentence": "Her business affiliations help her network with industry leaders effectively.",
+        "translation_zh": "她的商业隶属关系使她能够有效地与行业领袖建立联系。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "archive": {
+    "word_id": "ba2226df-d185-45b8-ac49-b1f7cd65336b",
+    "headword": "archive",
+    "pos": "v./n.",
+    "freq_rank": 6515,
+    "cefr": "B2",
+    "ipa": "/ˈɑːr.kaɪv/",
+    "def_zh": "档案；存档",
+    "def_en": "A collection of documents or records.",
+    "examples": [
+      {
+        "collocation": "archive documents",
+        "scene": "work",
+        "sentence": "Managers need to archive documents for future reference.",
+        "translation_zh": "经理需要将档案文件存档以备将来参考。"
+      },
+      {
+        "collocation": "digital archive",
+        "scene": "academic",
+        "sentence": "Researchers often consult the digital archive for historical data.",
+        "translation_zh": "研究人员经常查阅数字档案以获取历史数据。"
+      },
+      {
+        "collocation": "archive material",
+        "scene": "culture",
+        "sentence": "The museum plans to archive material related to local history.",
+        "translation_zh": "博物馆计划存档与地方历史相关的资料。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "meditation": {
+    "word_id": "b9da8e05-4736-486e-830e-5e124a8fc546",
+    "headword": "meditation",
+    "pos": "n.",
+    "freq_rank": 6196,
+    "cefr": "B2",
+    "ipa": "/ˌmɛdɪˈteɪʃən/",
+    "def_zh": "冥想",
+    "def_en": "A practice of focused thought for relaxation or spiritual growth.",
+    "examples": [
+      {
+        "collocation": "mindfulness meditation",
+        "scene": "health",
+        "sentence": "Practicing mindfulness meditation can greatly reduce stress levels over time.",
+        "translation_zh": "练习正念冥想可以大大降低长期的压力水平。"
+      },
+      {
+        "collocation": "guided meditation",
+        "scene": "daily_life",
+        "sentence": "Many people find guided meditation helpful for achieving better focus during their day.",
+        "translation_zh": "许多人发现引导冥想有助于在日常生活中更好地集中注意力。"
+      },
+      {
+        "collocation": "transcendental meditation",
+        "scene": "education",
+        "sentence": "Transcendental meditation has been studied in various educational settings for its benefits.",
+        "translation_zh": "超越冥想在不同的教育环境中因其益处而被研究。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "inhale": {
+    "word_id": "94194903-303b-4855-9946-7b099d835446",
+    "headword": "inhale",
+    "pos": "v.",
+    "freq_rank": 6746,
+    "cefr": "B2",
+    "ipa": "/ɪnˈheɪl/",
+    "def_zh": "吸入",
+    "def_en": "To breathe in air or other substances.",
+    "examples": [
+      {
+        "collocation": "inhale deeply",
+        "scene": "health",
+        "sentence": "Many people find it relaxing to inhale deeply during meditation.",
+        "translation_zh": "许多人发现，在冥想时深吸一口气令人放松。"
+      },
+      {
+        "collocation": "inhale smoke",
+        "scene": "daily_life",
+        "sentence": "Some individuals choose to inhale smoke from various sources, risking their health.",
+        "translation_zh": "有些人选择吸入各种来源的烟雾，危及健康。"
+      },
+      {
+        "collocation": "inhale toxins",
+        "scene": "environment",
+        "sentence": "Animals in polluted areas often inhale toxins from the atmosphere.",
+        "translation_zh": "生活在污染地区的动物常常吸入来自大气的毒素。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "fairy": {
+    "word_id": "f70fac1d-c144-4990-8b43-539f0e6f97f4",
+    "headword": "fairy",
+    "pos": "n./adj.",
+    "freq_rank": 6368,
+    "cefr": "B2",
+    "ipa": "/ˈfɛr.i/",
+    "def_zh": "仙女；精灵",
+    "def_en": "A mythical being with magical powers, often depicted as beautiful and small.",
+    "examples": [
+      {
+        "collocation": "fairy tales",
+        "scene": "culture",
+        "sentence": "Many children grow up listening to enchanting fairy tales at bedtime.",
+        "translation_zh": "许多孩子在睡前听迷人的仙女故事长大。"
+      },
+      {
+        "collocation": "fairy lights",
+        "scene": "daily_life",
+        "sentence": "Hanging fairy lights transformed the garden into a magical space.",
+        "translation_zh": "悬挂的仙女灯把花园变成了一个神奇的空间。"
+      },
+      {
+        "collocation": "fairy godmother",
+        "scene": "education",
+        "sentence": "In the story, a fairy godmother helps the protagonist achieve her dreams.",
+        "translation_zh": "在这个故事中，一位仙女教母帮助主角实现她的梦想。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "honorable": {
+    "word_id": "74fa0b89-5a30-4bcf-b222-81dd8df56da7",
+    "headword": "honorable",
+    "pos": "adj.",
+    "freq_rank": 7084,
+    "cefr": "B2",
+    "ipa": "/ˈɑː.nər.ə.bəl/",
+    "def_zh": "可敬的",
+    "def_en": "Worthy of respect or admiration, having high moral principles.",
+    "examples": [
+      {
+        "collocation": "honorable mention",
+        "scene": "education",
+        "sentence": "Students who excelled received an honorable mention during the ceremony.",
+        "translation_zh": "在颁奖典礼上，表现出色的学生获得了可敬的提名。"
+      },
+      {
+        "collocation": "honorable conduct",
+        "scene": "work",
+        "sentence": "Employees are expected to demonstrate honorable conduct in all business dealings.",
+        "translation_zh": "员工在所有商业交易中应表现出可敬的行为。"
+      },
+      {
+        "collocation": "honorable intentions",
+        "scene": "daily_life",
+        "sentence": "His honorable intentions were clear when he volunteered to help the community.",
+        "translation_zh": "他自愿帮助社区时，可敬的意图显而易见。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "daytime": {
+    "word_id": "cf2fea4a-d4ea-434f-b6ca-92199b660e45",
+    "headword": "daytime",
+    "pos": "n.",
+    "freq_rank": 7145,
+    "cefr": "B2",
+    "ipa": "/ˈdeɪˌtaɪm/",
+    "def_zh": "白天",
+    "def_en": "The period of time during daylight hours.",
+    "examples": [
+      {
+        "collocation": "daytime activities",
+        "scene": "daily_life",
+        "sentence": "Many people enjoy outdoor daytime activities during the summer.",
+        "translation_zh": "许多人在夏季喜欢户外的白天活动。"
+      },
+      {
+        "collocation": "daytime television",
+        "scene": "culture",
+        "sentence": "She prefers watching daytime television shows while relaxing at home.",
+        "translation_zh": "她喜欢在家放松时观看白天的电视节目。"
+      },
+      {
+        "collocation": "daytime sleep",
+        "scene": "health",
+        "sentence": "Some individuals benefit from daytime sleep to recharge energy levels.",
+        "translation_zh": "有些人通过白天睡觉来补充能量。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "infrared": {
+    "word_id": "762e245a-6d9d-4c93-b086-cf82a9e04933",
+    "headword": "infrared",
+    "pos": "adj./n.",
+    "freq_rank": 7095,
+    "cefr": "B2",
+    "ipa": "/ˌɪnfrəˈrɛd/",
+    "def_zh": "红外的；红外线的",
+    "def_en": "Relating to or denoting electromagnetic radiation with wavelengths longer than visible light.",
+    "examples": [
+      {
+        "collocation": "infrared radiation",
+        "scene": "science_tech",
+        "sentence": "Infrared radiation can be used for night vision technology.",
+        "translation_zh": "红外辐射可以用于夜视技术。"
+      },
+      {
+        "collocation": "infrared sensor",
+        "scene": "work",
+        "sentence": "Engineers developed an infrared sensor to detect movement in the dark.",
+        "translation_zh": "工程师开发了一种红外传感器，以在黑暗中探测运动。"
+      },
+      {
+        "collocation": "infrared spectroscopy",
+        "scene": "academic",
+        "sentence": "Researchers utilized infrared spectroscopy to analyze chemical compounds effectively.",
+        "translation_zh": "研究人员利用红外光谱法有效分析化合物。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "blueprint": {
+    "word_id": "17bfa87c-4f37-4662-b473-51c1354a2207",
+    "headword": "blueprint",
+    "pos": "n./v.",
+    "freq_rank": 7570,
+    "cefr": "B2",
+    "ipa": "/ˈbluː.prɪnt/",
+    "def_zh": "蓝图；设计图",
+    "def_en": "A detailed plan or drawing used as a guide.",
+    "examples": [
+      {
+        "collocation": "detailed blueprint",
+        "scene": "work",
+        "sentence": "Engineers created a detailed blueprint for the new bridge.",
+        "translation_zh": "工程师为新桥制作了详细的蓝图。"
+      },
+      {
+        "collocation": "architectural blueprint",
+        "scene": "education",
+        "sentence": "Students studied an architectural blueprint to understand building design.",
+        "translation_zh": "学生们研究了一份建筑蓝图，以了解建筑设计。"
+      },
+      {
+        "collocation": "business blueprint",
+        "scene": "science_tech",
+        "sentence": "The company developed a business blueprint for future growth and innovation.",
+        "translation_zh": "公司制定了一份未来增长和创新的商业蓝图。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "spicy": {
+    "word_id": "45669d3c-491a-48f6-a964-137033c6734e",
+    "headword": "spicy",
+    "pos": "adj.",
+    "freq_rank": 7735,
+    "cefr": "B2",
+    "ipa": "/ˈspaɪ.si/",
+    "def_zh": "辛辣的",
+    "def_en": "Having a strong, pungent flavor; often associated with heat.",
+    "examples": [
+      {
+        "collocation": "spicy food",
+        "scene": "daily_life",
+        "sentence": "Many people enjoy spicy food for its bold flavors.",
+        "translation_zh": "很多人喜欢辛辣的食物，因为它的味道浓烈。"
+      },
+      {
+        "collocation": "spicy flavors",
+        "scene": "culture",
+        "sentence": "In many cuisines, spicy flavors play a central role in dishes.",
+        "translation_zh": "在许多菜系中，辛辣的风味在菜肴中占据中心地位。"
+      },
+      {
+        "collocation": "spicy ingredients",
+        "scene": "health",
+        "sentence": "Using spicy ingredients can enhance the nutritional value of meals.",
+        "translation_zh": "使用辛辣成分可以提高餐食的营养价值。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "repression": {
+    "word_id": "aa1b986c-0d06-437b-b7c9-c9dfbb18023a",
+    "headword": "repression",
+    "pos": "n.",
+    "freq_rank": 7683,
+    "cefr": "B2",
+    "ipa": "/rɪˈprɛʃ.ən/",
+    "def_zh": "压制",
+    "def_en": "The act of holding back or suppressing something.",
+    "examples": [
+      {
+        "collocation": "political repression",
+        "scene": "news",
+        "sentence": "Governments often resort to political repression to maintain control.",
+        "translation_zh": "政府通常诉诸于政治压制以维持控制。"
+      },
+      {
+        "collocation": "emotional repression",
+        "scene": "daily_life",
+        "sentence": "Many individuals struggle with emotional repression and its effects.",
+        "translation_zh": "许多人在情感压制及其影响上挣扎。"
+      },
+      {
+        "collocation": "social repression",
+        "scene": "academic",
+        "sentence": "Social repression can lead to widespread discontent in communities.",
+        "translation_zh": "社会压制可能导致社区内广泛的不满。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "paperback": {
+    "word_id": "761f402d-d36f-4022-9e65-f6d191ec971f",
+    "headword": "paperback",
+    "pos": "n.",
+    "freq_rank": 8235,
+    "cefr": "B2",
+    "ipa": "/ˈpeɪ.pər.bæk/",
+    "def_zh": "平装本",
+    "def_en": "A book with a flexible paper cover.",
+    "examples": [
+      {
+        "collocation": "paperback books",
+        "scene": "education",
+        "sentence": "Many students prefer paperback books for their affordability and portability.",
+        "translation_zh": "许多学生更喜欢平装本书籍，因为它们便宜且方便携带。"
+      },
+      {
+        "collocation": "new paperback",
+        "scene": "culture",
+        "sentence": "The author released a new paperback version of the popular novel last week.",
+        "translation_zh": "作者上周发布了这部受欢迎小说的新平装本。"
+      },
+      {
+        "collocation": "buy a paperback",
+        "scene": "daily_life",
+        "sentence": "You can buy a paperback at any major bookstore near the university.",
+        "translation_zh": "你可以在大学附近的任何大型书店购买平装本。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "modernization": {
+    "word_id": "e6ffaa41-fe45-487e-9459-d39943ac07f3",
+    "headword": "modernization",
+    "pos": "n.",
+    "freq_rank": 8383,
+    "cefr": "B2",
+    "ipa": "/ˌmɒd.ər.nəˈzeɪ.ʃən/",
+    "def_zh": "现代化",
+    "def_en": "The process of adapting something to modern needs or habits.",
+    "examples": [
+      {
+        "collocation": "economic modernization",
+        "scene": "news",
+        "sentence": "Countries are focusing on economic modernization to enhance their competitiveness.",
+        "translation_zh": "各国正专注于经济现代化，以增强竞争力。"
+      },
+      {
+        "collocation": "technological modernization",
+        "scene": "science_tech",
+        "sentence": "Technological modernization has greatly improved communication in recent years.",
+        "translation_zh": "近年来，技术现代化极大地改善了通信。"
+      },
+      {
+        "collocation": "urban modernization",
+        "scene": "culture",
+        "sentence": "Urban modernization is transforming traditional neighborhoods into vibrant communities.",
+        "translation_zh": "城市现代化正在将传统社区转变为充满活力的社区。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "pneumonia": {
+    "word_id": "0ff459b7-5ae7-4e78-a07a-b6d4c5122b6f",
+    "headword": "pneumonia",
+    "pos": "n.",
+    "freq_rank": 8632,
+    "cefr": "B2",
+    "ipa": "/njuˈmoʊ.njə/",
+    "def_zh": "肺炎",
+    "def_en": "Inflammation of the lungs, often caused by infection or illness.",
+    "examples": [
+      {
+        "collocation": "pneumonia infection",
+        "scene": "health",
+        "sentence": "Doctors are concerned about the pneumonia infection spreading in the community.",
+        "translation_zh": "医生担心肺炎感染在社区传播。"
+      },
+      {
+        "collocation": "bacterial pneumonia",
+        "scene": "science_tech",
+        "sentence": "Researchers study how bacterial pneumonia affects immune system responses.",
+        "translation_zh": "研究人员研究细菌性肺炎如何影响免疫系统反应。"
+      },
+      {
+        "collocation": "viral pneumonia",
+        "scene": "news",
+        "sentence": "The outbreak of viral pneumonia has raised alarms in many hospitals.",
+        "translation_zh": "病毒性肺炎的爆发引起了许多医院的警报。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "relish": {
+    "word_id": "44646d02-d118-42b9-b67f-d48ad3251e37",
+    "headword": "relish",
+    "pos": "n./v.",
+    "freq_rank": 8659,
+    "cefr": "B2",
+    "ipa": "/ˈrɛlɪʃ/",
+    "def_zh": "喜好；享受",
+    "def_en": "Great enjoyment or satisfaction from something.",
+    "examples": [
+      {
+        "collocation": "relish the opportunity",
+        "scene": "work",
+        "sentence": "Many professionals relish the opportunity to advance in their careers.",
+        "translation_zh": "许多专业人士都享受在职业中晋升的机会。"
+      },
+      {
+        "collocation": "relish the moment",
+        "scene": "daily_life",
+        "sentence": "Children often relish the moment when they receive gifts during celebrations.",
+        "translation_zh": "孩子们常常享受在庆祝活动中收到礼物的时刻。"
+      },
+      {
+        "collocation": "relish the experience",
+        "scene": "travel",
+        "sentence": "Travelers generally relish the experience of exploring new cultures and places.",
+        "translation_zh": "旅行者通常享受探索新文化和地方的经历。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "doctorate": {
+    "word_id": "a532d7e8-3394-4f5b-a6aa-62483d7a818a",
+    "headword": "doctorate",
+    "pos": "n.",
+    "freq_rank": 8557,
+    "cefr": "B2",
+    "ipa": "/ˈdɒk.tər.ət/",
+    "def_zh": "博士学位",
+    "def_en": "A high-level academic degree awarded after advanced study and research.",
+    "examples": [
+      {
+        "collocation": "obtain a doctorate",
+        "scene": "education",
+        "sentence": "Many students aspire to obtain a doctorate in their chosen field.",
+        "translation_zh": "许多学生渴望获得他们所选领域的博士学位。"
+      },
+      {
+        "collocation": "earn a doctorate",
+        "scene": "academic",
+        "sentence": "To earn a doctorate requires years of dedication and research.",
+        "translation_zh": "获得博士学位需要多年的奉献和研究。"
+      },
+      {
+        "collocation": "doctorate program",
+        "scene": "work",
+        "sentence": "She is currently enrolled in a doctorate program focused on environmental science.",
+        "translation_zh": "她目前正在攻读一个专注于环境科学的博士项目。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "kinship": {
+    "word_id": "bfd391da-c8c6-4231-a5a7-8d9a0a168f71",
+    "headword": "kinship",
+    "pos": "n.",
+    "freq_rank": 8890,
+    "cefr": "B2",
+    "ipa": "/ˈkɪn.ʃɪp/",
+    "def_zh": "亲属关系",
+    "def_en": "The state of being related to someone by blood or marriage.",
+    "examples": [
+      {
+        "collocation": "family kinship",
+        "scene": "daily_life",
+        "sentence": "Families often share a deep sense of kinship that bonds them together.",
+        "translation_zh": "家庭通常具有深厚的亲属关系，使他们紧密团结在一起。"
+      },
+      {
+        "collocation": "cultural kinship",
+        "scene": "culture",
+        "sentence": "Cultural kinship links individuals through shared traditions and histories.",
+        "translation_zh": "文化亲属关系通过共同的传统和历史联系个体。"
+      },
+      {
+        "collocation": "kinship ties",
+        "scene": "academic",
+        "sentence": "Researchers are examining how kinship ties influence social structures in communities.",
+        "translation_zh": "研究人员正在考察亲属关系如何影响社区的社会结构。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "muted": {
+    "word_id": "9f210413-472c-4ce3-b0e5-fa3ddb1ff786",
+    "headword": "muted",
+    "pos": "adj.",
+    "freq_rank": 9361,
+    "cefr": "B2",
+    "ipa": "/ˈmjuː.tɪd/",
+    "def_zh": "消音的；减弱的",
+    "def_en": "Having a softened or quieted sound or tone.",
+    "examples": [
+      {
+        "collocation": "muted colors",
+        "scene": "culture",
+        "sentence": "Artworks often feature muted colors to create a calming effect.",
+        "translation_zh": "艺术作品常常运用消音颜色以营造宁静的效果。"
+      },
+      {
+        "collocation": "muted response",
+        "scene": "news",
+        "sentence": "The community had a muted response to the proposed changes in policy.",
+        "translation_zh": "社区对拟议的政策变更反应冷淡。"
+      },
+      {
+        "collocation": "muted conversation",
+        "scene": "daily_life",
+        "sentence": "During the meeting, a muted conversation filled the room with tension.",
+        "translation_zh": "会议期间，消音的对话在房间里弥漫着紧张气氛。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "glamor": {
+    "word_id": "e1b9a59d-c57f-4af9-94a7-0c3e3bf41a44",
+    "headword": "glamor",
+    "pos": "n./v.",
+    "freq_rank": 9073,
+    "cefr": "B2",
+    "ipa": "/ˈɡlæm.ər/",
+    "def_zh": "魅力",
+    "def_en": "Attractiveness or allure, often in a superficial way.",
+    "examples": [
+      {
+        "collocation": "glamor models",
+        "scene": "culture",
+        "sentence": "Fashion shows often feature glamor models showcasing the latest designs.",
+        "translation_zh": "时装秀经常会展示魅力模特展示最新的设计。"
+      },
+      {
+        "collocation": "glamor industry",
+        "scene": "work",
+        "sentence": "The glamor industry can be demanding and competitive for newcomers.",
+        "translation_zh": "魅力行业对新来者来说可能要求很高且竞争激烈。"
+      },
+      {
+        "collocation": "glamor of celebrity",
+        "scene": "daily_life",
+        "sentence": "Many people are captivated by the glamor of celebrity lifestyles.",
+        "translation_zh": "许多人被名人生活的魅力所吸引。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "hypocrisy": {
+    "word_id": "87917945-309f-436f-956f-706b7b721221",
+    "headword": "hypocrisy",
+    "pos": "n.",
+    "freq_rank": 9213,
+    "cefr": "B2",
+    "ipa": "/hɪˈpɒk.rɪ.si/",
+    "def_zh": "虚伪",
+    "def_en": "The practice of claiming to have moral standards that one does not actually possess.",
+    "examples": [
+      {
+        "collocation": "double standards and hypocrisy",
+        "scene": "news",
+        "sentence": "Many politicians display double standards and hypocrisy in their actions.",
+        "translation_zh": "许多政治家在其行为中表现出双重标准与虚伪。"
+      },
+      {
+        "collocation": "moral hypocrisy",
+        "scene": "academic",
+        "sentence": "Researchers examined the impact of moral hypocrisy on social behaviors.",
+        "translation_zh": "研究者考察了道德虚伪对社会行为的影响。"
+      },
+      {
+        "collocation": "hypocrisy in society",
+        "scene": "daily_life",
+        "sentence": "People often criticize hypocrisy in society during discussions.",
+        "translation_zh": "人们在讨论中常常批评社会中的虚伪。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "noteworthy": {
+    "word_id": "7f1db516-61ab-4c26-88f6-ec68f66051f2",
+    "headword": "noteworthy",
+    "pos": "adj.",
+    "freq_rank": 9460,
+    "cefr": "B2",
+    "ipa": "/ˈnoʊtˌwɜr.ði/",
+    "def_zh": "值得注意的；显著的",
+    "def_en": "Deserving attention or notice; remarkable in some way.",
+    "examples": [
+      {
+        "collocation": "noteworthy contributions",
+        "scene": "academic",
+        "sentence": "Researchers made noteworthy contributions to the field of renewable energy.",
+        "translation_zh": "研究人员在可再生能源领域做出了值得注意的贡献。"
+      },
+      {
+        "collocation": "noteworthy achievements",
+        "scene": "work",
+        "sentence": "The company celebrated its noteworthy achievements in the last fiscal year.",
+        "translation_zh": "公司庆祝了去年财政年度的显著成就。"
+      },
+      {
+        "collocation": "noteworthy developments",
+        "scene": "news",
+        "sentence": "Recent noteworthy developments in technology have impacted daily life significantly.",
+        "translation_zh": "最近技术领域的显著发展对日常生活产生了重大影响。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "lad": {
+    "word_id": "6e63f24f-69ec-4a45-9fad-5b137da4190d",
+    "headword": "lad",
+    "pos": "n.",
+    "freq_rank": 9364,
+    "cefr": "B2",
+    "ipa": "/læd/",
+    "def_zh": "小伙子",
+    "def_en": "A boy or young man, often one who is carefree.",
+    "examples": [
+      {
+        "collocation": "young lad",
+        "scene": "daily_life",
+        "sentence": "Many young lads enjoy playing football in the park after school.",
+        "translation_zh": "许多小伙子喜欢在放学后在公园踢足球。"
+      },
+      {
+        "collocation": "lad in the group",
+        "scene": "culture",
+        "sentence": "The lad in the group shared funny stories that made everyone laugh.",
+        "translation_zh": "团体中的小伙子分享了有趣的故事，让每个人都笑了。"
+      },
+      {
+        "collocation": "old lad",
+        "scene": "news",
+        "sentence": "An old lad received a surprise party for his birthday from friends.",
+        "translation_zh": "一位老小伙子收到了朋友们为他庆祝生日的惊喜派对。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "abdomen": {
+    "word_id": "cd67d6ad-e750-4f1d-8333-da670a8825a2",
+    "headword": "abdomen",
+    "pos": "n.",
+    "freq_rank": 9711,
+    "cefr": "B2",
+    "ipa": "/ˈæb.də.mən/",
+    "def_zh": "腹部",
+    "def_en": "The part of the body containing digestive organs.",
+    "examples": [
+      {
+        "collocation": "pain in the abdomen",
+        "scene": "health",
+        "sentence": "Many patients report experiencing pain in the abdomen after eating.",
+        "translation_zh": "许多患者在进食后报告感到腹部疼痛。"
+      },
+      {
+        "collocation": "abdomen muscles",
+        "scene": "daily_life",
+        "sentence": "Regular exercise can help strengthen the abdomen muscles effectively.",
+        "translation_zh": "规律的锻炼可以有效增强腹部肌肉。"
+      },
+      {
+        "collocation": "abdomen surgery",
+        "scene": "science_tech",
+        "sentence": "The latest advancements have improved the techniques for abdomen surgery.",
+        "translation_zh": "最新的进展改善了腹部手术的技术。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "rigour": {
+    "word_id": "2622b875-e271-479f-b9d0-b64fd24aa853",
+    "headword": "rigour",
+    "pos": "n.",
+    "freq_rank": 9776,
+    "cefr": "B2",
+    "ipa": "/ˈrɪɡ.ər/",
+    "def_zh": "严谨",
+    "def_en": "Strictness or exactness in standards and procedures, often in academic contexts.",
+    "examples": [
+      {
+        "collocation": "academic rigour",
+        "scene": "education",
+        "sentence": "Students must demonstrate academic rigour in their research projects.",
+        "translation_zh": "学生们必须在他们的研究项目中展示学术严谨。"
+      },
+      {
+        "collocation": "rigour of research",
+        "scene": "science_tech",
+        "sentence": "The rigour of research is crucial for reliable scientific findings.",
+        "translation_zh": "研究的严谨性对可靠的科学发现至关重要。"
+      },
+      {
+        "collocation": "intellectual rigour",
+        "scene": "culture",
+        "sentence": "Intellectual rigour fosters critical thinking and deeper understanding.",
+        "translation_zh": "智力的严谨促进批判性思维和更深层次的理解。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "juggle": {
+    "word_id": "67cfdff9-146c-42c7-b6e5-55a2bf308feb",
+    "headword": "juggle",
+    "pos": "v./n.",
+    "freq_rank": 9584,
+    "cefr": "B2",
+    "ipa": "/ˈdʒʌɡ.əl/",
+    "def_zh": "耍杂技；同时处理多项事务",
+    "def_en": "To keep several objects in motion in the air by catching and throwing them.",
+    "examples": [
+      {
+        "collocation": "juggle responsibilities",
+        "scene": "work",
+        "sentence": "Many professionals juggle responsibilities to maintain a work-life balance.",
+        "translation_zh": "许多专业人士同时处理责任以维持工作与生活的平衡。"
+      },
+      {
+        "collocation": "juggle tasks",
+        "scene": "academic",
+        "sentence": "Students often juggle tasks to meet deadlines and manage their studies.",
+        "translation_zh": "学生们常常同时处理任务以满足截止日期并管理学习。"
+      },
+      {
+        "collocation": "juggle time",
+        "scene": "daily_life",
+        "sentence": "Parents must juggle time to care for their children and manage household chores.",
+        "translation_zh": "父母必须合理安排时间照顾孩子并处理家务。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "chromosome": {
+    "word_id": "19cf3772-5b0a-4246-b0b2-ad229759e1a5",
+    "headword": "chromosome",
+    "pos": "n.",
+    "freq_rank": 9960,
+    "cefr": "B2",
+    "ipa": "/ˈkrɒməˌsoʊm/",
+    "def_zh": "染色体",
+    "def_en": "Structures within cells that contain genetic material.",
+    "examples": [
+      {
+        "collocation": "chromosomes in human cells",
+        "scene": "science_tech",
+        "sentence": "Chromosomes in human cells determine inherited traits and characteristics.",
+        "translation_zh": "人类细胞中的染色体决定遗传特征和特性。"
+      },
+      {
+        "collocation": "number of chromosomes",
+        "scene": "education",
+        "sentence": "The number of chromosomes varies significantly between different species.",
+        "translation_zh": "不同物种之间的染色体数量差异显著。"
+      },
+      {
+        "collocation": "chromosomes during cell division",
+        "scene": "health",
+        "sentence": "During cell division, chromosomes ensure proper distribution of genetic information.",
+        "translation_zh": "在细胞分裂过程中，染色体确保遗传信息的正确分配。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "narrate": {
+    "word_id": "7012dc00-ce9e-4c80-8a6c-3075f59fc8c8",
+    "headword": "narrate",
+    "pos": "v.",
+    "freq_rank": 10439,
+    "cefr": "C1",
+    "ipa": "/ˈnær.eɪt/",
+    "def_zh": "叙述",
+    "def_en": "To tell a story or describe events in detail.",
+    "examples": [
+      {
+        "collocation": "narrate a story",
+        "scene": "culture",
+        "sentence": "Children often enjoy hearing adults narrate a story during bedtime.",
+        "translation_zh": "孩子们通常喜欢在睡觉前听大人讲故事。"
+      },
+      {
+        "collocation": "narrate the findings",
+        "scene": "academic",
+        "sentence": "Researchers were required to narrate the findings of their study clearly and concisely.",
+        "translation_zh": "研究人员需要清晰简明地叙述他们研究的发现。"
+      },
+      {
+        "collocation": "narrate the events",
+        "scene": "news",
+        "sentence": "The journalist will narrate the events of the day in the evening news broadcast.",
+        "translation_zh": "记者将在晚间新闻播报中叙述当天的事件。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "reassurance": {
+    "word_id": "26a35bd4-a9dc-4354-83b7-50560647fc90",
+    "headword": "reassurance",
+    "pos": "n.",
+    "freq_rank": 10591,
+    "cefr": "C1",
+    "ipa": "/ˌriː.əˈʃʊr.əns/",
+    "def_zh": "安慰；放心",
+    "def_en": "The act of providing comfort or confidence to someone.",
+    "examples": [
+      {
+        "collocation": "reassurance from experts",
+        "scene": "news",
+        "sentence": "Experts provided reassurance about the safety of the vaccine, alleviating public fears.",
+        "translation_zh": "专家们对疫苗的安全性提供了安慰，缓解了公众的恐惧。"
+      },
+      {
+        "collocation": "reassurance to patients",
+        "scene": "health",
+        "sentence": "Doctors often give reassurance to patients undergoing stressful procedures to ease their anxiety.",
+        "translation_zh": "医生们经常对正在经历压力程序的患者给予安慰，以减轻他们的焦虑。"
+      },
+      {
+        "collocation": "reassurance in challenging times",
+        "scene": "daily_life",
+        "sentence": "In challenging times, families seek reassurance from each other to maintain hope and stability.",
+        "translation_zh": "在困难时期，家庭成员相互寻求安慰，以维持希望和稳定。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "highland": {
+    "word_id": "0d23e921-c1ef-4f78-9e93-e9834717565c",
+    "headword": "highland",
+    "pos": "n.",
+    "freq_rank": 10211,
+    "cefr": "C1",
+    "ipa": "/ˈhaɪ.lænd/",
+    "def_zh": "高地",
+    "def_en": "A mountainous area or elevated region.",
+    "examples": [
+      {
+        "collocation": "highland regions",
+        "scene": "environment",
+        "sentence": "Highland regions often host diverse ecosystems and unique wildlife.",
+        "translation_zh": "高地地区通常拥有多样的生态系统和独特的野生动物。"
+      },
+      {
+        "collocation": "highland culture",
+        "scene": "culture",
+        "sentence": "Exploring highland culture reveals rich traditions and vibrant local customs.",
+        "translation_zh": "探索高地文化揭示了丰富的传统和生动的地方习俗。"
+      },
+      {
+        "collocation": "highland terrain",
+        "scene": "travel",
+        "sentence": "Navigating highland terrain can be challenging due to its rugged features.",
+        "translation_zh": "由于高地地形崎岖，导航时可能会很困难。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "intrusive": {
+    "word_id": "2af113e2-ad31-4c35-b6fb-841b450ad6ad",
+    "headword": "intrusive",
+    "pos": "adj.",
+    "freq_rank": 10964,
+    "cefr": "C1",
+    "ipa": "/ɪnˈtruː.sɪv/",
+    "def_zh": "侵入的；干扰的",
+    "def_en": "Causing disruption or annoyance through being unwelcome or uninvited.",
+    "examples": [
+      {
+        "collocation": "intrusive thoughts",
+        "scene": "daily_life",
+        "sentence": "People often struggle to manage intrusive thoughts during stressful situations.",
+        "translation_zh": "人们常常在压力大的情况下努力应对侵入性思维。"
+      },
+      {
+        "collocation": "intrusive advertising",
+        "scene": "culture",
+        "sentence": "Many consider intrusive advertising on social media to be a major annoyance.",
+        "translation_zh": "许多人认为社交媒体上的侵入性广告是一种主要的干扰。"
+      },
+      {
+        "collocation": "intrusive species",
+        "scene": "environment",
+        "sentence": "Scientists are concerned about the impact of intrusive species on native ecosystems.",
+        "translation_zh": "科学家们对侵入性物种对本土生态系统的影响表示担忧。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "rut": {
+    "word_id": "88088440-6d9f-4dc1-a458-06a18948c44c",
+    "headword": "rut",
+    "pos": "n./v.",
+    "freq_rank": 11310,
+    "cefr": "C1",
+    "ipa": "/rʌt/",
+    "def_zh": "车辙；习惯",
+    "def_en": "A fixed or established mode of conduct or behavior.",
+    "examples": [
+      {
+        "collocation": "get stuck in a rut",
+        "scene": "daily_life",
+        "sentence": "Many people feel they have gotten stuck in a rut in their careers.",
+        "translation_zh": "许多人觉得自己在职业生涯中陷入了车辙。"
+      },
+      {
+        "collocation": "fall into a rut",
+        "scene": "work",
+        "sentence": "Employees may fall into a rut if their tasks become monotonous and repetitive.",
+        "translation_zh": "如果员工的任务变得单调和重复，他们可能会陷入车辙。"
+      },
+      {
+        "collocation": "break out of a rut",
+        "scene": "education",
+        "sentence": "Students must learn to break out of a rut to achieve their full potential.",
+        "translation_zh": "学生必须学会打破车辙，以实现他们的全部潜能。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "connotation": {
+    "word_id": "75d0e3e1-9fda-4702-ab33-e052bf9aa374",
+    "headword": "connotation",
+    "pos": "n.",
+    "freq_rank": 11350,
+    "cefr": "C1",
+    "ipa": "/ˌkɒnəˈteɪʃən/",
+    "def_zh": "内涵",
+    "def_en": "An implied or associated meaning of a word or phrase.",
+    "examples": [
+      {
+        "collocation": "positive connotation",
+        "scene": "daily_life",
+        "sentence": "Describing someone as generous often carries a positive connotation.",
+        "translation_zh": "形容某人慷慨通常带有积极的内涵。"
+      },
+      {
+        "collocation": "negative connotation",
+        "scene": "academic",
+        "sentence": "Certain terms may have a negative connotation in specific contexts of study.",
+        "translation_zh": "某些术语在特定的研究语境中可能具有消极的内涵。"
+      },
+      {
+        "collocation": "cultural connotation",
+        "scene": "culture",
+        "sentence": "Different cultures may attribute various meanings and cultural connotation to symbols.",
+        "translation_zh": "不同文化可能会对符号赋予不同的意义和文化内涵。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "repressive": {
+    "word_id": "b852fd1f-7d9b-473d-b97e-348a427c67be",
+    "headword": "repressive",
+    "pos": "adj.",
+    "freq_rank": 11423,
+    "cefr": "C1",
+    "ipa": "/rɪˈprɛsɪv/",
+    "def_zh": "压制的",
+    "def_en": "Restricting or controlling freedom or expression.",
+    "examples": [
+      {
+        "collocation": "repressive regime",
+        "scene": "news",
+        "sentence": "Many countries are governed by repressive regimes that limit personal freedoms.",
+        "translation_zh": "许多国家都由压制性政权统治，限制个人自由。"
+      },
+      {
+        "collocation": "repressive policies",
+        "scene": "academic",
+        "sentence": "Scholars discuss the impact of repressive policies on societal development.",
+        "translation_zh": "学者们讨论压制性政策对社会发展的影响。"
+      },
+      {
+        "collocation": "repressive measures",
+        "scene": "culture",
+        "sentence": "Artists often face repressive measures that stifle creativity and expression.",
+        "translation_zh": "艺术家们通常面临压制性措施，扼杀创造力和表达。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "appal": {
+    "word_id": "fd607aaf-68b2-4e66-a25e-77c2fe1f5e3c",
+    "headword": "appal",
+    "pos": "v.",
+    "freq_rank": 11526,
+    "cefr": "C1",
+    "ipa": "/əˈpæl/",
+    "def_zh": "使震惊；使惊骇",
+    "def_en": "To shock or horrify someone greatly.",
+    "examples": [
+      {
+        "collocation": "appalled by the decision",
+        "scene": "news",
+        "sentence": "Many citizens were appalled by the government's decision to raise taxes.",
+        "translation_zh": "许多公民对政府提高税收的决定感到震惊。"
+      },
+      {
+        "collocation": "appalled at the violence",
+        "scene": "culture",
+        "sentence": "People are often appalled at the violence depicted in modern films.",
+        "translation_zh": "人们常常对现代电影中描绘的暴力感到震惊。"
+      },
+      {
+        "collocation": "appalling behavior",
+        "scene": "education",
+        "sentence": "Teachers were appalled by the appalling behavior of some students during the exam.",
+        "translation_zh": "老师们对一些学生在考试期间的令人震惊的行为感到震惊。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "recurrent": {
+    "word_id": "851c0d19-3671-43c9-91dc-0fd6579b0458",
+    "headword": "recurrent",
+    "pos": "adj.",
+    "freq_rank": 11386,
+    "cefr": "C1",
+    "ipa": "/rɪˈkɜːr.ənt/",
+    "def_zh": "反复的；再现的",
+    "def_en": "Happening repeatedly over a period of time.",
+    "examples": [
+      {
+        "collocation": "recurrent issues",
+        "scene": "work",
+        "sentence": "Many teams face recurrent issues that impede productivity and morale.",
+        "translation_zh": "许多团队面临反复出现的问题，这影响了生产力和士气。"
+      },
+      {
+        "collocation": "recurrent themes",
+        "scene": "culture",
+        "sentence": "Artists often explore recurrent themes in their work to convey deeper meanings.",
+        "translation_zh": "艺术家们常常在作品中探讨反复出现的主题，以传达更深的意义。"
+      },
+      {
+        "collocation": "recurrent events",
+        "scene": "science_tech",
+        "sentence": "Researchers study recurrent events to understand patterns in natural phenomena.",
+        "translation_zh": "研究人员研究反复出现的事件，以理解自然现象中的模式。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "foreseeable": {
+    "word_id": "4978defe-fa82-4187-90b9-de17ce08280c",
+    "headword": "foreseeable",
+    "pos": "adj.",
+    "freq_rank": 11604,
+    "cefr": "C1",
+    "ipa": "/fɔːrˈsiː.ə.bəl/",
+    "def_zh": "可预见的",
+    "def_en": "Able to be predicted or anticipated based on present circumstances.",
+    "examples": [
+      {
+        "collocation": "foreseeable future",
+        "scene": "news",
+        "sentence": "Many experts believe the economic recovery will take a foreseeable future.",
+        "translation_zh": "许多专家认为经济复苏将需要一个可预见的未来。"
+      },
+      {
+        "collocation": "foreseeable risks",
+        "scene": "work",
+        "sentence": "Identifying foreseeable risks is essential for effective project management.",
+        "translation_zh": "识别可预见的风险对于有效的项目管理至关重要。"
+      },
+      {
+        "collocation": "foreseeable consequences",
+        "scene": "education",
+        "sentence": "Students must understand the foreseeable consequences of their academic choices.",
+        "translation_zh": "学生必须理解他们学术选择的可预见后果。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "optimize": {
+    "word_id": "71449642-3272-4986-a414-2278a6eb8339",
+    "headword": "optimize",
+    "pos": "v.",
+    "freq_rank": 11612,
+    "cefr": "C1",
+    "ipa": "/ˈɑːp.tɪ.maɪz/",
+    "def_zh": "优化",
+    "def_en": "Make the best or most effective use of a resource.",
+    "examples": [
+      {
+        "collocation": "optimize performance",
+        "scene": "work",
+        "sentence": "Teams are constantly looking for ways to optimize performance in their projects.",
+        "translation_zh": "团队们不断寻找方法来优化项目的表现。"
+      },
+      {
+        "collocation": "optimize resources",
+        "scene": "science_tech",
+        "sentence": "Researchers aim to optimize resources for sustainable energy solutions.",
+        "translation_zh": "研究人员旨在优化资源，以实现可持续能源解决方案。"
+      },
+      {
+        "collocation": "optimize design",
+        "scene": "education",
+        "sentence": "Students learn how to optimize design for their engineering projects.",
+        "translation_zh": "学生们学习如何优化他们工程项目的设计。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "transcendent": {
+    "word_id": "ff7b59ea-6126-4eaa-ac61-5c447ea39f57",
+    "headword": "transcendent",
+    "pos": "adj./n.",
+    "freq_rank": 11634,
+    "cefr": "C1",
+    "ipa": "/trænˈsɛndənt/",
+    "def_zh": "超越的；卓越的",
+    "def_en": "Going beyond ordinary limits; surpassing; extraordinary.",
+    "examples": [
+      {
+        "collocation": "transcendent experience",
+        "scene": "culture",
+        "sentence": "Many describe their first concert as a transcendent experience that changed their lives.",
+        "translation_zh": "许多人形容他们的第一次音乐会是一次超越的经历，改变了他们的生活。"
+      },
+      {
+        "collocation": "transcendent value",
+        "scene": "education",
+        "sentence": "The transcendent value of education often influences social mobility and personal growth.",
+        "translation_zh": "教育的超越价值常常影响社会流动和个人成长。"
+      },
+      {
+        "collocation": "transcendent beauty",
+        "scene": "daily_life",
+        "sentence": "Witnessing a sunset can evoke feelings of transcendent beauty and peace.",
+        "translation_zh": "目睹日落常常会唤起超越的美和宁静的感觉。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "perceptual": {
+    "word_id": "67e75c7b-c6c0-4e5e-a398-cc465bedfc8d",
+    "headword": "perceptual",
+    "pos": "adj.",
+    "freq_rank": 11718,
+    "cefr": "C1",
+    "ipa": "/pərˈsɛp.tʃu.əl/",
+    "def_zh": "感知的",
+    "def_en": "Relating to the ability to perceive or interpret sensory information.",
+    "examples": [
+      {
+        "collocation": "perceptual differences",
+        "scene": "science_tech",
+        "sentence": "Researchers found significant perceptual differences in how subjects responded to stimuli.",
+        "translation_zh": "研究人员发现受试者对刺激的感知差异显著。"
+      },
+      {
+        "collocation": "perceptual skills",
+        "scene": "education",
+        "sentence": "Students develop perceptual skills through various interactive learning activities in class.",
+        "translation_zh": "学生通过课堂上的各种互动学习活动发展感知技能。"
+      },
+      {
+        "collocation": "perceptual experience",
+        "scene": "daily_life",
+        "sentence": "Every perceptual experience shapes our understanding of the world around us.",
+        "translation_zh": "每一次感知体验都塑造了我们对周围世界的理解。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "cyberspace": {
+    "word_id": "6b787dd3-6830-4f97-bf1b-5b3c01efbeb2",
+    "headword": "cyberspace",
+    "pos": null,
+    "freq_rank": 11760,
+    "cefr": "C1",
+    "ipa": "/ˈsaɪbərˌspeɪs/",
+    "def_zh": "网络空间",
+    "def_en": "A virtual environment where electronic communication occurs.",
+    "examples": [
+      {
+        "collocation": "cyberspace security",
+        "scene": "work",
+        "sentence": "Companies are investing heavily in improving cyberspace security to protect sensitive data.",
+        "translation_zh": "公司正在大力投资以提升网络空间安全，保护敏感数据。"
+      },
+      {
+        "collocation": "cyberspace activity",
+        "scene": "academic",
+        "sentence": "Research on cyberspace activity highlights its influence on social interactions.",
+        "translation_zh": "关于网络空间活动的研究强调了其对社交互动的影响。"
+      },
+      {
+        "collocation": "cyberspace law",
+        "scene": "news",
+        "sentence": "New legislation is needed to address issues related to cyberspace law.",
+        "translation_zh": "需要新的立法来解决与网络空间法律相关的问题。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "gallop": {
+    "word_id": "451f52f1-2243-4fbd-9e96-32989a199ae1",
+    "headword": "gallop",
+    "pos": "n./v.",
+    "freq_rank": 12092,
+    "cefr": "C1",
+    "ipa": "/ˈɡæl.əp/",
+    "def_zh": "飞奔；疾驰",
+    "def_en": "A fast gait of a horse; to move quickly.",
+    "examples": [
+      {
+        "collocation": "gallop away",
+        "scene": "daily_life",
+        "sentence": "The children watched the horses gallop away into the distance.",
+        "translation_zh": "孩子们看着马飞奔而去，消失在远方。"
+      },
+      {
+        "collocation": "gallop in",
+        "scene": "work",
+        "sentence": "She decided to gallop in and take charge of the meeting immediately.",
+        "translation_zh": "她决定冲进来，立即掌控会议。"
+      },
+      {
+        "collocation": "gallop through",
+        "scene": "education",
+        "sentence": "Students need to gallop through the syllabus to prepare for the exams.",
+        "translation_zh": "学生们需要迅速完成课程大纲，以备考。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "paradoxical": {
+    "word_id": "df31202e-4805-4ddf-aed9-5bc3e0e2c022",
+    "headword": "paradoxical",
+    "pos": "adj.",
+    "freq_rank": 12379,
+    "cefr": "C1",
+    "ipa": "/ˌpær.əˈdɒk.sɪ.kəl/",
+    "def_zh": "自相矛盾的",
+    "def_en": "Seemingly contradictory or absurd but possibly true.",
+    "examples": [
+      {
+        "collocation": "paradoxical outcomes",
+        "scene": "science_tech",
+        "sentence": "Researchers observed paradoxical outcomes in their latest experimental study.",
+        "translation_zh": "研究人员在最新的实验研究中观察到自相矛盾的结果。"
+      },
+      {
+        "collocation": "paradoxical nature",
+        "scene": "environment",
+        "sentence": "The paradoxical nature of climate change often confuses policymakers and citizens alike.",
+        "translation_zh": "气候变化的自相矛盾特性常常让政策制定者和公民感到困惑。"
+      },
+      {
+        "collocation": "paradoxical situation",
+        "scene": "daily_life",
+        "sentence": "Living in a paradoxical situation can lead to unexpected personal growth.",
+        "translation_zh": "处于自相矛盾的境地可能会导致意想不到的个人成长。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "quirk": {
+    "word_id": "bf09a7a9-a773-4611-8aa5-ca115c938c85",
+    "headword": "quirk",
+    "pos": "n.",
+    "freq_rank": 12149,
+    "cefr": "C1",
+    "ipa": "/kwɜrk/",
+    "def_zh": "怪癖",
+    "def_en": "A peculiar or unusual trait or behavior.",
+    "examples": [
+      {
+        "collocation": "quirks of personality",
+        "scene": "daily_life",
+        "sentence": "Many people embrace the quirks of personality that make them unique.",
+        "translation_zh": "许多人接受那些使他们独特的个性怪癖。"
+      },
+      {
+        "collocation": "quirk in the system",
+        "scene": "science_tech",
+        "sentence": "Researchers discovered a quirk in the system that affected the results.",
+        "translation_zh": "研究人员发现了系统中的一个怪癖，影响了结果。"
+      },
+      {
+        "collocation": "quirks in behavior",
+        "scene": "academic",
+        "sentence": "The study aimed to analyze quirks in behavior among different social groups.",
+        "translation_zh": "该研究旨在分析不同社会群体中的行为怪癖。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "jargon": {
+    "word_id": "c99dcbb9-9885-4630-804c-9cc3ff539f11",
+    "headword": "jargon",
+    "pos": "n.",
+    "freq_rank": 12425,
+    "cefr": "C1",
+    "ipa": "/ˈdʒɑːr.ɡən/",
+    "def_zh": "行话；术语",
+    "def_en": "Specialized language used by a particular group or profession.",
+    "examples": [
+      {
+        "collocation": "technical jargon",
+        "scene": "work",
+        "sentence": "Many employees found the technical jargon difficult to understand in meetings.",
+        "translation_zh": "许多员工发现会议中的技术行话难以理解。"
+      },
+      {
+        "collocation": "medical jargon",
+        "scene": "health",
+        "sentence": "Patients often feel confused by the medical jargon used by their doctors.",
+        "translation_zh": "患者常常对医生使用的医疗行话感到困惑。"
+      },
+      {
+        "collocation": "academic jargon",
+        "scene": "education",
+        "sentence": "Scholars should avoid using academic jargon when writing for a general audience.",
+        "translation_zh": "学者在为大众写作时应避免使用学术行话。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "insightful": {
+    "word_id": "7f634a5f-1e73-4c91-bea5-77c6cf85a9f4",
+    "headword": "insightful",
+    "pos": "adj.",
+    "freq_rank": 12671,
+    "cefr": "C1",
+    "ipa": "/ˈɪn.saɪt.fəl/",
+    "def_zh": "洞察力强的",
+    "def_en": "Having or showing a deep understanding of something.",
+    "examples": [
+      {
+        "collocation": "insightful analysis",
+        "scene": "academic",
+        "sentence": "Researchers conducted an insightful analysis of the current trends in education.",
+        "translation_zh": "研究人员对当前教育趋势进行了洞察力强的分析。"
+      },
+      {
+        "collocation": "insightful comments",
+        "scene": "news",
+        "sentence": "The expert provided insightful comments during the live broadcast of the event.",
+        "translation_zh": "专家在活动的现场直播中提供了洞察力强的评论。"
+      },
+      {
+        "collocation": "insightful perspective",
+        "scene": "culture",
+        "sentence": "Her insightful perspective on art challenges conventional interpretations of beauty.",
+        "translation_zh": "她对艺术的洞察力强的看法挑战了对美的传统解读。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "apprehensive": {
+    "word_id": "084a2c4f-c2ed-429b-8eef-5f12bf47ff5a",
+    "headword": "apprehensive",
+    "pos": "adj.",
+    "freq_rank": 13421,
+    "cefr": "C1",
+    "ipa": "/ˌæp.rɪˈhɛn.sɪv/",
+    "def_zh": "忧虑的；不安的",
+    "def_en": " anxious or fearful about possible future events.",
+    "examples": [
+      {
+        "collocation": "apprehensive about the results",
+        "scene": "academic",
+        "sentence": "Students often feel apprehensive about the results of their final exams.",
+        "translation_zh": "学生们常常对期末考试的结果感到忧虑。"
+      },
+      {
+        "collocation": "apprehensive of change",
+        "scene": "work",
+        "sentence": "Many employees are apprehensive of change within the organization.",
+        "translation_zh": "许多员工对组织内部的变化感到不安。"
+      },
+      {
+        "collocation": "apprehensive parents",
+        "scene": "daily_life",
+        "sentence": "Apprehensive parents waited for their children to return home safely.",
+        "translation_zh": "忧虑的父母等待孩子安全回家。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "paternal": {
+    "word_id": "443c1b3b-9a94-420a-af97-63e13d4c36a9",
+    "headword": "paternal",
+    "pos": "adj.",
+    "freq_rank": 12688,
+    "cefr": "C1",
+    "ipa": "/pəˈtɜrnəl/",
+    "def_zh": "父亲的；父系的",
+    "def_en": "Relating to a father or fatherhood, especially in a biological sense.",
+    "examples": [
+      {
+        "collocation": "paternal rights",
+        "scene": "culture",
+        "sentence": "Many cultures prioritize paternal rights in child custody cases.",
+        "translation_zh": "在儿童监护权案件中，许多文化优先考虑父亲的权利。"
+      },
+      {
+        "collocation": "paternal influence",
+        "scene": "education",
+        "sentence": "His paternal influence shaped my career choices significantly throughout my life.",
+        "translation_zh": "他对我的影响在我一生中显著影响了我的职业选择。"
+      },
+      {
+        "collocation": "paternal instincts",
+        "scene": "daily_life",
+        "sentence": "New fathers often experience strong paternal instincts towards their newborns.",
+        "translation_zh": "新父亲常常对他们的新生儿产生强烈的父亲本能。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "futility": {
+    "word_id": "610c7dda-f0b9-488a-96fa-8ea7e025d1e8",
+    "headword": "futility",
+    "pos": "n.",
+    "freq_rank": 13526,
+    "cefr": "C1",
+    "ipa": "/fjuːˈtɪl.ɪ.ti/",
+    "def_zh": "无效；徒劳",
+    "def_en": "The quality of having no useful result or purpose.",
+    "examples": [
+      {
+        "collocation": "futility of war",
+        "scene": "news",
+        "sentence": "Many analysts highlight the futility of war in achieving lasting peace.",
+        "translation_zh": "许多分析人士强调战争在实现持久和平方面的徒劳。"
+      },
+      {
+        "collocation": "futility of effort",
+        "scene": "work",
+        "sentence": "He realized the futility of effort when faced with such overwhelming odds.",
+        "translation_zh": "面对如此压倒性的困难时，他意识到努力的徒劳。"
+      },
+      {
+        "collocation": "futility of hope",
+        "scene": "daily_life",
+        "sentence": "She struggled with the futility of hope after repeated disappointments.",
+        "translation_zh": "经历了多次失望后，她对希望的徒劳感到苦恼。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "chap": {
+    "word_id": "62b15d78-533f-44e2-b72b-1fc826e2ceef",
+    "headword": "chap",
+    "pos": "n./v.",
+    "freq_rank": 12814,
+    "cefr": "C1",
+    "ipa": "/tʃæp/",
+    "def_zh": "小伙子；家伙",
+    "def_en": "A man or boy, often used informally in conversation.",
+    "examples": [
+      {
+        "collocation": "a good chap",
+        "scene": "daily_life",
+        "sentence": "Everyone agrees that he is a good chap who can be trusted.",
+        "translation_zh": "大家都同意他是一个值得信赖的小伙子。"
+      },
+      {
+        "collocation": "the young chap",
+        "scene": "culture",
+        "sentence": "A young chap in a suit caught everyone's attention at the gala.",
+        "translation_zh": "一位穿着西装的小伙子在晚会上吸引了所有人的注意。"
+      },
+      {
+        "collocation": "old chap",
+        "scene": "work",
+        "sentence": "My old chap from the office always brings laughter during meetings.",
+        "translation_zh": "我在办公室的老朋友总是在会议上带来欢笑。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "anemia": {
+    "word_id": "b393d3e6-6e4c-473b-a188-794703d1b755",
+    "headword": "anemia",
+    "pos": "n.",
+    "freq_rank": 14240,
+    "cefr": "C1",
+    "ipa": "/əˈniː.mi.ə/",
+    "def_zh": "贫血",
+    "def_en": "A condition marked by a deficiency of red blood cells.",
+    "examples": [
+      {
+        "collocation": "iron deficiency anemia",
+        "scene": "health",
+        "sentence": "Many people suffer from iron deficiency anemia, particularly women during pregnancy.",
+        "translation_zh": "许多人患有缺铁性贫血，尤其是怀孕期间的女性。"
+      },
+      {
+        "collocation": "anemia symptoms",
+        "scene": "daily_life",
+        "sentence": "Experiencing fatigue and weakness are common anemia symptoms that should not be ignored.",
+        "translation_zh": "感到疲劳和虚弱是常见的贫血症状，不应被忽视。"
+      },
+      {
+        "collocation": "sickle cell anemia",
+        "scene": "science_tech",
+        "sentence": "Sickle cell anemia is a genetic condition affecting the shape of red blood cells.",
+        "translation_zh": "镰状细胞贫血是一种影响红血球形状的遗传病。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "superstitious": {
+    "word_id": "4e9bf6ab-394a-4952-8a8f-a32cc36c0897",
+    "headword": "superstitious",
+    "pos": "adj.",
+    "freq_rank": 14286,
+    "cefr": "C1",
+    "ipa": "/ˌsuː.pəˈstɪʃ.əs/",
+    "def_zh": "迷信的",
+    "def_en": "Believing in supernatural influences or irrational beliefs.",
+    "examples": [
+      {
+        "collocation": "superstitious beliefs",
+        "scene": "culture",
+        "sentence": "Many people still hold superstitious beliefs that influence their daily decisions.",
+        "translation_zh": "许多人仍然抱有迷信的信仰，影响他们的日常决定。"
+      },
+      {
+        "collocation": "superstitious customs",
+        "scene": "daily_life",
+        "sentence": "Superstitious customs can vary significantly between different cultures around the world.",
+        "translation_zh": "迷信习俗在世界不同文化之间可能有显著差异。"
+      },
+      {
+        "collocation": "superstitious rituals",
+        "scene": "education",
+        "sentence": "Students often engage in superstitious rituals before important exams to boost their confidence.",
+        "translation_zh": "学生们常在重要考试前参与迷信仪式，以增强自信心。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "prudence": {
+    "word_id": "16ed7ce1-0ff7-4dc3-a162-293f716accac",
+    "headword": "prudence",
+    "pos": "n.",
+    "freq_rank": 14974,
+    "cefr": "C1",
+    "ipa": "/ˈpruː.dəns/",
+    "def_zh": "谨慎",
+    "def_en": "The quality of being cautious and exercising good judgment.",
+    "examples": [
+      {
+        "collocation": "financial prudence",
+        "scene": "work",
+        "sentence": "Investors often value financial prudence when making decisions about their portfolios.",
+        "translation_zh": "投资者在做出投资组合决策时，通常会重视财务谨慎。"
+      },
+      {
+        "collocation": "exercise prudence",
+        "scene": "education",
+        "sentence": "Students should exercise prudence when selecting courses for their academic future.",
+        "translation_zh": "学生在选择课程以规划学术未来时，应当谨慎行事。"
+      },
+      {
+        "collocation": "demonstrate prudence",
+        "scene": "news",
+        "sentence": "The government must demonstrate prudence in handling public funds during economic crises.",
+        "translation_zh": "政府在经济危机期间必须在处理公共资金时表现出谨慎。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "amplifier": {
+    "word_id": "c000494e-538f-4483-b070-01d7747026f9",
+    "headword": "amplifier",
+    "pos": "n.",
+    "freq_rank": 15529,
+    "cefr": "C1",
+    "ipa": "/ˈæmplɪfaɪər/",
+    "def_zh": "放大器",
+    "def_en": "A device that increases the amplitude of signals.",
+    "examples": [
+      {
+        "collocation": "audio amplifier",
+        "scene": "daily_life",
+        "sentence": "She bought a new audio amplifier to enhance her home sound system.",
+        "translation_zh": "她买了一个新的音频放大器来增强她的家庭音响系统。"
+      },
+      {
+        "collocation": "signal amplifier",
+        "scene": "science_tech",
+        "sentence": "Engineers are developing a signal amplifier to improve communication quality in remote areas.",
+        "translation_zh": "工程师们正在开发一种信号放大器，以提高偏远地区的通信质量。"
+      },
+      {
+        "collocation": "operational amplifier",
+        "scene": "academic",
+        "sentence": "The operational amplifier is crucial in modern electronic circuit design and analysis.",
+        "translation_zh": "运算放大器在现代电子电路设计与分析中至关重要。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "redundancy": {
+    "word_id": "41263d61-a91d-4244-a6b2-e981376438f1",
+    "headword": "redundancy",
+    "pos": "n.",
+    "freq_rank": 16763,
+    "cefr": "C1",
+    "ipa": "/rɪˈdʌn.dən.si/",
+    "def_zh": "冗余",
+    "def_en": "The state of being unnecessary or excessive in quantity or content.",
+    "examples": [
+      {
+        "collocation": "job redundancy",
+        "scene": "work",
+        "sentence": "Job redundancy often leads to significant stress and uncertainty among employees.",
+        "translation_zh": "工作冗余常常会给员工带来巨大的压力和不确定性。"
+      },
+      {
+        "collocation": "data redundancy",
+        "scene": "science_tech",
+        "sentence": "Data redundancy can improve reliability but may increase storage costs.",
+        "translation_zh": "数据冗余可以提高可靠性，但可能会增加存储成本。"
+      },
+      {
+        "collocation": "redundancy payment",
+        "scene": "daily_life",
+        "sentence": "Employees receiving redundancy payments should carefully manage their finances post-layoff.",
+        "translation_zh": "接受冗余赔偿的员工应该在裁员后谨慎管理自己的财务。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "stereotyped": {
+    "word_id": "ce0fd919-44dc-45ac-bf97-010a7b6425cd",
+    "headword": "stereotyped",
+    "pos": "adj.",
+    "freq_rank": 17812,
+    "cefr": "C1",
+    "ipa": "/ˈstɛr.i.oʊ.taɪpt/",
+    "def_zh": "刻板的；老套的",
+    "def_en": "Having a fixed, oversimplified, and generalized idea or image.",
+    "examples": [
+      {
+        "collocation": "stereotyped thinking",
+        "scene": "education",
+        "sentence": "Many students struggle with stereotyped thinking during complex problem solving.",
+        "translation_zh": "许多学生在复杂的问题解决中，难以摆脱刻板思维。"
+      },
+      {
+        "collocation": "stereotyped roles",
+        "scene": "culture",
+        "sentence": "Society often assigns stereotyped roles based on gender or ethnicity.",
+        "translation_zh": "社会常常基于性别或种族分配刻板角色。"
+      },
+      {
+        "collocation": "stereotyped image",
+        "scene": "daily_life",
+        "sentence": "People frequently encounter a stereotyped image of beauty in advertisements.",
+        "translation_zh": "人们在广告中经常会遇到对美的刻板印象。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "temperamental": {
+    "word_id": "a51b8872-38c3-4fc2-8428-8c7f9fee07d9",
+    "headword": "temperamental",
+    "pos": "adj.",
+    "freq_rank": 18395,
+    "cefr": "C1",
+    "ipa": "/ˌtɛmpəˈrɛmən(t)əl/",
+    "def_zh": "喜怒无常的",
+    "def_en": "Prone to sudden changes in mood or behavior.",
+    "examples": [
+      {
+        "collocation": "temperamental nature",
+        "scene": "work",
+        "sentence": "Her temperamental nature often led to conflicts with colleagues.",
+        "translation_zh": "她喜怒无常的性格常常导致与同事发生冲突。"
+      },
+      {
+        "collocation": "temperamental artist",
+        "scene": "culture",
+        "sentence": "Many consider him a temperamental artist who demands perfection in every piece.",
+        "translation_zh": "许多人认为他是一个对每件作品都要求完美的喜怒无常的艺术家。"
+      },
+      {
+        "collocation": "temperamental equipment",
+        "scene": "science_tech",
+        "sentence": "This lab's temperamental equipment frequently disrupts our experiments and research.",
+        "translation_zh": "这个实验室的喜怒无常的设备常常会打乱我们的实验和研究。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "transcendental": {
+    "word_id": "cf74cfce-02d9-42c0-9c9b-9053f1ffe297",
+    "headword": "transcendental",
+    "pos": "adj.",
+    "freq_rank": 16575,
+    "cefr": "C1",
+    "ipa": "/træn.sənˈdɛn.təl/",
+    "def_zh": "超越的；超验的",
+    "def_en": "Relating to a spiritual or non-physical realm.",
+    "examples": [
+      {
+        "collocation": "transcendental philosophy",
+        "scene": "academic",
+        "sentence": "Philosophers often debate the implications of transcendental philosophy in modern thought.",
+        "translation_zh": "哲学家们常常讨论超验哲学在现代思想中的影响。"
+      },
+      {
+        "collocation": "transcendental meditation",
+        "scene": "health",
+        "sentence": "Practicing transcendental meditation can lead to significant stress reduction and improved focus.",
+        "translation_zh": "练习超越冥想可以显著减少压力并提高专注力。"
+      },
+      {
+        "collocation": "transcendental experiences",
+        "scene": "culture",
+        "sentence": "Many artists cite their transcendental experiences as inspiration for their creative work.",
+        "translation_zh": "许多艺术家将他们的超越体验视为创作工作的灵感。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "acrobat": {
+    "word_id": "04bceb8e-3029-4dfa-88aa-d4705903e89a",
+    "headword": "acrobat",
+    "pos": "n.",
+    "freq_rank": 19213,
+    "cefr": "C1",
+    "ipa": "/ˈæk.rə.bæt/",
+    "def_zh": "杂技演员",
+    "def_en": "A performer skilled in physical feats and acrobatics.",
+    "examples": [
+      {
+        "collocation": "acrobats perform",
+        "scene": "culture",
+        "sentence": "Children often enjoy watching acrobats perform daring stunts at festivals.",
+        "translation_zh": "孩子们常常喜欢在节日上观看杂技演员表演大胆的特技。"
+      },
+      {
+        "collocation": "acrobatic skills",
+        "scene": "daily_life",
+        "sentence": "Many gymnasts train to enhance their acrobatic skills for competitions.",
+        "translation_zh": "许多体操运动员训练以提升他们在比赛中的杂技技能。"
+      },
+      {
+        "collocation": "acrobats in the circus",
+        "scene": "work",
+        "sentence": "The acrobats in the circus wowed the audience with their incredible acts.",
+        "translation_zh": "马戏团的杂技演员以他们惊人的表演吸引了观众。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "innovate": {
+    "word_id": "c8c8bd3e-9da8-4f8c-a95f-16438d001f45",
+    "headword": "innovate",
+    "pos": "v.",
+    "freq_rank": 18968,
+    "cefr": "C1",
+    "ipa": "/ˈɪn.ə.veɪt/",
+    "def_zh": "创新",
+    "def_en": "To introduce new ideas, methods, or products.",
+    "examples": [
+      {
+        "collocation": "innovate in technology",
+        "scene": "science_tech",
+        "sentence": "Companies must innovate in technology to remain competitive in the market.",
+        "translation_zh": "公司必须在科技领域创新，才能在市场上保持竞争力。"
+      },
+      {
+        "collocation": "innovate the process",
+        "scene": "work",
+        "sentence": "To improve efficiency, the team decided to innovate the process of project management.",
+        "translation_zh": "为了提高效率，团队决定创新项目管理的流程。"
+      },
+      {
+        "collocation": "innovate educational practices",
+        "scene": "education",
+        "sentence": "Teachers are encouraged to innovate educational practices to better engage students in learning.",
+        "translation_zh": "教师被鼓励创新教育实践，以更好地吸引学生的学习兴趣。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "virtuosity": {
+    "word_id": "816949ae-0b75-4d8b-af5b-778097ff3a80",
+    "headword": "virtuosity",
+    "pos": "n.",
+    "freq_rank": 20404,
+    "cefr": "C1",
+    "ipa": "/ˌvɜr.tʃuˈɔs.ɪ.ti/",
+    "def_zh": "高超的技艺",
+    "def_en": "Great skill in a particular art or field, especially music.",
+    "examples": [
+      {
+        "collocation": "musical virtuosity",
+        "scene": "culture",
+        "sentence": "Many pianists are celebrated for their extraordinary musical virtuosity.",
+        "translation_zh": "许多钢琴家因其非凡的音乐技艺而受到赞誉。"
+      },
+      {
+        "collocation": "artistic virtuosity",
+        "scene": "education",
+        "sentence": "Students often study the works of artists renowned for their artistic virtuosity.",
+        "translation_zh": "学生们常常研究那些因其艺术技艺而闻名的艺术家的作品。"
+      },
+      {
+        "collocation": "technical virtuosity",
+        "scene": "work",
+        "sentence": "The engineer's technical virtuosity impressed everyone during the project presentation.",
+        "translation_zh": "工程师在项目演示中的技术高超技艺给所有人留下了深刻的印象。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "overpass": {
+    "word_id": "1813b1cd-3d3e-4fa1-908a-552e329fa948",
+    "headword": "overpass",
+    "pos": "n./v.",
+    "freq_rank": 20685,
+    "cefr": "C1",
+    "ipa": "/ˈoʊ.vɚ.pæs/",
+    "def_zh": "天桥；立交桥",
+    "def_en": "A structure allowing passage over an obstacle such as a road.",
+    "examples": [
+      {
+        "collocation": "road overpass",
+        "scene": "daily_life",
+        "sentence": "Drivers often encounter a road overpass while navigating the city.",
+        "translation_zh": "司机在城市行驶时，常常会遇到天桥。"
+      },
+      {
+        "collocation": "overpass bridge",
+        "scene": "travel",
+        "sentence": "Travelers appreciated the scenic views from the overpass bridge overlooking the valley.",
+        "translation_zh": "游客们欣赏到俯瞰山谷的天桥上美丽的景色。"
+      },
+      {
+        "collocation": "pedestrian overpass",
+        "scene": "environment",
+        "sentence": "A pedestrian overpass was constructed to improve safety for crossing busy streets.",
+        "translation_zh": "为提高繁忙街道的过马路安全，建造了一座人行天桥。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "neurology": {
+    "word_id": "6e89d51b-f910-46d3-9f95-61c9a4d0e97e",
+    "headword": "neurology",
+    "pos": "n.",
+    "freq_rank": 21144,
+    "cefr": "C1",
+    "ipa": "/njuˈrɑː.lə.dʒi/",
+    "def_zh": "神经学",
+    "def_en": "The branch of medicine dealing with nervous system disorders.",
+    "examples": [
+      {
+        "collocation": "neurology research",
+        "scene": "academic",
+        "sentence": "Research in neurology has significantly advanced our understanding of brain disorders.",
+        "translation_zh": "神经学研究极大地推动了我们对脑部疾病的理解。"
+      },
+      {
+        "collocation": "neurology clinic",
+        "scene": "health",
+        "sentence": "Patients often visit a neurology clinic for specialized care and diagnosis.",
+        "translation_zh": "患者通常会到神经学诊所寻求专业的护理和诊断。"
+      },
+      {
+        "collocation": "neurology textbook",
+        "scene": "education",
+        "sentence": "A comprehensive neurology textbook provides essential information for medical students.",
+        "translation_zh": "一本全面的神经学教材为医学生提供了必要的信息。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "sufficiency": {
+    "word_id": "7d895f3f-d2e7-4df0-b67a-01aaec509ca5",
+    "headword": "sufficiency",
+    "pos": "n.",
+    "freq_rank": 24932,
+    "cefr": "C1",
+    "ipa": "/səˈfɪʃ.ən.si/",
+    "def_zh": "充足；足够",
+    "def_en": "The quality of being adequate or enough for a particular purpose.",
+    "examples": [
+      {
+        "collocation": "sufficiency of evidence",
+        "scene": "academic",
+        "sentence": "Researchers must prove the sufficiency of evidence in their studies to support claims.",
+        "translation_zh": "研究人员必须在研究中证明证据的充足性，以支持论点。"
+      },
+      {
+        "collocation": "food sufficiency",
+        "scene": "health",
+        "sentence": "Ensuring food sufficiency is crucial for maintaining public health and preventing malnutrition.",
+        "translation_zh": "确保食物的充足性对维护公共健康和预防营养不良至关重要。"
+      },
+      {
+        "collocation": "sufficiency in funding",
+        "scene": "work",
+        "sentence": "Startups often struggle to achieve sufficiency in funding for their growth and operations.",
+        "translation_zh": "初创公司往往难以获得充足的资金以支持其增长和运营。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "genealogist": {
+    "word_id": "7f3cea2c-f1ed-414f-b701-33be1f8d298e",
+    "headword": "genealogist",
+    "pos": "n.",
+    "freq_rank": 32076,
+    "cefr": "C1",
+    "ipa": "/ˌdʒiːniˈælədʒɪst/",
+    "def_zh": "家谱学者",
+    "def_en": "A person who studies family ancestries and histories.",
+    "examples": [
+      {
+        "collocation": "professional genealogist",
+        "scene": "work",
+        "sentence": "Considering her expertise, many view her as a professional genealogist.",
+        "translation_zh": "考虑到她的专业知识，许多人视她为一名专业的家谱学者。"
+      },
+      {
+        "collocation": "expert genealogists",
+        "scene": "academic",
+        "sentence": "Many expert genealogists have contributed to historical research in significant ways.",
+        "translation_zh": "许多专家家谱学者在历史研究中做出了重要贡献。"
+      },
+      {
+        "collocation": "genealogist records",
+        "scene": "daily_life",
+        "sentence": "People often consult genealogist records to trace their family lineage.",
+        "translation_zh": "人们常常查阅家谱学者的记录以追溯家族谱系。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "goodby": {
+    "word_id": "e6e6e3ef-bcb0-4193-9113-77b0d0e34849",
+    "headword": "goodby",
+    "pos": "int.",
+    "freq_rank": 37659,
+    "cefr": "C1",
+    "ipa": "/ɡʊdˈbaɪ/",
+    "def_zh": "再见",
+    "def_en": "A phrase used to express farewell.",
+    "examples": [
+      {
+        "collocation": "saying goodby",
+        "scene": "daily_life",
+        "sentence": "Friends often find it hard when saying goodby to each other after a long visit.",
+        "translation_zh": "朋友们在长时间探访后，常常发现彼此告别很困难。"
+      },
+      {
+        "collocation": "goodby for now",
+        "scene": "work",
+        "sentence": "We will be parting ways, but it's just a goodby for now, not forever.",
+        "translation_zh": "我们将各奔东西，但这只是暂时的告别，并不是永别。"
+      },
+      {
+        "collocation": "goodby to someone",
+        "scene": "travel",
+        "sentence": "As travelers board the train, they wave to loved ones, saying goodby to someone special.",
+        "translation_zh": "当旅行者们登上火车时，他们向亲人挥手，向特别的人告别。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "retrospection": {
+    "word_id": "0dc3f11b-9e70-487e-ab57-3020d586e131",
+    "headword": "retrospection",
+    "pos": "n.",
+    "freq_rank": 42499,
+    "cefr": "C1",
+    "ipa": "/ˌrɛtrəˈspɛkʃən/",
+    "def_zh": "回顾；追溯",
+    "def_en": "The process of looking back at past events or experiences.",
+    "examples": [
+      {
+        "collocation": "historical retrospection",
+        "scene": "academic",
+        "sentence": "Historians often engage in retrospection to understand past civilizations better.",
+        "translation_zh": "历史学家常常通过回顾来更好地理解过去的文明。"
+      },
+      {
+        "collocation": "retrospection on past decisions",
+        "scene": "work",
+        "sentence": "During the meeting, the team conducted a retrospection on past decisions to improve future strategies.",
+        "translation_zh": "在会议上，团队对过去的决策进行了回顾，以改善未来的战略。"
+      },
+      {
+        "collocation": "personal retrospection",
+        "scene": "daily_life",
+        "sentence": "Finding time for personal retrospection can significantly enhance one's emotional well-being.",
+        "translation_zh": "抽出时间进行个人回顾可以显著提升一个人的情感健康。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "thriftless": {
+    "word_id": "162feee8-3e9b-47a5-961f-49cbd06a8b94",
+    "headword": "thriftless",
+    "pos": "adj.",
+    "freq_rank": null,
+    "cefr": "C1",
+    "ipa": "/ˈθrɪft.ləs/",
+    "def_zh": "挥霍的；不节俭的",
+    "def_en": "Lacking thrift or careful management of resources.",
+    "examples": [
+      {
+        "collocation": "thriftless spending",
+        "scene": "daily_life",
+        "sentence": "It is often said that thriftless spending leads to financial ruin.",
+        "translation_zh": "人们常说，挥霍的消费会导致财务破产。"
+      },
+      {
+        "collocation": "thriftless habits",
+        "scene": "work",
+        "sentence": "Employees with thriftless habits can negatively impact the company's budget.",
+        "translation_zh": "养成挥霍习惯的员工可能会对公司的预算产生负面影响。"
+      },
+      {
+        "collocation": "thriftless behavior",
+        "scene": "culture",
+        "sentence": "Thriftless behavior is often criticized in literature as a moral failing.",
+        "translation_zh": "在文学作品中，挥霍的行为常常被批评为道德缺失。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "passerby": {
+    "word_id": "6031dc77-eca5-4b47-90dc-5a2463b135dc",
+    "headword": "passerby",
+    "pos": "n.",
+    "freq_rank": null,
+    "cefr": "C1",
+    "ipa": "/ˈpæs.ər.baɪ/",
+    "def_zh": "路过的人；过路人",
+    "def_en": "A person who happens to be near a place.",
+    "examples": [
+      {
+        "collocation": "passerby on the street",
+        "scene": "daily_life",
+        "sentence": "A passerby noticed the unusual art installation and stopped to admire it.",
+        "translation_zh": "一位路过的人注意到了这件不寻常的艺术装置，停下来欣赏它。"
+      },
+      {
+        "collocation": "passerby interaction",
+        "scene": "culture",
+        "sentence": "Many passerby interactions can lead to unexpected friendships in urban environments.",
+        "translation_zh": "许多路过的人的互动可以在城市环境中导致意想不到的友谊。"
+      },
+      {
+        "collocation": "passerby safety",
+        "scene": "news",
+        "sentence": "Authorities are concerned about passerby safety around the construction site.",
+        "translation_zh": "当局对施工现场附近路过者的安全表示担忧。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  }
+}

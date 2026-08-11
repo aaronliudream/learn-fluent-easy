@@ -707,5 +707,113 @@
         "translation_zh": "当地运动员为全国滑水比赛刻苦训练。"
       }
     ]
+  },
+  "lout": {
+    "_why": "生僻名词→形容词形:模型三轮都写 loutish behavior,名词 lout 一次没出现(g1+g7 双杀)。手写成真的用名词的句子。",
+    "bank": "gre",
+    "ipa": "/laʊt/",
+    "def_zh": "粗鲁的人；莽汉",
+    "def_en": "A rude, clumsy man who behaves badly in public.",
+    "examples": [
+      {
+        "collocation": "a drunken lout",
+        "scene": "news",
+        "sentence": "A drunken lout shouted at the staff outside the bar.",
+        "translation_zh": "一个醉醺醺的莽汉在酒吧外朝店员大喊大叫。"
+      },
+      {
+        "collocation": "acting like a lout",
+        "scene": "daily_life",
+        "sentence": "He apologized for acting like a lout at the party.",
+        "translation_zh": "他为自己在聚会上举止粗鲁而道歉。"
+      },
+      {
+        "collocation": "young louts",
+        "scene": "culture",
+        "sentence": "Police removed several young louts from the football ground.",
+        "translation_zh": "警察把几个撒野的年轻人带离了足球场。"
+      }
+    ]
+  },
+  "caldron": {
+    "_why": "两层问题:① 生僻名词;② **caldron 是 cauldron 的变体拼法**,模型三轮都写更常见的 cauldron,于是句中始终没有目标词(g1)。手写时严格用词条这个拼法。",
+    "bank": "gre",
+    "ipa": "/ˈkɔːldrən/",
+    "def_zh": "大锅；坩埚",
+    "def_en": "A very large pot used for boiling liquid over a fire.",
+    "examples": [
+      {
+        "collocation": "iron caldron",
+        "scene": "culture",
+        "sentence": "An iron caldron hung above the fire in the old kitchen.",
+        "translation_zh": "一口铁制大锅悬在老厨房的炉火上方。"
+      },
+      {
+        "collocation": "caldron of soup",
+        "scene": "daily_life",
+        "sentence": "Workers stirred a caldron of soup for the whole village.",
+        "translation_zh": "工人们搅动着一大锅汤，供全村人食用。"
+      },
+      {
+        "collocation": "bubbling caldron",
+        "scene": "work",
+        "sentence": "Steam rose from the bubbling caldron in the factory yard.",
+        "translation_zh": "蒸汽从工厂院子里那口沸腾的大锅上升腾而起。"
+      }
+    ]
+  },
+  "dolt": {
+    "_why": "生僻名词→形容词形:模型写 doltish behavior,名词本体没出现(g1+g7)。",
+    "bank": "gre",
+    "ipa": "/doʊlt/",
+    "def_zh": "笨蛋；傻瓜",
+    "def_en": "A slow-witted person who fails to understand simple things.",
+    "examples": [
+      {
+        "collocation": "such a dolt",
+        "scene": "daily_life",
+        "sentence": "I felt like such a dolt after forgetting her name.",
+        "translation_zh": "忘了她的名字之后，我觉得自己真是个笨蛋。"
+      },
+      {
+        "collocation": "call him a dolt",
+        "scene": "education",
+        "sentence": "Do not call him a dolt just for one mistake.",
+        "translation_zh": "别因为一个错误就说他是笨蛋。"
+      },
+      {
+        "collocation": "a clumsy dolt",
+        "scene": "culture",
+        "sentence": "The play features a clumsy dolt who ruins every plan.",
+        "translation_zh": "这出戏里有个笨手笨脚的傻瓜，把每个计划都搞砸了。"
+      }
+    ]
+  },
+  "boor": {
+    "_why": "生僻名词→形容词形:模型写 boorish behavior,名词 boor 没出现(g1+g7)。",
+    "bank": "gre",
+    "ipa": "/bʊr/",
+    "def_zh": "粗野的人；无礼之徒",
+    "def_en": "A person with rough manners who ignores how others feel.",
+    "examples": [
+      {
+        "collocation": "such a boor",
+        "scene": "daily_life",
+        "sentence": "Everyone considered him such a boor at the dinner table.",
+        "translation_zh": "餐桌上大家都觉得他这个人非常粗野。"
+      },
+      {
+        "collocation": "an ill-mannered boor",
+        "scene": "work",
+        "sentence": "An ill-mannered boor interrupted the speaker three separate times.",
+        "translation_zh": "一个没有教养的粗人三次打断了发言人。"
+      },
+      {
+        "collocation": "behave like a boor",
+        "scene": "culture",
+        "sentence": "Do not behave like a boor in front of guests.",
+        "translation_zh": "在客人面前别表现得那么粗野。"
+      }
+    ]
   }
 }

@@ -232,6 +232,25 @@ function trapPrimer(word, notes) {
      volt       -> "230 volts" / "volts of power"  NOT "high voltage"
      morality   -> "public morality" / "question the morality"  NOT "moral values"`);
   }
+  /* 生僻名词 → 它的形容词形。gre 那轮 18 个失败里占 6 个,是最集中的一类:
+     hunk→hunky / pith→pithy / lout→loutish / imp→impish / dolt→doltish / boor→boorish。
+     模型觉得形容词形更地道,于是整句都用形容词,名词本体一次都没出现(g1 + g7 双杀)。 */
+  if (/g1 目标词缺席/.test(all)) {
+    out.push(`⚠️ "${word.headword}" itself does not appear in your sentences at all.
+   You are very likely using its ADJECTIVE form instead. That does not count:
+     hunk -> write "a hunk of bread", NOT "a hunky guy"
+     pith -> write "the pith of the argument", NOT "pithy remarks"
+     boor -> write "he is a boor", NOT "boorish behavior"
+   The sentence must contain "${word.headword}" as a word (plural/tense inflection is fine).`);
+  }
+  /* 句长差一点。提示词里本来就写了区间,但模型系统性地写短一两个词;
+     光重试不给具体数字,它下一次还是照写。 */
+  const short = /g2 长度 (\d+) 词,超出 (\d+)-(\d+)/.exec(all);
+  if (short && Number(short[1]) < Number(short[2])) {
+    out.push(`⚠️ Your sentence was ${short[1]} words; the minimum is ${short[2]}.
+   Add one concrete detail (who / where / when / why), do NOT pad with empty filler
+   like "very", "really", "in order to". Count the words before you answer.`);
+  }
   return out.length ? `\n\n${out.join('\n\n')}` : '';
 }
 

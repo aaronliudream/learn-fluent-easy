@@ -81,8 +81,33 @@ const ECDICT_TAG = {
   zhongkao: 'zk', gaokao: 'gk', kaoyan: 'ky',
   cet4: 'cet4', cet6: 'cet6', toefl: 'toefl', ielts: 'ielts', gre: 'gre',
 };
-const NO_ECDICT_SOURCE = ['ket_pet', 'gmat', 'nce'];
+/**
+ * **派生库** —— ECDICT 里没有对应标签,但可以用**已有标签 + 词频**推出来。
+ *
+ * ⚠️ 这不是"官方大纲词表",是我们自己定的口径。所以:
+ *   ① 每条都必须写清楚判据(下面的 note),将来才知道这批词凭什么是这批词;
+ *   ② 库的**显示名**要跟口径相符,不能挂着"KET/PET词汇"卖一批不是大纲词的词。
+ *      三个库现在都是 is_active=false(没对用户开),开灯前由 Aaron 定名。
+ *
+ * ⚠️ 明确不做的事:**不搬 Cambridge 的 KET/PET 官方词表**(版权在对方)。
+ */
+const DERIVED = {
+  ket_pet: {
+    tags: ['zk', 'gk', 'cet4'], maxFreq: 4000,
+    note: 'KET≈A2 / PET≈B1。用中考∪高考∪四级里**词频前 4000**当口径 —— ' +
+          '这三份都是我们已有的基础词表,A2/B1 的实际覆盖面与之高度重叠。',
+  },
+  gmat: {
+    tags: ['gre'], maxFreq: 15000,
+    note: 'GMAT 没有官方词表(verbal 考阅读与逻辑),市面上的都是各家自编。' +
+          'GMAT 的词汇语域与 GRE 同源但**不用那么生僻**,故取 gre 标签里 ' +
+          'freq_rank ≤ 15000 的那一半(GRE 全体的中位数是 13934)。',
+  },
+};
+/* nce(新概念)既没标签也推不出来 —— 它是教材,得按教材本身的词表来。 */
+const NO_ECDICT_SOURCE = ['nce'];
 const TAG = arg('tag', ECDICT_TAG[BANK] || BANK);
+const DERIVE = DERIVED[BANK] || null;
 if (NO_ECDICT_SOURCE.includes(BANK)) {
   process.stderr.write(`x ${BANK}:ECDICT 没有对应标签,这条流水线出不了词,需要另找词表来源。
 `);
@@ -207,10 +232,13 @@ async function main() {
   let toeflTotal = 0;
 
   let excludedByTag = 0;
+  let derivedOut = 0;
 
   for (const r of rows) {
     const tag = (r[col.tag] || '').split(/\s+/).filter(Boolean);
-    if (!tag.includes(TAG)) continue;
+    /* 正常库按自己的 ECDICT 标签取;派生库按"命中任一来源标签"取,
+       词频上限在下面拿到 freqRank 之后再卡。 */
+    if (DERIVE ? !tag.some(t => DERIVE.tags.includes(t)) : !tag.includes(TAG)) continue;
     toeflTotal++;
     if (EXCLUDE_TAGS.size && tag.some(t => EXCLUDE_TAGS.has(t))) { excludedByTag++; continue; }
 
@@ -227,6 +255,10 @@ async function main() {
     const frq = Number(r[col.frq]) || 0;
     const bnc = Number(r[col.bnc]) || 0;
     const freqRank = frq > 0 ? frq : (bnc > 0 ? bnc : null);
+    /* 派生库的词频闸:超出上限的直接不收。
+       ⚠️ freq_rank 缺失的**也不收** —— 判不了就别猜着收进来,
+          这是派生库唯一的取词依据。 */
+    if (DERIVE && (freqRank === null || freqRank > DERIVE.maxFreq)) { derivedOut++; continue; }
     if (freqRank === null) skipped.no_freq.push(hw);
 
     if (seen.has(hw)) {
@@ -275,7 +307,15 @@ async function main() {
   }, null, 2), 'utf8');
 
   process.stdout.write(
-    `· ${BANK}(ECDICT tag=${TAG})打标 ${toeflTotal} 条 → 保留 ${kept.length}\n` +
+    (DERIVE
+      ? `· ${BANK}（**派生库**：来源标签 ${DERIVE.tags.join('/')}，词频 ≤ ${DERIVE.maxFreq}）
+` +
+        `  命中来源 ${toeflTotal} 条 → 词频超限/缺失剔除 ${derivedOut} → 保留 ${kept.length}
+` +
+        `  口径：${DERIVE.note}
+`
+      : `· ${BANK}（ECDICT tag=${TAG}）打标 ${toeflTotal} 条 → 保留 ${kept.length}
+`) +
     (EXCLUDE_TAGS.size ? `  按 --exclude-tags=${[...EXCLUDE_TAGS].join(',')} 剔除 ${excludedByTag}\n` : '') +
     `  跳过: 短语${skipped.phrase.length} 专名${skipped.proper_noun.length} 非纯字母${skipped.non_alpha.length} 重复${skipped.duplicate.length}\n` +
     `  freq_rank 缺失 ${skipped.no_freq.length} · pos 缺失 ${noPos.length} · 屈折表 ${Object.keys(inflections).length} 词\n`

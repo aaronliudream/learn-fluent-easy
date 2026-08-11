@@ -416,12 +416,30 @@ async function main() {
     process.stdout.write(`· 清掉 ${stale.length} 条陈旧失败记录(这些词其实已有内容):${stale.slice(0, 12).join(' ')}${stale.length > 12 ? ' …' : ''}\n`);
   }
 
-  // g4 全局语料:所有历史已接受句子
+  /* g4 全局语料:所有历史已接受句子。
+   *
+   * ⚠️ 原来只从**当前库**的 results 载 —— 那和 g4 的设计直接矛盾:
+   *    gates.mjs 里写着"g4 的语料是全局累积的,跨批次、跨词库都算"。
+   *    后果是**每开一个新库,去重就从零开始**:
+   *      cet6 那轮开跑时打印「全局去重语料:0 句」,928 个词的 2784 条句子
+   *      完全没跟 cet4 的 11367 条比对过;gaokao 这轮同样是 0。
+   *    也就是说跨库重复句子一条都拦不住,而这正是 g4 存在的理由。
+   * → 改成载入**所有** <bank>-content.json。
+   *
+   * ⚠️ 这只影响**新生成**(语料变大 → 判得更严 → 可能多几次重试)。
+   *    存量内容不会被重新判定,所以不存在"把已验收的判坏"。
+   *    (回归脚本 regress-gates.mjs 是特意传空语料的,不受这里影响。) */
   const corpus = [];
-  for (const rec of Object.values(results)) {
-    for (const ex of rec.examples || []) corpus.push(ngrams(ex.sentence));
+  let corpusWords = 0;
+  for (const f of readdirSync(GEN)) {
+    if (!f.endsWith('-content.json') || f.includes('trial')) continue;
+    let j; try { j = JSON.parse(readFileSync(path.join(GEN, f), 'utf8')); } catch { continue; }
+    for (const rec of Object.values(j)) {
+      corpusWords++;
+      for (const ex of rec.examples || []) corpus.push(ngrams(ex.sentence));
+    }
   }
-  process.stdout.write(`· 全局去重语料:${corpus.length} 句(来自 ${Object.keys(results).length} 个已生成词)\n`);
+  process.stdout.write(`· 全局去重语料:${corpus.length} 句(来自 ${corpusWords} 个已生成词,**跨所有词库**)\n`);
 
   if (EMIT_ONLY) {
     await emit(results);

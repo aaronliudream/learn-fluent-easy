@@ -356,5 +356,113 @@
         "translation_zh": "公交车开走时，孩子们挥手道别。"
       }
     ]
+  },
+  "oh": {
+    "_why": "感叹词:三句都自然地以 Oh 开头,撞 g9(三句首词必须互异)。手写时只让一句以它开头,另两句把它放进引述里。",
+    "bank": "gaokao",
+    "ipa": "/oʊ/",
+    "def_zh": "哦；啊",
+    "def_en": "A sound people make to show surprise or sudden understanding.",
+    "examples": [
+      {
+        "collocation": "oh no",
+        "scene": "daily_life",
+        "sentence": "Oh no, I left my keys inside the car.",
+        "translation_zh": "哦不，我把钥匙落在车里了。"
+      },
+      {
+        "collocation": "oh dear",
+        "scene": "work",
+        "sentence": "She said oh dear when the printer broke again.",
+        "translation_zh": "打印机又坏了，她说了声哎呀。"
+      },
+      {
+        "collocation": "oh well",
+        "scene": "travel",
+        "sentence": "Everyone laughed and said oh well about the delay.",
+        "translation_zh": "对于这次延误，大家笑着说算了吧。"
+      }
+    ]
+  },
+  "hey": {
+    "_why": "同 oh:感叹词三句都以 Hey 开头撞 g9。手写成一句直呼、两句引述。",
+    "bank": "gaokao",
+    "ipa": "/heɪ/",
+    "def_zh": "嘿；喂",
+    "def_en": "A casual call used to greet someone or get attention.",
+    "examples": [
+      {
+        "collocation": "hey there",
+        "scene": "daily_life",
+        "sentence": "Hey there, could you help me with this box?",
+        "translation_zh": "嘿，你能帮我搬一下这个箱子吗？"
+      },
+      {
+        "collocation": "hey guys",
+        "scene": "work",
+        "sentence": "He said hey guys before starting the team meeting.",
+        "translation_zh": "他在团队会议开始前打了声招呼。"
+      },
+      {
+        "collocation": "shouted hey",
+        "scene": "education",
+        "sentence": "Students shouted hey to their teacher across the playground.",
+        "translation_zh": "学生们隔着操场朝老师喊了一声。"
+      }
+    ]
+  },
+  "vanilla": {
+    "_why": "模型三轮都写成 \"...made from vanilla beans/pods\"(g12 循环定义)。香草的常识定义几乎必然想提 vanilla beans,改成不提它本身的写法。",
+    "bank": "gaokao",
+    "ipa": "/vəˈnɪlə/",
+    "def_zh": "香草；香草味",
+    "def_en": "A sweet flavoring made from the pods of a tropical plant.",
+    "examples": [
+      {
+        "collocation": "vanilla ice cream",
+        "scene": "daily_life",
+        "sentence": "The children shared a bowl of vanilla ice cream.",
+        "translation_zh": "孩子们分吃了一碗香草冰淇淋。"
+      },
+      {
+        "collocation": "vanilla extract",
+        "scene": "culture",
+        "sentence": "Add two spoons of vanilla extract to the batter.",
+        "translation_zh": "在面糊里加入两勺香草精。"
+      },
+      {
+        "collocation": "vanilla flavor",
+        "scene": "work",
+        "sentence": "Many customers prefer vanilla flavor over chocolate in summer.",
+        "translation_zh": "夏天很多顾客更喜欢香草味而不是巧克力味。"
+      }
+    ]
+  },
+  "receipt": {
+    "_why": "模型三轮都写成 \"...that goods have been received\" 一类(g12 循环定义)。改成完全不提同根词的写法。",
+    "bank": "gaokao",
+    "ipa": "/rɪˈsiːt/",
+    "def_zh": "收据；收条",
+    "def_en": "A printed paper proving that you paid for something.",
+    "examples": [
+      {
+        "collocation": "keep the receipt",
+        "scene": "daily_life",
+        "sentence": "Please keep the receipt in case you return it.",
+        "translation_zh": "请保留好收据，以防你要退货。"
+      },
+      {
+        "collocation": "ask for a receipt",
+        "scene": "work",
+        "sentence": "She asked for a receipt after paying the bill.",
+        "translation_zh": "她付完账之后要了一张收据。"
+      },
+      {
+        "collocation": "every receipt",
+        "scene": "travel",
+        "sentence": "Travelers should keep every receipt for the expense report.",
+        "translation_zh": "出差的人应当保留每一张收据以便报销。"
+      }
+    ]
   }
 }

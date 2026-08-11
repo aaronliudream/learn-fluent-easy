@@ -67,6 +67,28 @@ const SRC = arg('src', '');
  * 默认空(严格按原指令取前 200),要做 TOEFL 特色首批就传这个参数。 */
 const EXCLUDE_TAGS = new Set(arg('exclude-tags', '').split(',').map(s => s.trim()).filter(Boolean));
 
+/**
+ * `vocab_banks.code` -> ECDICT 的 `tag` 值。**两边命名不一样,别拿 bank 当 tag 用。**
+ *
+ * 2026-08-10 踩到:`--bank=zhongkao` 跑完报「打标 0 条 保留 0」,还照样写了一份
+ * 0 词的送审样本文件,退出码 0 —— 看上去像"这个库就是没词",实际是 ECDICT 里
+ * 中考的标签叫 `zk`。同理 高考=gk、考研=ky。
+ *
+ * ⚠️ `ket_pet` / `gmat` / `nce` **ECDICT 里根本没有对应标签**,得另找词表来源,
+ *    不能靠这条流水线。做到那三个库时必须先解决词源,别指望这里能出词。
+ */
+const ECDICT_TAG = {
+  zhongkao: 'zk', gaokao: 'gk', kaoyan: 'ky',
+  cet4: 'cet4', cet6: 'cet6', toefl: 'toefl', ielts: 'ielts', gre: 'gre',
+};
+const NO_ECDICT_SOURCE = ['ket_pet', 'gmat', 'nce'];
+const TAG = arg('tag', ECDICT_TAG[BANK] || BANK);
+if (NO_ECDICT_SOURCE.includes(BANK)) {
+  process.stderr.write(`x ${BANK}:ECDICT 没有对应标签,这条流水线出不了词,需要另找词表来源。
+`);
+  process.exit(2);
+}
+
 /* ── 确定性随机(送审样本可复现,换人跑抽的是同 50 词) ── */
 function mulberry32(seed) {
   return function () {
@@ -188,7 +210,7 @@ async function main() {
 
   for (const r of rows) {
     const tag = (r[col.tag] || '').split(/\s+/).filter(Boolean);
-    if (!tag.includes(BANK)) continue;
+    if (!tag.includes(TAG)) continue;
     toeflTotal++;
     if (EXCLUDE_TAGS.size && tag.some(t => EXCLUDE_TAGS.has(t))) { excludedByTag++; continue; }
 
@@ -253,11 +275,20 @@ async function main() {
   }, null, 2), 'utf8');
 
   process.stdout.write(
-    `· ${BANK} 打标 ${toeflTotal} 条 → 保留 ${kept.length}\n` +
+    `· ${BANK}(ECDICT tag=${TAG})打标 ${toeflTotal} 条 → 保留 ${kept.length}\n` +
     (EXCLUDE_TAGS.size ? `  按 --exclude-tags=${[...EXCLUDE_TAGS].join(',')} 剔除 ${excludedByTag}\n` : '') +
     `  跳过: 短语${skipped.phrase.length} 专名${skipped.proper_noun.length} 非纯字母${skipped.non_alpha.length} 重复${skipped.duplicate.length}\n` +
     `  freq_rank 缺失 ${skipped.no_freq.length} · pos 缺失 ${noPos.length} · 屈折表 ${Object.keys(inflections).length} 词\n`
   );
+
+  /* 0 词必须**报错退出**,不许静默出一份空送审件。
+     踩过:--bank=zhongkao 因为标签名不对拿到 0 词,却照常写文件、退出码 0。
+     "跑通了" 和 "跑出东西了" 是两回事。 */
+  if (!kept.length) {
+    process.stderr.write(`x ${BANK}(tag=${TAG})一个词都没取到 —— 多半是标签名不对(ECDICT 用 zk/gk/ky 这类短名)。
+`);
+    process.exit(2);
+  }
 
   writeSample(kept, skipped, noPos, toeflTotal, excludedByTag);
   if (EMIT_SQL) writeSql(kept.slice(0, LIMIT));
@@ -423,14 +454,45 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_word_banks
          WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) AS bank_links;
 
--- ── count-validate:两行都必须是 t,否则 ROLLBACK ──
--- 预期(首次跑,两表都是空的): words = ${batch.length},${BANK}_links = ${batch.length}
-SELECT 'words = ${batch.length}' AS expect,
-       (SELECT count(*) FROM vocab_words) = ${batch.length} AS ok
-UNION ALL
-SELECT '${BANK}_links = ${batch.length}',
-       (SELECT count(*) FROM vocab_word_banks
-         WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}')) = ${batch.length};
+-- ── 断言:**只判本批这 ${batch.length} 个词**,不判全表 ──────
+-- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words) = 本批词数。
+--    那只在**第一个词库**(全表就是这一批)时成立。从 cet6 起每次都报 f,
+--    Aaron 每次都得自己心算"哦这是没算共用词" —— **断言变成噪音就等于没有断言**。
+--    真正要判的是:本批的词是不是都进表了、是不是都挂上了本库。
+-- ⚠️ 用 DO + RAISE:不过直接抛异常整笔回滚,不靠人眼看 t/f。
+DO $gate$
+DECLARE
+  n_batch    int := ${batch.length};
+  n_missing  int;
+  n_unlinked int;
+  n_links    int;
+BEGIN
+  SELECT count(*) INTO n_missing
+    FROM (VALUES ${batch.map(w => `('${esc(w.headword)}')`).join(', ')}) AS v(headword)
+    LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE w.id IS NULL;
+
+  SELECT count(*) INTO n_unlinked
+    FROM (VALUES ${batch.map(w => `('${esc(w.headword)}')`).join(', ')}) AS v(headword)
+    JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE NOT EXISTS (
+     SELECT 1 FROM vocab_word_banks wb
+      WHERE wb.word_id = w.id
+        AND wb.bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}'));
+
+  SELECT count(*) INTO n_links
+    FROM vocab_word_banks
+   WHERE bank_id = (SELECT id FROM vocab_banks WHERE code = '${BANK}');
+
+  RAISE NOTICE '本批 % 词:未进表 % · 未挂库 % · ${BANK} 链接总数 %',
+    n_batch, n_missing, n_unlinked, n_links;
+
+  IF n_missing > 0 OR n_unlinked > 0 OR n_links <> n_batch THEN
+    RAISE EXCEPTION '断言不过:未进表 % · 未挂库 % · 链接 %/% —— 已回滚,库里没有任何改动',
+      n_missing, n_unlinked, n_links, n_batch;
+  END IF;
+END
+$gate$;
 
 COMMIT;
 `;

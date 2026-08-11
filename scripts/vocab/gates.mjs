@@ -86,6 +86,14 @@ export function inflectionsOf(headword, table = {}) {
  *     "self-defense" 会被粘成 "selfdefense",于是 defense 这种词
  *     三次生成全被误判成"目标词缺席"(2026-08-03 试跑实际踩到)。
  *     连字符复合词里出现目标词是**合法用法**,必须算命中。 */
+/* ⚠️ 所有格要**两种都剥**:`student's` 剥 `'s`,`grandparents'`(复数所有格)只剩一个撇号。
+ * 2026-08-10 实测:headword `grandparents` + 搭配 "grandparents' house" 被 g13 判成
+ * 「与目标词同根,是同义反复」—— 但那**就是目标词本身的所有格**,不是另一个同根词。
+ * 对照组 "student's book" + `student` 是过的,差别只在那个 s。
+ * 这已经是"文本包含判据必须先形态归一"这条踩的第四次了(屈折 / 虚位主语 / 物主代词 / 复数所有格)。
+ * ⚠️ 方向:剥得更干净 → token 更容易匹配上 headword。
+ *    对 g1/g7(匹配上=放行)是放宽,对 g12(匹配上=判循环定义)是收紧 ——
+ *    收紧那一侧是对的:释义里写 "the word's ..." 本来就是循环定义。改完照第七条跑了全量回归。 */
 function targetTokens(sentence) {
   // 弯引号归一:实测 layman’s terms 里的 ’ 不是 ',尾部 's 剥不掉,
   // token 停在 "layman’s" 上,g13 认不出它就是 headword 本身。
@@ -94,7 +102,7 @@ function targetTokens(sentence) {
   const split = s.split(/[\s\-–—/]+/)
     .map(t => t.replace(/[^a-z']/g, ''))
     .filter(Boolean)
-    .map(t => t.replace(/'s$/, ''));
+    .map(t => t.replace(/'s$|'$/, ''));
   /* ② 只按空白切、**保留连字符**:让 "well-being" 整体命中 headword "well-being"。
    * ⚠️ 只有 ① 会漏掉带连字符的 headword —— 句子里的 well-being 被切成 well+being,
    *    永远匹配不上 "well-being" 本身。全池 18 个连字符词曾因此 100% 生成失败。
@@ -102,7 +110,7 @@ function targetTokens(sentence) {
   const whole = s.split(/\s+/)
     .map(t => t.replace(/^[^a-z]+|[^a-z]+$/g, ''))   // 只剥两端标点,中间连字符留着
     .filter(Boolean)
-    .map(t => t.replace(/'s$/, ''));
+    .map(t => t.replace(/'s$|'$/, ''));
   return [...split, ...whole];
 }
 
@@ -116,8 +124,23 @@ function targetTokens(sentence) {
  *    属于误杀。屈折表和 -s/-ed/-ing 那套后缀规则覆盖不到 -ary/-al/-ous 这类派生后缀。
  * 限定 headword 至少 5 个字母,避免短词过度放行(band → bandit 这种)。
  */
-function matchesForm(token, headword, forms) {
+/**
+ * token 是不是 headword 的屈折形/派生形。
+ *
+ * ⚠️ `strict` 存在的理由 —— **同一个判据在不同闸门里方向是反的**:
+ *   · g1「句中有没有目标词」:判成"是" → **放行**。宽松只会多放行,代价可接受,
+ *     所以用"前缀 + ≤4 个字母尾巴"兜底(inflectionsOf 的注释写的"宁松勿严"就是这个意思)。
+ *   · g12「def_en 有没有循环定义」:判成"是" → **拒绝**。宽松在这里直接变成**误伤**。
+ *
+ * 2026-08-10 实测的误伤:`miner` 的释义 "A person who works in extracting minerals
+ * from the earth." 被判循环 —— `minerals` 只是**恰好以 miner 开头**,和 miner 是两个词。
+ * 这个词因此三轮重试全废、始终没有内容。
+ *
+ * → strict 只认屈折表和标准后缀(inflectionsOf 给的那套),不认前缀兜底。
+ */
+function matchesForm(token, headword, forms, strict = false) {
   if (forms.has(token)) return true;
+  if (strict) return false;
   if (headword.length >= 5 && token.length > headword.length && token.startsWith(headword)) {
     const tail = token.slice(headword.length);
     if (tail.length <= 4 && /^[a-z]+$/.test(tail)) return true;
@@ -258,7 +281,7 @@ export function g13_collocationNotSameRoot(examples, headword, table) {
      * 拆开后 "nutrient" 命中 headword 被跳过、"rich" 无关,才是对的口径。
      * 12 条初扫里 9 条是这个误报。 */
     const toks = String(c).toLowerCase().replace(/[’‘]/g, "'")
-      .split(/[\s\-–—/]+/).map(t => t.replace(/[^a-z']/g, '').replace(/'s$/, '')).filter(Boolean);
+      .split(/[\s\-–—/]+/).map(t => t.replace(/[^a-z']/g, '').replace(/'s$|'$/, '')).filter(Boolean);
     for (const t of new Set(toks)) {
       if (t.length < 4) continue;
       if (matchesForm(t, hw, forms)) continue;      // 这就是 g7 要求的目标词本身
@@ -347,8 +370,9 @@ export function g12_defEnNotCircular(defEn, headword, table) {
   const hw = String(headword).toLowerCase();
   const forms = inflectionsOf(hw, table);
   const toks = String(defEn || '').toLowerCase().split(/[\s\-–—/]+/)
-    .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$/, ''));
-  const hit = toks.find(t => matchesForm(t, hw, forms));
+    .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$|'$/, ''));
+  /* strict:这道门判"是"就是拒绝,不能用 g1 那套宽松前缀兜底(见 matchesForm 注释)。 */
+  const hit = toks.find(t => matchesForm(t, hw, forms, true));
   return hit ? `def_en 循环定义:释义里出现了目标词本身("${hit}")` : null;
 }
 

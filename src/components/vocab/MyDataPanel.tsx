@@ -246,16 +246,30 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
   );
 }
 
+/**
+ * 统计格 —— **标签与数值同一行**(Aaron 2026-08-10:"累计学习 302词"合成一行,别占两行)。
+ *
+ * 实测(375px 视口,组件级量 `getBoundingClientRect`,
+ * 脚本 `scripts/vocab/audit/measure-mydata.mjs`,用 build 出来的真 CSS):
+ *   两行版 单格 162×69px → 四宫格整体 150px
+ *   一行版 单格 162×41px → 四宫格整体  93px    **单格矮 28px,整块省 57px**
+ *
+ * ⚠️ 仍是 2 列不是 4 列。4 列在 375px 下每格只剩 **75px**,
+ *    实测 `scrollWidth > clientWidth` —— **内容真的溢出**,不是看着挤。所以没改列数。
+ *
+ * ⚠️ 数值字号从 24px 降到 18px:一行里 24px 会把行高顶到 30px+,
+ *    紧凑的收益就被吃掉一半。18px 仍然明显重于 12px 的标签,主次没丢。
+ */
 function Cell({ label, value, unit, color }: { label: string; value: string; unit: string; color: string }) {
   return (
-    <div className="rounded-xl bg-slate-50/70 px-3.5 py-3">
-      <div className="text-[12px] text-slate-500">{label}</div>
-      <div className="mt-0.5 flex items-baseline gap-1">
-        <span className="text-[24px] font-bold leading-none" style={{ fontFamily: FONT_STAT, color, fontVariantNumeric: "tabular-nums" }}>
+    <div className="flex items-baseline justify-between gap-2 rounded-xl bg-slate-50/70 px-3.5 py-2.5">
+      <span className="shrink-0 text-[12px] text-slate-500">{label}</span>
+      <span className="flex min-w-0 items-baseline gap-0.5">
+        <span className="truncate text-[18px] font-bold leading-none" style={{ fontFamily: FONT_STAT, color, fontVariantNumeric: "tabular-nums" }}>
           {value}
         </span>
-        <span className="text-[12px] text-slate-400">{unit}</span>
-      </div>
+        <span className="shrink-0 text-[11px] text-slate-400">{unit}</span>
+      </span>
     </div>
   );
 }

@@ -15,6 +15,7 @@ import { REVIEW_INTERVALS, type VocabMode } from "@/lib/vocab/vocabMastery";
 import { supabase } from "@/integrations/supabase/client";
 import { currentUserId, listMistakes, type VocabWord } from "@/lib/vocab/data";
 import { getStats } from "@/lib/vocab/stats";
+import { byLearnOrder } from "@/lib/vocab/functionWords";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const db = supabase as any;
@@ -99,7 +100,11 @@ export function orderTasks(
         到期复习 40 个时目标 20 就不该再塞新词,否则"目标 20"变成"每天 60"。 */
   const used = reviewTasks.length + mistakeTasks.length;
   const room = Math.max(0, goal - used);
-  const newTasks: TodayTask[] = [...fresh].sort(byFreq).slice(0, room)
+  /* ⚠️ 新词用 byLearnOrder 不是 byFreq:**虚词排到末尾**(Aaron 2026-08-10 定)。
+     纯按词频的话,中考/高考库的头几张卡就是 the / of / a / to / it —— 词频确实最高,
+     但没人需要一张 "the" 的学习卡。复习和错题**不降权**:那是用户已经学过的词,
+     那里的顺序讲的是复习优先级,跟"该不该学这个词"是两回事。 */
+  const newTasks: TodayTask[] = [...fresh].sort(byLearnOrder).slice(0, room)
     .map(w => ({ word: w, kind: "new" as const, mode: "zh_choice" as const, showCardFirst: true }));
 
   return { tasks: [...reviewTasks, ...mistakeTasks, ...newTasks], deferred };
@@ -130,10 +135,15 @@ export async function buildTodayPlan(bankId: string): Promise<TodayPlan> {
     /* 未登录:只取高频前 ANON_TRIAL 个,不碰全库。
        ⚠️ 不能返回空计划 —— 空计划会被入口按钮读成"今天已完成",
           一个什么都没做的新用户被告知"已完成"是明确的错误信息。 */
-    const { data } = await db.from("vocab_words").select(WORD_COLS)
+    /* 同样要按库过滤 + 虚词降权:游客看到的试用词就是这个库的门面,
+       第一张卡是 "the" 的话,他对这个库的第一印象就是"没什么可学的"。
+       多取一些再降权截断 —— 虚词全挤在最高频段,直接取 ANON_TRIAL 个会全是虚词。 */
+    const { data } = await db.from("vocab_words")
+      .select(`${WORD_COLS},vocab_word_banks!inner(bank_id)`)
+      .eq("vocab_word_banks.bank_id", bankId)
       .not("def_zh", "is", null).order("freq_rank", { ascending: true, nullsFirst: false })
-      .limit(ANON_TRIAL);
-    const trial = ((data || []) as VocabWord[]).map(w => ({
+      .limit(Math.max(200, ANON_TRIAL));
+    const trial = ((data || []) as VocabWord[]).sort(byLearnOrder).slice(0, ANON_TRIAL).map(w => ({
       word: w, kind: "new" as const, mode: "zh_choice" as const, showCardFirst: true,
     }));
     return {
@@ -170,11 +180,23 @@ export async function buildTodayPlan(bankId: string): Promise<TodayPlan> {
 
   /* 补新词:只取高频前若干。
      ⚠️ 取 goal + 已排量 + 余量 是为了**扣掉已学过的**之后仍够用 ——
-        直接取 goal 个会在用户学过前几十个高频词后越取越不够。 */
+        直接取 goal 个会在用户学过前几十个高频词后越取越不够。
+     ⚠️ 下限 200:虚词要沉到末尾(见 byLearnOrder),而虚词**恰恰全挤在最高频那一段**
+        (实测中考前 100 名里 42 个是虚词)。窗口太窄的话,降权之后就没剩几个实词可派了。
+        200 个里最少也有 145 个实词,够任何日目标用。 */
   const freshNeed = Math.max(0, goal) + needIds.length + 60;
-  const { data: freshRaw } = await db.from("vocab_words").select(WORD_COLS)
+  const { data: freshRaw } = await db.from("vocab_words")
+    /* ⚠️ **必须按词库过滤**。这一句原来是全表查 —— `bankId` 收了却从没用过,
+     *    于是无论用户选哪个库,今日学习都从**全表**最高频的词里取。
+     *    2026-08-10 灌进中考词库(含 the/be/and/of/a)之后当场暴露:
+     *    实测托福用户的今日学习也变成 the / be / and / of / a 开头。
+     *    (查证方式:同一条 REST 查询,加 bank 内连接 → defense/attorney/participant…;
+     *     不加 → the/be/and/of/a,和全局第一页一模一样。)
+     *    内连接过滤只需**一次**请求,不破坏这里"别拉全库"的性能前提。 */
+    .select(`${WORD_COLS},vocab_word_banks!inner(bank_id)`)
+    .eq("vocab_word_banks.bank_id", bankId)
     .not("def_zh", "is", null).order("freq_rank", { ascending: true, nullsFirst: false })
-    .limit(Math.min(500, freshNeed));
+    .limit(Math.min(500, Math.max(200, freshNeed)));
   /* 已作答过的词不能当新词。只查这一小批的掌握度,不拉全表。 */
   const freshIds = ((freshRaw || []) as VocabWord[]).map(w => w.id);
   const touched = new Set<string>();

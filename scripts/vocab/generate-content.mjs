@@ -95,6 +95,7 @@ const EMIT_ONLY = process.argv.includes('--emit-sql');
 const NO_EMIT = process.argv.includes('--no-emit');
 const DELTA = process.argv.includes('--delta');
 const REVIEW = process.argv.includes('--review');
+const SHARDS = Math.max(1, Number(arg('shards', '1')) || 1);
 
 /* ── env ── */
 const ENV = loadEnv(REPO);
@@ -639,7 +640,31 @@ async function emit(results) {
 const esc = s => String(s ?? '').replace(/'/g, "''");
 const q = s => (s === null || s === undefined || s === '') ? 'NULL' : `'${esc(s)}'`;
 
+/**
+ * 出 SQL。`--shards=N` 会切成 N 份**各自独立**的文件。
+ *
+ * ⚠️ 切分只能按**词**切,一个词的 3 条例句必须跟它待在同一片 ——
+ *    否则那片的批内断言("本批每个词正好 3 条例句")当场就不成立。
+ * ⚠️ 每片自带 BEGIN/COMMIT 和**只判自己这一片**的断言,所以:
+ *    · 顺序无所谓,单独跑任意一片都成立;
+ *    · 某一片失败只回滚那一片,不影响已跑过的。
+ * ⚠️ 分片一律走这个出口,**别另写一个切分脚本** ——
+ *    2026-08-09 手写的那份增量 SQL 用了 0-based sort_order,违反约束当场被拒。
+ *    只要出口是同一个,这类事故就不可能再发生。
+ */
 function writeSql(list) {
+  if (SHARDS > 1) {
+    const per = Math.ceil(list.length / SHARDS);
+    for (let i = 0; i < SHARDS; i++) {
+      const slice = list.slice(i * per, (i + 1) * per);
+      if (slice.length) writeOneSql(slice, { part: i + 1, of: SHARDS });
+    }
+    return;
+  }
+  writeOneSql(list, null);
+}
+
+function writeOneSql(list, shard) {
   const bank = BANK || 'all';
   const wordRows = list.map(w => `  (${q(w.headword.toLowerCase())}, ${q(w.ipa)}, ${q(w.def_zh)}, ${q(w.def_en)})`).join(',\n');
   const exRows = list.flatMap(w =>
@@ -648,7 +673,10 @@ function writeSql(list) {
   ).join(',\n');
   const exCount = list.reduce((n, w) => n + w.examples.length, 0);
 
-  const sql = `-- 词汇内容${DELTA ? '(增量:只补库里还缺释义的词)' : ' batch1'}:${list.length} 词 · ${exCount} 例句
+  const sql = `-- 词汇内容${DELTA ? '(增量:只补库里还缺释义的词)' : ' batch1'}${shard ? `【第 ${shard.part}/${shard.of} 片】` : ''}:${list.length} 词 · ${exCount} 例句
+${shard ? `-- ⚠️ 本片自带事务与断言,**只判本片这 ${list.length} 个词**;各片互相独立,顺序无所谓,
+--    单独跑任意一片都成立,某片失败只回滚那一片。
+--` : ''}
 -- 生成: node scripts/vocab/generate-content.mjs --bank=${bank} --emit-sql${DELTA ? ' --delta' : ''}
 -- 模型: ${list[0]._model || 'gpt-4o-mini'} · 九道机器闸门全过
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
@@ -748,7 +776,8 @@ COMMIT;
      内容仍然是跨库合成的(vocab_words 全局唯一),但文件名必须唯一 ——
      一律叫 vocab_content_delta.sql 的话,上一轮跑过的那份会被下一轮覆盖,
      谁跑过谁没跑过就分不清了。 */
-  const name = DELTA ? `vocab_content_delta_${bank}.sql` : `vocab_${bank}_content_batch1.sql`;
+  const suffix = shard ? `_part${shard.part}of${shard.of}` : '';
+  const name = DELTA ? `vocab_content_delta_${bank}${suffix}.sql` : `vocab_${bank}_content_batch1${suffix}.sql`;
   const out = path.join(REPO, 'SQLAA', name);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, sql, 'utf8');

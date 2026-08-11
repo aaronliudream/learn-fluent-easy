@@ -18,7 +18,7 @@
  *
  * 用法:node scripts/vocab/apply-manual-content.mjs [--dry-run]
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { runAllGates, ngrams } from './gates.mjs';
@@ -65,9 +65,16 @@ for (const [headword, m] of Object.entries(manual)) {
   const inflectPath = path.join(DATA, `${bank}-inflections.json`);
   const inflect = existsSync(inflectPath) ? JSON.parse(readFileSync(inflectPath, 'utf8')) : {};
 
-  /* g4 全局去重:拿本库已有内容当语料,和正式生成走同一条路 */
+  /* g4 全局去重:和正式生成走同一条路 —— **跨所有词库**,不只本库。
+     ⚠️ 第五条,修一处扫全库:generate-content.mjs 那边"只载本库语料"的洞已经修了,
+        这里原本抄的是同一份写法,一样漏。手写的句子更应该跟全部存量比对 ——
+        人写的时候脑子里只有这一个词,撞车概率不比模型低。 */
   const corpus = [];
-  for (const rec of Object.values(results)) for (const ex of rec.examples || []) corpus.push(ngrams(ex.sentence));
+  for (const f of readdirSync(GEN)) {
+    if (!f.endsWith('-content.json') || f.includes('trial')) continue;
+    let j; try { j = JSON.parse(readFileSync(path.join(GEN, f), 'utf8')); } catch { continue; }
+    for (const rec of Object.values(j)) for (const ex of rec.examples || []) corpus.push(ngrams(ex.sentence));
+  }
 
   const cefr = cefrFor(row.freq_rank);
   const payload = { ipa: m.ipa, def_zh: m.def_zh, def_en: m.def_en, examples: m.examples };

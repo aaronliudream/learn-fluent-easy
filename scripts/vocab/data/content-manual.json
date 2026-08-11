@@ -464,5 +464,248 @@
         "translation_zh": "出差的人应当保留每一张收据以便报销。"
       }
     ]
+  },
+  "housing": {
+    "_why": "模型的例句与存量语料 4-gram 重合 86%(g4)——住房话题的套话句已经被别的词占了。手写三句换角度。",
+    "bank": "ielts",
+    "ipa": "/ˈhaʊzɪŋ/",
+    "def_zh": "住房；住宅",
+    "def_en": "Places for people to live, considered as a public resource.",
+    "examples": [
+      {
+        "collocation": "housing market",
+        "scene": "news",
+        "sentence": "The housing market slowed down in the second quarter.",
+        "translation_zh": "第二季度住房市场放缓了。"
+      },
+      {
+        "collocation": "affordable housing",
+        "scene": "work",
+        "sentence": "Many families cannot find affordable housing near their workplace.",
+        "translation_zh": "许多家庭在工作地点附近找不到负担得起的住房。"
+      },
+      {
+        "collocation": "housing shortage",
+        "scene": "academic",
+        "sentence": "Officials blamed the housing shortage on slow construction permits.",
+        "translation_zh": "官员把住房短缺归咎于建筑许可审批过慢。"
+      }
+    ]
+  },
+  "burger": {
+    "_why": "模型把搭配写成 hamburger joint —— hamburger 是独立的词不是 burger 的搭配(g7),例句里也没出现 burger 本身。",
+    "bank": "ielts",
+    "ipa": "/ˈbɜːrɡər/",
+    "def_zh": "汉堡；肉饼",
+    "def_en": "A round patty of minced meat served inside a soft bun.",
+    "examples": [
+      {
+        "collocation": "burger and fries",
+        "scene": "daily_life",
+        "sentence": "He ordered a burger and fries for his lunch.",
+        "translation_zh": "他午餐点了一个汉堡和一份薯条。"
+      },
+      {
+        "collocation": "veggie burger",
+        "scene": "culture",
+        "sentence": "The cafe now offers a veggie burger every Friday.",
+        "translation_zh": "这家咖啡馆现在每周五都供应素食汉堡。"
+      },
+      {
+        "collocation": "grilled a burger",
+        "scene": "travel",
+        "sentence": "She grilled a burger slowly over the open fire.",
+        "translation_zh": "她在明火上慢慢烤了一个汉堡。"
+      }
+    ]
+  },
+  "birds": {
+    "_why": "词条本身是复数形。模型把搭配写成 songbirds —— 那是独立的词不是 birds 的搭配(g7)。",
+    "bank": "ielts",
+    "ipa": "/bɜːrdz/",
+    "def_zh": "鸟；鸟类",
+    "def_en": "Feathered animals that usually fly and lay eggs.",
+    "examples": [
+      {
+        "collocation": "migrating birds",
+        "scene": "environment",
+        "sentence": "Migrating birds arrive at the northern lake every autumn.",
+        "translation_zh": "候鸟每年秋天都会飞到北边那个湖。"
+      },
+      {
+        "collocation": "wild birds",
+        "scene": "science_tech",
+        "sentence": "Researchers tracked wild birds using tiny new satellite tags.",
+        "translation_zh": "研究人员用微型的新式卫星标签追踪野生鸟类。"
+      },
+      {
+        "collocation": "birds of prey",
+        "scene": "education",
+        "sentence": "Children learned that birds of prey hunt small animals.",
+        "translation_zh": "孩子们了解到猛禽以小动物为食。"
+      }
+    ]
+  },
+  "dilapidated": {
+    "_why": "模型的例句与存量语料重合 63%(g4)。手写三句换场景。",
+    "bank": "ielts",
+    "ipa": "/dɪˈlæpɪdeɪtɪd/",
+    "def_zh": "破旧的；年久失修的",
+    "def_en": "In very bad condition because of age or long neglect.",
+    "examples": [
+      {
+        "collocation": "dilapidated building",
+        "scene": "news",
+        "sentence": "The dilapidated building on the corner will be demolished next month.",
+        "translation_zh": "街角那座破旧的楼房下个月就要拆除了。"
+      },
+      {
+        "collocation": "dilapidated house",
+        "scene": "daily_life",
+        "sentence": "Volunteers repaired the dilapidated house for an elderly couple.",
+        "translation_zh": "志愿者们为一对老夫妇修缮了那栋年久失修的房子。"
+      },
+      {
+        "collocation": "dilapidated condition",
+        "scene": "work",
+        "sentence": "Inspectors reported that the bridge remained in dilapidated condition.",
+        "translation_zh": "检查人员报告说这座桥仍然处于失修状态。"
+      }
+    ]
+  },
+  "duly": {
+    "_why": "副词:模型三句里有两句都以 the 开头,撞 g9(三句首词必须互异)。",
+    "bank": "ielts",
+    "ipa": "/ˈduːli/",
+    "def_zh": "适当地；按时地",
+    "def_en": "In the proper way or at the expected time.",
+    "examples": [
+      {
+        "collocation": "duly noted",
+        "scene": "work",
+        "sentence": "Your complaint has been duly noted by the committee.",
+        "translation_zh": "委员会已经正式记录了你的投诉。"
+      },
+      {
+        "collocation": "duly signed",
+        "scene": "news",
+        "sentence": "All contracts must be duly signed before the deadline passes.",
+        "translation_zh": "所有合同都必须在截止日期前正式签署。"
+      },
+      {
+        "collocation": "duly informed",
+        "scene": "environment",
+        "sentence": "Residents were duly informed about the planned water cuts.",
+        "translation_zh": "居民们已按规定被告知了计划中的停水安排。"
+      }
+    ]
+  },
+  "photocopy": {
+    "_why": "模型的释义写成 \"...made by a photocopier\",photocopier 由 photocop+ier 生成,算目标词的派生形,撞 g12 循环定义。改成不提同根词的写法。",
+    "bank": "ielts",
+    "ipa": "/ˈfoʊtoʊkɑːpi/",
+    "def_zh": "复印件；影印",
+    "def_en": "A duplicate of a document produced by a light-based machine.",
+    "examples": [
+      {
+        "collocation": "photocopy the form",
+        "scene": "work",
+        "sentence": "Please photocopy the form before you hand it in.",
+        "translation_zh": "请在交表之前把表格复印一份。"
+      },
+      {
+        "collocation": "a photocopy of",
+        "scene": "travel",
+        "sentence": "She kept a photocopy of her passport while traveling.",
+        "translation_zh": "她在旅行途中随身带着护照的复印件。"
+      },
+      {
+        "collocation": "make a photocopy",
+        "scene": "education",
+        "sentence": "Students may make a photocopy of any library article.",
+        "translation_zh": "学生可以复印图书馆的任何一篇文章。"
+      }
+    ]
+  },
+  "clubs": {
+    "_why": "词条本身是复数形。模型把搭配写成 nightclubs —— 独立的词,不是 clubs 的搭配(g7)。",
+    "bank": "ielts",
+    "ipa": "/klʌbz/",
+    "def_zh": "俱乐部；社团",
+    "def_en": "Groups of people who meet regularly for a shared interest.",
+    "examples": [
+      {
+        "collocation": "sports clubs",
+        "scene": "health",
+        "sentence": "Sports clubs in the city welcome new members each spring.",
+        "translation_zh": "市里的体育俱乐部每年春天都欢迎新成员加入。"
+      },
+      {
+        "collocation": "book clubs",
+        "scene": "culture",
+        "sentence": "Many readers join book clubs to discuss recent novels.",
+        "translation_zh": "许多读者加入读书会来讨论新近出版的小说。"
+      },
+      {
+        "collocation": "join clubs",
+        "scene": "education",
+        "sentence": "Teachers encourage students to join clubs after regular lessons.",
+        "translation_zh": "老师鼓励学生在正课之后参加社团活动。"
+      }
+    ]
+  },
+  "tributes": {
+    "_why": "词条本身是复数形。模型三句里有两句都以 the 开头,撞 g9。",
+    "bank": "ielts",
+    "ipa": "/ˈtrɪbjuːts/",
+    "def_zh": "悼念；致敬",
+    "def_en": "Words or acts that show respect for someone.",
+    "examples": [
+      {
+        "collocation": "paid tributes",
+        "scene": "culture",
+        "sentence": "Fans paid tributes to the singer outside the concert hall.",
+        "translation_zh": "歌迷们在音乐厅外向这位歌手表达悼念。"
+      },
+      {
+        "collocation": "floral tributes",
+        "scene": "news",
+        "sentence": "Floral tributes covered the steps of the old church.",
+        "translation_zh": "献花铺满了那座老教堂的台阶。"
+      },
+      {
+        "collocation": "tributes poured in",
+        "scene": "daily_life",
+        "sentence": "Messages and tributes poured in from around the world.",
+        "translation_zh": "来自世界各地的留言和悼念纷至沓来。"
+      }
+    ]
+  },
+  "water-skiing": {
+    "_why": "连字符词:模型的例1 只有 8 词,不到 C1 档下限(9-20)。手写时把三句都写够长度。",
+    "bank": "ielts",
+    "ipa": "/ˈwɔːtər ˌskiːɪŋ/",
+    "def_zh": "滑水运动",
+    "def_en": "A sport in which a person is pulled across water on boards.",
+    "examples": [
+      {
+        "collocation": "go water-skiing",
+        "scene": "travel",
+        "sentence": "They go water-skiing on the lake every summer weekend.",
+        "translation_zh": "他们每年夏天的周末都去湖上滑水。"
+      },
+      {
+        "collocation": "water-skiing lessons",
+        "scene": "health",
+        "sentence": "The resort offers water-skiing lessons for complete beginners each morning.",
+        "translation_zh": "度假村每天上午为零基础的初学者开设滑水课程。"
+      },
+      {
+        "collocation": "water-skiing competition",
+        "scene": "news",
+        "sentence": "Local athletes trained hard for the national water-skiing competition.",
+        "translation_zh": "当地运动员为全国滑水比赛刻苦训练。"
+      }
+    ]
   }
 }

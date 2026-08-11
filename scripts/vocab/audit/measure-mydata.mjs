@@ -42,6 +42,11 @@ const NEW_CELL = (label, value, unit) => `
     </span>
   </div>`;
 
+/* 骨架屏那格 —— class 同样要与 MyDataPanel.tsx 逐字一致。
+   ⚠️ 骨架高度写错了不会报错,只会让数据一到整块**跳一下**;
+      所以这里把它也量进来,与真实卡片高度做硬比对。 */
+const SKELETON = () => `<div class="h-[41px] animate-pulse rounded-xl bg-slate-100"></div>`;
+
 /* 真实数据形态:最长的是"累计时长"(可能是 3 位数 + 小时) */
 const DATA = [["累计学习", "302", "词"], ["累计掌握", "128", "词"], ["累计时长", "12.5", "小时"], ["积分", "1860", "分"]];
 const grid = (cell, cols) =>
@@ -54,6 +59,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     <div style="padding:20px" data-case="old2">${grid(OLD_CELL, 2)}</div>
     <div style="padding:20px" data-case="new2">${grid(NEW_CELL, 2)}</div>
     <div style="padding:20px" data-case="new4">${grid(NEW_CELL, 4)}</div>
+    <div style="padding:20px" data-case="skeleton">${grid(SKELETON, 2)}</div>
   </div>
 </body></html>`;
 
@@ -85,14 +91,29 @@ const out = await page.evaluate(() => {
 await b.close();
 unlinkSync(file);
 
-const { old2, new2, new4 } = out;
+const { old2, new2, new4, skeleton } = out;
 console.log(`视口 375px · 用 dist/assets/${css} 的真 CSS\n`);
 console.log(`两行版(现状) 2 列:单格 ${old2.cellW}×${old2.cellH}px · 四宫格整体高 ${old2.gridH}px`);
 console.log(`一行版(改后) 2 列:单格 ${new2.cellW}×${new2.cellH}px · 四宫格整体高 ${new2.gridH}px`);
 console.log(`  → 单格矮 ${old2.cellH - new2.cellH}px,整块省 ${old2.gridH - new2.gridH}px\n`);
 console.log(`一行版 4 列(试"能不能再窄"):单格 ${new4.cellW}×${new4.cellH}px · 内容溢出 ${new4.overflow ? "**是**" : "否"}`);
 
+/* ⚠️ 量出 0px 不等于"高度是 0",十有八九是**这个 class 在 CSS 里根本不存在**。
+ * Tailwind 的任意值(`h-[41px]` 这种)只有**被源码用到**才会被生成进 CSS。
+ * 所以一旦组件改了 class 而这个脚本没跟上,脚本量到的就是一个没有任何样式的裸 div ——
+ * 读数 0,而不是"旧样式"。变异测试时把骨架改成 h-[64px],量出来正是 0px:
+ * 因为组件里已经没有 h-[64px] 了,那条规则压根没进 CSS。
+ * → 0 单独报出来,别让它混进"高度不一致"里当成普通差值。 */
+for (const [name, r] of Object.entries(out)) {
+  if (r.cellH === 0) console.log(`⚠️ ${name} 量到 0px —— 该 class 不在 CSS 里(多半是组件改了 class,这个脚本没跟上)`);
+}
+
+/* 骨架 vs 真实:差一点都会在数据到达那一刻**跳一下** */
+const jump = Math.abs(skeleton.cellH - new2.cellH);
+console.log(`\n骨架屏单格 ${skeleton.cellH}px vs 真实卡片 ${new2.cellH}px → ${jump === 0 ? "✓ 完全一致,不跳" : `✗ 差 ${jump}px,数据到达时会跳`}`);
+
 const shorter = new2.gridH < old2.gridH;
 if (!shorter) console.log("\n✗ 改后没有变矮 —— 这次改动没达到目的");
-console.log(`\nGATE_VERDICT ${shorter ? "PASS" : "FAIL"}`);
-process.exit(shorter ? 0 : 1);
+const ok = shorter && jump === 0;
+console.log(`\nGATE_VERDICT ${ok ? "PASS" : "FAIL"}`);
+process.exit(ok ? 0 : 1);

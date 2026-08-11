@@ -140,7 +140,10 @@ export default function MyDataPanel({ color, globalLearned, globalMastered, sign
       <div className="mt-4 rounded-2xl border border-black/[0.06] bg-white p-5">
         <div className="mb-4 h-[22px] w-24 animate-pulse rounded bg-slate-100" />
         <div className="grid grid-cols-2 gap-3">
-          {[0, 1, 2, 3].map(i => <div key={i} className="h-[64px] animate-pulse rounded-xl bg-slate-100" />)}
+          {/* ⚠️ 骨架高度必须跟真实卡片一致(实测 41px)。
+              原来写死 64px 是照两行版留的,改成一行版后数据一到会**往上跳 23px**,
+              四张卡一起跳 = 整块塌一截。骨架屏的意义就是"位置先占住",占错了不如不占。 */}
+          {[0, 1, 2, 3].map(i => <div key={i} className="h-[41px] animate-pulse rounded-xl bg-slate-100" />)}
         </div>
       </div>
     );

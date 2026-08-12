@@ -54,6 +54,32 @@ const ACCENT = arg('accent', '');        // 定版:空(见文件头,不是 'US')
 const SPEED = Number(arg('speed', '1'));  // 定版:1(见文件头,不是 0.95)
 const THROTTLE_MS = Number(arg('throttle', '1200'));
 const DRY = process.argv.includes('--dry-run');
+/**
+ * `--bank=all` —— **全库一遍过**,不按词库分。
+ *
+ * ⚠️ 为什么必须有这个:`vocab_words` 是全局唯一一张词表,一个词被多个库共享
+ *    (ket_pet 那 3049 词整个是 中考∪高考∪四级 的子集;kaoyan 与 ielts 重合 3052 词)。
+ *    逐库烧的话,同一个词会在好几个库的待办里各出现一次。
+ *    edge 命中缓存**不花钱**,但**每次照样 sleep THROTTLE_MS** ——
+ *    十个库叠起来,光等重复词就是好几个小时。
+ *    全局一遍过:每个词、每条例句各访问一次,一次不多。
+ *
+ * `--only=words|examples` —— 只烧其中一类(Aaron 2026-08-11 定:词条优先于例句)。
+ * `--limit=N` —— 只处理前 N 条,用来实测速率。
+ */
+const ALL_BANKS = arg('bank', 'toefl') === 'all';
+const ONLY = arg('only', 'both');
+const LIMIT = Number(arg('limit', '0')) || 0;
+/**
+ * `--concurrency=N` —— 并发合成。
+ *
+ * ⚠️ 原来是**严格串行 + 每条 sleep**。实测:串行 throttle=1200 是 3.27 秒/条,
+ *    降到 throttle=300 是 2.18 秒/条(其中约 1.9 秒是真实请求,压不动)。
+ *    按 2.18 算,词条 10305 条要 6.2 小时、例句 30915 条(文本更长)20 小时以上 ——
+ *    **钱只要 $34,时间却要一天多**,瓶颈在这儿,不在预算。并发是唯一的杠杆。
+ * ⚠️ 429/5xx 退避与账户级错误中止都在 synth 里,与并发无关,照旧生效。
+ */
+const CONCURRENCY = Math.max(1, Number(arg('concurrency', '1')) || 1);
 const EMIT_ONLY = process.argv.includes('--emit-sql');
 
 const ENV = loadEnv(REPO);
@@ -141,38 +167,51 @@ async function synth(text) {
 
 async function main() {
   mkdirSync(GEN, { recursive: true });
-  const cachePath = path.join(GEN, `${BANK}-audio.json`);
+  const cachePath = path.join(GEN, `${ALL_BANKS ? 'all' : BANK}-audio.json`);
   const cache = existsSync(cachePath) ? JSON.parse(readFileSync(cachePath, 'utf8')) : { words: {}, examples: {} };
 
   if (EMIT_ONLY) { emit(cache); return; }
 
-  const ids = await bankWordIds();
-  if (!ids.length) { process.stdout.write(`· ${BANK} 库里还没有词,先跑第一步的 batch1 SQL\n`); return; }
-
   // 只给已有内容的词配音;audio_url 已有的跳过(断点续跑)
-  const words = [];
-  for (let i = 0; i < ids.length; i += 100) {
-    words.push(...await rest('vocab_words', {
-      select: 'id,headword,audio_url,def_zh',
-      id: `in.(${ids.slice(i, i + 100).join(',')})`,
-      def_zh: 'not.is.null',
-      audio_url: 'is.null',
-      order: 'freq_rank.asc.nullslast',
-    }));
+  const words = [], examples = [];
+  if (ALL_BANKS) {
+    /* 全局一遍过。按 freq_rank 升序 —— 万一中途断了,先烧完的是最高频的词,
+       那部分用户最常碰到,断点处的损失最小。 */
+    if (ONLY !== 'examples') {
+      words.push(...await restPaged('vocab_words', {
+        select: 'id,headword,audio_url,def_zh',
+        def_zh: 'not.is.null', audio_url: 'is.null',
+        order: 'freq_rank.asc.nullslast',
+      }));
+    }
+    if (ONLY !== 'words') {
+      examples.push(...await restPaged('vocab_examples', {
+        select: 'id,word_id,sort_order,sentence,audio_url',
+        audio_url: 'is.null', order: 'word_id.asc,sort_order.asc',
+      }));
+    }
+  } else {
+    const ids = await bankWordIds();
+    if (!ids.length) { process.stdout.write(`· ${BANK} 库里还没有词,先跑第一步的 batch1 SQL\n`); return; }
+    for (let i = 0; i < ids.length; i += 100) {
+      if (ONLY !== 'examples') words.push(...await rest('vocab_words', {
+        select: 'id,headword,audio_url,def_zh',
+        id: `in.(${ids.slice(i, i + 100).join(',')})`,
+        def_zh: 'not.is.null', audio_url: 'is.null',
+        order: 'freq_rank.asc.nullslast',
+      }));
+      if (ONLY !== 'words') examples.push(...await rest('vocab_examples', {
+        select: 'id,word_id,sort_order,sentence,audio_url',
+        word_id: `in.(${ids.slice(i, i + 100).join(',')})`,
+        audio_url: 'is.null', order: 'word_id.asc,sort_order.asc',
+      }));
+    }
   }
 
-  const examples = [];
-  for (let i = 0; i < ids.length; i += 100) {
-    examples.push(...await rest('vocab_examples', {
-      select: 'id,word_id,sort_order,sentence,audio_url',
-      word_id: `in.(${ids.slice(i, i + 100).join(',')})`,
-      audio_url: 'is.null',
-      order: 'word_id.asc,sort_order.asc',
-    }));
-  }
-
-  const todoWords = words.filter(w => !cache.words[w.id]);
-  const todoExamples = examples.filter(e => !cache.examples[e.id]);
+  let todoWords = words.filter(w => !cache.words[w.id]);
+  let todoExamples = examples.filter(e => !cache.examples[e.id]);
+  /* --limit:只处理前 N 条。用来**实测速率**再报工期,不拍脑袋估。 */
+  if (LIMIT) { todoWords = todoWords.slice(0, LIMIT); todoExamples = todoExamples.slice(0, Math.max(0, LIMIT - todoWords.length)); }
   process.stdout.write(
     `· ${BANK}:待合成 词 ${todoWords.length}/${words.length} · 例句 ${todoExamples.length}/${examples.length}\n` +
     `  配置 voice=${VOICE} accent='${ACCENT}' speed=${SPEED}(与库内现存音频同参)\n`
@@ -184,34 +223,43 @@ async function main() {
   const total = todoWords.length + todoExamples.length;
   const save = () => writeFileSync(cachePath, JSON.stringify(cache, null, 2), 'utf8');
 
-  for (const w of todoWords) {
-    try {
-      const r = await synth(w.headword);
-      cache.words[w.id] = { headword: w.headword, audio_url: r.audioUrl, provider: r.provider };
-      done++; if (r.cached) cached++;
-      process.stdout.write(`  ✓ [${done}/${total}] 词 ${w.headword}${r.cached ? ' (命中缓存)' : ''}\n`);
-    } catch (e) {
-      /* ⚠️ 账户级错误不能吞:吞了就会带着"每条都失败"把 4470 条跑完 */
-      if (e.fatal) { save(); throw e; }
-      process.stdout.write(`  ✗ 词 ${w.headword}: ${e.message}\n`);
+  /* 词排在例句前面 —— Aaron 2026-08-11 定的顺序是"词条音频优先于例句音频"。
+     worker 从同一个队列取,所以词天然先被取完。 */
+  const queue = [
+    ...todoWords.map(w => ({ kind: 'word', id: w.id, text: w.headword })),
+    ...todoExamples.map(e => ({ kind: 'ex', id: e.id, text: e.sentence, word_id: e.word_id, sort_order: e.sort_order })),
+  ];
+  let fatal = null;
+  const workers = Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
+    while (queue.length && !fatal) {
+      const job = queue.shift();
+      try {
+        const r = await synth(job.text);
+        if (job.kind === 'word') {
+          cache.words[job.id] = { headword: job.text, audio_url: r.audioUrl, provider: r.provider };
+        } else {
+          cache.examples[job.id] = { word_id: job.word_id, sort_order: job.sort_order, audio_url: r.audioUrl, provider: r.provider };
+        }
+        done++; if (r.cached) cached++;
+        /* 并发下逐条打印会刷屏,每 50 条报一次进度就够 */
+        if (done % 50 === 0 || done === total) {
+          process.stdout.write(`  ✓ [${done}/${total}] ${job.kind === 'word' ? '词' : '例句'} ${job.text.slice(0, 40)}\n`);
+        }
+      } catch (e) {
+        /* ⚠️ 账户级错误不能吞:吞了就会带着"每条都失败"把整批跑完。
+           ⚠️ 并发下要**让所有 worker 都停** —— 只 throw 自己那条的话,
+              其余 worker 还在继续,照样空跑几万条。所以设共享 fatal 标志。 */
+        if (e.fatal) { fatal = e; save(); break; }
+        process.stdout.write(`  ✗ ${job.kind === 'word' ? '词' : '例句'} ${job.text.slice(0, 30)}: ${e.message}\n`);
+      }
+      /* writeFileSync 是同步的,单线程里不会交错;并发下照样安全。
+         每条都存 = 断点粒度是一条,中断最多丢正在飞的那几条。 */
+      save();
+      await sleep(THROTTLE_MS);
     }
-    save();
-    await sleep(THROTTLE_MS);
-  }
-
-  for (const ex of todoExamples) {
-    try {
-      const r = await synth(ex.sentence);
-      cache.examples[ex.id] = { word_id: ex.word_id, sort_order: ex.sort_order, audio_url: r.audioUrl, provider: r.provider };
-      done++; if (r.cached) cached++;
-      process.stdout.write(`  ✓ [${done}/${total}] 例句 ${ex.sentence.slice(0, 44)}…${r.cached ? ' (命中缓存)' : ''}\n`);
-    } catch (e) {
-      if (e.fatal) { save(); throw e; }
-      process.stdout.write(`  ✗ 例句 ${ex.id}: ${e.message}\n`);
-    }
-    save();
-    await sleep(THROTTLE_MS);
-  }
+  });
+  await Promise.all(workers);
+  if (fatal) throw fatal;
 
   process.stdout.write(`\n· 完成 ${done}/${total}(其中命中已有缓存 ${cached},没花 TTS 钱)\n`);
   emit(cache);

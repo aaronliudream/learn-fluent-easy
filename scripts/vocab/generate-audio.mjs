@@ -80,6 +80,8 @@ const LIMIT = Number(arg('limit', '0')) || 0;
  * ⚠️ 429/5xx 退避与账户级错误中止都在 synth 里,与并发无关,照旧生效。
  */
 const CONCURRENCY = Math.max(1, Number(arg('concurrency', '1')) || 1);
+/* --shards=N:回填 SQL 切成 N 份各自独立的文件(同一个出口,不另写切分脚本)。 */
+const SHARDS = Math.max(1, Number(arg('shards', '1')) || 1);
 const EMIT_ONLY = process.argv.includes('--emit-sql');
 
 const ENV = loadEnv(REPO);
@@ -265,13 +267,36 @@ async function main() {
   emit(cache);
 }
 
+/**
+ * 出回填 SQL。`--shards=N` 切成 N 份各自独立的文件。
+ *
+ * ⚠️ 切分走这个出口,**别另写切分脚本** —— 手搓第二个 SQL 生成器就是
+ *    2026-08-09 那次 0-based sort_order 事故的来源。
+ * ⚠️ 词音频和例句音频**按各自的行数独立切**:两者是两张表的两条 UPDATE,
+ *    互不依赖,不像内容 SQL 那样"一个词的三条例句必须同片"。
+ * ⚠️ 每片自带 BEGIN/COMMIT 与断言,顺序无所谓、单独跑任意一片都成立。
+ */
 function emit(cache) {
-  const wordRows = Object.entries(cache.words);
-  const exRows = Object.entries(cache.examples);
-  if (!wordRows.length && !exRows.length) { process.stdout.write('· 缓存为空,无 SQL 可出\n'); return; }
+  const allWords = Object.entries(cache.words);
+  const allEx = Object.entries(cache.examples);
+  if (!allWords.length && !allEx.length) { process.stdout.write('· 缓存为空,无 SQL 可出\n'); return; }
+  if (SHARDS > 1) {
+    const perW = Math.ceil(allWords.length / SHARDS);
+    const perE = Math.ceil(allEx.length / SHARDS);
+    for (let i = 0; i < SHARDS; i++) {
+      const w = allWords.slice(i * perW, (i + 1) * perW);
+      const e = allEx.slice(i * perE, (i + 1) * perE);
+      if (w.length || e.length) emitOne(w, e, { part: i + 1, of: SHARDS });
+    }
+    return;
+  }
+  emitOne(allWords, allEx, null);
+}
+
+function emitOne(wordRows, exRows, shard) {
 
   const esc = s => String(s).replace(/'/g, "''");
-  const sql = `-- 词汇音频回填:${wordRows.length} 词音频 + ${exRows.length} 例句音频
+  const sql = `-- 词汇音频回填${shard ? `【第 ${shard.part}/${shard.of} 片】` : ''}:${wordRows.length} 词音频 + ${exRows.length} 例句音频
 -- 生成: node scripts/vocab/generate-audio.mjs --bank=${BANK} --emit-sql
 -- 合成配置: voice=${VOICE} accent='${ACCENT}' speed=${SPEED}
 --           与库内现存音频同参(由文件名内容哈希反解证实:openai|alloy|1||text),
@@ -340,10 +365,13 @@ SELECT 'every audio_url is a well-formed CDN url',
 
 COMMIT;
 `;
-  const out = path.join(REPO, 'SQLAA', `vocab_${BANK}_audio_batch1.sql`);
+  const label = ALL_BANKS ? 'all' : BANK;
+  const suffix = shard ? `_part${shard.part}of${shard.of}` : '';
+  const name = `vocab_${label}_audio_batch1${suffix}.sql`;
+  const out = path.join(REPO, 'SQLAA', name);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, sql, 'utf8');
-  process.stdout.write(`· 音频回填 SQL(${wordRows.length} 词 + ${exRows.length} 例句) → SQLAA/vocab_${BANK}_audio_batch1.sql\n`);
+  process.stdout.write(`· 音频回填 SQL(${wordRows.length} 词 + ${exRows.length} 例句) → SQLAA/${name}\n`);
 }
 
 main().catch(e => { process.stderr.write(`✗ ${e.stack || e.message}\n`); process.exit(1); });

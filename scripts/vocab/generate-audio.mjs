@@ -37,7 +37,7 @@
  *
  * ⚠️ 本脚本只读库 + 产出文件,绝不写库。SQL 一律交 Aaron 跑。
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnv, requireKeys } from './env.mjs';
@@ -223,7 +223,23 @@ async function main() {
 
   let done = 0, cached = 0;
   const total = todoWords.length + todoExamples.length;
-  const save = () => writeFileSync(cachePath, JSON.stringify(cache, null, 2), 'utf8');
+  /**
+   * 落缓存 —— **原子写**:先写临时文件,再 rename 覆盖。
+   *
+   * ⚠️ 由来(2026-08-12):原来直接 `writeFileSync(cachePath, ...)`。这个文件此刻已经
+   *    3MB 多,单次写要好几十毫秒,而且**每合成一条就写一次**。
+   *    这一轮真读到过半截 JSON(`Unterminated string at position 3194880`)——
+   *    那次只是我并发去读,没事;但这一轮已经**被杀过三次**,
+   *    只要有一次杀在写的中途,留下的就是个截断的 JSON,
+   *    下次启动 `JSON.parse` 直接抛,**上万条进度全丢、几十美元重烧**。
+   *    rename 在同一分区上是原子的:要么是旧的完整文件,要么是新的完整文件,
+   *    不存在"写了一半的 cachePath"。
+   */
+  const tmpPath = cachePath + '.tmp';
+  const save = () => {
+    writeFileSync(tmpPath, JSON.stringify(cache, null, 2), 'utf8');
+    renameSync(tmpPath, cachePath);
+  };
 
   /* 词排在例句前面 —— Aaron 2026-08-11 定的顺序是"词条音频优先于例句音频"。
      worker 从同一个队列取,所以词天然先被取完。 */

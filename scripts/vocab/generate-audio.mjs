@@ -326,58 +326,75 @@ SELECT 'BEFORE' AS stage,
        (SELECT count(*) FROM vocab_words    WHERE audio_url IS NOT NULL) AS word_audio,
        (SELECT count(*) FROM vocab_examples WHERE audio_url IS NOT NULL) AS example_audio;
 
-${wordRows.length ? `-- ① 词音频
+-- 本片数据先落临时表:UPDATE 和后面的断言共用同一份,
+-- 不把几千行 VALUES 重复三遍(也就不会出现"改了 UPDATE 忘了改断言"的分叉)。
+CREATE TEMP TABLE _aud_w(id uuid PRIMARY KEY, audio_url text) ON COMMIT DROP;
+CREATE TEMP TABLE _aud_e(id uuid PRIMARY KEY, audio_url text) ON COMMIT DROP;
+${wordRows.length ? `INSERT INTO _aud_w(id, audio_url) VALUES
+${wordRows.map(([id, r]) => `  ('${id}'::uuid, '${esc(r.audio_url)}')`).join(',\n')};
+` : '-- 本片无词音频\n'}
+${exRows.length ? `INSERT INTO _aud_e(id, audio_url) VALUES
+${exRows.map(([id, r]) => `  ('${id}'::uuid, '${esc(r.audio_url)}')`).join(',\n')};
+` : '-- 本片无例句音频\n'}
+-- ① 词音频
 UPDATE vocab_words w
    SET audio_url = v.audio_url, updated_at = now()
-  FROM (VALUES
-${wordRows.map(([id, r]) => `  ('${id}'::uuid, '${esc(r.audio_url)}')`).join(',\n')}
-  ) AS v(id, audio_url)
- WHERE w.id = v.id;
-` : '-- ① 词音频:本批无\n'}
-${exRows.length ? `-- ② 例句音频
+  FROM _aud_w v WHERE w.id = v.id;
+
+-- ② 例句音频
 UPDATE vocab_examples e
    SET audio_url = v.audio_url
-  FROM (VALUES
-${exRows.map(([id, r]) => `  ('${id}'::uuid, '${esc(r.audio_url)}')`).join(',\n')}
-  ) AS v(id, audio_url)
- WHERE e.id = v.id;
-` : '-- ② 例句音频:本批无\n'}
-SELECT 'AFTER' AS stage,
-       (SELECT count(*) FROM vocab_words    WHERE audio_url IS NOT NULL) AS word_audio,
-       (SELECT count(*) FROM vocab_examples WHERE audio_url IS NOT NULL) AS example_audio;
+  FROM _aud_e v WHERE e.id = v.id;
 
--- ── count-validate:五行都必须是 t,否则 ROLLBACK ──
-SELECT 'word_audio = ${wordRows.length}' AS expect,
-       (SELECT count(*) FROM vocab_words WHERE audio_url IS NOT NULL) = ${wordRows.length} AS ok
-UNION ALL
-SELECT 'example_audio = ${exRows.length}',
-       (SELECT count(*) FROM vocab_examples WHERE audio_url IS NOT NULL) = ${exRows.length}
-UNION ALL
-SELECT 'no word left without audio (in ${BANK})',
-       NOT EXISTS (
-         SELECT 1 FROM vocab_words w
-           JOIN vocab_word_banks wb ON wb.word_id = w.id
-           JOIN vocab_banks b ON b.id = wb.bank_id AND b.code = '${BANK}'
-          WHERE w.def_zh IS NOT NULL AND w.audio_url IS NULL
-       )
-UNION ALL
--- 例句侧的完整性,与上面词侧对称。少了这条,例句漏配也能一路绿灯过去。
-SELECT 'no example left without audio (in ${BANK})',
-       NOT EXISTS (
-         SELECT 1 FROM vocab_examples e
-           JOIN vocab_words w ON w.id = e.word_id
-           JOIN vocab_word_banks wb ON wb.word_id = w.id
-           JOIN vocab_banks b ON b.id = wb.bank_id AND b.code = '${BANK}'
-          WHERE e.audio_url IS NULL
-       )
-UNION ALL
--- 全部指向 CDN 且是内容寻址路径,防止回填进半成品/空串。
-SELECT 'every audio_url is a well-formed CDN url',
-       NOT EXISTS (
-         SELECT 1 FROM vocab_examples
-          WHERE audio_url IS NOT NULL
-            AND audio_url !~ '^https://audio\\.bigmooneducation\\.com/[0-9a-f]{2}/[0-9a-f]{64}\\.mp3$'
-       );
+-- ── 断言:**只判本片这 ${wordRows.length} 词 + ${exRows.length} 例句**,不判全表 ──────
+-- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words WHERE audio_url IS NOT NULL) = 本片行数。
+--    切了片以后这必然为 f:全表计数会随其他片累加,而且库里本来就有别的批次的音频。
+--    这是 batch-validate-scope-to-batch 那条,内容 SQL 早改过了,音频 SQL 漏改。
+-- ⚠️ 另一处更坏:原来那两条 "no ... left without audio (in ${BANK})" 是
+--    JOIN vocab_banks b ON b.code = '${BANK}'。而 --bank=all 时**根本没有 code='all' 这个库**,
+--    join 不到任何行 → NOT EXISTS 恒为 t → 两条完整性断言永远绿,等于没写。
+--    覆盖不全被读成全通过,正是回归那条要防的事。现在改成判本片实际写进去的行。
+-- ⚠️ 用 DO + RAISE:不过就抛异常整笔回滚,不靠人眼盯几个 t/f。
+DO $gate$
+DECLARE n int; bad int;
+BEGIN
+  -- ⓪ 临时表行数必须与本片声明的一致 —— 否则空表会让下面每条断言都"真空通过"
+  SELECT count(*) INTO n FROM _aud_w;
+  IF n <> ${wordRows.length} THEN RAISE EXCEPTION '本片词音频应有 % 行,实际 %', ${wordRows.length}, n; END IF;
+  SELECT count(*) INTO n FROM _aud_e;
+  IF n <> ${exRows.length} THEN RAISE EXCEPTION '本片例句音频应有 % 行,实际 %', ${exRows.length}, n; END IF;
+
+  -- ① id 必须真存在于目标表:id 打错时 UPDATE 影响 0 行,自己是不报错的
+  SELECT count(*) INTO bad FROM _aud_w v LEFT JOIN vocab_words w ON w.id = v.id WHERE w.id IS NULL;
+  IF bad > 0 THEN RAISE EXCEPTION '本片有 % 个 word_id 在 vocab_words 里不存在', bad; END IF;
+  SELECT count(*) INTO bad FROM _aud_e v LEFT JOIN vocab_examples e ON e.id = v.id WHERE e.id IS NULL;
+  IF bad > 0 THEN RAISE EXCEPTION '本片有 % 个 example_id 在 vocab_examples 里不存在', bad; END IF;
+
+  -- ② 写进去的值必须与本片给的逐条相同
+  SELECT count(*) INTO bad FROM _aud_w v JOIN vocab_words w ON w.id = v.id
+   WHERE w.audio_url IS DISTINCT FROM v.audio_url;
+  IF bad > 0 THEN RAISE EXCEPTION '本片 % 个词的 audio_url 与给定值不一致', bad; END IF;
+  SELECT count(*) INTO bad FROM _aud_e v JOIN vocab_examples e ON e.id = v.id
+   WHERE e.audio_url IS DISTINCT FROM v.audio_url;
+  IF bad > 0 THEN RAISE EXCEPTION '本片 % 条例句的 audio_url 与给定值不一致', bad; END IF;
+
+  -- ③ 形态:全部是 CDN 上的内容寻址路径,防止回填进半成品/空串
+  SELECT count(*) INTO bad FROM (
+    SELECT audio_url FROM _aud_w UNION ALL SELECT audio_url FROM _aud_e
+  ) t WHERE t.audio_url !~ '^https://audio\\.bigmooneducation\\.com/[0-9a-f]{2}/[0-9a-f]{64}\\.mp3$';
+  IF bad > 0 THEN RAISE EXCEPTION '本片 % 条 audio_url 形态不合法', bad; END IF;
+
+  RAISE NOTICE '本片自检通过:词 % · 例句 %', ${wordRows.length}, ${exRows.length};
+END
+$gate$;
+
+-- 全表读数**只作参考,不作判据**:五片各跑一次,这两个数会一片片往上加。
+-- 全库是否配齐,要等五片都跑完再看 —— 那时下面两个 remaining 才应该是 0。
+SELECT 'AFTER(全表参考)' AS stage,
+       (SELECT count(*) FROM vocab_words    WHERE audio_url IS NOT NULL) AS word_audio,
+       (SELECT count(*) FROM vocab_examples WHERE audio_url IS NOT NULL) AS example_audio,
+       (SELECT count(*) FROM vocab_words    WHERE def_zh IS NOT NULL AND audio_url IS NULL) AS word_remaining,
+       (SELECT count(*) FROM vocab_examples WHERE audio_url IS NULL) AS example_remaining;
 
 COMMIT;
 `;

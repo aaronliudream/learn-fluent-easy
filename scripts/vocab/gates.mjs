@@ -149,8 +149,39 @@ function matchesForm(token, headword, forms, strict = false) {
 }
 
 /** g1 目标词存在:句中出现 headword 或其屈折形/派生形。 */
+/**
+ * 短语词条(headword 带空格,如 `inasmuch as`)。
+ *
+ * ⚠️ 由来(2026-08-14):词表里混进了**不能独立成词**的半截固定搭配 ——
+ *    `inasmuch` 只以 `inasmuch as` 出现,给半截词写释义本身就是矛盾的,
+ *    所以要原地改成短语词条。改完才发现闸门全是**按单个 token 比对**的:
+ *    句子里再怎么写 "inasmuch as",也没有任何一个 token 等于 "inasmuch as",
+ *    g1 会一口咬定"句中找不到目标词",g7 同理。
+ *    —— 这不是内容的问题,是闸门从来没见过短语词条。
+ * 判据换成**词序列包含**:把句子和短语都归一成 token 数组,比子序列。
+ *    (⚠️ 不能直接 `sentence.includes(hw)` —— 标点、大小写、连续空格都会漏,
+ *     text-contains-needs-normalization 那条已经栽过三次。)
+ */
+export const isPhraseHeadword = hw => /\s/.test(String(hw).trim());
+
+function phrasePresent(text, phrase) {
+  const norm = s => String(s).toLowerCase().replace(/[’‘]/g, "'")
+    .split(/[\s\-–—/]+/).map(t => t.replace(/[^a-z']/g, '').replace(/'s$|'$/, '')).filter(Boolean);
+  const hay = norm(text), needle = norm(phrase);
+  if (!needle.length) return false;
+  outer: for (let i = 0; i + needle.length <= hay.length; i++) {
+    for (let j = 0; j < needle.length; j++) if (hay[i + j] !== needle[j]) continue outer;
+    return true;
+  }
+  return false;
+}
+
 export function g1_targetPresent(sentence, headword, table) {
   const hw = headword.toLowerCase();
+  if (isPhraseHeadword(hw)) {
+    return phrasePresent(sentence, hw) ? null
+      : `g1 目标词缺席:句中找不到短语 "${headword}"(短语词条必须整体出现,不能只用其中半截)`;
+  }
   const forms = inflectionsOf(hw, table);
   const hit = targetTokens(sentence).some(t => matchesForm(t, hw, forms));
   return hit ? null : `g1 目标词缺席:句中找不到 "${headword}" 或其屈折形`;
@@ -227,6 +258,13 @@ export function g7_collocationContainsWord(examples, headword, table) {
     const c = String(examples[i].collocation || '');
     // 与 g1 共用同一套分词(含"保留连字符"的那一路),否则 well-being 这类
     // headword 的搭配「student well-being」会被判成"不含目标词"。
+    /* 短语词条:搭配里必须含**整个短语**,不能只含半截(见 g1 的 isPhraseHeadword 注释) */
+    if (isPhraseHeadword(hw)) {
+      if (!phrasePresent(c, hw)) {
+        return `g7 第${i + 1}条搭配 "${c}" 里没有完整短语 "${headword}"`;
+      }
+      continue;
+    }
     const toks = targetTokens(c);
     if (!toks.some(t => matchesForm(t, hw, forms))) {
       return `g7 第${i + 1}条搭配 "${c}" 里没有目标词 "${headword}",是同义词不是搭配`;
@@ -269,6 +307,10 @@ export function stemOf(word) {
 }
 export function g13_collocationNotSameRoot(examples, headword, table) {
   const hw = headword.toLowerCase();
+  /* 短语词条跳过:"同根同义反复"是给单词定义的(melodious melodies)。
+     对 "inasmuch as" 求词干会得到 "inasmuchas" 这种拼接产物,判什么都没意义 ——
+     与其硬判,不如明写这条不适用(第九条:分不清就别硬判)。 */
+  if (isPhraseHeadword(hw)) return null;
   const forms = inflectionsOf(hw, table);
   const stem = stemOf(hw);
   if (stem.length < 5) return null;                 // 词干太短,证据不足,不拦

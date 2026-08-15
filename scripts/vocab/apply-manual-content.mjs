@@ -56,8 +56,12 @@ for (const [headword, m] of Object.entries(manual)) {
   const bank = m.bank;
   if (!bank) { console.error(`✗ ${headword}:没写 bank`); blocked++; continue; }
 
-  const row = await fetchWord(headword);
-  if (!row) { console.error(`✗ ${headword}:库里没有这个词`); blocked++; continue; }
+  /* `rename_from`:词表里混进了半截固定搭配(inasmuch),要原地改成完整短语
+     (inasmuch as)。库里那一行此刻**还叫旧名字**,所以查库要用旧名字查,
+     写内容用新名字写。⚠️ 不能新建行:挂载关系在 vocab_word_banks 上按 word_id 走,
+     新建就等于把这个词从词库里摘掉了。 */
+  const row = await fetchWord(m.rename_from || headword);
+  if (!row) { console.error(`✗ ${headword}:库里没有这个词(查的是 ${m.rename_from || headword})`); blocked++; continue; }
   if (row.def_zh) { console.log(`⊘ ${headword}:库里**已经有释义**了,跳过(别覆盖别人写的)`); continue; }
 
   const contentPath = path.join(GEN, `${bank}-content.json`);
@@ -73,11 +77,21 @@ for (const [headword, m] of Object.entries(manual)) {
   for (const f of readdirSync(GEN)) {
     if (!f.endsWith('-content.json') || f.includes('trial')) continue;
     let j; try { j = JSON.parse(readFileSync(path.join(GEN, f), 'utf8')); } catch { continue; }
-    for (const rec of Object.values(j)) for (const ex of rec.examples || []) corpus.push(ngrams(ex.sentence));
+    /* ⚠️ 排除**这个词自己上一次合并的结果**:这个脚本是幂等重跑的
+       (改了音标/加了音频就要再跑一遍),而上一轮已经把这三句写进
+       <bank>-content.json 了。不排除的话 g4 会拿它跟自己比,报
+       "与已生成句 4-gram 重合 100%" —— 判据没错,是**比对面里混进了自己**。
+       按 key 排除,不是按句子排除:同一个词换了句子也该跟旧句子比不上号。 */
+    for (const [k, rec] of Object.entries(j)) {
+      if (k === headword.toLowerCase()) continue;
+      for (const ex of rec.examples || []) corpus.push(ngrams(ex.sentence));
+    }
   }
 
   const cefr = cefrFor(row.freq_rank);
-  const payload = { ipa: m.ipa, def_zh: m.def_zh, def_en: m.def_en, examples: m.examples };
+  /* audio_url 是可选的:单词修复时音频已经先烧好(库里还没有这几行,
+     generate-audio.mjs 那支按库里的行找活干,轮不到它),跟着内容 SQL 一起进库。 */
+  const payload = { ipa: m.ipa, def_zh: m.def_zh, def_en: m.def_en, examples: m.examples, audio_url: m.audio_url };
   const fails = runAllGates({ ...row, cefr }, payload, corpus, inflect, { useTierLength: true });
 
   if (fails.length) {
@@ -87,9 +101,12 @@ for (const [headword, m] of Object.entries(manual)) {
   }
 
   results[headword.toLowerCase()] = {
-    word_id: row.id, headword: row.headword, pos: row.pos,
+    /* ⚠️ headword 落**新名字**(手写文件的 key),不是库里那个旧名字 ——
+       出 SQL 时①②靠 lower(headword) 定位,写旧名字就永远匹配不上改名后的行。 */
+    word_id: row.id, headword, pos: row.pos,
     freq_rank: row.freq_rank, cefr, ...payload,
     _manual: true, _why: m._why,
+    ...(m.rename_from ? { _rename_from: m.rename_from, _word_id: row.id } : {}),
   };
   if (!DRY) writeFileSync(contentPath, JSON.stringify(results, null, 2), 'utf8');
   byBank[bank] = (byBank[bank] || 0) + 1;

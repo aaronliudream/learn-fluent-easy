@@ -815,5 +815,37 @@
         "translation_zh": "在客人面前别表现得那么粗野。"
       }
     ]
+  },
+  "inasmuch as": {
+    "_why": "病因不是生成器出错,是词表里混进了**不能独立成词的半截搭配**:inasmuch 只以 inasmuch as 出现,给半截词写释义本身就是矛盾的,模型怎么写都是错的。所以不是补内容,是把词条原地改名成完整短语再写。⚠️ 同时暴露出闸门只认单词:g1/g7 按单 token 比对,短语词条恒判\"目标词缺席\",已加短语分支。",
+    "bank": "cet6",
+    "rename_from": "inasmuch",
+    "ipa": "/ˌɪnəzˈmʌtʃ əz/",
+    "def_zh": "（正式书面语）因为，鉴于；就……而言",
+    "def_en": "(formal) because of the fact that; to the extent that.",
+    "examples": [
+      {
+        "collocation": "risky inasmuch as",
+        "scene": "work",
+        "sentence": "The plan is risky inasmuch as it relies on a single supplier.",
+        "translation_zh": "该计划有风险，因为它只依赖一家供应商。",
+        "audio_url": "https://audio.bigmooneducation.com/ca/ca0519b784a41a7b0f852847ae3e2e1d1a8347ee9034430abcecabaabdc7c8e0.mp3"
+      },
+      {
+        "collocation": "inasmuch as the evidence",
+        "scene": "academic",
+        "sentence": "Inasmuch as the evidence remains incomplete, the committee has postponed its decision.",
+        "translation_zh": "鉴于证据仍不完整，委员会推迟了决定。",
+        "audio_url": "https://audio.bigmooneducation.com/1c/1ce0c198ddbbc885391d4a69aa3e25c0d049306f30269176a9ae4a55958d9108.mp3"
+      },
+      {
+        "collocation": "matters inasmuch as",
+        "scene": "news",
+        "sentence": "This ruling matters inasmuch as it sets a precedent for future disputes.",
+        "translation_zh": "这项裁决之所以重要，是因为它为今后的纠纷树立了先例。",
+        "audio_url": "https://audio.bigmooneducation.com/53/5330770b0c356852b8229e482fe1ad0acf83ed0a76581682c0535436350d8667.mp3"
+      }
+    ],
+    "audio_url": "https://audio.bigmooneducation.com/52/52f47a1980aaa7cd10ff5bd568778cb7843837d4fe0407f67b55b85cd48b085b.mp3"
   }
 }

@@ -25855,38 +25855,6 @@
     "_attempts": 2,
     "_model": "gpt-4o-mini"
   },
-  "fro": {
-    "word_id": "b6c4e0b9-d44a-45c8-af06-842ce6498d51",
-    "headword": "fro",
-    "pos": "adv.",
-    "freq_rank": 17026,
-    "cefr": "C1",
-    "ipa": "/froʊ/",
-    "def_zh": "向后；反方向",
-    "def_en": "In the opposite direction; back.",
-    "examples": [
-      {
-        "collocation": "run fro",
-        "scene": "daily_life",
-        "sentence": "Children often run fro their parents when they are playing outside.",
-        "translation_zh": "孩子们在外面玩耍时常常向后跑开父母。"
-      },
-      {
-        "collocation": "back fro",
-        "scene": "news",
-        "sentence": "The company had to back fro its earlier commitment due to financial issues.",
-        "translation_zh": "由于财务问题，该公司不得不撤回之前的承诺。"
-      },
-      {
-        "collocation": "from fro",
-        "scene": "academic",
-        "sentence": "Research shows that the relationship between variables can shift from fro different contexts.",
-        "translation_zh": "研究表明，变量之间的关系可能因不同的背景而有所变化。"
-      }
-    ],
-    "_attempts": 1,
-    "_model": "gpt-4o-mini"
-  },
   "taper": {
     "word_id": "cd054631-8c53-4a63-831f-2d16458eb55f",
     "headword": "taper",
@@ -30884,5 +30852,41 @@
     "_why": "病因不是生成器出错,是词表里混进了**不能独立成词的半截搭配**:inasmuch 只以 inasmuch as 出现,给半截词写释义本身就是矛盾的,模型怎么写都是错的。所以不是补内容,是把词条原地改名成完整短语再写。⚠️ 同时暴露出闸门只认单词:g1/g7 按单 token 比对,短语词条恒判\"目标词缺席\",已加短语分支。",
     "_rename_from": "inasmuch",
     "_word_id": "0fcd5134-4edc-42a9-b638-e9e929b749fa"
+  },
+  "to and fro": {
+    "word_id": "b6c4e0b9-d44a-45c8-af06-842ce6498d51",
+    "headword": "to and fro",
+    "pos": "adv.",
+    "freq_rank": 17026,
+    "cefr": "C1",
+    "ipa": "/ˌtuː ən ˈfroʊ/",
+    "def_zh": "来回地；往复地",
+    "def_en": "Moving repeatedly in one direction and then back again.",
+    "examples": [
+      {
+        "collocation": "swaying to and fro",
+        "scene": "environment",
+        "sentence": "The tall branches were swaying to and fro in the evening wind.",
+        "translation_zh": "高高的树枝在晚风中来回摇曳。",
+        "audio_url": "https://audio.bigmooneducation.com/22/222b19fd821367fb80248153861a1ae83f2154ae61aaf0212514518103163ab2.mp3"
+      },
+      {
+        "collocation": "paced to and fro",
+        "scene": "daily_life",
+        "sentence": "She paced to and fro outside the room while waiting for news.",
+        "translation_zh": "等消息的时候，她在房间外来回踱步。",
+        "audio_url": "https://audio.bigmooneducation.com/63/6393289f5e74e7016d0a5f3eb5815c8c309b020acee2428b3b726a8aee6e7088.mp3"
+      },
+      {
+        "collocation": "moved to and fro",
+        "scene": "work",
+        "sentence": "Workers moved to and fro between the loading dock and the storage area.",
+        "translation_zh": "工人们在装卸区和仓储区之间来回走动。",
+        "audio_url": "https://audio.bigmooneducation.com/15/156abdad99d8be36a1c000fb0cb0ef2b1dd703be6c9ab5a0a8c72062647ede65.mp3"
+      }
+    ],
+    "audio_url": "https://audio.bigmooneducation.com/51/5134ae67993268b52a52c2e36ac1ab2dadae8c62780204289abfe865411c55f1.mp3",
+    "_manual": true,
+    "_why": "词表混进半截固定搭配:fro 只以 to and fro 出现,原三条例句全是病句且已入库。按 id 一次性修复,不开通用覆盖通道。"
   }
 }

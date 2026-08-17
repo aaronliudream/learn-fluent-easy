@@ -410,6 +410,13 @@ export function g11_lengthRatioDiagnostic(examples, maxRatio = 2.6, minRatio = 0
  */
 export function g12_defEnNotCircular(defEn, headword, table) {
   const hw = String(headword).toLowerCase();
+  /* 短语词条同样要判循环:def_en 里出现 "to and fro" 就是拿自己解释自己。
+     ⚠️ 不加这个分支的话,g12 对短语词条**恒放行** —— 单 token 永远等不上带空格的
+     词条,判据不是"没问题",是根本没判。刚在音频 SQL 那边栽过同型的空断言。 */
+  if (isPhraseHeadword(hw)) {
+    return phrasePresent(defEn || '', hw)
+      ? `def_en 循环定义:释义里出现了目标短语本身("${headword}")` : null;
+  }
   const forms = inflectionsOf(hw, table);
   const toks = String(defEn || '').toLowerCase().split(/[\s\-–—/]+/)
     .map(t => t.replace(/[^a-z']/g, '')).filter(Boolean).map(t => t.replace(/'s$|'$/, ''));

@@ -464,5 +464,388 @@
         "translation_zh": "出差的人应当保留每一张收据以便报销。"
       }
     ]
+  },
+  "housing": {
+    "_why": "模型的例句与存量语料 4-gram 重合 86%(g4)——住房话题的套话句已经被别的词占了。手写三句换角度。",
+    "bank": "ielts",
+    "ipa": "/ˈhaʊzɪŋ/",
+    "def_zh": "住房；住宅",
+    "def_en": "Places for people to live, considered as a public resource.",
+    "examples": [
+      {
+        "collocation": "housing market",
+        "scene": "news",
+        "sentence": "The housing market slowed down in the second quarter.",
+        "translation_zh": "第二季度住房市场放缓了。"
+      },
+      {
+        "collocation": "affordable housing",
+        "scene": "work",
+        "sentence": "Many families cannot find affordable housing near their workplace.",
+        "translation_zh": "许多家庭在工作地点附近找不到负担得起的住房。"
+      },
+      {
+        "collocation": "housing shortage",
+        "scene": "academic",
+        "sentence": "Officials blamed the housing shortage on slow construction permits.",
+        "translation_zh": "官员把住房短缺归咎于建筑许可审批过慢。"
+      }
+    ]
+  },
+  "burger": {
+    "_why": "模型把搭配写成 hamburger joint —— hamburger 是独立的词不是 burger 的搭配(g7),例句里也没出现 burger 本身。",
+    "bank": "ielts",
+    "ipa": "/ˈbɜːrɡər/",
+    "def_zh": "汉堡；肉饼",
+    "def_en": "A round patty of minced meat served inside a soft bun.",
+    "examples": [
+      {
+        "collocation": "burger and fries",
+        "scene": "daily_life",
+        "sentence": "He ordered a burger and fries for his lunch.",
+        "translation_zh": "他午餐点了一个汉堡和一份薯条。"
+      },
+      {
+        "collocation": "veggie burger",
+        "scene": "culture",
+        "sentence": "The cafe now offers a veggie burger every Friday.",
+        "translation_zh": "这家咖啡馆现在每周五都供应素食汉堡。"
+      },
+      {
+        "collocation": "grilled a burger",
+        "scene": "travel",
+        "sentence": "She grilled a burger slowly over the open fire.",
+        "translation_zh": "她在明火上慢慢烤了一个汉堡。"
+      }
+    ]
+  },
+  "birds": {
+    "_why": "词条本身是复数形。模型把搭配写成 songbirds —— 那是独立的词不是 birds 的搭配(g7)。",
+    "bank": "ielts",
+    "ipa": "/bɜːrdz/",
+    "def_zh": "鸟；鸟类",
+    "def_en": "Feathered animals that usually fly and lay eggs.",
+    "examples": [
+      {
+        "collocation": "migrating birds",
+        "scene": "environment",
+        "sentence": "Migrating birds arrive at the northern lake every autumn.",
+        "translation_zh": "候鸟每年秋天都会飞到北边那个湖。"
+      },
+      {
+        "collocation": "wild birds",
+        "scene": "science_tech",
+        "sentence": "Researchers tracked wild birds using tiny new satellite tags.",
+        "translation_zh": "研究人员用微型的新式卫星标签追踪野生鸟类。"
+      },
+      {
+        "collocation": "birds of prey",
+        "scene": "education",
+        "sentence": "Children learned that birds of prey hunt small animals.",
+        "translation_zh": "孩子们了解到猛禽以小动物为食。"
+      }
+    ]
+  },
+  "dilapidated": {
+    "_why": "模型的例句与存量语料重合 63%(g4)。手写三句换场景。",
+    "bank": "ielts",
+    "ipa": "/dɪˈlæpɪdeɪtɪd/",
+    "def_zh": "破旧的；年久失修的",
+    "def_en": "In very bad condition because of age or long neglect.",
+    "examples": [
+      {
+        "collocation": "dilapidated building",
+        "scene": "news",
+        "sentence": "The dilapidated building on the corner will be demolished next month.",
+        "translation_zh": "街角那座破旧的楼房下个月就要拆除了。"
+      },
+      {
+        "collocation": "dilapidated house",
+        "scene": "daily_life",
+        "sentence": "Volunteers repaired the dilapidated house for an elderly couple.",
+        "translation_zh": "志愿者们为一对老夫妇修缮了那栋年久失修的房子。"
+      },
+      {
+        "collocation": "dilapidated condition",
+        "scene": "work",
+        "sentence": "Inspectors reported that the bridge remained in dilapidated condition.",
+        "translation_zh": "检查人员报告说这座桥仍然处于失修状态。"
+      }
+    ]
+  },
+  "duly": {
+    "_why": "副词:模型三句里有两句都以 the 开头,撞 g9(三句首词必须互异)。",
+    "bank": "ielts",
+    "ipa": "/ˈduːli/",
+    "def_zh": "适当地；按时地",
+    "def_en": "In the proper way or at the expected time.",
+    "examples": [
+      {
+        "collocation": "duly noted",
+        "scene": "work",
+        "sentence": "Your complaint has been duly noted by the committee.",
+        "translation_zh": "委员会已经正式记录了你的投诉。"
+      },
+      {
+        "collocation": "duly signed",
+        "scene": "news",
+        "sentence": "All contracts must be duly signed before the deadline passes.",
+        "translation_zh": "所有合同都必须在截止日期前正式签署。"
+      },
+      {
+        "collocation": "duly informed",
+        "scene": "environment",
+        "sentence": "Residents were duly informed about the planned water cuts.",
+        "translation_zh": "居民们已按规定被告知了计划中的停水安排。"
+      }
+    ]
+  },
+  "photocopy": {
+    "_why": "模型的释义写成 \"...made by a photocopier\",photocopier 由 photocop+ier 生成,算目标词的派生形,撞 g12 循环定义。改成不提同根词的写法。",
+    "bank": "ielts",
+    "ipa": "/ˈfoʊtoʊkɑːpi/",
+    "def_zh": "复印件；影印",
+    "def_en": "A duplicate of a document produced by a light-based machine.",
+    "examples": [
+      {
+        "collocation": "photocopy the form",
+        "scene": "work",
+        "sentence": "Please photocopy the form before you hand it in.",
+        "translation_zh": "请在交表之前把表格复印一份。"
+      },
+      {
+        "collocation": "a photocopy of",
+        "scene": "travel",
+        "sentence": "She kept a photocopy of her passport while traveling.",
+        "translation_zh": "她在旅行途中随身带着护照的复印件。"
+      },
+      {
+        "collocation": "make a photocopy",
+        "scene": "education",
+        "sentence": "Students may make a photocopy of any library article.",
+        "translation_zh": "学生可以复印图书馆的任何一篇文章。"
+      }
+    ]
+  },
+  "clubs": {
+    "_why": "词条本身是复数形。模型把搭配写成 nightclubs —— 独立的词,不是 clubs 的搭配(g7)。",
+    "bank": "ielts",
+    "ipa": "/klʌbz/",
+    "def_zh": "俱乐部；社团",
+    "def_en": "Groups of people who meet regularly for a shared interest.",
+    "examples": [
+      {
+        "collocation": "sports clubs",
+        "scene": "health",
+        "sentence": "Sports clubs in the city welcome new members each spring.",
+        "translation_zh": "市里的体育俱乐部每年春天都欢迎新成员加入。"
+      },
+      {
+        "collocation": "book clubs",
+        "scene": "culture",
+        "sentence": "Many readers join book clubs to discuss recent novels.",
+        "translation_zh": "许多读者加入读书会来讨论新近出版的小说。"
+      },
+      {
+        "collocation": "join clubs",
+        "scene": "education",
+        "sentence": "Teachers encourage students to join clubs after regular lessons.",
+        "translation_zh": "老师鼓励学生在正课之后参加社团活动。"
+      }
+    ]
+  },
+  "tributes": {
+    "_why": "词条本身是复数形。模型三句里有两句都以 the 开头,撞 g9。",
+    "bank": "ielts",
+    "ipa": "/ˈtrɪbjuːts/",
+    "def_zh": "悼念；致敬",
+    "def_en": "Words or acts that show respect for someone.",
+    "examples": [
+      {
+        "collocation": "paid tributes",
+        "scene": "culture",
+        "sentence": "Fans paid tributes to the singer outside the concert hall.",
+        "translation_zh": "歌迷们在音乐厅外向这位歌手表达悼念。"
+      },
+      {
+        "collocation": "floral tributes",
+        "scene": "news",
+        "sentence": "Floral tributes covered the steps of the old church.",
+        "translation_zh": "献花铺满了那座老教堂的台阶。"
+      },
+      {
+        "collocation": "tributes poured in",
+        "scene": "daily_life",
+        "sentence": "Messages and tributes poured in from around the world.",
+        "translation_zh": "来自世界各地的留言和悼念纷至沓来。"
+      }
+    ]
+  },
+  "water-skiing": {
+    "_why": "连字符词:模型的例1 只有 8 词,不到 C1 档下限(9-20)。手写时把三句都写够长度。",
+    "bank": "ielts",
+    "ipa": "/ˈwɔːtər ˌskiːɪŋ/",
+    "def_zh": "滑水运动",
+    "def_en": "A sport in which a person is pulled across water on boards.",
+    "examples": [
+      {
+        "collocation": "go water-skiing",
+        "scene": "travel",
+        "sentence": "They go water-skiing on the lake every summer weekend.",
+        "translation_zh": "他们每年夏天的周末都去湖上滑水。"
+      },
+      {
+        "collocation": "water-skiing lessons",
+        "scene": "health",
+        "sentence": "The resort offers water-skiing lessons for complete beginners each morning.",
+        "translation_zh": "度假村每天上午为零基础的初学者开设滑水课程。"
+      },
+      {
+        "collocation": "water-skiing competition",
+        "scene": "news",
+        "sentence": "Local athletes trained hard for the national water-skiing competition.",
+        "translation_zh": "当地运动员为全国滑水比赛刻苦训练。"
+      }
+    ]
+  },
+  "lout": {
+    "_why": "生僻名词→形容词形:模型三轮都写 loutish behavior,名词 lout 一次没出现(g1+g7 双杀)。手写成真的用名词的句子。",
+    "bank": "gre",
+    "ipa": "/laʊt/",
+    "def_zh": "粗鲁的人；莽汉",
+    "def_en": "A rude, clumsy man who behaves badly in public.",
+    "examples": [
+      {
+        "collocation": "a drunken lout",
+        "scene": "news",
+        "sentence": "A drunken lout shouted at the staff outside the bar.",
+        "translation_zh": "一个醉醺醺的莽汉在酒吧外朝店员大喊大叫。"
+      },
+      {
+        "collocation": "acting like a lout",
+        "scene": "daily_life",
+        "sentence": "He apologized for acting like a lout at the party.",
+        "translation_zh": "他为自己在聚会上举止粗鲁而道歉。"
+      },
+      {
+        "collocation": "young louts",
+        "scene": "culture",
+        "sentence": "Police removed several young louts from the football ground.",
+        "translation_zh": "警察把几个撒野的年轻人带离了足球场。"
+      }
+    ]
+  },
+  "caldron": {
+    "_why": "两层问题:① 生僻名词;② **caldron 是 cauldron 的变体拼法**,模型三轮都写更常见的 cauldron,于是句中始终没有目标词(g1)。手写时严格用词条这个拼法。",
+    "bank": "gre",
+    "ipa": "/ˈkɔːldrən/",
+    "def_zh": "大锅；坩埚",
+    "def_en": "A very large pot used for boiling liquid over a fire.",
+    "examples": [
+      {
+        "collocation": "iron caldron",
+        "scene": "culture",
+        "sentence": "An iron caldron hung above the fire in the old kitchen.",
+        "translation_zh": "一口铁制大锅悬在老厨房的炉火上方。"
+      },
+      {
+        "collocation": "caldron of soup",
+        "scene": "daily_life",
+        "sentence": "Workers stirred a caldron of soup for the whole village.",
+        "translation_zh": "工人们搅动着一大锅汤，供全村人食用。"
+      },
+      {
+        "collocation": "bubbling caldron",
+        "scene": "work",
+        "sentence": "Steam rose from the bubbling caldron in the factory yard.",
+        "translation_zh": "蒸汽从工厂院子里那口沸腾的大锅上升腾而起。"
+      }
+    ]
+  },
+  "dolt": {
+    "_why": "生僻名词→形容词形:模型写 doltish behavior,名词本体没出现(g1+g7)。",
+    "bank": "gre",
+    "ipa": "/doʊlt/",
+    "def_zh": "笨蛋；傻瓜",
+    "def_en": "A slow-witted person who fails to understand simple things.",
+    "examples": [
+      {
+        "collocation": "such a dolt",
+        "scene": "daily_life",
+        "sentence": "I felt like such a dolt after forgetting her name.",
+        "translation_zh": "忘了她的名字之后，我觉得自己真是个笨蛋。"
+      },
+      {
+        "collocation": "call him a dolt",
+        "scene": "education",
+        "sentence": "Do not call him a dolt just for one mistake.",
+        "translation_zh": "别因为一个错误就说他是笨蛋。"
+      },
+      {
+        "collocation": "a clumsy dolt",
+        "scene": "culture",
+        "sentence": "The play features a clumsy dolt who ruins every plan.",
+        "translation_zh": "这出戏里有个笨手笨脚的傻瓜，把每个计划都搞砸了。"
+      }
+    ]
+  },
+  "boor": {
+    "_why": "生僻名词→形容词形:模型写 boorish behavior,名词 boor 没出现(g1+g7)。",
+    "bank": "gre",
+    "ipa": "/bʊr/",
+    "def_zh": "粗野的人；无礼之徒",
+    "def_en": "A person with rough manners who ignores how others feel.",
+    "examples": [
+      {
+        "collocation": "such a boor",
+        "scene": "daily_life",
+        "sentence": "Everyone considered him such a boor at the dinner table.",
+        "translation_zh": "餐桌上大家都觉得他这个人非常粗野。"
+      },
+      {
+        "collocation": "an ill-mannered boor",
+        "scene": "work",
+        "sentence": "An ill-mannered boor interrupted the speaker three separate times.",
+        "translation_zh": "一个没有教养的粗人三次打断了发言人。"
+      },
+      {
+        "collocation": "behave like a boor",
+        "scene": "culture",
+        "sentence": "Do not behave like a boor in front of guests.",
+        "translation_zh": "在客人面前别表现得那么粗野。"
+      }
+    ]
+  },
+  "inasmuch as": {
+    "_why": "病因不是生成器出错,是词表里混进了**不能独立成词的半截搭配**:inasmuch 只以 inasmuch as 出现,给半截词写释义本身就是矛盾的,模型怎么写都是错的。所以不是补内容,是把词条原地改名成完整短语再写。⚠️ 同时暴露出闸门只认单词:g1/g7 按单 token 比对,短语词条恒判\"目标词缺席\",已加短语分支。",
+    "bank": "cet6",
+    "rename_from": "inasmuch",
+    "ipa": "/ˌɪnəzˈmʌtʃ əz/",
+    "def_zh": "（正式书面语）因为，鉴于；就……而言",
+    "def_en": "(formal) because of the fact that; to the extent that.",
+    "examples": [
+      {
+        "collocation": "risky inasmuch as",
+        "scene": "work",
+        "sentence": "The plan is risky inasmuch as it relies on a single supplier.",
+        "translation_zh": "该计划有风险，因为它只依赖一家供应商。",
+        "audio_url": "https://audio.bigmooneducation.com/ca/ca0519b784a41a7b0f852847ae3e2e1d1a8347ee9034430abcecabaabdc7c8e0.mp3"
+      },
+      {
+        "collocation": "inasmuch as the evidence",
+        "scene": "academic",
+        "sentence": "Inasmuch as the evidence remains incomplete, the committee has postponed its decision.",
+        "translation_zh": "鉴于证据仍不完整，委员会推迟了决定。",
+        "audio_url": "https://audio.bigmooneducation.com/1c/1ce0c198ddbbc885391d4a69aa3e25c0d049306f30269176a9ae4a55958d9108.mp3"
+      },
+      {
+        "collocation": "matters inasmuch as",
+        "scene": "news",
+        "sentence": "This ruling matters inasmuch as it sets a precedent for future disputes.",
+        "translation_zh": "这项裁决之所以重要，是因为它为今后的纠纷树立了先例。",
+        "audio_url": "https://audio.bigmooneducation.com/53/5330770b0c356852b8229e482fe1ad0acf83ed0a76581682c0535436350d8667.mp3"
+      }
+    ],
+    "audio_url": "https://audio.bigmooneducation.com/52/52f47a1980aaa7cd10ff5bd568778cb7843837d4fe0407f67b55b85cd48b085b.mp3"
   }
 }

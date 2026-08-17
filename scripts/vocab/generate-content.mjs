@@ -95,6 +95,16 @@ const EMIT_ONLY = process.argv.includes('--emit-sql');
 const NO_EMIT = process.argv.includes('--no-emit');
 const DELTA = process.argv.includes('--delta');
 const REVIEW = process.argv.includes('--review');
+const SHARDS = Math.max(1, Number(arg('shards', '1')) || 1);
+/**
+ * `--words=a,b` —— 只给指定的几个词出 SQL(逗号分隔,大小写不敏感)。
+ *
+ * ⚠️ 为什么 --delta 顶不了这个用:--delta 判的是"库里 def_zh 还是空的",
+ *    而**改名**的词在库里是另一个 headword(inasmuch → inasmuch as),
+ *    按新名字去查库根本查不到,delta 会当它不存在而漏掉。
+ *    单词修复走这条,别为了塞进 delta 去动 delta 的判据。
+ */
+const ONLY_WORDS = (arg('words', '') || '').split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
 
 /* ── env ── */
 const ENV = loadEnv(REPO);
@@ -231,6 +241,25 @@ function trapPrimer(word, notes) {
      statistics -> "statistics show" / "official statistics"  NOT "statistical analysis"
      volt       -> "230 volts" / "volts of power"  NOT "high voltage"
      morality   -> "public morality" / "question the morality"  NOT "moral values"`);
+  }
+  /* 生僻名词 → 它的形容词形。gre 那轮 18 个失败里占 6 个,是最集中的一类:
+     hunk→hunky / pith→pithy / lout→loutish / imp→impish / dolt→doltish / boor→boorish。
+     模型觉得形容词形更地道,于是整句都用形容词,名词本体一次都没出现(g1 + g7 双杀)。 */
+  if (/g1 目标词缺席/.test(all)) {
+    out.push(`⚠️ "${word.headword}" itself does not appear in your sentences at all.
+   You are very likely using its ADJECTIVE form instead. That does not count:
+     hunk -> write "a hunk of bread", NOT "a hunky guy"
+     pith -> write "the pith of the argument", NOT "pithy remarks"
+     boor -> write "he is a boor", NOT "boorish behavior"
+   The sentence must contain "${word.headword}" as a word (plural/tense inflection is fine).`);
+  }
+  /* 句长差一点。提示词里本来就写了区间,但模型系统性地写短一两个词;
+     光重试不给具体数字,它下一次还是照写。 */
+  const short = /g2 长度 (\d+) 词,超出 (\d+)-(\d+)/.exec(all);
+  if (short && Number(short[1]) < Number(short[2])) {
+    out.push(`⚠️ Your sentence was ${short[1]} words; the minimum is ${short[2]}.
+   Add one concrete detail (who / where / when / why), do NOT pad with empty filler
+   like "very", "really", "in order to". Count the words before you answer.`);
   }
   return out.length ? `\n\n${out.join('\n\n')}` : '';
 }
@@ -584,6 +613,31 @@ async function emit(results) {
     return;
   }
   let list = Object.values(results);
+  /* ⚠️ --words 的判空要排在下面那条 `!list.length` 前面:它自己会**跨库重新加载**
+     所有 <bank>-content.json,不依赖 results。放在后面的话,不带 --bank 跑时
+     results 恰好是空的,直接被"无内容可出 SQL"截掉,--words 根本没机会执行 ——
+     而且退出码还是 0,看上去像"没什么可出"。踩过一次。 */
+  if (ONLY_WORDS.length) {
+    /* 跨所有库找这几个词 —— 修复目标不一定在 --bank 指定的那个库的 JSON 里 */
+    const merged = new Map();
+    for (const f of readdirSync(GEN).sort()) {
+      if (!f.endsWith('-content.json') || f.includes('trial') || f.includes('before-')) continue;
+      for (const [k, v] of Object.entries(JSON.parse(readFileSync(path.join(GEN, f), 'utf8')))) {
+        if (!merged.has(k)) merged.set(k, v);
+      }
+    }
+    list = ONLY_WORDS.map(w => merged.get(w));
+    const missing = ONLY_WORDS.filter((w, i) => !list[i]);
+    /* ⚠️ 点名要的词一个都不能少:静默少一个就是"出了 SQL 但没修到",
+       而 SQL 照样跑得绿。硬停,别继续。 */
+    if (missing.length) {
+      process.stderr.write(`x --words 指定的词在本地内容里找不到:${missing.join(', ')}\n`);
+      process.exit(2);
+    }
+    process.stdout.write(`· --words:只给 ${list.length} 个词出 SQL(${ONLY_WORDS.join(', ')})\n`);
+    writeSql(list);
+    return;
+  }
   if (!list.length) { process.stdout.write('· 无内容可出 SQL\n'); return; }
   const all = list;
   if (DELTA) {
@@ -620,18 +674,56 @@ async function emit(results) {
 const esc = s => String(s ?? '').replace(/'/g, "''");
 const q = s => (s === null || s === undefined || s === '') ? 'NULL' : `'${esc(s)}'`;
 
+/**
+ * 出 SQL。`--shards=N` 会切成 N 份**各自独立**的文件。
+ *
+ * ⚠️ 切分只能按**词**切,一个词的 3 条例句必须跟它待在同一片 ——
+ *    否则那片的批内断言("本批每个词正好 3 条例句")当场就不成立。
+ * ⚠️ 每片自带 BEGIN/COMMIT 和**只判自己这一片**的断言,所以:
+ *    · 顺序无所谓,单独跑任意一片都成立;
+ *    · 某一片失败只回滚那一片,不影响已跑过的。
+ * ⚠️ 分片一律走这个出口,**别另写一个切分脚本** ——
+ *    2026-08-09 手写的那份增量 SQL 用了 0-based sort_order,违反约束当场被拒。
+ *    只要出口是同一个,这类事故就不可能再发生。
+ */
 function writeSql(list) {
+  if (SHARDS > 1) {
+    const per = Math.ceil(list.length / SHARDS);
+    for (let i = 0; i < SHARDS; i++) {
+      const slice = list.slice(i * per, (i + 1) * per);
+      if (slice.length) writeOneSql(slice, { part: i + 1, of: SHARDS });
+    }
+    return;
+  }
+  writeOneSql(list, null);
+}
+
+function writeOneSql(list, shard) {
   const bank = BANK || 'all';
+  /* 带 _rename_from 的词要先原地改 headword,再走①②。见下面 ⓪ 段的注释。 */
+  const renames = list.filter(w => w._rename_from && w._word_id)
+    .map(w => ({ id: w._word_id, from: String(w._rename_from).toLowerCase(), to: w.headword.toLowerCase() }));
   const wordRows = list.map(w => `  (${q(w.headword.toLowerCase())}, ${q(w.ipa)}, ${q(w.def_zh)}, ${q(w.def_en)})`).join(',\n');
   const exRows = list.flatMap(w =>
     w.examples.map((ex, i) =>
       `  (${q(w.headword.toLowerCase())}, ${i + 1}, ${q(ex.collocation)}, ${q(ex.sentence)}, ${q(ex.translation_zh)}, ${q(ex.scene)})`)
   ).join(',\n');
+  /* 音频:只有**修复通道**会带(内容和音频在同一份 SQL 里进库)。
+     整批灌库时 audio_url 一律是 undefined,下面三段整个不出现,行为和以前一字不差。
+     ⚠️ 为什么不留给 generate-audio.mjs:那支是按**库里已存在的行**找活干的,
+        而这几行此刻还不存在 —— 先跑内容再跑音频就得让 Aaron 跑两趟、中间还得等我。 */
+  const audioWords = list.filter(w => w.audio_url).map(w => [w.headword.toLowerCase(), w.audio_url]);
+  const audioEx = list.flatMap(w => (w.examples || [])
+    .map((ex, i) => [w.headword.toLowerCase(), i + 1, ex.audio_url])
+    .filter(r => r[2]));
   const exCount = list.reduce((n, w) => n + w.examples.length, 0);
 
-  const sql = `-- 词汇内容${DELTA ? '(增量:只补库里还缺释义的词)' : ' batch1'}:${list.length} 词 · ${exCount} 例句
+  const sql = `-- 词汇内容${ONLY_WORDS.length ? '(单词修复)' : DELTA ? '(增量:只补库里还缺释义的词)' : ' batch1'}${shard ? `【第 ${shard.part}/${shard.of} 片】` : ''}:${list.length} 词 · ${exCount} 例句
+${shard ? `-- ⚠️ 本片自带事务与断言,**只判本片这 ${list.length} 个词**;各片互相独立,顺序无所谓,
+--    单独跑任意一片都成立,某片失败只回滚那一片。
+--` : ''}
 -- 生成: node scripts/vocab/generate-content.mjs --bank=${bank} --emit-sql${DELTA ? ' --delta' : ''}
--- 模型: ${list[0]._model || 'gpt-4o-mini'} · 九道机器闸门全过
+-- 来源: ${list.every(w => w._manual) ? '**人工撰写**(模型写不出来的词,见 content-manual.json 里的 _why)' : list[0]._model || 'gpt-4o-mini'} · 九道机器闸门全过
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
 -- 幂等: vocab_words 按 lower(headword) 定位更新;
@@ -650,7 +742,15 @@ ALTER TABLE vocab_examples ADD COLUMN IF NOT EXISTS scene text;
 SELECT 'BEFORE' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
-
+${renames.length ? `
+-- ⓪ 改名:词表里混进了**不能独立成词**的半截固定搭配,原地改成完整短语。
+--    ⚠️ 必须**原地改 headword、保留原 id** —— 新建行会和 vocab_word_banks
+--       的挂载关系断开,那个词就从库里消失了(挂载表按 word_id 关联)。
+--    ⚠️ 改名必须排在①②前面:①②靠 lower(headword) 定位,
+--       先改名它们才认得出这一行。
+${renames.map(r => `UPDATE vocab_words SET headword = ${q(r.to)}, updated_at = now()
+ WHERE id = '${r.id}'::uuid AND lower(headword) IN (${q(r.from)}, ${q(r.to)});   -- ${r.from} → ${r.to}(幂等:跑第二遍是 no-op)`).join('\n')}
+` : ''}
 -- ① 释义 / 音标
 UPDATE vocab_words w
    SET ipa        = v.ipa,
@@ -676,6 +776,22 @@ ON CONFLICT (word_id, sort_order) DO UPDATE
       translation_zh = EXCLUDED.translation_zh,
       scene          = EXCLUDED.scene;
 
+${audioWords.length ? `
+-- ③ 词音频(已按全库定版参数烧好:openai | alloy | speed 1 | accent 空)
+UPDATE vocab_words w SET audio_url = v.audio_url
+  FROM (VALUES
+${audioWords.map(([h, u]) => `  (${q(h)}, ${q(u)})`).join(',\n')}
+  ) AS v(headword, audio_url)
+ WHERE lower(w.headword) = v.headword;
+` : ''}${audioEx.length ? `
+-- ④ 例句音频
+UPDATE vocab_examples e SET audio_url = v.audio_url
+  FROM (VALUES
+${audioEx.map(([h, so, u]) => `  (${q(h)}, ${so}, ${q(u)})`).join(',\n')}
+  ) AS v(headword, sort_order, audio_url)
+  JOIN vocab_words w ON lower(w.headword) = v.headword
+ WHERE e.word_id = w.id AND e.sort_order = v.sort_order;
+` : ''}
 SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
@@ -687,7 +803,7 @@ SELECT 'AFTER' AS stage,
 -- ⚠️ 用 DO + RAISE:断言不过**直接抛异常整笔回滚**,不靠人眼看那几个 t/f。
 DO $gate$
 DECLARE
-  n_missing int; n_badcount int; n_badscene int;
+  n_missing int; n_badcount int; n_badscene int; n_links int; n_noaudio int;
 BEGIN
   SELECT count(*) INTO n_missing
     FROM (VALUES
@@ -712,6 +828,39 @@ ${wordRows}
    WHERE e.scene IS NULL
       OR e.scene NOT IN (${SCENES.map(s => `'${s}'`).join(', ')});
 
+${renames.map(r => `
+  -- 改名核对:${r.from} → ${r.to}
+  --  ⚠️ 光看 headword 改没改**不够**。改名的全部风险在于挂载关系断掉,
+  --     而那个后果在 vocab_words 这张表上完全看不出来 —— 词还在,只是从任何词库里消失了。
+  --     所以必须连 vocab_word_banks 一起验。
+  PERFORM 1 FROM vocab_words WHERE id = '${r.id}'::uuid AND lower(headword) = ${q(r.to)};
+  IF NOT FOUND THEN RAISE EXCEPTION '改名没生效:id ${r.id} 的 headword 不是 ${r.to}'; END IF;
+  SELECT count(*) INTO n_links FROM vocab_word_banks WHERE word_id = '${r.id}'::uuid;
+  IF n_links = 0 THEN RAISE EXCEPTION '改名后 ${r.to} 一个词库都没挂上 —— 挂载关系断了'; END IF;
+  RAISE NOTICE '改名 ${r.from} → ${r.to} 成功,仍挂在 % 个词库上', n_links;`).join('')}
+
+${audioWords.length || audioEx.length ? `
+  -- 音频核对:本批带音频的行必须真的写进去了,且是 CDN 内容寻址路径。
+  -- ⚠️ 判**本批这几行**,不判全表 —— 全表还有别批的行(batch-validate-scope-to-batch)。
+  SELECT count(*) INTO n_noaudio
+    FROM (VALUES
+${audioWords.map(([h]) => `  (${q(h)})`).join(',\n') || "  (NULL)"}
+    ) AS v(headword)
+    JOIN vocab_words w ON lower(w.headword) = v.headword
+   WHERE w.audio_url IS NULL
+      OR w.audio_url !~ '^https://audio\\.bigmooneducation\\.com/[0-9a-f]{2}/[0-9a-f]{64}\\.mp3$';
+  IF n_noaudio > 0 THEN RAISE EXCEPTION '本批有 % 个词的音频没写进去或形态不合法', n_noaudio; END IF;
+
+  SELECT count(*) INTO n_noaudio
+    FROM (VALUES
+${audioEx.map(([h, so]) => `  (${q(h)}, ${so})`).join(',\n') || "  (NULL, NULL)"}
+    ) AS v(headword, sort_order)
+    JOIN vocab_words w ON lower(w.headword) = v.headword
+    JOIN vocab_examples e ON e.word_id = w.id AND e.sort_order = v.sort_order
+   WHERE e.audio_url IS NULL
+      OR e.audio_url !~ '^https://audio\\.bigmooneducation\\.com/[0-9a-f]{2}/[0-9a-f]{64}\\.mp3$';
+  IF n_noaudio > 0 THEN RAISE EXCEPTION '本批有 % 条例句的音频没写进去或形态不合法', n_noaudio; END IF;
+` : ''}
   RAISE NOTICE '本批 ${list.length} 词:缺释义 %,例句数不等于3 %,scene 非法 %',
     n_missing, n_badcount, n_badscene;
 
@@ -729,7 +878,13 @@ COMMIT;
      内容仍然是跨库合成的(vocab_words 全局唯一),但文件名必须唯一 ——
      一律叫 vocab_content_delta.sql 的话,上一轮跑过的那份会被下一轮覆盖,
      谁跑过谁没跑过就分不清了。 */
-  const name = DELTA ? `vocab_content_delta_${bank}.sql` : `vocab_${bank}_content_batch1.sql`;
+  const suffix = shard ? `_part${shard.part}of${shard.of}` : '';
+  /* --words 是**单词修复**,和整批灌库不是一回事,文件名必须分开:
+     叫 vocab_all_content_batch1.sql 的话,和历史上那份"全库首灌"重名,
+     待跑清单上根本分不出哪份是修一个词、哪份是灌几千词。 */
+  const name = ONLY_WORDS.length
+    ? `vocab_fix_${ONLY_WORDS.map(w => w.replace(/[^a-z0-9]+/g, '_')).join('-')}.sql`
+    : DELTA ? `vocab_content_delta_${bank}${suffix}.sql` : `vocab_${bank}_content_batch1${suffix}.sql`;
   const out = path.join(REPO, 'SQLAA', name);
   mkdirSync(path.dirname(out), { recursive: true });
   writeFileSync(out, sql, 'utf8');

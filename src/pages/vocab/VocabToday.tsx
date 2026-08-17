@@ -2,7 +2,18 @@
  * 今日学习(/vocab/today)—— 一键继续,不让用户选模式。
  *
  * 序列由 `todayPlan.buildTodayPlan` 排好:复习 → 错题 → 新词。
- * 每一项用什么题型也由编排层定(复习=英汉选择 / 错题=当初错的那种 / 新词=先看卡再考)。
+ * 每一项用什么题型也由编排层定(复习=按该词进度轮换 / 错题=当初错的那种 / 新词=先看卡再考)。
+ *
+ * ⚠️ 本页**必须能真正出得了轮换表里的每一种题型**(todayPlan.MODE_ROTATION)。
+ *    2026-08-17 之前这里只区分 spell / 非 spell,非 spell 一律"英文词干 + 中文义项选项",
+ *    也就是只有 zh_choice 一种。那时若只在编排层打开轮换,界面出的还是英汉选择、
+ *    写库却记成 listen/en_choice —— **等于替用户记上他没做过的题型**,
+ *    掌握度会凭空达标。所以四个分支是连着渲染一起加的:
+ *      zh_choice  英文词干 → 选中文义项
+ *      en_choice  英文词干 → 选**英文**释义(与 VocabQuiz 的 en_choice 同义,别另立一套)
+ *      listen     只给音频,不显示词干 → 选中文义项(显示词干就成了看词选义,白考)
+ *      spell      中文义项 → 拼出英文
+ *    往 MODE_ROTATION 里加题型前,先在这里加对应分支。
  *
  * ⚠️ **不新建作答/掌握度逻辑**:判分和写库一律走 `vocabMastery.recordAnswer`,
  *    反馈层一律用 `SessionParts.Feedback` —— 这个页面只负责"按顺序把题递出去"。
@@ -11,7 +22,8 @@
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Loader2 } from "lucide-react";
+import { Loader2, Volume2 } from "lucide-react";
+import { playUrl, stopAudio } from "@/lib/vocab/audio";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import WordCard from "@/components/vocab/WordCard";
@@ -91,10 +103,24 @@ export default function VocabToday() {
     return () => { alive = false; };
   }, [cur, reading]);
 
+  /* listen 题:进题自动播一次。
+     ⚠️ 依赖只放 word.id,不放整个 cur —— 放 cur 的话每次 setPicked/setSubmitted
+        触发重渲染都会重播一遍,答完题音频还在响。
+     ⚠️ 离开本题/离开页面要 stopAudio:切到下一题时上一条还在播,
+        用户听到的是上一个词的发音却在看这一题的选项。 */
+  useEffect(() => {
+    if (!cur || reading || cur.mode !== "listen" || !cur.word.audio_url) return;
+    void playUrl(cur.word.audio_url, `w:${cur.word.id}`);
+    return () => stopAudio();
+  }, [cur?.word.id, cur?.mode, reading]);   // eslint-disable-line react-hooks/exhaustive-deps
+
+  /** 这道题的选项用中文义项还是英文释义 —— en_choice 选英文,其余选中文。 */
+  const defMode: "zh" | "en" = cur?.mode === "en_choice" ? "en" : "zh";
+
   /** 选择题的四个选项:答案 + 同库干扰项。与其它模式同一套口径(optionText + dedupeTake)。 */
   const options = useMemo(() => {
     if (!cur || cur.mode === "spell") return [];
-    const answer = optionText(cur.word, "zh");
+    const answer = optionText(cur.word, defMode);
     /* ⚠️ 干扰项必须**按文本**去重、并排除与答案同文的词,不能只按 word_id 排除自己。
      *    托福库里 559 组词的中文首义项完全相同(heritage/legacy、initially/originally…),
      *    只排除 id 的话会出现两个一模一样的选项 —— 学生选了"另一个对的"却被判错,
@@ -102,11 +128,13 @@ export default function VocabToday() {
      *    也就是**迟早必然同框**,不是理论风险。
      * ⚠️ 先 map 成文本再去重,不要先 slice(0,3):先切三个再去重会剩两个。 */
     const texts = shuffle(tasks.map(t => t.word).filter(w => w.id !== cur.word.id))
-      .map(w => optionText(w, "zh"));
+      .map(w => optionText(w, defMode));
     return shuffle([answer, ...dedupeTake(texts, answer, 3)]);
-  }, [cur, tasks]);
+  }, [cur, tasks, defMode]);
 
-  const answer = cur ? optionText(cur.word, "zh") : "";
+  /* ⚠️ spell 的题面永远是**中文**义项(按中文拼出这个词),与 defMode 无关 ——
+     en_choice 那一档换的是"选项",不是"拼写题的提示语"。 */
+  const answer = cur ? optionText(cur.word, cur.mode === "spell" ? "zh" : defMode) : "";
   const correct = cur
     ? (cur.mode === "spell"
       ? typed.trim().toLowerCase() === cur.word.headword.trim().toLowerCase()
@@ -270,9 +298,27 @@ export default function VocabToday() {
               </>
             ) : (
               <>
-                <div className="mb-3 text-[32px] font-bold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>
-                  {cur.word.headword}
-                </div>
+                {cur.mode === "listen" ? (
+                  /* ⚠️ 听音辨义**不能显示词干** —— 显示了就变成看词选义,
+                     考的还是 zh_choice 那件事,却往库里记 listen。
+                     题面只有一个播放键;进题时自动播一次,可以重听。 */
+                  <div className="mb-4 flex flex-col items-center gap-2">
+                    <button type="button" onClick={() => void playUrl(cur.word.audio_url!, `w:${cur.word.id}`)}
+                      aria-label="再听一遍"
+                      className="flex h-16 w-16 items-center justify-center rounded-full text-white"
+                      style={{ backgroundColor: color }}>
+                      <Volume2 className="h-7 w-7" />
+                    </button>
+                    <p className="text-[13px] text-slate-400">听发音,选出词义</p>
+                  </div>
+                ) : (
+                  <div className="mb-3 text-[32px] font-bold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>
+                    {cur.word.headword}
+                  </div>
+                )}
+                {cur.mode === "en_choice" && (
+                  <p className="mb-3 text-[13px] text-slate-400">选出英文释义</p>
+                )}
                 {/* 共用件,短选项自动 2×2。
                     ⚠️ 今日学习**不在 Aaron 那条清单里**(他列的是英汉选择/听音辨义/错题本闯关),
                        但它也是四选一、也有"页面被拉长"这个毛病,单独留一套会让主路径

@@ -94,6 +94,62 @@ async function masteryRowCount(uid: string): Promise<number> {
  * @param correct 对错
  * @param mode    题型(掌握判定要求跨 ≥2 种题型答对过)
  */
+/**
+ * 一次作答之后这一行**应该变成什么** —— 纯函数,不碰库、不碰时间。
+ *
+ * ⚠️ 抽出来的唯一理由是**能测**。掌握度的验收判据("连 4 个当天首次答对 + 2 种题型
+ *    才算掌握""同一天答对 10 次只 +1")全是这段算术的性质,而 recordAnswer 直连
+ *    Supabase,在测试里跑不动。
+ *    在测试里照抄一遍这段算术是**最坏的做法** —— 那等于把状态机实现了第二遍,
+ *    真实现改了测试还绿,和这个文件顶部警告的"各写一套"是同一件事。
+ *    所以是 recordAnswer 调它,测试也调它,只有一份。
+ *
+ * `today` 由调用方传入(北京时区),不在这里取当前时间 —— 取了就没法测跨天。
+ */
+export function nextMasteryState(
+  prev: Pick<MasteryRow, "mastery_level" | "correct_days" | "last_correct_date" | "modes_correct" | "tested_count"> &
+    { review_interval_idx?: number | null } | null,
+  correct: boolean,
+  mode: VocabMode,
+  today: string,
+): Partial<MasteryRow> {
+  const level = prev?.mastery_level ?? 0;
+  const correctDays = prev?.correct_days ?? 0;
+  const modes = new Set((prev?.modes_correct ?? []).filter(Boolean));
+  const tested = prev?.tested_count ?? 0;
+  const idx = prev?.review_interval_idx ?? 0;
+  const firstDayDone = prev?.last_correct_date !== today;   // 当天首次答对?
+
+  if (correct) {
+    // spec 7.2:当天第二次答对**不再**加 level / correct_days,
+    // 否则刷同一个词十遍就"掌握"了;但 modes_correct 仍要并入 —— 换题型答对是有信息量的。
+    const nextIdx = Math.min(idx + 1, REVIEW_INTERVALS.length - 1);
+    modes.add(mode);
+    return {
+      mastery_level: firstDayDone ? Math.min(level + 1, 5) : level,
+      correct_days: firstDayDone ? correctDays + 1 : correctDays,
+      last_correct_date: today,
+      modes_correct: [...modes],
+      tested_count: tested + 1,
+      review_interval_idx: nextIdx,
+      next_review_at: daysFromNow(REVIEW_INTERVALS[nextIdx]),
+    } as Partial<MasteryRow>;
+  }
+  // spec 7.3:-2 是刻意的 —— 惩罚必须大于奖励(+1),
+  // 否则蒙对蒙错各半的词会缓慢爬到"掌握"。
+  // ⚠️ 2026-08-17 规格建议改成 -1(现在的 -2 配合"一天只能 +1",实际难度远超设计意图),
+  //    但那牵涉"掌握"这个词的严肃性,**等 Aaron 拍板,本轮不动**。
+  return {
+    mastery_level: Math.max(level - 2, 0),
+    correct_days: correctDays,
+    last_correct_date: prev?.last_correct_date ?? null,
+    modes_correct: [...modes],
+    tested_count: tested + 1,
+    review_interval_idx: 0,                    // 答错回第一档
+    next_review_at: daysFromNow(REVIEW_INTERVALS[0]),
+  } as Partial<MasteryRow>;
+}
+
 export async function recordAnswer(wordId: string, correct: boolean, mode: VocabMode): Promise<RecordResult> {
   const uid = await currentUserId();
   // 未登录:RLS 本来就拒写(策略绑 auth.uid()),这里提前返回,
@@ -124,41 +180,7 @@ export async function recordAnswer(wordId: string, correct: boolean, mode: Vocab
       }
     }
 
-    const level = prev?.mastery_level ?? 0;
-    const correctDays = prev?.correct_days ?? 0;
-    const modes = new Set((prev?.modes_correct ?? []).filter(Boolean));
-    const tested = prev?.tested_count ?? 0;
-    const idx = prev?.review_interval_idx ?? 0;
-    const firstDayDone = prev?.last_correct_date !== today;   // 当天首次答对?
-
-    let next: Partial<MasteryRow>;
-    if (correct) {
-      // spec 7.2:当天第二次答对**不再**加 level / correct_days,
-      // 否则刷同一个词十遍就"掌握"了;但 modes_correct 仍要并入 —— 换题型答对是有信息量的。
-      const nextIdx = Math.min(idx + 1, REVIEW_INTERVALS.length - 1);
-      modes.add(mode);
-      next = {
-        mastery_level: firstDayDone ? Math.min(level + 1, 5) : level,
-        correct_days: firstDayDone ? correctDays + 1 : correctDays,
-        last_correct_date: today,
-        modes_correct: [...modes],
-        tested_count: tested + 1,
-        review_interval_idx: nextIdx,
-        next_review_at: daysFromNow(REVIEW_INTERVALS[nextIdx]),
-      };
-    } else {
-      // spec 7.3:-2 是刻意的 —— 惩罚必须大于奖励(+1),
-      // 否则蒙对蒙错各半的词会缓慢爬到"掌握"。
-      next = {
-        mastery_level: Math.max(level - 2, 0),
-        correct_days: correctDays,
-        last_correct_date: prev?.last_correct_date ?? null,
-        modes_correct: [...modes],
-        tested_count: tested + 1,
-        review_interval_idx: 0,                    // 答错回第一档
-        next_review_at: daysFromNow(REVIEW_INTERVALS[0]),
-      };
-    }
+    const next = nextMasteryState(prev, correct, mode, today);
 
     const row = {
       user_id: uid,

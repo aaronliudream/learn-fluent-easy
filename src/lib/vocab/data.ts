@@ -78,9 +78,43 @@ export type MasteryRow = {
  * ⚠️ 全板块只此一处实现,仪表盘/成长图/PR-2 的写入侧都引它。
  *    各写一套必然出现"仪表盘说掌握了、复习队列还在推"这种鬼故事。
  */
+export const MASTERY_THRESHOLDS = { level: 4, days: 4, modes: 2 } as const;
+
 export function isMasteredRow(r: Pick<MasteryRow, "mastery_level" | "correct_days" | "modes_correct">): boolean {
   const modes = new Set((r.modes_correct || []).filter(Boolean));
-  return (r.mastery_level ?? 0) >= 4 && (r.correct_days ?? 0) >= 4 && modes.size >= 2;
+  return (r.mastery_level ?? 0) >= MASTERY_THRESHOLDS.level
+    && (r.correct_days ?? 0) >= MASTERY_THRESHOLDS.days
+    && modes.size >= MASTERY_THRESHOLDS.modes;
+}
+
+/** 一条进度:还差什么、差多少。`ok` 单独给出来,UI 直接拿去标红,不自己比大小。 */
+export type MasteryLeg = { have: number; need: number; ok: boolean };
+export type MasteryProgress = {
+  days: MasteryLeg; modes: MasteryLeg; level: MasteryLeg;
+  mastered: boolean;
+};
+
+/**
+ * 掌握进度三条腿 —— 给"我还差什么"用。
+ *
+ * ⚠️ `mastered` **直接调 isMasteredRow**,不在这里按三条腿重新与一遍。
+ *    看着等价,但那就等于把判定实现了第二遍;
+ *    哪天阈值或规则一改(比如加第四条),两处必然漂移,
+ *    出现的正是 isMasteredRow 上面警告的那种鬼故事:进度显示 4/4·2/2 却不标掌握。
+ *    这里只负责**把差距讲清楚**,判定权仍然只有一处。
+ */
+export function masteryProgress(
+  r: Pick<MasteryRow, "mastery_level" | "correct_days" | "modes_correct"> | null | undefined,
+): MasteryProgress {
+  const row = r ?? { mastery_level: 0, correct_days: 0, modes_correct: [] };
+  const modes = new Set((row.modes_correct || []).filter(Boolean));
+  const leg = (have: number, need: number): MasteryLeg => ({ have, need, ok: have >= need });
+  return {
+    days: leg(row.correct_days ?? 0, MASTERY_THRESHOLDS.days),
+    modes: leg(modes.size, MASTERY_THRESHOLDS.modes),
+    level: leg(row.mastery_level ?? 0, MASTERY_THRESHOLDS.level),
+    mastered: isMasteredRow(row),
+  };
 }
 
 /** 当前用户的掌握度行。wordIds 传了就只取那些词(词库页用),不传取全部(中心页用)。 */
@@ -295,6 +329,22 @@ export async function getWordStatusMap(wordIds: string[]): Promise<Record<string
   for (const r of rows) {
     map[r.word_id] = isMasteredRow(r) ? "mastered" : ((r.tested_count ?? 0) > 0 ? "learning" : "new");
   }
+  return map;
+}
+
+/**
+ * 每个词的**掌握进度三条腿** —— 词表里显示"我还差什么"用。
+ *
+ * ⚠️ 与 getWordStatusMap 走同一条数据(listMasteryRows 一次拿完),
+ *    别为了这个再加一轮往返。没有记录的词返回全 0 的进度,不是 undefined ——
+ *    UI 就不用到处判空,也不会出现"有的词有进度条有的没有"。
+ */
+export async function getWordProgressMap(wordIds: string[]): Promise<Record<string, MasteryProgress>> {
+  const map: Record<string, MasteryProgress> = {};
+  for (const id of wordIds) map[id] = masteryProgress(null);
+  const want = new Set(wordIds);
+  const all = await listMasteryRows().catch(fallback("data/getWordProgressMap:listMasteryRows", [] as MasteryRow[]));
+  for (const r of all) if (want.has(r.word_id)) map[r.word_id] = masteryProgress(r);
   return map;
 }
 

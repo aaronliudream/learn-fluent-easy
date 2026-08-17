@@ -24,8 +24,10 @@ import { needsUnlock } from "@/lib/vocab/paywall";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
 import {
   getBankByCode, listBankWords, listExamples, getBankProgress, dueCount, getWordStatusMap,
-  type VocabBank, type VocabWord, type VocabExample, type WordStatus,
+  getWordProgressMap,
+  type VocabBank, type VocabWord, type VocabExample, type WordStatus, type MasteryProgress,
 } from "@/lib/vocab/data";
+import { MasteryLegs } from "@/components/vocab/MasteryLegs";
 
 const ROW_H = 68;        // 折叠行高,与样式里的 h-[68px] 必须一致
 const HEADER_H = 48;      // 组头(无引导文案),与样式里的 h-[48px] 必须一致
@@ -69,6 +71,7 @@ export default function VocabBank() {
   const [bank, setBank] = useState<VocabBank | null>(null);
   const [words, setWords] = useState<VocabWord[]>([]);
   const [statuses, setStatuses] = useState<Record<string, WordStatus>>({});
+  const [progressMap, setProgressMap] = useState<Record<string, MasteryProgress>>({});
   /** null = 这一项**没取到**(不是 0)。渲染层据此画失败态,别再兜底成 0。 */
   const [progress, setProgress] = useState<{ mastered: number; learning: number; untouched: number; total: number } | null>(null);
   const [due, setDue] = useState<number | null>(0);
@@ -89,19 +92,24 @@ export default function VocabBank() {
         /* ⚠️ 与 VocabCenter 同一处病因(第五条:修一处扫全库)——
          *    原来三项各自 `.catch(兜底 0)`,查询挂了和"真的是 0"在 UI 上完全一样。
          *    改 allSettled 保留成败:失败的那一项给 null,由渲染层画失败态。 */
-        const [pr, dr, sr] = await Promise.allSettled([
+        const [pr, dr, sr, gr] = await Promise.allSettled([
           getBankProgress(b.id, b.total_words),
           dueCount(),
           getWordStatusMap(ws.map(w => w.id)),
+          /* 掌握进度三条腿:词表里显示"我还差什么"。
+             与 getWordStatusMap 同源(listMasteryRows 各拿一次),不多一轮往返到库里的词。 */
+          getWordProgressMap(ws.map(w => w.id)),
         ]);
         if (pr.status === "rejected") logFail("VocabBank/getBankProgress", pr.reason);
         if (dr.status === "rejected") logFail("VocabBank/dueCount", dr.reason);
         if (sr.status === "rejected") logFail("VocabBank/getWordStatusMap", sr.reason);
+        if (gr.status === "rejected") logFail("VocabBank/getWordProgressMap", gr.reason);
         if (!alive) return;
         setProgress(pr.status === "fulfilled" ? pr.value : null);
         setDue(dr.status === "fulfilled" ? dr.value : null);
         /* 词表分组取不到 → 全按"待学习"分组,这是无感退化,不做失败态 UI */
         setStatuses(sr.status === "fulfilled" ? sr.value : {});
+        setProgressMap(gr.status === "fulfilled" ? gr.value : {});
         setState("ok");
       } catch (e) {
         logFail("VocabBank/load", e);
@@ -221,7 +229,7 @@ export default function VocabBank() {
               这个词库还没有内容
             </div>
           ) : (
-            <WordList words={words} statuses={statuses} color={color} deepLinkWord={deepLinkWord} />
+            <WordList words={words} statuses={statuses} progressMap={progressMap} color={color} deepLinkWord={deepLinkWord} />
           )}
         </>
       )}
@@ -244,7 +252,7 @@ type Item =
   | { type: "header"; group: WordStatus; label: string; count: number; hint: string }
   | { type: "row"; word: VocabWord; first: boolean };
 
-function WordList({ words, statuses, color, deepLinkWord = "" }: { words: VocabWord[]; statuses: Record<string, WordStatus>; color: string; deepLinkWord?: string }) {
+function WordList({ words, statuses, progressMap, color, deepLinkWord = "" }: { words: VocabWord[]; statuses: Record<string, WordStatus>; progressMap: Record<string, MasteryProgress>; color: string; deepLinkWord?: string }) {
   const [query, setQuery] = useState(deepLinkWord);
   /* 已掌握默认折叠 —— 它只会越来越长,展开会把待学习顶出视野。
    * ⚠️ 但深链进来时必须全展开:目标词如果恰好在"已掌握"组里,
@@ -404,8 +412,21 @@ function WordList({ words, statuses, color, deepLinkWord = "" }: { words: VocabW
                 return (
                   <div key={w.id}>
                     <Row word={w} open={isOpen} first={it.first} color={color}
+                      progress={progressMap[w.id]}
                       onToggle={() => setOpenId(isOpen ? null : w.id)} />
-                    {isOpen && <div ref={panelRef}><ExamplePanel word={w} /></div>}
+                    {isOpen && (
+                      <div ref={panelRef}>
+                        {/* 完整三条腿放展开区 —— 折叠行只给最要紧的一条。
+                            ⚠️ 放在 ExamplePanel **外面**:那个组件在"没有例句"时会提前 return,
+                               塞进去的话没例句的词就看不到自己的进度了。 */}
+                        {progressMap[w.id] && (
+                          <div className="bg-slate-50/60 px-4 pt-2">
+                            <MasteryLegs p={progressMap[w.id]} variant="full" />
+                          </div>
+                        )}
+                        <ExamplePanel word={w} />
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -463,7 +484,7 @@ function GroupHeader({ label, count, hint, collapsed, color, onToggle }: {
   );
 }
 
-function Row({ word, open, first, color, onToggle }: { word: VocabWord; open: boolean; first: boolean; color: string; onToggle: () => void }) {
+function Row({ word, open, first, color, progress, onToggle }: { word: VocabWord; open: boolean; first: boolean; color: string; progress?: MasteryProgress; onToggle: () => void }) {
   const [playing, setPlaying] = useState<string | null>(null);
   useEffect(() => subscribePlaying(setPlaying), []);
   const key = `w:${word.id}`;
@@ -493,6 +514,10 @@ function Row({ word, open, first, color, onToggle }: { word: VocabWord; open: bo
             {firstSense}{hasMore && <span className="text-slate-300"> …</span>}
           </span>
         </span>
+        {/* 「我还差什么」—— 折叠行位置窄,只给最要紧的那一条(完整三条在展开区)。
+            ⚠️ 不改行高:ROW_H=68 与 h-[68px] 是虚拟列表偏移和字母跳转的依据,
+               在这里加一行文字会让两者一起算错。所以塞在同一行、shrink-0。 */}
+        {progress && <MasteryLegs p={progress} variant="chip" className="mr-1" />}
         <ChevronDown className={cn("h-4 w-4 shrink-0 text-slate-300", open && "rotate-180")} style={{ color: open ? color : undefined }} />
       </button>
     </div>

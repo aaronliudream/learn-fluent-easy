@@ -1,1 +1,341 @@
-{}
+{
+  "do chores": {
+    "headword": "do chores",
+    "freq_rank": null,
+    "reasons": [
+      "g5 三句 scene 重复:daily_life / daily_life / daily_life",
+      "g7 第2条搭配 \"do household chores together\" 里没有完整短语 \"do chores\""
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/duː tʃɔrz/",
+      "def_zh": "做家务",
+      "def_en": "To perform household tasks or duties.",
+      "examples": [
+        {
+          "collocation": "do chores",
+          "scene": "daily_life",
+          "sentence": "Children often do chores to help their parents.",
+          "translation_zh": "孩子们常常做家务来帮助父母。"
+        },
+        {
+          "collocation": "do household chores together",
+          "scene": "daily_life",
+          "sentence": "We usually do chores together on weekends.",
+          "translation_zh": "我们通常在周末一起做家务。"
+        },
+        {
+          "collocation": "do chores like cleaning",
+          "scene": "daily_life",
+          "sentence": "She needs to do chores like cleaning her room.",
+          "translation_zh": "她需要做一些家务，比如清理自己的房间。"
+        }
+      ]
+    }
+  },
+  "excuse me": {
+    "headword": "excuse me",
+    "freq_rank": null,
+    "reasons": [
+      "g9 第1句与第2句首词相同(\"excuse\"),句式雷同"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/ɪkˈskjus mi/",
+      "def_zh": "对不起；劳驾",
+      "def_en": "A polite way to get someone's attention or to ask for something.",
+      "examples": [
+        {
+          "collocation": "excuse me, can you help me?",
+          "scene": "daily_life",
+          "sentence": "Excuse me, can you help me with this?",
+          "translation_zh": "对不起，您能帮我一下吗？"
+        },
+        {
+          "collocation": "excuse me, I need to speak to you.",
+          "scene": "work",
+          "sentence": "Excuse me, I need to speak to you about the project.",
+          "translation_zh": "对不起，我需要和您谈谈这个项目。"
+        },
+        {
+          "collocation": "excuse me, may I ask a question?",
+          "scene": "education",
+          "sentence": "Excuse me, may I ask a question about the homework?",
+          "translation_zh": "对不起，我能问一下作业的问题吗？"
+        }
+      ]
+    }
+  },
+  "hold your breath": {
+    "headword": "hold your breath",
+    "freq_rank": null,
+    "reasons": [
+      "例1 g1 目标词缺席:句中找不到短语 \"hold your breath\"(短语词条必须整体出现,不能只用其中半截)",
+      "例2 g1 目标词缺席:句中找不到短语 \"hold your breath\"(短语词条必须整体出现,不能只用其中半截)",
+      "例3 g1 目标词缺席:句中找不到短语 \"hold your breath\"(短语词条必须整体出现,不能只用其中半截)"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/hoʊld jɔʊr brɛθ/",
+      "def_zh": "屏住呼吸",
+      "def_en": "To stop breathing temporarily, usually in anticipation.",
+      "examples": [
+        {
+          "collocation": "hold your breath for a moment",
+          "scene": "daily_life",
+          "sentence": "Children often hold their breath for a moment when swimming.",
+          "translation_zh": "孩子们在游泳时常常屏住呼吸片刻。"
+        },
+        {
+          "collocation": "hold your breath while waiting",
+          "scene": "news",
+          "sentence": "Many people hold their breath while waiting for the results.",
+          "translation_zh": "许多人在等待结果时屏住呼吸。"
+        },
+        {
+          "collocation": "hold your breath during the dive",
+          "scene": "health",
+          "sentence": "Athletes hold their breath during the dive into the water.",
+          "translation_zh": "运动员在跳入水中时屏住呼吸。"
+        }
+      ]
+    }
+  },
+  "in danger": {
+    "headword": "in danger",
+    "freq_rank": null,
+    "reasons": [
+      "g9 第2句与第3句首词相同(\"the\"),句式雷同"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/ɪn ˈdeɪn.dʒər/",
+      "def_zh": "处于危险中",
+      "def_en": "To be at risk of harm or loss.",
+      "examples": [
+        {
+          "collocation": "in danger of extinction",
+          "scene": "environment",
+          "sentence": "Many species are in danger of extinction now.",
+          "translation_zh": "许多物种现在正处于灭绝的危险中。"
+        },
+        {
+          "collocation": "in danger of losing",
+          "scene": "news",
+          "sentence": "The company is in danger of losing its key clients.",
+          "translation_zh": "这家公司正处于失去重要客户的危险中。"
+        },
+        {
+          "collocation": "in danger of collapse",
+          "scene": "work",
+          "sentence": "The old building is in danger of collapse during the storm.",
+          "translation_zh": "这座老建筑在暴风雨中正处于倒塌的危险中。"
+        }
+      ]
+    }
+  },
+  "in tears": {
+    "headword": "in tears",
+    "freq_rank": null,
+    "reasons": [
+      "g7 第1条搭配 \"brought her to tears\" 里没有完整短语 \"in tears\"",
+      "g9 第1句与第3句首词相同(\"the\"),句式雷同"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/ɪn tɪrz/",
+      "def_zh": "哭泣；流泪",
+      "def_en": "To be crying and showing emotional distress.",
+      "examples": [
+        {
+          "collocation": "brought her to tears",
+          "scene": "daily_life",
+          "sentence": "The sad movie left her in tears after watching it.",
+          "translation_zh": "那部悲伤的电影让她看完后哭泣不止。"
+        },
+        {
+          "collocation": "saw him in tears",
+          "scene": "news",
+          "sentence": "Witnesses reported seeing him in tears after the event.",
+          "translation_zh": "目击者报告说他在事件发生后泪流满面。"
+        },
+        {
+          "collocation": "left her in tears",
+          "scene": "culture",
+          "sentence": "The final scene left her in tears, moved by the story.",
+          "translation_zh": "最后一幕让她泪流满面，被故事感动。"
+        }
+      ]
+    }
+  },
+  "look on the bright side": {
+    "headword": "look on the bright side",
+    "freq_rank": null,
+    "reasons": [
+      "例1 g2 长度 13 词,超出 7-12",
+      "例2 g2 长度 15 词,超出 7-12",
+      "g6 第1句与第2句 4-gram 重合 40% (>30%)"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/lʊk ɒn ðə braɪt saɪd/",
+      "def_zh": "乐观；积极看待事物",
+      "def_en": "To be optimistic or see the positive side of a situation.",
+      "examples": [
+        {
+          "collocation": "look on the bright side of life",
+          "scene": "daily_life",
+          "sentence": "When times are tough, try to look on the bright side of life.",
+          "translation_zh": "当生活艰难时，尽量积极看待生活的好的一面。"
+        },
+        {
+          "collocation": "look on the bright side of the situation",
+          "scene": "news",
+          "sentence": "We need to look on the bright side of the situation we are in now.",
+          "translation_zh": "我们需要积极看待现在所处的情况。"
+        },
+        {
+          "collocation": "look on the bright side of things",
+          "scene": "work",
+          "sentence": "In every challenge, you should look on the bright side of things.",
+          "translation_zh": "在每一个挑战中，你都应该积极看待事情。"
+        }
+      ]
+    }
+  },
+  "make a getaway": {
+    "headword": "make a getaway",
+    "freq_rank": null,
+    "reasons": [
+      "例2 g1 目标词缺席:句中找不到短语 \"make a getaway\"(短语词条必须整体出现,不能只用其中半截)",
+      "g7 第2条搭配 \"make a quick getaway\" 里没有完整短语 \"make a getaway\""
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/meɪk ə ˈɡɛtə.weɪ/",
+      "def_zh": "逃跑；逃走",
+      "def_en": "To escape from a place or situation quickly.",
+      "examples": [
+        {
+          "collocation": "make a getaway with cash",
+          "scene": "news",
+          "sentence": "Thieves managed to make a getaway with a large amount of cash.",
+          "translation_zh": "盗贼成功逃走，带走了大量现金。"
+        },
+        {
+          "collocation": "make a quick getaway",
+          "scene": "daily_life",
+          "sentence": "He wanted to make a quick getaway before the police arrived.",
+          "translation_zh": "他想在警察赶到之前迅速逃走。"
+        },
+        {
+          "collocation": "make a getaway car",
+          "scene": "work",
+          "sentence": "The suspect used a stolen car to make a getaway after the robbery.",
+          "translation_zh": "嫌疑人在抢劫后使用一辆 stolen 车辆逃走。"
+        }
+      ]
+    }
+  },
+  "northeastern": {
+    "headword": "northeastern",
+    "freq_rank": null,
+    "reasons": [
+      "def_en 循环定义:释义里出现了目标词本身(\"northeastern\")"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/ˈnɔrθˈiːstərn/",
+      "def_zh": "东北的",
+      "def_en": "Related to the northeastern region of a country or area.",
+      "examples": [
+        {
+          "collocation": "northeastern states",
+          "scene": "news",
+          "sentence": "Many people live in the northeastern states during winter.",
+          "translation_zh": "许多人在冬季住在东北部各州。"
+        },
+        {
+          "collocation": "northeastern region",
+          "scene": "education",
+          "sentence": "Geography studies often cover the northeastern region of the country.",
+          "translation_zh": "地理研究通常涵盖该国的东北地区。"
+        },
+        {
+          "collocation": "northeastern climate",
+          "scene": "daily_life",
+          "sentence": "The northeastern climate can be quite harsh in the winter months.",
+          "translation_zh": "东北的气候在冬季可能相当严酷。"
+        }
+      ]
+    }
+  },
+  "take a shower": {
+    "headword": "take a shower",
+    "freq_rank": null,
+    "reasons": [
+      "g5 三句 scene 重复:daily_life / health / daily_life",
+      "例2 g1 目标词缺席:句中找不到短语 \"take a shower\"(短语词条必须整体出现,不能只用其中半截)",
+      "g7 第2条搭配 \"take a warm shower\" 里没有完整短语 \"take a shower\""
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/teɪk ə ˈʃaʊər/",
+      "def_zh": "洗澡",
+      "def_en": "To wash oneself by using water, typically in a standing position.",
+      "examples": [
+        {
+          "collocation": "take a shower in the morning",
+          "scene": "daily_life",
+          "sentence": "I like to take a shower in the morning.",
+          "translation_zh": "我喜欢早上洗澡。"
+        },
+        {
+          "collocation": "take a warm shower",
+          "scene": "health",
+          "sentence": "After the workout, she decided to take a warm shower.",
+          "translation_zh": "锻炼后，她决定洗个热水澡。"
+        },
+        {
+          "collocation": "take a shower before bed",
+          "scene": "daily_life",
+          "sentence": "He always takes a shower before bed to relax.",
+          "translation_zh": "他总是在睡觉前洗澡以放松。"
+        }
+      ]
+    }
+  },
+  "what about": {
+    "headword": "what about",
+    "freq_rank": null,
+    "reasons": [
+      "g9 第1句与第2句首词相同(\"what\"),句式雷同"
+    ],
+    "at": "gate",
+    "rejected_payload": {
+      "ipa": "/wɑt əˈbaʊt/",
+      "def_zh": "怎么样；如何",
+      "def_en": "To inquire about a situation or suggest a topic for discussion.",
+      "examples": [
+        {
+          "collocation": "what about the weather",
+          "scene": "daily_life",
+          "sentence": "What about the weather for our trip next week?",
+          "translation_zh": "我们下周旅行的天气怎么样？"
+        },
+        {
+          "collocation": "what about your homework",
+          "scene": "education",
+          "sentence": "What about your homework for school tomorrow?",
+          "translation_zh": "你明天上学的作业怎么样？"
+        },
+        {
+          "collocation": "what about the new project",
+          "scene": "work",
+          "sentence": "What about the new project we discussed last week?",
+          "translation_zh": "我们上周讨论的新项目怎么样？"
+        }
+      ]
+    }
+  }
+}

@@ -102,14 +102,36 @@ function cefrFor(word, grade) {
   return junior ? 'B1' : 'B2';                          // 单词:同学段稍难一档
 }
 
+/**
+ * ⚠️ ECDICT 的 exchange 表对几个最常用的不规则动词是**残缺的**,必须补。
+ *    实测:`be` → ["was","is","been","being"] —— **缺 are / am / were**。
+ *    后果是所有 `be + X` 短语(be fond of / be tired of / be used to / be native to)
+ *    的例句写成 "are fond of" 时,g1 一律判"目标词缺席" —— 而句子完全正确。
+ *    英语里最常用的动词,变形表缺了一半,这不是闸门的问题,是数据的问题。
+ * ⚠️ 只补**确凿缺失的形态**,不塞任何"近似形" —— 一旦把不属于该词的形式塞进表,
+ *    g1 就会放行本不该放行的句子,那就是自己给自己开后门。
+ */
+const IRREGULAR_SUPPLEMENT = {
+  be: ['am', 'are', 'were', 'is', 'was', 'been', 'being'],
+  do: ['does', 'did', 'done', 'doing'],
+  have: ['has', 'had', 'having'],
+};
+
 /* ── 屈折表:短语要把**每个组成词**都塞进去 ── */
 const inflections = {};
 let phraseComp = 0;
+const formsFor = w => {
+  const base = EXCHANGE[w] || [];
+  const sup = IRREGULAR_SUPPLEMENT[w];
+  return sup ? [...new Set([...base, ...sup])] : base;
+};
 for (const w of kept) {
-  if (EXCHANGE[w]) inflections[w] = EXCHANGE[w];
+  const f = formsFor(w);
+  if (f.length) inflections[w] = f;
   if (/\s/.test(w)) {
     for (const part of w.split(/\s+/)) {
-      if (EXCHANGE[part] && !inflections[part]) { inflections[part] = EXCHANGE[part]; phraseComp++; }
+      const pf = formsFor(part);
+      if (pf.length && !inflections[part]) { inflections[part] = pf; phraseComp++; }
     }
   }
 }

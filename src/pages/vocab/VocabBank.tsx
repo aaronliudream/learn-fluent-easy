@@ -18,13 +18,13 @@ import BackLink from "@/components/BackLink";
 import WordCard from "@/components/vocab/WordCard";
 import { cn } from "@/lib/utils";
 import StatsPanel from "@/components/vocab/StatsPanel";
-import { logFail } from "@/lib/vocab/report";
+import { fallback, logFail } from "@/lib/vocab/report";
 import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA } from "@/lib/vocab/theme";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
 import {
   getBankByCode, listBankWords, listExamples, getBankProgress, dueCount, getWordStatusMap,
-  getWordProgressMap,
+  getWordProgressMap, listMasteryRows, type MasteryRow,
   type VocabBank, type VocabWord, type VocabExample, type WordStatus, type MasteryProgress,
 } from "@/lib/vocab/data";
 import { MasteryLegs } from "@/components/vocab/MasteryLegs";
@@ -92,13 +92,17 @@ export default function VocabBank() {
         /* ⚠️ 与 VocabCenter 同一处病因(第五条:修一处扫全库)——
          *    原来三项各自 `.catch(兜底 0)`,查询挂了和"真的是 0"在 UI 上完全一样。
          *    改 allSettled 保留成败:失败的那一项给 null,由渲染层画失败态。 */
+        /* ⚠️ 掌握度行**只取一次**,三个消费方共用。
+           它们的数据源是同一张 user_vocab_mastery —— 各自去拉就是同一份数据拉三遍。
+           取不到时给空数组:三个消费方都会降级成"这个库还没开始学",页面照常渲染。 */
+        const rows = await listMasteryRows()
+          .catch(fallback("VocabBank/listMasteryRows", [] as MasteryRow[]));
+        const ids = ws.map(w => w.id);
         const [pr, dr, sr, gr] = await Promise.allSettled([
-          getBankProgress(b.id, b.total_words),
+          getBankProgress(b.id, b.total_words, rows),
           dueCount(),
-          getWordStatusMap(ws.map(w => w.id)),
-          /* 掌握进度三条腿:词表里显示"我还差什么"。
-             与 getWordStatusMap 同源(listMasteryRows 各拿一次),不多一轮往返到库里的词。 */
-          getWordProgressMap(ws.map(w => w.id)),
+          getWordStatusMap(ids, rows),
+          getWordProgressMap(ids, rows),
         ]);
         if (pr.status === "rejected") logFail("VocabBank/getBankProgress", pr.reason);
         if (dr.status === "rejected") logFail("VocabBank/dueCount", dr.reason);

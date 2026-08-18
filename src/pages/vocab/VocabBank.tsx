@@ -23,7 +23,7 @@ import { bankColor, CTA_SHADOW, FONT_SERIF, GRAD_CTA } from "@/lib/vocab/theme";
 import { needsUnlock } from "@/lib/vocab/paywall";
 import { playUrl, subscribePlaying } from "@/lib/vocab/audio";
 import {
-  getBankByCode, listBankWords, listExamples, getBankProgress, dueCount, getWordStatusMap,
+  getBankByCode, listBankWords, listExamples, getBankProgress, dueCountForBank, getWordStatusMap,
   getWordProgressMap, listMasteryRows, type MasteryRow,
   type VocabBank, type VocabWord, type VocabExample, type WordStatus, type MasteryProgress,
 } from "@/lib/vocab/data";
@@ -100,12 +100,18 @@ export default function VocabBank() {
         const ids = ws.map(w => w.id);
         const [pr, dr, sr, gr] = await Promise.allSettled([
           getBankProgress(b.id, b.total_words, rows),
-          dueCount(),
+          /* ⚠️ 必须用 dueCountForBank(b.id),**不是全局的 dueCount()**。
+             全局版数的是这个用户在**所有词库**里到期的词 —— 于是中考库页面会一边显示
+             「还没开始学这个词库 · 未开始 100%」,一边显示「有 192 个词到复习时间」,
+             而那 192 个全在托福/六级/雅思/考研/GRE,中考库一个都没有。
+             两个数字在同一屏里互相矛盾,用户只会觉得数据是坏的。
+             按库过滤的函数一直都在,这里只是调错了。 */
+          dueCountForBank(b.id),
           getWordStatusMap(ids, rows),
           getWordProgressMap(ids, rows),
         ]);
         if (pr.status === "rejected") logFail("VocabBank/getBankProgress", pr.reason);
-        if (dr.status === "rejected") logFail("VocabBank/dueCount", dr.reason);
+        if (dr.status === "rejected") logFail("VocabBank/dueCountForBank", dr.reason);
         if (sr.status === "rejected") logFail("VocabBank/getWordStatusMap", sr.reason);
         if (gr.status === "rejected") logFail("VocabBank/getWordProgressMap", gr.reason);
         if (!alive) return;

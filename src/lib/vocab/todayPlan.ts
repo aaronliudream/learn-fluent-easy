@@ -164,22 +164,70 @@ export function pickMode(
   correctDays: number,
   doneModes: Iterable<string>,
   supports: { audio: boolean; defEn: boolean },
+  opts: { allowed?: readonly VocabMode[] } = {},
 ): VocabMode {
   const done = new Set([...doneModes].filter(Boolean));
+  /**
+   * `allowed` —— **调用页面真的出得了哪几种题型**。
+   *
+   * ⚠️ 存在的理由和 MODE_ROTATION 上面那段是同一件事:选了一个页面渲染不了的题型,
+   *    界面出的还是老样子、库里却记成新题型,**等于替用户记上他没做过的题型**。
+   *    今日学习四种全能出,所以不传;错题本只做选择题(见 VocabMistakes 注释),
+   *    只能传 ['zh_choice','en_choice']。
+   * ⚠️ 别为此在错题本那边另写一份挑题型的逻辑 —— 两处各写一份必然分叉,
+   *    isMasteredRow 那条注释警告的就是这件事。这里加一个参数就够了。
+   */
+  const pool = (opts.allowed && opts.allowed.length ? opts.allowed : MODE_ROTATION)
+    .filter(m => MODE_ROTATION.includes(m));
   const usable = (m: VocabMode) =>
     (m !== "listen" || supports.audio) && (m !== "en_choice" || supports.defEn);
 
   /* ① 先按天数取对应档位;没答对过且这个词支持,就用它 */
-  const preferred = MODE_ROTATION[Math.min(Math.max(0, correctDays), MODE_ROTATION.length - 1)];
-  if (!done.has(preferred) && usable(preferred)) return preferred;
+  const preferred = pool[Math.min(Math.max(0, correctDays), pool.length - 1)];
+  if (preferred && !done.has(preferred) && usable(preferred)) return preferred;
 
   /* ② 否则从表里挑第一个「还没答对过 + 支持」的 —— 这才是真正解开第三条的那一步 */
-  const fresh = MODE_ROTATION.find(m => !done.has(m) && usable(m));
+  const fresh = pool.find(m => !done.has(m) && usable(m));
   if (fresh) return fresh;
 
   /* ③ 全都答对过了(或都不支持):回到最轻的英汉选择。
      此时 modes.size 早已 ≥2,第三条不再是瓶颈,出什么都不影响掌握判定。 */
-  return "zh_choice";
+  return pool.includes("zh_choice") ? "zh_choice" : pool[0];
+}
+
+/**
+ * 错题本只出得了**选择题**:`buildQuestions` 就 zh / en 两档,
+ * listen / spell 的交互那个页面根本没有。
+ * ⚠️ 往这里加题型之前,先去 VocabMistakes 实现对应交互 ——
+ *    否则界面照出选择题、库里记 listen,又是"替用户记上他没做过的题型"。
+ */
+export const MISTAKE_ALLOWED: readonly VocabMode[] = ["zh_choice", "en_choice"];
+
+/**
+ * 错题本该出哪种题型 —— **两段式**:先补短板,补回来了再轮换。
+ *
+ * 由来(2026-08-18 库内实证):某用户轮换上线后又学了 41 个词,modes_correct 仍只有
+ * zh_choice —— 那 41 个全在错题本里。错题本一律按 last_wrong_mode 出题,
+ * 错在 zh_choice 就永远只考 zh_choice,`modes` 永远 =1,掌握第三条**永远为假**;
+ * 有的词 tested_count 已经到 6,掌握数仍是 0。
+ * **不是轮换坏了,是这条路径本身没有出口。**
+ *
+ * ⚠️ 抽成函数是为了让**页面和测试用同一份实现**。
+ *    写在页面里、测试里再照抄一遍的话,页面改了测试照样绿 ——
+ *    isMasteredRow 那条注释警告的就是这件事。
+ */
+export function pickMistakeMode(
+  wrongMode: string | null | undefined,
+  doneModes: Iterable<string>,
+  correctDays: number,
+  supports: { audio: boolean; defEn: boolean },
+): VocabMode {
+  const wrong = normalizeMode(wrongMode);
+  const done = new Set([...doneModes].filter(Boolean));
+  /* ① 当初错的那种还没重新答对 → 先补短板("错哪练哪"的初衷不能丢) */
+  if (!done.has(wrong) && MISTAKE_ALLOWED.includes(wrong)) return wrong;
+  /* ② 补回来了 → 轮换。复用今日学习那套判据,只是把可选范围收窄到本页出得了的两种。 */
+  return pickMode(correctDays, done, supports, { allowed: MISTAKE_ALLOWED });
 }
 
 /** 错题本里记的模式 → 本模块的 VocabMode。认不出就退回最快的英汉选择。 */

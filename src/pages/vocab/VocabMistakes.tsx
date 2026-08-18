@@ -24,10 +24,12 @@ import { startTracking } from "@/lib/vocab/timeTracker";
 import { buildQuestions, optionText, type QuizQuestion } from "@/lib/vocab/quiz";
 import { OptionGrid } from "@/components/vocab/OptionGrid";
 import { recordAnswer, type VocabMode } from "@/lib/vocab/vocabMastery";
+import { MISTAKE_ALLOWED, pickMistakeMode, supportsOf } from "@/lib/vocab/todayPlan";
 import { AnonNote, Feedback, Progress, QuotaModal } from "@/components/vocab/SessionParts";
 import { HardestWords } from "@/components/vocab/Incentive";
 import {
   listMistakes, getWordsByIds, listBankWordsSample, getBankByCode, currentUserId,
+  listMasteryRows, type MasteryRow,
   type MistakeRow, type VocabWord,
 } from "@/lib/vocab/data";
 
@@ -104,15 +106,33 @@ export default function VocabMistakes() {
    *    即使数据没到也要显示"正在出题"而不是假装没被点。
    */
   const [starting, setStarting] = useState(false);
+  /** 每个词的掌握度行 —— 轮换要知道"这个词已经答对过哪几种题型"。 */
+  const [mastery, setMastery] = useState<Map<string, MasteryRow>>(new Map());
+  /**
+   * 本轮**实际出的**题型,按 word_id。
+   * ⚠️ 必须记下来,不能在 choose() 里再算一遍:
+   *    改造前 defMode 是拿 targets[0] 的 last_wrong_mode 定的、**整轮共用**,
+   *    而 choose() 又按**每个词自己**的 last_wrong_mode 记库 ——
+   *    第一个词是中译英、第四个词的 last_wrong_mode 是 en_choice 时,
+   *    界面出的是中文选项,库里却记了 en_choice。**这就是"替用户记上他没做过的题型"**,
+   *    和上一轮在今日学习那边抓到的是同一个 bug,只是这边一直没人看。
+   */
+  const [roundModes, setRoundModes] = useState<Map<string, VocabMode>>(new Map());
   const [slow, setSlow] = useState(false);          // 超 1.5s 才补一句进度提示
   /** 首次 load 的在飞 promise —— 点击时 await 它,而不是"没数据就 return"。 */
   const loadingRef = useRef<Promise<void> | null>(null);
 
   const load = useCallback(async () => {
     try {
-      const [list, uid] = await Promise.all([listMistakes(), currentUserId()]);
+      const [list, uid, mrows] = await Promise.all([
+        listMistakes(), currentUserId(),
+        /* 取不到就当"这些词一种题型都没答对过" —— 那会让轮换退回 last_wrong_mode,
+           也就是改造前的行为,是**安全降级**;但不能静默,留一行日志。 */
+        listMasteryRows().catch(e => { console.log("[错题本] ✗ 取掌握度失败,本轮不轮换题型", e); return [] as MasteryRow[]; }),
+      ]);
       setAnon(!uid);
       setRows(list);
+      setMastery(new Map(mrows.map(r => [r.word_id, r])));
       if (list.length) {
         /* 干扰项要从**整个词库**抽,不能只从错题里抽 ——
          * 只从错题抽的话,选项全是自己做错过的词,难度失真且很快就眼熟。 */
@@ -194,14 +214,43 @@ export default function VocabMistakes() {
     if (!targets.length) return;
     /* ⚠️ 出题时就记,不等答完 —— 用户中途退出重进也算测过,否则又会从头重复。 */
     setSessionTested(nextTested);
-    /* 题型优先 last_wrong_mode:在哪种题型上栽的就在哪种上补。
-     * ⚠️ 目前闯关只实现了选择型(zh/en),listen/spell/match 的交互不同,
-     *    落到 zh_choice 兜底。这不是偷懒 —— 把四种交互塞进闯关会让
-     *    "达 6 解锁"的口径在不同题型间不可比,先统一在选择型上跑通。 */
-    const wrongMode = byWordId.get(targets[0].id)?.last_wrong_mode ?? "zh_choice";
-    const defMode: "zh" | "en" = wrongMode === "en_choice" ? "en" : "zh";
-    const built = buildQuestions(pool.length ? pool : ordered, targets, defMode);
+    /**
+     * 题型:先补短板,补回来了再轮换。
+     *
+     * ⚠️ 原来一律用 last_wrong_mode。对**只用错题本**的用户,这条路没有出口:
+     *    错在 zh_choice → 永远只考 zh_choice → modes_correct 永远只有一种 →
+     *    掌握的第三条(≥2 种题型)**永远为假**。实测有用户同一个词答对 6 次、
+     *    掌握数仍是 0。所以规则改成两段:
+     *      · last_wrong_mode 还**不在** modes_correct 里 → 继续出它(短板还没补回来)
+     *      · 已经在里面了 → 交给 pickMode 轮换(**复用今日学习那套,不另写一份判据**)
+     *
+     * ⚠️ `allowed` 只给选择型两种:**这个页面只出得了选择题**(buildQuestions 就两档 zh/en),
+     *    listen/spell 的交互这里根本没有。不限制的话就会选出一个渲染不了的题型,
+     *    界面照出选择题、库里记 listen —— 又是"替用户记上他没做过的题型"。
+     *    要放开就得先在这里实现对应交互,和今日学习那次一样。
+     */
+    const modeFor = (w: VocabWord): VocabMode => {
+      const m = mastery.get(w.id);
+      /* ⚠️ 规则本体在 todayPlan.pickMistakeMode —— **页面不自己实现一份**,
+         否则单测里那份和这里这份会各走各的,页面改坏了测试还绿。 */
+      return pickMistakeMode(
+        byWordId.get(w.id)?.last_wrong_mode,
+        m?.modes_correct ?? [],
+        m?.correct_days ?? 0,
+        supportsOf(w),
+      );
+    };
+
+    /* ⚠️ buildQuestions 一次只吃一个 defMode,所以按题型**分组各建一批**,
+       不能拿第一个词的题型套整轮 —— 那正是渲染与记库对不上的来源。 */
+    const chosen = new Map<string, VocabMode>(targets.map(w => [w.id, modeFor(w)]));
+    const src = pool.length ? pool : ordered;
+    const built = (["zh", "en"] as const).flatMap(dm => {
+      const group = targets.filter(w => (chosen.get(w.id) === "en_choice" ? "en" : "zh") === dm);
+      return group.length ? buildQuestions(src, group, dm) : [];
+    });
     if (!built.length) return;
+    setRoundModes(chosen);
     setQs(built); setIdx(0); setPicked(null); setRoundCorrect(0);
     setRoundNo(nextRoundNo); setRoundOver(false); setPlaying(true);
     try { topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } catch { /* 老 webview 忽略 */ }
@@ -214,9 +263,11 @@ export default function VocabMistakes() {
     const ok = i === q.answerIndex;
     if (ok) { setRoundCorrect(c => c + 1); setTotalCorrect(c => c + 1); }
     setTotalDone(n => n + 1);
-    const mode: VocabMode = (byWordId.get(q.word.id)?.last_wrong_mode as VocabMode) ?? "zh_choice";
+    /* ⚠️ 记**本轮真的出给他的那种题型**,不是再按 last_wrong_mode 算一遍。
+       两处各算一次必然分叉,而分叉的后果是往库里写一个用户没做过的题型。 */
+    const mode: VocabMode = roundModes.get(q.word.id) ?? "zh_choice";
     // 判定内核在 vocabMastery,这里只喂一次作答;连对/移出由它算
-    const r = await recordAnswer(q.word.id, ok, mode === "en_choice" ? "en_choice" : "zh_choice");
+    const r = await recordAnswer(q.word.id, ok, mode);
     if (r.quotaBlocked) setQuotaHit(true);
   }
 

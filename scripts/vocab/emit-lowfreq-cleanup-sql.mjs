@@ -14,6 +14,10 @@
  *
  * 用法:node scripts/vocab/emit-lowfreq-cleanup-sql.mjs
  * 产出:SQLAA/vocab_cleanup_lowfreq_paid_banks.sql
+ *
+ * ⚠️ 2026-08-17 那一版**已经跑过**,归档成了 DONE_vocab_cleanup_lowfreq_paid_banks.sql。
+ *    再跑这个脚本会重新生成一份**不带 DONE_ 前缀**的同名文件,和归档件并排躺在 SQLAA/ ——
+ *    待跑清单只看无前缀的,所以那会凭空多出一份"待跑"。要改口径请连带处理归档件。
  */
 import { writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';

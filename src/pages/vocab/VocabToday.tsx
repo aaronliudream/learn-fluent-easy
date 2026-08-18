@@ -23,7 +23,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Loader2, Volume2 } from "lucide-react";
-import { playUrl, stopAudio } from "@/lib/vocab/audio";
+import { playUrl, stopAudio, unlockAudio } from "@/lib/vocab/audio";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
 import WordCard from "@/components/vocab/WordCard";
@@ -65,6 +65,8 @@ export default function VocabToday() {
   const [submitted, setSubmitted] = useState(false);
   const [right, setRight] = useState(0);
   const [quotaHit, setQuotaHit] = useState(false);
+  /** listen 题的音频被自动播放策略拦了 —— 要给用户一个可点的提示,不能静默。 */
+  const [audioBlocked, setAudioBlocked] = useState(false);
   /** 结算页的两个数。**字段 null = 那一项没取到**(渲染成「—」),不是 0。 */
   const [doneInfo, setDoneInfo] = useState<{ dueTomorrow: number | null; streak: number | null } | null>(null);
   const wrote = useRef<Set<number>>(new Set());
@@ -110,7 +112,11 @@ export default function VocabToday() {
         用户听到的是上一个词的发音却在看这一题的选项。 */
   useEffect(() => {
     if (!cur || reading || cur.mode !== "listen" || !cur.word.audio_url) return;
-    void playUrl(cur.word.audio_url, `w:${cur.word.id}`);
+    setAudioBlocked(false);
+    /* ⚠️ 接住 blocked:听音辨义的题面**只有一个播放键、没有词干**,
+       放不出声就等于这道题没法答。静默吞掉的话用户只看到一个不出声的圆钮,
+       不知道是该点它、还是页面坏了。 */
+    void playUrl(cur.word.audio_url, `w:${cur.word.id}`).then(r => setAudioBlocked(r === "blocked"));
     return () => stopAudio();
   }, [cur?.word.id, cur?.mode, reading]);   // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -143,6 +149,11 @@ export default function VocabToday() {
 
   async function submit(choice?: string) {
     if (!cur || submitted) return;
+    /* ⚠️ 在**用户手势的调用栈里同步**解锁音频。放这里是因为它是最早、也最必然发生的手势:
+       第一题不管什么题型,用户总要答。解锁一次之后,后面每一题的自动播放都放行 ——
+       而且必须是同一个 <audio> 元素才算数(见 audio.ts 顶部注释)。
+       ⚠️ 别挪进 setTimeout / await 之后:策略看的是调用栈是否源于手势,延迟调用一样被拒。 */
+    unlockAudio();
     if (cur.mode !== "spell") setPicked(choice ?? null);
     setSubmitted(true);
     const ok = cur.mode === "spell"
@@ -267,7 +278,7 @@ export default function VocabToday() {
           <div className="rounded-2xl border border-black/[0.06] bg-white p-5">
             <WordCard word={cur.word} examples={examples} />
           </div>
-          <button onClick={() => setReading(false)}
+          <button onClick={() => { unlockAudio(); setReading(false); }}
             className="mt-4 w-full rounded-2xl px-5 py-4 text-[17px] font-semibold text-white"
             style={{ backgroundImage: GRAD_CTA, boxShadow: CTA_SHADOW }}>
             记住了,考我
@@ -303,13 +314,23 @@ export default function VocabToday() {
                      考的还是 zh_choice 那件事,却往库里记 listen。
                      题面只有一个播放键;进题时自动播一次,可以重听。 */
                   <div className="mb-4 flex flex-col items-center gap-2">
-                    <button type="button" onClick={() => void playUrl(cur.word.audio_url!, `w:${cur.word.id}`)}
+                    <button type="button"
+                      onClick={() => {
+                        unlockAudio();
+                        void playUrl(cur.word.audio_url!, `w:${cur.word.id}`).then(r => setAudioBlocked(r === "blocked"));
+                      }}
                       aria-label="再听一遍"
                       className="flex h-16 w-16 items-center justify-center rounded-full text-white"
                       style={{ backgroundColor: color }}>
                       <Volume2 className="h-7 w-7" />
                     </button>
-                    <p className="text-[13px] text-slate-400">听发音,选出词义</p>
+                    {/* ⚠️ 浏览器不允许"完全没交互过就播有声音频",这是策略不是 bug,
+                        代码绕不过去(unlockAudio 也要有一次手势才生效)。
+                        这种时候必须**明说要点一下**:这道题只有播放键、没有词干,
+                        不出声 = 没法答,而用户看不出是该点它还是页面坏了。 */}
+                    <p className={cn("text-[13px]", audioBlocked ? "font-medium text-amber-700" : "text-slate-400")}>
+                      {audioBlocked ? "点上面的按钮播放" : "听发音,选出词义"}
+                    </p>
                   </div>
                 ) : (
                   <div className="mb-3 text-[32px] font-bold leading-tight text-slate-900" style={{ fontFamily: FONT_SERIF }}>

@@ -125,21 +125,27 @@ export async function listMasteryRows(wordIds?: string[]): Promise<MasteryRow[]>
    *    之前没 select,于是那条系列恒为 0,新用户的图永远全空。 */
   const cols = "word_id,mastery_level,correct_days,last_correct_date,modes_correct,tested_count,first_learned_date";
   const out: MasteryRow[] = [];
-  if (wordIds && wordIds.length) {
-    for (let i = 0; i < wordIds.length; i += 200) {
-      const { data, error } = await db.from("user_vocab_mastery").select(cols)
-        .eq("user_id", uid).in("word_id", wordIds.slice(i, i + 200));
-      if (error) throw error;
-      out.push(...((data || []) as MasteryRow[]));
-    }
-    return out;
-  }
+  /**
+   * ⚠️ **不按 wordIds 分批查**。原来是 200 一批、**串行** ——
+   *    托福 4,469 词就是 23 次往返,而每次查询本身只要 30ms(Aaron 库内实测,索引全命中)。
+   *    慢的不是数据库,是往返次数;加索引解决不了这个。
+   *
+   *    正确的方向是**从"用户的少量记录"出发,而不是从"词库的全量词"出发**:
+   *    一个用户的掌握度行最多几百条(免费额度 200 行,重度用户实测 710),
+   *    一次翻页拿完再在内存里筛,是 1 次往返。
+   *    没记录的词天然是"没学过",不需要为它们跑查询。
+   *    getWordStatusMap 早就是这么干的(它那段注释写着同一件事),
+   *    但 listMasteryRows 自己这条分支漏了 —— 第五条,修一处要扫全库。
+   *
+   * ⚠️ 唯一的调用方是成长图(VocabGrowth 传 4,469 个 id)。
+   */
+  const want = wordIds && wordIds.length ? new Set(wordIds) : null;
   for (let from = 0; ; from += PAGE) {
     const { data, error } = await db.from("user_vocab_mastery").select(cols)
       .eq("user_id", uid).range(from, from + PAGE - 1);
     if (error) throw error;
     const rows = (data || []) as MasteryRow[];
-    out.push(...rows);
+    out.push(...(want ? rows.filter(r => want.has(r.word_id)) : rows));
     if (rows.length < PAGE) return out;
   }
 }
@@ -214,20 +220,44 @@ export function clearBankWordsCache() { bankWordsCache.clear(); }
 export async function listBankWords(bankId: string): Promise<VocabWord[]> {
   const hit = bankWordsCache.get(bankId);
   if (hit) return hit;
-  const ids = await bankWordIds(bankId);
-  if (!ids.length) return [];
-  const out: VocabWord[] = [];
-  // in.(...) 分片,避免 URL 过长
-  for (let i = 0; i < ids.length; i += 200) {
-    const slice = ids.slice(i, i + 200);
-    const { data, error } = await db
-      .from("vocab_words")
-      .select("id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url")
-      .in("id", slice)
-      .not("def_zh", "is", null);
-    if (error) throw error;
-    out.push(...((data || []) as VocabWord[]));
+  /**
+   * ⚠️ 原来是"先 bankWordIds 翻页拿 4,469 个 id,再 200 个一片 `in.(...)` **串行**查详情"
+   *    —— 5 + 23 = 28 次往返,而且**全部阻塞首屏**。
+   *    Aaron 库内实测单条查询 30ms、索引全命中(vwb_bank_idx / vocab_words_pkey),
+   *    所以慢的不是 DB,是往返次数 —— 加索引解决不了。
+   *
+   * 改成**内连接一次查到底**(与 todayPlan.buildTodayPlan 同一写法),
+   * 并把翻页从串行改成"第一页拿总数 → 其余页并发":4,469 词从 28 次串行降到 2 个来回。
+   * ⚠️ 内连接会在每行挂一个 `vocab_word_banks` 字段,必须剥掉 ——
+   *    这个数组会被缓存、被 pickTargets 抽题、被序列化,带着一个多余字段到处跑迟早出事。
+   */
+  const SELECT = "id,headword,ipa,pos,def_zh,def_en,freq_rank,audio_url";
+  const strip = (rows: unknown[]): VocabWord[] =>
+    (rows as (VocabWord & { vocab_word_banks?: unknown })[])
+      .map(({ vocab_word_banks: _ignored, ...w }) => w as VocabWord);
+
+  const page = (from: number, withCount: boolean) => db
+    .from("vocab_words")
+    .select(`${SELECT},vocab_word_banks!inner(bank_id)`, withCount ? { count: "exact" } : undefined)
+    .eq("vocab_word_banks.bank_id", bankId)
+    .not("def_zh", "is", null)
+    .range(from, from + PAGE - 1);
+
+  const first = await page(0, true);
+  if (first.error) throw first.error;
+  const out: VocabWord[] = strip(first.data || []);
+  const total = first.count ?? out.length;
+  if (total > PAGE) {
+    /* 其余页**并发**发出去 —— 顺序无所谓,下面反正要按 byLearnOrder 重排。 */
+    const rest = await Promise.all(
+      Array.from({ length: Math.ceil(total / PAGE) - 1 }, (_, i) => page((i + 1) * PAGE, false)),
+    );
+    for (const r of rest) {
+      if (r.error) throw r.error;
+      out.push(...strip(r.data || []));
+    }
   }
+  if (!out.length) return [];
   /* ⚠️ 不是纯按 freq_rank:**虚词沉到末尾**(Aaron 2026-08-10 定,见 functionWords.ts)。
      这个列表既是浏览词表,也是 `pickTargets` 抽题的池子 —— 它按顺序取前 N 个当本轮目标词,
      所以这一行同时决定了"闯关先考哪些词"。不改这里的话,中考库前几关全在考 the / of / a。 */
@@ -272,7 +302,12 @@ export async function listExamplesFor(wordIds: string[]): Promise<Record<string,
  * ⚠️ 判定口径在这里只读不写;写入侧(PR-2 的 vocabMastery.ts)必须算出同一结果。
  *    两边不一致会出现"仪表盘说掌握了、复习队列还在推"这种鬼故事。
  */
-export async function getBankProgress(bankId: string, fallbackTotal: number): Promise<BankProgress> {
+/* ⚠️ `prefetched`:调用方已经取过掌握度行时传进来,避免同一次页面加载里重复拉。
+   VocabBank 一次加载要算「汇总 + 分组状态 + 进度三条腿」三件事,
+   它们的数据源是同一张表 —— 不传的话就是同一份数据拉三遍。
+   做成参数而不是模块级缓存:掌握度每答一题都在变,缓存它迟早喂旧数据出去
+   (bankWordsCache 上面那句"不缓存任何用户状态"就是这个道理)。 */
+export async function getBankProgress(bankId: string, fallbackTotal: number, prefetched?: MasteryRow[]): Promise<BankProgress> {
   const uid = await currentUserId();
   const ids = await bankWordIds(bankId);
   /* ⚠️ 分母用**实际挂在这个库下的词数**,不用 vocab_banks.total_words。
@@ -283,17 +318,13 @@ export async function getBankProgress(bankId: string, fallbackTotal: number): Pr
   if (!uid) return { mastered: 0, learning: 0, untouched: total, total };
   if (!ids.length) return { mastered: 0, learning: 0, untouched: total, total };
 
-  type Row = { word_id: string; mastery_level: number; correct_days: number; modes_correct: string[] | null; tested_count: number };
-  const rows: Row[] = [];
-  for (let i = 0; i < ids.length; i += 200) {
-    const { data, error } = await db
-      .from("user_vocab_mastery")
-      .select("word_id,mastery_level,correct_days,modes_correct,tested_count")
-      .eq("user_id", uid)
-      .in("word_id", ids.slice(i, i + 200));
-    if (error) throw error;
-    rows.push(...((data || []) as Row[]));
-  }
+  /* ⚠️ 同样**不按 wordIds 分批查** —— 原来 200 一批串行,托福就是 23 次往返。
+     这是第三处同病(前两处:listBankWords、listMasteryRows 的 wordIds 分支)。
+     一次拿完用户自己那几百行再在内存里筛,1 次往返。 */
+  const want = new Set(ids);
+  const all = prefetched
+    ?? await listMasteryRows().catch(fallback("data/getBankProgress:listMasteryRows", [] as MasteryRow[]));
+  const rows = all.filter(r => want.has(r.word_id));
 
   let mastered = 0, learning = 0;
   for (const r of rows) {
@@ -312,7 +343,7 @@ export type WordStatus = "new" | "learning" | "mastered";
  * 未登录 → 全部 new(零数据时所有词都在"待学习"组,这是预期形态不是异常)。
  * ⚠️ 掌握判定复用 isMasteredRow,不在这里另写一套。
  */
-export async function getWordStatusMap(wordIds: string[]): Promise<Record<string, WordStatus>> {
+export async function getWordStatusMap(wordIds: string[], prefetched?: MasteryRow[]): Promise<Record<string, WordStatus>> {
   const map: Record<string, WordStatus> = {};
   if (!wordIds.length) return map;
   /* ⚠️ 不要按 wordIds 分批查 —— 那是 4470 个 id / 200 一批 = 23 次往返,
@@ -324,7 +355,8 @@ export async function getWordStatusMap(wordIds: string[]): Promise<Record<string
   /* ⚠️ 取不到就当"全是新词"是**正确降级**(页面照常能用),但绝不能悄悄降级:
    *    掌握度整个取不到时,词表会把已掌握的词全画成"待学习",
    *    用户看到的是"我的进度没了",而控制台一个字都没有。记一行才查得动。 */
-  const all = await listMasteryRows().catch(fallback("data/getWordStatusMap:listMasteryRows", [] as MasteryRow[]));
+  const all = prefetched
+    ?? await listMasteryRows().catch(fallback("data/getWordStatusMap:listMasteryRows", [] as MasteryRow[]));
   const rows = all.filter(r => want.has(r.word_id));
   for (const r of rows) {
     map[r.word_id] = isMasteredRow(r) ? "mastered" : ((r.tested_count ?? 0) > 0 ? "learning" : "new");
@@ -339,11 +371,12 @@ export async function getWordStatusMap(wordIds: string[]): Promise<Record<string
  *    别为了这个再加一轮往返。没有记录的词返回全 0 的进度,不是 undefined ——
  *    UI 就不用到处判空,也不会出现"有的词有进度条有的没有"。
  */
-export async function getWordProgressMap(wordIds: string[]): Promise<Record<string, MasteryProgress>> {
+export async function getWordProgressMap(wordIds: string[], prefetched?: MasteryRow[]): Promise<Record<string, MasteryProgress>> {
   const map: Record<string, MasteryProgress> = {};
   for (const id of wordIds) map[id] = masteryProgress(null);
   const want = new Set(wordIds);
-  const all = await listMasteryRows().catch(fallback("data/getWordProgressMap:listMasteryRows", [] as MasteryRow[]));
+  const all = prefetched
+    ?? await listMasteryRows().catch(fallback("data/getWordProgressMap:listMasteryRows", [] as MasteryRow[]));
   for (const r of all) if (want.has(r.word_id)) map[r.word_id] = masteryProgress(r);
   return map;
 }

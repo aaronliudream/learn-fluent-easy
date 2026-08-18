@@ -98,3 +98,76 @@ describe("playChain", () => {
     expect(played.map(p => p.key)).toEqual(["e1.mp3"]);
   });
 });
+
+/* ══════════════════════════════════════════════════════════════════════
+ * 元素复用不变量 —— 自动播放解锁的全部前提(2026-08-17 加)
+ *
+ * 由来:「今日学习第一题不出声,第二题起正常」。根因不是解锁没做,
+ * 是原来每次播放都 `new Audio(url)` —— 浏览器的解锁**按元素记**,
+ * 手势里解锁过的那个元素,和下一题 new 出来的是两个对象,新元素照样被拒。
+ *
+ * ⚠️ 这一组用**真实的 HTMLAudioElement**(只桩掉 play/pause),
+ *    因为要断言的恰恰是"到底 new 了几个元素" —— 上面那个 FakeAudio 全局桩
+ *    会把这件事遮掉。所以单独一个 describe,自带 beforeEach。
+ * ══════════════════════════════════════════════════════════════════════ */
+describe("元素复用(解锁的前提)", () => {
+  const created: HTMLAudioElement[] = [];
+  beforeEach(() => {
+    vi.unstubAllGlobals();          // 摘掉上面的 FakeAudio,用真元素
+    created.length = 0;
+    vi.spyOn(HTMLMediaElement.prototype, "play").mockImplementation(function (this: HTMLAudioElement) {
+      if (!created.includes(this)) created.push(this);
+      return Promise.resolve();
+    });
+    vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
+  });
+
+  async function freshModule() {
+    vi.resetModules();
+    return await import("./audio");
+  }
+
+  it("连播两条不同的 url,用的是**同一个** audio 元素", async () => {
+    const { playUrl } = await freshModule();
+    await playUrl("https://cdn.example.com/aa/1.mp3", "w:1");
+    await playUrl("https://cdn.example.com/bb/2.mp3", "w:2");
+    expect(created.length).toBe(1);
+  });
+
+  it("先解锁再播,仍然是同一个元素 —— 解锁才对后续播放有效", async () => {
+    const { unlockAudio, playUrl } = await freshModule();
+    unlockAudio();
+    await playUrl("https://cdn.example.com/aa/1.mp3", "w:1");
+    await playUrl("https://cdn.example.com/bb/2.mp3", "w:2");
+    expect(created.length).toBe(1);
+  });
+});
+
+describe("被拦要如实上报,不能静默", () => {
+  beforeEach(() => {
+    vi.unstubAllGlobals();
+    vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
+  });
+  async function freshModule() { vi.resetModules(); return await import("./audio"); }
+
+  it("play() 被拒 → playUrl 返回 blocked", async () => {
+    vi.spyOn(HTMLMediaElement.prototype, "play").mockImplementation(() =>
+      Promise.reject(new DOMException("NotAllowedError")));
+    const { playUrl } = await freshModule();
+    /* ⚠️ 这条是听音辨义题的命脉:题面只有播放键、没有词干,
+       静默失败等于这道题没法答,UI 必须据此给出可点的提示。 */
+    await expect(playUrl("https://cdn.example.com/aa/1.mp3", "w:1")).resolves.toBe("blocked");
+  });
+
+  it("正常播放 → played", async () => {
+    vi.spyOn(HTMLMediaElement.prototype, "play").mockImplementation(() => Promise.resolve());
+    const { playUrl } = await freshModule();
+    await expect(playUrl("https://cdn.example.com/aa/1.mp3", "w:1")).resolves.toBe("played");
+  });
+
+  it("没有 url → skipped(不当成失败)", async () => {
+    vi.spyOn(HTMLMediaElement.prototype, "play").mockImplementation(() => Promise.resolve());
+    const { playUrl } = await freshModule();
+    await expect(playUrl(null, "w:1")).resolves.toBe("skipped");
+  });
+});

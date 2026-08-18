@@ -87,3 +87,8 @@ data/audio-audit/junior_dialogue_gap.csv
 data/audio-audit/junior_named_gap.csv
 data/audio-audit/senior_gap.csv
 scripts/vocab/data/ecdict-index.json
+
+# Claude Code 本地配置:**只入库 .claude/skills/**(团队共享的工作流说明),
+# 其余是每台机器自己的东西,尤其 settings.local.json 可能含本机路径/权限白名单。
+.claude/*
+!.claude/skills/

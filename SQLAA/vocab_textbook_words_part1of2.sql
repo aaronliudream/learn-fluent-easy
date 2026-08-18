@@ -1,4 +1,4 @@
--- 教材词表缺口:建词条【第 1/2 片】 —— 491 个词
+-- 教材词表缺口:建词条【第 1/2 片】 —— 496 个词
 -- 生成: node scripts/vocab/emit-textbook-word-sql.mjs
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
@@ -249,6 +249,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('disturbed', 'a'),
   ('divide into', NULL),
   ('dividing line', NULL),
+  ('do chores', NULL),
   ('do exercises', NULL),
   ('do the trick', NULL),
   ('do with', NULL),
@@ -288,6 +289,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('even though', NULL),
   ('ever since', NULL),
   ('every day', NULL),
+  ('excuse me', NULL),
   ('expo', NULL),
   ('extinguisher', 'n'),
   ('extra-curricular', 'a'),
@@ -431,6 +433,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('hip-hop', 'n'),
   ('hockey', 'n'),
   ('hold on', NULL),
+  ('hold your breath', NULL),
   ('home economics', NULL),
   ('homeless', 'a'),
   ('homesickness', 'n'),
@@ -457,6 +460,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('in case', NULL),
   ('in class', NULL),
   ('in contrast to', NULL),
+  ('in danger', NULL),
   ('in fact', NULL),
   ('in front of', NULL),
   ('in future', NULL),
@@ -472,6 +476,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('in public', NULL),
   ('in return', NULL),
   ('in spite of', NULL),
+  ('in tears', NULL),
   ('in that case', NULL),
   ('in the end', NULL),
   ('in the form of', NULL),
@@ -529,7 +534,7 @@ BEGIN
 
   -- ⑵ 临时表行数与声明一致(空表会让上面那条真空通过)
   SELECT count(*) INTO v_n FROM _new_words;
-  IF v_n <> 491 THEN RAISE EXCEPTION '本片应有 491 个词,实际 %', v_n; END IF;
+  IF v_n <> 496 THEN RAISE EXCEPTION '本片应有 496 个词,实际 %', v_n; END IF;
 
   -- ⑶ 这批词此刻**都还没有释义**,而且**一个词库都没挂** —— 证明这份没越界
   --    (挂载和内容都是后面单独的 SQL 干的事)
@@ -537,7 +542,7 @@ BEGIN
     JOIN vocab_words w ON lower(w.headword) = n.headword
    WHERE EXISTS (SELECT 1 FROM vocab_word_banks wb WHERE wb.word_id = w.id);
   RAISE NOTICE '本片 % 词已建;其中已挂在某个词库上的 % 个(应为 0,除非该词此前就存在)',
-    491, v_n;
+    496, v_n;
 END
 $gate$;
 

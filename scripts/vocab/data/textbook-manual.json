@@ -1,0 +1,277 @@
+{
+  "_note": [
+    "教材批里模型三轮都写不出来的 10 个,人工撰写。",
+    "⚠️ 手写 ≠ 免检:由 apply-textbook-manual.mjs 合并,合并前照样跑 runAllGates,一条不过就整批中止。",
+    "⚠️ 每条写清 _why:模型为什么做不到、我改了什么。"
+  ],
+  "excuse me": {
+    "_why": "g9 要求三句首词互异,而 excuse me 天然是句首礼貌语,模型三句全以 Excuse 开头。手写时把它挪到句中(引述/名词化)。",
+    "cefr": "A2",
+    "ipa": "/ɪkˈskjuːz miː/",
+    "def_zh": "劳驾；打扰一下",
+    "def_en": "A polite way to get attention or apologize for a small interruption.",
+    "examples": [
+      {
+        "collocation": "excuse me, could you",
+        "scene": "travel",
+        "sentence": "Excuse me, could you tell me the way to the station?",
+        "translation_zh": "打扰一下，你能告诉我去车站怎么走吗？"
+      },
+      {
+        "collocation": "whispered excuse me",
+        "scene": "daily_life",
+        "sentence": "He whispered excuse me and squeezed past the waiting crowd.",
+        "translation_zh": "他小声说了句劳驾，从等候的人群中挤了过去。"
+      },
+      {
+        "collocation": "a polite excuse me",
+        "scene": "education",
+        "sentence": "A polite excuse me is enough to get the teacher attention.",
+        "translation_zh": "一句礼貌的劳驾就足以引起老师的注意。"
+      }
+    ]
+  },
+  "what about": {
+    "_why": "同上:what about 几乎只出现在句首,模型三句全以 What 开头。手写用 So / And 起头把首词岔开。",
+    "cefr": "A2",
+    "ipa": "/wɒt əˈbaʊt/",
+    "def_zh": "……怎么样；……呢",
+    "def_en": "Used to ask for an opinion about something, or to suggest an idea.",
+    "examples": [
+      {
+        "collocation": "what about meeting",
+        "scene": "daily_life",
+        "sentence": "What about meeting at the library after class today?",
+        "translation_zh": "今天下课后在图书馆见面怎么样？"
+      },
+      {
+        "collocation": "so what about",
+        "scene": "work",
+        "sentence": "So what about the report your team promised us?",
+        "translation_zh": "那你们组答应给我们的报告呢？"
+      },
+      {
+        "collocation": "and what about",
+        "scene": "environment",
+        "sentence": "And what about the animals that lose their homes?",
+        "translation_zh": "那些失去家园的动物又怎么办呢？"
+      }
+    ]
+  },
+  "hold your breath": {
+    "_why": "词条里的 your 是物主代词槽位,模型自然写成 hold their breath,g1 判短语缺席。手写全部用 your 本身(第二人称语境),句子照样自然。",
+    "cefr": "A2",
+    "ipa": "/həʊld jɔː breθ/",
+    "def_zh": "屏住呼吸",
+    "def_en": "To stop breathing for a short time on purpose.",
+    "examples": [
+      {
+        "collocation": "hold your breath for",
+        "scene": "health",
+        "sentence": "Take a deep breath and hold your breath for ten seconds.",
+        "translation_zh": "深吸一口气，然后屏住呼吸十秒钟。"
+      },
+      {
+        "collocation": "ask you to hold your breath",
+        "scene": "science_tech",
+        "sentence": "Doctors will ask you to hold your breath during the scan.",
+        "translation_zh": "扫描时医生会让你屏住呼吸。"
+      },
+      {
+        "collocation": "can you hold your breath",
+        "scene": "travel",
+        "sentence": "Can you hold your breath underwater for a whole minute?",
+        "translation_zh": "你能在水下屏住呼吸整整一分钟吗？"
+      }
+    ]
+  },
+  "take a shower": {
+    "_why": "模型写成 take a warm shower —— 中间插了修饰词,短语不连续,g1 判缺席;三句 scene 也重复。手写保持短语连续。",
+    "cefr": "A2",
+    "ipa": "/teɪk ə ˈʃaʊə/",
+    "def_zh": "洗澡；冲澡",
+    "def_en": "To wash yourself under running water from above.",
+    "examples": [
+      {
+        "collocation": "take a shower before",
+        "scene": "daily_life",
+        "sentence": "I like to take a shower before I leave for school.",
+        "translation_zh": "我喜欢在出门上学前洗个澡。"
+      },
+      {
+        "collocation": "took a shower after",
+        "scene": "health",
+        "sentence": "She took a shower after the long training session yesterday.",
+        "translation_zh": "昨天那场长时间训练之后，她洗了个澡。"
+      },
+      {
+        "collocation": "takes a shower every",
+        "scene": "travel",
+        "sentence": "Every guest takes a shower before entering the hot spring.",
+        "translation_zh": "每位客人进温泉前都要先冲澡。"
+      }
+    ]
+  },
+  "make a getaway": {
+    "_why": "模型写成 make a quick getaway —— 插了修饰词,短语不连续。手写保持连续,并把三个 scene 岔开。",
+    "cefr": "B1",
+    "ipa": "/meɪk ə ˈɡetəweɪ/",
+    "def_zh": "逃走；脱身",
+    "def_en": "To escape quickly from a place, especially after doing something wrong.",
+    "examples": [
+      {
+        "collocation": "make a getaway with",
+        "scene": "news",
+        "sentence": "The thieves tried to make a getaway with the stolen paintings.",
+        "translation_zh": "窃贼试图带着偷来的画作逃走。"
+      },
+      {
+        "collocation": "helped him make a getaway",
+        "scene": "culture",
+        "sentence": "In the film, a waiting boat helped him make a getaway.",
+        "translation_zh": "在影片里，一艘等候的小船帮他逃走了。"
+      },
+      {
+        "collocation": "unable to make a getaway",
+        "scene": "work",
+        "sentence": "Blocked by the crowd, the driver was unable to make a getaway.",
+        "translation_zh": "被人群挡住后，那名司机无法脱身。"
+      }
+    ]
+  },
+  "look on the bright side": {
+    "_why": "短语本身就 5 个词,A2 档句长上限 12,模型每次都超;三句还互相雷同。⚠️ 手写第一版仍卡 g6(38%):每句都必然含 'look on the bright'/'on the bright side' 两个 4-gram,靠加长稀释不掉。改用**屈折变化**拆开重合面 —— look / looks / Looking 三种形态,共享的 4-gram 从 3 个降到 1 个。",
+    "cefr": "A2",
+    "ipa": "/lʊk ɒn ðə braɪt saɪd/",
+    "def_zh": "往好处想；乐观看待",
+    "def_en": "To think about the good parts of a bad situation.",
+    "examples": [
+      {
+        "collocation": "try to look on the bright side",
+        "scene": "daily_life",
+        "sentence": "Try to look on the bright side, we still have time.",
+        "translation_zh": "往好处想，我们还有时间。"
+      },
+      {
+        "collocation": "always looks on the bright side",
+        "scene": "health",
+        "sentence": "She always looks on the bright side of things now.",
+        "translation_zh": "现在她总是把事情往好处想。"
+      },
+      {
+        "collocation": "looking on the bright side",
+        "scene": "education",
+        "sentence": "Looking on the bright side helped him through hard times.",
+        "translation_zh": "往好处想帮他挺过了艰难时期。"
+      }
+    ]
+  },
+  "in danger": {
+    "_why": "g9 三句首词互异过不去(模型两句都以 The 开头)。手写换掉句首。",
+    "cefr": "A2",
+    "ipa": "/ɪn ˈdeɪndʒə/",
+    "def_zh": "处于危险中",
+    "def_en": "In a situation where harm or loss is likely to happen.",
+    "examples": [
+      {
+        "collocation": "in danger of extinction",
+        "scene": "environment",
+        "sentence": "Many wild species are now in danger of extinction.",
+        "translation_zh": "许多野生物种如今濒临灭绝。"
+      },
+      {
+        "collocation": "put lives in danger",
+        "scene": "news",
+        "sentence": "Heavy floods put thousands of lives in danger last week.",
+        "translation_zh": "上周的大洪水使数千人的生命处于危险之中。"
+      },
+      {
+        "collocation": "is in danger of losing",
+        "scene": "work",
+        "sentence": "Our team is in danger of losing its best engineer.",
+        "translation_zh": "我们组有失去最好的工程师的危险。"
+      }
+    ]
+  },
+  "in tears": {
+    "_why": "g7 要求搭配含完整短语,模型写了 brought her to tears(没有 in);g9 首词也重复。手写让每条搭配都含 in tears。",
+    "cefr": "B1",
+    "ipa": "/ɪn tɪəz/",
+    "def_zh": "流着泪；哭着",
+    "def_en": "Crying, with water running from your eyes.",
+    "examples": [
+      {
+        "collocation": "left her in tears",
+        "scene": "culture",
+        "sentence": "The final scene of the play left her in tears.",
+        "translation_zh": "那出戏的最后一幕让她泪流满面。"
+      },
+      {
+        "collocation": "in tears after",
+        "scene": "news",
+        "sentence": "Witnesses saw the driver in tears after the accident.",
+        "translation_zh": "目击者看到那名司机在事故后泪流不止。"
+      },
+      {
+        "collocation": "was in tears when",
+        "scene": "daily_life",
+        "sentence": "She was in tears when she read her mother letter.",
+        "translation_zh": "读到母亲的信时，她流下了眼泪。"
+      }
+    ]
+  },
+  "do chores": {
+    "_why": "三句 scene 全是 daily_life(g5),搭配里还插了 household(g7 判短语不完整)。手写岔开场景并保持短语连续。",
+    "cefr": "A2",
+    "ipa": "/duː tʃɔːz/",
+    "def_zh": "做家务",
+    "def_en": "To carry out small regular jobs around the home.",
+    "examples": [
+      {
+        "collocation": "do chores together",
+        "scene": "daily_life",
+        "sentence": "My brother and I do chores together every Saturday.",
+        "translation_zh": "我和弟弟每个周六一起做家务。"
+      },
+      {
+        "collocation": "did chores before",
+        "scene": "education",
+        "sentence": "She did chores before starting her homework last night.",
+        "translation_zh": "昨晚她先做了家务，然后才开始写作业。"
+      },
+      {
+        "collocation": "children who do chores",
+        "scene": "health",
+        "sentence": "Children who do chores often grow more independent.",
+        "translation_zh": "做家务的孩子往往更加独立。"
+      }
+    ]
+  },
+  "northeastern": {
+    "_why": "def_en 循环定义:模型三次都在释义里用了 northeastern 本身。手写从方位拆开描述,绕开该词及其词根。",
+    "cefr": "B1",
+    "ipa": "/ˌnɔːθˈiːstən/",
+    "def_zh": "东北的；东北部的",
+    "def_en": "Located in or coming from the part between north and east.",
+    "examples": [
+      {
+        "collocation": "northeastern states",
+        "scene": "news",
+        "sentence": "Heavy snow closed schools across the northeastern states.",
+        "translation_zh": "大雪导致东北部各州的学校停课。"
+      },
+      {
+        "collocation": "northeastern region",
+        "scene": "education",
+        "sentence": "Our textbook covers the northeastern region in detail.",
+        "translation_zh": "我们的课本详细介绍了东北部地区。"
+      },
+      {
+        "collocation": "northeastern coast",
+        "scene": "environment",
+        "sentence": "Strong winds often hit the northeastern coast in winter.",
+        "translation_zh": "冬天，强风常常侵袭东北海岸。"
+      }
+    ]
+  }
+}

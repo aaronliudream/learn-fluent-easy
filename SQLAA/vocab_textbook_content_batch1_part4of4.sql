@@ -1,5 +1,5 @@
--- 词汇内容 batch1【第 4/4 片】:243 词 · 729 例句
--- ⚠️ 本片自带事务与断言,**只判本片这 243 个词**;各片互相独立,顺序无所谓,
+-- 词汇内容 batch1【第 4/4 片】:247 词 · 741 例句
+-- ⚠️ 本片自带事务与断言,**只判本片这 247 个词**;各片互相独立,顺序无所谓,
 --    单独跑任意一片都成立,某片失败只回滚那一片。
 --
 -- 生成: node scripts/vocab/generate-content.mjs --bank=textbook --emit-sql
@@ -30,12 +30,6 @@ UPDATE vocab_words w
        def_en     = v.def_en,
        updated_at = now()
   FROM (VALUES
-  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
-  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
-  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
-  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
-  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
-  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.'),
   ('shh', '/ʃɪː/', '安静；嘘声', 'A sound made to request quiet or silence.'),
   ('shaving', '/ˈʃeɪ.vɪŋ/', '剃须', 'The act of removing facial or body hair using a razor.'),
   ('show up', '/ʃoʊ ʌp/', '出现；到达', 'To arrive or appear at a place.'),
@@ -272,7 +266,17 @@ UPDATE vocab_words w
   ('be native to', '/bi ˈneɪ.tɪv tuː/', '原产于；本土的', 'To originate from a specific place or environment.'),
   ('be tired of', '/biː ˈtaɪərd ʌv/', '厌烦；厌倦', 'To be bored or unhappy with something after too much of it.'),
   ('as dead as a dodo', '/æz dɛd æz ə ˈdoʊ.doʊ/', '毫无生气；完全死去', 'Completely non-functional or extinct; no longer in existence.'),
-  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.')
+  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.'),
+  ('excuse me', '/ɪkˈskjuːz miː/', '劳驾；打扰一下', 'A polite way to get attention or apologize for a small interruption.'),
+  ('what about', '/wɒt əˈbaʊt/', '……怎么样；……呢', 'Used to ask for an opinion about something, or to suggest an idea.'),
+  ('hold your breath', '/həʊld jɔː breθ/', '屏住呼吸', 'To stop breathing for a short time on purpose.'),
+  ('take a shower', '/teɪk ə ˈʃaʊə/', '洗澡；冲澡', 'To wash yourself under running water from above.'),
+  ('make a getaway', '/meɪk ə ˈɡetəweɪ/', '逃走；脱身', 'To escape quickly from a place, especially after doing something wrong.'),
+  ('look on the bright side', '/lʊk ɒn ðə braɪt saɪd/', '往好处想；乐观看待', 'To think about the good parts of a bad situation.'),
+  ('in danger', '/ɪn ˈdeɪndʒə/', '处于危险中', 'In a situation where harm or loss is likely to happen.'),
+  ('in tears', '/ɪn tɪəz/', '流着泪；哭着', 'Crying, with water running from your eyes.'),
+  ('do chores', '/duː tʃɔːz/', '做家务', 'To carry out small regular jobs around the home.'),
+  ('northeastern', '/ˌnɔːθˈiːstən/', '东北的；东北部的', 'Located in or coming from the part between north and east.')
   ) AS v(headword, ipa, def_zh, def_en)
  WHERE lower(w.headword) = v.headword
    AND w.def_zh IS NULL;        -- ← 护栏:只填空,绝不覆盖库里已有的释义
@@ -281,24 +285,6 @@ UPDATE vocab_words w
 INSERT INTO vocab_examples (word_id, sort_order, collocation, sentence, translation_zh, scene)
 SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   FROM (VALUES
-  ('satisfied', 1, 'satisfied customers', 'Many customers felt satisfied with their recent purchases.', '许多顾客对最近的购买感到满意。', 'daily_life'),
-  ('satisfied', 2, 'satisfied with the results', 'After the meeting, the team was satisfied with the results of their efforts.', '会议后，团队对他们的努力结果感到满意。', 'work'),
-  ('satisfied', 3, 'satisfied his expectations', 'She worked hard and satisfied her teacher''s expectations for the project.', '她努力工作，满足了老师对项目的期望。', 'education'),
-  ('serving chopsticks', 1, 'use serving chopsticks', 'People use serving chopsticks to share food during meals.', '人们在用餐时用夹菜的筷子分享食物。', 'daily_life'),
-  ('serving chopsticks', 2, 'set the table with serving chopsticks', 'The chef sets the table with serving chopsticks before serving dinner.', '厨师在上菜前用夹菜的筷子摆放餐桌。', 'work'),
-  ('serving chopsticks', 3, 'clean the serving chopsticks', 'We should clean the serving chopsticks after every use.', '我们每次使用后应该清洁夹菜的筷子。', 'culture'),
-  ('set off', 1, 'set off an alarm', 'They set off the alarm while trying to enter the building.', '他们试图进入大楼时触发了警报。', 'daily_life'),
-  ('set off', 2, 'set off fireworks', 'We set off fireworks to celebrate the New Year together.', '我们一起放烟花庆祝新年。', 'culture'),
-  ('set off', 3, 'set off a discussion', 'The teacher''s question set off a lively discussion among the students.', '老师的问题引发了学生们热烈的讨论。', 'education'),
-  ('serving', 1, 'serving size', 'Understanding the serving size is crucial for healthy eating.', '理解每份的大小对健康饮食至关重要。', 'health'),
-  ('serving', 2, 'serving dish', 'She placed the salad in a beautiful serving dish for dinner.', '她把沙拉放在一个漂亮的餐盘里作为晚餐。', 'daily_life'),
-  ('serving', 3, 'serving staff', 'The serving staff attended to the guests throughout the event.', '服务人员在整个活动中照顾客人。', 'work'),
-  ('set out', 1, 'set out on a journey', 'They set out on a journey to the mountains.', '他们出发去山里旅行。', 'travel'),
-  ('set out', 2, 'set out to achieve something', 'She set out to achieve her goals this year.', '她今年出发去实现自己的目标。', 'work'),
-  ('set out', 3, 'set out the plan', 'The teacher set out the plan for the project clearly.', '老师清晰地列出了项目计划。', 'academic'),
-  ('semi-final', 1, 'reach the semi-finals', 'Several teams have reached the semi-finals of the tournament this year.', '今年，几支球队成功晋级比赛的半决赛。', 'news'),
-  ('semi-final', 2, 'semi-final match', 'Fans eagerly anticipated the semi-final match between their favorite teams.', '球迷们热切期待着他们喜欢的球队之间的半决赛。', 'culture'),
-  ('semi-final', 3, 'semi-finals stage', 'Understanding the semi-finals stage is crucial for aspiring athletes in competitions.', '理解半决赛阶段对有志于比赛的运动员至关重要。', 'education'),
   ('shh', 1, 'shh, be quiet', 'Children often say shh when they want others to be silent.', '孩子们常常说嘘，想让别人安静下来。', 'daily_life'),
   ('shh', 2, 'shh, listen carefully', 'Teachers remind students to shh and listen carefully during lectures.', '老师提醒学生在讲座期间嘘声，仔细听讲。', 'education'),
   ('shh', 3, 'shh, keep it down', 'During meetings, please shh and keep it down for better focus.', '在会议期间，请嘘声以便更好地集中注意力。', 'work'),
@@ -1009,7 +995,37 @@ SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   ('as dead as a dodo', 3, 'as dead as a dodo in the market', 'That old product is as dead as a dodo in the market.', '那个旧产品在市场上已经毫无生气。', 'daily_life'),
   ('re', 1, 're the project', 'We need to discuss the updates re the project very soon.', '我们需要尽快讨论关于这个项目的更新。', 'work'),
   ('re', 2, 're your request', 'Please send me more information re your request at your earliest convenience.', '请尽快向我发送关于您请求的更多信息。', 'daily_life'),
-  ('re', 3, 're the findings', 'Researchers published a paper re the findings of their latest study.', '研究人员发表了一篇关于他们最新研究结果的论文。', 'science_tech')
+  ('re', 3, 're the findings', 'Researchers published a paper re the findings of their latest study.', '研究人员发表了一篇关于他们最新研究结果的论文。', 'science_tech'),
+  ('excuse me', 1, 'excuse me, could you', 'Excuse me, could you tell me the way to the station?', '打扰一下，你能告诉我去车站怎么走吗？', 'travel'),
+  ('excuse me', 2, 'whispered excuse me', 'He whispered excuse me and squeezed past the waiting crowd.', '他小声说了句劳驾，从等候的人群中挤了过去。', 'daily_life'),
+  ('excuse me', 3, 'a polite excuse me', 'A polite excuse me is enough to get the teacher attention.', '一句礼貌的劳驾就足以引起老师的注意。', 'education'),
+  ('what about', 1, 'what about meeting', 'What about meeting at the library after class today?', '今天下课后在图书馆见面怎么样？', 'daily_life'),
+  ('what about', 2, 'so what about', 'So what about the report your team promised us?', '那你们组答应给我们的报告呢？', 'work'),
+  ('what about', 3, 'and what about', 'And what about the animals that lose their homes?', '那些失去家园的动物又怎么办呢？', 'environment'),
+  ('hold your breath', 1, 'hold your breath for', 'Take a deep breath and hold your breath for ten seconds.', '深吸一口气，然后屏住呼吸十秒钟。', 'health'),
+  ('hold your breath', 2, 'ask you to hold your breath', 'Doctors will ask you to hold your breath during the scan.', '扫描时医生会让你屏住呼吸。', 'science_tech'),
+  ('hold your breath', 3, 'can you hold your breath', 'Can you hold your breath underwater for a whole minute?', '你能在水下屏住呼吸整整一分钟吗？', 'travel'),
+  ('take a shower', 1, 'take a shower before', 'I like to take a shower before I leave for school.', '我喜欢在出门上学前洗个澡。', 'daily_life'),
+  ('take a shower', 2, 'took a shower after', 'She took a shower after the long training session yesterday.', '昨天那场长时间训练之后，她洗了个澡。', 'health'),
+  ('take a shower', 3, 'takes a shower every', 'Every guest takes a shower before entering the hot spring.', '每位客人进温泉前都要先冲澡。', 'travel'),
+  ('make a getaway', 1, 'make a getaway with', 'The thieves tried to make a getaway with the stolen paintings.', '窃贼试图带着偷来的画作逃走。', 'news'),
+  ('make a getaway', 2, 'helped him make a getaway', 'In the film, a waiting boat helped him make a getaway.', '在影片里，一艘等候的小船帮他逃走了。', 'culture'),
+  ('make a getaway', 3, 'unable to make a getaway', 'Blocked by the crowd, the driver was unable to make a getaway.', '被人群挡住后，那名司机无法脱身。', 'work'),
+  ('look on the bright side', 1, 'try to look on the bright side', 'Try to look on the bright side, we still have time.', '往好处想，我们还有时间。', 'daily_life'),
+  ('look on the bright side', 2, 'always looks on the bright side', 'She always looks on the bright side of things now.', '现在她总是把事情往好处想。', 'health'),
+  ('look on the bright side', 3, 'looking on the bright side', 'Looking on the bright side helped him through hard times.', '往好处想帮他挺过了艰难时期。', 'education'),
+  ('in danger', 1, 'in danger of extinction', 'Many wild species are now in danger of extinction.', '许多野生物种如今濒临灭绝。', 'environment'),
+  ('in danger', 2, 'put lives in danger', 'Heavy floods put thousands of lives in danger last week.', '上周的大洪水使数千人的生命处于危险之中。', 'news'),
+  ('in danger', 3, 'is in danger of losing', 'Our team is in danger of losing its best engineer.', '我们组有失去最好的工程师的危险。', 'work'),
+  ('in tears', 1, 'left her in tears', 'The final scene of the play left her in tears.', '那出戏的最后一幕让她泪流满面。', 'culture'),
+  ('in tears', 2, 'in tears after', 'Witnesses saw the driver in tears after the accident.', '目击者看到那名司机在事故后泪流不止。', 'news'),
+  ('in tears', 3, 'was in tears when', 'She was in tears when she read her mother letter.', '读到母亲的信时，她流下了眼泪。', 'daily_life'),
+  ('do chores', 1, 'do chores together', 'My brother and I do chores together every Saturday.', '我和弟弟每个周六一起做家务。', 'daily_life'),
+  ('do chores', 2, 'did chores before', 'She did chores before starting her homework last night.', '昨晚她先做了家务，然后才开始写作业。', 'education'),
+  ('do chores', 3, 'children who do chores', 'Children who do chores often grow more independent.', '做家务的孩子往往更加独立。', 'health'),
+  ('northeastern', 1, 'northeastern states', 'Heavy snow closed schools across the northeastern states.', '大雪导致东北部各州的学校停课。', 'news'),
+  ('northeastern', 2, 'northeastern region', 'Our textbook covers the northeastern region in detail.', '我们的课本详细介绍了东北部地区。', 'education'),
+  ('northeastern', 3, 'northeastern coast', 'Strong winds often hit the northeastern coast in winter.', '冬天，强风常常侵袭东北海岸。', 'environment')
   ) AS v(headword, sort_order, collocation, sentence, translation_zh, scene)
   JOIN vocab_words w ON lower(w.headword) = v.headword
 ON CONFLICT (word_id, sort_order) DO UPDATE
@@ -1023,7 +1039,7 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
 
--- ── 断言:**只判本批这 243 个词**,不判全表 ────────────────────
+-- ── 断言:**只判本批这 247 个词**,不判全表 ────────────────────
 -- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 本批词数。
 --    那在只有托福一个库时碰巧成立,多几个库以后必然为 f —— 全表里还有别的库的词。
 --    判据必须锁在本批范围内(见 batch-validate-scope-to-batch)。
@@ -1034,12 +1050,6 @@ DECLARE
 BEGIN
   SELECT count(*) INTO n_missing
     FROM (VALUES
-  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
-  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
-  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
-  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
-  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
-  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.'),
   ('shh', '/ʃɪː/', '安静；嘘声', 'A sound made to request quiet or silence.'),
   ('shaving', '/ˈʃeɪ.vɪŋ/', '剃须', 'The act of removing facial or body hair using a razor.'),
   ('show up', '/ʃoʊ ʌp/', '出现；到达', 'To arrive or appear at a place.'),
@@ -1276,19 +1286,23 @@ BEGIN
   ('be native to', '/bi ˈneɪ.tɪv tuː/', '原产于；本土的', 'To originate from a specific place or environment.'),
   ('be tired of', '/biː ˈtaɪərd ʌv/', '厌烦；厌倦', 'To be bored or unhappy with something after too much of it.'),
   ('as dead as a dodo', '/æz dɛd æz ə ˈdoʊ.doʊ/', '毫无生气；完全死去', 'Completely non-functional or extinct; no longer in existence.'),
-  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.')
+  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.'),
+  ('excuse me', '/ɪkˈskjuːz miː/', '劳驾；打扰一下', 'A polite way to get attention or apologize for a small interruption.'),
+  ('what about', '/wɒt əˈbaʊt/', '……怎么样；……呢', 'Used to ask for an opinion about something, or to suggest an idea.'),
+  ('hold your breath', '/həʊld jɔː breθ/', '屏住呼吸', 'To stop breathing for a short time on purpose.'),
+  ('take a shower', '/teɪk ə ˈʃaʊə/', '洗澡；冲澡', 'To wash yourself under running water from above.'),
+  ('make a getaway', '/meɪk ə ˈɡetəweɪ/', '逃走；脱身', 'To escape quickly from a place, especially after doing something wrong.'),
+  ('look on the bright side', '/lʊk ɒn ðə braɪt saɪd/', '往好处想；乐观看待', 'To think about the good parts of a bad situation.'),
+  ('in danger', '/ɪn ˈdeɪndʒə/', '处于危险中', 'In a situation where harm or loss is likely to happen.'),
+  ('in tears', '/ɪn tɪəz/', '流着泪；哭着', 'Crying, with water running from your eyes.'),
+  ('do chores', '/duː tʃɔːz/', '做家务', 'To carry out small regular jobs around the home.'),
+  ('northeastern', '/ˌnɔːθˈiːstən/', '东北的；东北部的', 'Located in or coming from the part between north and east.')
     ) AS v(headword, ipa, def_zh, def_en)
     LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE w.id IS NULL OR w.def_zh IS NULL;
 
   SELECT count(*) INTO n_badcount
     FROM (VALUES
-  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
-  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
-  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
-  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
-  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
-  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.'),
   ('shh', '/ʃɪː/', '安静；嘘声', 'A sound made to request quiet or silence.'),
   ('shaving', '/ˈʃeɪ.vɪŋ/', '剃须', 'The act of removing facial or body hair using a razor.'),
   ('show up', '/ʃoʊ ʌp/', '出现；到达', 'To arrive or appear at a place.'),
@@ -1525,19 +1539,23 @@ BEGIN
   ('be native to', '/bi ˈneɪ.tɪv tuː/', '原产于；本土的', 'To originate from a specific place or environment.'),
   ('be tired of', '/biː ˈtaɪərd ʌv/', '厌烦；厌倦', 'To be bored or unhappy with something after too much of it.'),
   ('as dead as a dodo', '/æz dɛd æz ə ˈdoʊ.doʊ/', '毫无生气；完全死去', 'Completely non-functional or extinct; no longer in existence.'),
-  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.')
+  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.'),
+  ('excuse me', '/ɪkˈskjuːz miː/', '劳驾；打扰一下', 'A polite way to get attention or apologize for a small interruption.'),
+  ('what about', '/wɒt əˈbaʊt/', '……怎么样；……呢', 'Used to ask for an opinion about something, or to suggest an idea.'),
+  ('hold your breath', '/həʊld jɔː breθ/', '屏住呼吸', 'To stop breathing for a short time on purpose.'),
+  ('take a shower', '/teɪk ə ˈʃaʊə/', '洗澡；冲澡', 'To wash yourself under running water from above.'),
+  ('make a getaway', '/meɪk ə ˈɡetəweɪ/', '逃走；脱身', 'To escape quickly from a place, especially after doing something wrong.'),
+  ('look on the bright side', '/lʊk ɒn ðə braɪt saɪd/', '往好处想；乐观看待', 'To think about the good parts of a bad situation.'),
+  ('in danger', '/ɪn ˈdeɪndʒə/', '处于危险中', 'In a situation where harm or loss is likely to happen.'),
+  ('in tears', '/ɪn tɪəz/', '流着泪；哭着', 'Crying, with water running from your eyes.'),
+  ('do chores', '/duː tʃɔːz/', '做家务', 'To carry out small regular jobs around the home.'),
+  ('northeastern', '/ˌnɔːθˈiːstən/', '东北的；东北部的', 'Located in or coming from the part between north and east.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3;
 
   SELECT count(*) INTO n_badscene
     FROM (VALUES
-  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
-  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
-  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
-  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
-  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
-  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.'),
   ('shh', '/ʃɪː/', '安静；嘘声', 'A sound made to request quiet or silence.'),
   ('shaving', '/ˈʃeɪ.vɪŋ/', '剃须', 'The act of removing facial or body hair using a razor.'),
   ('show up', '/ʃoʊ ʌp/', '出现；到达', 'To arrive or appear at a place.'),
@@ -1774,7 +1792,17 @@ BEGIN
   ('be native to', '/bi ˈneɪ.tɪv tuː/', '原产于；本土的', 'To originate from a specific place or environment.'),
   ('be tired of', '/biː ˈtaɪərd ʌv/', '厌烦；厌倦', 'To be bored or unhappy with something after too much of it.'),
   ('as dead as a dodo', '/æz dɛd æz ə ˈdoʊ.doʊ/', '毫无生气；完全死去', 'Completely non-functional or extinct; no longer in existence.'),
-  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.')
+  ('re', '/riː/', '关于；重新', 'Concerning or in relation to something; again.'),
+  ('excuse me', '/ɪkˈskjuːz miː/', '劳驾；打扰一下', 'A polite way to get attention or apologize for a small interruption.'),
+  ('what about', '/wɒt əˈbaʊt/', '……怎么样；……呢', 'Used to ask for an opinion about something, or to suggest an idea.'),
+  ('hold your breath', '/həʊld jɔː breθ/', '屏住呼吸', 'To stop breathing for a short time on purpose.'),
+  ('take a shower', '/teɪk ə ˈʃaʊə/', '洗澡；冲澡', 'To wash yourself under running water from above.'),
+  ('make a getaway', '/meɪk ə ˈɡetəweɪ/', '逃走；脱身', 'To escape quickly from a place, especially after doing something wrong.'),
+  ('look on the bright side', '/lʊk ɒn ðə braɪt saɪd/', '往好处想；乐观看待', 'To think about the good parts of a bad situation.'),
+  ('in danger', '/ɪn ˈdeɪndʒə/', '处于危险中', 'In a situation where harm or loss is likely to happen.'),
+  ('in tears', '/ɪn tɪəz/', '流着泪；哭着', 'Crying, with water running from your eyes.'),
+  ('do chores', '/duː tʃɔːz/', '做家务', 'To carry out small regular jobs around the home.'),
+  ('northeastern', '/ˌnɔːθˈiːstən/', '东北的；东北部的', 'Located in or coming from the part between north and east.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
     JOIN vocab_examples e ON e.word_id = w.id
@@ -1784,7 +1812,7 @@ BEGIN
 
 
 
-  RAISE NOTICE '本批 243 词:缺释义 %,例句数不等于3 %,scene 非法 %',
+  RAISE NOTICE '本批 247 词:缺释义 %,例句数不等于3 %,scene 非法 %',
     n_missing, n_badcount, n_badscene;
 
   IF n_missing > 0 OR n_badcount > 0 OR n_badscene > 0 THEN

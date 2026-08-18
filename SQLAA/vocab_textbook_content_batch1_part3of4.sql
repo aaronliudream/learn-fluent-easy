@@ -1,5 +1,5 @@
--- 词汇内容 batch1【第 3/4 片】:246 词 · 738 例句
--- ⚠️ 本片自带事务与断言,**只判本片这 246 个词**;各片互相独立,顺序无所谓,
+-- 词汇内容 batch1【第 3/4 片】:248 词 · 744 例句
+-- ⚠️ 本片自带事务与断言,**只判本片这 248 个词**;各片互相独立,顺序无所谓,
 --    单独跑任意一片都成立,某片失败只回滚那一片。
 --
 -- 生成: node scripts/vocab/generate-content.mjs --bank=textbook --emit-sql
@@ -30,10 +30,6 @@ UPDATE vocab_words w
        def_en     = v.def_en,
        updated_at = now()
   FROM (VALUES
-  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
-  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
-  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
-  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.'),
   ('living room', '/ˈlɪv.ɪŋ rʊm/', '客厅', 'A room in a house for relaxing and socializing.'),
   ('look at', '/lʊk æt/', '看；注视', 'To direct one''s gaze toward something or someone.'),
   ('loneliness', '/ˈloʊn.lin.nəs/', '孤独；寂寞', 'The state of being alone or isolated without companionship.'),
@@ -275,7 +271,13 @@ UPDATE vocab_words w
   ('sell out', '/sɛl aʊt/', '售罄；卖光', 'To sell all available items or tickets.'),
   ('selfie', '/ˈsɛl.fi/', '自拍', 'A self-taken photograph, typically with a smartphone.'),
   ('separate from', '/ˈsɛp.ə.reɪt frəm/', '分开；脱离', 'To remove or keep apart from something else.'),
-  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.')
+  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.'),
+  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
+  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
+  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
+  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
+  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
+  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.')
   ) AS v(headword, ipa, def_zh, def_en)
  WHERE lower(w.headword) = v.headword
    AND w.def_zh IS NULL;        -- ← 护栏:只填空,绝不覆盖库里已有的释义
@@ -284,18 +286,6 @@ UPDATE vocab_words w
 INSERT INTO vocab_examples (word_id, sort_order, collocation, sentence, translation_zh, scene)
 SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   FROM (VALUES
-  ('logging', 1, 'illegal logging', 'Illegal logging causes significant harm to forests and biodiversity.', '非法伐木对森林和生物多样性造成了重大伤害。', 'environment'),
-  ('logging', 2, 'logging industry', 'The logging industry provides many jobs in rural areas around the world.', '伐木行业为全球农村地区提供了许多就业机会。', 'work'),
-  ('logging', 3, 'logging data', 'Scientists are logging data to study climate change effects on ecosystems.', '科学家们正在记录数据，以研究气候变化对生态系统的影响。', 'science_tech'),
-  ('logo', 1, 'company logo', 'The company logo is displayed on all product packaging.', '公司标志印在所有产品包装上。', 'work'),
-  ('logo', 2, 'brand logo', 'Many people recognize the brand logo without seeing the name.', '许多人在没有看到名称的情况下就能认出品牌标志。', 'daily_life'),
-  ('logo', 3, 'school logo', 'Students wear uniforms that feature the school logo.', '学生穿着带有校徽的校服。', 'education'),
-  ('long ago', 1, 'happened long ago', 'Things were different when they happened long ago.', '当事情发生在很久以前时，一切都不同了。', 'daily_life'),
-  ('long ago', 2, 'was built long ago', 'The ancient city was built long ago and still stands today.', '这座古老的城市建于很久以前，至今仍然屹立。', 'culture'),
-  ('long ago', 3, 'existed long ago', 'Many species existed long ago before the dinosaurs appeared.', '许多物种在恐龙出现之前就存在于很久以前。', 'science_tech'),
-  ('long face', 1, 'wear a long face', 'He always wears a long face when he is upset.', '他不高兴的时候总是愁苦的面容。', 'daily_life'),
-  ('long face', 2, 'put on a long face', 'She puts on a long face whenever there is bad news.', '每当有坏消息时，她就会愁苦的面容。', 'work'),
-  ('long face', 3, 'have a long face', 'Students often have a long face after receiving low grades.', '学生在收到低分后通常会愁苦的面容。', 'education'),
   ('living room', 1, 'furnish the living room', 'She wants to furnish the living room with new furniture.', '她想用新家具来布置客厅。', 'daily_life'),
   ('living room', 2, 'spend time in the living room', 'We often spend time in the living room with family and friends.', '我们常常和家人朋友一起在客厅里度过时光。', 'culture'),
   ('living room', 3, 'decorate the living room', 'They plan to decorate the living room for the holidays.', '他们计划为假期装饰客厅。', 'work'),
@@ -1021,7 +1011,25 @@ SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   ('separate from', 3, 'separate from family', 'Some people choose to separate from family for personal reasons.', '有些人因个人原因选择与家人分开。', 'culture'),
   ('security guard', 1, 'the security guard at the entrance', 'The security guard at the entrance checks everyone''s bags.', '入口处的保安检查每个人的包。', 'daily_life'),
   ('security guard', 2, 'a security guard is watching', 'A security guard is watching the building closely at night.', '保安在晚上仔细监视这栋建筑。', 'work'),
-  ('security guard', 3, 'hired a security guard', 'They hired a security guard after the recent break-ins.', '他们在最近发生入室盗窃后雇佣了保安。', 'news')
+  ('security guard', 3, 'hired a security guard', 'They hired a security guard after the recent break-ins.', '他们在最近发生入室盗窃后雇佣了保安。', 'news'),
+  ('satisfied', 1, 'satisfied customers', 'Many customers felt satisfied with their recent purchases.', '许多顾客对最近的购买感到满意。', 'daily_life'),
+  ('satisfied', 2, 'satisfied with the results', 'After the meeting, the team was satisfied with the results of their efforts.', '会议后，团队对他们的努力结果感到满意。', 'work'),
+  ('satisfied', 3, 'satisfied his expectations', 'She worked hard and satisfied her teacher''s expectations for the project.', '她努力工作，满足了老师对项目的期望。', 'education'),
+  ('serving chopsticks', 1, 'use serving chopsticks', 'People use serving chopsticks to share food during meals.', '人们在用餐时用夹菜的筷子分享食物。', 'daily_life'),
+  ('serving chopsticks', 2, 'set the table with serving chopsticks', 'The chef sets the table with serving chopsticks before serving dinner.', '厨师在上菜前用夹菜的筷子摆放餐桌。', 'work'),
+  ('serving chopsticks', 3, 'clean the serving chopsticks', 'We should clean the serving chopsticks after every use.', '我们每次使用后应该清洁夹菜的筷子。', 'culture'),
+  ('set off', 1, 'set off an alarm', 'They set off the alarm while trying to enter the building.', '他们试图进入大楼时触发了警报。', 'daily_life'),
+  ('set off', 2, 'set off fireworks', 'We set off fireworks to celebrate the New Year together.', '我们一起放烟花庆祝新年。', 'culture'),
+  ('set off', 3, 'set off a discussion', 'The teacher''s question set off a lively discussion among the students.', '老师的问题引发了学生们热烈的讨论。', 'education'),
+  ('serving', 1, 'serving size', 'Understanding the serving size is crucial for healthy eating.', '理解每份的大小对健康饮食至关重要。', 'health'),
+  ('serving', 2, 'serving dish', 'She placed the salad in a beautiful serving dish for dinner.', '她把沙拉放在一个漂亮的餐盘里作为晚餐。', 'daily_life'),
+  ('serving', 3, 'serving staff', 'The serving staff attended to the guests throughout the event.', '服务人员在整个活动中照顾客人。', 'work'),
+  ('set out', 1, 'set out on a journey', 'They set out on a journey to the mountains.', '他们出发去山里旅行。', 'travel'),
+  ('set out', 2, 'set out to achieve something', 'She set out to achieve her goals this year.', '她今年出发去实现自己的目标。', 'work'),
+  ('set out', 3, 'set out the plan', 'The teacher set out the plan for the project clearly.', '老师清晰地列出了项目计划。', 'academic'),
+  ('semi-final', 1, 'reach the semi-finals', 'Several teams have reached the semi-finals of the tournament this year.', '今年，几支球队成功晋级比赛的半决赛。', 'news'),
+  ('semi-final', 2, 'semi-final match', 'Fans eagerly anticipated the semi-final match between their favorite teams.', '球迷们热切期待着他们喜欢的球队之间的半决赛。', 'culture'),
+  ('semi-final', 3, 'semi-finals stage', 'Understanding the semi-finals stage is crucial for aspiring athletes in competitions.', '理解半决赛阶段对有志于比赛的运动员至关重要。', 'education')
   ) AS v(headword, sort_order, collocation, sentence, translation_zh, scene)
   JOIN vocab_words w ON lower(w.headword) = v.headword
 ON CONFLICT (word_id, sort_order) DO UPDATE
@@ -1035,7 +1043,7 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
 
--- ── 断言:**只判本批这 246 个词**,不判全表 ────────────────────
+-- ── 断言:**只判本批这 248 个词**,不判全表 ────────────────────
 -- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 本批词数。
 --    那在只有托福一个库时碰巧成立,多几个库以后必然为 f —— 全表里还有别的库的词。
 --    判据必须锁在本批范围内(见 batch-validate-scope-to-batch)。
@@ -1046,10 +1054,6 @@ DECLARE
 BEGIN
   SELECT count(*) INTO n_missing
     FROM (VALUES
-  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
-  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
-  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
-  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.'),
   ('living room', '/ˈlɪv.ɪŋ rʊm/', '客厅', 'A room in a house for relaxing and socializing.'),
   ('look at', '/lʊk æt/', '看；注视', 'To direct one''s gaze toward something or someone.'),
   ('loneliness', '/ˈloʊn.lin.nəs/', '孤独；寂寞', 'The state of being alone or isolated without companionship.'),
@@ -1291,17 +1295,19 @@ BEGIN
   ('sell out', '/sɛl aʊt/', '售罄；卖光', 'To sell all available items or tickets.'),
   ('selfie', '/ˈsɛl.fi/', '自拍', 'A self-taken photograph, typically with a smartphone.'),
   ('separate from', '/ˈsɛp.ə.reɪt frəm/', '分开；脱离', 'To remove or keep apart from something else.'),
-  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.')
+  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.'),
+  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
+  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
+  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
+  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
+  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
+  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.')
     ) AS v(headword, ipa, def_zh, def_en)
     LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE w.id IS NULL OR w.def_zh IS NULL;
 
   SELECT count(*) INTO n_badcount
     FROM (VALUES
-  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
-  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
-  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
-  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.'),
   ('living room', '/ˈlɪv.ɪŋ rʊm/', '客厅', 'A room in a house for relaxing and socializing.'),
   ('look at', '/lʊk æt/', '看；注视', 'To direct one''s gaze toward something or someone.'),
   ('loneliness', '/ˈloʊn.lin.nəs/', '孤独；寂寞', 'The state of being alone or isolated without companionship.'),
@@ -1543,17 +1549,19 @@ BEGIN
   ('sell out', '/sɛl aʊt/', '售罄；卖光', 'To sell all available items or tickets.'),
   ('selfie', '/ˈsɛl.fi/', '自拍', 'A self-taken photograph, typically with a smartphone.'),
   ('separate from', '/ˈsɛp.ə.reɪt frəm/', '分开；脱离', 'To remove or keep apart from something else.'),
-  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.')
+  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.'),
+  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
+  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
+  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
+  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
+  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
+  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3;
 
   SELECT count(*) INTO n_badscene
     FROM (VALUES
-  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
-  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
-  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
-  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.'),
   ('living room', '/ˈlɪv.ɪŋ rʊm/', '客厅', 'A room in a house for relaxing and socializing.'),
   ('look at', '/lʊk æt/', '看；注视', 'To direct one''s gaze toward something or someone.'),
   ('loneliness', '/ˈloʊn.lin.nəs/', '孤独；寂寞', 'The state of being alone or isolated without companionship.'),
@@ -1795,7 +1803,13 @@ BEGIN
   ('sell out', '/sɛl aʊt/', '售罄；卖光', 'To sell all available items or tickets.'),
   ('selfie', '/ˈsɛl.fi/', '自拍', 'A self-taken photograph, typically with a smartphone.'),
   ('separate from', '/ˈsɛp.ə.reɪt frəm/', '分开；脱离', 'To remove or keep apart from something else.'),
-  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.')
+  ('security guard', '/sɪˈkjʊr.ɪ.ti ɡɑːrd/', '保安；安全警卫', 'A person responsible for maintaining safety and security in a place.'),
+  ('satisfied', '/ˈsæt.ɪs.faɪd/', '满意的', 'Pleased or happy with something that has happened or been done.'),
+  ('serving chopsticks', '/ˈsɜːr.vɪŋ ˈtʃɑːp.stɪks/', '用来夹菜的筷子', 'Utensils used for serving food, typically in a meal.'),
+  ('set off', '/sɛt ɔf/', '出发；引发', 'To begin a journey; to cause something to happen.'),
+  ('serving', '/ˈsɜr.vɪŋ/', '服务；供应', 'The act of providing food or assistance.'),
+  ('set out', '/sɛt aʊt/', '出发；开始旅程', 'To begin a journey or a task.'),
+  ('semi-final', '/ˈsɛmiˈfaɪnəl/', '半决赛', 'A match that determines which players or teams advance to the final.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
     JOIN vocab_examples e ON e.word_id = w.id
@@ -1805,7 +1819,7 @@ BEGIN
 
 
 
-  RAISE NOTICE '本批 246 词:缺释义 %,例句数不等于3 %,scene 非法 %',
+  RAISE NOTICE '本批 248 词:缺释义 %,例句数不等于3 %,scene 非法 %',
     n_missing, n_badcount, n_badscene;
 
   IF n_missing > 0 OR n_badcount > 0 OR n_badscene > 0 THEN

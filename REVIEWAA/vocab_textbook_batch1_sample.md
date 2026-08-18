@@ -4,13 +4,13 @@
 > **不是纯随机** —— 贪心挑成尽量铺开 scene 与词性,免得 16 个全是名词、场景全挤在 news。
 > 本批覆盖 **10/10 个 scene**、**9 种词性**(词性缺失 / a / n / adv / vt / vi / v / prep / int)。
 > (`词性缺失` = ECDICT 的 translation 里没有词性前缀,全库 53 个词属于这种,`pos` 为空。)
-> 全量 981 词见 `scripts/vocab/data/generated/textbook-content.json`。
+> 全量 991 词见 `scripts/vocab/data/generated/textbook-content.json`。
 
-## 全量 981 词的分布(不只是抽样这 16 个)
+## 全量 991 词的分布(不只是抽样这 16 个)
 
-难度档:A2 425 · B1 321 · B2 235
+难度档:A2 432 · B1 324 · B2 235
 
-场景(共 2943 条例句):academic 173 · news 211 · daily_life 780 · work 534 · science_tech 166 · health 124 · environment 99 · education 385 · travel 133 · culture 338
+场景(共 2973 条例句):academic 173 · news 215 · daily_life 786 · work 537 · science_tech 167 · health 128 · environment 102 · education 389 · travel 136 · culture 340
 
 ## 这批内容是怎么把住质量的
 
@@ -89,37 +89,37 @@
 | 2 | fast food restaurants | `culture` | Fast food restaurants are popular among young people. | 快餐店在年轻人中很受欢迎。 |
 | 3 | fast food options | `health` | There are many fast food options that are unhealthy. | 有很多不健康的快餐选择。 |
 
-### 4. luckily  *adv*
+### 4. what about  *adv*
 
 | | |
 | --- | --- |
-| 音标 | /ˈlʌk.ɪ.li/ |
-| 中文释义 | 幸运地 |
-| 英文释义 | In a fortunate or favorable manner. |
+| 音标 | /wɒt əˈbaʊt/ |
+| 中文释义 | ……怎么样；……呢 |
+| 英文释义 | Used to ask for an opinion about something, or to suggest an idea. |
 | freq_rank | — |
-| 难度档 | B1 |
+| 难度档 | A2 |
 
 | # | 搭配 | 场景 | 例句 | 译文 |
 | ---: | --- | --- | --- | --- |
-| 1 | luckily for us | `daily_life` | Luckily for us, the rain stopped before our picnic started. | 幸运的是，雨在我们野餐开始之前停了下来。 |
-| 2 | luckily I found | `travel` | After losing my wallet, luckily I found it in the hotel lobby. | 在丢失钱包后，幸运的是我在酒店大堂找到了它。 |
-| 3 | luckily they were safe | `news` | Rescuers reported that luckily they were safe after the earthquake. | 救援人员报告说，幸运的是他们在地震后安全无恙。 |
+| 1 | what about meeting | `daily_life` | What about meeting at the library after class today? | 今天下课后在图书馆见面怎么样？ |
+| 2 | so what about | `work` | So what about the report your team promised us? | 那你们组答应给我们的报告呢？ |
+| 3 | and what about | `environment` | And what about the animals that lose their homes? | 那些失去家园的动物又怎么办呢？ |
 
-### 5. overfish  *vt*
+### 5. symbolise  *vt*
 
 | | |
 | --- | --- |
-| 音标 | /ˌoʊ.vərˈfɪʃ/ |
-| 中文释义 | 过度捕捞 |
-| 英文释义 | To catch too many fish from a body of water. |
+| 音标 | /ˈsɪm.bə.laɪz/ |
+| 中文释义 | 象征；象徵 |
+| 英文释义 | To represent or stand for something in a meaningful way. |
 | freq_rank | — |
-| 难度档 | B1 |
+| 难度档 | B2 |
 
 | # | 搭配 | 场景 | 例句 | 译文 |
 | ---: | --- | --- | --- | --- |
-| 1 | overfish fish populations | `environment` | Overfishing fish populations can lead to ecological imbalance. | 过度捕捞鱼类种群会导致生态失衡。 |
-| 2 | overfish the ocean | `news` | Many countries are warned not to overfish the ocean this year. | 许多国家被警告今年不要过度捕捞海洋。 |
-| 3 | overfish local waters | `daily_life` | Fishermen sometimes overfish local waters without considering sustainability. | 渔民有时在不考虑可持续性情况下过度捕捞当地水域。 |
+| 1 | symbolise change | `culture` | The colors in the painting symbolise change and the passage of time. | 画作中的颜色象征着变化与时间的流逝。 |
+| 2 | symbolise hope | `daily_life` | These flowers symbolise hope for a better future after difficult times. | 这些花象征着在艰难时期后美好未来的希望。 |
+| 3 | symbolise freedom | `education` | Many statues in the city symbolise freedom and the fight for human rights. | 城市中的许多雕像象征着自由与人权斗争。 |
 
 ### 6. ice-skate  *vi*
 
@@ -185,7 +185,23 @@
 | 2 | un grand merci | `culture` | At the end of the event, we gave un grand merci to all participants. | 在活动结束时，我们对所有参与者表示衷心的感谢。 |
 | 3 | merci d'avance | `work` | Please confirm your attendance, merci d'avance for your cooperation. | 请确认你的出席，提前谢谢你的配合。 |
 
-### 10. american  *n/a*
+### 10. stonehenge  
+
+| | |
+| --- | --- |
+| 音标 | /ˈstoʊnˌhɛndʒ/ |
+| 中文释义 | 史前巨石建筑 |
+| 英文释义 | A prehistoric monument of standing stones in England. |
+| freq_rank | — |
+| 难度档 | B1 |
+
+| # | 搭配 | 场景 | 例句 | 译文 |
+| ---: | --- | --- | --- | --- |
+| 1 | visit stonehenge | `travel` | Many tourists visit Stonehenge every year during the summer. | 每年夏天，许多游客都会参观史前巨石建筑。 |
+| 2 | study stonehenge | `academic` | Students study Stonehenge to understand ancient cultures and engineering techniques. | 学生研究史前巨石建筑，以了解古代文化和工程技术。 |
+| 3 | explore stonehenge | `culture` | Historians often explore Stonehenge for its mysteries and historical significance. | 历史学家常常探索史前巨石建筑，以研究其神秘和历史重要性。 |
+
+### 11. american  *n/a*
 
 | | |
 | --- | --- |
@@ -201,7 +217,7 @@
 | 2 | american dream | `daily_life` | Many people chase the American dream of success and happiness. | 许多人追求美国梦，渴望成功和幸福。 |
 | 3 | american history | `education` | Students study American history to understand the nation's past. | 学生学习美国历史，以了解国家的过去。 |
 
-### 11. confused  *a*
+### 12. confused  *a*
 
 | | |
 | --- | --- |
@@ -217,7 +233,7 @@
 | 2 | confused look | `daily_life` | She had a confused look on her face during the conversation. | 在谈话中，她面露困惑的神情。 |
 | 3 | confused messages | `work` | The email contained confused messages that made the instructions unclear. | 电子邮件包含了让人困惑的信息，使指示不明确。 |
 
-### 12. russian  *n/a*
+### 13. russian  *n/a*
 
 | | |
 | --- | --- |
@@ -233,7 +249,7 @@
 | 2 | russian language | `education` | She is learning the Russian language to communicate better. | 她正在学习俄语，以便更好地交流。 |
 | 3 | russian army | `news` | The Russian army has conducted military exercises recently. | 俄罗斯军队最近进行了军事演习。 |
 
-### 13. get along  
+### 14. get along  
 
 | | |
 | --- | --- |
@@ -249,7 +265,7 @@
 | 2 | get along well | `work` | They get along well in their new job together. | 他们在新工作中相处得很好。 |
 | 3 | get along like friends | `daily_life` | Children get along like friends during playtime. | 孩子们在游戏时间像朋友一样相处。 |
 
-### 14. jump rope  *n*
+### 15. jump rope  *n*
 
 | | |
 | --- | --- |
@@ -265,7 +281,7 @@
 | 2 | learn to jump rope | `education` | I want to learn to jump rope this summer. | 我想在这个夏天学会跳绳。 |
 | 3 | practice jump rope | `health` | They practice jump rope for exercise every morning. | 他们每天早晨跳绳锻炼。 |
 
-### 15. get up  
+### 16. get up  
 
 | | |
 | --- | --- |
@@ -280,19 +296,3 @@
 | 1 | get up early | `daily_life` | Many people like to get up early in the morning. | 许多人喜欢在早上起床。 |
 | 2 | get up on time | `work` | You should get up on time for your job. | 你应该按时起床去上班。 |
 | 3 | get up quickly | `education` | Students must get up quickly for the next class. | 学生们必须快速起床去上下一节课。 |
-
-### 16. stonehenge  
-
-| | |
-| --- | --- |
-| 音标 | /ˈstoʊnˌhɛndʒ/ |
-| 中文释义 | 史前巨石建筑 |
-| 英文释义 | A prehistoric monument of standing stones in England. |
-| freq_rank | — |
-| 难度档 | B1 |
-
-| # | 搭配 | 场景 | 例句 | 译文 |
-| ---: | --- | --- | --- | --- |
-| 1 | visit stonehenge | `travel` | Many tourists visit Stonehenge every year during the summer. | 每年夏天，许多游客都会参观史前巨石建筑。 |
-| 2 | study stonehenge | `academic` | Students study Stonehenge to understand ancient cultures and engineering techniques. | 学生研究史前巨石建筑，以了解古代文化和工程技术。 |
-| 3 | explore stonehenge | `culture` | Historians often explore Stonehenge for its mysteries and historical significance. | 历史学家常常探索史前巨石建筑，以研究其神秘和历史重要性。 |

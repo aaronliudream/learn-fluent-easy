@@ -25,7 +25,11 @@ const GEN = path.join(HERE, 'data', 'generated');
 const arg = (k, d) => process.argv.find(a => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=') ?? d;
 const SHARDS = Math.max(1, Number(arg('shards', '1')) || 1);
 
-const RESULTS = path.join(GEN, 'textbook-trial-all.json');
+/* ⚠️ 读**正式结果文件**,不是 --from-csv 的试跑缓存。
+   踩过:手写补的 10 个词只进了 textbook-content.json,而这里读 trial 缓存,
+   于是建词条 SQL 少了那 10 行 —— 它们会有内容 SQL 却没有词条行,
+   内容 SQL 的 "缺释义" 断言当场不过,而且要等 Aaron 跑到才看得见。 */
+const RESULTS = path.join(GEN, 'textbook-content.json');
 if (!existsSync(RESULTS)) { console.error(`x 没有 ${RESULTS} —— 先跑内容生成`); process.exit(2); }
 const results = JSON.parse(readFileSync(RESULTS, 'utf8'));
 

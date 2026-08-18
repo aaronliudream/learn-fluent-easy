@@ -1,4 +1,4 @@
--- 教材词表缺口:建词条【第 2/2 片】 —— 490 个词
+-- 教材词表缺口:建词条【第 2/2 片】 —— 495 个词
 -- 生成: node scripts/vocab/emit-textbook-word-sql.mjs
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
@@ -51,6 +51,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('look for', NULL),
   ('look forward to', NULL),
   ('look into', NULL),
+  ('look on the bright side', NULL),
   ('look up to', NULL),
   ('loose lips sink ships', NULL),
   ('lose track of', NULL),
@@ -64,6 +65,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('madly', 'adv'),
   ('magnifier', 'n'),
   ('make a difference', NULL),
+  ('make a getaway', NULL),
   ('make a mess', NULL),
   ('make a mistake', NULL),
   ('make a promise', NULL),
@@ -127,6 +129,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('no way', NULL),
   ('nobly', 'adv'),
   ('north', 'n/a/adv'),
+  ('northeastern', 'a'),
   ('nosebleed', 'n'),
   ('nothing but', NULL),
   ('nursing home', NULL),
@@ -384,6 +387,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('take a message', NULL),
   ('take a photo', NULL),
   ('take a seat', NULL),
+  ('take a shower', NULL),
   ('take a walk', NULL),
   ('take action', NULL),
   ('take back', NULL),
@@ -486,6 +490,7 @@ INSERT INTO _new_words(headword, pos) VALUES
   ('weigh up', NULL),
   ('well-used', NULL),
   ('whaling', 'n'),
+  ('what about', 'adv'),
   ('what''s more', NULL),
   ('wheelchair', 'n'),
   ('whiteboard', 'n'),
@@ -528,7 +533,7 @@ BEGIN
 
   -- ⑵ 临时表行数与声明一致(空表会让上面那条真空通过)
   SELECT count(*) INTO v_n FROM _new_words;
-  IF v_n <> 490 THEN RAISE EXCEPTION '本片应有 490 个词,实际 %', v_n; END IF;
+  IF v_n <> 495 THEN RAISE EXCEPTION '本片应有 495 个词,实际 %', v_n; END IF;
 
   -- ⑶ 这批词此刻**都还没有释义**,而且**一个词库都没挂** —— 证明这份没越界
   --    (挂载和内容都是后面单独的 SQL 干的事)
@@ -536,7 +541,7 @@ BEGIN
     JOIN vocab_words w ON lower(w.headword) = n.headword
    WHERE EXISTS (SELECT 1 FROM vocab_word_banks wb WHERE wb.word_id = w.id);
   RAISE NOTICE '本片 % 词已建;其中已挂在某个词库上的 % 个(应为 0,除非该词此前就存在)',
-    490, v_n;
+    495, v_n;
 END
 $gate$;
 

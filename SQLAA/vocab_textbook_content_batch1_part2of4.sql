@@ -1,5 +1,5 @@
--- 词汇内容 batch1【第 2/4 片】:246 词 · 738 例句
--- ⚠️ 本片自带事务与断言,**只判本片这 246 个词**;各片互相独立,顺序无所谓,
+-- 词汇内容 batch1【第 2/4 片】:248 词 · 744 例句
+-- ⚠️ 本片自带事务与断言,**只判本片这 248 个词**;各片互相独立,顺序无所谓,
 --    单独跑任意一片都成立,某片失败只回滚那一片。
 --
 -- 生成: node scripts/vocab/generate-content.mjs --bank=textbook --emit-sql
@@ -30,8 +30,6 @@ UPDATE vocab_words w
        def_en     = v.def_en,
        updated_at = now()
   FROM (VALUES
-  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
-  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.'),
   ('european', '/ˌjʊə.rəˈpiː.ən/', '欧洲的；欧洲人', 'Relating to or characteristic of Europe or its inhabitants.'),
   ('every day', '/ˈɛv.ri deɪ/', '每天', 'Each day; used to describe a regular occurrence.'),
   ('evacuation', '/ɪˌvækjʊˈeɪʃən/', '撤离；疏散', 'The act of leaving a place quickly for safety.'),
@@ -275,7 +273,11 @@ UPDATE vocab_words w
   ('linguist', '/ˈlɪŋ.ɡwɪst/', '语言学家', 'A person skilled in multiple languages or linguistics.'),
   ('listen to', '/ˈlɪs.ən tuː/', '听；倾听', 'To pay attention to sounds or someone speaking.'),
   ('lighting', '/ˈlaɪ.tɪŋ/', '照明；灯光', 'The arrangement of lights in a space or area.'),
-  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.')
+  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.'),
+  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
+  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
+  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
+  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.')
   ) AS v(headword, ipa, def_zh, def_en)
  WHERE lower(w.headword) = v.headword
    AND w.def_zh IS NULL;        -- ← 护栏:只填空,绝不覆盖库里已有的释义
@@ -284,12 +286,6 @@ UPDATE vocab_words w
 INSERT INTO vocab_examples (word_id, sort_order, collocation, sentence, translation_zh, scene)
 SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   FROM (VALUES
-  ('environmentalist', 1, 'environmentalist movement', 'Many people joined the environmentalist movement to combat climate change.', '许多人加入环保主义者运动以对抗气候变化。', 'news'),
-  ('environmentalist', 2, 'environmentalist groups', 'Various environmentalist groups are collaborating on new conservation projects.', '多个环保主义者团体正在合作开展新的保护项目。', 'work'),
-  ('environmentalist', 3, 'environmentalist policies', 'Researchers analyzed the effects of recent environmentalist policies on biodiversity.', '研究人员分析了近期环保主义者政策对生物多样性的影响。', 'academic'),
-  ('entirely', 1, 'entirely different', 'The two theories are entirely different in their approaches to the problem.', '这两种理论在处理问题的方法上完全不同。', 'academic'),
-  ('entirely', 2, 'entirely new', 'Our team has developed an entirely new strategy for improving productivity.', '我们的团队制定了一种全新的提高生产力的战略。', 'work'),
-  ('entirely', 3, 'entirely focused', 'Students should be entirely focused during important examinations to achieve their best results.', '学生在重要考试期间应完全专注，以取得最佳成绩。', 'education'),
   ('european', 1, 'european countries', 'Many european countries offer beautiful scenery and rich history.', '许多欧洲国家提供美丽的风景和丰富的历史。', 'travel'),
   ('european', 2, 'european culture', 'Exploring european culture can lead to a deeper understanding of diversity.', '探索欧洲文化可以加深对多样性的理解。', 'culture'),
   ('european', 3, 'european languages', 'Learning european languages can enhance career opportunities significantly.', '学习欧洲语言可以显著提升职业机会。', 'education'),
@@ -1021,7 +1017,19 @@ SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   ('lighting', 3, 'lighting equipment', 'New lighting equipment has significantly improved energy efficiency in buildings.', '新型照明设备显著提高了建筑物的能源效率。', 'science_tech'),
   ('lock up', 1, 'lock up the house', 'They always lock up the house before going out.', '他们总是在外出前锁上房子。', 'daily_life'),
   ('lock up', 2, 'lock up the evidence', 'The police need to lock up the evidence carefully.', '警方需要小心地锁上证据。', 'work'),
-  ('lock up', 3, 'lock up at night', 'Many businesses lock up at night to prevent theft.', '许多商店晚上锁上以防盗窃。', 'culture')
+  ('lock up', 3, 'lock up at night', 'Many businesses lock up at night to prevent theft.', '许多商店晚上锁上以防盗窃。', 'culture'),
+  ('logging', 1, 'illegal logging', 'Illegal logging causes significant harm to forests and biodiversity.', '非法伐木对森林和生物多样性造成了重大伤害。', 'environment'),
+  ('logging', 2, 'logging industry', 'The logging industry provides many jobs in rural areas around the world.', '伐木行业为全球农村地区提供了许多就业机会。', 'work'),
+  ('logging', 3, 'logging data', 'Scientists are logging data to study climate change effects on ecosystems.', '科学家们正在记录数据，以研究气候变化对生态系统的影响。', 'science_tech'),
+  ('logo', 1, 'company logo', 'The company logo is displayed on all product packaging.', '公司标志印在所有产品包装上。', 'work'),
+  ('logo', 2, 'brand logo', 'Many people recognize the brand logo without seeing the name.', '许多人在没有看到名称的情况下就能认出品牌标志。', 'daily_life'),
+  ('logo', 3, 'school logo', 'Students wear uniforms that feature the school logo.', '学生穿着带有校徽的校服。', 'education'),
+  ('long ago', 1, 'happened long ago', 'Things were different when they happened long ago.', '当事情发生在很久以前时，一切都不同了。', 'daily_life'),
+  ('long ago', 2, 'was built long ago', 'The ancient city was built long ago and still stands today.', '这座古老的城市建于很久以前，至今仍然屹立。', 'culture'),
+  ('long ago', 3, 'existed long ago', 'Many species existed long ago before the dinosaurs appeared.', '许多物种在恐龙出现之前就存在于很久以前。', 'science_tech'),
+  ('long face', 1, 'wear a long face', 'He always wears a long face when he is upset.', '他不高兴的时候总是愁苦的面容。', 'daily_life'),
+  ('long face', 2, 'put on a long face', 'She puts on a long face whenever there is bad news.', '每当有坏消息时，她就会愁苦的面容。', 'work'),
+  ('long face', 3, 'have a long face', 'Students often have a long face after receiving low grades.', '学生在收到低分后通常会愁苦的面容。', 'education')
   ) AS v(headword, sort_order, collocation, sentence, translation_zh, scene)
   JOIN vocab_words w ON lower(w.headword) = v.headword
 ON CONFLICT (word_id, sort_order) DO UPDATE
@@ -1035,7 +1043,7 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
 
--- ── 断言:**只判本批这 246 个词**,不判全表 ────────────────────
+-- ── 断言:**只判本批这 248 个词**,不判全表 ────────────────────
 -- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 本批词数。
 --    那在只有托福一个库时碰巧成立,多几个库以后必然为 f —— 全表里还有别的库的词。
 --    判据必须锁在本批范围内(见 batch-validate-scope-to-batch)。
@@ -1046,8 +1054,6 @@ DECLARE
 BEGIN
   SELECT count(*) INTO n_missing
     FROM (VALUES
-  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
-  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.'),
   ('european', '/ˌjʊə.rəˈpiː.ən/', '欧洲的；欧洲人', 'Relating to or characteristic of Europe or its inhabitants.'),
   ('every day', '/ˈɛv.ri deɪ/', '每天', 'Each day; used to describe a regular occurrence.'),
   ('evacuation', '/ɪˌvækjʊˈeɪʃən/', '撤离；疏散', 'The act of leaving a place quickly for safety.'),
@@ -1291,15 +1297,17 @@ BEGIN
   ('linguist', '/ˈlɪŋ.ɡwɪst/', '语言学家', 'A person skilled in multiple languages or linguistics.'),
   ('listen to', '/ˈlɪs.ən tuː/', '听；倾听', 'To pay attention to sounds or someone speaking.'),
   ('lighting', '/ˈlaɪ.tɪŋ/', '照明；灯光', 'The arrangement of lights in a space or area.'),
-  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.')
+  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.'),
+  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
+  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
+  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
+  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.')
     ) AS v(headword, ipa, def_zh, def_en)
     LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE w.id IS NULL OR w.def_zh IS NULL;
 
   SELECT count(*) INTO n_badcount
     FROM (VALUES
-  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
-  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.'),
   ('european', '/ˌjʊə.rəˈpiː.ən/', '欧洲的；欧洲人', 'Relating to or characteristic of Europe or its inhabitants.'),
   ('every day', '/ˈɛv.ri deɪ/', '每天', 'Each day; used to describe a regular occurrence.'),
   ('evacuation', '/ɪˌvækjʊˈeɪʃən/', '撤离；疏散', 'The act of leaving a place quickly for safety.'),
@@ -1543,15 +1551,17 @@ BEGIN
   ('linguist', '/ˈlɪŋ.ɡwɪst/', '语言学家', 'A person skilled in multiple languages or linguistics.'),
   ('listen to', '/ˈlɪs.ən tuː/', '听；倾听', 'To pay attention to sounds or someone speaking.'),
   ('lighting', '/ˈlaɪ.tɪŋ/', '照明；灯光', 'The arrangement of lights in a space or area.'),
-  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.')
+  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.'),
+  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
+  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
+  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
+  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3;
 
   SELECT count(*) INTO n_badscene
     FROM (VALUES
-  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
-  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.'),
   ('european', '/ˌjʊə.rəˈpiː.ən/', '欧洲的；欧洲人', 'Relating to or characteristic of Europe or its inhabitants.'),
   ('every day', '/ˈɛv.ri deɪ/', '每天', 'Each day; used to describe a regular occurrence.'),
   ('evacuation', '/ɪˌvækjʊˈeɪʃən/', '撤离；疏散', 'The act of leaving a place quickly for safety.'),
@@ -1795,7 +1805,11 @@ BEGIN
   ('linguist', '/ˈlɪŋ.ɡwɪst/', '语言学家', 'A person skilled in multiple languages or linguistics.'),
   ('listen to', '/ˈlɪs.ən tuː/', '听；倾听', 'To pay attention to sounds or someone speaking.'),
   ('lighting', '/ˈlaɪ.tɪŋ/', '照明；灯光', 'The arrangement of lights in a space or area.'),
-  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.')
+  ('lock up', '/lɑk ʌp/', '锁上；关上', 'To secure something so it cannot be opened or accessed.'),
+  ('logging', '/ˈlɔː.ɡɪŋ/', '伐木；记录', 'The process of cutting down trees for timber.'),
+  ('logo', '/ˈloʊ.ɡoʊ/', '标志；商标', 'A symbol or design representing a company or brand.'),
+  ('long ago', '/lɔŋ əˈɡoʊ/', '很久以前', 'At a time in the past, not recent.'),
+  ('long face', '/lɔːŋ feɪs/', '愁苦的面容', 'An expression showing sadness or disappointment.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
     JOIN vocab_examples e ON e.word_id = w.id
@@ -1805,7 +1819,7 @@ BEGIN
 
 
 
-  RAISE NOTICE '本批 246 词:缺释义 %,例句数不等于3 %,scene 非法 %',
+  RAISE NOTICE '本批 248 词:缺释义 %,例句数不等于3 %,scene 非法 %',
     n_missing, n_badcount, n_badscene;
 
   IF n_missing > 0 OR n_badcount > 0 OR n_badscene > 0 THEN

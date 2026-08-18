@@ -1,5 +1,5 @@
--- 词汇内容 batch1【第 1/4 片】:246 词 · 738 例句
--- ⚠️ 本片自带事务与断言,**只判本片这 246 个词**;各片互相独立,顺序无所谓,
+-- 词汇内容 batch1【第 1/4 片】:248 词 · 744 例句
+-- ⚠️ 本片自带事务与断言,**只判本片这 248 个词**;各片互相独立,顺序无所谓,
 --    单独跑任意一片都成立,某片失败只回滚那一片。
 --
 -- 生成: node scripts/vocab/generate-content.mjs --bank=textbook --emit-sql
@@ -275,7 +275,9 @@ UPDATE vocab_words w
   ('encouraging', '/ɪnˈkɜr.ɪ.dʒɪŋ/', '鼓舞人心的', 'Giving support, confidence, or hope to someone.'),
   ('emphasise', '/ˈɛm.fə.saɪz/', '强调', 'To give special importance or prominence to something.'),
   ('enhanced', '/ɪnˈhænst/', '增强的；改进的', 'Improved or increased in quality, value, or extent.'),
-  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.')
+  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.'),
+  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
+  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.')
   ) AS v(headword, ipa, def_zh, def_en)
  WHERE lower(w.headword) = v.headword
    AND w.def_zh IS NULL;        -- ← 护栏:只填空,绝不覆盖库里已有的释义
@@ -1021,7 +1023,13 @@ SELECT w.id, v.sort_order, v.collocation, v.sentence, v.translation_zh, v.scene
   ('enhanced', 3, 'enhanced features', 'Developers released a new software version with enhanced features for better user experience.', '开发者发布了一个新软件版本，增加了增强功能以改善用户体验。', 'science_tech'),
   ('entrepreneurial', 1, 'entrepreneurial skills', 'Many successful leaders possess strong entrepreneurial skills and vision.', '许多成功的领导者具备强大的企业家技能和远见。', 'work'),
   ('entrepreneurial', 2, 'entrepreneurial spirit', 'The entrepreneurial spirit is essential for innovation and economic growth.', '企业家精神对于创新和经济增长至关重要。', 'culture'),
-  ('entrepreneurial', 3, 'entrepreneurial ventures', 'New entrepreneurial ventures are emerging in various sectors around the globe.', '全球各个行业中，新的企业家项目不断涌现。', 'news')
+  ('entrepreneurial', 3, 'entrepreneurial ventures', 'New entrepreneurial ventures are emerging in various sectors around the globe.', '全球各个行业中，新的企业家项目不断涌现。', 'news'),
+  ('environmentalist', 1, 'environmentalist movement', 'Many people joined the environmentalist movement to combat climate change.', '许多人加入环保主义者运动以对抗气候变化。', 'news'),
+  ('environmentalist', 2, 'environmentalist groups', 'Various environmentalist groups are collaborating on new conservation projects.', '多个环保主义者团体正在合作开展新的保护项目。', 'work'),
+  ('environmentalist', 3, 'environmentalist policies', 'Researchers analyzed the effects of recent environmentalist policies on biodiversity.', '研究人员分析了近期环保主义者政策对生物多样性的影响。', 'academic'),
+  ('entirely', 1, 'entirely different', 'The two theories are entirely different in their approaches to the problem.', '这两种理论在处理问题的方法上完全不同。', 'academic'),
+  ('entirely', 2, 'entirely new', 'Our team has developed an entirely new strategy for improving productivity.', '我们的团队制定了一种全新的提高生产力的战略。', 'work'),
+  ('entirely', 3, 'entirely focused', 'Students should be entirely focused during important examinations to achieve their best results.', '学生在重要考试期间应完全专注，以取得最佳成绩。', 'education')
   ) AS v(headword, sort_order, collocation, sentence, translation_zh, scene)
   JOIN vocab_words w ON lower(w.headword) = v.headword
 ON CONFLICT (word_id, sort_order) DO UPDATE
@@ -1035,7 +1043,7 @@ SELECT 'AFTER' AS stage,
        (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) AS words_with_def,
        (SELECT count(*) FROM vocab_examples) AS examples;
 
--- ── 断言:**只判本批这 246 个词**,不判全表 ────────────────────
+-- ── 断言:**只判本批这 248 个词**,不判全表 ────────────────────
 -- ⚠️ 原来写的是 (SELECT count(*) FROM vocab_words WHERE def_zh IS NOT NULL) = 本批词数。
 --    那在只有托福一个库时碰巧成立,多几个库以后必然为 f —— 全表里还有别的库的词。
 --    判据必须锁在本批范围内(见 batch-validate-scope-to-batch)。
@@ -1291,7 +1299,9 @@ BEGIN
   ('encouraging', '/ɪnˈkɜr.ɪ.dʒɪŋ/', '鼓舞人心的', 'Giving support, confidence, or hope to someone.'),
   ('emphasise', '/ˈɛm.fə.saɪz/', '强调', 'To give special importance or prominence to something.'),
   ('enhanced', '/ɪnˈhænst/', '增强的；改进的', 'Improved or increased in quality, value, or extent.'),
-  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.')
+  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.'),
+  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
+  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.')
     ) AS v(headword, ipa, def_zh, def_en)
     LEFT JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE w.id IS NULL OR w.def_zh IS NULL;
@@ -1543,7 +1553,9 @@ BEGIN
   ('encouraging', '/ɪnˈkɜr.ɪ.dʒɪŋ/', '鼓舞人心的', 'Giving support, confidence, or hope to someone.'),
   ('emphasise', '/ˈɛm.fə.saɪz/', '强调', 'To give special importance or prominence to something.'),
   ('enhanced', '/ɪnˈhænst/', '增强的；改进的', 'Improved or increased in quality, value, or extent.'),
-  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.')
+  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.'),
+  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
+  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
    WHERE (SELECT count(*) FROM vocab_examples e WHERE e.word_id = w.id) <> 3;
@@ -1795,7 +1807,9 @@ BEGIN
   ('encouraging', '/ɪnˈkɜr.ɪ.dʒɪŋ/', '鼓舞人心的', 'Giving support, confidence, or hope to someone.'),
   ('emphasise', '/ˈɛm.fə.saɪz/', '强调', 'To give special importance or prominence to something.'),
   ('enhanced', '/ɪnˈhænst/', '增强的；改进的', 'Improved or increased in quality, value, or extent.'),
-  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.')
+  ('entrepreneurial', '/ˌɒn.trə.prəˈnɜː.ri.əl/', '企业家的；创业的', 'Relating to starting or managing a business or enterprise.'),
+  ('environmentalist', '/ɪnˌvaɪ.rənˈmen.təl.ɪst/', '环保主义者', 'A person advocating for the protection of the environment.'),
+  ('entirely', '/ɪnˈtaɪərli/', '完全；彻底', 'Completely or fully; to the greatest extent possible.')
     ) AS v(headword, ipa, def_zh, def_en)
     JOIN vocab_words w ON lower(w.headword) = v.headword
     JOIN vocab_examples e ON e.word_id = w.id
@@ -1805,7 +1819,7 @@ BEGIN
 
 
 
-  RAISE NOTICE '本批 246 词:缺释义 %,例句数不等于3 %,scene 非法 %',
+  RAISE NOTICE '本批 248 词:缺释义 %,例句数不等于3 %,scene 非法 %',
     n_missing, n_badcount, n_badscene;
 
   IF n_missing > 0 OR n_badcount > 0 OR n_badscene > 0 THEN

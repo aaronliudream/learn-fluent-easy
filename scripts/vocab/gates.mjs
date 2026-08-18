@@ -164,13 +164,38 @@ function matchesForm(token, headword, forms, strict = false) {
  */
 export const isPhraseHeadword = hw => /\s/.test(String(hw).trim());
 
-function phrasePresent(text, phrase) {
-  const norm = s => String(s).toLowerCase().replace(/[’‘]/g, "'")
-    .split(/[\s\-–—/]+/).map(t => t.replace(/[^a-z']/g, '').replace(/'s$|'$/, '')).filter(Boolean);
-  const hay = norm(text), needle = norm(phrase);
+function phrasePresent(text, phrase, table = {}) {
+  /* 每个 token 附带"它后面是不是有句读标点"。
+     ⚠️ 这一位是用来拦 "He took care, of course, to lock the door." 的:
+        剥完标点之后 token 序列**确实**是 took care of,字面完全命中,
+        但那是「took care」+「of course」两个成分,不是 take care of。
+        固定短语内部不会被逗号/分号/句号切开 —— 这是**表层可查**的,
+        不是语义问题,所以该卡就卡,不能推给"分不清就别硬判"。 */
+  const split = s => String(s).toLowerCase().replace(/[’‘]/g, "'").split(/[\s\-–—/]+/);
+  const norm = s => split(s).map(raw => ({
+    t: raw.replace(/[^a-z']/g, '').replace(/'s$|'$/, ''),
+    brk: /[,;:.!?]$/.test(raw),
+  })).filter(x => x.t);
+  const hay = norm(text), needle = norm(phrase).map(x => x.t);
   if (!needle.length) return false;
+  /**
+   * ⚠️ 逐 token 要**允许屈折**,不能要求逐字相同。
+   *    `look after` 在 "She **looks** after her brother" 里就是 looks ≠ look ——
+   *    要求全等的话 g1 会一口咬定"目标词缺席",而句子完全正确。
+   *    2026-08-17 加短语分支时没踩到,是因为当时只有 `inasmuch as` / `to and fro`
+   *    这两个**没有可屈折成分**的短语;轮到 525 个教材短语(look after / take care of)
+   *    就会大批误伤,而且是在**烧 API 额度重试三次之后**才看得见。
+   * ⚠️ 只放行屈折形,不放行任意近似:仍然要求**词序不变、成分数不变**,
+   *    所以 "look after" 匹配不上 "look carefully after",也匹配不上 "after look"。
+   */
+  const forms = needle.map(t => inflectionsOf(t, table));
   outer: for (let i = 0; i + needle.length <= hay.length; i++) {
-    for (let j = 0; j < needle.length; j++) if (hay[i + j] !== needle[j]) continue outer;
+    for (let j = 0; j < needle.length; j++) {
+      const h = hay[i + j].t;
+      if (h !== needle[j] && !forms[j].has(h)) continue outer;
+      // 短语内部不许被句读切开(最后一个成分后面的标点无所谓)
+      if (j < needle.length - 1 && hay[i + j].brk) continue outer;
+    }
     return true;
   }
   return false;
@@ -179,7 +204,7 @@ function phrasePresent(text, phrase) {
 export function g1_targetPresent(sentence, headword, table) {
   const hw = headword.toLowerCase();
   if (isPhraseHeadword(hw)) {
-    return phrasePresent(sentence, hw) ? null
+    return phrasePresent(sentence, hw, table) ? null
       : `g1 目标词缺席:句中找不到短语 "${headword}"(短语词条必须整体出现,不能只用其中半截)`;
   }
   const forms = inflectionsOf(hw, table);
@@ -260,7 +285,7 @@ export function g7_collocationContainsWord(examples, headword, table) {
     // headword 的搭配「student well-being」会被判成"不含目标词"。
     /* 短语词条:搭配里必须含**整个短语**,不能只含半截(见 g1 的 isPhraseHeadword 注释) */
     if (isPhraseHeadword(hw)) {
-      if (!phrasePresent(c, hw)) {
+      if (!phrasePresent(c, hw, table)) {
         return `g7 第${i + 1}条搭配 "${c}" 里没有完整短语 "${headword}"`;
       }
       continue;
@@ -414,7 +439,7 @@ export function g12_defEnNotCircular(defEn, headword, table) {
      ⚠️ 不加这个分支的话,g12 对短语词条**恒放行** —— 单 token 永远等不上带空格的
      词条,判据不是"没问题",是根本没判。刚在音频 SQL 那边栽过同型的空断言。 */
   if (isPhraseHeadword(hw)) {
-    return phrasePresent(defEn || '', hw)
+    return phrasePresent(defEn || '', hw, table)
       ? `def_en 循环定义:释义里出现了目标短语本身("${headword}")` : null;
   }
   const forms = inflectionsOf(hw, table);

@@ -165,73 +165,105 @@ function matchesForm(token, headword, forms, strict = false) {
 export const isPhraseHeadword = hw => /\s/.test(String(hw).trim());
 
 function phrasePresent(text, phrase, table = {}) {
-  /* 每个 token 附带"它后面是不是有句读标点"。
+  /* 句子侧分词。每个 token 附带"它后面是不是有句读标点"。
      ⚠️ 这一位是用来拦 "He took care, of course, to lock the door." 的:
         剥完标点之后 token 序列**确实**是 took care of,字面完全命中,
         但那是「took care」+「of course」两个成分,不是 take care of。
-        固定短语内部不会被逗号/分号/句号切开 —— 这是**表层可查**的,
-        不是语义问题,所以该卡就卡,不能推给"分不清就别硬判"。 */
-  const split = s => String(s).toLowerCase().replace(/[’‘]/g, "'").split(/[\s\-–—/]+/);
-  const norm = s => split(s).map(raw => ({
-    raw: raw.replace(/^[^a-z']+|[^a-z'.]+$/g, ''),
-    t: raw.replace(/[^a-z']/g, '').replace(/'s$|'$/, ''),
-    poss: /'s$/.test(raw.replace(/[^a-z']/g, '')),   // 这个 token 本身是所有格
-    brk: /[,;:.!?]$/.test(raw),
-  })).filter(x => x.t);
+        固定短语内部不会被逗号/分号/句号切开 —— 这是**表层可查**的。 */
+  const hay = String(text).toLowerCase().replace(/[’‘]/g, "'").split(/[\s\-–—/]+/)
+    .map(raw => ({
+      t: raw.replace(/[^a-z']/g, '').replace(/'s$|'$/, ''),
+      /* ⚠️ 复数所有格 "patients'" 末位是 s' 不是 's —— 只判 's$ 的话
+         'take sb's temperature' + "take patients' temperature" 会被误拦。
+         同一处形态归一已经栽过四次(屈折/虚位主语/物主/复数所有格),两种都判。 */
+      poss: /'s$|s'$/.test(raw.replace(/[^a-z']/g, '')),
+      brk: /[,;:.!?]$/.test(raw),
+    })).filter(x => x.t);
 
-  const hay = norm(text);
   /**
-   * ── 槽位(sb. / sth. / one's / oneself)──────────────────────────
-   * 教材词表里有 50 个这种词条:drive sb. crazy / try one's best / lend sb a hand。
-   * 它们是**真词汇、高价值**,sb./one's 是词典标准写法不是缺陷,词条保持原样。
-   * 但字面串永远不会出现在句子里 —— 实际写的是 "drives me crazy" / "tried her best"。
+   * ── 词条侧:槽位 / 择一 / 可选 ──────────────────────────────────
+   * 教材词表里 50 个带元变量的词条不是同一类东西,实测分四种:
+   *   37 纯槽位      drive sb. crazy / try one's best
+   *    5 动词槽位    succeed in doing sth —— 句子里是 "succeeded in **passing** the exam"
+   *    4 槽位带斜杠  fight against sb/sth —— sb 和 sth 是**同一个**槽位的两种写法
+   *    4 括号可选    run low (on sth) —— 括号里的部分可有可无
    *
-   * ⚠️ 槽位是**精确匹配,不是放宽**。三类各有各的可填集合:
-   *   · NOMINAL(sb / sth)      —— 名词性成分,1~3 个 token(允许 "my little brother")
-   *   · POSSESSIVE(one's/sb's) —— **只**认物主限定词或本身带 's 的 token,单个
-   *   · REFLEXIVE(oneself)     —— **只**认反身代词,单个
-   * 松成"含这几个实词就算"的话,「fro」 那种病句会重演 —— 而这次是 50 个。
-   * 判据的边界由四个已知样本钉死(见 test-phrase-slots.mjs):
-   *     drive sb. crazy + "It drives me crazy."          → 必须放行
-   *     try one's best  + "She tried her best."          → 必须放行
-   *     drive sb. crazy + "He drives a car."             → 必须拦下
-   *     try one's best  + "I tried the new restaurant."  → 必须拦下
+   * ⚠️ 词条侧**不能按 / 切分**(句子侧可以)。按 / 切的话 "sb/sth" 会变成两个槽位,
+   *    要求句子里连着出现两个名词性成分 —— 那 4 个词永远匹配不上。
+   * ⚠️ 槽位是**精确匹配,不是放宽**,四类各有各的可填集合:
+   *      NOM  名词性成分,1~3 token
+   *      POSS 1~2 token 且**末位是所有格**(容 "the child's")
+   *      REFL 反身代词闭集
+   *      GER  -ing 形式,单个(doing sth 里的 doing)
+   *      VERB 单个 token(do sth 里的 do)—— 前后都有字面量夹着,过宽的风险有限
+   *    松成"含这几个实词就算"的话,\`fro\` 那种病句会重演,而这次是 50 个词。
    */
   const POSSESSIVE = new Set(['my', 'your', 'his', 'her', 'its', 'our', 'their', 'ones']);
   const REFLEXIVE = new Set(['myself', 'yourself', 'himself', 'herself', 'itself',
     'ourselves', 'yourselves', 'themselves', 'oneself']);
-  const SLOT_MAX = 3;                       // NOMINAL 最多吃几个 token
-  const slotKind = tok => {
-    const bare = tok.raw.replace(/[^a-z']/g, '');
-    if (bare === "one's" || bare === "sb's" || bare === "sth's") return 'POSS';
-    if (bare === 'oneself') return 'REFL';
-    if (/^(sb|sth|sw)\.?$/.test(bare)) return 'NOM';
-    return null;
-  };
+  const NOM_MAX = 3;
 
-  const parts = norm(phrase).map(tok => ({ tok, slot: slotKind(tok) }));
+  const bare = w => w.toLowerCase().replace(/[^a-z'\/]/g, '');
+  function kindOf(w) {
+    const b = bare(w);
+    if (!b) return null;
+    /* sb/sth 这种:斜杠两侧都是名词性元变量 → **一个** NOM 槽位 */
+    if (/^(sb|sth|sw)(\/(sb|sth|sw))+$/.test(b)) return { slot: 'NOM' };
+    if (b === "one's" || b === "sb's" || b === "sth's") return { slot: 'POSS' };
+    if (b === 'oneself') return { slot: 'REFL' };
+    if (/^(sb|sth|sw)$/.test(b)) return { slot: 'NOM' };
+    if (b === 'doing') return { slot: 'GER' };
+    if (b === 'do') return { slot: 'VERB' };
+    /* in/into、with/to、on/upon:字面量的两种写法,任一命中即可 */
+    /* ⚠️ 字面量要和**句子侧用同一套归一**:句子侧 token 会剥掉尾部 's
+       (what's → what),词条侧不剥的话 "what's more" 永远匹配不上自己的例句。
+       2026-08-19 全量回归就是这么抓到的 —— 16,616 词里坏 1 个。
+       ⚠️ 但**槽位识别必须在剥之前做**:one's / sb's 剥完就成了 one / sb,
+          物主槽位会被误认成名词槽位。所以顺序是:先认槽位,再剥。 */
+    const strip = x => x.replace(/'s$|'$/, '');
+    if (b.includes('/')) return { alts: b.split('/').filter(Boolean).map(strip) };
+    return { lit: strip(b) };
+  }
+
+  const parts = [];
+  let optDepth = 0;
+  for (const raw of String(phrase).toLowerCase().replace(/[’‘]/g, "'").split(/[\s\-–—]+/)) {
+    if (!raw) continue;
+    const opensHere = (raw.match(/\(/g) || []).length;
+    const closesHere = (raw.match(/\)/g) || []).length;
+    optDepth += opensHere;
+    const k = kindOf(raw);
+    /* 括号里的成分**可有可无** —— "run low (on sth)" 的核心是 run low。
+       ⚠️ 逐个标可选(不是整组全有或全无):对这几个词来说效果一样,而且实现里
+          不需要再维护一层分组状态,少一处能写错的地方。 */
+    if (k) parts.push({ ...k, optional: optDepth > 0 });
+    optDepth = Math.max(0, optDepth - closesHere);
+  }
   if (!parts.length) return false;
-  const forms = parts.map(p => p.slot ? null : inflectionsOf(p.tok.t, table));
+  const forms = parts.map(p => p.lit ? inflectionsOf(p.lit, table)
+    : p.alts ? p.alts.map(a => inflectionsOf(a, table)) : null);
 
-  /** 从 hay[i] 起,能不能匹配 parts[j..];返回是否成功。 */
   function match(i, j) {
     if (j >= parts.length) return true;
-    if (i >= hay.length) return false;
     const p = parts[j];
-    /* 短语内部不许被句读切开(最后一个成分后面的标点无所谓) */
+    /* 可选成分:先试"跳过它" —— 跳过成功就不用再往下匹配 */
+    if (p.optional && match(i, j + 1)) return true;
+    if (i >= hay.length) return false;
     const brkBad = k => j < parts.length - 1 && hay[k].brk;
-    if (!p.slot) {
+
+    if (p.lit) {
       const h = hay[i].t;
-      if (h !== p.tok.t && !forms[j].has(h)) return false;
-      if (brkBad(i)) return false;
-      return match(i + 1, j + 1);
+      if (h !== p.lit && !forms[j].has(h)) return false;
+      return brkBad(i) ? false : match(i + 1, j + 1);
+    }
+    if (p.alts) {
+      const h = hay[i].t;
+      if (!p.alts.includes(h) && !forms[j].some(f => f.has(h))) return false;
+      return brkBad(i) ? false : match(i + 1, j + 1);
     }
     if (p.slot === 'POSS') {
-      /* 吃 1~2 个 token,且**最后一个**必须是所有格 —— 因为真实写法是
-         "her best"(1 个)也可能是 "the child's temperature"(2 个:限定词 + 名词's)。
-         ⚠️ 只吃 1 个的话 "took the child's temperature" 会卡在 the 上被判缺席,
-            而那句完全正确;只看"里面有没有所有格"又会放行 "tried the best"。
-            所以判据是**末位必须是所有格**,不是"含有所有格"。 */
+      /* 吃 1~2 个,**末位必须是所有格**:容 "her best" 也容 "the child's temperature",
+         但不容 "the best"(末位不是所有格)。判据是"末位是",不是"含有"。 */
       for (let n = 1; n <= 2 && i + n <= hay.length; n++) {
         const last = hay[i + n - 1];
         if (!(POSSESSIVE.has(last.t) || last.poss)) continue;
@@ -244,12 +276,18 @@ function phrasePresent(text, phrase, table = {}) {
     }
     if (p.slot === 'REFL') {
       if (!REFLEXIVE.has(hay[i].t)) return false;
-      if (brkBad(i)) return false;
-      return match(i + 1, j + 1);
+      return brkBad(i) ? false : match(i + 1, j + 1);
     }
-    /* NOMINAL:吃 1~3 个 token。⚠️ 上界必须有 —— 无上界的话
-       "He drives a car and everyone is crazy about it" 这种也会被吃成命中。 */
-    for (let n = 1; n <= SLOT_MAX && i + n <= hay.length; n++) {
+    if (p.slot === 'GER') {
+      if (!/ing$/.test(hay[i].t)) return false;      // doing → passing / cleaning
+      return brkBad(i) ? false : match(i + 1, j + 1);
+    }
+    if (p.slot === 'VERB') {
+      return brkBad(i) ? false : match(i + 1, j + 1);  // 单个任意 token,前后有字面量夹着
+    }
+    /* NOM:吃 1~NOM_MAX 个。⚠️ 上界必须有 —— 没上界的话
+       "He drives a car and everyone is crazy about it" 也会被吃成命中。 */
+    for (let n = 1; n <= NOM_MAX && i + n <= hay.length; n++) {
       let bad = false;
       for (let k = i; k < i + n; k++) if (brkBad(k)) { bad = true; break; }
       if (bad) break;
@@ -258,12 +296,10 @@ function phrasePresent(text, phrase, table = {}) {
     return false;
   }
 
-  for (let i = 0; i + parts.length <= hay.length + (parts.filter(p => p.slot === 'NOM').length * (SLOT_MAX - 1)); i++) {
-    if (i >= hay.length) break;
-    if (match(i, 0)) return true;
-  }
+  for (let i = 0; i < hay.length; i++) if (match(i, 0)) return true;
   return false;
 }
+
 
 
 export function g1_targetPresent(sentence, headword, table) {
@@ -498,6 +534,38 @@ export function g11_lengthRatioDiagnostic(examples, maxRatio = 2.6, minRatio = 0
  *   "Extremely shocking or bad; outrageous behavior is unacceptable."
  * 拿 outrageous 解释 outrageous,对学习者零信息量。纯机械判定,零成本。
  */
+/**
+ * g14 占位符不许进 IPA。
+ *
+ * ⚠️ 由来(2026-08-19):`drive sb. crazy` 这类词条里的 sb./sth./one's 是**词典记号**,
+ *    不是词。模型会把它们当单词转写:
+ *        argue with sb  → /ˈɑːrɡ.ju wɪð ˈsʌb./     把 sb 念成 "sub"
+ *        add sth to sth → /æd sʌmθɪŋ tu sʌmθɪŋ/    把 sth 念成 "something"
+ *    用户在词卡上看到 /ˈsʌb./ 就是一串没有意义的音。
+ *    提示词里写了"IPA 不含占位符"它照样犯 —— 所以要一道能**自愈**的闸:
+ *    判失败会带着原因重生成,而不是等人眼在几十条里挑。
+ * ⚠️ 只对**含占位符的词条**生效。别的词条不受影响 —— 比如 subject 的
+ *    /ˈsʌb.dʒɪkt/ 本来就该有 sʌb,对它开这条就是误伤。
+ */
+/**
+ * ⚠️ 这道门只管**读不出来的缩写**(sb / sth / sw),不管 one's / oneself / doing。
+ *
+ * 一开始两类一起卡,连挂 6 个词、三轮重试全撞同一堵墙,以为是模型不听提示词 ——
+ * 其实是判据定错了:sb 是词典缩写,没人把它念成 /'sʌb/;
+ * 而 one's 是真实词形,"pull one's weight" 读出来就是 /pʊl wʌnz weɪt/,
+ * 纸质词典的成语条目也是这么标的。
+ * 模型连着三次给同一个答案时,先怀疑判据,别先怀疑模型。
+ */
+const PLACEHOLDER_HW = /\b(sb|sth|sw)\b|sb\.|sth\.|sb's|\(/i;
+const PLACEHOLDER_IPA = /s\s*ʌ\s*b|sʌmθ|\bsb\b|\bsth\b/i;
+export function g14_ipaNoPlaceholder(ipa, headword) {
+  if (!PLACEHOLDER_HW.test(String(headword))) return null;
+  if (!ipa) return null;
+  return PLACEHOLDER_IPA.test(String(ipa))
+    ? `g14 ipa 里把占位符当成词读了("${ipa}")—— sb./sth. 是词典缩写不是词,IPA 只给实词部分`
+    : null;
+}
+
 export function g12_defEnNotCircular(defEn, headword, table) {
   const hw = String(headword).toLowerCase();
   /* 短语词条同样要判循环:def_en 里出现 "to and fro" 就是拿自己解释自己。
@@ -632,6 +700,11 @@ export function runAllGates(word, payload, corpusNgramSets, inflectTable, opts =
       g9_distinctOpeners(examples),
       // g11 不在这里 —— 长度比版本实测假阳/假阴双失败,真正的 g11 在 verify-content.mjs
     ]) if (c) fails.push(c);
+  }
+
+  {
+    const g14 = g14_ipaNoPlaceholder(payload?.ipa, word?.headword);
+    if (g14) fails.push(g14);
   }
 
   // def_en 15 词内(不是闸门编号内的,但同属硬约束,一并卡)

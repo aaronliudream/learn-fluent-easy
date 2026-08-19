@@ -279,6 +279,15 @@ function trapPrimer(word, notes) {
      boor -> write "he is a boor", NOT "boorish behavior"
    The sentence must contain "${word.headword}" as a word (plural/tense inflection is fine).`);
   }
+  /* g14:把 sb./sth. 当成词读进 IPA。26/31 个词一次性栽在这条上。 */
+  if (/g14/.test(all)) {
+    out.push(`⚠️ Your ipa transcribed the dictionary placeholder as if it were a word.
+   "sb" is NOT pronounced /sʌb/. "sth" is NOT pronounced /sʌmθɪŋ/. They are notation.
+   Transcribe ONLY the real words, in order:
+     argue with sb   -> /ˈɑːr.ɡjuː wɪð/     NOT /ˈɑːr.ɡjuː wɪð ˈsʌb/
+     add sth to sth  -> /æd tuː/            NOT /æd sʌmθɪŋ tuː sʌmθɪŋ/
+     try one's best  -> /traɪ bɛst/         NOT /traɪ wʌnz bɛst/`);
+  }
   /* 句长差一点。提示词里本来就写了区间,但模型系统性地写短一两个词;
      光重试不给具体数字,它下一次还是照写。 */
   const short = /g2 长度 (\d+) 词,超出 (\d+)-(\d+)/.exec(all);
@@ -304,6 +313,21 @@ ${FUNCTION_WORD_RULE}` : '';
         ③ 给 ipa 时只标第一个词。
      闸门会把这些一律判"目标词缺席",但那是在**烧掉三次重试之后**。
      525 个短语,提前说清比事后重试便宜得多。 */
+  /**
+   * 注音用的目标串 —— **把占位符替模型去掉,而不是让它自己去掉**。
+   *
+   * ⚠️ 实测(2026-08-19):提示词写"给 argue with sb 注音、但别读占位符",
+   *    26/31 个词照样把 sb 读成 /ˈsʌb/、把 sth 读成 /sʌmθɪŋ/,三次重试全撞同一堵墙。
+   *    用户在词卡上看到的就是一串没有意义的音。
+   *    "让模型执行一条否定规则"远不如"直接给它要注音的那个串"可靠 ——
+   *    能在提示词里替它做完的一步,就不要留给它做。
+   */
+  const ipaTarget = String(word.headword)
+    .replace(/\((?:[^)]*)\)/g, " ")            // 括号可选成分不注音
+    .split(/\s+/)
+    .filter(t => !/^(sb|sth|sw|sb.s|sth.s)\.?$/i
+      .test(t.replace(/[^A-Za-z.']/g, "")))
+    .join(" ").replace(/\s+/g, " ").trim() || String(word.headword);
   const phraseRule = /\s/.test(word.headword) ? `
 
 ⚠️ "${word.headword}" IS A MULTI-WORD PHRASE, not a single word. This changes several rules:
@@ -317,6 +341,19 @@ ${FUNCTION_WORD_RULE}` : '';
      For "look after": "look after the children" / "looked after by his aunt".
    - ipa: give the IPA for the WHOLE phrase, with a space between parts,
      e.g. look after -> /lʊk ˈɑːf.tər/.
+   - ⚠️ If the entry contains a PLACEHOLDER (sb / sb. / sth / sth. / one's / sb's / oneself /
+     "do sth" / "doing sth", or a part in parentheses), that placeholder is DICTIONARY NOTATION,
+     not a word. NEVER write it literally in a sentence or a collocation.
+     Replace it with a real, concrete filler that fits the sentence:
+       drive sb. crazy      -> "The noise drives me crazy."          NOT "...drives sb. crazy."
+       try one's best       -> "She tried her best."                 NOT "...tried one's best."
+       succeed in doing sth -> "He succeeded in passing the exam."   NOT "...in doing sth."
+       put oneself in sb's shoes -> "Put yourself in his shoes."
+       run low (on sth)     -> "We are running low on water."  (the bracketed part is OPTIONAL)
+     Keep every NON-placeholder word of the entry, in order, exactly where it is
+     (inflection is fine: tried / succeeded / driving).
+   - collocation must show the phrase WITH the placeholder filled in, same rule.
+   - ipa: give it for the entry WITHOUT the placeholders, e.g. drive sb. crazy -> /draɪv ˈkreɪzi/.
    - def_en must define WHAT THE WHOLE PHRASE MEANS, not what its most contentful word means.
      ⚠️ This is the single most common mistake on quantifier and measure phrases:
        "a bottle of" -> "The amount of liquid that a bottle holds." ✅
@@ -328,7 +365,8 @@ Frequency rank: ${word.freq_rank ?? 'unknown'} -> target sentence difficulty: ${
 
 Produce a study card with these HARD requirements:
 
-1. ipa: American English IPA for "${word.headword}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
+1. ipa: American English IPA for "${ipaTarget}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
+   ⚠️ Transcribe EXACTLY that string, nothing more. (one's is a real word: /wʌnz/.)
 2. def_zh: 中文释义.
 ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
 ${crossPosClause(word)}

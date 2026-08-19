@@ -24,12 +24,15 @@ const REPO = path.resolve(HERE, '..', '..');
 const GEN = path.join(HERE, 'data', 'generated');
 const arg = (k, d) => process.argv.find(a => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=') ?? d;
 const SHARDS = Math.max(1, Number(arg('shards', '1')) || 1);
+/* 槽位批(textbookslots)走的是同一条流水线,只是缓存与产物文件名不同 ——
+   复制一份脚本的话,将来改断言要改两处,必然漏一处。 */
+const BANK = arg('bank', 'textbook');
 
 /* ⚠️ 读**正式结果文件**,不是 --from-csv 的试跑缓存。
    踩过:手写补的 10 个词只进了 textbook-content.json,而这里读 trial 缓存,
    于是建词条 SQL 少了那 10 行 —— 它们会有内容 SQL 却没有词条行,
    内容 SQL 的 "缺释义" 断言当场不过,而且要等 Aaron 跑到才看得见。 */
-const RESULTS = path.join(GEN, 'textbook-content.json');
+const RESULTS = path.join(GEN, `${BANK}-content.json`);
 if (!existsSync(RESULTS)) { console.error(`x 没有 ${RESULTS} —— 先跑内容生成`); process.exit(2); }
 const results = JSON.parse(readFileSync(RESULTS, 'utf8'));
 
@@ -45,14 +48,14 @@ const q = s => (s === null || s === undefined || s === '') ? 'NULL' : `'${esc(s)
 
 function emitOne(batch, shard) {
   const sql = `-- 教材词表缺口:建词条${shard ? `【第 ${shard.part}/${shard.of} 片】` : ''} —— ${batch.length} 个词
--- 生成: node scripts/vocab/emit-textbook-word-sql.mjs
+-- 生成: node scripts/vocab/emit-textbook-word-sql.mjs --bank=${BANK}
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
 -- 来源:junior_vocab 里 grade 7–12 的教材词表,取 lower(headword) 不在 vocab_words 的那些。
 --   ⚠️ 按 **grade** 过滤,不按 publisher —— pep 在那张表里是**高中人教**,不是初中人教。
 --      已用 grade×publisher 交叉表实证。
 --
--- ⚠️ **顺序是硬的**:先跑这份,再跑内容 SQL(vocab_textbook_content_*.sql)。
+-- ⚠️ **顺序是硬的**:先跑这份,再跑内容 SQL(vocab_${BANK}_content_*.sql)。
 --    内容 SQL 是 UPDATE … WHERE lower(headword) = …,词不存在就安静地改 0 行。
 -- ⚠️ 本份**不挂任何词库**。挂载是内容跑完之后单独一份 ——
 --    没有释义就挂进去的话,用户在词表里点开是一张空卡。
@@ -99,7 +102,7 @@ $gate$;
 
 COMMIT;
 `;
-  const name = `vocab_textbook_words${shard ? `_part${shard.part}of${shard.of}` : ''}.sql`;
+  const name = `vocab_${BANK}_words${shard ? `_part${shard.part}of${shard.of}` : ''}.sql`;
   mkdirSync(path.join(REPO, 'SQLAA'), { recursive: true });
   writeFileSync(path.join(REPO, 'SQLAA', name), sql, 'utf8');
   console.log(`· 建词条 SQL(${batch.length} 词) → SQLAA/${name}`);

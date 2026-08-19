@@ -39,13 +39,17 @@ const EMIT_ONLY = process.argv.includes('--emit-sql');
  */
 const NEW_ONLY = process.argv.includes('--new-only');
 const OUT_NAME = arg('name', '');
+/* 槽位批复用同一条流水线，只是缓存/产物文件名不同。
+   ⚠️ --new-only 扫 SQLAA 的正则也要跟着换 —— 不换的话它会拿 textbook 那批
+      已交付的 part 文件去判槽位批，把本该交的全判成“交过了”。 */
+const BANK = arg('bank', 'textbook');
 
 const ENV = loadEnv(REPO, { quiet: true });
 requireKeys(ENV, ['VITE_SUPABASE_URL', 'VITE_SUPABASE_PUBLISHABLE_KEY']);
 const K = ENV.VITE_SUPABASE_PUBLISHABLE_KEY;
 
-const content = JSON.parse(readFileSync(path.join(GEN, 'textbook-content.json'), 'utf8'));
-const CACHE = path.join(GEN, 'textbook-audio.json');
+const content = JSON.parse(readFileSync(path.join(GEN, `${BANK}-content.json`), 'utf8'));
+const CACHE = path.join(GEN, `${BANK}-audio.json`);
 const cache = existsSync(CACHE) ? JSON.parse(readFileSync(CACHE, 'utf8')) : { words: {}, examples: {} };
 const tmp = CACHE + '.tmp';
 const save = () => { writeFileSync(tmp, JSON.stringify(cache, null, 2), 'utf8'); renameSync(tmp, CACHE); };
@@ -83,7 +87,7 @@ function alreadyEmitted() {
   const dir = path.join(REPO, 'SQLAA');
   const out = new Set();
   for (const f of readdirSync(dir)) {
-    if (!/^vocab_textbook_audio_part.*\.sql$/.test(f)) continue;
+    if (!new RegExp('^vocab_' + BANK + '_audio_part.*[.]sql' + '$').test(f)) continue;
     const t = readFileSync(path.join(dir, f), 'utf8');
     for (const m of t.matchAll(/^  \('((?:[^']|'')*)',/gm)) out.add(m[1].replace(/''/g, "'"));
   }
@@ -168,7 +172,7 @@ COMMIT;
 `;
     const name = OUT_NAME
       ? (SHARDS > 1 ? `${OUT_NAME}_part${i + 1}of${SHARDS}.sql` : `${OUT_NAME}.sql`)
-      : `vocab_textbook_audio_part${i + 1}of${SHARDS}.sql`;
+      : `vocab_${BANK}_audio_part${i + 1}of${SHARDS}.sql`;
     mkdirSync(path.join(REPO, 'SQLAA'), { recursive: true });
     writeFileSync(path.join(REPO, 'SQLAA', name), sql, 'utf8');
     console.log(`· 音频回填 SQL(${w.length} 词 + ${e.length} 例句) → SQLAA/${name}`);

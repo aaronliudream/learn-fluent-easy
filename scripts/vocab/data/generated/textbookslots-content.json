@@ -1,0 +1,1762 @@
+{
+  "along with sb/sth": {
+    "word_id": null,
+    "headword": "along with sb/sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/əˈlɔːŋ wɪð/",
+    "def_zh": "与某人或某物一起",
+    "def_en": "To be together with someone or something.",
+    "examples": [
+      {
+        "collocation": "travel along with friends",
+        "scene": "travel",
+        "sentence": "You can travel along with friends during the holiday.",
+        "translation_zh": "你可以在假期期间和朋友一起旅行。"
+      },
+      {
+        "collocation": "work along with colleagues",
+        "scene": "work",
+        "sentence": "She will work along with colleagues on the project.",
+        "translation_zh": "她将和同事们一起在这个项目上工作。"
+      },
+      {
+        "collocation": "study along with a tutor",
+        "scene": "education",
+        "sentence": "He likes to study along with a tutor for better understanding.",
+        "translation_zh": "他喜欢和导师一起学习，以便更好地理解。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "be connected with": {
+    "word_id": null,
+    "headword": "be connected with",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/bi kəˈnɛk.tɪd wɪð/",
+    "def_zh": "与…相关",
+    "def_en": "To have a relationship or association with something or someone.",
+    "examples": [
+      {
+        "collocation": "be connected with education",
+        "scene": "education",
+        "sentence": "Teachers believe parents should be connected with their child's learning.",
+        "translation_zh": "教师认为家长应该与孩子的学习相关联。"
+      },
+      {
+        "collocation": "be connected with health",
+        "scene": "health",
+        "sentence": "Regular exercise can be connected with better overall health.",
+        "translation_zh": "规律的锻炼可以与更好的整体健康相关。"
+      },
+      {
+        "collocation": "be connected with culture",
+        "scene": "culture",
+        "sentence": "The festival is connected with the local culture and traditions.",
+        "translation_zh": "这个节日与当地文化和传统相关。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "add sth to sth": {
+    "word_id": null,
+    "headword": "add sth to sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/æd tu/",
+    "def_zh": "将某物添加到某物中",
+    "def_en": "To put something into another thing or increase it.",
+    "examples": [
+      {
+        "collocation": "add sugar to tea",
+        "scene": "daily_life",
+        "sentence": "You should add sugar to your tea for sweetness.",
+        "translation_zh": "你应该在茶里加糖以增加甜味。"
+      },
+      {
+        "collocation": "add more information to your report",
+        "scene": "work",
+        "sentence": "Managers often ask us to add more information to our reports.",
+        "translation_zh": "经理们常常要求我们在报告中添加更多信息。"
+      },
+      {
+        "collocation": "add funds to the account",
+        "scene": "science_tech",
+        "sentence": "Please add funds to the account to proceed with the research.",
+        "translation_zh": "请向账户添加资金以继续研究。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "be connected to": {
+    "word_id": null,
+    "headword": "be connected to",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/bi kəˈnɛk.tɪd tuː/",
+    "def_zh": "与某事物有关联",
+    "def_en": "To have a relationship or association with something.",
+    "examples": [
+      {
+        "collocation": "be connected to the internet",
+        "scene": "daily_life",
+        "sentence": "Many people need to be connected to the internet every day.",
+        "translation_zh": "许多人每天需要连接互联网。"
+      },
+      {
+        "collocation": "be connected to certain issues",
+        "scene": "news",
+        "sentence": "This policy may be connected to certain issues in society.",
+        "translation_zh": "该政策可能与社会中的某些问题有关。"
+      },
+      {
+        "collocation": "be connected to various fields",
+        "scene": "education",
+        "sentence": "Students should be connected to various fields of study.",
+        "translation_zh": "学生应该与多个学科领域相关联。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "be ready": {
+    "word_id": null,
+    "headword": "be ready",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/biː ˈrɛdi/",
+    "def_zh": "准备好",
+    "def_en": "To be fully prepared for something or to do something.",
+    "examples": [
+      {
+        "collocation": "be ready for the exam",
+        "scene": "academic",
+        "sentence": "Students must be ready for the exam next week.",
+        "translation_zh": "学生们必须为下周的考试做好准备。"
+      },
+      {
+        "collocation": "be ready to help",
+        "scene": "daily_life",
+        "sentence": "I will be ready to help you whenever you need.",
+        "translation_zh": "我随时都准备好帮助你。"
+      },
+      {
+        "collocation": "be ready for the meeting",
+        "scene": "work",
+        "sentence": "She will be ready for the meeting at 3 PM.",
+        "translation_zh": "她将在下午三点准备好参加会议。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "depend upon": {
+    "word_id": null,
+    "headword": "depend upon",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/dɪˈpɛnd əˈpɒn/",
+    "def_zh": "依赖；依靠",
+    "def_en": "To rely on someone or something for support.",
+    "examples": [
+      {
+        "collocation": "depend upon my friends",
+        "scene": "daily_life",
+        "sentence": "I always depend upon my friends for help.",
+        "translation_zh": "我总是依赖我的朋友们寻求帮助。"
+      },
+      {
+        "collocation": "depend upon the weather",
+        "scene": "travel",
+        "sentence": "We will depend upon the weather for our picnic.",
+        "translation_zh": "我们将依赖天气来决定我们的野餐计划。"
+      },
+      {
+        "collocation": "depend upon good grades",
+        "scene": "education",
+        "sentence": "Students depend upon good grades for college admission.",
+        "translation_zh": "学生依赖好成绩来申请大学。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "cut sth in/into sth": {
+    "word_id": null,
+    "headword": "cut sth in/into sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/kʌt ɪn ˈɪntu/",
+    "def_zh": "切成某物",
+    "def_en": "To divide something into smaller pieces or parts.",
+    "examples": [
+      {
+        "collocation": "cut the cake in half",
+        "scene": "daily_life",
+        "sentence": "We will cut the cake in half for everyone.",
+        "translation_zh": "我们会把蛋糕切成两半，给大家分享。"
+      },
+      {
+        "collocation": "cut the paper into squares",
+        "scene": "work",
+        "sentence": "She will cut the paper into squares for the project.",
+        "translation_zh": "她会把纸切成正方形用于这个项目。"
+      },
+      {
+        "collocation": "cut the fruit into slices",
+        "scene": "health",
+        "sentence": "You should cut the fruit into slices before eating it.",
+        "translation_zh": "你应该在吃之前把水果切成片。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "depend on": {
+    "word_id": null,
+    "headword": "depend on",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/dɪˈpɛnd ɑn/",
+    "def_zh": "依赖；依靠",
+    "def_en": "To rely on someone or something for support or help.",
+    "examples": [
+      {
+        "collocation": "depend on friends",
+        "scene": "daily_life",
+        "sentence": "You can always depend on your friends when you need help.",
+        "translation_zh": "当你需要帮助时，你总是可以依靠朋友。"
+      },
+      {
+        "collocation": "depend on weather conditions",
+        "scene": "science_tech",
+        "sentence": "Farmers depend on weather conditions to grow their crops.",
+        "translation_zh": "农民依赖天气条件来种植作物。"
+      },
+      {
+        "collocation": "depend on your skills",
+        "scene": "work",
+        "sentence": "To succeed, you must depend on your skills and experience.",
+        "translation_zh": "要成功，你必须依赖你的技能和经验。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "fight against sb/sth": {
+    "word_id": null,
+    "headword": "fight against sb/sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/faɪt əˈɡeɪnst ˈsʌm.bɒ.di/",
+    "def_zh": "对抗；反抗",
+    "def_en": "To oppose or resist someone or something.",
+    "examples": [
+      {
+        "collocation": "fight against climate change",
+        "scene": "environment",
+        "sentence": "Governments need to fight against climate change effectively.",
+        "translation_zh": "各国政府需要有效地对抗气候变化。"
+      },
+      {
+        "collocation": "fight against bullying",
+        "scene": "education",
+        "sentence": "Students should fight against bullying in schools.",
+        "translation_zh": "学生应该在学校里对抗欺凌。"
+      },
+      {
+        "collocation": "fight against injustice",
+        "scene": "daily_life",
+        "sentence": "Many people fight against injustice every day.",
+        "translation_zh": "许多人每天都在对抗不公正。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "drop sb a line": {
+    "word_id": null,
+    "headword": "drop sb a line",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/drɒp ə laɪn/",
+    "def_zh": "给某人写信",
+    "def_en": "To send someone a short message or note.",
+    "examples": [
+      {
+        "collocation": "drop me a line",
+        "scene": "daily_life",
+        "sentence": "You should drop me a line when you arrive.",
+        "translation_zh": "你到的时候应该给我写信。"
+      },
+      {
+        "collocation": "drop her a line",
+        "scene": "work",
+        "sentence": "Please drop her a line about the meeting details.",
+        "translation_zh": "请给她写信告知会议细节。"
+      },
+      {
+        "collocation": "drop him a line",
+        "scene": "education",
+        "sentence": "I will drop him a line to check his progress.",
+        "translation_zh": "我会给他写信询问他的进展。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "get ready": {
+    "word_id": null,
+    "headword": "get ready",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ɡɛt ˈrɛdi/",
+    "def_zh": "准备好",
+    "def_en": "To prepare oneself for an event or activity.",
+    "examples": [
+      {
+        "collocation": "get ready for school",
+        "scene": "daily_life",
+        "sentence": "Children must get ready for school every morning.",
+        "translation_zh": "孩子们每天早上必须准备好上学。"
+      },
+      {
+        "collocation": "get ready to leave",
+        "scene": "work",
+        "sentence": "Let's get ready to leave for the meeting now.",
+        "translation_zh": "现在让我们准备好去开会。"
+      },
+      {
+        "collocation": "get ready for the party",
+        "scene": "culture",
+        "sentence": "She will get ready for the party later tonight.",
+        "translation_zh": "她今晚晚些时候会准备好参加派对。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "help sb with": {
+    "word_id": null,
+    "headword": "help sb with",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/hɛlp sɪb wɪð/",
+    "def_zh": "帮助某人做某事",
+    "def_en": "To assist someone in doing something.",
+    "examples": [
+      {
+        "collocation": "help me with my homework",
+        "scene": "education",
+        "sentence": "I need you to help me with my homework.",
+        "translation_zh": "我需要你帮助我做作业。"
+      },
+      {
+        "collocation": "help him with a project",
+        "scene": "work",
+        "sentence": "Can you help him with a project at work?",
+        "translation_zh": "你能帮助他在工作上做一个项目吗？"
+      },
+      {
+        "collocation": "help her with her luggage",
+        "scene": "travel",
+        "sentence": "They offered to help her with her luggage at the airport.",
+        "translation_zh": "他们主动帮助她在机场提行李。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "give sb a lift": {
+    "word_id": null,
+    "headword": "give sb a lift",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ɡɪv ə lɪft/",
+    "def_zh": "搭便车；扶持",
+    "def_en": "To provide someone with a ride in a vehicle.",
+    "examples": [
+      {
+        "collocation": "give me a lift",
+        "scene": "daily_life",
+        "sentence": "Can you give me a lift to the bus station?",
+        "translation_zh": "你能给我带到公交车站吗？"
+      },
+      {
+        "collocation": "give her a lift",
+        "scene": "work",
+        "sentence": "My colleague will give her a lift after the meeting.",
+        "translation_zh": "我的同事将在会议后给她搭便车。"
+      },
+      {
+        "collocation": "give him a lift",
+        "scene": "travel",
+        "sentence": "They decided to give him a lift to the airport.",
+        "translation_zh": "他们决定给他搭便车去机场。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "keep on doing sth": {
+    "word_id": null,
+    "headword": "keep on doing sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/kiːp ɒn ˈduː.ɪŋ ˈsʌm.θɪŋ/",
+    "def_zh": "继续做某事",
+    "def_en": "To continue to perform an action or activity.",
+    "examples": [
+      {
+        "collocation": "keep on doing homework",
+        "scene": "education",
+        "sentence": "Students must keep on doing homework every night.",
+        "translation_zh": "学生们每晚必须继续做作业。"
+      },
+      {
+        "collocation": "keep on doing exercise",
+        "scene": "health",
+        "sentence": "You should keep on doing exercise to stay healthy.",
+        "translation_zh": "你应该继续做运动以保持健康。"
+      },
+      {
+        "collocation": "keep on doing research",
+        "scene": "science_tech",
+        "sentence": "Scientists will keep on doing research for new medicines.",
+        "translation_zh": "科学家们将继续进行新药物的研究。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "lend sb a hand": {
+    "word_id": null,
+    "headword": "lend sb a hand",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/lɛnd ə hænd/",
+    "def_zh": "帮助；援助",
+    "def_en": "To assist someone with a task or problem.",
+    "examples": [
+      {
+        "collocation": "lend me a hand",
+        "scene": "daily_life",
+        "sentence": "Can you lend me a hand with this project?",
+        "translation_zh": "你能帮我一把这个项目吗？"
+      },
+      {
+        "collocation": "lend him a hand",
+        "scene": "work",
+        "sentence": "They are ready to lend him a hand during the busy season.",
+        "translation_zh": "在繁忙的季节，他们准备帮助他。"
+      },
+      {
+        "collocation": "lend her a hand",
+        "scene": "education",
+        "sentence": "Teachers often lend her a hand when she struggles.",
+        "translation_zh": "当她遇到困难时，老师们经常帮助她。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "lift sb's spirits": {
+    "word_id": null,
+    "headword": "lift sb's spirits",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/lɪft ˈspɪr.ɪts/",
+    "def_zh": "振奋情绪",
+    "def_en": "To make someone feel happier or more positive.",
+    "examples": [
+      {
+        "collocation": "lift my spirits",
+        "scene": "daily_life",
+        "sentence": "Friends often help lift my spirits when I am sad.",
+        "translation_zh": "朋友们常常帮助我振奋情绪，当我感到伤心时。"
+      },
+      {
+        "collocation": "lift her spirits",
+        "scene": "work",
+        "sentence": "A surprise party can really lift her spirits at work.",
+        "translation_zh": "一个惊喜派对真的能振奋她在工作的情绪。"
+      },
+      {
+        "collocation": "lift their spirits",
+        "scene": "culture",
+        "sentence": "Music can lift their spirits during tough times.",
+        "translation_zh": "音乐可以在艰难时刻振奋他们的情绪。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "prepare sth for": {
+    "word_id": null,
+    "headword": "prepare sth for",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/prɪˈpɛr fɔr/",
+    "def_zh": "准备某事",
+    "def_en": "To make something ready for use or a particular purpose.",
+    "examples": [
+      {
+        "collocation": "prepare the team for",
+        "scene": "work",
+        "sentence": "We need to prepare the team for the upcoming project.",
+        "translation_zh": "我们需要为即将到来的项目准备团队。"
+      },
+      {
+        "collocation": "prepare students for",
+        "scene": "education",
+        "sentence": "Teachers should prepare students for their final exams.",
+        "translation_zh": "教师应该为学生的期末考试做好准备。"
+      },
+      {
+        "collocation": "prepare the event for",
+        "scene": "daily_life",
+        "sentence": "They will prepare the event for the guests arriving tomorrow.",
+        "translation_zh": "他们将为明天到来的客人准备活动。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "ready to do sth": {
+    "word_id": null,
+    "headword": "ready to do sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ˈrɛd.i tə duː ˈsʌm.θɪŋ/",
+    "def_zh": "准备做某事",
+    "def_en": "Willing and able to perform a task or action.",
+    "examples": [
+      {
+        "collocation": "ready to do homework",
+        "scene": "education",
+        "sentence": "Students are ready to do homework after class.",
+        "translation_zh": "学生们下课后准备做作业。"
+      },
+      {
+        "collocation": "ready to do the work",
+        "scene": "work",
+        "sentence": "She is ready to do the work assigned to her.",
+        "translation_zh": "她准备好做分配给她的工作。"
+      },
+      {
+        "collocation": "ready to do something exciting",
+        "scene": "daily_life",
+        "sentence": "I am ready to do something exciting this weekend.",
+        "translation_zh": "我这个周末准备做一些令人兴奋的事情。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "run low (on sth)": {
+    "word_id": null,
+    "headword": "run low (on sth)",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/rʌn loʊ ɑn/",
+    "def_zh": "用完；不足",
+    "def_en": "To have little of something remaining.",
+    "examples": [
+      {
+        "collocation": "run low on food",
+        "scene": "daily_life",
+        "sentence": "We are running low on food at home.",
+        "translation_zh": "我们家里的食物快用完了。"
+      },
+      {
+        "collocation": "run low on gas",
+        "scene": "work",
+        "sentence": "You should check if we run low on gas soon.",
+        "translation_zh": "你应该检查一下我们是否快没油了。"
+      },
+      {
+        "collocation": "run low on supplies",
+        "scene": "education",
+        "sentence": "The school might run low on supplies before the year ends.",
+        "translation_zh": "学校在学年结束前可能会用完物资。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "show sb around": {
+    "word_id": null,
+    "headword": "show sb around",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ʃoʊ əˈraʊnd/",
+    "def_zh": "带某人参观",
+    "def_en": "To guide someone around a place, showing them interesting areas.",
+    "examples": [
+      {
+        "collocation": "show visitors around",
+        "scene": "travel",
+        "sentence": "They will show visitors around the city tomorrow.",
+        "translation_zh": "他们明天会带游客参观这座城市。"
+      },
+      {
+        "collocation": "show new students around",
+        "scene": "education",
+        "sentence": "I will show new students around the campus this week.",
+        "translation_zh": "我这周会带新生参观校园。"
+      },
+      {
+        "collocation": "show clients around",
+        "scene": "work",
+        "sentence": "She will show clients around the office later today.",
+        "translation_zh": "她今天稍后会带客户参观办公室。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "show interest in sth": {
+    "word_id": null,
+    "headword": "show interest in sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ʃoʊ ˈɪn.trəst ɪn ˈsʌm.θɪŋ/",
+    "def_zh": "对某事表现出兴趣",
+    "def_en": "To express curiosity or concern about something.",
+    "examples": [
+      {
+        "collocation": "show interest in science",
+        "scene": "education",
+        "sentence": "Students often show interest in science projects during class.",
+        "translation_zh": "学生们在课堂上经常对科学项目表现出兴趣。"
+      },
+      {
+        "collocation": "show interest in culture",
+        "scene": "culture",
+        "sentence": "Many people show interest in culture through festivals and events.",
+        "translation_zh": "许多人通过节日和活动对文化表现出兴趣。"
+      },
+      {
+        "collocation": "show interest in health",
+        "scene": "health",
+        "sentence": "Parents should show interest in their children's health habits.",
+        "translation_zh": "父母应该对孩子的健康习惯表现出兴趣。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "succeed in doing sth": {
+    "word_id": null,
+    "headword": "succeed in doing sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/səkˈsiːd ɪn ˈduːɪŋ/",
+    "def_zh": "成功做某事",
+    "def_en": "To achieve what one aims to do successfully.",
+    "examples": [
+      {
+        "collocation": "succeed in passing the exam",
+        "scene": "academic",
+        "sentence": "Many students succeed in passing the exam with hard work.",
+        "translation_zh": "许多学生通过努力成功地通过了考试。"
+      },
+      {
+        "collocation": "succeed in achieving their goals",
+        "scene": "work",
+        "sentence": "The team succeeded in achieving their goals this quarter.",
+        "translation_zh": "该团队在本季度成功达成了他们的目标。"
+      },
+      {
+        "collocation": "succeed in finding a solution",
+        "scene": "science_tech",
+        "sentence": "Researchers succeeded in finding a solution to the problem.",
+        "translation_zh": "研究人员成功找到了问题的解决方案。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "throw oneself into": {
+    "word_id": null,
+    "headword": "throw oneself into",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "B1",
+    "ipa": "/θroʊ jʊrˈsɛlf ˈɪntuː/",
+    "def_zh": "全心投入；热衷于",
+    "def_en": "To engage enthusiastically in an activity or task.",
+    "examples": [
+      {
+        "collocation": "throw oneself into studying",
+        "scene": "academic",
+        "sentence": "Many students throw themselves into studying for the final exams.",
+        "translation_zh": "许多学生全心投入期末考试的复习中。"
+      },
+      {
+        "collocation": "throw oneself into work",
+        "scene": "work",
+        "sentence": "After the promotion, she decided to throw herself into work every day.",
+        "translation_zh": "升职后，她决定每天全心投入工作。"
+      },
+      {
+        "collocation": "throw oneself into a new hobby",
+        "scene": "daily_life",
+        "sentence": "He plans to throw himself into a new hobby this summer.",
+        "translation_zh": "他计划在这个夏天全心投入一个新爱好。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "to sb's surprise": {
+    "word_id": null,
+    "headword": "to sb's surprise",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/tə sbz səˈpraɪz/",
+    "def_zh": "令某人惊讶",
+    "def_en": "Causing someone to feel shocked or astonished.",
+    "examples": [
+      {
+        "collocation": "to my surprise",
+        "scene": "daily_life",
+        "sentence": "I found my keys in the fridge, to my surprise.",
+        "translation_zh": "我惊讶地发现我的钥匙在冰箱里。"
+      },
+      {
+        "collocation": "to her surprise",
+        "scene": "work",
+        "sentence": "Her colleague arrived early, to her surprise.",
+        "translation_zh": "她的同事提前到达，令她感到惊讶。"
+      },
+      {
+        "collocation": "to their surprise",
+        "scene": "culture",
+        "sentence": "The movie ended differently, to their surprise.",
+        "translation_zh": "这部电影以不同的方式结束，令他们感到惊讶。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "be glued to sth": {
+    "word_id": null,
+    "headword": "be glued to sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/biː ɡluːd tuː/",
+    "def_zh": "紧紧盯着某物",
+    "def_en": "To be very focused on or interested in something.",
+    "examples": [
+      {
+        "collocation": "be glued to the television",
+        "scene": "daily_life",
+        "sentence": "Children often are glued to the television all day.",
+        "translation_zh": "孩子们常常一天都紧紧盯着电视。"
+      },
+      {
+        "collocation": "be glued to a screen",
+        "scene": "work",
+        "sentence": "During meetings, many people are glued to a screen.",
+        "translation_zh": "在会议期间，许多人紧紧盯着屏幕。"
+      },
+      {
+        "collocation": "be glued to the news",
+        "scene": "news",
+        "sentence": "She was glued to the news about the storm.",
+        "translation_zh": "她紧紧盯着关于暴风雨的新闻。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "be home to sb/sth": {
+    "word_id": null,
+    "headword": "be home to sb/sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/bi hoʊm tu/",
+    "def_zh": "是某人或某物的家",
+    "def_en": "To be the place where someone or something lives or exists.",
+    "examples": [
+      {
+        "collocation": "be home to many important species",
+        "scene": "environment",
+        "sentence": "Forests are home to many important species of animals.",
+        "translation_zh": "森林是许多重要物种的栖息地。"
+      },
+      {
+        "collocation": "be home to the best universities",
+        "scene": "education",
+        "sentence": "This city is home to the best universities in the country.",
+        "translation_zh": "这个城市是全国最好的大学的所在地。"
+      },
+      {
+        "collocation": "be home to a diverse culture",
+        "scene": "culture",
+        "sentence": "Our town is home to a diverse culture and traditions.",
+        "translation_zh": "我们的城镇是多元文化和传统的发源地。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "drive sb. crazy": {
+    "word_id": null,
+    "headword": "drive sb. crazy",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/draɪv ˈkreɪzi/",
+    "def_zh": "使某人发疯",
+    "def_en": "To make someone feel very annoyed or upset.",
+    "examples": [
+      {
+        "collocation": "drive me crazy",
+        "scene": "daily_life",
+        "sentence": "The loud music drives me crazy every night.",
+        "translation_zh": "每晚，响亮的音乐让我发疯。"
+      },
+      {
+        "collocation": "drive her crazy",
+        "scene": "work",
+        "sentence": "His constant talking drives her crazy during meetings.",
+        "translation_zh": "他在会议上不停地讲话，让她发疯。"
+      },
+      {
+        "collocation": "drive them crazy",
+        "scene": "education",
+        "sentence": "Long assignments can drive students crazy before exams.",
+        "translation_zh": "长作业在考试前会让学生发疯。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "be hard on sb.": {
+    "word_id": null,
+    "headword": "be hard on sb.",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/bi hɑrd ɑn/",
+    "def_zh": "对某人严格；对某人苛刻",
+    "def_en": "To treat someone harshly or with strictness.",
+    "examples": [
+      {
+        "collocation": "Teachers should not be hard on students who struggle.",
+        "scene": "education",
+        "sentence": "Teachers should not be hard on students who struggle.",
+        "translation_zh": "老师不应该对有困难的学生苛刻。"
+      },
+      {
+        "collocation": "Parents often worry they might be hard on their children.",
+        "scene": "daily_life",
+        "sentence": "Parents often worry they might be hard on their children.",
+        "translation_zh": "父母常常担心自己对孩子太严格。"
+      },
+      {
+        "collocation": "Reporters can be hard on politicians during interviews.",
+        "scene": "news",
+        "sentence": "Reporters can be hard on politicians during interviews.",
+        "translation_zh": "记者在采访时可能对政治家很苛刻。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "feel free (to do sth)": {
+    "word_id": null,
+    "headword": "feel free (to do sth)",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/fiːl friː/",
+    "def_zh": "尽管如此；随意",
+    "def_en": "To do something without hesitation or restriction.",
+    "examples": [
+      {
+        "collocation": "feel free to ask questions",
+        "scene": "education",
+        "sentence": "Students can feel free to ask questions during class.",
+        "translation_zh": "学生在课堂上可以随意提问。"
+      },
+      {
+        "collocation": "feel free to join us",
+        "scene": "daily_life",
+        "sentence": "You may feel free to join us for dinner tonight.",
+        "translation_zh": "你今晚可以随意加入我们的晚餐。"
+      },
+      {
+        "collocation": "feel free to share your ideas",
+        "scene": "work",
+        "sentence": "Team members should feel free to share their ideas in meetings.",
+        "translation_zh": "团队成员在会议上应该随意分享他们的想法。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "be friends with sb.": {
+    "word_id": null,
+    "headword": "be friends with sb.",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/biː frɛndz wɪð/",
+    "def_zh": "交朋友；与某人做朋友",
+    "def_en": "To have a friendly relationship with someone.",
+    "examples": [
+      {
+        "collocation": "be friends with my classmates",
+        "scene": "academic",
+        "sentence": "I want to be friends with my classmates this year.",
+        "translation_zh": "我想和我的同学交朋友，今年。"
+      },
+      {
+        "collocation": "be friends with your neighbors",
+        "scene": "daily_life",
+        "sentence": "They are happy to be friends with your neighbors now.",
+        "translation_zh": "他们现在很高兴能和你的邻居交朋友。"
+      },
+      {
+        "collocation": "be friends with her colleagues",
+        "scene": "work",
+        "sentence": "He decided to be friends with her colleagues at the office.",
+        "translation_zh": "他决定和办公室里的同事交朋友。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "argue with sb": {
+    "word_id": null,
+    "headword": "argue with sb",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ˈɑːr.ɡjuː wɪð/",
+    "def_zh": "争论；争吵",
+    "def_en": "To exchange opposing views or argue about something.",
+    "examples": [
+      {
+        "collocation": "argue with your parents",
+        "scene": "daily_life",
+        "sentence": "Sometimes, children argue with their parents about rules.",
+        "translation_zh": "有时，孩子们会和父母争论规则。"
+      },
+      {
+        "collocation": "argue with a friend",
+        "scene": "work",
+        "sentence": "He often argues with a friend over their project ideas.",
+        "translation_zh": "他经常和朋友在项目想法上争论。"
+      },
+      {
+        "collocation": "argue with the teacher",
+        "scene": "education",
+        "sentence": "Students should not argue with the teacher during class.",
+        "translation_zh": "学生在课堂上不应该和老师争论。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "have sth in common": {
+    "word_id": null,
+    "headword": "have sth in common",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/hæv ɪn ˈkɒmən/",
+    "def_zh": "有共同点",
+    "def_en": "To share similarities or traits with someone or something.",
+    "examples": [
+      {
+        "collocation": "have interests in common",
+        "scene": "daily_life",
+        "sentence": "Many friends have interests in common that keep them close.",
+        "translation_zh": "许多朋友有共同的兴趣，使他们保持亲密关系。"
+      },
+      {
+        "collocation": "have ideas in common",
+        "scene": "work",
+        "sentence": "Our team members have ideas in common for the project.",
+        "translation_zh": "我们团队成员在项目上有共同的想法。"
+      },
+      {
+        "collocation": "have goals in common",
+        "scene": "education",
+        "sentence": "Students often have goals in common during group studies.",
+        "translation_zh": "学生在小组学习时通常有共同的目标。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "kick sb. off": {
+    "word_id": null,
+    "headword": "kick sb. off",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/kɪk ɔf/",
+    "def_zh": "解除某人的职务；开除某人",
+    "def_en": "To remove someone from a position or place.",
+    "examples": [
+      {
+        "collocation": "kick the players off",
+        "scene": "daily_life",
+        "sentence": "They decided to kick the players off the team.",
+        "translation_zh": "他们决定将队员从队伍中开除。"
+      },
+      {
+        "collocation": "kick students off",
+        "scene": "education",
+        "sentence": "The school may kick students off the course if they fail.",
+        "translation_zh": "如果学生不及格，学校可能会将他们开除出课程。"
+      },
+      {
+        "collocation": "kick employees off",
+        "scene": "work",
+        "sentence": "Management can kick employees off the project at any time.",
+        "translation_zh": "管理层可以随时将员工从项目中开除。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "move on (to sth)": {
+    "word_id": null,
+    "headword": "move on (to sth)",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/muːv ɑn (tuː)/",
+    "def_zh": "继续前进；转向其他事物",
+    "def_en": "To begin to do something different after a change.",
+    "examples": [
+      {
+        "collocation": "move on (to sth) after graduation",
+        "scene": "education",
+        "sentence": "Many students move on to higher studies after graduation.",
+        "translation_zh": "许多学生在毕业后继续深造。"
+      },
+      {
+        "collocation": "move on (to sth) in life",
+        "scene": "daily_life",
+        "sentence": "You should learn to move on to new experiences in life.",
+        "translation_zh": "你应该学会在生活中迎接新的体验。"
+      },
+      {
+        "collocation": "move on (to sth) in the report",
+        "scene": "work",
+        "sentence": "The team will move on to the next section in the report.",
+        "translation_zh": "团队将继续进行报告的下一部分。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "make one's own decision": {
+    "word_id": null,
+    "headword": "make one's own decision",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/meɪk oʊn dɪˈsɪʒ.ən/",
+    "def_zh": "自己做出决定",
+    "def_en": "To choose what to do without help from others.",
+    "examples": [
+      {
+        "collocation": "make one's own decision in life",
+        "scene": "daily_life",
+        "sentence": "Everyone should make their own decision in life.",
+        "translation_zh": "每个人都应该在生活中自己做出决定。"
+      },
+      {
+        "collocation": "make one's own decision about education",
+        "scene": "education",
+        "sentence": "Students must learn to make their own decision about education.",
+        "translation_zh": "学生们必须学会自己做出关于教育的决定。"
+      },
+      {
+        "collocation": "make one's own decision at work",
+        "scene": "work",
+        "sentence": "Employees are encouraged to make their own decision at work.",
+        "translation_zh": "员工被鼓励在工作中自己做出决定。"
+      }
+    ],
+    "_attempts": 3,
+    "_model": "gpt-4o-mini"
+  },
+  "put sth back": {
+    "word_id": null,
+    "headword": "put sth back",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/pʊt bæk/",
+    "def_zh": "放回；归还",
+    "def_en": "To return something to its original place or position.",
+    "examples": [
+      {
+        "collocation": "put the book back on the shelf",
+        "scene": "daily_life",
+        "sentence": "You should put the book back on the shelf.",
+        "translation_zh": "你应该把书放回书架上。"
+      },
+      {
+        "collocation": "put the toys back in the box",
+        "scene": "education",
+        "sentence": "Please put the toys back in the box when you finish.",
+        "translation_zh": "请在完成后把玩具放回箱子里。"
+      },
+      {
+        "collocation": "put the report back on my desk",
+        "scene": "work",
+        "sentence": "He asked me to put the report back on his desk.",
+        "translation_zh": "他让我把报告放回他的桌子上。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "put sth. to good use": {
+    "word_id": null,
+    "headword": "put sth. to good use",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/pʊt tə ɡʊd juːs/",
+    "def_zh": "好好利用",
+    "def_en": "To use something effectively and wisely.",
+    "examples": [
+      {
+        "collocation": "put your skills to good use",
+        "scene": "work",
+        "sentence": "You should put your skills to good use in this project.",
+        "translation_zh": "你应该在这个项目中好好利用你的技能。"
+      },
+      {
+        "collocation": "put this opportunity to good use",
+        "scene": "education",
+        "sentence": "She decided to put this opportunity to good use.",
+        "translation_zh": "她决定好好利用这个机会。"
+      },
+      {
+        "collocation": "put their talents to good use",
+        "scene": "daily_life",
+        "sentence": "They want to put their talents to good use for the community.",
+        "translation_zh": "他们想为社区好好利用他们的才能。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "pour sth into sth": {
+    "word_id": null,
+    "headword": "pour sth into sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/pɔːr ˈɪntu/",
+    "def_zh": "倒入；倾注",
+    "def_en": "To cause a substance to flow into another place.",
+    "examples": [
+      {
+        "collocation": "pour water into a glass",
+        "scene": "daily_life",
+        "sentence": "You should pour water into a glass carefully.",
+        "translation_zh": "你应该小心地把水倒入杯子里。"
+      },
+      {
+        "collocation": "pour cement into a mold",
+        "scene": "work",
+        "sentence": "They will pour cement into a mold to create a structure.",
+        "translation_zh": "他们会把水泥倒入模具中以建造结构。"
+      },
+      {
+        "collocation": "pour data into a database",
+        "scene": "science_tech",
+        "sentence": "Researchers need to pour data into a database for analysis.",
+        "translation_zh": "研究人员需要将数据倒入数据库进行分析。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "put oneself in sb's shoes": {
+    "word_id": null,
+    "headword": "put oneself in sb's shoes",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/pʊt wʌnˈsɛlf ɪn ˈsʊz/",
+    "def_zh": "设身处地",
+    "def_en": "To understand someone else's feelings or experience.",
+    "examples": [
+      {
+        "collocation": "put oneself in their shoes",
+        "scene": "daily_life",
+        "sentence": "You should put yourself in their shoes to understand.",
+        "translation_zh": "你应该设身处地地理解他们。"
+      },
+      {
+        "collocation": "put oneself in your shoes",
+        "scene": "work",
+        "sentence": "It's important to put oneself in your shoes during discussions.",
+        "translation_zh": "在讨论中，设身处地是很重要的。"
+      },
+      {
+        "collocation": "put oneself in his shoes",
+        "scene": "education",
+        "sentence": "Students need to put oneself in his shoes to learn empathy.",
+        "translation_zh": "学生需要设身处地地学习同理心。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "stick to sth": {
+    "word_id": null,
+    "headword": "stick to sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/stɪk tə/",
+    "def_zh": "坚持，遵循",
+    "def_en": "To continue to follow or adhere to something.",
+    "examples": [
+      {
+        "collocation": "stick to the plan",
+        "scene": "work",
+        "sentence": "We must stick to the plan we created for the project.",
+        "translation_zh": "我们必须坚持我们为这个项目制定的计划。"
+      },
+      {
+        "collocation": "stick to the rules",
+        "scene": "education",
+        "sentence": "Students should stick to the rules set by the school.",
+        "translation_zh": "学生应该遵守学校制定的规则。"
+      },
+      {
+        "collocation": "stick to the topic",
+        "scene": "daily_life",
+        "sentence": "It is important to stick to the topic during discussions.",
+        "translation_zh": "在讨论过程中，保持主题的重要性不言而喻。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "stop sth from doing": {
+    "word_id": null,
+    "headword": "stop sth from doing",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/stɑp frʌm/",
+    "def_zh": "阻止；防止",
+    "def_en": "To prevent something from happening or occurring.",
+    "examples": [
+      {
+        "collocation": "stop children from playing",
+        "scene": "daily_life",
+        "sentence": "Parents often stop children from playing outside at night.",
+        "translation_zh": "父母经常阻止孩子在晚上外面玩。"
+      },
+      {
+        "collocation": "stop people from working",
+        "scene": "work",
+        "sentence": "The manager will stop people from working during breaks.",
+        "translation_zh": "经理会在休息期间阻止员工工作。"
+      },
+      {
+        "collocation": "stop noise from disturbing",
+        "scene": "environment",
+        "sentence": "We need to stop noise from disturbing the wildlife.",
+        "translation_zh": "我们需要阻止噪音打扰野生动物。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "share sth with sb": {
+    "word_id": null,
+    "headword": "share sth with sb",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ʃɛr wɪð/",
+    "def_zh": "分享；共享",
+    "def_en": "To give a part of something to someone.",
+    "examples": [
+      {
+        "collocation": "share knowledge with others",
+        "scene": "education",
+        "sentence": "Teachers share knowledge with students in the classroom.",
+        "translation_zh": "教师在课堂上与学生分享知识。"
+      },
+      {
+        "collocation": "share experiences with friends",
+        "scene": "daily_life",
+        "sentence": "I often share my experiences with my close friends.",
+        "translation_zh": "我经常与我的好友分享我的经历。"
+      },
+      {
+        "collocation": "share resources with colleagues",
+        "scene": "work",
+        "sentence": "We need to share resources with colleagues for better results.",
+        "translation_zh": "我们需要与同事分享资源以获得更好的结果。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "tend to do sth": {
+    "word_id": null,
+    "headword": "tend to do sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "B1",
+    "ipa": "/tɛnd tu du/",
+    "def_zh": "倾向于做某事",
+    "def_en": "To have a usual pattern or tendency to do something.",
+    "examples": [
+      {
+        "collocation": "tend to do well in exams",
+        "scene": "education",
+        "sentence": "Students tend to do well in exams when they study regularly.",
+        "translation_zh": "学生在定期学习时，往往在考试中表现良好。"
+      },
+      {
+        "collocation": "tend to do things differently",
+        "scene": "work",
+        "sentence": "Many teams tend to do things differently to achieve better results.",
+        "translation_zh": "许多团队往往会以不同的方式做事，以获得更好的结果。"
+      },
+      {
+        "collocation": "tend to do poorly",
+        "scene": "health",
+        "sentence": "People who don't exercise regularly tend to do poorly in health.",
+        "translation_zh": "不规律锻炼的人在健康方面往往表现不佳。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "try one's best": {
+    "word_id": null,
+    "headword": "try one's best",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/traɪ bɛst/",
+    "def_zh": "尽力而为",
+    "def_en": "To make the greatest effort possible.",
+    "examples": [
+      {
+        "collocation": "students try their best",
+        "scene": "education",
+        "sentence": "Students try their best to learn new things.",
+        "translation_zh": "学生们尽力而为学习新知识。"
+      },
+      {
+        "collocation": "you should try your best",
+        "scene": "daily_life",
+        "sentence": "You should try your best in every situation.",
+        "translation_zh": "你在每种情况下都应该尽力而为。"
+      },
+      {
+        "collocation": "athletes try their best",
+        "scene": "work",
+        "sentence": "Athletes try their best during the competition.",
+        "translation_zh": "运动员在比赛中尽力而为。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "unlock the secrets of sth": {
+    "word_id": null,
+    "headword": "unlock the secrets of sth",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ʌnˈlɒk ðə ˈsiː.krɪts ʌv/",
+    "def_zh": "揭示某事的秘密",
+    "def_en": "To reveal hidden or unknown information about something.",
+    "examples": [
+      {
+        "collocation": "unlock the secrets of science",
+        "scene": "science_tech",
+        "sentence": "Scientists unlock the secrets of science every day.",
+        "translation_zh": "科学家每天揭示科学的秘密。"
+      },
+      {
+        "collocation": "unlock the secrets of history",
+        "scene": "academic",
+        "sentence": "Researchers unlock the secrets of history through careful study.",
+        "translation_zh": "研究人员通过细致的研究揭示历史的秘密。"
+      },
+      {
+        "collocation": "unlock the secrets of nature",
+        "scene": "environment",
+        "sentence": "We must unlock the secrets of nature to protect our planet.",
+        "translation_zh": "我们必须揭示自然的秘密以保护我们的星球。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "take sb's temperature": {
+    "word_id": null,
+    "headword": "take sb's temperature",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/teɪk ˈtɛmpərətʃər/",
+    "def_zh": "测量体温",
+    "def_en": "To measure the body temperature of someone.",
+    "examples": [
+      {
+        "collocation": "take the patient's temperature",
+        "scene": "health",
+        "sentence": "The nurse will take the patient's temperature today.",
+        "translation_zh": "护士今天会测量病人的体温。"
+      },
+      {
+        "collocation": "take sb's temperature regularly",
+        "scene": "daily_life",
+        "sentence": "Parents should take their children's temperature regularly.",
+        "translation_zh": "父母应该定期测量孩子的体温。"
+      },
+      {
+        "collocation": "take sb's temperature at home",
+        "scene": "science_tech",
+        "sentence": "You can take your temperature at home with a thermometer.",
+        "translation_zh": "你可以在家用温度计测量自己的体温。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "keep one's cool": {
+    "word_id": null,
+    "headword": "keep one's cool",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/kip wʌnz kul/",
+    "def_zh": "保持冷静",
+    "def_en": "To remain calm in a stressful situation.",
+    "examples": [
+      {
+        "collocation": "keep one's cool under pressure",
+        "scene": "work",
+        "sentence": "You must keep one's cool when facing tight deadlines.",
+        "translation_zh": "在面对紧迫的截止日期时，你必须保持冷静。"
+      },
+      {
+        "collocation": "keep one's cool during conflicts",
+        "scene": "daily_life",
+        "sentence": "It's important to keep one's cool during family arguments.",
+        "translation_zh": "在家庭争吵中，保持冷静是很重要的。"
+      },
+      {
+        "collocation": "keep one's cool in traffic",
+        "scene": "travel",
+        "sentence": "Drivers should keep one's cool in heavy traffic jams.",
+        "translation_zh": "司机在严重的交通堵塞中应该保持冷静。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "get to one's feet": {
+    "word_id": null,
+    "headword": "get to one's feet",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ɡɛt tuː wʌnz fiːt/",
+    "def_zh": "站起来",
+    "def_en": "To rise to a standing position from sitting or lying.",
+    "examples": [
+      {
+        "collocation": "get to one's feet quickly",
+        "scene": "daily_life",
+        "sentence": "He managed to get to his feet quickly after falling.",
+        "translation_zh": "他在摔倒后迅速站了起来。"
+      },
+      {
+        "collocation": "get to one's feet during the speech",
+        "scene": "academic",
+        "sentence": "Students will get to their feet during the speech to show respect.",
+        "translation_zh": "学生们在演讲时会站起来以示尊重。"
+      },
+      {
+        "collocation": "get to one's feet after exercise",
+        "scene": "health",
+        "sentence": "After the exercise, she struggled to get to her feet.",
+        "translation_zh": "运动后，她努力站了起来。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "go out of one's way": {
+    "word_id": null,
+    "headword": "go out of one's way",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/ɡoʊ aʊt əv wʌnz weɪ/",
+    "def_zh": "特意为某人或某事付出额外努力",
+    "def_en": "To make an extra effort to help someone or achieve something.",
+    "examples": [
+      {
+        "collocation": "go out of one's way to help",
+        "scene": "daily_life",
+        "sentence": "People often go out of their way to help friends.",
+        "translation_zh": "人们常常特意为朋友提供帮助。"
+      },
+      {
+        "collocation": "go out of one's way for sb",
+        "scene": "work",
+        "sentence": "The manager goes out of his way for his team.",
+        "translation_zh": "经理特意为他的团队付出额外努力。"
+      },
+      {
+        "collocation": "go out of one's way to make sb happy",
+        "scene": "culture",
+        "sentence": "She goes out of her way to make her children happy.",
+        "translation_zh": "她特意为让孩子们高兴而付出努力。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "be thankful to sb.": {
+    "word_id": null,
+    "headword": "be thankful to sb.",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/bi ˈθæŋk.fəl tuː/",
+    "def_zh": "感激某人",
+    "def_en": "To show gratitude or appreciation to someone.",
+    "examples": [
+      {
+        "collocation": "be thankful to my parents",
+        "scene": "daily_life",
+        "sentence": "I always try to be thankful to my parents for their help.",
+        "translation_zh": "我总是努力感激父母的帮助。"
+      },
+      {
+        "collocation": "be thankful to our teachers",
+        "scene": "education",
+        "sentence": "Students should be thankful to their teachers for their guidance.",
+        "translation_zh": "学生应该感激老师们的指导。"
+      },
+      {
+        "collocation": "be thankful to the community",
+        "scene": "news",
+        "sentence": "The residents are thankful to the community for the support.",
+        "translation_zh": "居民们感激社区的支持。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "make sb's bed": {
+    "word_id": null,
+    "headword": "make sb's bed",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/meɪk ˈbɛd/",
+    "def_zh": "整理床铺",
+    "def_en": "To arrange the bedding neatly in a bed.",
+    "examples": [
+      {
+        "collocation": "make my bed every morning",
+        "scene": "daily_life",
+        "sentence": "I make my bed every morning before school.",
+        "translation_zh": "我每天早上上学前整理床铺。"
+      },
+      {
+        "collocation": "make his bed properly",
+        "scene": "education",
+        "sentence": "Students are taught to make their bed properly.",
+        "translation_zh": "学生们被教导要正确整理床铺。"
+      },
+      {
+        "collocation": "make her bed before leaving",
+        "scene": "work",
+        "sentence": "She always makes her bed before leaving for work.",
+        "translation_zh": "她总是在去上班之前整理床铺。"
+      }
+    ],
+    "_attempts": 2,
+    "_model": "gpt-4o-mini"
+  },
+  "make up one's mind": {
+    "word_id": null,
+    "headword": "make up one's mind",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "B1",
+    "ipa": "/meɪk ʌp wʌnz maɪnd/",
+    "def_zh": "下定决心",
+    "def_en": "To make a decision or choose something after consideration.",
+    "examples": [
+      {
+        "collocation": "make up one's mind quickly",
+        "scene": "daily_life",
+        "sentence": "Sometimes it is hard to make up one's mind quickly.",
+        "translation_zh": "有时候，快速下定决心很困难。"
+      },
+      {
+        "collocation": "make up one's mind about something",
+        "scene": "academic",
+        "sentence": "Students need to make up their minds about their majors soon.",
+        "translation_zh": "学生们需要尽快决定自己的专业。"
+      },
+      {
+        "collocation": "make up one's mind to do something",
+        "scene": "work",
+        "sentence": "She decided to make up her mind to accept the new job offer.",
+        "translation_zh": "她决定下定决心接受新的工作提议。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "run for one's life": {
+    "word_id": null,
+    "headword": "run for one's life",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "B1",
+    "ipa": "/rʌn fɔr wʌnz laɪf/",
+    "def_zh": "逃命",
+    "def_en": "To flee in order to avoid danger or death.",
+    "examples": [
+      {
+        "collocation": "run for one's life from danger",
+        "scene": "daily_life",
+        "sentence": "Children often run for their lives when they see a snake.",
+        "translation_zh": "当孩子们看到蛇时，常常会逃命。"
+      },
+      {
+        "collocation": "run for one's life during a disaster",
+        "scene": "news",
+        "sentence": "Residents must run for their lives during the flash flood warnings.",
+        "translation_zh": "居民在洪水警报期间必须逃命。"
+      },
+      {
+        "collocation": "run for one's life in an emergency",
+        "scene": "work",
+        "sentence": "Employees are trained to run for their lives in an emergency situation.",
+        "translation_zh": "员工在紧急情况下接受逃命的训练。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "pull one's weight": {
+    "word_id": null,
+    "headword": "pull one's weight",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "B1",
+    "ipa": "/pʊl wʌnz weɪt/",
+    "def_zh": "尽自己所能",
+    "def_en": "To do one's fair share of work or responsibility.",
+    "examples": [
+      {
+        "collocation": "pull one's weight in a group project",
+        "scene": "academic",
+        "sentence": "Every student must pull their weight in the group project for success.",
+        "translation_zh": "每个学生在小组项目中都必须尽自己所能以获得成功。"
+      },
+      {
+        "collocation": "pull one's weight at work",
+        "scene": "work",
+        "sentence": "Employees are expected to pull their weight at work to maintain productivity.",
+        "translation_zh": "员工必须在工作中尽自己所能以保持生产力。"
+      },
+      {
+        "collocation": "pull one's weight in a team",
+        "scene": "daily_life",
+        "sentence": "It's frustrating when someone does not pull their weight in a team.",
+        "translation_zh": "当有人在团队中不尽自己所能时，令人感到沮丧。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  },
+  "take sb's breath away": {
+    "word_id": null,
+    "headword": "take sb's breath away",
+    "pos": "",
+    "freq_rank": null,
+    "cefr": "A2",
+    "ipa": "/teɪk ˈbrɛθ əˈweɪ/",
+    "def_zh": "使某人惊叹；让某人惊奇",
+    "def_en": "To impress someone very much or astonish them.",
+    "examples": [
+      {
+        "collocation": "take someone's breath away",
+        "scene": "daily_life",
+        "sentence": "The sunset took my breath away last evening.",
+        "translation_zh": "昨晚的日落让我惊叹不已。"
+      },
+      {
+        "collocation": "take your breath away",
+        "scene": "travel",
+        "sentence": "This view will take your breath away when you arrive.",
+        "translation_zh": "当你到达时，这个景色会让你惊叹。"
+      },
+      {
+        "collocation": "take his breath away",
+        "scene": "culture",
+        "sentence": "Her performance took his breath away at the concert.",
+        "translation_zh": "她在音乐会上的表演让他惊叹。"
+      }
+    ],
+    "_attempts": 1,
+    "_model": "gpt-4o-mini"
+  }
+}

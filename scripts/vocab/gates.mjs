@@ -173,33 +173,98 @@ function phrasePresent(text, phrase, table = {}) {
         不是语义问题,所以该卡就卡,不能推给"分不清就别硬判"。 */
   const split = s => String(s).toLowerCase().replace(/[’‘]/g, "'").split(/[\s\-–—/]+/);
   const norm = s => split(s).map(raw => ({
+    raw: raw.replace(/^[^a-z']+|[^a-z'.]+$/g, ''),
     t: raw.replace(/[^a-z']/g, '').replace(/'s$|'$/, ''),
+    poss: /'s$/.test(raw.replace(/[^a-z']/g, '')),   // 这个 token 本身是所有格
     brk: /[,;:.!?]$/.test(raw),
   })).filter(x => x.t);
-  const hay = norm(text), needle = norm(phrase).map(x => x.t);
-  if (!needle.length) return false;
+
+  const hay = norm(text);
   /**
-   * ⚠️ 逐 token 要**允许屈折**,不能要求逐字相同。
-   *    `look after` 在 "She **looks** after her brother" 里就是 looks ≠ look ——
-   *    要求全等的话 g1 会一口咬定"目标词缺席",而句子完全正确。
-   *    2026-08-17 加短语分支时没踩到,是因为当时只有 `inasmuch as` / `to and fro`
-   *    这两个**没有可屈折成分**的短语;轮到 525 个教材短语(look after / take care of)
-   *    就会大批误伤,而且是在**烧 API 额度重试三次之后**才看得见。
-   * ⚠️ 只放行屈折形,不放行任意近似:仍然要求**词序不变、成分数不变**,
-   *    所以 "look after" 匹配不上 "look carefully after",也匹配不上 "after look"。
+   * ── 槽位(sb. / sth. / one's / oneself)──────────────────────────
+   * 教材词表里有 50 个这种词条:drive sb. crazy / try one's best / lend sb a hand。
+   * 它们是**真词汇、高价值**,sb./one's 是词典标准写法不是缺陷,词条保持原样。
+   * 但字面串永远不会出现在句子里 —— 实际写的是 "drives me crazy" / "tried her best"。
+   *
+   * ⚠️ 槽位是**精确匹配,不是放宽**。三类各有各的可填集合:
+   *   · NOMINAL(sb / sth)      —— 名词性成分,1~3 个 token(允许 "my little brother")
+   *   · POSSESSIVE(one's/sb's) —— **只**认物主限定词或本身带 's 的 token,单个
+   *   · REFLEXIVE(oneself)     —— **只**认反身代词,单个
+   * 松成"含这几个实词就算"的话,「fro」 那种病句会重演 —— 而这次是 50 个。
+   * 判据的边界由四个已知样本钉死(见 test-phrase-slots.mjs):
+   *     drive sb. crazy + "It drives me crazy."          → 必须放行
+   *     try one's best  + "She tried her best."          → 必须放行
+   *     drive sb. crazy + "He drives a car."             → 必须拦下
+   *     try one's best  + "I tried the new restaurant."  → 必须拦下
    */
-  const forms = needle.map(t => inflectionsOf(t, table));
-  outer: for (let i = 0; i + needle.length <= hay.length; i++) {
-    for (let j = 0; j < needle.length; j++) {
-      const h = hay[i + j].t;
-      if (h !== needle[j] && !forms[j].has(h)) continue outer;
-      // 短语内部不许被句读切开(最后一个成分后面的标点无所谓)
-      if (j < needle.length - 1 && hay[i + j].brk) continue outer;
+  const POSSESSIVE = new Set(['my', 'your', 'his', 'her', 'its', 'our', 'their', 'ones']);
+  const REFLEXIVE = new Set(['myself', 'yourself', 'himself', 'herself', 'itself',
+    'ourselves', 'yourselves', 'themselves', 'oneself']);
+  const SLOT_MAX = 3;                       // NOMINAL 最多吃几个 token
+  const slotKind = tok => {
+    const bare = tok.raw.replace(/[^a-z']/g, '');
+    if (bare === "one's" || bare === "sb's" || bare === "sth's") return 'POSS';
+    if (bare === 'oneself') return 'REFL';
+    if (/^(sb|sth|sw)\.?$/.test(bare)) return 'NOM';
+    return null;
+  };
+
+  const parts = norm(phrase).map(tok => ({ tok, slot: slotKind(tok) }));
+  if (!parts.length) return false;
+  const forms = parts.map(p => p.slot ? null : inflectionsOf(p.tok.t, table));
+
+  /** 从 hay[i] 起,能不能匹配 parts[j..];返回是否成功。 */
+  function match(i, j) {
+    if (j >= parts.length) return true;
+    if (i >= hay.length) return false;
+    const p = parts[j];
+    /* 短语内部不许被句读切开(最后一个成分后面的标点无所谓) */
+    const brkBad = k => j < parts.length - 1 && hay[k].brk;
+    if (!p.slot) {
+      const h = hay[i].t;
+      if (h !== p.tok.t && !forms[j].has(h)) return false;
+      if (brkBad(i)) return false;
+      return match(i + 1, j + 1);
     }
-    return true;
+    if (p.slot === 'POSS') {
+      /* 吃 1~2 个 token,且**最后一个**必须是所有格 —— 因为真实写法是
+         "her best"(1 个)也可能是 "the child's temperature"(2 个:限定词 + 名词's)。
+         ⚠️ 只吃 1 个的话 "took the child's temperature" 会卡在 the 上被判缺席,
+            而那句完全正确;只看"里面有没有所有格"又会放行 "tried the best"。
+            所以判据是**末位必须是所有格**,不是"含有所有格"。 */
+      for (let n = 1; n <= 2 && i + n <= hay.length; n++) {
+        const last = hay[i + n - 1];
+        if (!(POSSESSIVE.has(last.t) || last.poss)) continue;
+        let bad = false;
+        for (let k = i; k < i + n; k++) if (brkBad(k)) { bad = true; break; }
+        if (bad) break;
+        if (match(i + n, j + 1)) return true;
+      }
+      return false;
+    }
+    if (p.slot === 'REFL') {
+      if (!REFLEXIVE.has(hay[i].t)) return false;
+      if (brkBad(i)) return false;
+      return match(i + 1, j + 1);
+    }
+    /* NOMINAL:吃 1~3 个 token。⚠️ 上界必须有 —— 无上界的话
+       "He drives a car and everyone is crazy about it" 这种也会被吃成命中。 */
+    for (let n = 1; n <= SLOT_MAX && i + n <= hay.length; n++) {
+      let bad = false;
+      for (let k = i; k < i + n; k++) if (brkBad(k)) { bad = true; break; }
+      if (bad) break;
+      if (match(i + n, j + 1)) return true;
+    }
+    return false;
+  }
+
+  for (let i = 0; i + parts.length <= hay.length + (parts.filter(p => p.slot === 'NOM').length * (SLOT_MAX - 1)); i++) {
+    if (i >= hay.length) break;
+    if (match(i, 0)) return true;
   }
   return false;
 }
+
 
 export function g1_targetPresent(sentence, headword, table) {
   const hw = headword.toLowerCase();

@@ -12,7 +12,7 @@
 import { describe, expect, it } from "vitest";
 import { isMasteredRow, masteryProgress, MASTERY_THRESHOLDS } from "./data";
 import { nextMasteryState } from "./vocabMastery";
-import { MODE_ROTATION, pickMode } from "./todayPlan";
+import { MISTAKE_ALLOWED, MODE_ROTATION, pickMistakeMode, pickMode } from "./todayPlan";
 import type { VocabMode } from "./vocabMastery";
 
 /** 一个词的掌握度行,按天喂作答。 */
@@ -187,5 +187,62 @@ describe("判据⑤:进度显示与 isMasteredRow 不许分叉", () => {
     expect(p.days.have).toBe(0);
     expect(p.modes.have).toBe(0);
     expect(p.mastered).toBe(false);
+  });
+});
+
+describe("错题本也要有出口:只用错题本的用户不能永远拿不到第二种题型", () => {
+  /**
+   * 由来(2026-08-18 库内实证):某用户 710 词,轮换修复上线后又学了 41 个词,
+   * modes_correct 仍然只有 zh_choice —— 那 41 个词**全部 in_mistake_book**。
+   * 错题本按 last_wrong_mode 出题,错在 zh_choice 就永远只考 zh_choice,
+   * 于是 modes 永远 =1,掌握第三条**永远为假**。有的词 tested_count 已经到 6。
+   * 这不是轮换坏了,是**这条路径本身没有出口**。
+   *
+   * 规则改成两段:短板没补回来先补短板,补回来了才轮换。
+   */
+  /* ⚠️ 直接调**页面用的那份实现**,不在测试里照抄规则 ——
+     抄一份的话,页面那份改坏了这里照样绿。 */
+  const ALLOWED = MISTAKE_ALLOWED;
+  const pickForMistake = (wrong: VocabMode, done: string[], days = 0) =>
+    pickMistakeMode(wrong, done, days, ALL);
+
+  it("【已知形状】modes=[zh_choice] 且 last_wrong_mode=zh_choice → 必须给出非 zh_choice", () => {
+    /* 这就是那 41 个词此刻的形状:当初错的题型**已经重新答对过了**,
+       再出它一遍不会让 modes 增加,用户就卡死在掌握线前。 */
+    expect(pickForMistake("zh_choice", ["zh_choice"])).not.toBe("zh_choice");
+    expect(pickForMistake("zh_choice", ["zh_choice"])).toBe("en_choice");
+  });
+
+  it("【已知形状】modes=[zh_choice] 但 last_wrong_mode=spell → 仍出 spell", () => {
+    /* 短板还没补回来,先补短板 —— "错哪练哪"的初衷不能丢。
+       ⚠️ spell 不在 ALLOWED 里,所以这条实际会落到轮换;
+          断言写成"不是 zh_choice"才是这个页面能兑现的承诺。 */
+    const m = pickForMistake("spell", ["zh_choice"]);
+    expect(m).not.toBe("zh_choice");
+  });
+
+  it("补回来之后再来一轮 → 两种题型都答对过了,第三条达标", () => {
+    let done = ["zh_choice"];
+    const m1 = pickForMistake("zh_choice", done);
+    done = [...done, m1];
+    expect(new Set(done).size).toBe(2);
+    expect(isMasteredRow({ mastery_level: 4, correct_days: 4, modes_correct: done })).toBe(true);
+  });
+
+  it("⚠️ 绝不选这个页面渲染不了的题型(listen / spell / match)", () => {
+    /* 选了就会:界面照出选择题、库里记 listen —— 替用户记上他没做过的题型。 */
+    for (const done of [[], ["zh_choice"], ["zh_choice", "en_choice"]]) {
+      expect(ALLOWED).toContain(pickForMistake("zh_choice", done));
+    }
+  });
+
+  it("反证:改造前的行为(一律出 last_wrong_mode)→ 学多少次都不掌握", () => {
+    let row: Row = null;
+    for (const day of ["2026-08-01", "2026-08-02", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06"]) {
+      row = nextMasteryState(row, true, "zh_choice", day) as Row;   // 永远只出错过的那一种
+    }
+    expect(row!.tested_count).toBe(6);
+    expect(new Set(row!.modes_correct!).size).toBe(1);
+    expect(isMasteredRow(row!)).toBe(false);
   });
 });

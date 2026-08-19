@@ -37,7 +37,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER } from './gates.mjs';
+import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER, ipaExpectation } from './gates.mjs';
 import { tierRangeText } from './spec.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
 import { DEF_ZH_RULE, FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
@@ -139,14 +139,21 @@ async function restPaged(pathname, params, page = 1000) {
 function fetchFromCsv(tier, limit) {
   const csv = path.join(DATA, `${BANK || 'toefl'}.csv`);
   if (!existsSync(csv)) throw new Error(`找不到 ${csv},先跑 ingest-toefl.mjs`);
+  /* 第四列 `cefr` 可选。⚠️ 教材短语在 ECDICT 里**没有词频**,
+     不给显式档位的话 cefrFor(null) 一律返回 C1「低频学术词·正式语域」,
+     `look after` 会按学术语域出句子 —— 难度档必须由学段定,不能由词频推。 */
   const rows = readFileSync(csv, 'utf8').trim().split(/\r?\n/).slice(1).map(l => {
-    const [headword, pos, freq_rank] = l.split(',');
-    return { id: null, headword, pos, freq_rank: freq_rank ? Number(freq_rank) : null };
+    const [headword, pos, freq_rank, cefr] = l.split(',');
+    return {
+      id: null, headword, pos,
+      freq_rank: freq_rank ? Number(freq_rank) : null,
+      cefr: (cefr || '').trim() || null,
+    };
   });
   // tier='all' 专供放量:不按难度档筛,全池都要,按 freq_rank 顺序取
   const picked = tier === "all"
     ? rows
-    : rows.filter(r => r.freq_rank && cefrFor(r.freq_rank).level === tier);
+    : rows.filter(r => tierOf(r).level === tier && (r.cefr || r.freq_rank));
   if (tier === "all") return picked.slice(0, limit);
   // 均匀铺开取样,别全挤在该档最前面(那样只看得到该档最简单的词)
   const step = Math.max(1, Math.floor(picked.length / limit));
@@ -194,12 +201,21 @@ async function fetchPending() {
  *   老阈值(2000/6000/15000)是照未过滤的 6955 词池定的,套到 D 池上严重偏斜:
  *   batch1 200 词会算出 A2 22 / B1 178 / B2 0 / C1 0 —— 首批例句几乎全是 B1。
  *   新阈值 1500/4000/10000 下,D 池 4473 词分布才拉得开。 */
+const TIER_NOTE = {
+  A2: '高频常用词:句子要短、结构简单、日常语域',
+  B1: '中频词:一般复杂度,可用从句但别套叠',
+  B2: '偏学术词:可用较正式的措辞与抽象主语',
+  C1: '低频学术词:正式语域,允许名词化与复杂搭配',
+};
 function cefrFor(freqRank) {
   const r = freqRank ?? Number.MAX_SAFE_INTEGER;
-  if (r <= 1500) return { level: 'A2', note: '高频常用词:句子要短、结构简单、日常语域' };
-  if (r <= 4000) return { level: 'B1', note: '中频词:一般复杂度,可用从句但别套叠' };
-  if (r <= 10000) return { level: 'B2', note: '偏学术词:可用较正式的措辞与抽象主语' };
-  return { level: 'C1', note: '低频学术词:正式语域,允许名词化与复杂搭配' };
+  const level = r <= 1500 ? 'A2' : r <= 4000 ? 'B1' : r <= 10000 ? 'B2' : 'C1';
+  return { level, note: TIER_NOTE[level] };
+}
+/** 词条自带显式档位就用它,否则从词频推。见 fetchFromCsv 里那段注释。 */
+function tierOf(word) {
+  const lv = word.cefr && TIER_NOTE[word.cefr] ? word.cefr : null;
+  return lv ? { level: lv, note: TIER_NOTE[lv] } : cefrFor(word.freq_rank);
 }
 
 /* ── prompt ── */
@@ -245,13 +261,32 @@ function trapPrimer(word, notes) {
   /* 生僻名词 → 它的形容词形。gre 那轮 18 个失败里占 6 个,是最集中的一类:
      hunk→hunky / pith→pithy / lout→loutish / imp→impish / dolt→doltish / boor→boorish。
      模型觉得形容词形更地道,于是整句都用形容词,名词本体一次都没出现(g1 + g7 双杀)。 */
-  if (/g1 目标词缺席/.test(all)) {
+  /* 短语词条的 g1 失败**不是**"用了形容词形",而是**用同义词把整个短语替换掉了**:
+     `a lot of people` 的例句写成 "Many people enjoy…"。
+     下面那条单词版提示对它完全没用 —— 实测 a lot of 三次重试撞的都是同一堵墙。 */
+  if (/g1 目标词缺席/.test(all) && /\s/.test(word.headword)) {
+    out.push(`⚠️ You replaced the phrase "${word.headword}" with a SYNONYM instead of using it.
+   The sentence must contain the phrase itself, every part, in order.
+     a lot of  -> "A lot of people enjoy the beach."   NOT "Many people enjoy the beach."
+     a bit     -> "I feel a bit tired."                NOT "I feel slightly tired."
+     take part in -> "She took part in the contest."   NOT "She joined the contest."
+   Inflecting a part is fine ("took part in"); replacing the phrase is not.`);
+  } else if (/g1 目标词缺席/.test(all)) {
     out.push(`⚠️ "${word.headword}" itself does not appear in your sentences at all.
    You are very likely using its ADJECTIVE form instead. That does not count:
      hunk -> write "a hunk of bread", NOT "a hunky guy"
      pith -> write "the pith of the argument", NOT "pithy remarks"
      boor -> write "he is a boor", NOT "boorish behavior"
    The sentence must contain "${word.headword}" as a word (plural/tense inflection is fine).`);
+  }
+  /* g14:把 sb./sth. 当成词读进 IPA。26/31 个词一次性栽在这条上。 */
+  if (/g14/.test(all)) {
+    out.push(`⚠️ Your ipa transcribed the dictionary placeholder as if it were a word.
+   "sb" is NOT pronounced /sʌb/. "sth" is NOT pronounced /sʌmθɪŋ/. They are notation.
+   Transcribe ONLY the real words, in order:
+     argue with sb   -> /ˈɑːr.ɡjuː wɪð/     NOT /ˈɑːr.ɡjuː wɪð ˈsʌb/
+     add sth to sth  -> /æd tuː/            NOT /æd sʌmθɪŋ tuː sʌmθɪŋ/
+     try one's best  -> /traɪ bɛst/         NOT /traɪ wʌnz bɛst/`);
   }
   /* 句长差一点。提示词里本来就写了区间,但模型系统性地写短一两个词;
      光重试不给具体数字,它下一次还是照写。 */
@@ -271,12 +306,65 @@ function buildPrompt(word, cefr, failureNotes) {
   const fnRule = isFunctionWord(word.pos) ? `
 
 ${FUNCTION_WORD_RULE}` : '';
+  /* 短语词条(look after / take care of)。
+     ⚠️ 提示词通篇说的是 "the word",对短语必须点破,否则模型很容易:
+        ① 只用其中半截(写 "look at" 当成 "look after");
+        ② 把短语拆开写成 "look after him" 之外的分离结构;
+        ③ 给 ipa 时只标第一个词。
+     闸门会把这些一律判"目标词缺席",但那是在**烧掉三次重试之后**。
+     525 个短语,提前说清比事后重试便宜得多。 */
+  /**
+   * 注音用的目标串 —— **把占位符替模型去掉,而不是让它自己去掉**。
+   *
+   * ⚠️ 实测:提示词写"给 argue with sb 注音、但别读占位符",26/31 个词照样把 sb
+   *    读成 /ˈsʌb/、sth 读成 /sʌmθɪŋ/,三次重试全撞同一堵墙。能在提示词里替它
+   *    做完的一步,就不要留给它做。
+   * ⚠️ 口径**直接复用 g14 的 ipaExpectation**,不再在这里重写一遍规则 ——
+   *    两处各写一份必然走岔:上一版这里剥掉了 one's、闸门却要求念,
+   *    结果 try one's best 生成出 /traɪ bɛst/ 而闸门当时也没拦。
+   */
+  const ipaTarget = ipaExpectation(word.headword).words.join(" ") || String(word.headword);
+  const phraseRule = /\s/.test(word.headword) ? `
+
+⚠️ "${word.headword}" IS A MULTI-WORD PHRASE, not a single word. This changes several rules:
+   - EVERY sentence must contain the COMPLETE phrase "${word.headword}", all parts, in this exact order.
+     Inflecting a part is fine and encouraged ("looks after", "took care of"), but you may NOT
+     drop a part, reorder parts, or insert other words between them.
+     Wrong for "look after": "She looks at the baby." (dropped "after")
+     Wrong for "look after": "He will look carefully after it." (inserted a word)
+     Right: "She looks after her little brother every afternoon."
+   - collocation must also contain the complete phrase, plus the words it typically goes with.
+     For "look after": "look after the children" / "looked after by his aunt".
+   - ipa: give the IPA for the WHOLE phrase, with a space between parts,
+     e.g. look after -> /lʊk ˈɑːf.tər/.
+   - ⚠️ If the entry contains a PLACEHOLDER (sb / sb. / sth / sth. / one's / sb's / oneself /
+     "do sth" / "doing sth", or a part in parentheses), that placeholder is DICTIONARY NOTATION,
+     not a word. NEVER write it literally in a sentence or a collocation.
+     Replace it with a real, concrete filler that fits the sentence:
+       drive sb. crazy      -> "The noise drives me crazy."          NOT "...drives sb. crazy."
+       try one's best       -> "She tried her best."                 NOT "...tried one's best."
+       succeed in doing sth -> "He succeeded in passing the exam."   NOT "...in doing sth."
+       put oneself in sb's shoes -> "Put yourself in his shoes."
+       run low (on sth)     -> "We are running low on water."  (the bracketed part is OPTIONAL)
+     Keep every NON-placeholder word of the entry, in order, exactly where it is
+     (inflection is fine: tried / succeeded / driving).
+   - collocation must show the phrase WITH the placeholder filled in, same rule.
+   - ipa: give it for the entry WITHOUT the placeholders, e.g. drive sb. crazy -> /draɪv ˈkreɪzi/.
+   - def_en must define WHAT THE WHOLE PHRASE MEANS, not what its most contentful word means.
+     ⚠️ This is the single most common mistake on quantifier and measure phrases:
+       "a bottle of" -> "The amount of liquid that a bottle holds." ✅
+                     -> "A container for liquid made of glass." ❌ (that defines "bottle")
+       "a piece of"  -> "A single part or portion taken from something larger." ✅
+       "look after"  -> "To take care of a person, animal, or thing." ✅` : '';
   return `Word: "${word.headword}"${word.pos ? `  (part of speech: ${word.pos})` : ''}
 Frequency rank: ${word.freq_rank ?? 'unknown'} -> target sentence difficulty: ${cefr.level}. ${cefr.note}
 
 Produce a study card with these HARD requirements:
 
-1. ipa: American English IPA for "${word.headword}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
+1. ipa: American English IPA for "${ipaTarget}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
+   ⚠️ Transcribe EXACTLY that string and nothing else.
+   Placeholders sb / sth / sw / sb's / oneself are dictionary shorthand and are NEVER pronounced;
+   one's IS a real word and IS pronounced /wʌnz/; parts in ( ) are omitted; for a/b write only a.
 2. def_zh: 中文释义.
 ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
 ${crossPosClause(word)}
@@ -311,7 +399,7 @@ ${crossPosClause(word)}
    - ⚠️ 三条例句用的必须都是 def_zh 里给出的义项, 不许跑到别的义项去.
      反例: def_zh "浪漫；爱情关系" 却造 "romance languages"(罗曼语族, 另一个义项) ❌
 5. NEVER use an em-dash (—) or en-dash (–) anywhere in any field. Use commas or periods.
-6. Difficulty is set by the word's own frequency (${cefr.level}), NOT by any exam.${fnRule}${retry}`;
+6. Difficulty is set by the target's difficulty tier (${cefr.level}), NOT by any exam.${phraseRule}${fnRule}${retry}`;
 
 }
 
@@ -492,7 +580,7 @@ async function main() {
 
   if (DRY) {
     for (const w of pending.slice(0, 20)) {
-      process.stdout.write(`  ${w.headword.padEnd(18)} rank=${String(w.freq_rank ?? '-').padStart(6)}  → ${cefrFor(w.freq_rank).level}\n`);
+      process.stdout.write(`  ${w.headword.padEnd(18)} rank=${String(w.freq_rank ?? '-').padStart(6)}  → ${tierOf(w).level}\n`);
     }
     process.stdout.write(`  (--dry-run:未调用 API)\n`);
     return;
@@ -504,7 +592,7 @@ async function main() {
   const workers = Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
     while (queue.length) {
       const word = queue.shift();
-      const cefr = cefrFor(word.freq_rank);
+      const cefr = tierOf(word);
       /* 这个词上一轮失败过 → **第一次就带着上轮的原因和定向提示去打**,
          而不是先冷跑一次、撞同一堵墙、再进重试。同样 3 次机会,3 次都是有信息的。 */
       const prior = failed[word.headword.toLowerCase()]?.reasons;

@@ -21,7 +21,7 @@ import { g1_targetPresent, g7_collocationContainsWord } from './gates.mjs';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 /* 用**流水线真的会读的那张表**;没有就用 ECDICT 现拼一份等价的。
    ⚠️ 拿测试自己搭的表跑,证明的是"表对了闸门就对",证明不了流水线那份建对了。 */
-const T = path.join(HERE, 'data', 'textbook-slots-inflections.json');
+const T = path.join(HERE, 'data', 'textbookslots-inflections.json');
 const EXP = path.join(HERE, 'data', 'ecdict-exchange.json');
 let TABLE = {};
 if (existsSync(T)) { TABLE = JSON.parse(readFileSync(T, 'utf8')); console.log(`表:${path.basename(T)}(${Object.keys(TABLE).length} key)\n`); }
@@ -49,6 +49,29 @@ const CASES = [
   ["make one's own decision", 'Teenagers should make their own decision about hobbies.', true, '物主=their'],
   ["put oneself in sb's shoes", 'Try to put yourself in his shoes before judging.', true, '反身 + 物主两个槽位'],
   ["take sb's temperature", "The nurse took the child's temperature twice this morning.", true, "物主槽位吃「限定词 + 名词's」两个 token"],
+
+  // ── 槽位带斜杠:sb/sth 是**一个**槽位的两种写法,不是两个槽位 ──
+  ["take sb's temperature", "Doctors often take patients' temperature during a check-up.", true, "复数所有格 s' —— 同一处形态归一栽的第四次,别再退回只判 's"],
+  ["take sb's temperature", 'The nurse took his temperature twice this morning.', true, '单 token 物主'],
+  ['fight against sb/sth', 'Villagers fight against the new factory every single day.', true, '斜杠槽位吃 3 个 token'],
+  ['fight against sb/sth', 'Doctors fight against disease with better tools now.', true, '同一个槽位,填的是 sth'],
+  ['fight against sb/sth', 'They fight bravely in the war against poverty today.', false, 'against 前插了词,不连续'],
+  ['along with sb/sth', 'She came along with her younger sister to school.', true, ''],
+  ['cut sth in/into sth', 'Please cut the cake into eight equal pieces now.', true, '择一字面量 into 命中'],
+  ['cut sth in/into sth', 'Please cut the cake in half before serving it.', true, '择一字面量 in 命中'],
+
+  // ── 动词槽位:doing → 任意 -ing 形;do → 任意单词 ──────────────
+  ['succeed in doing sth', 'She succeeded in passing the exam on her first try.', true, 'doing → passing'],
+  ['succeed in doing sth', 'He succeeded in the exam after studying very hard.', false, '缺 -ing 成分,不是这个句型'],
+  ['keep on doing sth', 'They kept on asking the same question all morning.', true, 'doing → asking'],
+  ['tend to do sth', 'Children tend to copy what their parents do daily.', true, 'do → copy'],
+
+  // ── 括号可选:括号里的部分可有可无 ─────────────────────────────
+  ['run low (on sth)', 'We are running low on fresh water in camp.', true, '可选部分**出现**时也要能匹配'],
+  ['run low (on sth)', 'Supplies were running low before the storm finally passed.', true, '可选部分**缺席**时同样放行'],
+  ['move on (to sth)', 'Let us move on to the next question right now.', true, ''],
+  ['feel free (to do sth)', 'Please feel free to ask me anything at all.', true, ''],
+  ['run low (on sth)', 'The river runs through the low valley near town.', false, 'low 不紧跟 run,核心成分不连续'],
 
   // ── 真阴性:必须拦下 ────────────────────────────────────────
   ["try one's best", 'She tried best to finish the work on time.', false, '物主槽位空缺,不能当没有'],

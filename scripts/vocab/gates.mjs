@@ -548,22 +548,85 @@ export function g11_lengthRatioDiagnostic(examples, maxRatio = 2.6, minRatio = 0
  *    /ˈsʌb.dʒɪkt/ 本来就该有 sʌb,对它开这条就是误伤。
  */
 /**
- * ⚠️ 这道门只管**读不出来的缩写**(sb / sth / sw),不管 one's / oneself / doing。
+ * g14 —— 音标里的占位符处理。**规则是 Aaron 2026-08-18 定死的,不再每批临时判断**:
+ *   · sb / sth / sw / sb's / sth's / oneself  → 一律不念
+ *   · one's                                   → 念作 /wʌnz/(真实词形,词典也这么标)
+ *   · 括号内可选成分                          → 不念,括号也不许出现在音标里
+ *   · 斜杠择一                                → 只念第一个
+ *   · do / doing                              → 念(真实词形,同 one's)
  *
- * 一开始两类一起卡,连挂 6 个词、三轮重试全撞同一堵墙,以为是模型不听提示词 ——
- * 其实是判据定错了:sb 是词典缩写,没人把它念成 /'sʌb/;
- * 而 one's 是真实词形,"pull one's weight" 读出来就是 /pʊl wʌnz weɪt/,
- * 纸质词典的成语条目也是这么标的。
- * 模型连着三次给同一个答案时,先怀疑判据,别先怀疑模型。
+ * ⚠️ 第一版**判据对、实现错**:正则写的是 `sʌmθ`,模型输出的却是 `ˈsʌm.θɪŋ` ——
+ *    音节点把它切开了,12 条坏音标全部过闸,Aaron 手查全库才发现。
+ *    「判据对」不等于「实现对」。所以现在有三条**互不重叠**的判据:
+ *      ⑴ 音标词组数 = 该念的词数 —— 抓多念/漏念(占位符被念、one's 被吞)
+ *      ⑵ 不许出现占位符的读法   —— 抓词组数碰巧对上的(/hɛlp sɪb/ 也是 2 组)
+ *      ⑶ 不许出现 ( ) /         —— 抓括号/斜杠原样抄进音标
+ *    单靠任何一条都有漏网形态,三条一起才拦得住那 12 条。
+ *
+ * ⚠️ 这道门**判不了音标本身对不对**(shoes 写成 /ˈsʊz/ 那种),那只能人读。
+ *    别为显得严格去硬判 —— 见 dont-fake-a-gate-for-unjudgeable。
  */
-const PLACEHOLDER_HW = /\b(sb|sth|sw)\b|sb\.|sth\.|sb's|\(/i;
-const PLACEHOLDER_IPA = /s\s*ʌ\s*b|sʌmθ|\bsb\b|\bsth\b/i;
+const IPA_SILENT = new Set(['sb', 'sth', 'sw', "sb's", "sth's", 'oneself']);
+/* 占位符被念出来时的实际形态。⚠️ 一律在**去掉重音符/长音符/音节点/空格**之后的
+   稠密串上匹配 —— 上一版就是漏了这一步才让 `ˈsʌm.θɪŋ` 溜过去的。 */
+const IPA_SOUND_OF = {
+  sb: /sʌb|sɪb|sʌmbɒd|sʌmbʌd|sʌmbɑd/,
+  sth: /sʌmθ|sʌmfɪ/,
+  sw: /sʌmwɛ|sʌmweə|sʌmhwɛ/,
+  "sb's": /sʌbz|sbz|sʌmbɒdiz|sʌmbʌdiz/,
+  "sth's": /sʌmθɪŋz/,
+  oneself: /sɛlf|self/,
+};
+/** 词条侧:哪些词该念、哪些占位符该消失、要不要有 wʌnz */
+export function ipaExpectation(headword) {
+  const out = { applies: false, words: [], silent: [], needsOnes: false };
+  let depth = 0;
+  for (const raw of String(headword || '').trim().split(/\s+/)) {
+    if (!raw) continue;
+    const opens = (raw.match(/\(/g) || []).length;
+    const closes = (raw.match(/\)/g) || []).length;
+    depth += opens;
+    const inParen = depth > 0;
+    depth = Math.max(0, depth - closes);
+    let t = raw.replace(/[()]/g, '').replace(/\.$/, '').toLowerCase();
+    if (!t) continue;
+    if (opens) out.applies = true;
+    if (t.includes('/')) { out.applies = true; t = t.split('/')[0]; }   // 斜杠只念第一个
+    if (IPA_SILENT.has(t)) { out.applies = true; if (!out.silent.includes(t)) out.silent.push(t); continue; }
+    if (inParen) { continue; }                                          // 括号内不念
+    if (t === "one's") { out.applies = true; out.needsOnes = true; }
+    out.words.push(t);
+  }
+  /* ⚠️ 一个词都不该念 = 这个词条本身就是那个占位符(cet4 里真有 `oneself` 这个词条,
+     /wʌnˈsɛlf/ 完全正确)。不加这条,单 token 词条会被当成占位符误伤 ——
+     全库回归当场抓到,见 gate-change-needs-regression。 */
+  if (!out.words.length) out.applies = false;
+  return out;
+}
 export function g14_ipaNoPlaceholder(ipa, headword) {
-  if (!PLACEHOLDER_HW.test(String(headword))) return null;
-  if (!ipa) return null;
-  return PLACEHOLDER_IPA.test(String(ipa))
-    ? `g14 ipa 里把占位符当成词读了("${ipa}")—— sb./sth. 是词典缩写不是词,IPA 只给实词部分`
-    : null;
+  const exp = ipaExpectation(headword);
+  if (!exp.applies) return null;      // 词条里没有占位符/括号/斜杠 —— 这道门不管
+  if (!ipa) return null;              // 缺音标是别的门的事
+  const raw = String(ipa).trim().replace(/^\/+|\/+$/g, '').toLowerCase();
+  const dense = raw.replace(/[ˈˌːˑ.·|\s]/g, '');
+
+  if (/[()]/.test(raw)) return `g14 音标里出现了括号("${ipa}")—— 括号内是可选成分,不念也不写`;
+  if (/\//.test(raw)) return `g14 音标里出现了斜杠("${ipa}")—— 斜杠择一只念第一个`;
+
+  for (const ph of exp.silent) {
+    const re = IPA_SOUND_OF[ph];
+    if (re && (re.test(dense) || re.test(raw)))
+      return `g14 音标里把占位符 ${ph} 念出来了("${ipa}")—— ${ph} 是词典记号,不念`;
+    if (new RegExp(`(^|[^a-z])${ph.replace("'", "'?")}([^a-z]|$)`).test(raw))
+      return `g14 音标里直接抄了占位符 ${ph}("${ipa}")`;
+  }
+  if (exp.needsOnes && !/wʌnz/.test(dense))
+    return `g14 音标里漏了 one's("${ipa}")—— one's 是真实词形,读 /wʌnz/`;
+
+  const groups = raw.split(/\s+/).filter(Boolean).length;
+  if (groups !== exp.words.length)
+    return `g14 音标词组数 ${groups} ≠ 该念的词数 ${exp.words.length}(应念:${exp.words.join(' ')})("${ipa}")`;
+  return null;
 }
 
 export function g12_defEnNotCircular(defEn, headword, table) {

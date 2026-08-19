@@ -98,4 +98,64 @@ for (const [name, run] of MUT) {
   if (!caught) process.exitCode = 1;
   await db.close();
 }
+
+/* ── ③ 音标修正 SQL:同样真跑 + 变异 ─────────────────────── */
+const FIX = 'vocab_fix_ipa_placeholders.sql';
+/** 铺前置状态:按名单里的 id 和**坏值**把 14 个词建出来,再加两个无关词当陪衬。
+    ⚠️ 陪衬行不是装饰 —— 没有它,「全库只有这 14 行 ipa 变了」那条断言是真空的。 */
+async function seedForFix() {
+  const db = await fresh();
+  const m = /INSERT INTO _fix\(id, headword, old_ipa, new_ipa\) VALUES\n([\s\S]*?);\n/.exec(read(FIX));
+  if (!m) throw new Error('修正 SQL 里没找到名单');
+  const rows = [...m[1].matchAll(/\('([0-9a-f-]{36})', '((?:[^']|'')*)', '((?:[^']|'')*)', '((?:[^']|'')*)'\)/g)];
+  if (!rows.length) throw new Error('名单一行都没解析出来');
+  for (const [, id, hw, oldIpa] of rows) {
+    await db.query('INSERT INTO vocab_words(id, headword, ipa, def_zh) VALUES ($1,$2,$3,$4)',
+      [id, hw.replace(/''/g, "'"), oldIpa.replace(/''/g, "'"), '占位释义']);
+  }
+  await db.query("INSERT INTO vocab_words(headword, ipa, def_zh) VALUES ('subject','/ˈsʌb.dʒɪkt/','主题'),('oneself','/wʌnˈsɛlf/','自己')");
+  return { db, n: rows.length };
+}
+
+console.log('\n══ 音标修正 SQL ══');
+{
+  const { db, n } = await seedForFix();
+  try { await db.exec(read(FIX)); console.log(`  ✓ ${FIX}(名单 ${n} 条)`); }
+  catch (e) { console.log(`  ✗ ${FIX} → ${e.message}`); process.exitCode = 1; }
+  const r = (await db.query(`SELECT count(*) FILTER (WHERE headword NOT IN ('subject','oneself') AND (ipa LIKE '%sʌm%' OR ipa LIKE '%sɪb%' OR ipa LIKE '%sbz%' OR ipa LIKE '%(%' OR ipa LIKE '%sɛlf%')) AS still_bad,
+                                    count(*) FILTER (WHERE def_zh IS NULL) AS lost_def, count(*) AS total FROM vocab_words`)).rows[0];
+  console.log('  库内终态:', JSON.stringify(r), '← still_bad 应为 0;陪衬的 subject/oneself 必须原样还在(total=16)');
+  await db.close();
+}
+
+/* ⚠️ 破坏语句必须插在 DO $gate$ **之前**。插在 COMMIT 前面看着也对,
+   但那已经在断言之后了 —— 测出来的"没拦下"是假的(第一版就这么写的)。 */
+const FIX_MUT = [
+  ['库里的值已经被人改过 → 应炸「改前值对不上」', async db => {
+    await db.query("UPDATE vocab_words SET ipa = '/whatever/' WHERE headword = 'help sb with'");
+    await db.exec(read(FIX));
+  }],
+  ['名单里的某个 id 在库里不存在 → 应炸「id 不存在」', async db => {
+    await db.query("DELETE FROM vocab_words WHERE headword = 'run low (on sth)'");
+    await db.exec(read(FIX));
+  }],
+  ['SQL 顺手多改了一列(def_zh)→ 应炸「其它列被改动」', async db => {
+    await db.exec(read(FIX).replace('DO $gate$',
+      "UPDATE vocab_words SET def_zh = '被顺手改了' FROM _fix f WHERE vocab_words.id = f.id;\nDO $gate$"));
+  }],
+  ['SQL 越界改了名单之外的行 → 应炸「全库 ipa 变化行数」', async db => {
+    await db.exec(read(FIX).replace('DO $gate$',
+      "UPDATE vocab_words SET ipa = '/x/' WHERE headword = 'subject';\nDO $gate$"));
+  }],
+];
+console.log('\n══ 修正 SQL 变异测试(每条都必须被拦下)══');
+for (const [name, run] of FIX_MUT) {
+  const { db } = await seedForFix();
+  let caught = null;
+  try { await run(db); } catch (e) { caught = e.message.split('\n')[0]; }
+  console.log(`  ${caught ? '✓ 拦下' : '✗ 没拦下'}  ${name}${caught ? `\n           → ${caught.slice(0, 110)}` : ''}`);
+  if (!caught) process.exitCode = 1;
+  await db.close();
+}
+
 console.log(`\nGATE_VERDICT ${process.exitCode ? 'FAIL' : 'PASS'}`);

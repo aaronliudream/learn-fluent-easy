@@ -37,7 +37,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER } from './gates.mjs';
+import { SCENES, runAllGates, ngrams, LENGTH_BY_TIER, ipaExpectation } from './gates.mjs';
 import { tierRangeText } from './spec.mjs';
 import { loadEnv, requireKeys } from './env.mjs';
 import { DEF_ZH_RULE, FUNCTION_WORD_RULE, isFunctionWord } from './prompt-rules.mjs';
@@ -316,18 +316,14 @@ ${FUNCTION_WORD_RULE}` : '';
   /**
    * 注音用的目标串 —— **把占位符替模型去掉,而不是让它自己去掉**。
    *
-   * ⚠️ 实测(2026-08-19):提示词写"给 argue with sb 注音、但别读占位符",
-   *    26/31 个词照样把 sb 读成 /ˈsʌb/、把 sth 读成 /sʌmθɪŋ/,三次重试全撞同一堵墙。
-   *    用户在词卡上看到的就是一串没有意义的音。
-   *    "让模型执行一条否定规则"远不如"直接给它要注音的那个串"可靠 ——
-   *    能在提示词里替它做完的一步,就不要留给它做。
+   * ⚠️ 实测:提示词写"给 argue with sb 注音、但别读占位符",26/31 个词照样把 sb
+   *    读成 /ˈsʌb/、sth 读成 /sʌmθɪŋ/,三次重试全撞同一堵墙。能在提示词里替它
+   *    做完的一步,就不要留给它做。
+   * ⚠️ 口径**直接复用 g14 的 ipaExpectation**,不再在这里重写一遍规则 ——
+   *    两处各写一份必然走岔:上一版这里剥掉了 one's、闸门却要求念,
+   *    结果 try one's best 生成出 /traɪ bɛst/ 而闸门当时也没拦。
    */
-  const ipaTarget = String(word.headword)
-    .replace(/\((?:[^)]*)\)/g, " ")            // 括号可选成分不注音
-    .split(/\s+/)
-    .filter(t => !/^(sb|sth|sw|sb.s|sth.s)\.?$/i
-      .test(t.replace(/[^A-Za-z.']/g, "")))
-    .join(" ").replace(/\s+/g, " ").trim() || String(word.headword);
+  const ipaTarget = ipaExpectation(word.headword).words.join(" ") || String(word.headword);
   const phraseRule = /\s/.test(word.headword) ? `
 
 ⚠️ "${word.headword}" IS A MULTI-WORD PHRASE, not a single word. This changes several rules:
@@ -366,7 +362,9 @@ Frequency rank: ${word.freq_rank ?? 'unknown'} -> target sentence difficulty: ${
 Produce a study card with these HARD requirements:
 
 1. ipa: American English IPA for "${ipaTarget}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
-   ⚠️ Transcribe EXACTLY that string, nothing more. (one's is a real word: /wʌnz/.)
+   ⚠️ Transcribe EXACTLY that string and nothing else.
+   Placeholders sb / sth / sw / sb's / oneself are dictionary shorthand and are NEVER pronounced;
+   one's IS a real word and IS pronounced /wʌnz/; parts in ( ) are omitted; for a/b write only a.
 2. def_zh: 中文释义.
 ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
 ${crossPosClause(word)}

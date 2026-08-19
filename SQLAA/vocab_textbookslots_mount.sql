@@ -9,9 +9,9 @@
 
 BEGIN;
 
-SELECT 'BEFORE' AS stage, b.code, count(*) AS words
-  FROM vocab_word_banks wb JOIN vocab_banks b ON b.id = wb.bank_id
- WHERE b.code IN ('zhongkao','gaokao') GROUP BY b.code ORDER BY b.code;
+SELECT 'BEFORE' AS stage, b.code, b.total_words AS 元数据,
+       (SELECT count(*) FROM vocab_word_banks m WHERE m.bank_id = b.id) AS 实挂
+  FROM vocab_banks b WHERE b.code IN ('zhongkao','gaokao') ORDER BY b.code;
 
 CREATE TEMP TABLE _mount_gaokao(headword text PRIMARY KEY) ON COMMIT DROP;
 INSERT INTO _mount_gaokao(headword) VALUES
@@ -136,9 +136,16 @@ SELECT w.id, b.id FROM _mount_zhongkao m
   JOIN vocab_banks b ON b.code = 'zhongkao'
 ON CONFLICT DO NOTHING;
 
-SELECT 'AFTER' AS stage, b.code, count(*) AS words
-  FROM vocab_word_banks wb JOIN vocab_banks b ON b.id = wb.bank_id
- WHERE b.code IN ('zhongkao','gaokao') GROUP BY b.code ORDER BY b.code;
+-- ── 同步 total_words:前端拿它当分母 ──────────────────────────
+-- ⚠️ 现场数,不写死;**全库**一起校,不只本次动过的两个。幂等,重复跑无副作用。
+UPDATE vocab_banks b
+   SET total_words = (SELECT count(*) FROM vocab_word_banks m WHERE m.bank_id = b.id)
+ WHERE b.total_words IS DISTINCT FROM
+       (SELECT count(*) FROM vocab_word_banks m WHERE m.bank_id = b.id);
+
+SELECT 'AFTER' AS stage, b.code, b.total_words AS 元数据,
+       (SELECT count(*) FROM vocab_word_banks m WHERE m.bank_id = b.id) AS 实挂
+  FROM vocab_banks b WHERE b.code IN ('zhongkao','gaokao') ORDER BY b.code;
 
 -- ── 断言:判终态,不判这一次改了多少 ──────────────────────────
 DO $gate$
@@ -168,7 +175,13 @@ BEGIN
                       WHERE wb.word_id = w.id AND b.code = 'zhongkao');
   IF v_n <> 0 THEN RAISE EXCEPTION '还有 % 个词没挂进 zhongkao', v_n; END IF;
 
-  -- ⑷ 挂进去的词都有释义 —— 空卡是这一步最怕的事故
+  -- ⑷ **全库** total_words 与实挂条数一致 —— 漏了这条,用户看到的进度条分母就是错的
+  SELECT count(*) INTO v_n FROM vocab_banks b
+   WHERE b.total_words IS DISTINCT FROM
+         (SELECT count(*) FROM vocab_word_banks m WHERE m.bank_id = b.id);
+  IF v_n <> 0 THEN RAISE EXCEPTION '全库有 % 个词库的 total_words 与实挂条数对不上', v_n; END IF;
+
+  -- ⑸ 挂进去的词都有释义 —— 空卡是这一步最怕的事故
   SELECT count(*) INTO v_n FROM _mount_gaokao m
     JOIN vocab_words w ON lower(w.headword) = m.headword
    WHERE w.def_zh IS NULL;

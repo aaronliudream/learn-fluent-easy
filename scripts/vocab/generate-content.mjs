@@ -363,8 +363,9 @@ Produce a study card with these HARD requirements:
 
 1. ipa: American English IPA for "${ipaTarget}", wrapped in slashes, e.g. /ˈæb.sɪ.stəns/.
    ⚠️ Transcribe EXACTLY that string and nothing else.
-   Placeholders sb / sth / sw / sb's / oneself are dictionary shorthand and are NEVER pronounced;
-   one's IS a real word and IS pronounced /wʌnz/; parts in ( ) are omitted; for a/b write only a.
+   Placeholders sb / sth / sw / sb's / sth's are dictionary shorthand and are NEVER pronounced;
+   one's and oneself ARE real words and ARE pronounced (/wʌnz/, /wʌnˈsɛlf/);
+   parts in ( ) are omitted; for a/b write only a.
 2. def_zh: 中文释义.
 ${DEF_ZH_RULE.split('\n').map(l => '   ' + l).join('\n')}
 ${crossPosClause(word)}

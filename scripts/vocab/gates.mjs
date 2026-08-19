@@ -549,8 +549,13 @@ export function g11_lengthRatioDiagnostic(examples, maxRatio = 2.6, minRatio = 0
  */
 /**
  * g14 —— 音标里的占位符处理。**规则是 Aaron 2026-08-18 定死的,不再每批临时判断**:
- *   · sb / sth / sw / sb's / sth's / oneself  → 一律不念
- *   · one's                                   → 念作 /wʌnz/(真实词形,词典也这么标)
+ * **一条原则:真实词形念,词典缩写不念。**
+ *   · sb / sth / sw / sb's / sth's  → 不念(读不出来的缩写,没人念 /ˈsʌb/)
+ *   · one's   → 念 /wʌnz/
+ *   · oneself → 念 /wʌnˈsɛlf/
+ *     ⚠️ 第一版把 oneself 归进"不念",与 one's 自相矛盾(两个都是真实词形),
+ *        Aaron 2026-08-18 点出后统一到这条原则上。改规则时先问"这条能不能一句话说完",
+ *        说不完就是还有例外没归位。
  *   · 括号内可选成分                          → 不念,括号也不许出现在音标里
  *   · 斜杠择一                                → 只念第一个
  *   · do / doing                              → 念(真实词形,同 one's)
@@ -566,7 +571,7 @@ export function g11_lengthRatioDiagnostic(examples, maxRatio = 2.6, minRatio = 0
  * ⚠️ 这道门**判不了音标本身对不对**(shoes 写成 /ˈsʊz/ 那种),那只能人读。
  *    别为显得严格去硬判 —— 见 dont-fake-a-gate-for-unjudgeable。
  */
-const IPA_SILENT = new Set(['sb', 'sth', 'sw', "sb's", "sth's", 'oneself']);
+const IPA_SILENT = new Set(['sb', 'sth', 'sw', "sb's", "sth's"]);
 /* 占位符被念出来时的实际形态。⚠️ 一律在**去掉重音符/长音符/音节点/空格**之后的
    稠密串上匹配 —— 上一版就是漏了这一步才让 `ˈsʌm.θɪŋ` 溜过去的。 */
 const IPA_SOUND_OF = {
@@ -575,11 +580,10 @@ const IPA_SOUND_OF = {
   sw: /sʌmwɛ|sʌmweə|sʌmhwɛ/,
   "sb's": /sʌbz|sbz|sʌmbɒdiz|sʌmbʌdiz/,
   "sth's": /sʌmθɪŋz/,
-  oneself: /sɛlf|self/,
 };
 /** 词条侧:哪些词该念、哪些占位符该消失、要不要有 wʌnz */
 export function ipaExpectation(headword) {
-  const out = { applies: false, words: [], silent: [], needsOnes: false };
+  const out = { applies: false, words: [], silent: [], needsOnes: false, needsSelf: false };
   let depth = 0;
   for (const raw of String(headword || '').trim().split(/\s+/)) {
     if (!raw) continue;
@@ -595,6 +599,8 @@ export function ipaExpectation(headword) {
     if (IPA_SILENT.has(t)) { out.applies = true; if (!out.silent.includes(t)) out.silent.push(t); continue; }
     if (inParen) { continue; }                                          // 括号内不念
     if (t === "one's") { out.applies = true; out.needsOnes = true; }
+    /* oneself 是真实词形,要念 —— 但它同样是元变量,所以这道门要管它 */
+    if (t === 'oneself') { out.applies = true; out.needsSelf = true; }
     out.words.push(t);
   }
   /* ⚠️ 一个词都不该念 = 这个词条本身就是那个占位符(cet4 里真有 `oneself` 这个词条,
@@ -622,6 +628,14 @@ export function g14_ipaNoPlaceholder(ipa, headword) {
   }
   if (exp.needsOnes && !/wʌnz/.test(dense))
     return `g14 音标里漏了 one's("${ipa}")—— one's 是真实词形,读 /wʌnz/`;
+  if (exp.needsSelf && !/wʌnsɛlf|wʌnself/.test(dense)) {
+    /* 实测的两种错法:整个吞掉(/θroʊ ˈɪntuː/),或换成 yourself(/θroʊ jʊrˈsɛlf …/)。
+       分开报,不然看报错以为是漏念、去查却发现明明有一个 self。 */
+    const other = /(jʊr|hɪm|hər|hɜr|maɪ|ɪt|ðəm|aʊər)sɛlv?[fz]/.exec(dense);
+    return other
+      ? `g14 音标把 oneself 换成了别的反身代词("${ipa}")—— 应读 /wʌnˈsɛlf/`
+      : `g14 音标里漏了 oneself("${ipa}")—— oneself 是真实词形,读 /wʌnˈsɛlf/`;
+  }
 
   const groups = raw.split(/\s+/).filter(Boolean).length;
   if (groups !== exp.words.length)

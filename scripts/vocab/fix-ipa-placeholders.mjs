@@ -7,7 +7,7 @@
  *    证明 headword/def_zh/def_en/pos/audio_url 全都没动、且只有这 14 行的 ipa 变了。
  * ⚠️ 音频不用重烧:词条音频是按 **headword 文本**烧的,与 ipa 无关。
  *
- * 名单来源:scripts/vocab/test-ipa-gate.mjs 的 FIXES —— 那份同时是闸门的已知答案样本,
+ * 名单来源:scripts/vocab/test-ipa-gate.mjs 的 PENDING —— 那份同时是闸门的已知答案样本,
  * 修正值必须先过 g14 才可能出现在这里(本脚本会再验一遍,不过就不出件)。
  *
  * 用法:node scripts/vocab/fix-ipa-placeholders.mjs [--write-json]
@@ -19,16 +19,20 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnv, requireKeys } from './env.mjs';
 import { g14_ipaNoPlaceholder } from './gates.mjs';
-import { FIXES } from './test-ipa-gate.mjs';
+import { PENDING } from './test-ipa-gate.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
 const GEN = path.join(HERE, 'data', 'generated');
 const WRITE_JSON = process.argv.includes('--write-json');
+/* 产物文件名跟着轮次走。上一轮的 vocab_fix_ipa_placeholders.sql Aaron 已经跑过,
+   同名覆盖会让"哪份跑过"彻底分不清。 */
+const NAME = (process.argv.find(a => a.startsWith('--name=')) || '--name=vocab_fix_ipa_placeholders').split('=')[1];
 
 /* ── ① 修正值自己先过闸 ──────────────────────────────────── */
 let bad = 0;
-for (const [hw, oldIpa, newIpa] of FIXES) {
+if (!PENDING.length) { console.log('· PENDING 为空 —— 库里没有待改的行,不出件'); process.exit(0); }
+for (const [hw, oldIpa, newIpa] of PENDING) {
   if (!g14_ipaNoPlaceholder(oldIpa, hw)) { console.error(`x 坏值居然过闸:${hw} ${oldIpa}`); bad++; }
   const r = g14_ipaNoPlaceholder(newIpa, hw);
   if (r) { console.error(`x 修正值不过闸:${hw} ${newIpa} —— ${r}`); bad++; }
@@ -40,7 +44,7 @@ const ENV = loadEnv(REPO, { quiet: true });
 requireKeys(ENV, ['VITE_SUPABASE_URL', 'VITE_SUPABASE_PUBLISHABLE_KEY']);
 const H = { apikey: ENV.VITE_SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${ENV.VITE_SUPABASE_PUBLISHABLE_KEY}` };
 const rows = [];
-for (const [hw, oldIpa, newIpa, why] of FIXES) {
+for (const [hw, oldIpa, newIpa, why] of PENDING) {
   const r = await fetch(`${ENV.VITE_SUPABASE_URL}/rest/v1/vocab_words?select=id,headword,ipa&headword=eq.${encodeURIComponent(hw)}`, { headers: H });
   if (!r.ok) { console.error(`x 查 ${hw} 失败 ${r.status}`); process.exit(2); }
   const j = await r.json();
@@ -71,12 +75,13 @@ if (WRITE_JSON) {
 /* ── ④ 出 SQL ────────────────────────────────────────────── */
 const esc = s => String(s).replace(/'/g, "''");
 const sql = `-- 音标占位符修正 —— ${rows.length} 条,**按 id 锁定,只改 ipa 一列**
--- 生成: node scripts/vocab/fix-ipa-placeholders.mjs
+-- 生成: node scripts/vocab/fix-ipa-placeholders.mjs --name=${NAME}
 -- ⚠️ 由 Aaron 执行。脚本本身从不写库。
 --
 -- 规则(定死,写在 gates.mjs 的 g14 注释里):
---   sb / sth / sw / sb's / sth's / oneself → 不念
---   one's                                  → 念作 /wʌnz/
+--   一条原则:真实词形念,词典缩写不念
+--   sb / sth / sw / sb's / sth's → 不念(读不出来)
+--   one's → /wʌnz/ · oneself → /wʌnˈsɛlf/ · do / doing → 念
 --   括号内可选成分                         → 不念,括号也不出现在音标里
 --   斜杠择一                               → 只念第一个
 --   do / doing                             → 念(真实词形,同 one's)
@@ -154,6 +159,6 @@ $gate$;
 COMMIT;
 `;
 mkdirSync(path.join(REPO, 'SQLAA'), { recursive: true });
-const out = path.join(REPO, 'SQLAA', 'vocab_fix_ipa_placeholders.sql');
+const out = path.join(REPO, 'SQLAA', `${NAME}.sql`);
 writeFileSync(out, sql, 'utf8');
-console.log(`· 修正 SQL(${rows.length} 条,只改 ipa)→ SQLAA/vocab_fix_ipa_placeholders.sql`);
+console.log(`· 修正 SQL(${rows.length} 条,只改 ipa)→ SQLAA/${NAME}.sql`);

@@ -16,7 +16,7 @@
  *
  * 用法:node scripts/vocab/burn-textbook-audio.mjs [--concurrency=14] [--emit-sql] [--shards=N]
  */
-import { readFileSync, writeFileSync, existsSync, renameSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, renameSync, mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnv, requireKeys } from './env.mjs';
@@ -29,6 +29,16 @@ const CONCURRENCY = Math.max(1, Number(arg('concurrency', '14')) || 1);
 const THROTTLE = Number(arg('throttle', '150'));
 const SHARDS = Math.max(1, Number(arg('shards', '1')) || 1);
 const EMIT_ONLY = process.argv.includes('--emit-sql');
+/**
+ * `--new-only` —— **只出还没交出去过的那些**。
+ *
+ * ⚠️ 判据不是"我记得交过哪些",是**去读 SQLAA 里已经存在的 part 文件**,
+ *    谁在里面就跳过谁。凭记忆挑必然出错;而重发一份全量,等于让 Aaron
+ *    重跑已经跑过的 3924 行 —— 幂等是幂等,但那是白跑,而且掩盖了
+ *    "这次真正新增了多少"这个本该一眼看见的数。
+ */
+const NEW_ONLY = process.argv.includes('--new-only');
+const OUT_NAME = arg('name', '');
 
 const ENV = loadEnv(REPO, { quiet: true });
 requireKeys(ENV, ['VITE_SUPABASE_URL', 'VITE_SUPABASE_PUBLISHABLE_KEY']);
@@ -68,12 +78,30 @@ async function synth(text) {
 
 const CDN = /^https:\/\/audio\.bigmooneducation\.com\/[0-9a-f]{2}\/[0-9a-f]{64}\.mp3$/;
 
+/** 已经交付过的 headword —— 从 SQLAA 里现存的 part 文件里读出来,不靠记忆。 */
+function alreadyEmitted() {
+  const dir = path.join(REPO, 'SQLAA');
+  const out = new Set();
+  for (const f of readdirSync(dir)) {
+    if (!/^vocab_textbook_audio_part.*\.sql$/.test(f)) continue;
+    const t = readFileSync(path.join(dir, f), 'utf8');
+    for (const m of t.matchAll(/^  \('((?:[^']|'')*)',/gm)) out.add(m[1].replace(/''/g, "'"));
+  }
+  return out;
+}
+
 function emit() {
-  const wordRows = Object.entries(cache.words);
-  const exRows = Object.entries(cache.examples).map(([k, v]) => {
+  const skip = NEW_ONLY ? alreadyEmitted() : new Set();
+  if (NEW_ONLY) console.log(`· --new-only:SQLAA 里已交付 ${skip.size} 个 headword,本次跳过它们`);
+  let wordRows = Object.entries(cache.words);
+  let exRows = Object.entries(cache.examples).map(([k, v]) => {
     const i = k.lastIndexOf('#');
     return { headword: k.slice(0, i), sort: Number(k.slice(i + 1)), url: v };
   });
+  if (NEW_ONLY) {
+    wordRows = wordRows.filter(([h]) => !skip.has(h));
+    exRows = exRows.filter(r => !skip.has(r.headword));
+  }
   const bad = [...wordRows.map(([, u]) => u), ...exRows.map(r => r.url)].filter(u => !CDN.test(u));
   if (bad.length) { console.error(`x ${bad.length} 条 URL 形态不合法,不出 SQL`); process.exit(1); }
   const esc = s => String(s).replace(/'/g, "''");
@@ -138,7 +166,9 @@ $gate$;
 
 COMMIT;
 `;
-    const name = `vocab_textbook_audio_part${i + 1}of${SHARDS}.sql`;
+    const name = OUT_NAME
+      ? (SHARDS > 1 ? `${OUT_NAME}_part${i + 1}of${SHARDS}.sql` : `${OUT_NAME}.sql`)
+      : `vocab_textbook_audio_part${i + 1}of${SHARDS}.sql`;
     mkdirSync(path.join(REPO, 'SQLAA'), { recursive: true });
     writeFileSync(path.join(REPO, 'SQLAA', name), sql, 'utf8');
     console.log(`· 音频回填 SQL(${w.length} 词 + ${e.length} 例句) → SQLAA/${name}`);
